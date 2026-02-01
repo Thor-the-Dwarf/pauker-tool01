@@ -1,0 +1,98 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Urheberrechtsgesetz & Lizenzmodelle (4.4)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Urheberrecht und Lizenzen zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "EULA",
+    "OEM",
+    "GNU (GPL)",
+    "Urheberrechtsgesetz",
+    "Pay by Use",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Gesetzlicher Rahmen, der festlegt, wer ein Werk nutzen darf, welche Rechte bestehen und was ohne Erlaubnis verboten ist.",
+      "correct": "Urheberrechtsgesetz"
+    },
+    {
+      "text": "Lizenzvertrag, den du beim Installieren/Starten akzeptierst; regelt Nutzung, Weitergabe, Updates, Haftung, Einschränkungen.",
+      "correct": "EULA"
+    },
+    {
+      "text": "Lizenz, die oft an Hardware gebunden ist (z. B. vorinstalliertes Betriebssystem) und typischerweise nicht frei übertragbar ist.",
+      "correct": "OEM"
+    },
+    {
+      "text": "Open-Source-Lizenzfamilie mit Copyleft: Weitergabe/Änderungen müssen unter denselben Bedingungen möglich bleiben.",
+      "correct": "GNU (GPL)"
+    },
+    {
+      "text": "Abrechnungsmodell: du zahlst nach Nutzung (z. B. pro Stunde, pro User-Session, pro Transaktion, pro API-Call).",
+      "correct": "Pay by Use"
+    },
+    {
+      "text": "Typisch: du darfst Software nutzen, aber nicht besitzen; es gibt Regeln zu Installation, Anzahl Geräte/Users und Reverse Engineering.",
+      "correct": "EULA"
+    },
+    {
+      "text": "Typisch: Lizenz ist im Kaufpreis eines Geräts enthalten und wird beim Gerätewechsel oft zum Problem.",
+      "correct": "OEM"
+    },
+    {
+      "text": "Typisch: Wenn du den Code weiterverbreitest (auch verändert), musst du die Lizenzbedingungen mitgeben.",
+      "correct": "GNU (GPL)"
+    },
+    {
+      "text": "Beispiel: '0,005 € pro Request' passt am ehesten zu diesem Modell.",
+      "correct": "Pay by Use"
+    },
+    {
+      "text": "Beispiel: 'Darf nur auf 1 Gerät installiert werden, keine Weitergabe, keine Modifikation' ist typisch für diese Lizenzform.",
+      "correct": "EULA"
+    },
+    {
+      "text": "Beispiel: 'Windows war beim Laptop dabei und ist an dieses Gerät gekoppelt' ist typisch für diese Lizenzform.",
+      "correct": "OEM"
+    },
+    {
+      "text": "Beispiel: 'Quellcode muss bei Weitergabe verfügbar sein und unter derselben Lizenz bleiben' passt dazu.",
+      "correct": "GNU (GPL)"
+    },
+    {
+      "text": "Verboten ist z. B. das unautorisierte Kopieren/Veröffentlichen eines geschützten Werks – geregelt durch dieses.",
+      "correct": "Urheberrechtsgesetz"
+    },
+    {
+      "text": "Kann wirtschaftlich attraktiv sein, wenn Nutzung stark schwankt und du keine festen Lizenzpakete binden willst.",
+      "correct": "Pay by Use"
+    },
+    {
+      "text": "Kann rechtliche Konsequenzen haben, wenn du Lizenzbedingungen ignorierst oder geschützte Inhalte ohne Recht nutzt.",
+      "correct": "Urheberrechtsgesetz"
+    },
+    {
+      "text": "Ist besonders wichtig zu prüfen, bevor du Software in einem Projekt verteilst, weitergibst oder in Produkte integrierst.",
+      "correct": "alle"
+    },
+    {
+      "text": "Wenn eine Lizenz die Nutzung an ein Gerät bindet, ist das am ehesten diese Kategorie.",
+      "correct": "OEM"
+    },
+    {
+      "text": "Wenn eine Lizenz als 'Klick-weg-Vertrag' beim Installieren auftaucht, ist das am ehesten diese Kategorie.",
+      "correct": "EULA"
+    },
+    {
+      "text": "Wenn ein Modell bei hoher Nutzung teuer werden kann, weil jede Nutzungseinheit kostet, ist das am ehesten dieses.",
+      "correct": "Pay by Use"
+    },
+    {
+      "text": "Wenn du in einem Projekt Open-Source-Komponenten einsetzt, musst du genau diese Lizenzbedingungen sauber prüfen.",
+      "correct": "GNU (GPL)"
+    }
+  ]
+}

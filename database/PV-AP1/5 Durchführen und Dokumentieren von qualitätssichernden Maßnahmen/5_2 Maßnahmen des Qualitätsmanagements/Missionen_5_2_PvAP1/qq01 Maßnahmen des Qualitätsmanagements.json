@@ -1,0 +1,108 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Maßnahmen des Qualitätsmanagements",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Qualitätsmanagement zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Qualitätsmaßnahme",
+    "Prozessqualität",
+    "Arbeitsqualität",
+    "Produktqualität",
+    "Dienstleistungsqualität",
+    "Qualitätsplanung",
+    "Qualitätsziel",
+    "Ist-Zustand",
+    "Ziel-Zustand",
+    "Qualitätslenkung",
+    "PDCA",
+    "Plan",
+    "Do",
+    "Check",
+    "Act",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Konkrete Aktion zur Verbesserung von Qualität, z. B. Checklisten einführen, Reviews etablieren, Schulungen durchführen.",
+      "correct": "Qualitätsmaßnahme"
+    },
+    {
+      "text": "Qualität der Abläufe: sind Prozesse definiert, stabil, messbar und führen sie verlässlich zu guten Ergebnissen?",
+      "correct": "Prozessqualität"
+    },
+    {
+      "text": "Qualität der Arbeitsausführung: Sorgfalt, Standards einhalten, saubere Dokumentation, reproduzierbare Ergebnisse.",
+      "correct": "Arbeitsqualität"
+    },
+    {
+      "text": "Qualität des Outputs/Produkts: erfüllt es Anforderungen, ist es fehlerarm, robust und nutzbar?",
+      "correct": "Produktqualität"
+    },
+    {
+      "text": "Qualität einer Leistung für Kunden: Erreichbarkeit, Reaktionszeit, Freundlichkeit, Lösungserfolg, Verlässlichkeit.",
+      "correct": "Dienstleistungsqualität"
+    },
+    {
+      "text": "Festlegen, wie Qualität erreicht wird: Kriterien, Verantwortlichkeiten, Prüfungen, Metriken, Vorgehen.",
+      "correct": "Qualitätsplanung"
+    },
+    {
+      "text": "Messbare Vorgabe, die erreicht werden soll, z. B. „<2% Rückläufer“ oder „95% Tickets innerhalb SLA“. ",
+      "correct": "Qualitätsziel"
+    },
+    {
+      "text": "Aktueller Stand, der als Ausgangspunkt gemessen/ermittelt wird, bevor man Verbesserungen plant.",
+      "correct": "Ist-Zustand"
+    },
+    {
+      "text": "Definierter Sollzustand, der als Ziel erreicht werden soll (mit messbaren Kriterien).",
+      "correct": "Ziel-Zustand"
+    },
+    {
+      "text": "Steuern/Überwachen der Qualität im laufenden Betrieb: prüfen, regeln, korrigieren, Freigaben und Abweichungen behandeln.",
+      "correct": "Qualitätslenkung"
+    },
+    {
+      "text": "Kontinuierlicher Verbesserungszyklus: planen, umsetzen, prüfen, anpassen.",
+      "correct": "PDCA"
+    },
+    {
+      "text": "Schritt im PDCA: Ziele festlegen, Maßnahmen definieren, Plan erstellen, Verantwortlichkeiten klären.",
+      "correct": "Plan"
+    },
+    {
+      "text": "Schritt im PDCA: Maßnahmen durchführen und Prozesse/Änderungen tatsächlich umsetzen.",
+      "correct": "Do"
+    },
+    {
+      "text": "Schritt im PDCA: Ergebnisse messen, Kennzahlen prüfen, Soll-Ist vergleichen, Wirksamkeit bewerten.",
+      "correct": "Check"
+    },
+    {
+      "text": "Schritt im PDCA: Verbesserungen standardisieren, nachjustieren, Ursachen beheben und nächste Runde starten.",
+      "correct": "Act"
+    },
+    {
+      "text": "„Wir definieren eine Review-Checkliste für Pull Requests, um Fehler früh zu finden“ ist vor allem ein Beispiel für eine …",
+      "correct": "Qualitätsmaßnahme"
+    },
+    {
+      "text": "„Ticketbearbeitung ist schnell, aber Kunden sind unzufrieden, weil Kommunikation fehlt“ betrifft vor allem die …",
+      "correct": "Dienstleistungsqualität"
+    },
+    {
+      "text": "„Wir messen aktuell 12% Rückläufer und wollen auf 5% runter“: 12% ist das …",
+      "correct": "Ist-Zustand"
+    },
+    {
+      "text": "„Wir messen aktuell 12% Rückläufer und wollen auf 5% runter“: 5% ist der …",
+      "correct": "Ziel-Zustand"
+    },
+    {
+      "text": "„Wir prüfen jede Woche die Fehlerquote und stoppen Releases, wenn Grenzwerte überschritten werden“ gehört am ehesten zu …",
+      "correct": "Qualitätslenkung"
+    }
+  ]
+}

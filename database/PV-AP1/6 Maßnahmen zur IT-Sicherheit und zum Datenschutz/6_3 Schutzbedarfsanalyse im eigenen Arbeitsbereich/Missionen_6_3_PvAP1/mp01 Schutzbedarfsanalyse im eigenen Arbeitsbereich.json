@@ -1,0 +1,78 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Schutzbedarfsanalyse – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Gegenstand der Schutzbedarfsanalyse nach BSI IT-Grundschutz mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Schutzobjekt",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle ein Schutzobjekt aus dem Arbeitsbereich.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "schutzbedarfsanalyse",
+      "name": "Schutzbedarfsanalyse (BSI IT-Grundschutz)",
+      "description": "Ermittlung des notwendigen Schutzes für Vertraulichkeit, Integrität und Verfügbarkeit anhand möglicher Schäden (normal/hoch/sehr hoch).",
+      "example": "Für ein System wird bewertet, welche Folgen Datenabfluss, Manipulation oder Ausfall hätten, um passende Maßnahmen abzuleiten."
+    },
+    {
+      "id": "anwendungen",
+      "name": "Schutzobjekt: Anwendungen",
+      "description": "Software/Services und deren Datenverarbeitung; Schutzbedarf richtet sich nach Datenarten, Prozesskritikalität und Nutzerkreis.",
+      "example": "Eine Lohnabrechnungssoftware hat hohen Schutzbedarf (vertrauliche Personaldaten, hohe Auswirkung bei Manipulation)."
+    },
+    {
+      "id": "it_systeme",
+      "name": "Schutzobjekt: IT-Systeme",
+      "description": "Server, Clients, Storage, Netzwerkgeräte; Schutzbedarf hängt von Rolle, gespeicherten Daten und Abhängigkeiten ab.",
+      "example": "Der Domain Controller hat hohen Schutzbedarf, weil Ausfall oder Kompromittierung den gesamten Betrieb betrifft."
+    },
+    {
+      "id": "raeume",
+      "name": "Schutzobjekt: Räume",
+      "description": "Physische Bereiche wie Serverraum, Büro, Archiv; bewertet werden Zugang, Umgebungseinflüsse und Risiken für Hardware/Daten.",
+      "example": "Serverraum: hoher Schutzbedarf durch Zutrittskontrolle, Klimatisierung, Brandmelder und USV."
+    },
+    {
+      "id": "kommunikationsverbindungen",
+      "name": "Schutzobjekt: Kommunikationsverbindungen",
+      "description": "Netzverbindungen und Übertragungswege (LAN/WLAN/VPN/Standortkopplung); Schutzbedarf betrifft Abhören, Manipulation und Ausfall.",
+      "example": "VPN-Verbindung zum Homeoffice: hoher Schutzbedarf → starke Authentifizierung, Verschlüsselung, klare Routing-Policies."
+    },
+    {
+      "id": "vertraulichkeit",
+      "name": "Schutzziel: Vertraulichkeit",
+      "description": "Informationen dürfen nur von berechtigten Personen eingesehen werden; relevant bei personenbezogenen oder sensiblen Daten.",
+      "example": "Kundendaten dürfen nur der Support mit Bedarf sehen; Zugriff wird per Rollen/Rechte gesteuert und geloggt."
+    },
+    {
+      "id": "integritaet",
+      "name": "Schutzziel: Integrität",
+      "description": "Daten dürfen nicht unbemerkt verändert werden; Korrektheit und Vollständigkeit müssen erhalten bleiben.",
+      "example": "Konfigurationsdateien werden versioniert und Änderungen nur per Change-Prozess freigegeben."
+    },
+    {
+      "id": "verfuegbarkeit",
+      "name": "Schutzziel: Verfügbarkeit",
+      "description": "Systeme und Daten müssen bei Bedarf nutzbar sein; Ausfälle sollen verhindert oder schnell behoben werden.",
+      "example": "Ein Fileserver wird mit Backup und Monitoring abgesichert, damit Ausfälle früh erkannt und Wiederherstellung möglich ist."
+    },
+    {
+      "id": "schutzbedarfskategorien",
+      "name": "Schutzbedarfskategorien",
+      "description": "Einstufung des Schutzbedarfs (normal/hoch/sehr hoch) basierend auf Schadensausmaß für das Unternehmen.",
+      "example": "E-Mail-System: hoch, weil Ausfall die Kommunikation stoppt; öffentliches Infoterminal: normal."
+    },
+    {
+      "id": "ableitung_massnahmen",
+      "name": "Ableitung von Maßnahmen",
+      "description": "Aus dem Schutzbedarf werden passende Sicherheitsmaßnahmen ausgewählt (z. B. Verschlüsselung, Zutrittskontrolle, Backup, Segmentierung).",
+      "example": "Für „hoch“ wird MFA eingeführt, Daten werden verschlüsselt, Admin-Zugänge auf ein separates Netz beschränkt."
+    }
+  ]
+}

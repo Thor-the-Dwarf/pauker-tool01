@@ -1,0 +1,162 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Programmierwerkzeuge-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "struktogramm_pap_pseudocode",
+      "name": "Abbildung mittels Struktogramm, PAP oder Pseudocode (didaktisches Hilfsmittel)",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "uml_use_case_klassendiagramm",
+      "name": "UML (Use-Case, Klassendiagramm)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "entwurf_ausgabemasken",
+      "name": "Entwurf der Bildschirmausgabemasken (Softwareergonomie, Barrierefreiheit)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": true,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es darum, Logik/Abläufe didaktisch darzustellen (Struktogramm, PAP, Pseudocode)?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um Modellierung/Design auf System- oder Softwareebene (Use-Case, Klassen, Beziehungen)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um UI-Entwurf: Masken, Bedienbarkeit, Ergonomie und Barrierefreiheit?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist das typischerweise ein schneller Einstieg/Überblick (z. B. Pseudocode) statt formaler Modellierung?",
+      "attributeKey": "simple_foundation"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist typischerweise viel Formalismus/Regelwerk dabei (UML-Notation, Diagrammregeln, Konsistenz)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Spielt Zusammenarbeit/Abstimmung eine große Rolle (Entwickler, Fachbereich, UX, Tester)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist die Trennung von Fachsicht und Techniksicht wichtig (Use-Case vs. Klassen vs. UI)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird das Ergebnis oft zentral als Standard festgelegt (Architekturvorgaben, Modellierungsrichtlinien, UI-Guidelines)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Wirkt das nach außen besonders professionell (saubere Diagramme, nachvollziehbarer Entwurf, klare Dokumentation)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist das für große Systeme/Teams besonders wichtig (Skalierung, Verständlichkeit, Wartbarkeit)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Gibt es dabei rechtliche/Compliance-Aspekte (z. B. Barrierefreiheit, Accessibility-Anforderungen) die Risiken reduzieren sollen?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Geht es darum, Anforderungen sauber in Modelle zu übersetzen (Funktionalität/Objekte/Interaktionen)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist das eher ein Toolset für Planung/Design vor dem Code (erst modellieren, dann implementieren)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Spielt Mitbestimmung/Feedback vieler Perspektiven eine Rolle (Workshops, Reviews, Nutzerfeedback)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es darum, Fehler/Risiken früh zu vermeiden (Missverständnisse verhindern, UI-Fails reduzieren, saubere Strukturen)?",
+      "attributeKey": "limited_liability"
+    }
+  ]
+}

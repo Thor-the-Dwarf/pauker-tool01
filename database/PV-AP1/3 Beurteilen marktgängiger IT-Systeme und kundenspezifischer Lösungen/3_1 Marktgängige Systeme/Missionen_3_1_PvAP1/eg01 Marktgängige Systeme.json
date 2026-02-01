@@ -1,0 +1,163 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Marktgängige Systeme",
+  "topic": "Hardware, Software, Virtualisierung und Cloudlösungen (SaaS, IaaS, PaaS)",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "marktgaengig-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Produkte & Konzepte richtig einordnen",
+      "subtitle": "Ordne die Begriffe den passenden Kategorien zu.",
+      "hintDefault": "Tipp: Hardware = Bauteile/Geräte, Software = Programme/OS, Virtualisierung = Abstraktion/VM/Container, Cloud = Dienstmodelle.",
+      "sortColumns": [
+        { "zone": "hardware", "label": "Hardwareprodukte", "hint": "(physische Komponenten)" },
+        { "zone": "software", "label": "Softwareprodukte", "hint": "(OS & Anwendungen)" },
+        { "zone": "virtualisierung", "label": "Virtualisierungen", "hint": "(VM/Container/Hypervisor)" },
+        { "zone": "cloud", "label": "Cloudlösungen", "hint": "(SaaS/IaaS/PaaS)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "CPU", "correctZone": "hardware" },
+        { "id": "s2", "text": "Motherboard", "correctZone": "hardware" },
+        { "id": "s3", "text": "RAM (Speicher)", "correctZone": "hardware" },
+        { "id": "s4", "text": "Netzteil", "correctZone": "hardware" },
+        { "id": "s5", "text": "Grafikkarte", "correctZone": "hardware" },
+        { "id": "s6", "text": "Peripheriegeräte (Tastatur/Maus/Drucker)", "correctZone": "hardware" },
+        { "id": "s7", "text": "Netzwerkkomponenten (Switch/Router)", "correctZone": "hardware" },
+        { "id": "s8", "text": "WLAN (Access Point)", "correctZone": "hardware" },
+        { "id": "s9", "text": "Betriebssystem", "correctZone": "software" },
+        { "id": "s10", "text": "Anwendungssoftware", "correctZone": "software" },
+        { "id": "s11", "text": "Hypervisor", "correctZone": "virtualisierung" },
+        { "id": "s12", "text": "Virtuelle Maschine (VM)", "correctZone": "virtualisierung" },
+        { "id": "s13", "text": "Container", "correctZone": "virtualisierung" },
+        { "id": "s14", "text": "SaaS", "correctZone": "cloud" },
+        { "id": "s15", "text": "IaaS", "correctZone": "cloud" },
+        { "id": "s16", "text": "PaaS", "correctZone": "cloud" }
+      ]
+    },
+    {
+      "id": "marktgaengig-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Hardware, Virtualisierung & Cloud",
+      "subtitle": "Teste dein Wissen zu Bauteilen, VM/Container und Cloudmodellen.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Komponente liefert Gleichstrom in passenden Spannungen an die PC-Hardware?",
+          "options": [
+            { "value": "a", "text": "Motherboard" },
+            { "value": "b", "text": "Netzteil" },
+            { "value": "c", "text": "Grafikkarte" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist der Hauptzweck eines Hypervisors?",
+          "options": [
+            { "value": "a", "text": "WLAN-Signale zu verstärken" },
+            { "value": "b", "text": "Virtuelle Maschinen bereitstellen und isolieren" },
+            { "value": "c", "text": "Backups auf Band zu schreiben" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welches Cloudmodell liefert hauptsächlich fertige Anwendungen als Dienst?",
+          "options": [
+            { "value": "a", "text": "SaaS" },
+            { "value": "b", "text": "IaaS" },
+            { "value": "c", "text": "PaaS" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was ist ein typischer Unterschied zwischen VM und Container?",
+          "options": [
+            { "value": "a", "text": "VM teilt sich Kernel, Container bringt eigenen Kernel mit" },
+            { "value": "b", "text": "VM bringt eigenes OS (Kernel) mit, Container teilt sich Host-Kernel" },
+            { "value": "c", "text": "Kein Unterschied, nur anderer Name" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "marktgaengig-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Von On-Prem zur Cloud",
+      "subtitle": "Bringe die Stufen der Bereitstellung in eine typische Reihenfolge (steigende Abstraktion/Servicegrad).",
+      "hintDefault": "Hinweis: Je weiter nach rechts, desto mehr übernimmt der Anbieter.",
+      "rows": [
+        {
+          "key": "hardware",
+          "label": "Eigene Hardware (On-Prem: Server/Netz/Storage selbst betreiben)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "virtualisierung",
+          "label": "Virtualisierung (VMs/Container auf eigener Infrastruktur)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "iaas",
+          "label": "IaaS (virtuelle Server/Netz/Storage vom Anbieter)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "paas",
+          "label": "PaaS (Laufzeit/Plattform bereitgestellt, du lieferst Code)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "saas",
+          "label": "SaaS (fertige Anwendung nutzen, Betrieb komplett beim Anbieter)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

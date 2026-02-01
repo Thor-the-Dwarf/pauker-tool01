@@ -1,0 +1,117 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Zielgruppengerechte Bedarfsanalyse-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "fragetechnik_aktives_zuhoeren_praesentation",
+      "name": "Fragetechnik, aktives Zuhören, bedarfs- & adressatengerechte Präsentation",
+      "attributes": {
+        "direct_interaction": true,
+        "uses_questions": true,
+        "active_listening": true,
+        "presentation_focus": true,
+        "collects_structured_data": false,
+        "survey_based": false,
+        "data_analysis_focus": false,
+        "derives_requirements": true,
+        "target_group_adaptation": true,
+        "documentation_focus": false
+      }
+    },
+    {
+      "id": "datenerhebung_kundenbefragung",
+      "name": "Datenerhebungen (z. B. Kundenbefragung)",
+      "attributes": {
+        "direct_interaction": true,
+        "uses_questions": true,
+        "active_listening": false,
+        "presentation_focus": false,
+        "collects_structured_data": true,
+        "survey_based": true,
+        "data_analysis_focus": false,
+        "derives_requirements": true,
+        "target_group_adaptation": true,
+        "documentation_focus": true
+      }
+    },
+    {
+      "id": "datenauswertung_anforderungen_bueroarbeitsplaetze",
+      "name": "Auswertung von Daten (z. B. Anforderungen an Büroarbeitsplätze)",
+      "attributes": {
+        "direct_interaction": false,
+        "uses_questions": false,
+        "active_listening": false,
+        "presentation_focus": false,
+        "collects_structured_data": false,
+        "survey_based": false,
+        "data_analysis_focus": true,
+        "derives_requirements": true,
+        "target_group_adaptation": false,
+        "documentation_focus": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Gibt es direkten Austausch mit Menschen (Interview, Gespräch, Workshop)?",
+      "attributeKey": "direct_interaction"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Werden gezielt Fragen eingesetzt, um Informationen zu gewinnen (z. B. W-Fragen, geschlossene Fragen)?",
+      "attributeKey": "uses_questions"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Steht aktives Zuhören im Mittelpunkt (Paraphrasieren, Nachfragen, Zusammenfassen)?",
+      "attributeKey": "active_listening"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es darum, Inhalte bedarfs- und adressatengerecht zu präsentieren (angepasst an Zielgruppe)?",
+      "attributeKey": "presentation_focus"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Werden Daten systematisch erhoben und strukturiert gesammelt (z. B. Fragebogen, Formular, Skalen)?",
+      "attributeKey": "collects_structured_data"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Basiert der Prozess auf einer Befragung/Umfrage (z. B. Kundenbefragung)?",
+      "attributeKey": "survey_based"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Steht die Auswertung/Analyse von vorhandenen Daten im Zentrum (z. B. Tabellen, Messwerte, Ergebnisse)?",
+      "attributeKey": "data_analysis_focus"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Werden aus den Ergebnissen konkrete Anforderungen abgeleitet (Needs/Requirements)?",
+      "attributeKey": "derives_requirements"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Wird explizit die Zielgruppe berücksichtigt und angepasst (Sprache, Vorwissen, Rolle, Kontext)?",
+      "attributeKey": "target_group_adaptation"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Spielt schriftliche Dokumentation eine zentrale Rolle (Protokoll, Auswertung, Bericht)?",
+      "attributeKey": "documentation_focus"
+    }
+  ]
+}

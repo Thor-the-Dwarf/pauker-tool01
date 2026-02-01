@@ -1,0 +1,126 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Umsetzung des Sicherheitskonzepts – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Baustein der Sicherheitsumsetzung mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Sicherheitsbaustein",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Maßnahme oder ein Prinzip aus dem Sicherheitskonzept.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "sicherheitsbewusstsein",
+      "name": "Sicherheitsbewusstsein (Awareness)",
+      "description": "Mitarbeitende erkennen Risiken (Phishing, Social Engineering, Datenabfluss) und handeln nach Regeln statt „aus dem Bauch“. ",
+      "example": "Regelmäßige Phishing-Trainings und kurze Leitfäden sorgen dafür, dass verdächtige Mails gemeldet statt angeklickt werden."
+    },
+    {
+      "id": "it_sicherheitsmanagement_schutzmassnahmen",
+      "name": "IT-Sicherheitsmanagement (Schutzmaßnahmenmix)",
+      "description": "Kombination aus technischen, infrastrukturellen, organisatorischen und personellen Maßnahmen, die zusammen ein Schutzniveau liefern.",
+      "example": "Firewall + Patchmanagement + Zutrittskontrolle + Rollen/Rechte + Schulungen werden als Paket umgesetzt und regelmäßig geprüft."
+    },
+    {
+      "id": "security_by_design",
+      "name": "Security by Design",
+      "description": "Sicherheit wird von Anfang an in Architektur und Entwicklung eingeplant (Threats, Minimierung von Angriffsflächen, sichere Patterns).",
+      "example": "Eine Web-App nutzt von Start an Eingabevalidierung, Rate-Limits, Logging und saubere Rechteprüfung statt „später nachrüsten“."
+    },
+    {
+      "id": "security_by_default",
+      "name": "Security by Default",
+      "description": "Standardeinstellungen sind sicher: Features, Ports und Rechte sind restriktiv, bis bewusst anders konfiguriert wird.",
+      "example": "Neue Benutzer bekommen nur Basisrechte; externe Freigaben sind standardmäßig aus, bis sie explizit genehmigt werden."
+    },
+    {
+      "id": "zugangskontrolle",
+      "name": "Zugangskontrolle",
+      "description": "Regelt, wer physisch oder logisch überhaupt an Systeme herankommt (z. B. Zutritt, Anmeldung, Gerätezugang).",
+      "example": "Serverraum nur mit Chipkarte; Admin-Login nur über VPN und Admin-Netz."
+    },
+    {
+      "id": "zugriffskontrolle",
+      "name": "Zugriffskontrolle",
+      "description": "Regelt, was berechtigte Nutzer innerhalb eines Systems dürfen (Rollen/Rechte, Least Privilege, Freigaben).",
+      "example": "Im Fileserver darf Team A nur seinen Ordner lesen/schreiben; Personalakten sind nur HR zugänglich."
+    },
+    {
+      "id": "backup_verfahren",
+      "name": "Datensicherung/Backup-Verfahren",
+      "description": "Regelmäßige Sicherung von Daten/Systemen inkl. Versionierung und Wiederherstellungstests; schützt vor Verlust, Ransomware, Fehlern.",
+      "example": "Tägliche inkrementelle Backups + wöchentliches Vollbackup + Restore-Test einmal pro Monat."
+    },
+    {
+      "id": "verfuegbarkeit_sicherung",
+      "name": "Sicherung der Verfügbarkeit",
+      "description": "Maßnahmen gegen Ausfälle (Redundanz, Monitoring, Failover, Ersatzteile, Notfallprozesse), damit Services nutzbar bleiben.",
+      "example": "Monitoring alarmiert bei Plattenfehler; ein Failover-Service übernimmt automatisch, statt dass alles steht."
+    },
+    {
+      "id": "raid",
+      "name": "RAID-Systeme",
+      "description": "Redundanz/Performance durch mehrere Datenträger; je nach Level Ausfalltoleranz (z. B. Spiegelung/Parität).",
+      "example": "RAID 1 im kleinen Server: eine Platte fällt aus, Betrieb läuft weiter, Austausch im laufenden Betrieb."
+    },
+    {
+      "id": "san",
+      "name": "SAN (Storage Area Network)",
+      "description": "Zentrales, leistungsfähiges Storage-Netz für Server/VMs; ermöglicht Redundanz, Performance und zentrale Verwaltung.",
+      "example": "VM-Hosts greifen auf ein SAN zu; Storage ist redundant ausgelegt, damit ein einzelner Plattenausfall nicht zum Stillstand führt."
+    },
+    {
+      "id": "symmetrische_verschluesselung",
+      "name": "Symmetrische Verschlüsselung",
+      "description": "Ein Schlüssel für Ver- und Entschlüsselung; sehr schnell, geeignet für große Datenmengen (Schlüssel muss sicher geteilt werden).",
+      "example": "Eine Festplatte wird mit einem symmetrischen Schlüssel verschlüsselt; Zugriff nur nach erfolgreicher Anmeldung."
+    },
+    {
+      "id": "asymmetrische_verschluesselung",
+      "name": "Asymmetrische Verschlüsselung",
+      "description": "Schlüsselpaar aus Public/Private Key; Public verschlüsselt/prüft, Private entschlüsselt/signiert; Basis für Zertifikate und Signaturen.",
+      "example": "Beim HTTPS-Aufbau wird der Public Key aus dem Zertifikat genutzt, um einen sicheren Schlüsselaustausch zu ermöglichen."
+    },
+    {
+      "id": "ca",
+      "name": "CA (Certification Authority)",
+      "description": "Vertrauensstelle, die Zertifikate ausstellt und damit Identitäten (Server/Benutzer) kryptografisch bestätigt.",
+      "example": "Eine interne CA stellt Zertifikate für VPN-Clients aus, damit nur verwaltete Geräte zugelassen werden."
+    },
+    {
+      "id": "zertifikate",
+      "name": "Zertifikate",
+      "description": "Digitale Nachweise für Identitäten/Public Keys; werden für TLS, VPN, Signaturen und Gerätezertifikate verwendet.",
+      "example": "Der Webserver hat ein gültiges TLS-Zertifikat, damit Browser die Verbindung als vertrauenswürdig anzeigen."
+    },
+    {
+      "id": "digitale_signatur",
+      "name": "Digitale Signaturen",
+      "description": "Kryptografischer Nachweis von Integrität und Urheberschaft: Daten wurden nicht verändert und stammen vom Schlüsselinhaber.",
+      "example": "Ein Update-Paket ist signiert; das System installiert es nur, wenn die Signatur gültig ist."
+    },
+    {
+      "id": "tls_https",
+      "name": "HTTPS/TLS",
+      "description": "Verschlüsselte Transportverbindung mit Serverauthentifizierung (Zertifikat) und Schutz gegen Abhören/Manipulation.",
+      "example": "Login-Daten werden nur über HTTPS übertragen; HTTP wird per Redirect abgeschaltet."
+    },
+    {
+      "id": "authentifizierung",
+      "name": "Authentifizierung",
+      "description": "Nachweis der Identität (Passwort, MFA, Zertifikat, Token); Grundlage für Zugriffskontrolle.",
+      "example": "Admin-Login braucht Passwort + MFA; ohne zweiten Faktor kein Zugang."
+    },
+    {
+      "id": "ssh_vs_telnet",
+      "name": "SSH vs. Telnet",
+      "description": "SSH ist verschlüsselt und authentifiziert; Telnet überträgt Daten (inkl. Passwort) unverschlüsselt und ist unsicher.",
+      "example": "Statt Telnet wird SSH genutzt, damit Admin-Zugang nicht mitgeschnitten werden kann."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Fachbegriffe QM (ISO 9000)",
+  "topic": "Qualitätsbegriff nach ISO 9000, QM-Systeme, QS-Normen, Audit, Zertifizierung",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "qm-begriffe-sort",
+      "type": "sort",
+      "title": "Rätsel 1: QM-Begriffe richtig zuordnen",
+      "subtitle": "Ordne jede Karte dem passenden Begriff zu.",
+      "hintDefault": "Tipp: ISO 9000 = Begriffe/Grundlagen. QM-System = Organisation/Prozesse. QS-Normen = Anforderungen/Regeln. Audit = Prüfung. Zertifizierung = offizieller Nachweis.",
+      "sortColumns": [
+        { "zone": "iso9000", "label": "Qualität nach ISO 9000", "hint": "(Begriff/Grundlage)" },
+        { "zone": "qms", "label": "QM-Systeme", "hint": "(Prozesse, Rollen, Dokumentation)" },
+        { "zone": "normen", "label": "QS-Normen", "hint": "(Regelwerk/Anforderungen)" },
+        { "zone": "audit", "label": "Audit", "hint": "(Prüfung/Nachweisführung)" },
+        { "zone": "zert", "label": "Zertifizierung", "hint": "(Bestätigung durch Stelle)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Qualität = Grad, in dem Merkmale eines Objekts Anforderungen erfüllen.", "correctZone": "iso9000" },
+        { "id": "s2", "text": "Anforderungen können explizit (vertraglich) oder implizit (Erwartungen) sein.", "correctZone": "iso9000" },
+        { "id": "s3", "text": "QM-System beschreibt, wie ein Unternehmen Qualität plant, steuert und verbessert.", "correctZone": "qms" },
+        { "id": "s4", "text": "QM-System enthält z. B. Prozesse, Verantwortlichkeiten, Dokumentation, Kennzahlen.", "correctZone": "qms" },
+        { "id": "s5", "text": "QS-Normen definieren Anforderungen an Qualitätssicherung in Produkten/Prozessen.", "correctZone": "normen" },
+        { "id": "s6", "text": "Normen liefern einen Rahmen, damit Qualität vergleichbar und prüfbar wird.", "correctZone": "normen" },
+        { "id": "s7", "text": "Audit = systematische Prüfung, ob Anforderungen/Regeln eingehalten werden.", "correctZone": "audit" },
+        { "id": "s8", "text": "Audit kann intern (eigene Organisation) oder extern (Dritte) sein.", "correctZone": "audit" },
+        { "id": "s9", "text": "Zertifizierung = formale Bestätigung, dass ein System/Produkt Normen erfüllt.", "correctZone": "zert" },
+        { "id": "s10", "text": "Zertifikat wird typischerweise von einer unabhängigen Stelle nach Audit vergeben.", "correctZone": "zert" }
+      ]
+    },
+    {
+      "id": "quiz-qm-begriffe",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz QM-Fachbegriffe",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: Audit = prüfen. Zertifizierung = offizielles Ergebnis. QM-System = interne Struktur/Prozesse.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was beschreibt ein Audit am treffendsten?",
+          "options": [
+            { "value": "a", "text": "Ein Rabattmodell für Softwarelizenzen" },
+            { "value": "b", "text": "Eine systematische Prüfung gegen Anforderungen/Standards" },
+            { "value": "c", "text": "Die Kennzahl für Gewinn pro Produkt" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist Zertifizierung im QM-Kontext?",
+          "options": [
+            { "value": "a", "text": "Ein interner Projektplan zur Prozessverbesserung" },
+            { "value": "b", "text": "Die formale Bestätigung der Konformität durch eine Stelle" },
+            { "value": "c", "text": "Eine Methode zur Risikoanalyse" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Wofür steht ein betriebliches QM-System primär?",
+          "options": [
+            { "value": "a", "text": "Für die Art, wie ein Unternehmen Qualität organisiert, steuert und verbessert" },
+            { "value": "b", "text": "Für die Anzahl der Mitarbeiter in der IT" },
+            { "value": "c", "text": "Für die Verschlüsselung der Netzwerkverbindung" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "qm-ablauf-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Von Begriffen zu Nachweisen",
+      "subtitle": "Bringe den Ablauf in eine sinnvolle Reihenfolge, um QM im Betrieb greifbar zu machen.",
+      "hintDefault": "Hinweis: Erst Begriff/Anforderung, dann QM-System, dann Normen anwenden, dann auditieren, dann zertifizieren.",
+      "rows": [
+        {
+          "key": "qualitaet",
+          "label": "Qualitätsbegriff verstehen (ISO 9000: Anforderungen erfüllen)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "qms",
+          "label": "QM-System im Betrieb etablieren (Prozesse, Rollen, Dokumentation)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "normen",
+          "label": "QS-Normen auswählen/anwenden (Anforderungen festlegen, Vergleichbarkeit schaffen)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "audit",
+          "label": "Audit durchführen (Nachweise prüfen, Abweichungen finden, Maßnahmen ableiten)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "zert",
+          "label": "Zertifizierung erhalten (Bestätigung nach externem Audit, Zertifikat als Nachweis)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

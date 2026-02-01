@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – IT-Sicherheit auf Grundschutzniveau im Betrieb",
+  "description": "Schritt 1: Passende Maßnahme/Regelwerk wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Im Betrieb passieren Sicherheitsprobleme immer wieder, weil niemand klar zuständig ist. Entscheidungen werden „nebenbei“ getroffen und Maßnahmen versanden.",
+      "tags": ["Organisatorische Maßnahmen", "Rollen", "Verantwortung"],
+      "options": [
+        {
+          "id": "it_sicherheitsbeauftragter",
+          "label": "IT-Sicherheitsbeauftragter",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Definiert Zuständigkeiten und koordiniert Sicherheitsmaßnahmen im Betrieb.", "correct": true },
+            { "id": "w2", "text": "Schafft Ansprechpartner für Richtlinien, Audits und Security-Vorfälle.", "correct": true },
+            { "id": "w3", "text": "Ersetzt technische Maßnahmen komplett, weil Organisation reicht.", "correct": false },
+            { "id": "w4", "text": "Hilft, Security als laufenden Prozess zu etablieren statt als Einmalaktion.", "correct": true }
+          ]
+        },
+        {
+          "id": "firewall",
+          "label": "Firewall",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Filtert/steuert Netzwerkverkehr und reduziert Angriffsfläche.", "correct": true },
+            { "id": "w2", "text": "Löst aber keine fehlenden Verantwortlichkeiten oder Richtlinienprobleme.", "correct": true },
+            { "id": "w3", "text": "Kann organisatorische Regeln wie Passwort-Policy automatisch durchsetzen.", "correct": false },
+            { "id": "w4", "text": "Ist wichtig, aber ohne Organisation wird sie oft falsch konfiguriert oder ignoriert.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne klare Zuständigkeit läuft Security ins Leere: IT-Sicherheitsbeauftragter ist eine organisatorische Basis. Firewall ist wichtig, aber ersetzt keine Verantwortung."
+    },
+    {
+      "id": "c02",
+      "profile": "Mitarbeitende nutzen schwache Passwörter und teilen sie teilweise. Du willst eine verbindliche Regelung, die Mindestanforderungen, Wechsel/Reset und Umgang mit MFA festlegt.",
+      "tags": ["Organisatorische Maßnahmen", "Richtlinie", "Passwort-Policy"],
+      "options": [
+        {
+          "id": "passwort_policy",
+          "label": "Passwort-Policy (inkl. MFA-Regeln)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Legt Mindestanforderungen fest (Länge, Komplexität/Passphrasen, kein Teilen).", "correct": true },
+            { "id": "w2", "text": "Regelt Prozesse für Reset, Sperre, und ggf. MFA-Pflicht.", "correct": true },
+            { "id": "w3", "text": "Ersetzt die Notwendigkeit von technischer Zugriffskontrolle.", "correct": false },
+            { "id": "w4", "text": "Sorgt für einheitliches Vorgehen und reduziert menschliche Schwachstellen.", "correct": true }
+          ]
+        },
+        {
+          "id": "antispam",
+          "label": "Anti-Spam-System",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Reduziert Phishing/Spam im Mailverkehr, ist aber keine Passwortregel.", "correct": true },
+            { "id": "w2", "text": "Kann Angriffe verringern, löst aber schwache Passwörter nicht direkt.", "correct": true },
+            { "id": "w3", "text": "Erzwingt automatisch Passwortlänge und MFA in allen Systemen.", "correct": false },
+            { "id": "w4", "text": "Ist ein technisches Schutzmittel, keine organisatorische Policy.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Schwache Passwörter bekämpfst du zuerst organisatorisch (Passwort-Policy + MFA-Regeln) und dann technisch durchsetzen. Anti-Spam ist ergänzend, aber anderes Problem."
+    },
+    {
+      "id": "c03",
+      "profile": "Du sollst die Informationssicherheit im Betrieb verbindlich regeln: Was ist erlaubt, was nicht, wie wird klassifiziert, wer darf was, wie gehen wir mit Vorfällen um?",
+      "tags": ["Organisatorische Maßnahmen", "IT-Sicherheitsrichtlinie", "Governance"],
+      "options": [
+        {
+          "id": "it_sicherheitsrichtlinie",
+          "label": "IT-Sicherheitsrichtlinie",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schafft verbindliche Regeln für Verhalten, Prozesse und Mindestmaßnahmen.", "correct": true },
+            { "id": "w2", "text": "Definiert Rollen/Verantwortung (z. B. Freigaben, Incident-Prozess).", "correct": true },
+            { "id": "w3", "text": "Ist nur ein PDF und hat keine Wirkung auf den Betrieb.", "correct": false },
+            { "id": "w4", "text": "Ist Basis, damit technische Maßnahmen konsistent und prüfbar umgesetzt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "virenschutz",
+          "label": "Virenschutzsystem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schützt Endgeräte/Server gegen bekannte Malware (Signaturen/Heuristik).", "correct": true },
+            { "id": "w2", "text": "Kann keine organisatorischen Regeln, Rollen oder Freigabeprozesse definieren.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Richtlinien, weil Malware dann nicht mehr existiert.", "correct": false },
+            { "id": "w4", "text": "Ist ein technischer Baustein, aber ohne Policy wird er oft falsch genutzt/ausgenommen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "IT-Sicherheitsrichtlinie = Regelwerk für Verhalten/Prozesse/Rollen. Virenschutz ist ein technischer Schutz, aber keine Governance."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Betrieb hat häufig Phishing-Mails und Schadsoftware-Funde. Du brauchst technische Maßnahmen, die konkret den Mailverkehr und Endgeräte schützen.",
+      "tags": ["Technische Maßnahmen", "Anti-Spam", "Virenschutz", "Phishing"],
+      "options": [
+        {
+          "id": "antispam_virenschutz",
+          "label": "Anti-Spam/Anti-Phishing + Virenschutz",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Anti-Spam reduziert schädliche Mails (Spam/Phishing) schon vor dem Postfach.", "correct": true },
+            { "id": "w2", "text": "Virenschutz erkennt/stoppt Malware auf Endgeräten/Servern.", "correct": true },
+            { "id": "w3", "text": "Technische Maßnahmen sind unnötig, wenn Mitarbeitende vorsichtig sind.", "correct": false },
+            { "id": "w4", "text": "Technik + Schulung/Policy ist stärker als nur eins davon.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_richtlinie",
+          "label": "Nur IT-Sicherheitsrichtlinie (ohne Technik)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Richtlinien sind wichtig, stoppen aber keinen Anhang oder Link automatisch.", "correct": true },
+            { "id": "w2", "text": "Ohne technische Filter kommt zu viel durch und belastet Nutzer/Support.", "correct": true },
+            { "id": "w3", "text": "Richtlinien blocken Phishing technisch auf dem Mailgateway.", "correct": false },
+            { "id": "w4", "text": "Für Grundschutz brauchst du beides: organisatorisch + technisch.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Phishing/Malware ist ein Technikproblem + Menschproblem: Anti-Spam/Anti-Phishing und Virenschutz ergänzen Policies und Schulungen."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Unternehmen will „Grundschutz“ erreichen. Es braucht eine technische Maßnahme, die den Netzwerkverkehr kontrolliert, Dienste abschottet und Regeln nachvollziehbar macht.",
+      "tags": ["Technische Maßnahmen", "Firewall", "Netzwerksicherheit"],
+      "options": [
+        {
+          "id": "firewall",
+          "label": "Firewall",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Steuert eingehenden/ausgehenden Verkehr nach Regeln (Ports, IPs, Protokolle).", "correct": true },
+            { "id": "w2", "text": "Reduziert Angriffsfläche durch Segmentierung und Blocken unnötiger Dienste.", "correct": true },
+            { "id": "w3", "text": "Ist nur für WLAN zuständig, nicht für Netzwerksicherheit allgemein.", "correct": false },
+            { "id": "w4", "text": "Unterstützt nachvollziehbare Regeln (Policy), Logging und Fehlersuche.", "correct": true }
+          ]
+        },
+        {
+          "id": "passwort_policy",
+          "label": "Passwort-Policy",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verbessert Identitätsschutz, steuert aber keinen Netzwerkverkehr.", "correct": true },
+            { "id": "w2", "text": "Ist organisatorisch und muss technisch ergänzt werden.", "correct": true },
+            { "id": "w3", "text": "Blockt Portscans und Exploits auf Netzwerkebene automatisch.", "correct": false },
+            { "id": "w4", "text": "Ist wichtig, aber löst eine andere Schicht des Problems.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Firewall = technischer Grundpfeiler für Netzwerkschutz (Regeln/Segmentierung). Passwort-Policy schützt Identitäten, aber nicht den Netzwerkverkehr."
+    },
+    {
+      "id": "c06",
+      "profile": "Du sollst dich an anerkannten Standards orientieren, um Informationssicherheit strukturiert umzusetzen und später auch auditierbar zu machen. Es soll „nicht nur nach Gefühl“ passieren.",
+      "tags": ["Normen", "Standards", "ISO 2700x", "BSI IT-Grundschutz"],
+      "options": [
+        {
+          "id": "iso_bsi",
+          "label": "Normen und Branchenstandards (ISO 2700x, BSI IT-Grundschutz)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Geben strukturierte Anforderungen/Best Practices für ISMS und Maßnahmen vor.", "correct": true },
+            { "id": "w2", "text": "Erleichtern Nachweisbarkeit (Audit, Rollen, Prozesse, Dokumentation).", "correct": true },
+            { "id": "w3", "text": "Machen Technik überflüssig, weil Standards die Sicherheit garantieren.", "correct": false },
+            { "id": "w4", "text": "Schaffen Vergleichbarkeit und systematisches Vorgehen statt „Ad-hoc-Security“. ", "correct": true }
+          ]
+        },
+        {
+          "id": "random_security",
+          "label": "Sicherheitsmaßnahmen nach Bauchgefühl zusammenwürfeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Führt zu Lücken, weil nichts systematisch abgedeckt wird.", "correct": true },
+            { "id": "w2", "text": "Ist schwer auditierbar und schlecht begründbar.", "correct": true },
+            { "id": "w3", "text": "Ist besser als Standards, weil Standards nur Theorie sind.", "correct": false },
+            { "id": "w4", "text": "Ohne Rahmen fehlen Priorisierung, Verantwortlichkeiten und Wiederholbarkeit.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Grundschutz braucht Systematik: ISO-2700x und BSI IT-Grundschutz liefern Rahmen und Maßnahmenkataloge. Bauchgefühl ist kein Sicherheitskonzept."
+    }
+  ]
+}

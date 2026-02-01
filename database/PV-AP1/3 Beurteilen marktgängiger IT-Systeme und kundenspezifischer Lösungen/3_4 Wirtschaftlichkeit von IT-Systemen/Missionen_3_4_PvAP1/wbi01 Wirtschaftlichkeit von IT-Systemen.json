@@ -1,0 +1,225 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Wirtschaftlichkeit von IT-Systemen-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "anschaffungs_und_betriebskosten",
+      "name": "Anschaffungskosten, Betriebskosten",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": true,
+        "suitable_for_investors": true,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "variable_und_fixe_kosten",
+      "name": "Variable und fixe Kosten",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": false,
+        "decision_power_centralized": true,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "lizenz_und_finanzierungskosten",
+      "name": "Lizenz- und Finanzierungskosten",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": true,
+        "minimum_capital_required": true,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": true,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "kostenvergleich",
+      "name": "Kostenvergleich (Leasing, Kauf, Miete, pay-per-use)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "auslastungs_und_anpassungsfaehigkeit",
+      "name": "Auslastungs- und Anpassungsfähigkeit",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "qualitativer_und_quantitativer_angebotsvergleich",
+      "name": "Qualitativer und quantitativer Angebotsvergleich",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es darum, einmalige Kosten (Kauf/Invest) und laufende Kosten (Betrieb/Wartung) zu unterscheiden und zu kalkulieren?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es darum, fixe Kosten (fallen immer an) und variable Kosten (abhängig von Nutzung/Menge) zu unterscheiden?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es primär um Lizenzmodelle, Abos, Finanzierung, Zinsen oder Kapitalbindung?",
+      "attributeKey": "capital_market_access"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Vergleichst du Beschaffungs-/Nutzungsmodelle wie Leasing vs. Kauf vs. Miete vs. pay-per-use?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Steht die Frage im Vordergrund, wie gut sich Ressourcen auslasten lassen und wie flexibel das System anpassbar ist?",
+      "attributeKey": "mixed_liability"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Vergleichst du Angebote nicht nur nach Preis, sondern auch nach Qualität/Nutzen (qualitativ + quantitativ)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist dafür viel Dokumentation/Tabellen/Rechnerei nötig (TCO, Kostenblöcke, Annahmen, Laufzeiten)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Gehört das typischerweise in Entscheidungsrunden mit mehreren Beteiligten (IT, Einkauf, Controlling, Management)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Sind dabei Rollen klar getrennt (z. B. Anforderung/Technik vs. Kosten/Controlling vs. Einkauf)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Gibt es formale Vorgaben/Prozesse (z. B. Freigaben, Budgetregeln, Beschaffungsrichtlinien, Vertragsprüfung)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wird die finale Auswahl oft zentral getroffen (Budgetverantwortung, Management-Entscheidung)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Wirkt das Ergebnis nach außen professionell (sauberer Angebotsvergleich, belastbare Zahlen, nachvollziehbare Entscheidung)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist das Thema besonders relevant für Wachstum/Skalierung (z. B. pay-per-use, Cloud, Kapazitätsplanung)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist das Ergebnis attraktiv für Investoren/Finanzierer, weil es Planungssicherheit und klare Wirtschaftlichkeit zeigt?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Ist dafür oft ein Mindestbudget/Investitionsrahmen nötig, um die Option überhaupt umsetzen zu können?",
+      "attributeKey": "minimum_capital_required"
+    }
+  ]
+}

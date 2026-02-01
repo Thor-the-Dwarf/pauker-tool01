@@ -1,0 +1,217 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Marktsituationen bewerten",
+  "description": "Schritt 1: Passenden Schwerpunkt wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "In einer Region gibt es nur einen einzigen Anbieter für Glasfaseranschlüsse. Kunden haben praktisch keine Alternative, und Preise/Vertragsbedingungen werden weitgehend vom Anbieter bestimmt.",
+      "tags": ["Marktformen", "Monopol", "Anbieter"],
+      "options": [
+        {
+          "id": "monopol",
+          "label": "Monopol",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Es gibt einen Anbieter und viele Nachfrager.", "correct": true },
+            { "id": "w2", "text": "Der Anbieter hat starke Preissetzungsmacht.", "correct": true },
+            { "id": "w3", "text": "Es gibt viele Anbieter, die stark um Kunden konkurrieren.", "correct": false },
+            { "id": "w4", "text": "Kunden diktieren die Bedingungen wegen großer Auswahl an Anbietern.", "correct": false }
+          ]
+        },
+        {
+          "id": "polypol",
+          "label": "Polypol",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Viele Anbieter und viele Nachfrager führen zu starkem Wettbewerb.", "correct": true },
+            { "id": "w2", "text": "Ein einzelner Anbieter bestimmt alleine den Marktpreis.", "correct": false },
+            { "id": "w3", "text": "Anbieter können sich leicht absprechen, weil es nur wenige gibt.", "correct": false },
+            { "id": "w4", "text": "Preis und Qualität werden stark durch Wettbewerb beeinflusst.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Monopol: ein Anbieter dominiert, hohe Preissetzungsmacht, geringe Auswahl für Nachfrager."
+    },
+    {
+      "id": "c02",
+      "profile": "Im Cloud-Markt dominieren wenige sehr große Anbieter. Sie setzen Standards, beeinflussen Preise und Funktionen, und kleinere Anbieter müssen sich stark differenzieren, um mitzuhalten.",
+      "tags": ["Marktformen", "Oligopol", "Wettbewerb"],
+      "options": [
+        {
+          "id": "oligopol",
+          "label": "Oligopol",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenige Anbieter teilen sich den Großteil des Marktes.", "correct": true },
+            { "id": "w2", "text": "Preis- und Produktentscheidungen der Großen beeinflussen die anderen stark.", "correct": true },
+            { "id": "w3", "text": "Viele Anbieter konkurrieren ohne nennenswerten Einfluss einzelner Marktteilnehmer.", "correct": false },
+            { "id": "w4", "text": "Ein einzelner Anbieter ist alleiniger Marktteilnehmer.", "correct": false }
+          ]
+        },
+        {
+          "id": "monopol",
+          "label": "Monopol",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Es gibt genau einen Anbieter.", "correct": false },
+            { "id": "w2", "text": "Wenige dominierende Anbieter sind typisch.", "correct": false },
+            { "id": "w3", "text": "Marktteilnehmer müssen aufeinander reagieren (z. B. Preisaktionen, Features).", "correct": true },
+            { "id": "w4", "text": "Absprachen/Parallelverhalten sind im Oligopol eher ein Thema als im Polypol.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Oligopol: wenige große Anbieter dominieren; Entscheidungen eines Anbieters wirken stark auf die anderen."
+    },
+    {
+      "id": "c03",
+      "profile": "Es gibt viele kleine Anbieter von Webdesign-Leistungen und viele Kunden. Preise sind stark vergleichbar, Kunden wechseln schnell, und Anbieter müssen sich über Qualität/Service differenzieren.",
+      "tags": ["Marktformen", "Polypol", "Dienstleistung"],
+      "options": [
+        {
+          "id": "polypol",
+          "label": "Polypol",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Viele Anbieter und viele Nachfrager treffen aufeinander.", "correct": true },
+            { "id": "w2", "text": "Wettbewerbsdruck ist hoch; Differenzierung über Qualität/Service ist wichtig.", "correct": true },
+            { "id": "w3", "text": "Ein Anbieter kann den Preis praktisch alleine festlegen.", "correct": false },
+            { "id": "w4", "text": "Kunden haben kaum Auswahl und müssen nehmen, was angeboten wird.", "correct": false }
+          ]
+        },
+        {
+          "id": "oligopol",
+          "label": "Oligopol",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Es gibt wenige Anbieter, die den Markt dominieren.", "correct": false },
+            { "id": "w2", "text": "Anbieter beobachten sich stark und reagieren auf Preis-/Produktänderungen.", "correct": true },
+            { "id": "w3", "text": "Absprachen sind unwahrscheinlicher, weil es viele Marktteilnehmer gibt.", "correct": true },
+            { "id": "w4", "text": "Ein einzelner Anbieter bestimmt die Bedingungen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Polypol: viele Anbieter und viele Nachfrager; starker Wettbewerb, geringe Marktmacht einzelner."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Unternehmen benötigt dringend 500 Laptops in kurzer Zeit. Es gibt nur wenige Lieferanten mit verfügbarer Ware, und diese Lieferanten können hohe Preise durchsetzen. Das Unternehmen muss schnell entscheiden und hat wenig Verhandlungsspielraum.",
+      "tags": ["Marktformen", "Verkäufermarkt", "Beschaffung"],
+      "options": [
+        {
+          "id": "verkaeufermarkt",
+          "label": "Verkäufermarkt",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Angebot ist knapp im Verhältnis zur Nachfrage.", "correct": true },
+            { "id": "w2", "text": "Anbieter haben stärkere Verhandlungsmacht und können Preise eher durchsetzen.", "correct": true },
+            { "id": "w3", "text": "Kunden diktieren die Bedingungen, weil Anbieter um Käufer konkurrieren.", "correct": false },
+            { "id": "w4", "text": "Es gibt viele alternative Lieferanten mit sofortiger Verfügbarkeit.", "correct": false }
+          ]
+        },
+        {
+          "id": "kaeufermarkt",
+          "label": "Käufermarkt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Nachfrage ist geringer als Angebot; Käufer haben Auswahl.", "correct": true },
+            { "id": "w2", "text": "Preisdruck liegt eher auf Anbieterseite.", "correct": true },
+            { "id": "w3", "text": "Knappheit führt dazu, dass Käufer hohe Preise akzeptieren müssen.", "correct": false },
+            { "id": "w4", "text": "Anbieter konkurrieren stark um wenige Käufer.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Verkäufermarkt: Nachfrage > Angebot; Anbieter haben Verhandlungsmacht und können Preise/Bedingungen eher bestimmen."
+    },
+    {
+      "id": "c05",
+      "profile": "Eine Agentur will ein neues Schulungsangebot für Fachinformatiker verkaufen. Sie entscheidet, ob sie eher Umschüler, Azubis oder IT-Quereinsteiger ansprechen soll. Dafür sammelt sie Merkmale wie Alter, Vorwissen, Lernziele, Budget und typische Probleme.",
+      "tags": ["Zielgruppe", "Marketing", "Positionierung"],
+      "options": [
+        {
+          "id": "zielgruppendefinition",
+          "label": "Zielgruppendefinition",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ziel ist das Eingrenzen, wer genau angesprochen werden soll.", "correct": true },
+            { "id": "w2", "text": "Merkmale wie Bedarf, Budget, Wissenstand und Nutzenversprechen werden beschrieben.", "correct": true },
+            { "id": "w3", "text": "Es geht primär um den Vergleich mit Best-in-Class-Konkurrenten anhand Kennzahlen.", "correct": false },
+            { "id": "w4", "text": "Ergebnis hilft, passende Kanäle, Botschaften und Produktfeatures abzuleiten.", "correct": true }
+          ]
+        },
+        {
+          "id": "benchmarking",
+          "label": "Benchmarking",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vergleicht eigene Leistung/Prozesse/Angebote mit anderen (Best Practice).", "correct": true },
+            { "id": "w2", "text": "Definiert primär, welche Personengruppe das Angebot kaufen soll.", "correct": false },
+            { "id": "w3", "text": "Kann Hinweise liefern, welche Features am Markt üblich sind.", "correct": true },
+            { "id": "w4", "text": "Ergebnis ist oft eine Zielpersona inkl. demografischer und psychografischer Merkmale.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Zielgruppendefinition: beschreibt und grenzt die Zielgruppe anhand relevanter Merkmale ein, um Angebot und Kommunikation passend auszurichten."
+    },
+    {
+      "id": "c06",
+      "profile": "Ein IT-Dienstleister bekommt drei Angebote für ein Monitoring-Tool. Angebot A ist günstig, hat aber geringe Skalierbarkeit. Angebot B ist teurer, bietet aber Automatisierung und bessere Integrationen. Angebot C liegt dazwischen, hat aber hohe Folgekosten für Lizenzen. Das Team will strukturiert bewerten, welches Angebot passt.",
+      "tags": ["Angebote", "Bewertung", "Auswahl"],
+      "options": [
+        {
+          "id": "angebotsbewertung",
+          "label": "Angebotsbewertung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrere Angebote werden anhand definierter Kriterien vergleichbar gemacht.", "correct": true },
+            { "id": "w2", "text": "Neben Preis zählen auch Leistung, Risiken, Folgekosten und Anforderungen.", "correct": true },
+            { "id": "w3", "text": "Ziel ist primär die Bestimmung, ob es ein Monopol oder Polypol ist.", "correct": false },
+            { "id": "w4", "text": "Ein Scoring/Nutzwertansatz kann genutzt werden, um eine Entscheidung zu begründen.", "correct": true }
+          ]
+        },
+        {
+          "id": "marktformen",
+          "label": "Marktformen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt Anzahl und Machtverhältnisse von Anbietern/Nachfragern.", "correct": true },
+            { "id": "w2", "text": "Vergleicht konkrete Angebote anhand Kriterien wie Integrationen und Folgekosten.", "correct": false },
+            { "id": "w3", "text": "Kann beeinflussen, wie stark man Preise verhandeln kann.", "correct": true },
+            { "id": "w4", "text": "Ist identisch mit einer Kriterienliste zur Tool-Auswahl.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Angebotsbewertung: Angebote strukturiert anhand Kriterien vergleichen (Preis, Leistung, Folgekosten, Risiken), um eine nachvollziehbare Auswahl zu treffen."
+    },
+    {
+      "id": "c07",
+      "profile": "Ein Unternehmen will seine eigene Incident-Response verbessern. Es vergleicht sich mit anderen Firmen und Best Practices: Reaktionszeiten, Prozessschritte, Tooling, Dokumentation und Schulungen. Ziel ist es, Lücken zu erkennen und gezielt aufzuholen.",
+      "tags": ["Benchmarking", "Best Practice", "Vergleich"],
+      "options": [
+        {
+          "id": "benchmarking",
+          "label": "Benchmarking",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eigene Prozesse/Leistung werden mit anderen oder Best Practices verglichen.", "correct": true },
+            { "id": "w2", "text": "Ziel ist das Erkennen von Lücken und Ableiten von Verbesserungen.", "correct": true },
+            { "id": "w3", "text": "Es geht primär um die Eingrenzung einer Zielgruppe nach Merkmalen.", "correct": false },
+            { "id": "w4", "text": "Kennzahlen/Vergleichsmaßstäbe (z. B. Reaktionszeiten) sind zentrale Elemente.", "correct": true }
+          ]
+        },
+        {
+          "id": "zielgruppendefinition",
+          "label": "Zielgruppendefinition",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Definiert, welche Kundengruppe angesprochen werden soll.", "correct": true },
+            { "id": "w2", "text": "Vergleicht Incident-Response-Reaktionszeiten mit Best-in-Class.", "correct": false },
+            { "id": "w3", "text": "Hilft, Botschaften, Kanäle und Angebot an eine Personengruppe anzupassen.", "correct": true },
+            { "id": "w4", "text": "Ist ein Instrument zur Prozessoptimierung durch Vergleich mit Vorbildern.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Benchmarking: Vergleich mit anderen/Best Practices über Kennzahlen und Vorgehen, um Verbesserungen gezielt abzuleiten."
+    }
+  ]
+}

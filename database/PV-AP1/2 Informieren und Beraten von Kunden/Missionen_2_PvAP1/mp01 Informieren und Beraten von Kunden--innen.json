@@ -1,0 +1,42 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Marketingaktivitäten – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "nutzwertanalyse",
+      "name": "Nutzwertanalyse",
+      "description": "Bewertungsmethode: Kriterien festlegen, gewichten, Optionen punktet man – Ergebnis ist ein vergleichbarer Gesamtnutzen.",
+      "example": "Für ein Marketing-Tool werden Kriterien wie Kosten, Bedienbarkeit, Integrationen und Datenschutz gewichtet und drei Anbieter gegeneinander bewertet."
+    },
+    {
+      "id": "direkter_vertrieb",
+      "name": "Vertriebsform: Direkter Vertrieb",
+      "description": "Verkauf ohne Zwischenhändler direkt an den Kunden (z. B. eigener Vertrieb, Online-Shop, direkte Angebote).",
+      "example": "Ein IT-Dienstleister gewinnt Kunden über eigene Website, Erstgespräch und Angebot – Abschluss direkt mit dem Endkunden."
+    },
+    {
+      "id": "indirekter_vertrieb",
+      "name": "Vertriebsform: Indirekter Vertrieb",
+      "description": "Verkauf über Partner oder Zwischenhändler (z. B. Reseller, Systemhäuser, Marktplätze, Vermittler).",
+      "example": "Eine Software wird über Reseller verkauft, die Beratung und Implementierung übernehmen und dafür eine Marge erhalten."
+    },
+    {
+      "id": "staerken_schwaechenanalyse",
+      "name": "Stärken- und Schwächenanalyse",
+      "description": "Interne Analyse der eigenen Stärken und Schwächen als Grundlage für Positionierung und Maßnahmen (oft Teil von SWOT).",
+      "example": "Stärken: schneller Support, viele Referenzen. Schwächen: wenig Marketing-Budget, geringe Bekanntheit → Fokus auf Nischenbranche und Case-Studies."
+    }
+  ]
+}

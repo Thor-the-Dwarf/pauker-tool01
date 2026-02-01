@@ -1,0 +1,127 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Sicherheitskonzept nach BSI IT-Grundschutz",
+  "description": "Schritt 1: Passenden Begriff/Baustein wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen möchte ein Sicherheitskonzept strukturiert aufbauen. Es soll nicht bei „Best Practices nach Bauchgefühl“ bleiben, sondern systematisch Maßnahmen auswählen, die zu typischen IT-Objekten passen (z. B. Server, Clients, Netze, Anwendungen).",
+      "tags": ["BSI IT-Grundschutz", "Grundschutzkatalog", "Bausteine"],
+      "options": [
+        {
+          "id": "bausteine_grundschutzkatalog",
+          "label": "Bausteine aus dem Grundschutzkatalog",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bausteine liefern strukturierte Maßnahmenpakete für typische Zielobjekte (z. B. IT-Systeme, Anwendungen, Netze).", "correct": true },
+            { "id": "w2", "text": "Sie helfen, Maßnahmen nachvollziehbar und wiederholbar auszuwählen (nicht „nach Gefühl“).", "correct": true },
+            { "id": "w3", "text": "Bausteine sind Schutzbedarfsklassen (normal/hoch/sehr hoch).", "correct": false },
+            { "id": "w4", "text": "Bausteine dienen als Basis für Modellierung und Umsetzung von Sicherheitsmaßnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "schutzbedarfskategorien",
+          "label": "Schutzbedarfskategorien (normal, hoch, sehr hoch)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schutzbedarf beschreibt, wie kritisch ein Schaden für Vertraulichkeit/Integrität/Verfügbarkeit wäre.", "correct": true },
+            { "id": "w2", "text": "Schutzbedarf ist wichtig für Priorisierung, ersetzt aber keine Baustein-Maßnahmenpakete.", "correct": true },
+            { "id": "w3", "text": "Schutzbedarfskategorien sind eine Liste konkreter Maßnahmen für Server/Clients.", "correct": false },
+            { "id": "w4", "text": "Ohne Bausteine wüsste man zwar, wie kritisch es ist, aber nicht automatisch welche Maßnahmen konkret nötig sind.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Grundschutz-Bausteine: Maßnahmenpakete für typische Zielobjekte, um ein Sicherheitskonzept systematisch und nachvollziehbar zu modellieren."
+    },
+    {
+      "id": "c02",
+      "profile": "Bei einem System bewertet das Unternehmen, wie schlimm ein Schaden wäre: Bei Ausfall gäbe es nur kleine Störungen (normal), bei Datenverlust wäre die Existenz bedroht (sehr hoch). Es geht um Priorisierung und Intensität der Schutzmaßnahmen.",
+      "tags": ["Schutzbedarf", "Priorisierung", "Normal/Hoch/Sehr hoch"],
+      "options": [
+        {
+          "id": "schutzbedarfskategorien",
+          "label": "Schutzbedarfskategorien (normal, hoch, sehr hoch)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schutzbedarf kategorisiert die mögliche Schadenshöhe (z. B. bei Ausfall/Manipulation/Offenlegung).", "correct": true },
+            { "id": "w2", "text": "Die Einstufung steuert Priorisierung und das Schutzniveau, das umgesetzt werden muss.", "correct": true },
+            { "id": "w3", "text": "Schutzbedarf ist eine konkrete Firewall-Regel, die man direkt einträgt.", "correct": false },
+            { "id": "w4", "text": "Schutzbedarf wird typischerweise entlang Vertraulichkeit, Integrität und Verfügbarkeit betrachtet.", "correct": true }
+          ]
+        },
+        {
+          "id": "bausteine_grundschutzkatalog",
+          "label": "Bausteine aus dem Grundschutzkatalog",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bausteine liefern Maßnahmen, aber sie sind nicht die Einstufung normal/hoch/sehr hoch.", "correct": true },
+            { "id": "w2", "text": "Bausteine ersetzen die Schutzbedarfsbewertung komplett.", "correct": false },
+            { "id": "w3", "text": "Man kann Bausteine abhängig vom Schutzbedarf priorisieren/vertiefen.", "correct": true },
+            { "id": "w4", "text": "Bausteine sind der Werkzeugkasten; Schutzbedarf ist die Kritikalitätseinschätzung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Schutzbedarfskategorien: Einstufung der Kritikalität (normal/hoch/sehr hoch) als Basis für Priorität und Schutzniveau."
+    },
+    {
+      "id": "c03",
+      "profile": "Die Geschäftsführung will Informationssicherheit nicht als Einzelmaßnahmen, sondern als dauerhaftes Managementsystem: Verantwortlichkeiten, Richtlinien, Risikobehandlung, Verbesserungsprozesse, regelmäßige Überprüfung. Das soll im Betrieb verankert werden.",
+      "tags": ["ISMS", "Organisation", "Kontinuierliche Verbesserung"],
+      "options": [
+        {
+          "id": "isms_implementieren",
+          "label": "IT-Sicherheitsmanagement-System implementieren (ISMS)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein ISMS verankert Informationssicherheit als kontinuierlichen Prozess (Planen-Umsetzen-Prüfen-Verbessern).", "correct": true },
+            { "id": "w2", "text": "Es definiert Rollen, Regeln, Prozesse und Nachweise statt nur Einzelmaßnahmen.", "correct": true },
+            { "id": "w3", "text": "ISMS bedeutet, dass man nur eine Firewall installiert und fertig ist.", "correct": false },
+            { "id": "w4", "text": "Ziel ist dauerhafte Steuerung und Verbesserung der Informationssicherheit im Betrieb.", "correct": true }
+          ]
+        },
+        {
+          "id": "betrieblicher_it_sicherheitsbeauftragter",
+          "label": "Betrieblicher IT-Sicherheitsbeauftragter",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Der IT-Sicherheitsbeauftragte ist eine Rolle/Verantwortlichkeit, oft Teil des ISMS.", "correct": true },
+            { "id": "w2", "text": "Eine Rolle allein ist kein vollständiges Managementsystem.", "correct": true },
+            { "id": "w3", "text": "Wenn es einen Sicherheitsbeauftragten gibt, braucht man kein ISMS.", "correct": false },
+            { "id": "w4", "text": "Der Beauftragte koordiniert/berät, aber Prozesse/Richtlinien müssen trotzdem systematisch etabliert sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "ISMS implementieren: Informationssicherheit als Managementsystem mit Rollen, Prozessen, Kontrollen und kontinuierlicher Verbesserung."
+    },
+    {
+      "id": "c04",
+      "profile": "Im Unternehmen soll es eine klare zentrale Ansprechperson für IT-Sicherheit geben: Koordination von Maßnahmen, Sensibilisierung, Unterstützung bei Richtlinien/Prozessen, Schnittstelle zur Leitung und zu Fachbereichen.",
+      "tags": ["Rollen", "Organisation", "IT-Sicherheit"],
+      "options": [
+        {
+          "id": "betrieblicher_it_sicherheitsbeauftragter",
+          "label": "Betrieblicher IT-Sicherheitsbeauftragter",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Definierte Rolle als zentrale Ansprechperson für IT-/Informationssicherheit im Betrieb.", "correct": true },
+            { "id": "w2", "text": "Koordiniert Maßnahmen, berät, unterstützt Awareness und wirkt an Richtlinien mit.", "correct": true },
+            { "id": "w3", "text": "Ist identisch mit Schutzbedarfskategorie „hoch“.", "correct": false },
+            { "id": "w4", "text": "Rolle unterstützt das ISMS, ersetzt aber nicht technische/organisatorische Maßnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "bausteine_grundschutzkatalog",
+          "label": "Bausteine aus dem Grundschutzkatalog",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bausteine sind Maßnahmenpakete, keine einzelne Rollenbeschreibung.", "correct": true },
+            { "id": "w2", "text": "Bausteine legen fest, wer im Unternehmen Ansprechpartner ist.", "correct": false },
+            { "id": "w3", "text": "Bausteine können organisatorische Maßnahmen enthalten, aber die Rolle muss trotzdem benannt werden.", "correct": true },
+            { "id": "w4", "text": "Für „Wer ist zuständig?“ ist die Rollen-/Organisationssicht entscheidend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "IT-Sicherheitsbeauftragter: zentrale Rolle/Ansprechperson, koordiniert und unterstützt Sicherheitsmaßnahmen und das ISMS im Betrieb."
+    }
+  ]
+}

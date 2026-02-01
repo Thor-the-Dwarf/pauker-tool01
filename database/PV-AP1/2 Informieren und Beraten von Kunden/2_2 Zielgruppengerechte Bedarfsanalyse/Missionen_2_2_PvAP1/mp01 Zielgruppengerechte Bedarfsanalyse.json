@@ -1,0 +1,78 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Zielgruppengerechte Bedarfsanalyse – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils die passende Methode/Technik mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Methode/Technik",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Analyse- oder Kommunikationstechnik.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "fragetechnik",
+      "name": "Fragetechnik",
+      "description": "Gezieltes Fragenstellen, um Anforderungen zu klären (offene Fragen für Bedarf, geschlossene Fragen für Bestätigung, W-Fragen für Details).",
+      "example": "„Wofür wird der PC genutzt?“ (offen) → „Benötigen Sie zwei Monitore?“ (geschlossen) → „Welche Programme genau?“ (W-Frage)."
+    },
+    {
+      "id": "aktives_zuhoeren",
+      "name": "Aktives Zuhören",
+      "description": "Bewusstes Zuhören mit Paraphrasieren, Nachfragen und Spiegeln, um Missverständnisse zu vermeiden und Vertrauen aufzubauen.",
+      "example": "„Wenn ich Sie richtig verstehe, sind die langen Ladezeiten das Hauptproblem – stimmt das?“"
+    },
+    {
+      "id": "adressatengerechte_praesentation",
+      "name": "Bedarfs- und adressatengerechte Präsentation",
+      "description": "Ergebnisse so darstellen, dass sie zur Zielgruppe passen (Detailgrad, Sprache, Nutzenfokus, passende Visuals).",
+      "example": "Für die Geschäftsleitung: Kosten/Nutzen und Risiken; für Admins: technische Details, Rollout-Plan, Abhängigkeiten."
+    },
+    {
+      "id": "kundenbefragung",
+      "name": "Datenerhebung: Kundenbefragung",
+      "description": "Strukturiertes Sammeln von Informationen über Bedürfnisse, Probleme und Prioritäten per Interview oder Fragebogen.",
+      "example": "20 Mitarbeitende beantworten einen Fragebogen zu Softwarebedarf, Performance-Problemen und Homeoffice-Anforderungen."
+    },
+    {
+      "id": "beobachtung",
+      "name": "Datenerhebung: Beobachtung am Arbeitsplatz",
+      "description": "Erhebung durch direktes Beobachten realer Abläufe, um implizite Anforderungen und Probleme zu erkennen.",
+      "example": "Vor Ort fällt auf: Mitarbeitende wechseln ständig zwischen Tools und brauchen einen zweiten Monitor für paralleles Arbeiten."
+    },
+    {
+      "id": "dokumentenanalyse",
+      "name": "Datenerhebung: Dokumentenanalyse",
+      "description": "Auswertung vorhandener Unterlagen (Tickets, Inventarlisten, Prozessbeschreibungen, Richtlinien), um Bedarf abzuleiten.",
+      "example": "Aus Tickets wird ersichtlich, dass Treiberprobleme mit Modell X häufig auftreten und ein Standardwechsel sinnvoll ist."
+    },
+    {
+      "id": "anforderungen_bueroarbeitsplaetze",
+      "name": "Auswertung: Anforderungen an Büroarbeitsplätze",
+      "description": "Ableitung konkreter Anforderungen (Hardware, Software, Ergonomie, Sicherheit) aus erhobenen Daten und Zielgruppenprofilen.",
+      "example": "Für Sachbearbeitung: leiser Mini-PC, 2 Monitore, Office, Headset; für Grafik: starke GPU, 32 GB RAM, Farbmonitor."
+    },
+    {
+      "id": "priorisierung_moscow",
+      "name": "Auswertung: Priorisierung (MoSCoW)",
+      "description": "Kategorisierung von Anforderungen in Muss/Soll/Kann/Won’t, um Fokus und Scope zu steuern.",
+      "example": "Must: VPN + MFA; Should: Geräteverschlüsselung; Could: Dockingstation; Won’t: BYOD im ersten Rollout."
+    },
+    {
+      "id": "persona_zielgruppe",
+      "name": "Zielgruppenprofil (Persona/Rolle)",
+      "description": "Beschreibung typischer Nutzergruppen mit Aufgaben, Kontext, Pain Points und Zielen, um Entscheidungen zu begründen.",
+      "example": "Persona „Support-Agent“: viele Tabs, Calls, CRM; braucht 2 Monitore, Headset, stabile Internetverbindung, schnelle Login-Zeiten."
+    },
+    {
+      "id": "soll_ist_abgleich",
+      "name": "Auswertung: Soll-Ist-Abgleich",
+      "description": "Vergleich zwischen aktuellem Zustand und gewünschtem Zielzustand, um Lücken und Maßnahmen abzuleiten.",
+      "example": "Ist: 8 GB RAM, HDD, 1 Monitor → Soll: 16 GB RAM, SSD, 2 Monitore → Maßnahme: Hardware-Upgrade-Plan."
+    }
+  ]
+}

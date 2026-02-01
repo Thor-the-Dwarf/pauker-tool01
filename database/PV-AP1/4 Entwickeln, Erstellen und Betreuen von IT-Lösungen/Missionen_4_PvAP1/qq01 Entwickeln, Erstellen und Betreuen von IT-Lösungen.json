@@ -1,0 +1,104 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Grundlagen Datenbanken (ER & SELECT)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu ER-Modell und SELECT-Grundlagen zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "ER-Modell",
+    "Entität",
+    "Attribut",
+    "Beziehung",
+    "Primärschlüssel",
+    "Fremdschlüssel",
+    "Kardinalität",
+    "Tabelle",
+    "SELECT",
+    "WHERE",
+    "ORDER BY",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Grafisches Modell zur Beschreibung von Datenobjekten und deren Beziehungen (z. B. Kunde – bestellt – Bestellung).",
+      "correct": "ER-Modell"
+    },
+    {
+      "text": "Objekt/„Ding“ der realen Welt, das gespeichert werden soll, z. B. Kunde, Produkt, Bestellung.",
+      "correct": "Entität"
+    },
+    {
+      "text": "Eigenschaft einer Entität, z. B. Kundenname, Produktpreis, Bestelldatum.",
+      "correct": "Attribut"
+    },
+    {
+      "text": "Verknüpfung zwischen Entitäten, z. B. Kunde „hat“ Bestellung oder Bestellung „enthält“ Produkt.",
+      "correct": "Beziehung"
+    },
+    {
+      "text": "Eindeutiges Merkmal/Schlüssel, das einen Datensatz eindeutig identifiziert, z. B. kunden_id.",
+      "correct": "Primärschlüssel"
+    },
+    {
+      "text": "Schlüssel, der auf den Primärschlüssel einer anderen Tabelle zeigt, um Datensätze zu verknüpfen.",
+      "correct": "Fremdschlüssel"
+    },
+    {
+      "text": "Beschreibt Mengenverhältnisse in Beziehungen, z. B. 1:1, 1:n oder n:m.",
+      "correct": "Kardinalität"
+    },
+    {
+      "text": "Relationale Darstellung einer Entität als Zeilen (Datensätze) und Spalten (Attribute).",
+      "correct": "Tabelle"
+    },
+    {
+      "text": "SQL-Befehl zum Auslesen von Daten aus einer Tabelle.",
+      "correct": "SELECT"
+    },
+    {
+      "text": "SQL-Teil, der Datensätze anhand einer Bedingung filtert, z. B. alter > 18.",
+      "correct": "WHERE"
+    },
+    {
+      "text": "SQL-Teil, der die Ausgabe sortiert, z. B. nach name aufsteigend oder datum absteigend.",
+      "correct": "ORDER BY"
+    },
+    {
+      "text": "Wenn du in einem Modell „Kunde“ mit den Eigenschaften Name und E-Mail beschreibst, ist „Kunde“ eine …",
+      "correct": "Entität"
+    },
+    {
+      "text": "Wenn eine Kunden-ID in der Bestellung gespeichert wird, um den Kunden zu referenzieren, ist das ein …",
+      "correct": "Fremdschlüssel"
+    },
+    {
+      "text": "„Ein Kunde kann viele Bestellungen haben“ ist ein Beispiel für diese Eigenschaft einer Beziehung.",
+      "correct": "Kardinalität"
+    },
+    {
+      "text": "„Gib alle Spalten aller Datensätze aus einer Tabelle aus“ ist die Standardform von …",
+      "correct": "SELECT"
+    },
+    {
+      "text": "„Zeige nur Datensätze, bei denen abteilung = 'IT'“ ist eine typische Aufgabe für …",
+      "correct": "WHERE"
+    },
+    {
+      "text": "„Sortiere die Ausgabe nach einstellungsdatum absteigend“ ist eine typische Aufgabe für …",
+      "correct": "ORDER BY"
+    },
+    {
+      "text": "Ein eindeutiger Schlüssel verhindert, dass zwei Datensätze dieselbe ID haben.",
+      "correct": "Primärschlüssel"
+    },
+    {
+      "text": "Im ER-Modell wird diese Verbindung zwischen Entitäten typischerweise als Linie/Verknüpfung dargestellt.",
+      "correct": "Beziehung"
+    },
+    {
+      "text": "Ein ER-Modell dient oft als Vorstufe, um daraus Tabellen und Schlüssel abzuleiten.",
+      "correct": "ER-Modell"
+    }
+  ]
+}

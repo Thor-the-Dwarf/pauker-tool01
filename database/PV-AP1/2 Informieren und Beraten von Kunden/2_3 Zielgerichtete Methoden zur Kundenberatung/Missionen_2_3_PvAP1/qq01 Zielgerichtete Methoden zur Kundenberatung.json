@@ -1,0 +1,101 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Zielgerichtete Methoden zur Kundenberatung",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Kundenberatung & Kommunikation zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Medieneinsatz (Präsentation/Webinar)",
+    "Online-Schulung",
+    "Homepage",
+    "Sender-Empfänger-Modell",
+    "Eisbergmodell",
+    "4-Ohren-Modell",
+    "Cross-Selling",
+    "Upselling",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Kundenberatung per Video-Call mit Screen-Sharing, Folien oder Demo, statt vor Ort im Meetingraum.",
+      "correct": "Medieneinsatz (Präsentation/Webinar)"
+    },
+    {
+      "text": "Geplantes Training für Nutzer, um Funktionen sicher anzuwenden (z. B. Tool-Einführung mit Übungen).",
+      "correct": "Online-Schulung"
+    },
+    {
+      "text": "Öffentliche Informations- und Kontaktplattform eines Unternehmens, oft mit Leistungen, Referenzen und FAQ.",
+      "correct": "Homepage"
+    },
+    {
+      "text": "Kommunikationsmodell: Es gibt einen Sender, eine Nachricht, einen Kanal und einen Empfänger – Störungen können die Nachricht verändern.",
+      "correct": "Sender-Empfänger-Modell"
+    },
+    {
+      "text": "Kommunikationsmodell: Der sichtbare Teil sind Fakten, darunter liegen Beziehung, Gefühle, Werte und Motive.",
+      "correct": "Eisbergmodell"
+    },
+    {
+      "text": "Kommunikationsmodell: Eine Aussage kann auf Sache, Beziehung, Appell und Selbstoffenbarung gehört werden.",
+      "correct": "4-Ohren-Modell"
+    },
+    {
+      "text": "Zusatzverkauf passender Ergänzungen zum Hauptprodukt, z. B. Notebook + Dockingstation + Tasche.",
+      "correct": "Cross-Selling"
+    },
+    {
+      "text": "Verkauf einer höherwertigen Variante, z. B. Basic-Tarif → Pro-Tarif mit mehr Features.",
+      "correct": "Upselling"
+    },
+    {
+      "text": "Beispiel: „Ich schicke Ihnen im Webinar live die Demo und wir klären Fragen direkt im Chat.“",
+      "correct": "Medieneinsatz (Präsentation/Webinar)"
+    },
+    {
+      "text": "Beispiel: „Hier ist ein kurzes Lernmodul mit Quiz, damit alle Mitarbeitenden das neue Ticketsystem sicher nutzen.“",
+      "correct": "Online-Schulung"
+    },
+    {
+      "text": "Beispiel: „Kontaktformular, Leistungsübersicht und Referenzen“ sind typische Bestandteile davon.",
+      "correct": "Homepage"
+    },
+    {
+      "text": "Erklärt, warum eine Botschaft trotz klarer Worte falsch ankommt (z. B. Lärm, Vorwissen, Erwartungen).",
+      "correct": "Sender-Empfänger-Modell"
+    },
+    {
+      "text": "Erklärt, warum im Gespräch oft die Beziehungsebene wichtiger ist als der reine Sachinhalt.",
+      "correct": "Eisbergmodell"
+    },
+    {
+      "text": "Hilft, Missverständnisse zu erkennen, wenn jemand eine sachliche Aussage als Angriff oder Appell interpretiert.",
+      "correct": "4-Ohren-Modell"
+    },
+    {
+      "text": "Beispiel: Kunde kauft Drucker – du empfiehlst passende Toner und Wartungsvertrag.",
+      "correct": "Cross-Selling"
+    },
+    {
+      "text": "Beispiel: Kunde will 100 Mbit/s – du empfiehlst 250 Mbit/s wegen Homeoffice/Videokonferenzen.",
+      "correct": "Upselling"
+    },
+    {
+      "text": "Typischer Nutzen: Beratung skalierbar machen, weil mehrere Teilnehmende gleichzeitig informiert werden können.",
+      "correct": "Medieneinsatz (Präsentation/Webinar)"
+    },
+    {
+      "text": "Typischer Nutzen: Reduziert Supportaufwand, weil Nutzer typische Bedienfehler vermeiden.",
+      "correct": "Online-Schulung"
+    },
+    {
+      "text": "Typischer Nutzen: Kunden können sich vor dem Erstkontakt selbst informieren und Angebote vergleichen.",
+      "correct": "Homepage"
+    },
+    {
+      "text": "Ziel: Im Gespräch nicht nur „was gesagt wurde“, sondern auch „wie es gemeint/gehört wurde“ sauber trennen.",
+      "correct": "4-Ohren-Modell"
+    }
+  ]
+}

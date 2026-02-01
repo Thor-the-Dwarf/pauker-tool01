@@ -1,0 +1,84 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Projektmanagement – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Projektmanagement-Begriff mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen PM-Begriff.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "projektstrukturplan",
+      "name": "Projektstrukturplan (PSP)",
+      "description": "Hierarchische Zerlegung des Projekts in Teilaufgaben und Arbeitspakete, um Umfang und Struktur sauber zu planen.",
+      "example": "Für ein Firewall-Rollout wird das Projekt in Analyse, Beschaffung, Installation, Tests, Übergabe und Doku als Arbeitspakete zerlegt."
+    },
+    {
+      "id": "netzplan",
+      "name": "Netzplan",
+      "description": "Darstellung von Vorgängen, Abhängigkeiten und Dauern zur Terminplanung; ermöglicht kritischen Weg und Pufferanalyse.",
+      "example": "Das Team modelliert die Abhängigkeit „Hardware geliefert → Einbau → Konfiguration → Abnahmetest“ und erkennt, welche Vorgänge keine Verzögerung erlauben."
+    },
+    {
+      "id": "gantt_diagramm",
+      "name": "Gantt-Diagramm",
+      "description": "Zeitplan als Balkendiagramm mit Aufgaben, Start/Ende, Meilensteinen und Terminen; gut für Übersicht und Statusberichte.",
+      "example": "Im Jour Fixe zeigt der Projektleiter im Gantt, dass der Meilenstein „Pilotgruppe produktiv“ nächste Woche erreicht werden soll."
+    },
+    {
+      "id": "kritischer_weg",
+      "name": "Kritischer Weg",
+      "description": "Längste Kette abhängiger Vorgänge im Netzplan; Verzögerung dort verschiebt automatisch den Projektendtermin.",
+      "example": "Ein fehlendes Zertifikat blockiert die VPN-Freischaltung und schiebt dadurch den Go-Live, weil es auf dem kritischen Weg liegt."
+    },
+    {
+      "id": "puffer",
+      "name": "Puffer (Zeitpuffer)",
+      "description": "Zeitreserve, die Verzögerungen abfedert, ohne den Endtermin zu verschieben (z. B. Gesamt- oder Freipuffer).",
+      "example": "Für die Dokumentation werden 2 Tage Puffer eingeplant, falls bei der Abnahme noch Nacharbeiten entstehen."
+    },
+    {
+      "id": "meilenstein",
+      "name": "Meilenstein",
+      "description": "Wichtiger Termin/Ergebniszustand ohne eigene Dauer; markiert erreichte Zwischenziele und dient als Steuerungspunkt.",
+      "example": "„Anforderungen freigegeben“ wird als Meilenstein gesetzt, bevor die Umsetzung startet."
+    },
+    {
+      "id": "terminierung",
+      "name": "Terminierung",
+      "description": "Festlegung von Start- und Endterminen für Vorgänge unter Berücksichtigung von Abhängigkeiten, Ressourcen und Kalendern.",
+      "example": "Die Migration wird auf das Wochenende terminiert, weil nur dann das Wartungsfenster verfügbar ist."
+    },
+    {
+      "id": "projektphasen",
+      "name": "Projektphasen",
+      "description": "Typische Abfolge von Abschnitten im Projekt, z. B. Initiierung, Planung, Durchführung, Abschluss (je nach Standard).",
+      "example": "Nach der Initiierung wird ein Projektauftrag erstellt, dann geplant, umgesetzt, abgenommen und schließlich mit Lessons Learned abgeschlossen."
+    },
+    {
+      "id": "vorgehensmodelle",
+      "name": "Vorgehensmodelle",
+      "description": "Rahmen, wie ein Projekt methodisch abgewickelt wird (z. B. Wasserfall, V-Modell, Scrum), inklusive Rollen und Artefakten.",
+      "example": "Für eine Software-Neuentwicklung wird Scrum gewählt, für ein Hardware-Rollout eher ein phasenbasiertes Vorgehen."
+    },
+    {
+      "id": "teambildung_entwicklung",
+      "name": "Teambildung und Teamentwicklung",
+      "description": "Aufbau und Entwicklung eines Teams inklusive Rollenklärung, Zusammenarbeit und Konfliktmanagement (z. B. Forming–Storming–Norming–Performing).",
+      "example": "Zu Projektbeginn werden Rollen (PO, Dev, Tester) geklärt und Teamregeln vereinbart, um Reibungsverluste zu reduzieren."
+    },
+    {
+      "id": "reflexionsmethoden",
+      "name": "Reflexionsmethoden",
+      "description": "Methoden zur Auswertung von Zusammenarbeit und Ergebnissen, um Verbesserungen abzuleiten (z. B. Retrospektive, Lessons Learned).",
+      "example": "Nach dem Go-Live macht das Team eine Retrospektive und beschließt, künftig Risiken früher zu dokumentieren und Abhängigkeiten klarer zu tracken."
+    }
+  ]
+}

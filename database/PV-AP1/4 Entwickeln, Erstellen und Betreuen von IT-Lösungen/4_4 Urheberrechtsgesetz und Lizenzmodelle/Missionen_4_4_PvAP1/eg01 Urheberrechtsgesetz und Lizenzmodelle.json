@@ -1,0 +1,145 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Urheberrecht & Lizenzmodelle",
+  "topic": "Urheberrechtsgesetz, Lizenzarten (EULA, OEM, GNU), Pay-by-Use",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "lizenzen-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Lizenzarten & Modelle zuordnen",
+      "subtitle": "Ordne jede Karte der passenden Kategorie zu.",
+      "hintDefault": "Tipp: Lizenzart = rechtlicher Nutzungsrahmen. Modell = wie du bezahlst/abrechnest.",
+      "sortColumns": [
+        { "zone": "eula", "label": "EULA", "hint": "(Endnutzer-Lizenzvertrag)" },
+        { "zone": "oem", "label": "OEM", "hint": "(an Hardware gebunden)" },
+        { "zone": "gnu", "label": "GNU / Open Source", "hint": "(Freiheiten + Pflichten)" },
+        { "zone": "paybyuse", "label": "Pay by Use", "hint": "(nutzungsabhängige Abrechnung)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Nutzungsbedingungen, die du beim Installieren/Starten akzeptierst (End User License Agreement).", "correctZone": "eula" },
+        { "id": "s2", "text": "Oft Einschränkungen: Weitergabe/Reverse Engineering/Mehrfachinstallation geregelt.", "correctZone": "eula" },
+        { "id": "s3", "text": "Lizenz ist typischerweise an ein bestimmtes Gerät gebunden (vorinstalliert).", "correctZone": "oem" },
+        { "id": "s4", "text": "Hardwarewechsel kann Aktivierung/Übertragbarkeit einschränken.", "correctZone": "oem" },
+        { "id": "s5", "text": "Open Source: Quellcode verfügbar; Nutzung/Änderung/Weitergabe grundsätzlich erlaubt – unter Bedingungen der Lizenz.", "correctZone": "gnu" },
+        { "id": "s6", "text": "Copyleft-Idee (z. B. GPL): Weitergabe abgeleiteter Werke oft nur unter gleicher Lizenz.", "correctZone": "gnu" },
+        { "id": "s7", "text": "Abrechnung nach Verbrauch (z. B. Nutzer/Monat, API-Calls, CPU-Stunden, Storage).", "correctZone": "paybyuse" },
+        { "id": "s8", "text": "Vorteil: geringe Einstiegskosten; Risiko: Kosten steigen bei hoher Nutzung.", "correctZone": "paybyuse" }
+      ]
+    },
+    {
+      "id": "quiz-urheberrecht-lizenzen",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Lizenzen",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: OEM = Hardwarebindung. GNU/GPL = Freiheiten + Pflichten. Pay-by-Use = Nutzungsabrechnung, nicht automatisch Open Source.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was beschreibt OEM-Lizenz am treffendsten?",
+          "options": [
+            { "value": "a", "text": "Lizenz ist frei übertragbar auf beliebige Geräte" },
+            { "value": "b", "text": "Lizenz ist typischerweise an ein konkretes Gerät/Hardware gebunden" },
+            { "value": "c", "text": "Lizenz gilt nur für Open-Source-Software" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist ein Kerngedanke vieler GNU/GPL-Lizenzen (Copyleft)?",
+          "options": [
+            { "value": "a", "text": "Abrechnung pro Nutzungseinheit" },
+            { "value": "b", "text": "Abgeleitete Werke müssen bei Weitergabe oft wieder unter derselben Lizenz stehen" },
+            { "value": "c", "text": "Die Nutzung ist nur auf ein Gerät begrenzt" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was ist Pay by Use im Kern?",
+          "options": [
+            { "value": "a", "text": "Ein Lizenztyp, der Quellcode offenlegt" },
+            { "value": "b", "text": "Ein Abrechnungsmodell, bei dem Kosten von der Nutzung abhängen" },
+            { "value": "c", "text": "Ein Vertragstyp, der immer Eigentum überträgt" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "lizenz-entscheidung-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Lizenzwahl sauber begründen",
+      "subtitle": "Bringe die Schritte in eine sinnvolle Reihenfolge, um Lizenzmodell & Risiken zu prüfen.",
+      "hintDefault": "Hinweis: Erst Nutzungsfall, dann Lizenzart/Bindung, dann Pflichten/Compliance, dann Kostenmodell (Pay-by-Use) bewerten, dann dokumentieren.",
+      "rows": [
+        {
+          "key": "nutzung",
+          "label": "Nutzungsfall klären (Geräte, Nutzer, Deployment, Weitergabe, Cloud/On-Prem)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "lizenzart",
+          "label": "Lizenzart prüfen (EULA/OEM/GNU) inkl. Übertragbarkeit/Bindung",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "pflichten",
+          "label": "Pflichten/Compliance ableiten (Weitergabe, Quellcode, Attribution, Auditfähigkeit)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "kosten",
+          "label": "Kostenmodell bewerten (Pay-by-Use: Nutzung messen, Limits, Worst-Case-Kosten)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Entscheidung dokumentieren (Lizenznachweise, Nutzungsgrenzen, Beschaffungsweg, Nachweise)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

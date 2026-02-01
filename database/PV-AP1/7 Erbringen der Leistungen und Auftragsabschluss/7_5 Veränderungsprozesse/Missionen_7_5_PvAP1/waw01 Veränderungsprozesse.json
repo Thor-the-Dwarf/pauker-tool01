@@ -1,0 +1,127 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Abstimmung der Vorgaben zur Leistungserbringung",
+  "description": "Schritt 1: Passenden Fokuspunkt der Leistungserbringung wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Während eines IT-Projekts wird regelmäßig geprüft, ob das Team noch genau das liefert, was im Vertrag vereinbart wurde: Umfang, Qualität, Termine, Abnahmebedingungen und SLAs. Abweichungen sollen früh erkannt werden, bevor es eskaliert.",
+      "tags": ["Vertrag", "Soll-Ist", "Qualität", "Steuerung"],
+      "options": [
+        {
+          "id": "kontinuierliche_pruefung_vorgaben",
+          "label": "Kontinuierliche Prüfung der vertraglich vereinbarten Vorgaben",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regelmäßiger Soll-Ist-Abgleich verhindert „schleichenden Scope Drift“ und böse Überraschungen.", "correct": true },
+            { "id": "w2", "text": "Frühe Abweichungsanalyse ermöglicht Korrekturmaßnahmen, bevor Termine/Kosten kippen.", "correct": true },
+            { "id": "w3", "text": "Einmal am Projektende zu prüfen reicht immer aus, weil dann alles feststeht.", "correct": false },
+            { "id": "w4", "text": "Vertragliche Vorgaben können z. B. Leistungsumfang, Qualitätskriterien, SLAs, Termine und Dokumentationspflichten umfassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "dokumentation_leistung",
+          "label": "Dokumentation der erbrachten Leistung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dokumentation ist Nachweis und Übergabegrundlage, aber nicht der laufende Soll-Ist-Check.", "correct": true },
+            { "id": "w2", "text": "Dokumentation ersetzt die kontinuierliche Prüfung, weil Papier alles heilt.", "correct": false },
+            { "id": "w3", "text": "Dokumentation kann Prüfungen unterstützen (z. B. Change-Logs, Abnahmeprotokolle).", "correct": true },
+            { "id": "w4", "text": "Ohne laufenden Abgleich kann man sauber dokumentieren und trotzdem am Vertrag vorbeilaufen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kontinuierliche Prüfung: laufender Soll-Ist-Abgleich gegen Vertrag/SLA/Termine, um Abweichungen früh zu erkennen und gegenzusteuern."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein neues ERP-System soll produktiv gehen. Das alte System muss kontrolliert abgeschaltet werden, ohne dass der Betrieb steht. Es braucht Cutover-Plan, Zeitfenster, Backout-Option und klare Verantwortlichkeiten.",
+      "tags": ["Migration", "Cutover", "Go-Live"],
+      "options": [
+        {
+          "id": "stilllegung_alt_inbetriebnahme_neu",
+          "label": "Stilllegung von Altsystemen / Inbetriebnahme neuer Systeme",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Es geht um Übergang (Cutover): Alt aus, Neu an – kontrolliert, geplant, testbar.", "correct": true },
+            { "id": "w2", "text": "Risiken sind z. B. Downtime, Dateninkonsistenz, Schnittstellenbruch; daher braucht es Ablauf/Verantwortliche.", "correct": true },
+            { "id": "w3", "text": "Inbetriebnahme bedeutet nur „Server einschalten“, ohne Tests oder Planung.", "correct": false },
+            { "id": "w4", "text": "Typisch sind Wartungsfenster, Go-Live-Checklisten, Rollback/Backout und Kommunikationsplan.", "correct": true }
+          ]
+        },
+        {
+          "id": "aufbewahrung_archivdaten",
+          "label": "Aufbewahrung von Archivdaten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Archivdaten betreffen Aufbewahrung/Lesbarkeit, nicht den eigentlichen Cutover-Prozess.", "correct": true },
+            { "id": "w2", "text": "Archivierung ersetzt den Plan zur Abschaltung/Inbetriebnahme.", "correct": false },
+            { "id": "w3", "text": "Archivierung ist oft parallel relevant (Alt-System stilllegen, aber Daten weiter zugreifbar halten).", "correct": true },
+            { "id": "w4", "text": "Für den Systemwechsel ist primär die Umstellung/Go-Live-Steuerung entscheidend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Stilllegung/Inbetriebnahme: geplanter Systemwechsel (Cutover) mit Tests, Zeitfenster, Rollback und klaren Verantwortlichkeiten."
+    },
+    {
+      "id": "c03",
+      "profile": "Nach Abschaltung eines Altsystems müssen alte Rechnungen, Protokolle oder Geschäftsdaten weiterhin verfügbar bleiben (z. B. für Nachweise, Prüfungen, Reklamationen). Das neue System soll nicht alles importieren, aber die Daten müssen sicher und lesbar bleiben.",
+      "tags": ["Archiv", "Nachweis", "Compliance"],
+      "options": [
+        {
+          "id": "aufbewahrung_archivdaten",
+          "label": "Aufbewahrung von Archivdaten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Archivdaten müssen langfristig verfügbar, unverändert und auffindbar bleiben (Nachweisfähigkeit).", "correct": true },
+            { "id": "w2", "text": "Wichtig sind Format-/Lesbarkeit über Zeit, Zugriffskonzepte und Schutz vor Manipulation.", "correct": true },
+            { "id": "w3", "text": "Archivierung bedeutet, Daten sofort zu löschen, um Speicher zu sparen.", "correct": false },
+            { "id": "w4", "text": "Archivierung kann auch ohne kompletten Import ins neue System erfolgen (separates Archiv/Read-only).", "correct": true }
+          ]
+        },
+        {
+          "id": "stilllegung_alt_inbetriebnahme_neu",
+          "label": "Stilllegung von Altsystemen / Inbetriebnahme neuer Systeme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Systemwechsel betrifft den Betrieb; Archivierung betrifft die dauerhafte Datenverfügbarkeit.", "correct": true },
+            { "id": "w2", "text": "Alt stilllegen heißt automatisch, dass alle Daten sofort unzugänglich werden dürfen.", "correct": false },
+            { "id": "w3", "text": "Bei Stilllegung muss man oft klären, wie Alt-Daten weiterhin erreichbar bleiben.", "correct": true },
+            { "id": "w4", "text": "Cutover-Plan löst nicht automatisch Archiv-/Nachweisanforderungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Aufbewahrung von Archivdaten: Alt-Daten langfristig sicher, unverändert und lesbar halten (oft read-only), auch wenn das Altsystem weg ist."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Kunde verlangt zum Projektabschluss belastbare Nachweise: Was wurde umgesetzt, welche Versionen wurden installiert, welche Tests/Abnahmen wurden durchgeführt und welche Übergabeunterlagen gibt es. Ohne Dokumentation drohen Streit über Umfang und Qualität.",
+      "tags": ["Nachweis", "Abnahme", "Übergabe"],
+      "options": [
+        {
+          "id": "dokumentation_leistung",
+          "label": "Dokumentation der erbrachten Leistung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Dokumentation ist Nachweis für Leistung/Umfang (z. B. Abnahmeprotokoll, Change-Log, Versionen).", "correct": true },
+            { "id": "w2", "text": "Sie unterstützt Übergabe, Betrieb, Wartung und spätere Fehleranalyse.", "correct": true },
+            { "id": "w3", "text": "Dokumentation ist optional und hat keinen Vertragsbezug.", "correct": false },
+            { "id": "w4", "text": "Fehlende Doku erhöht Konfliktrisiko: „Was wurde wirklich geliefert?“", "correct": true }
+          ]
+        },
+        {
+          "id": "kontinuierliche_pruefung_vorgaben",
+          "label": "Kontinuierliche Prüfung der vertraglich vereinbarten Vorgaben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kontinuierliche Prüfung ist laufende Steuerung; Dokumentation ist Abschluss-/Nachweisartefakt.", "correct": true },
+            { "id": "w2", "text": "Laufende Prüfung ersetzt die Abschlussdokumentation vollständig.", "correct": false },
+            { "id": "w3", "text": "Prüfprotokolle aus dem Projekt können Teil der Dokumentation sein.", "correct": true },
+            { "id": "w4", "text": "Für Abnahme/Übergabe braucht man oft schriftliche Nachweise, nicht nur „wir haben es geprüft“.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Dokumentation: Nachweis + Übergabegrundlage (Versionen, Änderungen, Tests, Abnahme), reduziert Streit über Umfang/Qualität."
+    }
+  ]
+}

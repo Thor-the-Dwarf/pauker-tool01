@@ -1,0 +1,217 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Vertragsarten, Vertragsbestandteile und Vertragsstörungen",
+  "description": "Schritt 1: Passenden Vertrag/Begriff wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen bestellt 20 neue Notebooks zu einem festen Preis. Nach Lieferung gehen Eigentum und Risiko über, und der Verkäufer schuldet die Ware in vereinbarter Qualität. Es geht um Kauf und Übergabe einer Sache.",
+      "tags": ["Kaufvertrag", "Beschaffung", "Ware"],
+      "options": [
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Gegenstand ist die Lieferung/Übereignung einer Sache gegen Zahlung.", "correct": true },
+            { "id": "w2", "text": "Typisch: Preis, Menge, Qualität, Liefertermin, Gewährleistung.", "correct": true },
+            { "id": "w3", "text": "Der Kunde erhält nur ein Nutzungsrecht, aber kein Eigentum.", "correct": false },
+            { "id": "w4", "text": "Nach Übergabe kann bei Mängeln Gewährleistung relevant werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "mietvertrag",
+          "label": "Mietvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Miete bedeutet zeitweise Überlassung zur Nutzung gegen laufende Zahlung.", "correct": true },
+            { "id": "w2", "text": "Hier geht es um Eigentumsübergang nach Lieferung, nicht nur Nutzung.", "correct": true },
+            { "id": "w3", "text": "Bei Miete bleibt der Vermieter Eigentümer.", "correct": true },
+            { "id": "w4", "text": "Miete endet typischerweise mit Rückgabe, nicht mit Übereignung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kaufvertrag: Ware wird geliefert und übereignet (Eigentum gegen Zahlung)."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Unternehmen nutzt eine Software. Es erhält nicht den Quellcode als Eigentum, sondern ein festgelegtes Nutzungsrecht (z. B. Anzahl Nutzer, Laufzeit, Weitergabe verboten).",
+      "tags": ["Lizenzvertrag", "Software", "Nutzungsrecht"],
+      "options": [
+        {
+          "id": "lizenzvertrag",
+          "label": "Lizenzvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kern ist die Einräumung von Nutzungsrechten an Software/Urheberrecht (nicht Eigentum am Code).", "correct": true },
+            { "id": "w2", "text": "Typisch sind Einschränkungen zu Nutzerzahl, Laufzeit, Weitergabe und Einsatzbereich.", "correct": true },
+            { "id": "w3", "text": "Ein Lizenzvertrag bedeutet automatisch Eigentumsübergang an der Software.", "correct": false },
+            { "id": "w4", "text": "Lizenzbedingungen sind zentral für Compliance (z. B. Audit, Nachweis der Nutzung).", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kaufvertrag zielt auf Übereignung einer Sache; Software wird oft als Nutzungsrecht geregelt.", "correct": true },
+            { "id": "w2", "text": "Hier steht nicht die Hardware im Fokus, sondern Nutzungsbedingungen der Software.", "correct": true },
+            { "id": "w3", "text": "Kaufvertrag regelt typischerweise Nutzerzahl und Weitergabeverbot detailliert.", "correct": false },
+            { "id": "w4", "text": "Softwarebeschaffung kann Kauf + Lizenz enthalten, aber das Nutzungsrecht kommt aus der Lizenz.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Lizenzvertrag: regelt Nutzungsrechte und Einschränkungen (nicht Eigentum am Code)."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein IT-Dienstleister betreibt ein System für einen Kunden. Es gibt zugesicherte Reaktionszeiten, Verfügbarkeit (z. B. 99,5%), Wartungsfenster und Eskalationsstufen. Der Kunde will verbindliche Messgrößen für Servicequalität.",
+      "tags": ["Servicevertrag", "SLA", "Betrieb"],
+      "options": [
+        {
+          "id": "servicevertrag_sla",
+          "label": "Servicevertrag / SLA",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Servicevertrag regelt laufende Leistungen (Betrieb, Support, Wartung).", "correct": true },
+            { "id": "w2", "text": "SLA definiert messbare Serviceziele (z. B. Verfügbarkeit, Reaktionszeit, Entstörzeit).", "correct": true },
+            { "id": "w3", "text": "SLA ist nur ein Kaufbeleg und hat keine Leistungskennzahlen.", "correct": false },
+            { "id": "w4", "text": "Eskalationswege und Wartungsfenster sind typische Service-/SLA-Bestandteile.", "correct": true }
+          ]
+        },
+        {
+          "id": "mietvertrag",
+          "label": "Mietvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mietvertrag regelt die Nutzung einer Sache gegen Miete, nicht Supportkennzahlen.", "correct": true },
+            { "id": "w2", "text": "Reaktionszeit/Verfügbarkeit sind eher Service-/SLA-Themen.", "correct": true },
+            { "id": "w3", "text": "Mietvertrag enthält typischerweise KPI-Messungen wie 99,5% Verfügbarkeit.", "correct": false },
+            { "id": "w4", "text": "Miete kann kombiniert sein (z. B. gemietete Hardware + Service), aber SLA ist der KPI-Teil.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Servicevertrag/SLA: laufende Leistung + messbare Serviceziele (Verfügbarkeit, Reaktionszeit, Entstörzeit)."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Unternehmen benötigt Geräte nur für 12 Monate. Es will keine hohen Anfangskosten, sondern planbare monatliche Raten. Nach Ablauf sollen die Geräte zurückgegeben werden. Eigentum bleibt beim Anbieter.",
+      "tags": ["Mietvertrag", "Nutzung", "Rückgabe"],
+      "options": [
+        {
+          "id": "mietvertrag",
+          "label": "Mietvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Miete = zeitweise Überlassung zur Nutzung gegen laufende Zahlung.", "correct": true },
+            { "id": "w2", "text": "Eigentum bleibt beim Vermieter; am Ende erfolgt Rückgabe.", "correct": true },
+            { "id": "w3", "text": "Mietvertrag führt immer automatisch zum Eigentumsübergang.", "correct": false },
+            { "id": "w4", "text": "Planbare Monatskosten sind ein typischer Grund für Miete.", "correct": true }
+          ]
+        },
+        {
+          "id": "leasing",
+          "label": "Leasing",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Leasing ist ähnlich (Raten, Nutzung), aber häufig stärker finanzierungs-/vertragskonstruktionsgetrieben.", "correct": true },
+            { "id": "w2", "text": "Leasing schließt Rückgabe am Ende grundsätzlich aus.", "correct": false },
+            { "id": "w3", "text": "Leasing kann Optionen am Ende haben (z. B. Kaufoption), je nach Vertrag.", "correct": true },
+            { "id": "w4", "text": "Ohne Details ist hier der klare Kern: Nutzung + Rückgabe + kein Eigentum → Miete passt am besten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mietvertrag: Nutzung gegen laufende Zahlung, Eigentum bleibt beim Anbieter, Rückgabe am Ende."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Unternehmen will teure Hardware für mehrere Jahre nutzen und zahlt dafür monatliche Raten. Der Vertrag ist so gestaltet, dass es wirtschaftlich wie eine Finanzierung wirkt, oft mit festen Laufzeiten und ggf. Kauf-/Übernahmeoption.",
+      "tags": ["Leasing", "Finanzierung", "Raten"],
+      "options": [
+        {
+          "id": "leasing",
+          "label": "Leasing",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Leasing ermöglicht Nutzung gegen Raten und wirkt oft wie eine Finanzierungsform.", "correct": true },
+            { "id": "w2", "text": "Typisch sind feste Laufzeit, planbare Raten und ggf. Optionen am Ende (je nach Vertrag).", "correct": true },
+            { "id": "w3", "text": "Leasing bedeutet immer sofortiger Eigentumsübergang zu Vertragsbeginn.", "correct": false },
+            { "id": "w4", "text": "Ziel ist oft: Liquidität schonen und Kosten über Zeit verteilen.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kauf ist typischerweise Einmalzahlung und Eigentumsübergang.", "correct": true },
+            { "id": "w2", "text": "Raten über Jahre und finanzierungsähnliche Struktur sprechen eher für Leasing.", "correct": true },
+            { "id": "w3", "text": "Kaufvertrag enthält automatisch SLA-Kennzahlen.", "correct": false },
+            { "id": "w4", "text": "Kauf kann finanziert werden, aber dann ist der Kredit das Finanzierungsthema, nicht der Kaufvertrag selbst.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Leasing: Nutzung gegen Raten, häufig finanzierungsähnlich mit Laufzeit und ggf. Endoptionen."
+    },
+    {
+      "id": "c06",
+      "profile": "In einem Vertrag sollen Streit und Missverständnisse vermieden werden. Es muss klar sein, was geliefert wird, wann, zu welchem Preis, wie abgenommen wird und welche Dokumente die Anforderungen konkretisieren.",
+      "tags": ["Vertragsbestandteile", "Leistungsbeschreibung", "Pflichtenheft"],
+      "options": [
+        {
+          "id": "vertragsbestandteile",
+          "label": "Vertragsbestandteile (Leistungsbeschreibung, Termine, Entgelte, Lasten-/Pflichtenheft, Konventionalstrafen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Leistungsbeschreibung klärt Inhalt/Umfang: Was wird genau geliefert/geleistet?", "correct": true },
+            { "id": "w2", "text": "Termine und Entgelte regeln Zeit und Geld (Liefer-/Meilensteine, Zahlungsplan).", "correct": true },
+            { "id": "w3", "text": "Lasten-/Pflichtenheft konkretisieren Anforderungen und Umsetzung (SOLL vs. WIE).", "correct": true },
+            { "id": "w4", "text": "Konventionalstrafen können Folgen bei Pflichtverletzung (z. B. verspätete Lieferung) festlegen.", "correct": true }
+          ]
+        },
+        {
+          "id": "audit",
+          "label": "Audit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Audit ist eine Prüfung gegen Anforderungen/Normen, nicht die Vertragsdefinition.", "correct": true },
+            { "id": "w2", "text": "Audit ersetzt Leistungsbeschreibung und Zahlungsplan.", "correct": false },
+            { "id": "w3", "text": "Audits können im Vertrag vorkommen (z. B. Lizenz-Compliance), sind aber nicht der Kern der Vertragsbestandteile.", "correct": true },
+            { "id": "w4", "text": "Für „Was/waswo/wann/wieviel“ braucht man Vertragsbestandteile, nicht Auditberichte.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Vertragsbestandteile: definieren Was (Leistung), Wann (Termine), Wieviel (Entgelt) + Konkretisierung (Lasten-/Pflichtenheft) + Folgen (Konventionalstrafen)."
+    },
+    {
+      "id": "c07",
+      "profile": "Ein Lieferant sollte bis zum 30.06. liefern, liefert aber erst am 10.07. Der Kunde hatte rechtzeitig gemahnt bzw. die Leistung war kalendermäßig bestimmt. Jetzt stellt sich die Frage nach Rechtsfolgen wegen verspäteter Leistung.",
+      "tags": ["Verzug", "Vertragsstörung", "Termine"],
+      "options": [
+        {
+          "id": "verzug",
+          "label": "Verzug",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verzug ist eine Vertragsstörung durch verspätete Leistung trotz Fälligkeit.", "correct": true },
+            { "id": "w2", "text": "Auslöser kann Mahnung oder ein kalendermäßig bestimmter Termin sein (je nach Fall).", "correct": true },
+            { "id": "w3", "text": "Verzug bedeutet, dass die Leistung überhaupt nicht geschuldet war.", "correct": false },
+            { "id": "w4", "text": "Mögliche Folgen sind z. B. Schadensersatz oder Vertragsstrafen (wenn vereinbart).", "correct": true }
+          ]
+        },
+        {
+          "id": "mangel",
+          "label": "Mangel (Schlechtleistung)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mangel betrifft Qualität/Abweichung von vereinbarter Beschaffenheit.", "correct": true },
+            { "id": "w2", "text": "Hier ist das Problem primär „zu spät“, nicht „falsch/defekt“.", "correct": true },
+            { "id": "w3", "text": "Ein Produkt kann pünktlich und trotzdem mangelhaft sein, oder zu spät und trotzdem in Ordnung.", "correct": true },
+            { "id": "w4", "text": "Mangel ist identisch mit Verzug, beides bedeutet verspätete Lieferung.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Verzug: verspätete Leistung trotz Fälligkeit; kann Folgen wie Schadensersatz/Vertragsstrafe auslösen (wenn vereinbart)."
+    }
+  ]
+}

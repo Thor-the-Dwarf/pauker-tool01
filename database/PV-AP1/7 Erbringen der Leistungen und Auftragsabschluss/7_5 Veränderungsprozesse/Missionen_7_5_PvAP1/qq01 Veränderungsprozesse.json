@@ -1,0 +1,36 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Veränderungsprozesse (7.5)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Veränderungsprozessen (Change) zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Veränderungsschritte identifizieren",
+    "Veränderungsschritte darstellen",
+    "Mitarbeiterqualifizierung",
+    "Blended-Learning",
+    "Multiplikatoren",
+    "Promoter",
+    "Bremser",
+    "Skeptiker",
+    "Widerständler",
+    "Ursachen von Widerständen",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Ermitteln, was sich konkret ändern muss (Prozesse, Rollen, Tools, Daten, Schnittstellen) – inklusive Abhängigkeiten.",
+      "correct": "Veränderungsschritte identifizieren"
+    },
+    {
+      "text": "Schritte so visualisieren/kommunizieren, dass alle den Plan verstehen (z. B. Roadmap, Meilensteine, Ablaufplan).",
+      "correct": "Veränderungsschritte darstellen"
+    },
+    {
+      "text": "Maßnahmen, damit Mitarbeitende neue Prozesse/Tools sicher anwenden können (Schulung, Übung, Support).",
+      "correct": "Mitarbeiterqualifizierung"
+    },
+    {
+      "text": "Kombination aus Präsenz/Live-Formaten und digitalen Selbstlernanteilen (z. B. Videos, Quiz, Übungen).",
+      "c

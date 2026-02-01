@@ -1,0 +1,146 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Vorgaben zur Leistungserbringung abstimmen",
+  "topic": "Soll/Ist-Prüfung vertraglicher Vorgaben, Stilllegung/Go-Live, Archivdaten, Leistungsdokumentation",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "leistung-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Aufgaben zur Leistungserbringung zuordnen",
+      "subtitle": "Ordne jede Karte der passenden Kategorie zu.",
+      "hintDefault": "Tipp: Denk in vier Blöcken: (1) Vertrag/Soll-Ist, (2) Alt→Neu (Cutover), (3) Archiv/Retention, (4) Doku/Nachweis.",
+      "sortColumns": [
+        { "zone": "sollist", "label": "Kontinuierliche Prüfung", "hint": "(vertragliche Vorgaben, Soll/Ist)" },
+        { "zone": "cutover", "label": "Alt→Neu (Stilllegung/Go-Live)", "hint": "(Migration, Umschaltung)" },
+        { "zone": "archiv", "label": "Archivdaten", "hint": "(Aufbewahrung, Zugriff, Fristen)" },
+        { "zone": "doku", "label": "Leistungsdokumentation", "hint": "(Nachweis, Abnahme)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Soll/Ist-Abgleich: Leistungsumfang, Termine, Qualität und SLA-Werte regelmäßig prüfen.", "correctZone": "sollist" },
+        { "id": "s2", "text": "Change-Requests dokumentieren und gegen Vertrag/Scope abgleichen.", "correctZone": "sollist" },
+        { "id": "s3", "text": "Cutover-Plan: Umschaltzeitpunkt, Downtime-Fenster, Rollback-Plan festlegen.", "correctZone": "cutover" },
+        { "id": "s4", "text": "Altsystem stilllegen: Zugriffe sperren, Dienste stoppen, Lizenzen/Kosten beenden.", "correctZone": "cutover" },
+        { "id": "s5", "text": "Neusystem in Betrieb nehmen: Freigabe, Monitoring, Nutzerzugänge, Betriebsübergabe.", "correctZone": "cutover" },
+        { "id": "s6", "text": "Archivdaten: definieren, was archiviert wird (z. B. abgeschlossene Vorgänge, Logs, Dokumente).", "correctZone": "archiv" },
+        { "id": "s7", "text": "Aufbewahrungsfristen & Zugriff regeln (wer darf lesen, wie lange, wo gespeichert).", "correctZone": "archiv" },
+        { "id": "s8", "text": "Leistung dokumentieren: was wurde wann wie geliefert/konfiguriert/übergeben.", "correctZone": "doku" },
+        { "id": "s9", "text": "Nachweise sammeln: Testprotokolle, Abnahmeprotokoll, Übergabe-/Einweisungsnachweise.", "correctZone": "doku" }
+      ]
+    },
+    {
+      "id": "quiz-leistungserbringung",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Abstimmung der Vorgaben",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: Vertrag = Soll. Cutover = Umschaltung. Archiv = Aufbewahren mit Regeln. Doku = Nachweis.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist der Sinn eines kontinuierlichen Soll/Ist-Abgleichs während der Leistungserbringung?",
+          "options": [
+            { "value": "a", "text": "Damit man später keine Dokumentation mehr braucht" },
+            { "value": "b", "text": "Damit Abweichungen früh erkannt und gesteuert werden (Scope, Termine, Qualität)" },
+            { "value": "c", "text": "Damit man alle Systeme gleichzeitig abschaltet" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welcher Punkt ist typisch für Stilllegung/Inbetriebnahme (Cutover)?",
+          "options": [
+            { "value": "a", "text": "Rollback-Plan für den Fall, dass die Umschaltung scheitert" },
+            { "value": "b", "text": "Archivfristen in Jahren festlegen" },
+            { "value": "c", "text": "Lizenzbedingungen (EULA) akzeptieren" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was gehört am ehesten zur Aufbewahrung von Archivdaten?",
+          "options": [
+            { "value": "a", "text": "Zugriffsrechte und Aufbewahrungsfristen definieren" },
+            { "value": "b", "text": "CPU-Takt erhöhen" },
+            { "value": "c", "text": "Router neu starten" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "ablauf-leistungserbringung",
+      "type": "capital",
+      "title": "Rätsel 3: Ablauf sauber abstimmen",
+      "subtitle": "Bringe die Schritte in eine sinnvolle Reihenfolge, um die Leistungserbringung sicher zu steuern.",
+      "hintDefault": "Hinweis: Erst Soll klären/prüfen, dann Archiv regeln, dann Cutover planen & umsetzen, dann alles dokumentieren/abnehmen.",
+      "rows": [
+        {
+          "key": "soll",
+          "label": "Vertragliche Vorgaben prüfen (Scope, Termine, Qualität, Verantwortlichkeiten) und kontinuierlich Soll/Ist abgleichen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "archiv",
+          "label": "Archivdaten festlegen (was, wo, wie lange, wer darf zugreifen) und Aufbewahrung organisieren",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "plan",
+          "label": "Cutover planen (Umschaltfenster, Migration, Rollback, Kommunikationsplan)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "umsetzung",
+          "label": "Altsystem stilllegen und neues System in Betrieb nehmen (Go-Live, Monitoring, Stabilisierung)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Erbrachte Leistung dokumentieren (Konfigurationen, Tests, Abnahme/Übergabe, Nachweise)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

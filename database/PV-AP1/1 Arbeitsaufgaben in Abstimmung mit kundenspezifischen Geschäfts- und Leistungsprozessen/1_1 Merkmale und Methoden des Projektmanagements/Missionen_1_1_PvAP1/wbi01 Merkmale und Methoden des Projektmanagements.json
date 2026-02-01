@@ -1,0 +1,154 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Geschäfts- & Leistungsprozesse-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "kundenkommunikation",
+      "name": "Kundenkommunikation",
+      "attributes": {
+        "direct_customer_contact": true,
+        "issue_focus": false,
+        "incident_focus": false,
+        "support_request_focus": true,
+        "uses_ticket_status": false,
+        "has_prioritization": false,
+        "has_sla_time_targets": true,
+        "involves_knowledge_base": false,
+        "root_cause_analysis": false,
+        "standardized_workflow": false,
+        "documents_progress": true
+      }
+    },
+    {
+      "id": "fehlermanagement",
+      "name": "Fehlermanagement",
+      "attributes": {
+        "direct_customer_contact": false,
+        "issue_focus": true,
+        "incident_focus": false,
+        "support_request_focus": false,
+        "uses_ticket_status": true,
+        "has_prioritization": true,
+        "has_sla_time_targets": false,
+        "involves_knowledge_base": true,
+        "root_cause_analysis": true,
+        "standardized_workflow": true,
+        "documents_progress": true
+      }
+    },
+    {
+      "id": "stoerungsmanagement",
+      "name": "Störungsmanagement",
+      "attributes": {
+        "direct_customer_contact": false,
+        "issue_focus": false,
+        "incident_focus": true,
+        "support_request_focus": false,
+        "uses_ticket_status": true,
+        "has_prioritization": true,
+        "has_sla_time_targets": true,
+        "involves_knowledge_base": true,
+        "root_cause_analysis": false,
+        "standardized_workflow": true,
+        "documents_progress": true
+      }
+    },
+    {
+      "id": "supportanfragen",
+      "name": "Supportanfragen",
+      "attributes": {
+        "direct_customer_contact": true,
+        "issue_focus": false,
+        "incident_focus": false,
+        "support_request_focus": true,
+        "uses_ticket_status": true,
+        "has_prioritization": true,
+        "has_sla_time_targets": true,
+        "involves_knowledge_base": true,
+        "root_cause_analysis": false,
+        "standardized_workflow": true,
+        "documents_progress": true
+      }
+    },
+    {
+      "id": "ticketstatus",
+      "name": "Bearbeitungsstatus (Ticketsystem)",
+      "attributes": {
+        "direct_customer_contact": false,
+        "issue_focus": false,
+        "incident_focus": false,
+        "support_request_focus": false,
+        "uses_ticket_status": true,
+        "has_prioritization": false,
+        "has_sla_time_targets": false,
+        "involves_knowledge_base": false,
+        "root_cause_analysis": false,
+        "standardized_workflow": true,
+        "documents_progress": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Gibt es direkten Kontakt mit Kunden (Telefon, Mail, Chat)?",
+      "attributeKey": "direct_customer_contact"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es primär um Fehleranalyse und Fehlerbehebung (Bug/Defekt)?",
+      "attributeKey": "issue_focus"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es primär um akute Störungen/Incidents und schnelle Wiederherstellung des Betriebs?",
+      "attributeKey": "incident_focus"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Dreht es sich um eingehende Hilfe-/Supportwünsche (How-to, Nutzung, kleine Probleme)?",
+      "attributeKey": "support_request_focus"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Wird typischerweise ein Ticket mit Status geführt (z. B. neu, in Bearbeitung, gelöst)?",
+      "attributeKey": "uses_ticket_status"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Gibt es Prioritäten oder Dringlichkeitsstufen (z. B. P1–P4)?",
+      "attributeKey": "has_prioritization"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Spielen Reaktions- oder Lösungszeiten (SLA) eine zentrale Rolle?",
+      "attributeKey": "has_sla_time_targets"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird Wissen dokumentiert/ genutzt (Knowledge Base, FAQ, Known Errors)?",
+      "attributeKey": "involves_knowledge_base"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Wird systematisch nach Ursachen gesucht (Root Cause Analysis)?",
+      "attributeKey": "root_cause_analysis"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Gibt es einen klaren, wiederholbaren Ablauf (Standard-Workflow/Prozessschritte)?",
+      "attributeKey": "standardized_workflow"
+    },
+    {
+      "id": "q11",

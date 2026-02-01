@@ -1,0 +1,177 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Geschäfts- und Leistungsprozesse",
+  "topic": "Kundenkommunikation, Support, Störung/Fehler, Tickets und Bearbeitungsstatus",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "prozesse-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Vorgänge richtig zuordnen",
+      "subtitle": "Ordne die Beispiele den passenden Prozessarten zu.",
+      "hintDefault": "Tipp: Fehler = Bug/Defekt, Störung = Service-Ausfall, Support = Anfrage/Hilfe, Kommunikation = Info/Abstimmung, Status = Ticket-Zustand.",
+      "sortColumns": [
+        { "zone": "kommunikation", "label": "Kundenkommunikation", "hint": "(Abstimmung, Information, Rückfragen)" },
+        { "zone": "support", "label": "Supportanfragen", "hint": "(Hilfe, Nutzung, How-to)" },
+        { "zone": "stoerung", "label": "Störungsmanagement", "hint": "(Incident, Service wiederherstellen)" },
+        { "zone": "fehler", "label": "Fehlermanagement", "hint": "(Bug, Ursache finden & beheben)" },
+        { "zone": "status", "label": "Bearbeitungsstatus", "hint": "(Ticket-Status/Workflow)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Kunde fragt nach Liefertermin und nächsten Schritten", "correctZone": "kommunikation" },
+        { "id": "s2", "text": "Rückfrage: Screenshot/Logfile anfordern und Empfang bestätigen", "correctZone": "kommunikation" },
+        { "id": "s3", "text": "„Wie richte ich VPN am Notebook ein?“", "correctZone": "support" },
+        { "id": "s4", "text": "Passwort-Reset für Benutzerkonto", "correctZone": "support" },
+        { "id": "s5", "text": "Mail-System ausgefallen, Priorität hoch, Ziel: Service schnell wiederherstellen", "correctZone": "stoerung" },
+        { "id": "s6", "text": "WLAN in Gebäude B instabil: Incident aufnehmen, Eingrenzen, Workaround", "correctZone": "stoerung" },
+        { "id": "s7", "text": "Bug: Rechnungen werden doppelt erzeugt – Reproduktion & Fix planen", "correctZone": "fehler" },
+        { "id": "s8", "text": "Root-Cause-Analyse: Warum tritt der Fehler auf? (z. B. falsche Validierung)", "correctZone": "fehler" },
+        { "id": "s9", "text": "Ticketstatus: Neu → In Bearbeitung → Warten auf Kunde", "correctZone": "status" },
+        { "id": "s10", "text": "Ticketstatus: Gelöst → Geschlossen (nach Kundenbestätigung)", "correctZone": "status" }
+      ]
+    },
+    {
+      "id": "ticket-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Tickets & Prozesse",
+      "subtitle": "Teste dein Wissen zu Incident, Fehler und Ticketstatus.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist im Störungsmanagement (Incident) das Hauptziel?",
+          "options": [
+            { "value": "a", "text": "Ursache langfristig beheben" },
+            { "value": "b", "text": "Service schnell wiederherstellen" },
+            { "value": "c", "text": "Neue Features priorisieren" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was beschreibt Fehlermanagement am treffendsten?",
+          "options": [
+            { "value": "a", "text": "Ticket schließen, sobald es leise wird" },
+            { "value": "b", "text": "Bug reproduzieren, Ursache finden, Fix liefern" },
+            { "value": "c", "text": "Nur Statuswechsel im Ticketsystem" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welcher Ticketstatus passt typischerweise, wenn Infos vom Kunden fehlen?",
+          "options": [
+            { "value": "a", "text": "Warten auf Kunde" },
+            { "value": "b", "text": "Gelöst" },
+            { "value": "c", "text": "Geschlossen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Reihenfolge ist für eine Supportanfrage am sinnvollsten?",
+          "options": [
+            { "value": "a", "text": "Sofort schließen → später nachfragen" },
+            { "value": "b", "text": "Annehmen → klären → Lösung/Anleitung → Abschluss" },
+            { "value": "c", "text": "Eskalieren → ohne Analyse lösen" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "ticket-workflow-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Ticket-Lebenslauf richtig ordnen",
+      "subtitle": "Bringe die Bearbeitungsstatus in eine sinnvolle Reihenfolge.",
+      "hintDefault": "Hinweis: Erst aufnehmen, dann bearbeiten, ggf. warten, dann lösen und schließen.",
+      "rows": [
+        {
+          "key": "neu",
+          "label": "Neu (Ticket erfasst)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "triage",
+          "label": "Triage (Priorität/Kategorie zuweisen, ggf. eskalieren)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "bearbeitung",
+          "label": "In Bearbeitung (Analyse/Diagnose)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "warten",
+          "label": "Warten auf Kunde (Rückfragen/Infos fehlen)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "geloest",
+          "label": "Gelöst (Fix/Workaround umgesetzt, Test ok)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "geschlossen",
+          "label": "Geschlossen (Kunde bestätigt / Frist abgelaufen)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

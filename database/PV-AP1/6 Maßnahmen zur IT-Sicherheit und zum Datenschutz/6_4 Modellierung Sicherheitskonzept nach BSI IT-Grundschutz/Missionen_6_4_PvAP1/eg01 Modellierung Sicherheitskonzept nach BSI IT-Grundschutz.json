@@ -1,0 +1,129 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Sicherheitskonzept nach BSI IT-Grundschutz",
+  "topic": "Grundschutz-Bausteine, Schutzbedarf (normal/hoch/sehr hoch), ISMS, IT-Sicherheitsbeauftragter",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "grundschutz-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Grundschutz-Begriffe zuordnen",
+      "subtitle": "Ordne jede Karte der passenden Kategorie zu.",
+      "hintDefault": "Tipp: Bausteine = Maßnahmenpakete. Schutzbedarf = wie schlimm wäre ein Schaden. ISMS = System zum Steuern. ISB = Rolle/Verantwortung.",
+      "sortColumns": [
+        { "zone": "bausteine", "label": "Grundschutz-Bausteine", "hint": "(aus Katalog, Maßnahmenpakete)" },
+        { "zone": "schutzbedarf", "label": "Schutzbedarf", "hint": "(normal/hoch/sehr hoch)" },
+        { "zone": "isms", "label": "ISMS", "hint": "(Management-System)" },
+        { "zone": "isb", "label": "IT-Sicherheitsbeauftragter", "hint": "(Rolle im Betrieb)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Baustein beschreibt typische Anforderungen und Maßnahmen für einen Bereich (z. B. Server, Clients, Netze).", "correctZone": "bausteine" },
+        { "id": "s2", "text": "Bausteine werden passenden Zielobjekten zugeordnet (IT-Systeme, Anwendungen, Räume, Netze).", "correctZone": "bausteine" },
+        { "id": "s3", "text": "Schutzbedarf „normal“: Schaden wäre begrenzt und beherrschbar.", "correctZone": "schutzbedarf" },
+        { "id": "s4", "text": "Schutzbedarf „hoch“: erheblicher Schaden möglich (z. B. deutliche finanzielle/organisatorische Folgen).", "correctZone": "schutzbedarf" },
+        { "id": "s5", "text": "Schutzbedarf „sehr hoch“: existenzbedrohender oder außergewöhnlich schwerer Schaden.", "correctZone": "schutzbedarf" },
+        { "id": "s6", "text": "ISMS: Regeln, Prozesse und Rollen, um Informationssicherheit dauerhaft zu planen, umzusetzen und zu verbessern.", "correctZone": "isms" },
+        { "id": "s7", "text": "ISMS arbeitet zyklisch: Ziele → Maßnahmen → Prüfung → Verbesserung (kontinuierlich).", "correctZone": "isms" },
+        { "id": "s8", "text": "IT-Sicherheitsbeauftragter koordiniert Sicherheitsprozesse, Richtlinien und Awareness im Unternehmen.", "correctZone": "isb" },
+        { "id": "s9", "text": "IT-Sicherheitsbeauftragter ist Ansprechperson für Audits/Incidents und sorgt für Nachweise/Dokumentation.", "correctZone": "isb" }
+      ]
+    },
+    {
+      "id": "quiz-grundschutz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz IT-Grundschutz",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: Bausteine = Katalog-Module. Schutzbedarf = Schadenshöhe. ISMS = Management, ISB = Rolle.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist ein Grundschutz-Baustein im Kern?",
+          "options": [
+            { "value": "a", "text": "Ein Verschlüsselungsalgorithmus für WLAN" },
+            { "value": "b", "text": "Ein Maßnahmen-/Anforderungspaket für einen typischen Bereich (z. B. Server, Netz)" },
+            { "value": "c", "text": "Ein einzelnes Logfile zur Nachverfolgung" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Wofür stehen die Schutzbedarfskategorien (normal/hoch/sehr hoch) primär?",
+          "options": [
+            { "value": "a", "text": "Für die Anzahl der eingesetzten Firewalls" },
+            { "value": "b", "text": "Für die Stärke der Passwortrichtlinie in Zeichen" },
+            { "value": "c", "text": "Für die erwartete Schadenshöhe bei Verlust von Vertraulichkeit/Integrität/Verfügbarkeit" }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage trifft am besten auf ein ISMS zu?",
+          "options": [
+            { "value": "a", "text": "Ein einmaliges Projekt, das nach Rollout abgeschlossen ist" },
+            { "value": "b", "text": "Ein Managementsystem zur dauerhaften Steuerung und Verbesserung der Informationssicherheit" },
+            { "value": "c", "text": "Ein Tool, das automatisch alle Sicherheitslücken schließt" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "grundschutz-ablauf",
+      "type": "capital",
+      "title": "Rätsel 3: Sicherheitskonzept modellieren – richtige Reihenfolge",
+      "subtitle": "Bringe die Schritte in eine sinnvolle Reihenfolge, um ein Sicherheitskonzept nach IT-Grundschutz aufzubauen.",
+      "hintDefault": "Hinweis: Erst Verantwortlichkeit/Organisation, dann Schutzbedarf, dann Bausteine zuordnen, dann ISMS leben.",
+      "rows": [
+        {
+          "key": "isb",
+          "label": "Betrieblichen IT-Sicherheitsbeauftragten festlegen (Rolle, Aufgaben, Eskalation)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "schutzbedarf",
+          "label": "Schutzbedarf bestimmen (normal/hoch/sehr hoch für Vertraulichkeit, Integrität, Verfügbarkeit)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "bausteine",
+          "label": "Bausteine aus dem Grundschutzkatalog zuordnen und Maßnahmen ableiten",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "isms",
+          "label": "ISMS implementieren und betreiben (Richtlinien, Kontrollen, Audits, kontinuierliche Verbesserung)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        }
+      ]
+    }
+  ]
+}

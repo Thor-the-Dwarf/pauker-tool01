@@ -1,0 +1,204 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Verständnis der Fachbegriffe (QM)-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "qualitaetsbegriff_iso_9000",
+      "name": "Qualitätsbegriff nach ISO 9000",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "betriebliche_qm_systeme",
+      "name": "Betriebliche QM-Systeme",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": true,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "qs_normen",
+      "name": "QS-Normen",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "audit",
+      "name": "Audit",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "zertifizierung",
+      "name": "Zertifizierung",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": true,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um die Definition, was „Qualität“ überhaupt bedeutet (z. B. nach ISO 9000: Anforderungen erfüllen)?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um ein organisatorisches System im Betrieb, das Qualität steuert (Prozesse, Rollen, Regeln, PDCA)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um formale Normen/Standards für Qualitätssicherung (QS-Normen, Vorgaben, Dokumentationspflichten)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um eine Prüfung, ob Regeln/Prozesse eingehalten werden (Audit: intern/extern, Nachweise, Abweichungen)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, ein offizielles Zertifikat/Bestätigung zu erhalten (Zertifizierung durch Stelle, Gültigkeit, Rezertifizierung)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist das Thema stark compliance-/risikogetrieben (Fehler/Abweichungen vermeiden, Nachweispflichten erfüllen)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist dafür typischerweise viel Dokumentation nötig (Handbuch, Prozessbeschreibungen, Protokolle, Nachweise)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird das Ergebnis oft zentral vorgegeben/gestaltet (Qualitätspolitik, Standards, zentrale Prozesse)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Sind Rollen klar getrennt (Auditor vs. auditiert, Prozessverantwortliche vs. Ausführende)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Spielt Mitwirkung vieler Beteiligter eine Rolle (Prozesse leben, Schulungen, kontinuierliche Verbesserung)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist das Thema besonders relevant für große Organisationen/Skalierung (einheitliche Standards, viele Teams, viele Prozesse)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Hat das wirtschaftlichen Nutzen nach außen (Ausschreibungen, Kundenanforderungen, Vertrauen, Marktimage)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist dafür oft ein Budget/Invest nötig (Zertifizierer, Auditkosten, Tools, Schulungen)?",
+      "attributeKey": "minimum_capital_required"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Geht es eher um „Regeln/Definitionen“ (Normenbegriffe) statt um konkrete Umsetzung im Betrieb?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es darum, nachweisbar „konform“ zu sein (Norm erfüllen, Audit bestehen, Zertifikat erhalten)?",
+      "attributeKey": "entry_in_register_required"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Projektmanagement verstehen",
+  "topic": "Merkmale und Methoden des Projektmanagements: Planung, Phasen, Modelle, Team, Reflexion",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "pm-sort-grundlagen",
+      "type": "sort",
+      "title": "Rätsel 1: Begriffe richtig einordnen",
+      "subtitle": "Ordne die Begriffe den passenden Bereichen zu.",
+      "hintDefault": "Tipp: Planung = Methoden/Artefakte, Ablauf = Phasen/Modelle, Menschen = Team/Reflexion.",
+      "sortColumns": [
+        {
+          "zone": "planung",
+          "label": "Projektplanung",
+          "hint": "(PSP, Netzplan, Gantt, Termine)"
+        },
+        {
+          "zone": "ablauf",
+          "label": "Projektphasen & Vorgehen",
+          "hint": "(Phasen, Vorgehensmodelle)"
+        },
+        {
+          "zone": "menschen",
+          "label": "Team & Reflexion",
+          "hint": "(Teambildung, Entwicklung, Rückblick)"
+        }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Projektstrukturplan (PSP)", "correctZone": "planung" },
+        { "id": "s2", "text": "Netzplan", "correctZone": "planung" },
+        { "id": "s3", "text": "Gantt-Diagramm", "correctZone": "planung" },
+        { "id": "s4", "text": "Kritischer Weg", "correctZone": "planung" },
+        { "id": "s5", "text": "Puffer", "correctZone": "planung" },
+        { "id": "s6", "text": "Meilensteine", "correctZone": "planung" },
+        { "id": "s7", "text": "Terminierung", "correctZone": "planung" },
+        { "id": "s8", "text": "Projektphasen", "correctZone": "ablauf" },
+        { "id": "s9", "text": "Vorgehensmodelle", "correctZone": "ablauf" },
+        { "id": "s10", "text": "Teambildung", "correctZone": "menschen" },
+        { "id": "s11", "text": "Teamentwicklung", "correctZone": "menschen" },
+        { "id": "s12", "text": "Reflexionsmethoden", "correctZone": "menschen" }
+      ]
+    },
+    {
+      "id": "pm-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Projektmanagement",
+      "subtitle": "Teste dein Wissen zu Planung, Phasen und Team.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welches Werkzeug zerlegt ein Projekt in Lieferobjekte und Arbeitspakete?",
+          "options": [
+            { "value": "a", "text": "Projektstrukturplan (PSP)" },
+            { "value": "b", "text": "Netzplan" },
+            { "value": "c", "text": "Retrospektive" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was zeigt im Netzplan die längste, zeitbestimmende Kette ohne Puffer?",
+          "options": [
+            { "value": "a", "text": "Meilenstein" },
+            { "value": "b", "text": "Kritischer Weg" },
+            { "value": "c", "text": "Scope" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Wozu dient ein Puffer im Terminplan hauptsächlich?",
+          "options": [
+            { "value": "a", "text": "Risiken finanziell zu bewerten" },
+            { "value": "b", "text": "Zeitreserven für Verzögerungen einzuplanen" },
+            { "value": "c", "text": "Teamrollen festzulegen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Reflexionsmethode findet typischerweise am Ende eines Iterations-/Sprint-Zyklus statt?",
+          "options": [
+            { "value": "a", "text": "Retrospektive" },
+            { "value": "b", "text": "Netzplan-Review" },
+            { "value": "c", "text": "Gantt-Import" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "pm-reihenfolge-planung",
+      "type": "capital",
+      "title": "Rätsel 3: Vom Auftrag zum Terminplan",
+      "subtitle": "Bringe die Schritte in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Scope klären, dann strukturieren, dann Abhängigkeiten, dann Terminplan.",
+      "rows": [
+        {
+          "key": "auftrag",
+          "label": "Projektauftrag klären (Ziele, Rahmen, Stakeholder)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "scope",
+          "label": "Umfang festlegen (Scope) und Anforderungen grob sammeln",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "psp",
+          "label": "Projektstrukturplan (PSP) erstellen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "abhaengigkeiten",
+          "label": "Abhängigkeiten ableiten und Netzplan erstellen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "terminplan",
+          "label": "Gantt-Diagramm erstellen (Terminierung)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "puffer",
+          "label": "Meilensteine setzen, kritischen Weg prüfen, Puffer einplanen",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

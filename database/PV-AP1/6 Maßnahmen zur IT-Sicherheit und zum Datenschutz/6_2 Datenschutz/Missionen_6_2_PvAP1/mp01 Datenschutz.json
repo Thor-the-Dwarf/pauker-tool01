@@ -1,0 +1,66 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Datenschutz – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "dsgvo",
+      "name": "Datenschutzgesetz: DSGVO",
+      "description": "EU-weite Verordnung zum Schutz personenbezogener Daten; regelt Verarbeitung, Rechte, Pflichten und Sanktionen in der EU.",
+      "example": "Ein Unternehmen führt ein neues CRM ein und muss Rechtsgrundlage, Informationspflichten, TOMs und ggf. einen AV-Vertrag sicherstellen."
+    },
+    {
+      "id": "bdsg",
+      "name": "Datenschutzgesetz: BDSG",
+      "description": "Deutsches Datenschutzgesetz, das die DSGVO ergänzt (z. B. spezielle Regelungen für Beschäftigtendaten und nationale Ausnahmen).",
+      "example": "Für eine Zeiterfassung werden Beschäftigtendaten verarbeitet; zusätzlich zur DSGVO sind nationale Vorgaben aus dem BDSG zu beachten."
+    },
+    {
+      "id": "personenbezogene_daten",
+      "name": "Personenbezogene Daten",
+      "description": "Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen (direkt oder indirekt).",
+      "example": "Name, E-Mail, Personalnummer, IP-Adresse oder Standortdaten gelten als personenbezogen, wenn sie einer Person zuordenbar sind."
+    },
+    {
+      "id": "betroffenenrechte_auskunft",
+      "name": "Recht der Betroffenen: Auskunft",
+      "description": "Betroffene können wissen, ob und welche Daten über sie verarbeitet werden, zu welchen Zwecken und wie lange.",
+      "example": "Ein Kunde fragt an, welche Daten im Support-System gespeichert sind; das Unternehmen liefert eine strukturierte Auskunft."
+    },
+    {
+      "id": "betroffenenrechte_berichtigung",
+      "name": "Recht der Betroffenen: Berichtigung",
+      "description": "Betroffene können die Korrektur falscher oder unvollständiger personenbezogener Daten verlangen.",
+      "example": "Eine falsche Adresse im CRM wird auf Anfrage des Kunden berichtigt und in abhängigen Systemen synchronisiert."
+    },
+    {
+      "id": "betroffenenrechte_loeschung",
+      "name": "Recht der Betroffenen: Löschung",
+      "description": "Unter bestimmten Bedingungen können Betroffene verlangen, dass ihre Daten gelöscht werden (sofern keine Aufbewahrungspflichten entgegenstehen).",
+      "example": "Ein Nutzer kündigt und verlangt Löschung seines Accounts; Daten werden gelöscht oder anonymisiert, Rechnungsdaten bleiben wegen Fristen erhalten."
+    },
+    {
+      "id": "betroffenenrechte_einschraenkung",
+      "name": "Recht der Betroffenen: Einschränkung der Verarbeitung",
+      "description": "Betroffene können verlangen, dass Daten vorübergehend nur eingeschränkt verarbeitet werden (z. B. während einer Prüfung).",
+      "example": "Solange ein Streit über die Richtigkeit von Daten läuft, werden sie gesperrt und nicht für Marketing verwendet."
+    },
+    {
+      "id": "betroffenenrechte_widerspruch",
+      "name": "Recht der Betroffenen: Widerspruch",
+      "description": "Betroffene können einer Verarbeitung widersprechen, insbesondere bei Direktwerbung oder bestimmten Interessenabwägungen.",
+      "example": "Ein Kunde widerspricht Newsletter/Tracking; das System setzt Opt-out und stoppt die Verarbeitung für Marketingzwecke."
+    }
+  ]
+}

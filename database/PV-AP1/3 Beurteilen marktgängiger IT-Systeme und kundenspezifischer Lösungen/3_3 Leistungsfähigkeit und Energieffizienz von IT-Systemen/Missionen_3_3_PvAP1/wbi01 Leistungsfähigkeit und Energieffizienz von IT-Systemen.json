@@ -1,0 +1,201 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Leistungsfähigkeit & Energieeffizienz-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "bios_uefi",
+      "name": "BIOS/UEFI (Firmware & Boot-Konfiguration)",
+      "attributes": {
+        "involves_firmware": true,
+        "involves_cpu": false,
+        "involves_ram": false,
+        "involves_storage": false,
+        "involves_raid": false,
+        "involves_filesystems": false,
+        "involves_network": false,
+        "focuses_on_wlan": false,
+        "focuses_on_fiber_lwl": false,
+        "involves_standards_certificates": false,
+        "involves_product_markings": false,
+        "involves_energy_metrics": false,
+        "involves_electrical_calculations": false
+      }
+    },
+    {
+      "id": "cpu_ram",
+      "name": "CPU & RAM (Rechenleistung und Arbeitsspeicher)",
+      "attributes": {
+        "involves_firmware": false,
+        "involves_cpu": true,
+        "involves_ram": true,
+        "involves_storage": false,
+        "involves_raid": false,
+        "involves_filesystems": false,
+        "involves_network": false,
+        "focuses_on_wlan": false,
+        "focuses_on_fiber_lwl": false,
+        "involves_standards_certificates": false,
+        "involves_product_markings": false,
+        "involves_energy_metrics": false,
+        "involves_electrical_calculations": false
+      }
+    },
+    {
+      "id": "storage_raid_filesystems",
+      "name": "Datenspeicher, RAID & Filesysteme",
+      "attributes": {
+        "involves_firmware": false,
+        "involves_cpu": false,
+        "involves_ram": false,
+        "involves_storage": true,
+        "involves_raid": true,
+        "involves_filesystems": true,
+        "involves_network": false,
+        "focuses_on_wlan": false,
+        "focuses_on_fiber_lwl": false,
+        "involves_standards_certificates": false,
+        "involves_product_markings": false,
+        "involves_energy_metrics": false,
+        "involves_electrical_calculations": false
+      }
+    },
+    {
+      "id": "network_standards",
+      "name": "Netzwerkstandards (Ethernet, WLAN, LWL)",
+      "attributes": {
+        "involves_firmware": false,
+        "involves_cpu": false,
+        "involves_ram": false,
+        "involves_storage": false,
+        "involves_raid": false,
+        "involves_filesystems": false,
+        "involves_network": true,
+        "focuses_on_wlan": true,
+        "focuses_on_fiber_lwl": true,
+        "involves_standards_certificates": false,
+        "involves_product_markings": false,
+        "involves_energy_metrics": false,
+        "involves_electrical_calculations": false
+      }
+    },
+    {
+      "id": "norms_certificates_markings",
+      "name": "Normen, Vorschriften, Zertifikate, Kennzeichnungen",
+      "attributes": {
+        "involves_firmware": false,
+        "involves_cpu": false,
+        "involves_ram": false,
+        "involves_storage": false,
+        "involves_raid": false,
+        "involves_filesystems": false,
+        "involves_network": false,
+        "focuses_on_wlan": false,
+        "focuses_on_fiber_lwl": false,
+        "involves_standards_certificates": true,
+        "involves_product_markings": true,
+        "involves_energy_metrics": false,
+        "involves_electrical_calculations": false
+      }
+    },
+    {
+      "id": "energy_efficiency_power",
+      "name": "Energiegrößen & Leistungsrechnung (U, I, P, t, Wirkungsgrad)",
+      "attributes": {
+        "involves_firmware": false,
+        "involves_cpu": false,
+        "involves_ram": false,
+        "involves_storage": false,
+        "involves_raid": false,
+        "involves_filesystems": false,
+        "involves_network": false,
+        "focuses_on_wlan": false,
+        "focuses_on_fiber_lwl": false,
+        "involves_standards_certificates": false,
+        "involves_product_markings": false,
+        "involves_energy_metrics": true,
+        "involves_electrical_calculations": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um Firmware/Boot-Einstellungen (BIOS oder UEFI)?",
+      "attributeKey": "involves_firmware"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Steht die CPU bzw. Rechenleistung im Mittelpunkt?",
+      "attributeKey": "involves_cpu"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Steht RAM (Größe, Takt, Latenz) im Mittelpunkt?",
+      "attributeKey": "involves_ram"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Datenspeicher (SSD/HDD, Kapazität, IOPS, Durchsatz)?",
+      "attributeKey": "involves_storage"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Spielt RAID/Redundanz eine zentrale Rolle?",
+      "attributeKey": "involves_raid"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es um Filesysteme/Formatierung (z. B. NTFS, ext4, APFS)?",
+      "attributeKey": "involves_filesystems"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um Netzwerk-Performance oder -Standards (Ethernet/WLAN/LWL)?",
+      "attributeKey": "involves_network"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist WLAN/802.11 (Frequenzen, Standards, Durchsatz) ein Schwerpunkt?",
+      "attributeKey": "focuses_on_wlan"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist LWL/Glasfaser (Optik, Übertragungsstrecke, Medien) ein Schwerpunkt?",
+      "attributeKey": "focuses_on_fiber_lwl"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Geht es um Normen/Vorschriften/Zertifikate (Compliance, Standards)?",
+      "attributeKey": "involves_standards_certificates"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Geht es um Kennzeichnungen/Labels (z. B. Prüfzeichen, Effizienzlabel)?",
+      "attributeKey": "involves_product_markings"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Geht es um Energieeffizienz/Wirkungsgrad oder Energiegrößen allgemein?",
+      "attributeKey": "involves_energy_metrics"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Wird mit Strom/Spannung/Leistung gerechnet (z. B. P = U * I, Energie über Zeit)?",
+      "attributeKey": "involves_electrical_calculations"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Zielgerichtete Kundenberatung",
+  "topic": "Medieneinsatz, Online-Schulungen, Homepage, Kommunikationsmodelle, Cross-/Upselling",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "beratung-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Methoden richtig zuordnen",
+      "subtitle": "Ordne die Begriffe den passenden Bereichen der Kundenberatung zu.",
+      "hintDefault": "Tipp: Medien/Format = Wie du berätst, Modelle = Wie Kommunikation wirkt, Vertrieb = Was zusätzlich angeboten wird.",
+      "sortColumns": [
+        { "zone": "medien", "label": "Medieneinsatz & Formate", "hint": "(Webinar, Präsentation, Online-Schulung)" },
+        { "zone": "touchpoints", "label": "Digitale Touchpoints", "hint": "(Homepage, Inhalte, Self-Service)" },
+        { "zone": "modelle", "label": "Kommunikationsmodelle", "hint": "(Sender-Empfänger, Eisberg, 4-Ohren)" },
+        { "zone": "vertrieb", "label": "Cross-/Upselling", "hint": "(Mehrwert/Erweiterung verkaufen)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Kundengespräch via Webinar", "correctZone": "medien" },
+        { "id": "s2", "text": "Online-Schulung (Training für Anwender)", "correctZone": "medien" },
+        { "id": "s3", "text": "Live-Demo mit Screenshare", "correctZone": "medien" },
+        { "id": "s4", "text": "Homepage als Produkt- & Support-Portal", "correctZone": "touchpoints" },
+        { "id": "s5", "text": "FAQ/Wissensdatenbank auf der Website", "correctZone": "touchpoints" },
+        { "id": "s6", "text": "Kontaktformular + Terminbuchung", "correctZone": "touchpoints" },
+        { "id": "s7", "text": "Sender-Empfänger-Modell", "correctZone": "modelle" },
+        { "id": "s8", "text": "Eisbergmodell", "correctZone": "modelle" },
+        { "id": "s9", "text": "4-Ohren-Modell", "correctZone": "modelle" },
+        { "id": "s10", "text": "Cross-Selling", "correctZone": "vertrieb" },
+        { "id": "s11", "text": "Upselling", "correctZone": "vertrieb" }
+      ]
+    },
+    {
+      "id": "beratung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Kundenberatung",
+      "subtitle": "Teste dein Wissen zu Kommunikation und Verkauf.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist der Hauptunterschied zwischen Cross-Selling und Upselling?",
+          "options": [
+            { "value": "a", "text": "Cross-Selling = teureres Upgrade, Upselling = Ergänzung" },
+            { "value": "b", "text": "Cross-Selling = Ergänzungsprodukt, Upselling = höherwertige Variante" },
+            { "value": "c", "text": "Beides bedeutet das Gleiche" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welches Modell betont, dass ein großer Teil der Kommunikation „unter der Oberfläche“ liegt (Beziehung/Emotion)?",
+          "options": [
+            { "value": "a", "text": "Eisbergmodell" },
+            { "value": "b", "text": "Sender-Empfänger-Modell" },
+            { "value": "c", "text": "Gantt-Modell" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Wofür steht das Sender-Empfänger-Modell in der Kundenberatung vor allem?",
+          "options": [
+            { "value": "a", "text": "Botschaft senden, Störungen/Feedback beachten" },
+            { "value": "b", "text": "Nur das Vier-Ohren-Prinzip" },
+            { "value": "c", "text": "Nur schriftliche Kommunikation" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was ist ein typischer Nutzen einer Online-Schulung für Kunden?",
+          "options": [
+            { "value": "a", "text": "Mehr Fehlbedienung durch neue Funktionen" },
+            { "value": "b", "text": "Schnellere Adoption, weniger Support, mehr Zufriedenheit" },
+            { "value": "c", "text": "Weniger Transparenz über Produktfeatures" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "beratung-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Von Erstkontakt zur passenden Empfehlung",
+      "subtitle": "Bringe die Schritte einer zielgerichteten Kundenberatung in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Bedarf klären, dann geeignet präsentieren, dann schulen/unterstützen, dann sinnvoll erweitern.",
+      "rows": [
+        {
+          "key": "kontakt",
+          "label": "Kontakt herstellen (Homepage/Termin/Anfrage) und Ziel klären",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "kommunikation",
+          "label": "Kommunikation steuern (Sender-Empfänger, 4-Ohren, Eisberg im Blick)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "medium",
+          "label": "Passenden Medieneinsatz wählen (z. B. Webinar, Demo, Präsentation)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "praesentation",
+          "label": "Lösung vorstellen (Nutzen, Beispiele, klare nächste Schritte)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "schulung",
+          "label": "Online-Schulung anbieten (Einführung, Übungen, Q&A, Materialien)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "verkauf",
+          "label": "Sinnvoll erweitern (Cross-Selling/Upselling mit Begründung)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

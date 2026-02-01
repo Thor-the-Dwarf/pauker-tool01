@@ -1,0 +1,93 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Grundlagen Datenbanken-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "er_modell_einfach",
+      "name": "Einfache ER-Modelle",
+      "attributes": {
+        "is_modeling": true,
+        "uses_entities_relationships": true,
+        "uses_keys": true,
+        "uses_cardinalities": true,
+        "is_sql_query": false,
+        "select_focus": false,
+        "single_table_only": false,
+        "filters_rows": false,
+        "selects_columns": false
+      }
+    },
+    {
+      "id": "select_eine_tabelle",
+      "name": "SELECT bezogen auf eine Tabelle",
+      "attributes": {
+        "is_modeling": false,
+        "uses_entities_relationships": false,
+        "uses_keys": true,
+        "uses_cardinalities": false,
+        "is_sql_query": true,
+        "select_focus": true,
+        "single_table_only": true,
+        "filters_rows": true,
+        "selects_columns": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um Modellierung statt um Abfragen (Plan/Skizze der Datenwelt)?",
+      "attributeKey": "is_modeling"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Werden Entitäten und Beziehungen dargestellt (Entity–Relationship)?",
+      "attributeKey": "uses_entities_relationships"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Spielen Schlüssel eine zentrale Rolle (Primärschlüssel/Fremdschlüssel)?",
+      "attributeKey": "uses_keys"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Werden Kardinalitäten genutzt (1:1, 1:n, n:m)?",
+      "attributeKey": "uses_cardinalities"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist es eine SQL-Abfrage (Statement wie SELECT ... FROM ...)?",
+      "attributeKey": "is_sql_query"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Steht SELECT im Mittelpunkt (Daten lesen/anzeigen)?",
+      "attributeKey": "select_focus"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Bezieht sich die Abfrage nur auf eine Tabelle (kein JOIN)?",
+      "attributeKey": "single_table_only"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Werden Zeilen gefiltert (WHERE, BETWEEN, LIKE)?",
+      "attributeKey": "filters_rows"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Werden Spalten ausgewählt/aggregiert (Spaltenliste, COUNT, SUM)?",
+      "attributeKey": "selects_columns"
+    }
+  ]
+}

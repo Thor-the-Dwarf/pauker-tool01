@@ -1,0 +1,48 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Zielsetzungen des Unternehmens – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils die passende Zielart eines Unternehmens mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Zielart",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Zielart (ökologisch/ökonomisch/sozial).",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "oekologische_ziele",
+      "name": "Ökologische Ziele",
+      "description": "Ziele zum Umweltschutz und zur Ressourcenschonung (z. B. weniger CO₂, weniger Stromverbrauch, weniger Abfall).",
+      "example": "Rechenzentrum senkt Energieverbrauch durch effizientere Server, Virtualisierung und Abschalten von Alt-Systemen."
+    },
+    {
+      "id": "oekonomische_ziele",
+      "name": "Ökonomische Ziele",
+      "description": "Finanzielle Ziele zur Sicherung von Gewinn und Wirtschaftlichkeit (z. B. Umsatz, Kosten, Marge, ROI).",
+      "example": "Das Unternehmen plant 15% Marge pro Projekt und reduziert Supportkosten durch Standardisierung und Automatisierung."
+    },
+    {
+      "id": "soziale_ziele",
+      "name": "Soziale Ziele",
+      "description": "Ziele für Mitarbeitende und Gesellschaft (z. B. Arbeitsbedingungen, Weiterbildung, Gesundheit, Gleichbehandlung).",
+      "example": "Ein Betrieb führt regelmäßige Schulungen, flexible Arbeitszeiten und ergonomische Arbeitsplätze ein, um Zufriedenheit zu steigern."
+    },
+    {
+      "id": "zielkonflikte",
+      "name": "Zielkonflikte (Trade-offs)",
+      "description": "Spannungen zwischen Zielarten: Verbesserungen in einem Bereich können kurzfristig Nachteile in einem anderen erzeugen.",
+      "example": "Umweltfreundliche Hardware ist teurer: ökologisches Ziel steigt, ökonomisches Ziel (Marge) gerät unter Druck."
+    },
+    {
+      "id": "kennzahlen",
+      "name": "Kennzahlen (Messbarkeit)",
+      "description": "Ziele werden über Kennzahlen messbar gemacht, damit Fortschritt geprüft und gesteuert werden kann.",
+      "example": "Ökologisch: kWh pro Arbeitsplatz; ökonomisch: Marge in %; sozial: Fluktuationsrate oder Weiterbildungstage pro Jahr."
+    }
+  ]
+}

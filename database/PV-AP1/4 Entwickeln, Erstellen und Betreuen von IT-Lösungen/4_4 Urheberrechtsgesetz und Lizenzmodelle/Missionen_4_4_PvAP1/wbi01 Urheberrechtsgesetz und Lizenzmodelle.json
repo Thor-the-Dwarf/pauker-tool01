@@ -1,0 +1,141 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Urheberrechtsgesetz und Lizenzmodelle-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "lizenzarten",
+      "name": "Lizenzarten (z. B. EULA, OEM, GNU)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "pay_by_use",
+      "name": "Pay by Use",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": true,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um konkrete Lizenztypen/Vertragsmodelle (z. B. EULA, OEM, GNU/Open-Source-Lizenzen)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es darum, dass Kosten nutzungsabhängig abgerechnet werden (pro User/Minute/Request/GB usw.)?",
+      "attributeKey": "mixed_liability"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Stehen rechtliche Regeln und Pflichten im Vordergrund (was darfst du, was darfst du nicht, Nachweise/Compliance)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist das Thema typischerweise mit hohem Formal- und Prüfaufwand verbunden (Lizenz-Check, Audit, Dokumentation)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, dass Haftungs-/Risiko-Themen relevant sind (z. B. Lizenzverletzung, Abmahnung, Schadensersatz)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Wird die Nutzung zentral gesteuert/verwaltet (Lizenzmanagement, zentrale Freigaben, Softwarekatalog)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist das Thema eher für große Organisationen besonders wichtig (viele Clients, viele Lizenzen, Skalierung)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Hat das direkten Bezug zu Finanzierung/Budgetierung über Zeit (Abo, OPEX statt CAPEX, variable Kosten)?",
+      "attributeKey": "capital_market_access"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Sind Eigentum und Nutzung getrennt (z. B. OEM an Hardware gebunden, Nutzung statt Eigentum)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist das Ziel, wirtschaftlich attraktive Modelle zu wählen (Kosten optimieren, planbar skalieren, Investoren/Controlling zufrieden)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist das eher „schnell startbar“ (z. B. GNU/Open Source nutzen oder Pay-by-Use aktivieren) statt langwieriger Beschaffung?",
+      "attributeKey": "simple_foundation"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Spielt professionelles Auftreten/Compliance nach außen eine Rolle (saubere Lizenzlage, Audit-fähig)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Geht es um Zugang/Anbindung an externe Dienste/Plattformen, bei denen Nutzung abgerechnet wird (Cloud/Provider)?",
+      "attributeKey": "capital_market_access"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Gibt es viele beteiligte Parteien (Hersteller, Reseller, Kunde, Nutzer), deren Interessen beachtet werden müssen?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es darum, Risiken zu reduzieren (Lizenzverletzungen vermeiden, sichere Nutzungsregeln, richtige Lizenzwahl)?",
+      "attributeKey": "limited_liability"
+    }
+  ]
+}

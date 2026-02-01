@@ -1,0 +1,48 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Abstimmung der Vorgaben zur Leistungserbringung – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Bedeutung.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "kontinuierliche_pruefung_vorgaben",
+      "name": "Kontinuierliche Prüfung der vertraglich vereinbarten Vorgaben",
+      "description": "Regelmäßig prüfen, ob Leistung/Umsetzung dem Vertrag entspricht (Scope, Qualität, Termine, SLA, Abnahmekriterien).",
+      "example": "Wöchentlich wird geprüft: Sind Meilensteine erreicht, SLAs eingehalten und alle Anforderungen aus Lasten-/Pflichtenheft umgesetzt?"
+    },
+    {
+      "id": "stilllegung_altsysteme",
+      "name": "Stilllegung von Altsystemen",
+      "description": "Geplantes Abschalten alter Systeme inkl. Datenübernahme, Zugriffsende, Sicherheitsmaßnahmen und Rückfallplan.",
+      "example": "Nach erfolgreicher Migration wird der alte Fileserver read-only gesetzt, danach abgeschaltet und aus dem Monitoring entfernt."
+    },
+    {
+      "id": "inbetriebnahme_neusysteme",
+      "name": "Inbetriebnahme neuer Systeme",
+      "description": "Go-Live neuer Systeme inkl. Tests, Freigaben, Rollout, Monitoring, Support-Übergabe und Abnahme.",
+      "example": "Neues Ticketsystem geht live: Pilotgruppe, Schulung, Datenmigration, Monitoring aktivieren, dann Abnahmeprotokoll."
+    },
+    {
+      "id": "archivdaten_aufbewahrung",
+      "name": "Aufbewahrung von Archivdaten",
+      "description": "Sicheres, nachvollziehbares Archivieren von Daten gemäß Aufbewahrungsfristen und Zugriffskonzept (Compliance).",
+      "example": "E-Mails und Rechnungen werden revisionssicher archiviert, mit Rollenrechten und festgelegten Lösch-/Aufbewahrungsfristen."
+    },
+    {
+      "id": "dokumentation_leistung",
+      "name": "Dokumentation der erbrachten Leistung",
+      "description": "Nachweis, was umgesetzt/geliefert wurde (Konfiguration, Tests, Übergabe, Protokolle, Betriebsdoku).",
+      "example": "Übergabeordner enthält: Installationsprotokoll, Netzplan, Admin-Zugänge, Testnachweise, Abnahmeprotokoll und Betriebshandbuch."
+    }
+  ]
+}

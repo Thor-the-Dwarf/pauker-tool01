@@ -1,0 +1,96 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Vertragsarten, -bestandteile und -störungen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Bedeutung.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "kaufvertrag",
+      "name": "Kaufvertrag",
+      "description": "Vertrag über den Kauf einer Sache/Leistung gegen Zahlung; Eigentum geht nach Vereinbarung über.",
+      "example": "Ein Unternehmen kauft 20 Notebooks inklusive Garantieerweiterung zu einem festen Preis."
+    },
+    {
+      "id": "lizenzvertrag",
+      "name": "Lizenzvertrag",
+      "description": "Regelt Nutzungsrechte an Software/Content (z. B. Anzahl Nutzer, Laufzeit, Einschränkungen, Updates).",
+      "example": "Eine Firma kauft 50 Benutzerlizenzen für eine Software für 12 Monate und darf sie nur intern nutzen."
+    },
+    {
+      "id": "servicevertrag",
+      "name": "Servicevertrag",
+      "description": "Regelt laufende Dienstleistungen (z. B. Support, Wartung, Betrieb) inkl. Umfang, Reaktionszeiten und Vergütung.",
+      "example": "Ein IT-Dienstleister betreibt die Firewall und liefert Patch-Management und Monitoring als Managed Service."
+    },
+    {
+      "id": "sla",
+      "name": "SLA (Service Level Agreement)",
+      "description": "Konkrete, messbare Service-Zusagen innerhalb eines Servicevertrags (z. B. Verfügbarkeit, Reaktionszeit, Wiederherstellungszeit).",
+      "example": "SLA: 99,9% Verfügbarkeit, Reaktionszeit 1 Stunde, Wiederherstellung kritischer Störungen innerhalb von 4 Stunden."
+    },
+    {
+      "id": "mietvertrag",
+      "name": "Mietvertrag",
+      "description": "Zeitweise Überlassung einer Sache gegen Miete; Eigentum bleibt beim Vermieter.",
+      "example": "Für ein Projekt werden Server-Racks und Netzwerktechnik für 6 Monate gemietet."
+    },
+    {
+      "id": "leasing",
+      "name": "Leasing",
+      "description": "Langfristige Nutzungsüberlassung gegen Raten, oft mit festen Laufzeiten; Eigentum bleibt beim Leasinggeber.",
+      "example": "Arbeitsplatz-PCs werden für 36 Monate geleast, inklusive Austausch bei Defekt."
+    },
+    {
+      "id": "leistungsbeschreibung",
+      "name": "Vertragsbestandteil: Leistungsbeschreibung",
+      "description": "Beschreibt, was genau geliefert/geleistet wird (Scope, Funktionen, Qualität, Abgrenzungen).",
+      "example": "Im Vertrag steht, welche Module installiert werden, welche Schnittstellen integriert sind und was nicht enthalten ist."
+    },
+    {
+      "id": "termine",
+      "name": "Vertragsbestandteil: Termine/Fristen",
+      "description": "Zeitpunkte für Lieferung, Meilensteine, Abnahme oder Zahlung; oft mit Konsequenzen bei Nichteinhaltung.",
+      "example": "Go-Live am 15.05., Abnahme bis 22.05., Schulung bis 10.05. fest vereinbart."
+    },
+    {
+      "id": "entgelte",
+      "name": "Vertragsbestandteil: Entgelte/Vergütung",
+      "description": "Preisregelung: Einmalpreis, Rate, Stunden-/Tagessatz, Abrechnungsmodell und Zahlungsbedingungen.",
+      "example": "Setup pauschal 8.000 €, danach 900 € monatlich für Betrieb + 120 €/h für Zusatzleistungen."
+    },
+    {
+      "id": "lastenheft",
+      "name": "Vertragsbestandteil: Lastenheft",
+      "description": "Beschreibt aus Kundensicht die Anforderungen und Ziele (Was soll erreicht werden?).",
+      "example": "Der Kunde fordert: SSO, Rollen, Export, 500 Nutzer, DSGVO-Konformität und 99,9% Verfügbarkeit."
+    },
+    {
+      "id": "pflichtenheft",
+      "name": "Vertragsbestandteil: Pflichtenheft",
+      "description": "Beschreibt aus Auftragnehmersicht die Umsetzung (Wie wird das Ziel erreicht?).",
+      "example": "Der Dienstleister legt Architektur, Schnittstellen, Testplan, Migrationsablauf und Abnahmekriterien fest."
+    },
+    {
+      "id": "konventionalstrafe",
+      "name": "Vertragsbestandteil: Konventionalstrafe",
+      "description": "Vertraglich festgelegte Strafzahlung bei bestimmten Pflichtverletzungen (z. B. Lieferverzug, SLA-Verletzung).",
+      "example": "Bei Überschreitung des Go-Live-Termins fallen pro Woche 1.000 € Vertragsstrafe an."
+    },
+    {
+      "id": "verzug",
+      "name": "Verzugsfall (Vertragsstörung)",
+      "description": "Eine Partei erfüllt nicht rechtzeitig (z. B. Lieferverzug oder Zahlungsverzug) und löst rechtliche Folgen aus.",
+      "example": "Hardware wird nicht zum vereinbarten Datum geliefert; der Kunde setzt eine Nachfrist und macht ggf. Schadensersatz geltend."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Installationen & Konfigurationen",
+  "topic": "Hardware- & OS-Installation, Kommandozeile (Syntax/Parameter), Netzwerk konfigurieren, testen, Troubleshooting, dokumentieren",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "install-konfig-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Tätigkeiten richtig zuordnen",
+      "subtitle": "Ordne die Aufgaben den passenden Bereichen zu.",
+      "hintDefault": "Tipp: Installation = physisch/OS, CLI = Befehle/Parameter, Netzwerk = IP/DHCP/WLAN/VPN + Tests, Doku = nachvollziehbar festhalten.",
+      "sortColumns": [
+        { "zone": "installation", "label": "Installation & OS", "hint": "(Hardware, BIOS/UEFI, OS, Treiber)" },
+        { "zone": "cli", "label": "Kommandozeile", "hint": "(Befehlssyntax, Parameter, Tools)" },
+        { "zone": "netz", "label": "Netzwerk: Konfig & Test", "hint": "(IP, DHCP, WLAN, VPN, Checks)" },
+        { "zone": "doku", "label": "Dokumentation", "hint": "(Änderungen, Ergebnisse, Nachvollziehbarkeit)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Hardware einbauen/verkabeln (RAM/SSD/NIC) und Funktionstest", "correctZone": "installation" },
+        { "id": "s2", "text": "BIOS/UEFI prüfen (Boot-Reihenfolge, Secure Boot, UEFI/Legacy)", "correctZone": "installation" },
+        { "id": "s3", "text": "Datenträger partitionieren und formatieren", "correctZone": "installation" },
+        { "id": "s4", "text": "Betriebssystem installieren und Treiber/Updates einspielen", "correctZone": "installation" },
+        { "id": "s5", "text": "Befehlssyntax: command [option] [argument] verstehen", "correctZone": "cli" },
+        { "id": "s6", "text": "Parameter/Flags nutzen (z. B. -v, --help, /all)", "correctZone": "cli" },
+        { "id": "s7", "text": "Ausgabe prüfen und filtern (z. B. grep/findstr)", "correctZone": "cli" },
+        { "id": "s8", "text": "IP-Adresse setzen (statisch) oder DHCP aktivieren", "correctZone": "netz" },
+        { "id": "s9", "text": "DNS/Gateway korrekt eintragen", "correctZone": "netz" },
+        { "id": "s10", "text": "WLAN-Zugang konfigurieren (PSK vs. Enterprise/802.1X)", "correctZone": "netz" },
+        { "id": "s11", "text": "VPN einrichten und Verbindung testen", "correctZone": "netz" },
+        { "id": "s12", "text": "Connectivity testen (ping, traceroute/tracert, nslookup/dig)", "correctZone": "netz" },
+        { "id": "s13", "text": "Troubleshooting: Kabel/WLAN-Signal, IP-Konflikt, DNS-Fehler, Firewall", "correctZone": "netz" },
+        { "id": "s14", "text": "Konfiguration dokumentieren (IP-Plan, WLAN/SSID, VPN-Profil, Ports)", "correctZone": "doku" },
+        { "id": "s15", "text": "Testprotokoll/Ergebnis festhalten (was ging, was nicht, wann, mit welchem Tool)", "correctZone": "doku" },
+        { "id": "s16", "text": "Änderungen im Ticket/Change-Log notieren (Wer? Was? Warum? Rückfallplan?)", "correctZone": "doku" }
+      ]
+    },
+    {
+      "id": "install-konfig-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Installation, CLI & Netzwerk",
+      "subtitle": "Teste dein Wissen zu typischen Schritten und Fehlerbildern.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist eine typische Ursache, wenn ein PC nicht vom Installationsstick bootet?",
+          "options": [
+            { "value": "a", "text": "Falsche Boot-Reihenfolge/Boot-Modus (UEFI/Legacy)" },
+            { "value": "b", "text": "DNS-Server falsch" },
+            { "value": "c", "text": "VPN-Tunnel nicht aktiv" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was beschreibt „Parameter“ bei CLI-Befehlen am besten?",
+          "options": [
+            { "value": "a", "text": "Zusatzangaben/Optionen, die das Verhalten eines Befehls steuern" },
+            { "value": "b", "text": "Nur der Dateiname, sonst nichts" },
+            { "value": "c", "text": "Ein WLAN-Passwort" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Ein Client hat IP-Adresse, aber keine Namensauflösung. Was prüfst du zuerst?",
+          "options": [
+            { "value": "a", "text": "DNS-Server-Eintrag/Erreichbarkeit (z. B. nslookup)" },
+            { "value": "b", "text": "CPU-Temperatur" },
+            { "value": "c", "text": "RAID-Level" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Kombination passt typisch zu WLAN-Enterprise?",
+          "options": [
+            { "value": "a", "text": "Pre-Shared Key (ein gemeinsames Passwort)" },
+            { "value": "b", "text": "802.1X, Benutzer/Zertifikat, RADIUS" },
+            { "value": "c", "text": "Kein Passwort, nur Kabel" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "install-konfig-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Vom Aufbau bis zur sauberen Doku",
+      "subtitle": "Bringe die Schritte einer typischen Installation & Netzwerkkonfiguration in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Hardware/Boot, dann OS, dann Netzwerk, dann Tests/Troubleshooting, dann Dokumentation.",
+      "rows": [
+        {
+          "key": "hardware",
+          "label": "Hardware installieren/verkabeln (z. B. SSD, RAM, Netzwerk)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "biosuefi",
+          "label": "BIOS/UEFI konfigurieren (Boot, Secure Boot, UEFI/Legacy)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "os",
+          "label": "Betriebssystem installieren (Partition/Format, Setup, Treiber/Updates)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "cli_check",
+          "label": "Per CLI prüfen (z. B. Interfaces/Status anzeigen, Logs checken, Hilfe/Parameter nutzen)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "netz_konfig",
+          "label": "Netzwerk konfigurieren (IP/DHCP/DNS/Gateway, WLAN PSK/Enterprise, VPN)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "test_trouble",
+          "label": "Test & Troubleshooting (ping/tracert/nslookup, DHCP-Lease, Firewall, VPN-Routen)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Dokumentation abschließen (Konfiguration, Testnachweise, offene Punkte, Ticket/Change-Log)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

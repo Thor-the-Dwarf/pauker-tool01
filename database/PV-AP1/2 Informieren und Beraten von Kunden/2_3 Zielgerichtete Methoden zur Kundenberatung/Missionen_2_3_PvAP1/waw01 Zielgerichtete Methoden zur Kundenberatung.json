@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Zielgerichtete Methoden zur Kundenberatung",
+  "description": "Schritt 1: Passende Methode/Modell wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Du berätst einen Kunden, der nicht vor Ort sein kann. Du willst eine professionelle Präsentation mit Bildschirmfreigabe, Fragerunde und kurzer Aufzeichnung für später.",
+      "tags": ["Medieneinsatz", "Kundenpräsentation", "Webinar", "Remote"],
+      "options": [
+        {
+          "id": "webinar",
+          "label": "Kundengespräch via Webinar (mit Screen-Sharing)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ermöglicht Präsentation, Bildschirmfreigabe und direkte Interaktion (Q&A).", "correct": true },
+            { "id": "w2", "text": "Teilnehmer können ortsunabhängig teilnehmen.", "correct": true },
+            { "id": "w3", "text": "Ist primär ein Kommunikationsmodell zur Interpretation von Botschaften.", "correct": false },
+            { "id": "w4", "text": "Eignet sich nicht für Produktdemos, weil keine Medien genutzt werden dürfen.", "correct": false }
+          ]
+        },
+        {
+          "id": "homepage",
+          "label": "Homepage",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist dauerhaft verfügbar und gut für Informationen/Leistungen/Referenzen.", "correct": true },
+            { "id": "w2", "text": "Ersetzt ein interaktives Beratungsgespräch mit Rückfragen vollständig.", "correct": false },
+            { "id": "w3", "text": "Eignet sich für Lead-Generierung und Erstinformation, weniger für Live-Beratung.", "correct": true },
+            { "id": "w4", "text": "Hat typischerweise keine direkte Moderation und keine Live-Q&A.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für interaktive Remote-Beratung: Webinar (Live-Demo, Q&A, ggf. Aufzeichnung). Homepage ist eher statische Info/Marketing."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Kunde bekommt eine neue Software. Ziel: Nutzer sollen sie sicher bedienen können. Du willst ein wiederholbares Format, das auch neue Mitarbeitende später nutzen können.",
+      "tags": ["Online-Schulungen", "Enablement", "Wissensaufbau"],
+      "options": [
+        {
+          "id": "online_schulung",
+          "label": "Online-Schulung (Training/Workshop)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Vermittelt Bedienung und Prozesse strukturiert (Agenda, Übungen, Q&A).", "correct": true },
+            { "id": "w2", "text": "Ist skalierbar: mehrere Teilnehmende, mehrere Termine, Aufzeichnung möglich.", "correct": true },
+            { "id": "w3", "text": "Ziel ist primär, zusätzliche Produkte zu verkaufen.", "correct": false },
+            { "id": "w4", "text": "Eignet sich, um typische Fehler zu reduzieren und Support zu entlasten.", "correct": true }
+          ]
+        },
+        {
+          "id": "sender_empfaenger",
+          "label": "Sender-Empfänger-Modell",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt Kommunikationsstörungen (Codierung/Decodierung, Rauschen).", "correct": true },
+            { "id": "w2", "text": "Ist ein Trainingsformat mit Übungen und Teilnahmebescheinigung.", "correct": false },
+            { "id": "w3", "text": "Hilft, Schulungen verständlicher zu gestalten, ersetzt aber keine Schulung.", "correct": true },
+            { "id": "w4", "text": "Lieferte automatisch Lernkontrolle und Praxisübungen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Für Nutzerbefähigung: Online-Schulung (strukturierter Wissenstransfer, Übungen). Kommunikationsmodelle helfen beim Design, sind aber kein Schulungsformat."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Kunde sagt nach der Präsentation: „Klingt gut, aber ich bin mir nicht sicher, ob das bei uns klappt.“ Du spürst: Es ist weniger Technik, mehr Unsicherheit und ungesagte Einwände.",
+      "tags": ["Kommunikationsmodelle", "Eisbergmodell", "Einwände"],
+      "options": [
+        {
+          "id": "eisbergmodell",
+          "label": "Eisbergmodell",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Trennt sichtbare Sachebene von unsichtbarer Beziehungsebene (Gefühle, Motive).", "correct": true },
+            { "id": "w2", "text": "Hilft, zwischen „Faktenproblem“ und „Vertrauensproblem“ zu unterscheiden.", "correct": true },
+            { "id": "w3", "text": "Ist ein Tool zur Bildschirmfreigabe im Kundengespräch.", "correct": false },
+            { "id": "w4", "text": "Legt fest, welche Zusatzprodukte man anbieten muss.", "correct": false }
+          ]
+        },
+        {
+          "id": "homepage",
+          "label": "Homepage",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Vertrauen stärken (Referenzen, Case Studies), aber löst keine Live-Einwände direkt.", "correct": true },
+            { "id": "w2", "text": "Erkennt automatisch die Beziehungsebene des Kunden.", "correct": false },
+            { "id": "w3", "text": "Ist eher Kanal/Medium, kein Modell zur Gesprächsanalyse.", "correct": true },
+            { "id": "w4", "text": "Hilft nie bei Einwänden, weil Kunden nur live entscheiden.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Eisbergmodell: Einwände sind oft Beziehungsebene/Unsicherheit. Erst das sichtbar machen, dann sachlich klären."
+    },
+    {
+      "id": "c04",
+      "profile": "Du erklärst ein Angebot. Der Kunde reagiert genervt: „Was soll das heißen?“ Du hast das Gefühl, ihr redet aneinander vorbei – obwohl du „klar“ gesprochen hast.",
+      "tags": ["Kommunikationsmodelle", "4-Ohren-Modell", "Missverständnis"],
+      "options": [
+        {
+          "id": "vier_ohren",
+          "label": "4-Ohren-Modell (Schulz von Thun)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eine Nachricht hat mehrere Ebenen (Sachinhalt, Beziehung, Selbstoffenbarung, Appell).", "correct": true },
+            { "id": "w2", "text": "Erklärt, warum derselbe Satz beim Gegenüber anders ankommt als gemeint.", "correct": true },
+            { "id": "w3", "text": "Ist eine Methode für Online-Schulungen mit Lernkontrolle.", "correct": false },
+            { "id": "w4", "text": "Hilft, Formulierungen bewusst zu wählen und Rückfragen einzuplanen.", "correct": true }
+          ]
+        },
+        {
+          "id": "sender_empfaenger",
+          "label": "Sender-Empfänger-Modell",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Fokus: Übertragung + Störungen (Rauschen), weniger auf Interpretations-Ebenen.", "correct": true },
+            { "id": "w2", "text": "Beschreibt, dass Botschaften codiert/decodiert werden.", "correct": true },
+            { "id": "w3", "text": "Erklärt detailliert die vier Bedeutungsebenen eines Satzes.", "correct": false },
+            { "id": "w4", "text": "Ist immer überlegen und ersetzt alle anderen Modelle.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "4-Ohren-Modell: Missverständnisse entstehen oft durch unterschiedliche „Ohren“. Sender-Empfänger erklärt Störungen, aber nicht die 4 Ebenen."
+    },
+    {
+      "id": "c05",
+      "profile": "Der Kunde nutzt bereits euer Basispaket. Du erkennst, dass ein Zusatzmodul das eigentliche Problem besser löst. Du willst es anbieten, ohne wie ein Drücker zu wirken.",
+      "tags": ["Cross-Selling", "Bedarf", "Beratung"],
+      "options": [
+        {
+          "id": "cross_selling",
+          "label": "Cross-Selling",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bietet ergänzende Produkte/Leistungen passend zum Bedarf an.", "correct": true },
+            { "id": "w2", "text": "Ziel ist, den Kundennutzen zu erhöhen (z. B. Sicherheit, Komfort, weniger Aufwand).", "correct": true },
+            { "id": "w3", "text": "Ersetzt die Bedarfsermittlung, weil man immer dasselbe anbietet.", "correct": false },
+            { "id": "w4", "text": "Passt besonders gut, wenn du den Use-Case des Kunden wirklich verstanden hast.", "correct": true }
+          ]
+        },
+        {
+          "id": "upselling",
+          "label": "Upselling",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ziel ist Upgrades auf höherwertige Varianten (mehr Leistung/Umfang).", "correct": true },
+            { "id": "w2", "text": "Es geht nicht um Ergänzung, sondern um höherwertige Alternative.", "correct": true },
+            { "id": "w3", "text": "Ist identisch mit Cross-Selling, es gibt keinen Unterschied.", "correct": false },
+            { "id": "w4", "text": "Kann sinnvoll sein, wenn das Basispaket nicht ausreicht und Upgrade klaren Mehrwert bringt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Cross-Selling: ergänzende Leistung passend zum Bedarf. Upselling: Upgrade auf höherwertige Variante. Beides funktioniert nur sauber mit echter Bedarf-Argumentation."
+    },
+    {
+      "id": "c06",
+      "profile": "Der Kunde will „das günstigste Paket“. Du weißt: Mit der nächsthöheren Variante spart er Supportaufwand und Ausfallzeiten, weil wichtige Funktionen drin sind.",
+      "tags": ["Upselling", "Mehrwert", "Kundenberatung"],
+      "options": [
+        {
+          "id": "upselling",
+          "label": "Upselling",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Du empfiehlst eine höherwertige Variante, weil sie den Use-Case besser abdeckt.", "correct": true },
+            { "id": "w2", "text": "Argumentation basiert auf Nutzen (z. B. weniger Ausfälle, weniger Support, bessere Sicherheit).", "correct": true },
+            { "id": "w3", "text": "Du bietest ein zusätzliches, unabhängiges Produkt neben dem Paket an.", "correct": false },
+            { "id": "w4", "text": "Ist nur dann sinnvoll, wenn das Upgrade echten, nachvollziehbaren Mehrwert liefert.", "correct": true }
+          ]
+        },
+        {
+          "id": "cross_selling",
+          "label": "Cross-Selling",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bedeutet Ergänzung, nicht Upgrade der gleichen Produktlinie.", "correct": true },
+            { "id": "w2", "text": "Wäre passend, wenn ein Zusatzprodukt (z. B. Schulung) zum Paket dazukommt.", "correct": true },
+            { "id": "w3", "text": "Ist identisch mit Upselling und immer dasselbe.", "correct": false },
+            { "id": "w4", "text": "Kann helfen, aber trifft hier nicht den Kern: Paketstufe ist das Thema.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Upselling: Upgrade auf höherwertige Paketstufe mit klarem Mehrwert. Cross-Selling wäre Ergänzung (Add-on), nicht Paketwechsel."
+    }
+  ]
+}

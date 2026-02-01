@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Machbarkeit von Projekten",
+  "description": "Schritt 1: Passenden Schwerpunkt wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Projektteam soll entscheiden, ob ein neues Ticketsystem eingeführt werden kann. Es gibt zwei Lösungsvarianten und eine harte Deadline. Unklar ist, ob die benötigte Schnittstelle zum ERP überhaupt realisierbar ist und ob die Performance bei Last reicht.",
+      "tags": ["Machbarkeit", "Projektstart", "Entscheidung"],
+      "options": [
+        {
+          "id": "machbarkeitsanalyse",
+          "label": "Machbarkeitsanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Technische, organisatorische und wirtschaftliche Umsetzbarkeit wird geprüft.", "correct": true },
+            { "id": "w2", "text": "Varianten werden verglichen, inkl. Aufwand, Nutzen und Risiken.", "correct": true },
+            { "id": "w3", "text": "Es geht primär um die Erfassung aller Anspruchsgruppen und deren Einfluss.", "correct": false },
+            { "id": "w4", "text": "Es werden ausschließlich personenbezogene Daten klassifiziert und rechtlich bewertet.", "correct": false }
+          ]
+        },
+        {
+          "id": "stakeholderanalyse",
+          "label": "Stakeholderanalyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ziel ist die Bewertung, ob die ERP-Schnittstelle technisch möglich ist.", "correct": false },
+            { "id": "w2", "text": "Es werden Einfluss, Interesse und Erwartungen von Beteiligten erfasst.", "correct": true },
+            { "id": "w3", "text": "Ergebnis ist typischerweise eine Power-Interest-Matrix oder ähnliche Einordnung.", "correct": true },
+            { "id": "w4", "text": "Wirtschaftlichkeit (ROI/Deckungsbeitrag) wird hier als Hauptzweck berechnet.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Machbarkeitsanalyse: Prüft, ob das Vorhaben technisch/organisatorisch/wirtschaftlich umsetzbar ist und vergleicht Lösungsvarianten."
+    },
+    {
+      "id": "c02",
+      "profile": "Bei einem Rollout eines neuen MDM-Systems gibt es Widerstand: Support befürchtet Mehrarbeit, der Betriebsrat will Transparenz, die IT-Security fordert harte Vorgaben, und die Geschäftsführung will schnelle Ergebnisse. Das Projekt stockt, weil niemand einheitlich hinter dem Vorgehen steht.",
+      "tags": ["Stakeholder", "Konflikte", "Akzeptanz"],
+      "options": [
+        {
+          "id": "stakeholderanalyse",
+          "label": "Stakeholderanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Betroffene/Interessierte werden identifiziert und priorisiert.", "correct": true },
+            { "id": "w2", "text": "Erwartungen, Einfluss und mögliche Widerstände werden sichtbar gemacht.", "correct": true },
+            { "id": "w3", "text": "Maßnahmen zur Kommunikation und Einbindung lassen sich daraus ableiten.", "correct": true },
+            { "id": "w4", "text": "Es geht primär um die Einteilung von Daten in Stamm- und Bewegungsdaten.", "correct": false }
+          ]
+        },
+        {
+          "id": "risikoanalyse",
+          "label": "Risikoanalyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Risiken werden als Eintrittswahrscheinlichkeit × Auswirkung bewertet.", "correct": true },
+            { "id": "w2", "text": "Hauptziel ist das Finden und Priorisieren von Anspruchsgruppen.", "correct": false },
+            { "id": "w3", "text": "Ergebnis ist typischerweise ein Risikoregister mit Maßnahmen.", "correct": true },
+            { "id": "w4", "text": "Konflikte mit Betriebsrat und Fachbereichen werden dadurch automatisch gelöst.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Stakeholderanalyse: Identifiziert Beteiligte, bewertet Einfluss/Interesse und hilft, Akzeptanz- und Kommunikationsmaßnahmen gezielt zu planen."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Projekt hat mehrere unsichere Faktoren: Lieferzeiten der Hardware, mögliche Ausfälle beim Datenumzug, unklare Lizenzkosten und die Gefahr, dass ein zentraler Entwickler ausfällt. Das Team will diese Unsicherheiten systematisch bewerten und Gegenmaßnahmen planen.",
+      "tags": ["Risiken", "Planung", "Absicherung"],
+      "options": [
+        {
+          "id": "risikoanalyse",
+          "label": "Risikoanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Risiken werden gesammelt, bewertet (Wahrscheinlichkeit/Auswirkung) und priorisiert.", "correct": true },
+            { "id": "w2", "text": "Zu Risiken werden Maßnahmen (vermeiden, vermindern, übertragen, akzeptieren) festgelegt.", "correct": true },
+            { "id": "w3", "text": "Ergebnis ist typischerweise ein Risikoregister inkl. Verantwortlichen.", "correct": true },
+            { "id": "w4", "text": "Es geht dabei primär um das Klassifizieren von Daten in Stamm- und Bewegungsdaten.", "correct": false }
+          ]
+        },
+        {
+          "id": "betriebswirtschaftliche_kennzahlen",
+          "label": "Betriebswirtschaftliche Kennzahlen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Umsatz/Gewinn/Deckungsbeitrag dienen zur Wirtschaftlichkeitsbewertung.", "correct": true },
+            { "id": "w2", "text": "Sie ersetzen die Risikobewertung, weil Kennzahlen alle Unsicherheiten abdecken.", "correct": false },
+            { "id": "w3", "text": "Sie helfen bei Make-or-Buy-Entscheidungen und Budgetplanung.", "correct": true },
+            { "id": "w4", "text": "Sie dienen dazu, Stakeholder nach Einfluss und Interesse zu sortieren.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Risikoanalyse: Unsicherheiten werden strukturiert bewertet und es werden konkrete Maßnahmen zur Risikobehandlung geplant."
+    },
+    {
+      "id": "c04",
+      "profile": "In einem CRM-Projekt soll entschieden werden, welche Daten in welche Tabellen gehören. Kundendaten wie Name, Adresse und Geburtsdatum ändern sich selten. Bestellungen, Logins und Support-Tickets entstehen ständig neu und wachsen schnell.",
+      "tags": ["Datenarten", "Datenmodell", "Grundlagen"],
+      "options": [
+        {
+          "id": "stamm_und_bewegungsdaten",
+          "label": "Stamm- und Bewegungsdaten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Stammdaten beschreiben relativ stabile Objekte (z. B. Kunde, Artikel).", "correct": true },
+            { "id": "w2", "text": "Bewegungsdaten entstehen durch Vorgänge (z. B. Bestellung, Buchung, Ticket).", "correct": true },
+            { "id": "w3", "text": "Bewegungsdaten sind typischerweise häufiger, zeitbezogen und wachsen schneller.", "correct": true },
+            { "id": "w4", "text": "Stammdaten sind immer anonym und dürfen ohne Zweck verarbeitet werden.", "correct": false }
+          ]
+        },
+        {
+          "id": "datenschutz_und_sicherheit",
+          "label": "Datenschutz und -sicherheit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Personenbezogene Daten brauchen Zweck, Rechtsgrundlage und passende Schutzmaßnahmen.", "correct": true },
+            { "id": "w2", "text": "Thema ist primär die Trennung stabiler Objekt-Daten von Vorgangs-Daten.", "correct": false },
+            { "id": "w3", "text": "Zugriffskonzepte und Protokollierung sind typische technische Maßnahmen.", "correct": true },
+            { "id": "w4", "text": "Wenn Daten im CRM stehen, gelten keine Datenschutzpflichten mehr.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Stamm- und Bewegungsdaten: Stammdaten sind stabil (Kunde/Artikel), Bewegungsdaten sind Vorgänge (Bestellung/Ticket) und entstehen laufend."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Projekt verarbeitet Bewerberdaten. Es sollen Lebensläufe gespeichert, Zugriffe begrenzt, Daten nach Fristen gelöscht und Übertragungen abgesichert werden. Zusätzlich will das Unternehmen nachweisen können, wer wann auf welche Daten zugegriffen hat.",
+      "tags": ["Datenschutz", "Sicherheit", "Compliance"],
+      "options": [
+        {
+          "id": "datenschutz_und_sicherheit",
+          "label": "Datenschutz und -sicherheit",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zugriff auf personenbezogene Daten muss rollenbasiert und nachvollziehbar sein.", "correct": true },
+            { "id": "w2", "text": "Löschfristen und Datenminimierung sind zentrale Prinzipien.", "correct": true },
+            { "id": "w3", "text": "Verschlüsselung bei Übertragung und Speicherung reduziert Missbrauchsrisiken.", "correct": true },
+            { "id": "w4", "text": "Datenschutz ist nur ein Thema, wenn Daten öffentlich im Internet stehen.", "correct": false }
+          ]
+        },
+        {
+          "id": "machbarkeitsanalyse",
+          "label": "Machbarkeitsanalyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sie beantwortet primär, ob ein Vorhaben technisch/organisatorisch/wirtschaftlich umsetzbar ist.", "correct": true },
+            { "id": "w2", "text": "Ziel ist die Festlegung von Löschfristen nach Datenschutzrecht.", "correct": false },
+            { "id": "w3", "text": "Sie ersetzt ein Berechtigungskonzept und Logging vollständig.", "correct": false },
+            { "id": "w4", "text": "Sie kann Varianten vergleichen (z. B. Cloud vs. On-Prem) inkl. Kosten/Nutzen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Datenschutz und -sicherheit: Personenbezogene Daten brauchen klare Regeln (Zugriff, Zweck, Löschung) und technische Maßnahmen wie Verschlüsselung und Logging."
+    },
+    {
+      "id": "c06",
+      "profile": "Die Geschäftsführung will ein Projekt nur freigeben, wenn der Nutzen messbar ist. Es sollen erwartete Mehrumsätze, laufende Kosten, Gewinnbeitrag und der Deckungsbeitrag einer neuen Serviceleistung gegenübergestellt werden.",
+      "tags": ["Kennzahlen", "Wirtschaftlichkeit", "Entscheidung"],
+      "options": [
+        {
+          "id": "betriebswirtschaftliche_kennzahlen",
+          "label": "Betriebswirtschaftliche Kennzahlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Umsatz, Gewinn und Deckungsbeitrag helfen, Nutzen und Wirtschaftlichkeit zu bewerten.", "correct": true },
+            { "id": "w2", "text": "Kennzahlen können als Grundlage für Budgetierung und Projektfreigabe dienen.", "correct": true },
+            { "id": "w3", "text": "Deckungsbeitrag beschreibt typischerweise Erlöse minus variable Kosten.", "correct": true },
+            { "id": "w4", "text": "Kennzahlen ersetzen die technische Prüfung von Schnittstellen vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "stamm_und_bewegungsdaten",
+          "label": "Stamm- und Bewegungsdaten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Stammdaten sind relativ stabil, Bewegungsdaten entstehen durch Vorgänge.", "correct": true },
+            { "id": "w2", "text": "Ziel ist die Bewertung, ob ein Projekt finanziell sinnvoll ist.", "correct": false },
+            { "id": "w3", "text": "Das Thema liefert Kennzahlen wie Gewinn und Deckungsbeitrag.", "correct": false },
+            { "id": "w4", "text": "Es unterstützt die Modellierung von Tabellen und Beziehungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Betriebswirtschaftliche Kennzahlen: Dienen zur messbaren Bewertung von Nutzen und Wirtschaftlichkeit (z. B. Umsatz, Gewinn, Deckungsbeitrag)."
+    }
+  ]
+}

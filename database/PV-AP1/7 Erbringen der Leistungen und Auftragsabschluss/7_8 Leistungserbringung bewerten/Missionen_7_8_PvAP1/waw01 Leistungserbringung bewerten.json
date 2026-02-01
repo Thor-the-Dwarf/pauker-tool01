@@ -1,0 +1,184 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Leistungserbringung bewerten (Bestätigung, Soll-Ist, Abweichungen, Lessons Learned)",
+  "description": "Schritt 1: Passendes Bewertungs-/Abschlussartefakt wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Auftrag ist erledigt. Der Kunde soll schriftlich bestätigen, dass die vereinbarten Leistungen erbracht wurden (z. B. zur Abrechnung oder als Nachweis).",
+      "tags": ["Bestätigung", "Nachweis", "Leistung erbracht"],
+      "options": [
+        {
+          "id": "bestaetigung_leistung",
+          "label": "Bestätigung erbrachter Leistungen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schafft Nachweis, dass die Leistung geliefert wurde (für Abrechnung/Vertrag).", "correct": true },
+            { "id": "w2", "text": "Reduziert Streit über „wurde das wirklich gemacht?“.", "correct": true },
+            { "id": "w3", "text": "Ersetzt automatisch Soll-Ist-Vergleiche, weil Bestätigung alles ist.", "correct": false },
+            { "id": "w4", "text": "Kann an Abnahme/Übergabe gekoppelt sein (je nach Vertrag).", "correct": true }
+          ]
+        },
+        {
+          "id": "lessons_learned",
+          "label": "Lessons Learned",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dient interner Verbesserung, nicht als formaler Kunden-Nachweis.", "correct": true },
+            { "id": "w2", "text": "Kann parallel stattfinden, ersetzt aber keine Leistungsbestätigung.", "correct": true },
+            { "id": "w3", "text": "Ist ein juristisch verbindlicher Ersatz für Abnahme/Bestätigung.", "correct": false },
+            { "id": "w4", "text": "Bringt Erkenntnisse für nächste Projekte, aber bestätigt nichts beim Kunden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn du Nachweis/Abrechnung absichern willst: Bestätigung erbrachter Leistungen. Lessons Learned ist intern und kein formaler Nachweis."
+    },
+    {
+      "id": "c02",
+      "profile": "Du willst prüfen, ob das Projekt wie geplant gelaufen ist: Termine, Aufwand, Kosten, Umfang. Du hast einen Plan (Soll) und das, was tatsächlich passiert ist (Ist).",
+      "tags": ["Soll-Ist-Vergleich", "Controlling", "Projektbewertung"],
+      "options": [
+        {
+          "id": "soll_ist",
+          "label": "Soll-Ist-Vergleich",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Vergleicht geplante Werte (Soll) mit tatsächlichen Werten (Ist).", "correct": true },
+            { "id": "w2", "text": "Zeigt objektiv, wo Abweichungen liegen (Zeit, Kosten, Qualität, Scope).", "correct": true },
+            { "id": "w3", "text": "Ist nur eine Meinung und hat keine Zahlenbasis.", "correct": false },
+            { "id": "w4", "text": "Ist Grundlage für Abweichungsanalyse und Steuerungsmaßnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "bestaetigung_leistung",
+          "label": "Bestätigung erbrachter Leistungen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bestätigt Lieferung, bewertet aber nicht Plan vs. Realität.", "correct": true },
+            { "id": "w2", "text": "Kann existieren, auch wenn Zeit/Kosten stark abweichen.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Soll-Ist-Vergleich, weil Kunde zufrieden ist.", "correct": false },
+            { "id": "w4", "text": "Für Steuerung/Bewertung brauchst du Soll-Ist-Zahlen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Soll-Ist-Vergleich = harte Gegenüberstellung von Plan und Realität. Bestätigung sagt nur: geliefert, nicht: wie effizient."
+    },
+    {
+      "id": "c03",
+      "profile": "Soll-Ist zeigt: 30% mehr Aufwand als geplant. Jetzt musst du herausfinden, warum: falsche Schätzung, Scope-Änderungen, fehlende Skills, Wartezeiten, technische Schulden.",
+      "tags": ["Abweichungsanalyse", "Ursachen", "Maßnahmen"],
+      "options": [
+        {
+          "id": "abweichungsanalyse",
+          "label": "Abweichungsanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sucht Ursachen für Abweichungen (nicht nur „dass“ es abweicht).", "correct": true },
+            { "id": "w2", "text": "Leitet Maßnahmen ab, damit es beim nächsten Mal besser läuft.", "correct": true },
+            { "id": "w3", "text": "Ist identisch mit Soll-Ist-Vergleich, nur anderer Name.", "correct": false },
+            { "id": "w4", "text": "Hilft, Verantwortung von „Schuld“ auf „Ursache/Prozess“ umzulenken.", "correct": true }
+          ]
+        },
+        {
+          "id": "soll_ist",
+          "label": "Soll-Ist-Vergleich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt die Abweichung, erklärt aber nicht zwingend die Ursache.", "correct": true },
+            { "id": "w2", "text": "Ist Voraussetzung, um Abweichungen überhaupt zu erkennen.", "correct": true },
+            { "id": "w3", "text": "Erklärt automatisch die Gründe für Mehrkosten.", "correct": false },
+            { "id": "w4", "text": "Nach dem Vergleich kommt die Analyse, sonst bleibt es bei Zahlen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Soll-Ist zeigt das Problem. Abweichungsanalyse erklärt das Problem und liefert Ansatzpunkte für konkrete Verbesserungen."
+    },
+    {
+      "id": "c04",
+      "profile": "Nach Projektende willst du Wissen sichern: Was lief gut, was war Mist, welche Regeln/Checklisten ändern wir, was machen wir beim nächsten Projekt anders?",
+      "tags": ["Lessons Learned", "KVP", "Wissenssicherung"],
+      "options": [
+        {
+          "id": "lessons_learned",
+          "label": "Lessons Learned",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sammelt Erfahrungen und macht sie wiederverwendbar (Best Practices/Anti-Patterns).", "correct": true },
+            { "id": "w2", "text": "Ergebnis sollte konkrete Maßnahmen enthalten (z. B. Checkliste ergänzen).", "correct": true },
+            { "id": "w3", "text": "Ist nur „Jammern“ und darf keine Maßnahmen enthalten.", "correct": false },
+            { "id": "w4", "text": "Verhindert, dass Fehler im nächsten Projekt wiederholt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "bestaetigung_leistung",
+          "label": "Bestätigung erbrachter Leistungen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist Kunden-Nachweis, aber kein internes Lernformat.", "correct": true },
+            { "id": "w2", "text": "Kann wichtig sein, erzeugt aber keine Prozessverbesserung.", "correct": true },
+            { "id": "w3", "text": "Enthält automatisch alle Learnings und Ursachen.", "correct": false },
+            { "id": "w4", "text": "Lessons Learned ist dafür da, das Wissen zu konservieren.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Lessons Learned = Wissen sichern + konkrete Verbesserungen ableiten. Leistungsbestätigung ist extern/vertraglich, nicht Lernkultur."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Kollege sagt: „Wir haben die Leistung bestätigt bekommen, also war das Projekt gut.“ Du sollst erklären, warum das als Bewertung nicht reicht.",
+      "tags": ["Bewertung", "Effizienz", "Qualität", "Fehlschluss"],
+      "options": [
+        {
+          "id": "braucht_mehr",
+          "label": "Bewertung braucht Soll-Ist + Abweichungsanalyse (Bestätigung allein reicht nicht)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Leistung kann geliefert sein, aber trotzdem zu teuer/zu spät/zu riskant gewesen sein.", "correct": true },
+            { "id": "w2", "text": "Ohne Soll-Ist weißt du nicht, ob Planung und Umsetzung effizient waren.", "correct": true },
+            { "id": "w3", "text": "Bestätigung bedeutet automatisch: perfekte Planung, keine Abweichungen.", "correct": false },
+            { "id": "w4", "text": "Abweichungsanalyse zeigt Ursachen und ermöglicht Verbesserung.", "correct": true }
+          ]
+        },
+        {
+          "id": "bestaetigung_reicht",
+          "label": "Bestätigung erbrachter Leistungen reicht als Projektbewertung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bewertet nicht Kosten, Termine, Qualitätssicherung oder Scope-Management.", "correct": true },
+            { "id": "w2", "text": "Kann trotz chaotischem Ablauf unterschrieben werden, wenn Kunde am Ende zufrieden ist.", "correct": true },
+            { "id": "w3", "text": "Ist die einzige Kennzahl, die zählt.", "correct": false },
+            { "id": "w4", "text": "Projektbewertung soll Lern- und Steuerungsfähigkeit erhöhen, nicht nur „Unterschrift sammeln“. ", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bestätigung heißt nur: geliefert. Bewertung heißt auch: wie gut (Zeit/Kosten/Qualität/Scope). Dafür brauchst du Soll-Ist und Abweichungsanalyse."
+    },
+    {
+      "id": "c06",
+      "profile": "Du sollst am Ende einen sinnvollen Ablauf für die Bewertung definieren: erst Vergleich, dann Ursachen, dann Erkenntnisse für die Zukunft. Welche Reihenfolge ist logisch?",
+      "tags": ["Ablauf", "Soll-Ist", "Analyse", "Lessons Learned"],
+      "options": [
+        {
+          "id": "reihenfolge_richtig",
+          "label": "Soll-Ist-Vergleich → Abweichungsanalyse → Lessons Learned",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Erst erkennst du die Abweichung (Soll vs. Ist), dann erklärst du sie (Ursachen).", "correct": true },
+            { "id": "w2", "text": "Lessons Learned baut auf Ursachen auf und übersetzt sie in Maßnahmen.", "correct": true },
+            { "id": "w3", "text": "Lessons Learned kommt zuerst, weil man dann weniger rechnen muss.", "correct": false },
+            { "id": "w4", "text": "So entsteht ein geschlossener Verbesserungszyklus statt nur Zahlen/Meinungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "reihenfolge_falsch",
+          "label": "Lessons Learned → Soll-Ist-Vergleich → Abweichungsanalyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Soll-Ist fehlen Fakten; dann werden Learnings schnell subjektiv.", "correct": true },
+            { "id": "w2", "text": "Ohne Ursachenanalyse bleiben Learnings oft zu allgemein („besser kommunizieren“).", "correct": true },
+            { "id": "w3", "text": "Ist die Standardreihenfolge im Projektmanagement.", "correct": false },
+            { "id": "w4", "text": "Logik: Daten → Ursachen → Maßnahmen/Wissen.", "correct": true }
+          ]
+        }
+      ],
+      "solutio
