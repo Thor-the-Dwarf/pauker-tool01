@@ -151,8 +151,18 @@
     }
 
     async function initLocalApp() {
-        // Load structure from window.DATABASE_INDEX (loaded via app_index.js script tag)
-        rootTree = window.DATABASE_INDEX || [];
+        // Zuerst im Cache (localStorage) nach einem dynamisch erstellten Index suchen
+        const cachedIndex = localStorage.getItem('pauker_remote_index_v1');
+        if (cachedIndex) {
+            try {
+                rootTree = JSON.parse(cachedIndex);
+            } catch (e) {
+                rootTree = window.DATABASE_INDEX || [];
+            }
+        } else {
+            rootTree = window.DATABASE_INDEX || [];
+        }
+
         drawerTitleEl.textContent = rootName;
 
         treeRootEl.innerHTML = '';
@@ -302,7 +312,7 @@
         return null;
     }
 
-    function renderViewForId(id) {
+    async function renderViewForId(id) {
         const node = findNode(rootTree, id);
         if (!node) return;
 
@@ -325,7 +335,19 @@
                 viewBodyEl.classList.remove('card');
                 viewBodyEl.classList.add('iframe-container');
 
-                // Daten im sessionStorage puffern, damit GameBase sie ohne Fetch findet
+                // Falls die Daten fehlen (dynamischer Index), müssen wir sie nachladen
+                if (!node.data) {
+                    viewBodyEl.innerHTML = '<div style="padding:2rem; text-align:center;">Lade Spieldaten...</div>';
+                    try {
+                        const resp = await fetch(node.id);
+                        if (!resp.ok) throw new Error("Datei nicht gefunden.");
+                        node.data = await resp.json();
+                    } catch (e) {
+                        viewBodyEl.innerHTML = `<div style="padding:2rem; color:hsl(var(--error))">Fehler beim Laden: ${e.message}</div>`;
+                        return;
+                    }
+                }
+
                 if (node.data) {
                     sessionStorage.setItem('game_payload_' + node.id, JSON.stringify(node.data));
                 }
@@ -369,29 +391,118 @@
     }
 
     function loadGame(node) {
-        // Direct iframe loading
         const iframe = document.createElement('iframe');
         iframe.className = 'game-iframe';
-
-        // Determine template from filename or game type
-        // In this tool, all games are in /games/*.html
-        // We need a mapping or a generic loader.
-        // Assuming we use a generic loader or the filename hints at the game
-
-        // Find game template from kind/name
-        // For now, let's use a simple mapping or default to a loader
-        const gameUrl = `games/game_loader.html?file=${encodeURIComponent(node.id)}`;
-        // Actually, previous system had a more complex mapping in drive_interpreter
-        // We'll restore a simplified version of that.
-
         iframe.src = `games/game_loader.html?file=${encodeURIComponent(node.id)}`;
         viewBodyEl.appendChild(iframe);
 
-        // Handle theme sync
         iframe.onload = () => {
             const isLight = document.documentElement.classList.contains('theme-light');
             if (isLight) iframe.contentDocument.documentElement.classList.add('theme-light');
         };
+    }
+
+    // --- 4. Globale Hilfsfunktionen & Remote Indexing ---
+
+    // Wird vom "Cache leeren" Button aufgerufen
+    window.clearDriveCache = async function () {
+        const isGithub = window.location.href.includes('github.io');
+
+        let msg = 'Möchtest du den Cache leeren?';
+        if (isGithub) msg += '\n\nHINWEIS: Auf GitHub Pages wird zusätzlich versucht, neue Dateien im "database"-Ordner direkt zu finden.';
+
+        if (!confirm(msg)) return;
+
+        localStorage.removeItem(STATE_KEY);
+        sessionStorage.clear();
+
+        if (isGithub) {
+            await rebuildIndexFromGithub();
+        } else {
+            localStorage.removeItem('pauker_remote_index_v1');
+            window.location.reload();
+        }
+    };
+
+    /**
+     * ZWECK: Scannt den 'database'-Ordner direkt über die GitHub API,
+     * damit neue Dateien ohne 'update_index.js' sofort erscheinen.
+     */
+    async function rebuildIndexFromGithub() {
+        const url = window.location.href;
+        // Erwarte: https://owner.github.io/repo/
+        const match = url.match(/https?:\/\/([^.]+)\.github\.io\/([^/?#]+)/);
+        if (!match) {
+            alert("URL-Format nicht erkannt. Nutze manuelles Update.");
+            window.location.reload();
+            return;
+        }
+
+        const owner = match[1];
+        const repo = match[2];
+
+        try {
+            console.log(`Starte Remote-Indexierung für ${owner}/${repo}...`);
+            const api = `https://api.github.com/repos/${owner}/${repo}/git/trees/main?recursive=1`;
+            const resp = await fetch(api);
+            if (!resp.ok) throw new Error(`GitHub API Fehler: ${resp.status}`);
+
+            const data = await resp.json();
+            if (!data.tree) throw new Error("Keine Baum-Daten erhalten.");
+
+            // Filtere alles in 'database/'
+            const rawNodes = data.tree.filter(n => n.path.startsWith('database/') && n.path !== 'database');
+            const tree = buildTreeFromFlatList(rawNodes);
+
+            localStorage.setItem('pauker_remote_index_v1', JSON.stringify(tree));
+            alert("Index erfolgreich von GitHub aktualisiert!");
+            window.location.reload();
+        } catch (err) {
+            alert("Remote-Update fehlgeschlagen (evtl. API-Limit überschritten?): " + err.message);
+            window.location.reload();
+        }
+    }
+
+    /**
+     * Hilfsfunktion: Baut aus der flachen Git-Liste einen hierarchischen Baum
+     */
+    function buildTreeFromFlatList(list) {
+        const root = [];
+        const map = { 'database': { children: root } };
+
+        list.forEach(n => {
+            const parts = n.path.split('/');
+            let currentPath = '';
+
+            parts.forEach((part, i) => {
+                const parentPath = currentPath;
+                currentPath = currentPath ? `${currentPath}/${part}` : part;
+
+                if (!map[currentPath]) {
+                    const isFolder = (n.type === 'tree') || (i < parts.length - 1);
+                    const node = {
+                        id: currentPath,
+                        name: part,
+                        isFolder: isFolder
+                    };
+
+                    if (isFolder) {
+                        node.children = [];
+                    } else {
+                        const ext = part.split('.').pop().toLowerCase();
+                        if (ext === 'json') node.kind = 'json';
+                        else if (ext === 'pdf') node.kind = 'pdf';
+                        else if (ext === 'pptx' || ext === 'ppt') node.kind = 'pptx';
+                    }
+
+                    map[currentPath] = node;
+                    if (map[parentPath]) {
+                        map[parentPath].children.push(node);
+                    }
+                }
+            });
+        });
+        return root;
     }
 
     // Initialize
