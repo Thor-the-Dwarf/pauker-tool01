@@ -9,7 +9,7 @@
             });
 
             // Game State
-            this.START_SECONDS = 180;
+            this.START_SECONDS = 900;
             this.remainingSeconds = this.START_SECONDS;
             this.timerId = null;
             this.gameLocked = false;
