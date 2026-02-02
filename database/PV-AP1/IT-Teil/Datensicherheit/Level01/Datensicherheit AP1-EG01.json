@@ -1,0 +1,286 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Datensicherheit (AP1): Der Vorfall im Serverraum",
+  "topic": "Datensicherheit/Informationssicherheit, Schutzziele (CIA+), BSI/Grundschutz, Schutzbedarfsanalyse, Gefährdungen & Maßnahmen, Defense in Depth, TOMs (Art. 32), Backup/Restore (3-2-1, RPO/RTO), Logging/Monitoring, Incident Response",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "schutzziele-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Schutzziele richtig zuordnen",
+      "subtitle": "Ordne Maßnahmen/Begriffe den passenden Schutzzielen zu (CIA + erweitert).",
+      "hintDefault": "Prüfungsfalle: Integrität ≠ Verschlüsselung. Integrität = korrekt & nicht manipuliert.",
+      "sortColumns": [
+        { "zone": "c", "label": "Vertraulichkeit", "hint": "(nur Berechtigte lesen)" },
+        { "zone": "i", "label": "Integrität", "hint": "(korrekt, nicht verändert)" },
+        { "zone": "a", "label": "Verfügbarkeit", "hint": "(rechtzeitig nutzbar)" },
+        { "zone": "auth", "label": "Authentizität", "hint": "(Echtheit von Identität/Daten)" },
+        { "zone": "nachvollziehbar", "label": "Nachvollziehbarkeit", "hint": "(wer tat was wann?)" }
+      ],
+      "sortCards": [
+        { "id": "sz01", "text": "Verschlüsselung von Daten bei Speicherung", "correctZone": "c" },
+        { "id": "sz02", "text": "MFA für Admin-Login", "correctZone": "auth" },
+        { "id": "sz03", "text": "Prüfsummen/Hash zur Manipulationserkennung", "correctZone": "i" },
+        { "id": "sz04", "text": "Versionierung / Änderungsverfolgung", "correctZone": "i" },
+        { "id": "sz05", "text": "Redundanz / Failover", "correctZone": "a" },
+        { "id": "sz06", "text": "Backup + getesteter Restore", "correctZone": "a" },
+        { "id": "sz07", "text": "Zugriffskontrolle per Rollenmodell", "correctZone": "c" },
+        { "id": "sz08", "text": "Logging von Admin-Aktionen", "correctZone": "nachvollziehbar" },
+        { "id": "sz09", "text": "Audit-Trail (Belege für Aktionen)", "correctZone": "nachvollziehbar" },
+        { "id": "sz10", "text": "Digitale Signatur (Absender echt?)", "correctZone": "auth" }
+      ]
+    },
+    {
+      "id": "gefaehrdungen-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Woher kommt der Ärger?",
+      "subtitle": "Ordne Gefährdungen den Quellen zu: Mensch, Technik, Organisation, Umgebung/Physik.",
+      "hintDefault": "Realität: Viele Vorfälle = Stress + falsches Recht + Phishing, nicht Hollywood.",
+      "sortColumns": [
+        { "zone": "mensch", "label": "Mensch", "hint": "(Phishing, Bedienfehler, Insider)" },
+        { "zone": "technik", "label": "Technik", "hint": "(Schwachstellen, Malware, Fehlkonfig)" },
+        { "zone": "orga", "label": "Organisation", "hint": "(Prozesse, Rollen, Rechte, Schatten-IT)" },
+        { "zone": "umwelt", "label": "Umgebung & Physik", "hint": "(Strom, Brand, Wasser, Diebstahl)" }
+      ],
+      "sortCards": [
+        { "id": "g01", "text": "Spear-Phishing-Mail mit Link", "correctZone": "mensch" },
+        { "id": "g02", "text": "Tailgating in den Serverraum", "correctZone": "mensch" },
+        { "id": "g03", "text": "Ungepatchtes System mit bekannter Schwachstelle", "correctZone": "technik" },
+        { "id": "g04", "text": "Ransomware verschlüsselt Dateiserver", "correctZone": "technik" },
+        { "id": "g05", "text": "Alle sind Admin „damit es schneller geht“", "correctZone": "orga" },
+        { "id": "g06", "text": "Kein Offboarding → alte Konten bleiben aktiv", "correctZone": "orga" },
+        { "id": "g07", "text": "Stromausfall/Spannungsschwankung", "correctZone": "umwelt" },
+        { "id": "g08", "text": "Wasserschaden / Klimaproblem im Serverraum", "correctZone": "umwelt" }
+      ]
+    },
+    {
+      "id": "schutzbedarf-sort",
+      "type": "sort",
+      "title": "Rätsel 3: Schutzbedarf-Ampel",
+      "subtitle": "Ordne Assets nach typischem Schutzbedarf (Gesamtschutzbedarf orientiert sich oft am höchsten Einzelwert).",
+      "hintDefault": "Prüfungsfalle: Schutzbedarf nicht „ein Wert für alles“. C, I, A getrennt denken – dann ableiten.",
+      "sortColumns": [
+        { "zone": "normal", "label": "Normal", "hint": "(begrenzter Schaden)" },
+        { "zone": "hoch", "label": "Hoch", "hint": "(erheblicher Schaden)" },
+        { "zone": "sehrhoch", "label": "Sehr hoch", "hint": "(existenzbedrohend)" }
+      ],
+      "sortCards": [
+        { "id": "sb01", "text": "Kundendatenbank (personenbezogene Daten)", "correctZone": "hoch" },
+        { "id": "sb02", "text": "Lohnabrechnung/HR-Daten", "correctZone": "sehrhoch" },
+        { "id": "sb03", "text": "Öffentliche Firmenwebsite (reine Info-Seite)", "correctZone": "normal" },
+        { "id": "sb04", "text": "ERP-System für Produktion/Bestellung", "correctZone": "hoch" },
+        { "id": "sb05", "text": "Admin-Zugangsdaten / Secrets", "correctZone": "sehrhoch" },
+        { "id": "sb06", "text": "Interne Arbeitsanweisung ohne Geheimnisse", "correctZone": "normal" }
+      ]
+    },
+    {
+      "id": "tom-sort",
+      "type": "sort",
+      "title": "Rätsel 4: TOMs nach Art. 32 – was gehört wohin?",
+      "subtitle": "Ordne Maßnahmen zu den typischen TOM-Kategorien.",
+      "hintDefault": "Merker: TOMs = Konzept + Umsetzung + Nachweis. Nicht nur Technik.",
+      "sortColumns": [
+        { "zone": "crypto", "label": "Verschlüsselung & Pseudonymisierung", "hint": "(Schutz bei Transport/Speicherung)" },
+        { "zone": "access", "label": "Zugriffskontrollen", "hint": "(IAM, Rollen, MFA, Least Privilege)" },
+        { "zone": "backup", "label": "Backup & Restore", "hint": "(3-2-1, Restore-Tests)" },
+        { "zone": "tests", "label": "Tests & Evaluierung", "hint": "(Audit, PenTest, Wirksamkeit)" }
+      ],
+      "sortCards": [
+        { "id": "t01", "text": "TLS für Datenübertragung", "correctZone": "crypto" },
+        { "id": "t02", "text": "Verschlüsselte Datenträger/Backups", "correctZone": "crypto" },
+        { "id": "t03", "text": "Rollenmodell + Need-to-know", "correctZone": "access" },
+        { "id": "t04", "text": "MFA für Cloud/E-Mail/VPN/Admin", "correctZone": "access" },
+        { "id": "t05", "text": "3-2-1-Strategie (Offsite)", "correctZone": "backup" },
+        { "id": "t06", "text": "Regelmäßiger Restore-Test", "correctZone": "backup" },
+        { "id": "t07", "text": "Penetrationstest / Schwachstellen-Scan", "correctZone": "tests" },
+        { "id": "t08", "text": "Audit: Wirksamkeit dokumentieren", "correctZone": "tests" }
+      ]
+    },
+    {
+      "id": "quiz-datensicherheit",
+      "type": "quiz",
+      "title": "Rätsel 5: Prüfungsquiz Datensicherheit",
+      "subtitle": "1 richtige Antwort pro Frage.",
+      "hintDefault": "Wenn du schwankst: erst Begriff sauber definieren, dann Beispiel aus dem Betrieb.",
+      "questions": [
+        {
+          "id": "q5-01",
+          "text": "1. Worin liegt der Kern-Unterschied: Datenschutz vs Datensicherheit?",
+          "options": [
+            { "value": "a", "text": "Datenschutz = Technik, Datensicherheit = Recht" },
+            { "value": "b", "text": "Datenschutz fokussiert personenbezogene Daten, Datensicherheit schützt alle Infos/Systeme" },
+            { "value": "c", "text": "Datensicherheit ist nur für Behörden relevant" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5-02",
+          "text": "2. Welche Aussage zu Integrität ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Integrität bedeutet Verschlüsselung" },
+            { "value": "b", "text": "Integrität bedeutet: Daten sind korrekt und nicht manipuliert" },
+            { "value": "c", "text": "Integrität bedeutet: System ist immer online" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5-03",
+          "text": "3. Authentisierung vs Autorisierung: Was ist richtig?",
+          "options": [
+            { "value": "a", "text": "Authentisierung = Was darfst du? Autorisierung = Wer bist du?" },
+            { "value": "b", "text": "Authentisierung = Wer bist du? Autorisierung = Was darfst du?" },
+            { "value": "c", "text": "Beides ist das gleiche" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5-04",
+          "text": "4. BSI IT-Grundschutz ist …",
+          "options": [
+            { "value": "a", "text": "nur für Behörden, Firmen dürfen das nicht nutzen" },
+            { "value": "b", "text": "ein methodisches Vorgehen mit Bausteinen/Maßnahmen gegen typische Bedrohungen" },
+            { "value": "c", "text": "ein Antivirus-Programm des Bundes" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5-05",
+          "text": "5. Warum sind Restore-Tests Pflicht?",
+          "options": [
+            { "value": "a", "text": "Weil Backups sonst illegal sind" },
+            { "value": "b", "text": "Weil nur ein getestetes Restore beweist, dass das Backup im Ernstfall funktioniert" },
+            { "value": "c", "text": "Weil RAID ohne Restore-Test nicht startet" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5-06",
+          "text": "6. Welche Maßnahme passt am besten zu „Defense in Depth“?",
+          "options": [
+            { "value": "a", "text": "Eine einzelne starke Maßnahme reicht immer" },
+            { "value": "b", "text": "Mehrere Schichten: organisatorisch + technisch + physisch + personell" },
+            { "value": "c", "text": "Nur Firewall, sonst nichts" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "backup-321-capital",
+      "type": "capital",
+      "title": "Rätsel 6: 3-2-1-Regel korrekt einsetzen",
+      "subtitle": "Ordne die Zahlen der 3-2-1-Regel den Aussagen zu.",
+      "hintDefault": "3 Kopien, 2 Medien, 1 Offsite. Klingt simpel – rettet Jobs.",
+      "rows": [
+        {
+          "key": "k3",
+          "label": "Kopien der Daten (Original + Backups)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "k2",
+          "label": "Verschiedene Medien (z. B. Disk + Cloud/Band)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "k1",
+          "label": "Kopie extern/offsite (gegen lokalen Totalausfall)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incident-response-order",
+      "type": "capital",
+      "title": "Finale: Incident Response – wenn’s trotzdem knallt",
+      "subtitle": "Bringe die Schritte der Notfallreaktion in die richtige Reihenfolge.",
+      "hintDefault": "Im Notfall denkst du nicht besser – du folgst dem Plan.",
+      "rows": [
+        {
+          "key": "erkennen",
+          "label": "Vorfall erkennen & Alarmierung (Tragweite einschätzen)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "eindaemmen",
+          "label": "Eindämmen (isolieren, Ausbreitung stoppen)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "beseitigen",
+          "label": "Beseitigen (Ursache beheben, Schwachstellen schließen)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "wiederherstellen",
+          "label": "Wiederherstellen (Systeme hochfahren, Daten zurückspielen)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "lessons",
+          "label": "Lessons Learned (analysieren, verbessern, dokumentieren)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

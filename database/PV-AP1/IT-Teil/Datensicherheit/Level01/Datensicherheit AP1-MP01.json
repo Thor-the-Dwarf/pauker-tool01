@@ -1,0 +1,288 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Datensicherheit (AP1) – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne Begriffe zu Datensicherheit/Informationssicherheit, Schutzzielen (CIA + erweitert), BSI/Grundschutz, Schutzbedarf, Gefährdungen, TOMs und Notfallmanagement der passenden Kurzbeschreibung und einem typischen Praxis-/Prüfungsbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff/Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Datensicherheits-Begriff.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Szenario/Prüfungsbeispiel zu."
+  },
+  "sets": [
+    {
+      "id": "datensicherheit_definition",
+      "name": "Datensicherheit / Informationssicherheit",
+      "description": "Schutz von Informationen und Systemen vor Schäden – Ziel ist die Sicherstellung der Schutzziele (CIA und erweitert).",
+      "example": "Ein Betrieb schützt nicht nur Personaldaten, sondern auch Baupläne, Quellcode, Konfigurationen und Systeme."
+    },
+    {
+      "id": "abgrenzung_datenschutz",
+      "name": "Abgrenzung: Datenschutz vs. Datensicherheit",
+      "description": "Datenschutz fokussiert personenbezogene Daten und rechtliche Aspekte; Datensicherheit ist breiter und schützt alle Informationen (auch ohne Personenbezug).",
+      "example": "Kundendaten: Datenschutz + Datensicherheit; internes Netzwerkdiagramm: Datensicherheit ohne direkten Personenbezug."
+    },
+    {
+      "id": "merksatz_darf_ich_vs_wie_schuetze_ich",
+      "name": "Merksatz: „Darf ich?“ vs. „Wie schütze ich’s?“",
+      "description": "Datenschutz fragt nach Erlaubnis/Legalität. Datensicherheit fragt nach zuverlässigem Schutz und Betrieb.",
+      "example": "„Darf ich diese Daten speichern?“ (DSGVO) vs. „Wie verhindere ich Verlust/Manipulation/Leak?“ (Security)."
+    },
+    {
+      "id": "cia_vertraulichkeit",
+      "name": "Vertraulichkeit (Confidentiality)",
+      "description": "Nur berechtigte Personen dürfen Informationen lesen/kennen. Schutz vor unbefugtem Zugriff durch Verschlüsselung und Zugriffskontrollen.",
+      "example": "Gehälter liegen verschlüsselt; Zugriff nur für HR-Rolle mit MFA."
+    },
+    {
+      "id": "cia_integritaet",
+      "name": "Integrität (Integrity)",
+      "description": "Daten sind korrekt und unverändert; Systeme funktionieren wie vorgesehen. Schutz vor Manipulation z. B. durch Prüfsummen und Versionierung.",
+      "example": "Ein Software-Release wird per Hash geprüft; Git-Historie zeigt, wer was geändert hat."
+    },
+    {
+      "id": "cia_verfuegbarkeit",
+      "name": "Verfügbarkeit (Availability)",
+      "description": "Zugriff auf Informationen/Systeme ist rechtzeitig möglich. Fokus auf stabile Services und Wiederanlauf.",
+      "example": "Bei Serverausfall greift Failover + Restore-Prozess, damit ein Dienst schnell wieder läuft."
+    },
+    {
+      "id": "pruefungsfalle_integritaet",
+      "name": "Prüfungsfalle: Integrität ≠ Verschlüsselung",
+      "description": "Verschlüsselung schützt Vertraulichkeit. Integrität bedeutet „nicht manipuliert und korrekt“. Beides sind unterschiedliche Schutzziele.",
+      "example": "Eine Datei kann verschlüsselt sein und trotzdem manipuliert (verschlüsselt veränderte Daten) – Prüfsumme/Signatur fehlt."
+    },
+    {
+      "id": "authentizitaet",
+      "name": "Authentizität",
+      "description": "Echtheit von Daten und Identitäten – ist der Absender wirklich der, der er vorgibt zu sein?",
+      "example": "Zertifikatsprüfung bei TLS stellt sicher, dass der Server echt ist."
+    },
+    {
+      "id": "verbindlichkeit",
+      "name": "Verbindlichkeit (Non-Repudiation)",
+      "description": "Nachvollziehbarkeit/Beweisbarkeit: Wer hat was wann getan? Relevant für Audits und rechtliche Nachweise.",
+      "example": "Signierte Freigabe im Ticketsystem: Änderungen sind einem Konto eindeutig zuzuordnen."
+    },
+    {
+      "id": "nachweisbarkeit_logging",
+      "name": "Nachweisbarkeit (Logging/Protokollierung)",
+      "description": "Protokolle ermöglichen Rekonstruktion von Vorgängen und Sicherheitsvorfällen.",
+      "example": "Bei einem Incident wird über Logs nachvollzogen, wann der Admin-Login war und welche Rechte geändert wurden."
+    },
+    {
+      "id": "bsi_rolle",
+      "name": "BSI (Bundesamt für Sicherheit in der Informationstechnik)",
+      "description": "Zentrale Cyber-Sicherheitsbehörde des Bundes; entwickelt Standards, Methoden und Best Practices für IT-Sicherheit.",
+      "example": "Ein Unternehmen orientiert sich an BSI-Empfehlungen für Basisabsicherung und Schutzbedarfsfeststellung."
+    },
+    {
+      "id": "it_grundschutz",
+      "name": "BSI IT-Grundschutz",
+      "description": "Methodisches Vorgehen mit Bausteinen und konkreten Maßnahmen gegen typische Bedrohungen – solide Basisabsicherung statt jedes Mal bei Null.",
+      "example": "Für „Serverraum“ werden passende Bausteine/Maßnahmen (Zutritt, Klima, USV) als Startpunkt genutzt."
+    },
+    {
+      "id": "schutzbedarf_pro_asset",
+      "name": "Schutzbedarf pro Asset (C/I/A getrennt)",
+      "description": "Schutzbedarf wird je Asset separat und für Vertraulichkeit, Integrität und Verfügbarkeit einzeln bestimmt.",
+      "example": "Kundendatenbank: C hoch, I hoch, A normal bis hoch – je nach Geschäftsmodell."
+    },
+    {
+      "id": "schutzbedarf_kategorien",
+      "name": "Schutzbedarf-Kategorien",
+      "description": "Einstufung in normal, hoch, sehr hoch – basierend auf der Schadenshöhe bei Verletzung des jeweiligen Schutzziels.",
+      "example": "„Sehr hoch“ bei existenzbedrohenden Folgen; „normal“ bei beherrschbaren Auswirkungen."
+    },
+    {
+      "id": "gesamtschutzbedarf_prinzip",
+      "name": "Gesamtschutzbedarf (höchster Einzelwert)",
+      "description": "Der Gesamtschutzbedarf ergibt sich typischerweise aus dem höchsten Einzelwert der Grundwerte (C/I/A).",
+      "example": "Wenn C hoch, I normal, A normal → Gesamtschutzbedarf meist hoch."
+    },
+    {
+      "id": "pruefungsfalle_ein_wert_fuer_alles",
+      "name": "Prüfungsfalle: „ein Schutzbedarf für alles“",
+      "description": "Es gibt keinen globalen Wert. Schutzbedarf wird pro Asset und pro Grundwert bestimmt.",
+      "example": "Lohnabrechnung: C sehr hoch, I hoch, A normal – nicht „alles sehr hoch“."
+    },
+    {
+      "id": "schadensabschaetzung_faktoren",
+      "name": "Schadensabschätzung – typische Faktoren",
+      "description": "Bewertet finanzielle Schäden, rechtliche Folgen, Image-Schäden und Betriebsausfall (Ausfallzeiten).",
+      "example": "Datenleck: Bußgeld + Reputationsverlust; Systemausfall: Produktionsstillstand + Umsatzverlust."
+    },
+    {
+      "id": "gefaehrdungsquelle_mensch",
+      "name": "Gefährdungsquelle: Mensch",
+      "description": "Social Engineering, Phishing, Bedienfehler, Insider-Bedrohungen, mangelndes Sicherheitsbewusstsein.",
+      "example": "Mitarbeiter klickt auf Phishing-Link und gibt Zugangsdaten ein."
+    },
+    {
+      "id": "gefaehrdungsquelle_technik",
+      "name": "Gefährdungsquelle: Technik",
+      "description": "Schwachstellen, Malware/Ransomware, Fehlkonfigurationen, veraltete Software, Exploits.",
+      "example": "Ungepatchter Server wird über bekannte Schwachstelle kompromittiert."
+    },
+    {
+      "id": "gefaehrdungsquelle_organisation",
+      "name": "Gefährdungsquelle: Organisation",
+      "description": "Fehlende Prozesse, unklare Verantwortlichkeiten, Schatten-IT, mangelndes Rechtemanagement.",
+      "example": "Alle sind Admin „damit’s schneller geht“ – später kann niemand Änderungen sauber nachvollziehen."
+    },
+    {
+      "id": "gefaehrdungsquelle_umgebung_physik",
+      "name": "Gefährdungsquelle: Umgebung & Physik",
+      "description": "Stromausfall, Brand, Wasser, Klimaprobleme, Diebstahl, Naturereignisse, physischer Zugang.",
+      "example": "Serverraum überhitzt, Systeme fallen aus, weil Klimatisierung/Monitoring fehlt."
+    },
+    {
+      "id": "social_engineering_massnahmen",
+      "name": "Gegenmaßnahmen: Social Engineering",
+      "description": "Awareness-Trainings, Phishing-Simulationen, klare Meldewege, MFA, Vier-Augen-Prinzip bei kritischen Freigaben.",
+      "example": "„Stop – Check – Confirm“: ungewöhnliche Anfrage per zweitem Kanal bestätigen, bevor Geld/Accounts freigegeben werden."
+    },
+    {
+      "id": "patch_management",
+      "name": "Patch-Management",
+      "description": "Zeitnahes Einspielen von Updates für OS, Anwendungen und Firmware – reduziert ausnutzbare Schwachstellen.",
+      "example": "Kritische Security-Updates werden nach Testfenster priorisiert ausgerollt."
+    },
+    {
+      "id": "endpoint_schutz_edr",
+      "name": "Endpoint-Schutz (AV/EDR)",
+      "description": "Schutzsoftware erkennt/stoppt Malware und verdächtiges Verhalten auf Endgeräten und Servern.",
+      "example": "EDR schlägt Alarm bei ungewöhnlicher Prozesskette (z. B. Office startet PowerShell) und isoliert den Client."
+    },
+    {
+      "id": "system_hardening",
+      "name": "System-Hardening",
+      "description": "Angriffsfläche reduzieren: unnötige Dienste deaktivieren, sichere Baseline, minimale Rechte, sichere Defaults.",
+      "example": "Auf einem Server laufen nur benötigte Dienste; Standard-Accounts sind deaktiviert."
+    },
+    {
+      "id": "netzsegmentierung",
+      "name": "Network Segmentation",
+      "description": "Netze trennen, um Ausbreitung zu verhindern und Zugriff zu begrenzen.",
+      "example": "Ransomware trifft einen Client – durch Segmentierung erreicht sie nicht direkt Servernetz/Backups."
+    },
+    {
+      "id": "onboarding_offboarding",
+      "name": "Onboarding/Offboarding-Prozess",
+      "description": "Strukturiertes Anlegen/Entziehen von Konten und Rechten; regelmäßige Rechte-Reviews verhindern Wildwuchs.",
+      "example": "Austritt: Konto deaktivieren, Tokens entziehen, Rechte entfernen, Geräte zurücknehmen – sofort, nicht „irgendwann“."
+    },
+    {
+      "id": "least_privilege_need_to_know",
+      "name": "Least Privilege & Need-to-know",
+      "description": "So wenig Rechte wie möglich, so viel wie nötig; Zugriff nur auf wirklich benötigte Daten.",
+      "example": "Azubis bekommen Leserechte auf Doku, aber keine Adminrechte auf Produktionssystemen."
+    },
+    {
+      "id": "authentisierung_vs_autorisierung",
+      "name": "Authentisierung vs. Autorisierung",
+      "description": "Authentisierung: Wer bist du? Autorisierung: Was darfst du? Beide müssen sauber getrennt gedacht werden.",
+      "example": "Login klappt (auth), aber Zugriff auf Gehaltsdaten wird blockiert (autz), weil Rolle fehlt."
+    },
+    {
+      "id": "mfa",
+      "name": "Multi-Faktor-Authentifizierung (MFA)",
+      "description": "Mindestens zwei Faktoren kombinieren – besonders für Adminzugänge, Cloud, E-Mail und VPN.",
+      "example": "Admin-Login benötigt Passwort + Token/App, sonst kein Zugriff."
+    },
+    {
+      "id": "identity_management",
+      "name": "Identitätsmanagement (IAM)",
+      "description": "Zentrale Verwaltung von Konten/Rechten, automatisiertes Provisioning/Deprovisioning, regelmäßige Rezertifizierung.",
+      "example": "Rollenmodell: Abteilung/Jobrolle → Rechte; beim Teamwechsel werden Rechte automatisch angepasst."
+    },
+    {
+      "id": "passwortstrategie",
+      "name": "Passwort-Strategie",
+      "description": "Passwortmanager bereitstellen, starke Passwörter, Wechsel bei Verdacht, keine geteilten Accounts.",
+      "example": "Geteilte Accounts sind tabu: keine Nachvollziehbarkeit, kein sauberes Offboarding."
+    },
+    {
+      "id": "defense_in_depth",
+      "name": "Defense in Depth",
+      "description": "Mehrschichtiger Schutz: organisatorisch, technisch, physisch, personell – einzelne Maßnahmen sind kein Konzept.",
+      "example": "MFA ohne Berechtigungskonzept ist halbgar: erst Kombi aus Policy, Rechte, Technik, Monitoring, Notfallplan."
+    },
+    {
+      "id": "toms_art_32",
+      "name": "TOMs (Art. 32 DSGVO)",
+      "description": "Technische und organisatorische Maßnahmen für ein dem Risiko angemessenes Schutzniveau – Nachweis der „Sicherheit der Verarbeitung“.",
+      "example": "TOMs sind Konzept + Umsetzung + Nachweis: nicht nur „Firewall“, sondern auch Prozesse/Schulung/Dokumentation."
+    },
+    {
+      "id": "toms_verschluesselung_pseudonymisierung",
+      "name": "TOM: Verschlüsselung & Pseudonymisierung",
+      "description": "Daten bei Übertragung und Speicherung schützen; Personenbezug reduzieren, wo möglich.",
+      "example": "In Testsystemen werden echte Kundendaten pseudonymisiert statt 1:1 kopiert."
+    },
+    {
+      "id": "toms_zugriffskontrollen",
+      "name": "TOM: Zugriffskontrollen",
+      "description": "Identitätsmanagement, Rollenkonzepte, MFA, Least Privilege – verhindert unbefugten Zugriff.",
+      "example": "Adminrechte sind getrennt vom Benutzerkonto; kritische Aktionen erfordern separate Admin-Identität."
+    },
+    {
+      "id": "toms_backup_restore",
+      "name": "TOM: Backup & Restore",
+      "description": "Regelmäßige Datensicherung, getestete Wiederherstellung, 3-2-1-Regel.",
+      "example": "Zusätzlich zur lokalen Sicherung existiert ein Offsite-Backup; Restore wird regelmäßig geprobt."
+    },
+    {
+      "id": "toms_tests_evaluierung",
+      "name": "TOM: Tests & Evaluierung",
+      "description": "Wirksamkeit regelmäßig prüfen: Audits, Penetrationstests, Reviews und kontinuierliche Verbesserung.",
+      "example": "Nach Änderungen an Firewall/IAM wird ein Testplan abgearbeitet und dokumentiert."
+    },
+    {
+      "id": "backup_321",
+      "name": "3-2-1-Backup-Regel",
+      "description": "3 Kopien (Original + 2 Backups), 2 verschiedene Medien, 1 Kopie extern/offsite.",
+      "example": "Produktivdaten + lokales Backup + externes Backup schützt auch bei Brand/Diebstahl am Standort."
+    },
+    {
+      "id": "restore_test_pflicht",
+      "name": "Restore-Tests sind Pflicht",
+      "description": "Backup ist wertlos, wenn Restore nicht funktioniert. Der Beweis ist die Wiederherstellung, nicht das Backup-Log.",
+      "example": "Monatlich wird eine VM aus Backup gestartet und geprüft, ob Anwendung + Daten wirklich laufen."
+    },
+    {
+      "id": "rto_rpo",
+      "name": "RTO & RPO",
+      "description": "RTO: maximale Ausfallzeit (wie schnell wieder laufen). RPO: maximaler Datenverlust (wie alt dürfen Daten sein).",
+      "example": "RPO 1 Stunde passt nicht zu „täglich sichern“. RTO 30 Minuten braucht automatisierte Recovery."
+    },
+    {
+      "id": "monitoring_logging",
+      "name": "Monitoring & Logging",
+      "description": "Events sammeln, Alerts auslösen, auswerten und reagieren. Logs ohne Auswertung sind nutzlos.",
+      "example": "Alarmierung bei vielen Fehl-Logins; Korrelation zeigt Brute-Force-Versuch – Account wird geschützt."
+    },
+    {
+      "id": "logging_inhalte",
+      "name": "Was sollte geloggt werden?",
+      "description": "Login-Versuche, Rechteänderungen, Admin-Aktionen, Konfig-Änderungen, Fehler/Anomalien, Zugriffe auf kritische Daten, Performance.",
+      "example": "Rechteänderung im AD wird protokolliert und löst bei kritischen Gruppen einen Alert aus."
+    },
+    {
+      "id": "incident_response_kette",
+      "name": "Incident Response (5 Schritte)",
+      "description": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned. Ohne Runbook wird’s chaotisch.",
+      "example": "Ransomware-Verdacht: Systeme isolieren, Ursache entfernen, Restore, danach Maßnahmen nachschärfen."
+    },
+    {
+      "id": "zehn_sekunden_formel",
+      "name": "10-Sekunden-Formel (Prüfung)",
+      "description": "Asset benennen → C/I/A-Schaden abschätzen → Schutzbedarf einstufen → passendes Maßnahmenpaket ableiten.",
+      "example": "„Kundendatenbank“: C hoch/I hoch/A normal → Zugriffskontrollen + Backups + Logging passend begründen."
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Netzwerke (AP1)",
+  "description": "Schritt 1: Passendes Konzept wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Client meldet: „Internet geht nicht“. Ping auf eine IP (z. B. 8.8.8.8) klappt, aber Ping auf einen Namen (z. B. www.google.com) scheitert.",
+      "tags": ["Netzwerke", "DNS", "Fehlersuche"],
+      "options": [
+        {
+          "id": "dns_problem",
+          "label": "DNS-Problem (Namensauflösung)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn IP-Ping klappt, funktionieren Netzwerk/Routing grundsätzlich.", "correct": true },
+            { "id": "w2", "text": "Wenn Namen nicht aufgelöst werden, ist DNS naheliegend die Ursache.", "correct": true },
+            { "id": "w3", "text": "Ein falscher DNS-Server (z. B. via DHCP) kann die komplette Namensauflösung lahmlegen.", "correct": true },
+            { "id": "w4", "text": "Das ist typisch ein Layer-1-Problem (Kabel/Signal).", "correct": false }
+          ]
+        },
+        {
+          "id": "gateway_problem",
+          "label": "Default-Gateway falsch/defekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein falsches Gateway kann Internetzugriff verhindern.", "correct": true },
+            { "id": "w2", "text": "Wenn das Gateway falsch ist, funktioniert IP-Ping zu externen IPs trotzdem zuverlässig.", "correct": false },
+            { "id": "w3", "text": "Namensauflösung hängt primär am Gateway, nicht am DNS-Server.", "correct": false },
+            { "id": "w4", "text": "Die Prüfung startet hier oft mit: erst IP testen, dann Namen testen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "DNS-Problem: IP-Ping funktioniert, Name nicht → DNS prüfen (DNS-Server per DHCP, nslookup/dig)."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein PC bekommt automatisch die Adresse 169.254.23.10 und kann keine anderen Geräte erreichen.",
+      "tags": ["Netzwerke", "DHCP", "Fehlersuche"],
+      "options": [
+        {
+          "id": "dhcp_no_offer",
+          "label": "Kein DHCP-Offer (DHCP fehlt/erreichbar)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "169.254.x.x ist typisch APIPA: Client hat keinen DHCP-Server erreicht.", "correct": true },
+            { "id": "w2", "text": "Ursachen können DHCP-Server down, falsches VLAN oder fehlendes DHCP-Relay sein.", "correct": true },
+            { "id": "w3", "text": "DORA bleibt hängen, bevor eine gültige Lease bestätigt wird.", "correct": true },
+            { "id": "w4", "text": "Das weist klar auf ein DNS-Problem hin.", "correct": false }
+          ]
+        },
+        {
+          "id": "dns_wrong",
+          "label": "DNS-Server falsch konfiguriert",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Falscher DNS führt dazu, dass Namen nicht aufgelöst werden.", "correct": true },
+            { "id": "w2", "text": "Eine 169.254.x.x-Adresse entsteht, wenn DNS nicht antwortet.", "correct": false },
+            { "id": "w3", "text": "Mit falschem DNS sind IP-Verbindungen immer komplett unmöglich.", "correct": false },
+            { "id": "w4", "text": "DNS wird typischerweise via DHCP mitgegeben.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kein DHCP-Offer: APIPA (169.254.x.x) → DHCP/VLAN/Relay prüfen."
+    },
+    {
+      "id": "c03",
+      "profile": "Zwei PCs hängen am selben Switch, aber in unterschiedlichen IP-Netzen. PC A (192.168.1.10/24) erreicht PC B (192.168.2.10/24) nicht direkt.",
+      "tags": ["Netzwerke", "LAN", "Routing"],
+      "options": [
+        {
+          "id": "need_router",
+          "label": "Routing nötig (Router/Default-Gateway)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein /24 trennt Netz- und Host-Anteil: 192.168.1.0/24 ≠ 192.168.2.0/24.", "correct": true },
+            { "id": "w2", "text": "Switch arbeitet auf Layer 2 innerhalb einer Broadcast-Domäne, nicht zwischen Netzen.", "correct": true },
+            { "id": "w3", "text": "Ein Router routet nach IP (Layer 3) und verbindet verschiedene Netze.", "correct": true },
+            { "id": "w4", "text": "ARP löst das Problem, weil ARP zwischen Netzen MAC-Adressen ermittelt.", "correct": false }
+          ]
+        },
+        {
+          "id": "switch_only",
+          "label": "Switch reicht aus (Layer 2)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Switch leitet Frames anhand von MAC-Adressen weiter.", "correct": true },
+            { "id": "w2", "text": "Switch kann ohne Router zwischen 192.168.1.0/24 und 192.168.2.0/24 routen.", "correct": false },
+            { "id": "w3", "text": "Default-Gateway wird nur fürs Internet gebraucht, nicht für andere interne Netze.", "correct": false },
+            { "id": "w4", "text": "VLANs trennen Broadcast-Domänen logisch im selben Switch.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Routing nötig: unterschiedliche /24-Netze → Router/Default-Gateway oder passende Netzplanung."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Unternehmen will ein Gäste-WLAN anbieten. Gäste sollen ins Internet, aber keinen Zugriff auf interne Server/Drucker bekommen.",
+      "tags": ["Netzwerke", "WLAN", "VLAN", "Sicherheit"],
+      "options": [
+        {
+          "id": "guest_vlan",
+          "label": "Gäste-WLAN in eigenes VLAN/Netzsegment trennen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "VLANs trennen Broadcast-Domänen und reduzieren seitliche Bewegung im Netz.", "correct": true },
+            { "id": "w2", "text": "Regeln/Firewall zwischen Gäste-Netz und internem Netz können Zugriff gezielt blocken.", "correct": true },
+            { "id": "w3", "text": "Ein Access Point bridgt typischerweise ins kabelgebundene LAN – Segmentierung muss im Netz passieren.", "correct": true },
+            { "id": "w4", "text": "Eine versteckte SSID macht das Gäste-WLAN automatisch sicher genug.", "correct": false }
+          ]
+        },
+        {
+          "id": "hidden_ssid",
+          "label": "SSID verstecken statt trennen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Versteckte SSID verhindert, dass das Netz gefunden wird.", "correct": false },
+            { "id": "w2", "text": "Sicherheit kommt über WPA2/WPA3 und Authentifizierung, nicht über „Unsichtbarkeit“.", "correct": true },
+            { "id": "w3", "text": "Ohne Segmentierung bleiben Gäste im gleichen Netz wie interne Geräte.", "correct": true },
+            { "id": "w4", "text": "VLAN ist nur für Performance da, nicht für Sicherheit.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Gäste-WLAN separat segmentieren (VLAN/Subnetz) + Firewall-Regeln. SSID verstecken ist kein Sicherheitskonzept."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein PC will im selben LAN ein Paket an 192.168.1.20 schicken, kennt aber nur die IP-Adresse – nicht die MAC-Adresse.",
+      "tags": ["Netzwerke", "MAC", "IP", "ARP"],
+      "options": [
+        {
+          "id": "arp",
+          "label": "ARP (IPv4): IP → MAC im lokalen Segment",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Switches leiten lokal nach MAC weiter; dafür braucht der Sender die Ziel-MAC.", "correct": true },
+            { "id": "w2", "text": "ARP fragt im lokalen Segment nach: „Wer hat diese IP?“ und erhält eine MAC-Antwort.", "correct": true },
+            { "id": "w3", "text": "ARP funktioniert nur innerhalb derselben Broadcast-Domäne.", "correct": true },
+            { "id": "w4", "text": "ARP löst Domainnamen zu IP-Adressen auf.", "correct": false }
+          ]
+        },
+        {
+          "id": "dns",
+          "label": "DNS: Name → IP",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS übersetzt Namen in IP-Adressen.", "correct": true },
+            { "id": "w2", "text": "DNS liefert MAC-Adressen zu IP-Adressen.", "correct": false },
+            { "id": "w3", "text": "DNS arbeitet typischerweise auf Anwendungsebene (Layer 7).", "correct": true },
+            { "id": "w4", "text": "DNS wird benötigt, um Frames im LAN zustellen zu können.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "ARP: Im LAN wird die MAC zur IP ermittelt, damit Frames auf Layer 2 zugestellt werden können."
+    },
+    {
+      "id": "c06",
+      "profile": "In der Prüfung sollst du bei strukturierter Verkabelung die Komponenten richtig zuordnen: Patchpanel, Gebäudekabel (fest), Netzwerkdose, Patchkabel.",
+      "tags": ["Netzwerke", "Gebäudeverkabelung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "patch_vs_building",
+          "label": "Patchkabel flexibel, Gebäudekabel starr (fest verlegt); Patchpanel/Dose = passiv",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Gebäudekabel ist fest verlegt (starr) und endet typischerweise am Patchpanel/Netzwerkdose.", "correct": true },
+            { "id": "w2", "text": "Patchkabel ist flexibel und verbindet Endgeräte bzw. Switch ↔ Patchpanel.", "correct": true },
+            { "id": "w3", "text": "Patchpanel und Netzwerkdose sind passive Komponenten.", "correct": true },
+            { "id": "w4", "text": "Patchkabel ist immer starr, damit es weniger Störungen gibt.", "correct": false }
+          ]
+        },
+        {
+          "id": "all_active",
+          "label": "Alles aktive Komponenten (weil Netzwerk)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Switch/Router/Access Point sind aktive Komponenten.", "correct": true },
+            { "id": "w2", "text": "Patchpanel verstärkt das Signal aktiv.", "correct": false },
+            { "id": "w3", "text": "Netzwerkdose ist passiv und stellt nur den Anschluss bereit.", "correct": true },
+            { "id": "w4", "text": "Gebäudekabel ist flexibel, damit man es besser ziehen kann.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Prüfungsfalle: Patchkabel ≠ Gebäudekabel. Gebäudekabel starr (fest), Patchkabel flexibel. Patchpanel/Dose passiv."
+    },
+    {
+      "id": "c07",
+      "profile": "Zwischen zwei Gebäuden soll ein Uplink über lange Strecke laufen. In der Umgebung gibt es starke elektromagnetische Störungen (Maschinen).",
+      "tags": ["Netzwerke", "Kupfer", "Glasfaser", "Backbone"],
+      "options": [
+        {
+          "id": "fiber",
+          "label": "Glasfaser (LWL) für Backbone/Uplink",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Glasfaser ist unempfindlich gegen elektromagnetische Störungen (EMV).", "correct": true },
+            { "id": "w2", "text": "Große Distanzen sind mit LWL typischerweise zuverlässiger möglich.", "correct": true },
+            { "id": "w3", "text": "Hohe Bandbreiten für Uplinks/Backbone sind ein typischer LWL-Use-Case.", "correct": true },
+            { "id": "w4", "text": "Glasfaser kann Access Points per PoE mit Strom versorgen.", "correct": false }
+          ]
+        },
+        {
+          "id": "copper_poe",
+          "label": "Kupfer (Twisted Pair) wegen PoE",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kupfer kann PoE liefern (z. B. AP/VoIP/Kameras).", "correct": true },
+            { "id": "w2", "text": "Für lange Strecken und EMV ist Kupfer meistens die sauberere Lösung als Glasfaser.", "correct": false },
+            { "id": "w3", "text": "Arbeitsplatzverkabelung ist häufig Kupfer – Uplinks/Backbone eher Glasfaser.", "correct": true },
+            { "id": "w4", "text": "Kupfer ist grundsätzlich immun gegen elektromagnetische Störungen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Glasfaser: lange Strecke + EMV-Störungen + Uplink/Backbone → LWL ist typischer Standard."
+    },
+    {
+      "id": "c08",
+      "profile": "Im Büro klagen viele über langsames WLAN. Am Kabel-LAN ist alles schnell. Die Internetleitung ist ausreichend dimensioniert.",
+      "tags": ["Netzwerke", "WLAN", "Fehlersuche"],
+      "options": [
+        {
+          "id": "wlan_airtime",
+          "label": "WLAN-Airtime/Channel/Signal (Shared Medium)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "WLAN ist ein geteiltes Medium: alle teilen sich Airtime.", "correct": true },
+            { "id": "w2", "text": "Viele Clients, falsche Kanalplanung oder schwaches Signal können massiv bremsen.", "correct": true },
+            { "id": "w3", "text": "2,4 GHz hat oft mehr Störungen; 5/6 GHz kann schneller sein, aber mit geringerer Reichweite.", "correct": true },
+            { "id": "w4", "text": "Wenn WLAN langsam ist, ist automatisch die Internetleitung zu langsam.", "correct": false }
+          ]
+        },
+        {
+          "id": "isp_slow",
+          "label": "Internetprovider ist zu langsam",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wenn LAN schnell ist, ist die Internetleitung sehr wahrscheinlich okay.", "correct": true },
+            { "id": "w2", "text": "WLAN-Probleme können unabhängig vom Internet auftreten (Funk/Channel/Airtime).", "correct": true },
+            { "id": "w3", "text": "Provider-Probleme zeigen sich nur im WLAN, nie im LAN.", "correct": false },
+            { "id": "w4", "text": "Ein Access Point bridgt ins LAN; Engpässe können auf Funkseite entstehen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "WLAN ist Shared Medium: Performance hängt stark an Airtime, Kanalplanung und Signal – nicht automatisch am Internet."
+    },
+    {
+      "id": "c09",
+      "profile": "Bei der Fehlersuche willst du zuerst das OSI-Layer bestimmen. Am PC leuchtet die Netzwerkkarte nicht, Link-LED am Switch-Port ist aus.",
+      "tags": ["Netzwerke", "OSI", "Fehlersuche"],
+      "options": [
+        {
+          "id": "osi1",
+          "label": "OSI Layer 1 – Bitübertragung (Signal/Kabel)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kein Link/kein Signal deutet auf Kabel/Stecker/Port/PHY hin.", "correct": true },
+            { "id": "w2", "text": "Layer 1 ist die physische Übertragung (Kabel/Funk/Signal).", "correct": true },
+            { "id": "w3", "text": "Bevor IP/DNS geprüft wird, muss überhaupt eine physische Verbindung stehen.", "correct": true },
+            { "id": "w4", "text": "Das ist typisch Layer 7: Anwendung/HTTP.", "correct": false }
+          ]
+        },
+        {
+          "id": "osi3",
+          "label": "OSI Layer 3 – Vermittlung (IP/Router)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Layer 3 betrifft IP und Routing zwischen Netzen.", "correct": true },
+            { "id": "w2", "text": "Wenn die Link-LED aus ist, ist es trotzdem primär ein Routing-Problem.", "correct": false },
+            { "id": "w3", "text": "Ohne physische Verbindung gibt es keine IP-Kommunikation.", "correct": true },
+            { "id": "w4", "text": "Layer 3 wird erst relevant, wenn Layer 1/2 stehen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Layer 1: Kein Linksignal → Kabel/Port/Stecker/Netzwerkkarte zuerst prüfen."
+    },
+    {
+      "id": "c10",
+      "profile": "Ein kleines Heimnetz hat viele Geräte hinter einem Router. Intern nutzen alle private IPv4-Adressen, nach außen gibt es nur eine öffentliche IP.",
+      "tags": ["Netzwerke", "IPv4", "NAT"],
+      "options": [
+        {
+          "id": "nat",
+          "label": "NAT (Network Address Translation)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "NAT übersetzt private interne Adressen in eine öffentliche Adresse am Router.", "correct": true },
+            { "id": "w2", "text": "So können viele Geräte eine öffentliche IPv4 teilen (Adressknappheit).", "correct": true },
+            { "id": "w3", "text": "NAT ist keine Firewall – Sicherheit kommt durch Firewall-Regeln.", "correct": true },
+            { "id": "w4", "text": "NAT ersetzt DNS und löst Namen in IP-Adressen auf.", "correct": false }
+          ]
+        },
+        {
+          "id": "dns",
+          "label": "DNS (Domain Name System)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS löst Namen in IP-Adressen auf.", "correct": true },
+            { "id": "w2", "text": "DNS macht aus privaten Adressen öffentliche Adressen.", "correct": false },
+            { "id": "w3", "text": "DNS ist für Portfreigaben zuständig.", "correct": false },
+            { "id": "w4", "text": "DNS-Probleme können „Internet geht nicht“ verursachen, obwohl IP-Ping klappt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "NAT: Router übersetzt private IPv4 ins öffentliche Netz; mehrere Geräte teilen eine öffentliche IP. Sicherheit kommt zusätzlich durch Firewall."
+    },
+    {
+      "id": "c11",
+      "profile": "Ein Client erhält per DHCP eine IP, aber viele Dienste funktionieren nicht. In den DHCP-Optionen ist als DNS-Server eine falsche Adresse eingetragen.",
+      "tags": ["Netzwerke", "DHCP", "DNS", "Fehlersuche"],
+      "options": [
+        {
+          "id": "dhcp_dns_wrong",
+          "label": "DHCP liefert falschen DNS-Server aus",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "DHCP vergibt nicht nur IP, sondern auch DNS-Server und Default-Gateway.", "correct": true },
+            { "id": "w2", "text": "Falscher DNS → Namensauflösung kaputt → „Internet wirkt tot“, obwohl IP-Routing ok sein kann.", "correct": true },
+            { "id": "w3", "text": "Das lässt sich über ipconfig /all (Windows) oder /etc/resolv.conf (Linux) prüfen.", "correct": true },
+            { "id": "w4", "text": "Ein falscher DNS-Server führt immer zu einer APIPA-Adresse.", "correct": false }
+          ]
+        },
+        {
+          "id": "tcp_broken",
+          "label": "TCP kaputt (Transportproblem)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "TCP arbeitet auf Layer 4 und nutzt Ports.", "correct": true },
+            { "id": "w2", "text": "Wenn DNS falsch ist, ist TCP grundsätzlich defekt.", "correct": false },
+            { "id": "w3", "text": "DNS-Probleme sind häufige Ursache für „geht nicht“, obwohl die Verbindung steht.", "correct": true },
+            { "id": "w4", "text": "TCP/IP-Modell gruppiert OSI anders (Link/Internet/Transport/Application).", "correct": true }
+          ]
+        }
+      ],
+      "solution": "DHCP-Option DNS falsch: IP kann stimmen, aber Namen nicht → DNS-Server/Optionen prüfen und korrigieren."
+    },
+    {
+      "id": "c12",
+      "profile": "In einer Frage sollst du passende DNS-Record-Typen zuordnen: Hostname → IPv4, Hostname → IPv6, Alias, Mailserver.",
+      "tags": ["Netzwerke", "DNS", "Records"],
+      "options": [
+        {
+          "id": "dns_records",
+          "label": "A = IPv4, AAAA = IPv6, CNAME = Alias, MX = Mailserver",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "A-Record ordnet einem Namen eine IPv4-Adresse zu.", "correct": true },
+            { "id": "w2", "text": "AAAA-Record ordnet einem Namen eine IPv6-Adresse zu.", "correct": true },
+            { "id": "w3", "text": "CNAME ist ein Alias auf einen anderen Namen.", "correct": true },
+            { "id": "w4", "text": "MX speichert beliebige Texte wie SPF/DKIM.", "correct": false }
+          ]
+        },
+        {
+          "id": "dns_mixed",
+          "label": "A = IPv6, AAAA = IPv4, MX = Alias, CNAME = Mailserver",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "AAAA steht für IPv6, nicht für IPv4.", "correct": true },
+            { "id": "w2", "text": "MX definiert Mailserver für eine Domain.", "correct": true },
+            { "id": "w3", "text": "CNAME ist ein Alias, kein Mailserver.", "correct": true },
+            { "id": "w4", "text": "TTL regelt, wie lange DNS-Antworten gecacht werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "DNS-Records: A=IPv4, AAAA=IPv6, CNAME=Alias, MX=Mailserver. TTL/Caching sind typische Zusatzpunkte."
+    }
+  ]
+}

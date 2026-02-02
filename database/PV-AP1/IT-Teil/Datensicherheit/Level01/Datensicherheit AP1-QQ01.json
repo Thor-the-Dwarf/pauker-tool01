@@ -1,0 +1,199 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Datensicherheit (AP1)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Datensicherheit, Schutzbedarf, Gefährdungen und Maßnahmen zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Datensicherheit",
+    "Datenschutz",
+    "Vertraulichkeit",
+    "Integrität",
+    "Verfügbarkeit",
+    "Authentizität",
+    "Nachvollziehbarkeit (Logging)",
+    "BSI / IT-Grundschutz",
+    "Schutzbedarfsanalyse (C/I/A getrennt)",
+    "Mensch (Gefährdung)",
+    "Technik (Gefährdung)",
+    "Organisation (Gefährdung)",
+    "Umgebung & Physik (Gefährdung)",
+    "Defense in Depth",
+    "TOMs (Art. 32 DSGVO)",
+    "Authentisierung & MFA",
+    "Autorisierung (Least Privilege)",
+    "Backup & Restore (3-2-1)",
+    "RPO / RTO",
+    "Incident Response"
+  ],
+  "questions": [
+    {
+      "text": "Schützt Informationen und Systeme vor Schäden; Ziel ist ein verlässliches Schutzniveau (mehr als nur „Passwort setzen“).",
+      "correct": "Datensicherheit"
+    },
+    {
+      "text": "Fragt eher „Wie schütze ich’s zuverlässig?“ statt „Darf ich das?“",
+      "correct": "Datensicherheit"
+    },
+    {
+      "text": "Fokussiert personenbezogene Daten und rechtliche Anforderungen.",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Fragt typischerweise: „Darf ich das?“ (Erlaubnis/Rechtsgrundlage).",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Nur berechtigte Personen dürfen Informationen lesen oder kennen.",
+      "correct": "Vertraulichkeit"
+    },
+    {
+      "text": "Schutz vor unbefugtem Zugriff durch Verschlüsselung und Zugriffskontrollen (Ziel, nicht Technikname).",
+      "correct": "Vertraulichkeit"
+    },
+    {
+      "text": "Daten sind korrekt und nicht manipuliert; Systeme funktionieren wie vorgesehen.",
+      "correct": "Integrität"
+    },
+    {
+      "text": "Prüfungsfalle: Das ist NICHT „Verschlüsselung“, sondern „unverändert und korrekt“.",
+      "correct": "Integrität"
+    },
+    {
+      "text": "Zugriff auf Informationen und Systeme ist rechtzeitig möglich; Services laufen stabil.",
+      "correct": "Verfügbarkeit"
+    },
+    {
+      "text": "Schutzmaßnahmen sind z. B. Redundanz, Notfallkonzepte und getestete Wiederherstellung.",
+      "correct": "Verfügbarkeit"
+    },
+    {
+      "text": "Echtheit von Daten/Identitäten: Ist der Absender wirklich der, der er vorgibt zu sein?",
+      "correct": "Authentizität"
+    },
+    {
+      "text": "Wichtig für Audits und Nachweise: Wer hat was wann getan?",
+      "correct": "Nachvollziehbarkeit (Logging)"
+    },
+    {
+      "text": "Logging und Protokollierung ermöglichen die Rekonstruktion von Vorgängen und Sicherheitsvorfällen.",
+      "correct": "Nachvollziehbarkeit (Logging)"
+    },
+    {
+      "text": "Zentrale Cyber-Sicherheitsbehörde des Bundes, entwickelt Standards, Methoden und Best Practices.",
+      "correct": "BSI / IT-Grundschutz"
+    },
+    {
+      "text": "Baustein-orientiertes Vorgehen mit praxiserprobten Maßnahmen gegen typische Bedrohungen.",
+      "correct": "BSI / IT-Grundschutz"
+    },
+    {
+      "text": "Prüfungsfalle: Nicht „ein Schutzbedarf für alles“ – pro Asset getrennt bewerten.",
+      "correct": "Schutzbedarfsanalyse (C/I/A getrennt)"
+    },
+    {
+      "text": "Schutzbedarf wird getrennt für Vertraulichkeit, Integrität und Verfügbarkeit bestimmt.",
+      "correct": "Schutzbedarfsanalyse (C/I/A getrennt)"
+    },
+    {
+      "text": "Gesamtschutzbedarf ergibt sich typischerweise aus dem höchsten Einzelwert der Grundwerte.",
+      "correct": "Schutzbedarfsanalyse (C/I/A getrennt)"
+    },
+    {
+      "text": "Social Engineering, Phishing, Fake-Calls, Tailgating und Bedienfehler gehören hierhin.",
+      "correct": "Mensch (Gefährdung)"
+    },
+    {
+      "text": "Stop – Check – Confirm: Ungewöhnliche Anfrage erst prüfen und per zweitem Kanal bestätigen.",
+      "correct": "Mensch (Gefährdung)"
+    },
+    {
+      "text": "Schwachstellen, Malware, Ransomware, Fehlkonfigurationen und veraltete Software.",
+      "correct": "Technik (Gefährdung)"
+    },
+    {
+      "text": "Zeitnah Updates einspielen (Patch-Management) ist eine der wichtigsten Gegenmaßnahmen gegen Exploits.",
+      "correct": "Technik (Gefährdung)"
+    },
+    {
+      "text": "Fehlende Prozesse, unklare Verantwortlichkeiten, Schatten-IT und mangelndes Rechtemanagement.",
+      "correct": "Organisation (Gefährdung)"
+    },
+    {
+      "text": "Onboarding/Offboarding und regelmäßige Rechte-Reviews fehlen oder sind chaotisch.",
+      "correct": "Organisation (Gefährdung)"
+    },
+    {
+      "text": "Stromausfall, Brand, Wasser, Klimaprobleme, Diebstahl und unbefugter physischer Zugang.",
+      "correct": "Umgebung & Physik (Gefährdung)"
+    },
+    {
+      "text": "Zutrittskontrolle, USV und Serverraum-Konzept sind typische Maßnahmen in diesem Bereich.",
+      "correct": "Umgebung & Physik (Gefährdung)"
+    },
+    {
+      "text": "Mehrschichtiger Schutz: Wenn eine Barriere fällt, greift die nächste.",
+      "correct": "Defense in Depth"
+    },
+    {
+      "text": "Prüfungswissen: Einzelmaßnahmen sind kein Konzept – erst die Kombination schafft Sicherheit.",
+      "correct": "Defense in Depth"
+    },
+    {
+      "text": "Geeignete technische und organisatorische Maßnahmen zur Sicherheit der Verarbeitung (risikoangemessen).",
+      "correct": "TOMs (Art. 32 DSGVO)"
+    },
+    {
+      "text": "Verschlüsselung, Zugriffskontrollen, Backup/Restore und regelmäßige Wirksamkeitsprüfung gehören dazu.",
+      "correct": "TOMs (Art. 32 DSGVO)"
+    },
+    {
+      "text": "„Wer bist du?“ – Identität nachweisen (z. B. Login mit zweitem Faktor).",
+      "correct": "Authentisierung & MFA"
+    },
+    {
+      "text": "MFA überall, wo’s kritisch ist: Admin-Zugänge, Cloud-Services, E-Mail und VPN.",
+      "correct": "Authentisierung & MFA"
+    },
+    {
+      "text": "„Was darfst du?“ – Berechtigungen prüfen und nach Rollen vergeben.",
+      "correct": "Autorisierung (Least Privilege)"
+    },
+    {
+      "text": "Least Privilege und Need-to-know: so wenig Rechte wie möglich, so viel wie nötig.",
+      "correct": "Autorisierung (Least Privilege)"
+    },
+    {
+      "text": "3 Kopien der Daten, 2 verschiedene Medien, 1 Kopie extern/offsite.",
+      "correct": "Backup & Restore (3-2-1)"
+    },
+    {
+      "text": "Prüfungsfalle: „Backup läuft durch“ bedeutet nicht „Restore klappt“ – Restore-Tests sind Pflicht.",
+      "correct": "Backup & Restore (3-2-1)"
+    },
+    {
+      "text": "Maximal akzeptabler Datenverlust als Zeitspanne: Wie alt dürfen wiederhergestellte Daten sein?",
+      "correct": "RPO / RTO"
+    },
+    {
+      "text": "Maximal akzeptable Ausfallzeit: Wie schnell muss das System wieder laufen?",
+      "correct": "RPO / RTO"
+    },
+    {
+      "text": "Ohne Auswertung sind Logs nutzlos: Alerts definieren, korrelieren, reagieren.",
+      "correct": "Nachvollziehbarkeit (Logging)"
+    },
+    {
+      "text": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
+      "correct": "Incident Response"
+    },
+    {
+      "text": "Im Notfall denkst du nicht besser – du folgst dem Plan (Runbook, Rollen, Eskalation).",
+      "correct": "Incident Response"
+    },
+    {
+      "text": "Prüfungsfalle: Geteilte Accounts zerstören Nachvollziehbarkeit und sauberes Offboarding.",
+      "correct": "Nachvollziehbarkeit (Logging)"
+    }
+  ]
+}

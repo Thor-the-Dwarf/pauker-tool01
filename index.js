@@ -256,12 +256,12 @@
             return;
         }
 
-        if (!node.isFolder && node.kind !== 'json' && node.kind !== 'pptx') {
+        // Dateien auswählen
+        selectNode(node.id);
+
+        // PDFs und Dokumente zusätzlich direkt im neuen Tab öffnen
+        if (node.kind === 'pdf' || node.kind === 'pptx') {
             window.open(node.id, '_blank');
-            return;
-        }
-        if (node.kind === 'json') {
-            selectNode(node.id);
         }
     }
 
@@ -318,20 +318,52 @@
             const list = (node.children || []).map(c => `<li>${c.name}</li>`).join('');
             viewBodyEl.innerHTML = `<h3>Inhalt:</h3><ul>${list || '<li>Leer</li>'}</ul>`;
         } else {
-            contentHeader.classList.add('hidden');
-            contentEl.classList.add('full-screen');
-            viewBodyEl.innerHTML = '';
-            viewBodyEl.classList.remove('card');
-            viewBodyEl.classList.add('iframe-container');
-
             if (node.kind === 'json') {
+                contentHeader.classList.add('hidden');
+                contentEl.classList.add('full-screen');
+                viewBodyEl.innerHTML = '';
+                viewBodyEl.classList.remove('card');
+                viewBodyEl.classList.add('iframe-container');
+
                 // Daten im sessionStorage puffern, damit GameBase sie ohne Fetch findet
                 if (node.data) {
                     sessionStorage.setItem('game_payload_' + node.id, JSON.stringify(node.data));
                 }
                 loadGame(node);
+            } else if (node.kind === 'pdf') {
+                contentHeader.classList.remove('hidden');
+                contentEl.classList.remove('full-screen');
+                viewBodyEl.classList.remove('iframe-container');
+                viewBodyEl.classList.add('card');
+                viewBodyEl.innerHTML = `
+                    <div style="padding: 2rem; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">📄</div>
+                        <h2>PDF Dokument</h2>
+                        <p style="color: hsl(var(--txt-muted)); margin-bottom: 2rem;">
+                            Die Datei <strong>${node.name}</strong> wurde in einem neuen Tab geöffnet.
+                        </p>
+                        <button class="btn primary" onclick="window.open('${node.id}', '_blank')">
+                            Datei erneut öffnen
+                        </button>
+                    </div>
+                `;
             } else {
-                viewBodyEl.innerHTML = '<p style="padding:2rem">PDF Anzeige offline nicht direkt unterstützt. Bitte lade die Datei herunter.</p>';
+                contentHeader.classList.remove('hidden');
+                contentEl.classList.remove('full-screen');
+                viewBodyEl.classList.remove('iframe-container');
+                viewBodyEl.classList.add('card');
+                viewBodyEl.innerHTML = `
+                    <div style="padding: 2rem; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">📂</div>
+                        <h2>Dokument</h2>
+                        <p style="color: hsl(var(--txt-muted)); margin-bottom: 2rem;">
+                            Datei: <strong>${node.name}</strong>
+                        </p>
+                        <button class="btn primary" onclick="window.open('${node.id}', '_blank')">
+                            Herunterladen / Öffnen
+                        </button>
+                    </div>
+                `;
             }
         }
     }
