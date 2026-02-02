@@ -4,7 +4,7 @@
     /**
      * ZWECK:
      * Hauptlogik für das Pauker-Tool im lokalen Offline-Modus.
-     * Nutzt die 'database_index.js' für die Struktur und lädt JSONs direkt.
+     * Nutzt die 'app_index.js' für die Struktur und lädt JSONs direkt.
      */
 
     // --- 1. Global Setup & State ---
@@ -151,7 +151,7 @@
     }
 
     async function initLocalApp() {
-        // Load structure from window.DATABASE_INDEX (loaded via database_index.js script tag)
+        // Load structure from window.DATABASE_INDEX (loaded via app_index.js script tag)
         rootTree = window.DATABASE_INDEX || [];
         drawerTitleEl.textContent = rootName;
 
@@ -247,6 +247,15 @@
     }
 
     function onNodeClick(e, node) {
+        if (node.isFolder) {
+            const div = document.querySelector(`.tree-node[data-id="${node.id}"]`);
+            if (div) {
+                const btn = div.querySelector('.tree-toggle');
+                toggleNode(div, node.id, btn);
+            }
+            return;
+        }
+
         if (!node.isFolder && node.kind !== 'json' && node.kind !== 'pptx') {
             window.open(node.id, '_blank');
             return;
@@ -316,6 +325,10 @@
             viewBodyEl.classList.add('iframe-container');
 
             if (node.kind === 'json') {
+                // Daten im sessionStorage puffern, damit GameBase sie ohne Fetch findet
+                if (node.data) {
+                    sessionStorage.setItem('game_payload_' + node.id, JSON.stringify(node.data));
+                }
                 loadGame(node);
             } else {
                 viewBodyEl.innerHTML = '<p style="padding:2rem">PDF Anzeige offline nicht direkt unterstützt. Bitte lade die Datei herunter.</p>';

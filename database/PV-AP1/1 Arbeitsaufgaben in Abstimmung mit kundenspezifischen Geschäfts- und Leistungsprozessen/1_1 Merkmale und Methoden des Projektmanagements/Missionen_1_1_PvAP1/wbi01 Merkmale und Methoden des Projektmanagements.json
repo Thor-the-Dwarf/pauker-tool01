@@ -149,6 +149,6 @@
       "hotkey": "10",
       "text": "Gibt es einen klaren, wiederholbaren Ablauf (Standard-Workflow/Prozessschritte)?",
       "attributeKey": "standardized_workflow"
-    },
-    {
-      "id": "q11",
+    }
+  ]
+}
