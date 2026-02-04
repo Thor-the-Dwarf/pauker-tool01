@@ -1,0 +1,128 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Cloud: Vorteile, Risiken & Shared Responsibility (AP1)",
+  "topic": "Vorteile (Skalierung, OPEX/CAPEX, Verfügbarkeit) • Risiken (Lock-in, Kosten, Compliance, Fehlkonfig) • Shared Responsibility",
+  "estimated_minutes": 20,
+  "sections": [
+    {
+      "id": "cloud-vorteile-risiken-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Vorteil oder Risiko?",
+      "subtitle": "Ordne typische Aussagen richtig zu.",
+      "hintDefault": "Vorteile: schneller, skalierbar, OPEX, Verfügbarkeit. Risiken: Lock-in, Kosten, Compliance, Fehlkonfig.",
+      "sortColumns": [
+        { "zone": "vorteil", "label": "Vorteile", "hint": "(Speed/Scale/OPEX/Verfügbarkeit)" },
+        { "zone": "risiko", "label": "Risiken", "hint": "(Lock-in/Kosten/Compliance/Fehlkonfig)" }
+      ],
+      "sortCards": [
+        { "id": "vr1", "text": "Ressourcen in Minuten bereitstellen statt Wochen", "correctZone": "vorteil" },
+        { "id": "vr2", "text": "Skalierung nach Bedarf (hoch/runter)", "correctZone": "vorteil" },
+        { "id": "vr3", "text": "OPEX statt großer CAPEX-Einmalinvestition", "correctZone": "vorteil" },
+        { "id": "vr4", "text": "Verfügbarkeits-Optionen über Zonen/Regionen", "correctZone": "vorteil" },
+        { "id": "vr5", "text": "Vendor Lock-in durch proprietäre Dienste/APIs", "correctZone": "risiko" },
+        { "id": "vr6", "text": "Kostenexplosion bei falscher Dimensionierung oder Dauerbetrieb", "correctZone": "risiko" },
+        { "id": "vr7", "text": "Datenstandort/Compliance kann Einschränkungen erzwingen", "correctZone": "risiko" },
+        { "id": "vr8", "text": "Fehlkonfiguration (z. B. zu offene Zugriffe) führt zu Datenpannen", "correctZone": "risiko" }
+      ]
+    },
+    {
+      "id": "shared-responsibility-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Shared Responsibility – wer macht was?",
+      "subtitle": "Provider vs Kunde sauber trennen.",
+      "hintDefault": "Provider sichert die Cloud (Rechenzentrum/Hardware/Grundplattform). Kunde sichert Konfiguration, Daten und Zugriffe.",
+      "sortColumns": [
+        { "zone": "provider", "label": "Provider", "hint": "„Security OF the Cloud“" },
+        { "zone": "kunde", "label": "Kunde", "hint": "„Security IN the Cloud“" }
+      ],
+      "sortCards": [
+        { "id": "sr1", "text": "Physische Sicherheit im Rechenzentrum", "correctZone": "provider" },
+        { "id": "sr2", "text": "Hardware/Netzwerk-Grundinfrastruktur betreiben", "correctZone": "provider" },
+        { "id": "sr3", "text": "Basis-Services der Cloud-Plattform absichern/patchen", "correctZone": "provider" },
+        { "id": "sr4", "text": "IAM/Rechte: Wer darf worauf zugreifen?", "correctZone": "kunde" },
+        { "id": "sr5", "text": "Netzwerkregeln/Security Groups/Firewall korrekt konfigurieren", "correctZone": "kunde" },
+        { "id": "sr6", "text": "Daten schützen (Klassifizierung, Verschlüsselung, Backups)", "correctZone": "kunde" },
+        { "id": "sr7", "text": "Fehlkonfigurationen vermeiden (z. B. „öffentlich“ vs „privat“)", "correctZone": "kunde" }
+      ]
+    },
+    {
+      "id": "risiko-gegenmassnahmen-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: Risiken erkennen – passende Gegenmaßnahme",
+      "subtitle": "Prüfung: Problem benennen + 1 saubere Maßnahme.",
+      "hintDefault": "Lock-in: Standards/Portabilität. Kosten: Budgets/Monitoring. Compliance: Region/Verträge. Fehlkonfig: Prinzip „Least Privilege“ + Reviews.",
+      "questions": [
+        {
+          "id": "rm1",
+          "text": "1. Risiko: Kostenexplosion. Welche Maßnahme passt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Kosten-Alerts/Budgets setzen und Ressourcen automatisch abschalten/skalieren." },
+            { "value": "b", "text": "Mehr Ports am Switch kaufen." },
+            { "value": "c", "text": "Passwortlänge auf 6 Zeichen reduzieren." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rm2",
+          "text": "2. Risiko: Fehlkonfiguration mit zu offenen Zugriffsrechten. Welche Maßnahme passt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Prinzip „Least Privilege“ + regelmäßige Rechte-/Konfig-Reviews." },
+            { "value": "b", "text": "CPU-Takt erhöhen." },
+            { "value": "c", "text": "USB-Kabel tauschen." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rm3",
+          "text": "3. Risiko: Datenstandort/Compliance. Welche Maßnahme passt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Region/Standort bewusst wählen und Compliance-Anforderungen vertraglich/technisch absichern." },
+            { "value": "b", "text": "Nur SSD statt HDD verwenden." },
+            { "value": "c", "text": "Monitore austauschen." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rm4",
+          "text": "4. Risiko: Vendor Lock-in. Welche Maßnahme passt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Mehr proprietäre Spezialdienste nutzen." },
+            { "value": "b", "text": "Portabilität planen (Standards, Container, saubere Schnittstellen, Exit-Plan)." },
+            { "value": "c", "text": "RAM-Latenz reduzieren." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "finale-shared-quiz",
+      "type": "quiz",
+      "title": "Finale: Shared Responsibility – Kurzcheck",
+      "subtitle": "Ein Satz, der Punkte bringt.",
+      "hintDefault": "Merksatz: Provider = „Cloud“, Kunde = „Konfiguration + Daten + Zugriffe“.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Aussage trifft den Kern am besten?",
+          "options": [
+            { "value": "a", "text": "In der Cloud ist nur der Provider für Sicherheit zuständig." },
+            { "value": "b", "text": "Provider sichert die Cloud, Kunde sichert Konfiguration, Daten und Zugriffe." },
+            { "value": "c", "text": "Sicherheit ist nur bei On-Prem relevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Wer ist typischerweise verantwortlich für falsch gesetzte Zugriffsrechte auf Daten?",
+          "options": [
+            { "value": "a", "text": "Kunde" },
+            { "value": "b", "text": "Provider" },
+            { "value": "c", "text": "Niemand, das ist normal." }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

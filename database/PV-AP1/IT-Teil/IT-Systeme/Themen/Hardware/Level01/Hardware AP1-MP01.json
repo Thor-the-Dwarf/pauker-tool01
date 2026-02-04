@@ -1,0 +1,174 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Hardware-Grundbaukasten (AP1) – CPU • RAM • Speicher • Mainboard • Netzwerk – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils eine Hardware-Komponente, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Auswahl, Bewertung, Fehlersuche).",
+  "columnTitles": {
+    "column1": "Begriff / Komponente",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Hardware-Komponente oder ein Schnittstellen-Konzept.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "hardware_grundbaukasten",
+      "name": "Hardware-Grundbaukasten",
+      "description": "AP1-Fokus: Die Kernbauteile eines PCs/Systems erkennen und ihre Aufgabe grob einordnen.",
+      "example": "Du nennst CPU, RAM, SSD, Mainboard und Netzwerk und begründest kurz, wofür jedes Teil zuständig ist."
+    },
+    {
+      "id": "cpu_rechenwerk",
+      "name": "CPU (Rechenwerk)",
+      "description": "Führt Befehle aus; Leistung wird u.a. durch Kerne/Threads, Takt und Cache beeinflusst.",
+      "example": "Bei vielen parallelen Tasks (Browser + VM) ist eine CPU mit mehr Kernen/Threads sinnvoll."
+    },
+    {
+      "id": "kerne_threads",
+      "name": "Kerne & Threads",
+      "description": "Kerne sind echte Recheneinheiten; Threads sind parallele Ausführungsstränge (oft 2 pro Kern via SMT/Hyper-Threading).",
+      "example": "8 Kerne/16 Threads: Videokonvertierung + Kompilieren läuft flüssiger parallel als mit 4/8."
+    },
+    {
+      "id": "taktfrequenz",
+      "name": "Taktfrequenz",
+      "description": "Grob: Wie viele Arbeitsschritte pro Sekunde möglich sind; reale Leistung hängt zusätzlich stark von Architektur/Last ab.",
+      "example": "Single-Thread-lastige Aufgaben profitieren oft von höherem Boost-Takt."
+    },
+    {
+      "id": "cpu_cache",
+      "name": "CPU-Cache (L1/L2/L3)",
+      "description": "Sehr schneller Zwischenspeicher nahe an der CPU; reduziert Zugriffe auf den langsameren RAM.",
+      "example": "Viele kleine Datenzugriffe (z.B. Datenstrukturen) laufen spürbar besser, wenn Cache-Treffer hoch sind."
+    },
+    {
+      "id": "ram_arbeitsspeicher",
+      "name": "RAM (Arbeitsspeicher)",
+      "description": "Schneller, flüchtiger Speicher für laufende Programme und Daten; zu wenig RAM führt zu Auslagerung und Tempoverlust.",
+      "example": "Wenn mehrere Apps offen sind und der PC dauernd „rödelt“, fehlt oft RAM und es wird auf SSD ausgelagert."
+    },
+    {
+      "id": "ram_groesse",
+      "name": "RAM-Größe",
+      "description": "Kapazität in GB; bestimmt, wie viele Daten gleichzeitig im schnellen Arbeitsspeicher gehalten werden können.",
+      "example": "Für VM + IDE + Browser sind 16–32 GB oft sinnvoller als 8 GB."
+    },
+    {
+      "id": "ram_typ",
+      "name": "RAM-Typ (DDR4/DDR5)",
+      "description": "Technologiegeneration und Spezifikationen müssen zum Mainboard/CPU passen.",
+      "example": "DDR5-RAM passt nicht in ein DDR4-Board (anderer Slot/Standard)."
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "description": "Zwei RAM-Module in passenden Slots erhöhen die Speicherbandbreite gegenüber Single-Channel.",
+      "example": "2×8 GB im Dual-Channel ist oft schneller als 1×16 GB, obwohl die Kapazität gleich ist."
+    },
+    {
+      "id": "massenspeicher",
+      "name": "Massenspeicher (SSD/HDD)",
+      "description": "Dauerhafter Speicher für Betriebssystem, Programme und Daten; SSD ist bei Zugriffen typischerweise deutlich schneller als HDD.",
+      "example": "Boot-Zeit und Programmstart sind mit SSD massiv schneller als mit HDD."
+    },
+    {
+      "id": "ssd",
+      "name": "SSD",
+      "description": "Flash-Speicher, geringe Zugriffszeiten; ideal für OS/Programme und viele kleine Zugriffe.",
+      "example": "Datenbank/Projektdateien auf SSD: deutlich weniger Wartezeit beim Laden/Indexieren."
+    },
+    {
+      "id": "hdd",
+      "name": "HDD",
+      "description": "Magnetische Festplatte, günstiger pro GB, aber langsamere Zugriffe; gut für Archiv/Backups großer Datenmengen.",
+      "example": "Medienarchiv oder Backup-Ziel: große HDD ist kosteneffizient."
+    },
+    {
+      "id": "sata",
+      "name": "SATA (Anschluss/Protokoll)",
+      "description": "Schnittstelle für Laufwerke (typisch 2,5\" SSD oder HDD); langsamer als NVMe, aber weit verbreitet.",
+      "example": "Eine günstige 2,5\"-SSD wird per SATA angeschlossen, um einen alten PC zu beschleunigen."
+    },
+    {
+      "id": "nvme",
+      "name": "NVMe (über PCIe)",
+      "description": "Protokoll für sehr schnelle SSDs über PCIe (meist im M.2-Slot); hohe Transferraten und geringe Latenz.",
+      "example": "Große Builds/VM-Images profitieren von NVMe, weil viele Dateien schnell gelesen/geschrieben werden."
+    },
+    {
+      "id": "kapazitaet",
+      "name": "Kapazität",
+      "description": "Speichergröße (GB/TB); bestimmt, wie viele Daten dauerhaft gespeichert werden können.",
+      "example": "Projekt + Tools + Daten: 256 GB kann knapp werden, 1 TB ist oft entspannter."
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "description": "Input/Output Operations Per Second: misst, wie viele kleine Ein-/Ausgabe-Operationen pro Sekunde möglich sind.",
+      "example": "Viele kleine Dateien (IDE, Git, Datenbank) laufen besser auf einem Laufwerk mit hohen IOPS."
+    },
+    {
+      "id": "mainboard",
+      "name": "Mainboard",
+      "description": "Zentrale Platine: verbindet CPU, RAM, Speicher, Erweiterungskarten und Anschlüsse; bestimmt Aufrüstbarkeit und Schnittstellen.",
+      "example": "Du brauchst M.2-Slot und genug USB-Ports: Auswahl hängt stark vom Mainboard ab."
+    },
+    {
+      "id": "chipsatz",
+      "name": "Chipsatz",
+      "description": "Steuert/koordiniert viele I/O-Funktionen (z.B. Anzahl PCIe-/USB-/SATA-Lanes/Ports) und Features des Mainboards.",
+      "example": "Ein besserer Chipsatz bietet mehr schnelle Anschlüsse und mehr Erweiterungsmöglichkeiten."
+    },
+    {
+      "id": "pcie",
+      "name": "PCIe",
+      "description": "Schnelle Erweiterungsschnittstelle für z.B. GPU, Netzwerkkarten oder NVMe über Lanes/Generationen.",
+      "example": "Zusätzliche 10-GBit-Netzwerkkarte steckt in einem PCIe-Steckplatz."
+    },
+    {
+      "id": "m2_slot",
+      "name": "M.2-Slot",
+      "description": "Steckplatz auf dem Mainboard für M.2-Module (häufig NVMe-SSDs); je nach Board auch SATA-M.2 möglich.",
+      "example": "Eine NVMe-SSD wird direkt auf das Board in den M.2-Slot gesteckt."
+    },
+    {
+      "id": "usb",
+      "name": "USB",
+      "description": "Universelle Schnittstelle für Peripherie; Versionen unterscheiden sich stark bei Datenrate und Features.",
+      "example": "Externe SSD an USB: an einem schnellen Port deutlich besser als an einem alten langsamen."
+    },
+    {
+      "id": "formfaktor",
+      "name": "Formfaktor (ATX/mATX/ITX)",
+      "description": "Größe/Standard des Mainboards; muss zum Gehäuse passen und beeinflusst Anzahl Slots/Anschlüsse.",
+      "example": "Mini-ITX passt ins kleine Gehäuse, hat aber weniger Steckplätze als ATX."
+    },
+    {
+      "id": "netzwerk_lan",
+      "name": "LAN (Ethernet)",
+      "description": "Kabelgebundenes Netzwerk: stabil, geringe Latenz, oft höhere und konstante Datenrate als WLAN.",
+      "example": "Bei Videokonferenzen und großen Transfers ist LAN meist zuverlässiger als WLAN."
+    },
+    {
+      "id": "netzwerk_wlan",
+      "name": "WLAN",
+      "description": "Funknetzwerk: flexibel, aber störanfälliger; Leistung hängt stark von Umgebung, Kanal und Abstand ab.",
+      "example": "Im Büro bricht WLAN ab: Ursache kann Kanalüberlastung oder zu großer Abstand zum Access Point sein."
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "description": "Verbindet Geräte im LAN auf Layer 2 und leitet Frames anhand MAC-Adressen weiter.",
+      "example": "Mehrere PCs und Drucker im selben Netz werden über einen Switch zusammengeführt."
+    },
+    {
+      "id": "router",
+      "name": "Router",
+      "description": "Verbindet unterschiedliche Netzwerke (z.B. LAN ↔ Internet) und routet IP-Pakete; häufig auch mit NAT/DHCP kombiniert.",
+      "example": "Der Router verbindet das Heimnetz mit dem Internet und vergibt IPs per DHCP."
+    }
+  ]
+}

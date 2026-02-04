@@ -1,0 +1,112 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Cloud Service-Modelle (IaaS/PaaS/SaaS) (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Infrastruktur mieten: VMs, Storage und Netzwerk – du verwaltest Betriebssystem, Updates und deine Anwendungen selbst.",
+      "correct": "keine"
+    },
+    {
+      "text": "Typisch für IaaS: Du entscheidest über OS-Version, Installationen, Patches und Konfiguration (mehr Kontrolle, mehr Betrieb).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Auch bei IaaS bleiben Sicherheitsaufgaben beim Kunden (z. B. OS-Hardening, Accounts, App-Security).",
+      "correct": "keine"
+    },
+    {
+      "text": "Plattform mieten: Runtime/DB/Managed Services – du betreibst weniger selbst, hast aber weniger Kontrolle über die Umgebung.",
+      "correct": "keine"
+    },
+    {
+      "text": "Typisch für PaaS: Du lieferst Code/Config, die Plattform übernimmt viele Betriebsaufgaben wie Skalierung oder Patchen der Runtime.",
+      "correct": "keine"
+    },
+    {
+      "text": "PaaS eignet sich oft für schnelles Entwickeln/Deployen, wenn du Standard-Stacks nutzt und weniger OS-Kontrolle brauchst.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: PaaS kann zu Anbieterabhängigkeit (Lock-in) führen, wenn Services sehr spezifisch sind.",
+      "correct": "keine"
+    },
+    {
+      "text": "Fertige Anwendung nutzen: Du konfigurierst nur noch Nutzer/Settings – Betrieb und Updates macht der Anbieter.",
+      "correct": "keine"
+    },
+    {
+      "text": "Typisch für SaaS: Schnell startklar, geringster Betriebsaufwand, aber auch geringste Kontrolle über technische Details.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Bei SaaS hast du meist kaum Einfluss auf Update-Zeitpunkt/Versionen – das ist Anbieter-Entscheidung.",
+      "correct": "keine"
+    },
+    {
+      "text": "Kontrollgrad steigt typischerweise von SaaS → PaaS → IaaS, während Betriebsaufwand in die andere Richtung steigt.",
+      "correct": "keine"
+    },
+    {
+      "text": "„Bei SaaS verwaltest du das Betriebssystem selbst und installierst Patches auf der VM.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„Bei PaaS mietest du nur virtuelle Hardware und musst OS + Runtime komplett selbst betreiben.“",
+      "correct": "keine"
+    },
+    {
+      "text": "IaaS/PaaS/SaaS unterscheiden sich im Kern daran, wie viel Betrieb du selbst machst und wie viel Kontrolle du über OS/Plattform hast.",
+      "correct": "alle"
+    }
+  ]
+}

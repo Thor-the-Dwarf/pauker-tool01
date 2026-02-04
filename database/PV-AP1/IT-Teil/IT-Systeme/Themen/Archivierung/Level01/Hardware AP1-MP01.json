@@ -1,0 +1,90 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Backup vs Archiv (AP1) – Wiederherstellung vs Aufbewahrung – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Begriff, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Einordnung, Compliance, Umsetzung).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle Backup- oder Archiv-Begriffe.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "backup",
+      "name": "Backup",
+      "description": "Kurzfristige Wiederherstellung nach Fehlern, Malware, versehentlichem Löschen oder Hardware-Defekt.",
+      "example": "Ransomware verschlüsselt den Fileserver → Restore der Daten aus dem Backup vom Vortag."
+    },
+    {
+      "id": "archiv",
+      "name": "Archiv",
+      "description": "Langfristige, geordnete Aufbewahrung von Informationen/Belegen – oft unveränderlich für Compliance/Nachweis.",
+      "example": "Rechnungen und Verträge müssen über Jahre revisionssicher aufbewahrt werden."
+    },
+    {
+      "id": "backup_timeframe",
+      "name": "Backup: kurzer Zeithorizont",
+      "description": "Typisch: Tage/Wochen (je nach Retention). Fokus: schnell zurückholen, nicht „für immer“ aufbewahren.",
+      "example": "30-Tage-Retention: Du kannst Dateien von letzter Woche wiederherstellen, aber nicht von vor 5 Jahren."
+    },
+    {
+      "id": "archiv_timeframe",
+      "name": "Archiv: langer Zeithorizont",
+      "description": "Typisch: Jahre (oder länger). Fokus: Aufbewahrungspflichten, Nachweisbarkeit, langfristige Lesbarkeit.",
+      "example": "Personal-/Buchhaltungsunterlagen bleiben über gesetzliche Fristen auffindbar."
+    },
+    {
+      "id": "backup_veraenderlich",
+      "name": "Backup: veränderlich (prinzipiell)",
+      "description": "Backups sind Kopien für Restore; sie müssen nicht zwingend unveränderlich sein (können es aber aus Sicherheitsgründen).",
+      "example": "Admin kann ein altes Backup überschreiben oder löschen – für Restore ok, für Compliance oft nicht."
+    },
+    {
+      "id": "archiv_unveraenderlich",
+      "name": "Archiv: unveränderlich (je nach Anforderung)",
+      "description": "Archivsysteme sollen Manipulation verhindern oder nachvollziehbar machen (WORM/Revisionssicherheit).",
+      "example": "Belege dürfen nachträglich nicht „still“ geändert werden; jede Änderung muss ausgeschlossen oder protokolliert sein."
+    },
+    {
+      "id": "archiv_suchbarkeit",
+      "name": "Archiv: Suchbarkeit/Index",
+      "description": "Archiv muss gezielt auffindbar sein (Metadaten, Index, Volltextsuche), sonst ist es praktisch wertlos.",
+      "example": "Auditor fragt nach Rechnung X → du findest sie über Kundennummer/Datum/Belegnummer in Sekunden."
+    },
+    {
+      "id": "backup_restore_speed",
+      "name": "Backup: Restore-Geschwindigkeit",
+      "description": "Backup ist auf schnelle Wiederherstellung optimiert (RTO/RPO), nicht primär auf Recherche.",
+      "example": "Nach Plattencrash wird der Fileserver aus Backup wiederhergestellt, damit der Betrieb weiterläuft."
+    },
+    {
+      "id": "compliance_belege",
+      "name": "Compliance/Belege (Archiv-Treiber)",
+      "description": "Archivierung wird durch Aufbewahrungspflichten und Nachweisanforderungen getrieben, nicht durch „Unfälle“.",
+      "example": "Geschäftsbriefe/E-Mails müssen revisionssicher archiviert werden, auch wenn nie ein Restore nötig ist."
+    },
+    {
+      "id": "typische_verwechslung",
+      "name": "Typische Verwechslung",
+      "description": "„Wir haben doch Backups“ ersetzt kein Archiv, wenn gesetzliche/vertragliche Aufbewahrung und Unveränderbarkeit gefordert sind.",
+      "example": "Buchhaltung braucht Rechnung von vor 6 Jahren: Backup-Retention ist 30 Tage → Backup hilft nicht, Archiv wäre nötig."
+    },
+    {
+      "id": "kombination",
+      "name": "Backup + Archiv zusammen",
+      "description": "In der Praxis brauchst du oft beides: Backup für Desaster/Restore, Archiv für langfristige, revisionssichere Aufbewahrung.",
+      "example": "ERP-Datenbank: tägliche Backups für Restore + Belegarchiv für Jahre (revisionssicher, suchbar)."
+    },
+    {
+      "id": "ap1_merksatz",
+      "name": "AP1-Merksatz",
+      "description": "Backup = kurzfristig wiederherstellen. Archiv = langfristig aufbewahren (oft unveränderlich + suchbar).",
+      "example": "Prüfungsantwort in einem Satz: „Backups sind für Restore, Archive für Compliance und Nachweise.“"
+    }
+  ]
+}

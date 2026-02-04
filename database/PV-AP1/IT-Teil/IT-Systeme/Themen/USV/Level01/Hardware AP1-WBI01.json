@@ -1,0 +1,133 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – USV (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "usv_allgemein",
+      "name": "USV (Unterbrechungsfreie Stromversorgung)",
+      "attributes": {
+        "is_power_protection_device": true,
+        "bridges_power_outage_short_term": true,
+        "protects_against_voltage_fluctuations": true,
+        "enables_controlled_shutdown": true,
+        "protects_hardware_and_data": true,
+        "improves_operational_stability": true,
+        "is_offline_type": false,
+        "is_line_interactive_type": false,
+        "is_online_type": false,
+        "highest_protection_level": false
+      }
+    },
+    {
+      "id": "usv_offline",
+      "name": "USV-Typ: Offline (Standby)",
+      "attributes": {
+        "is_power_protection_device": true,
+        "bridges_power_outage_short_term": true,
+        "protects_against_voltage_fluctuations": false,
+        "enables_controlled_shutdown": true,
+        "protects_hardware_and_data": true,
+        "improves_operational_stability": true,
+        "is_offline_type": true,
+        "is_line_interactive_type": false,
+        "is_online_type": false,
+        "highest_protection_level": false
+      }
+    },
+    {
+      "id": "usv_line_interactive",
+      "name": "USV-Typ: Line-Interactive",
+      "attributes": {
+        "is_power_protection_device": true,
+        "bridges_power_outage_short_term": true,
+        "protects_against_voltage_fluctuations": true,
+        "enables_controlled_shutdown": true,
+        "protects_hardware_and_data": true,
+        "improves_operational_stability": true,
+        "is_offline_type": false,
+        "is_line_interactive_type": true,
+        "is_online_type": false,
+        "highest_protection_level": false
+      }
+    },
+    {
+      "id": "usv_online",
+      "name": "USV-Typ: Online (Doppelwandler)",
+      "attributes": {
+        "is_power_protection_device": true,
+        "bridges_power_outage_short_term": true,
+        "protects_against_voltage_fluctuations": true,
+        "enables_controlled_shutdown": true,
+        "protects_hardware_and_data": true,
+        "improves_operational_stability": true,
+        "is_offline_type": false,
+        "is_line_interactive_type": false,
+        "is_online_type": true,
+        "highest_protection_level": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um ein Gerät zur Stromversorgung/Schutz elektrischer Verbraucher?",
+      "attributeKey": "is_power_protection_device"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Überbrückt es einen Stromausfall kurzzeitig, damit Systeme weiterlaufen bzw. sauber beendet werden können?",
+      "attributeKey": "bridges_power_outage_short_term"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Schützt es vor Spannungsschwankungen/Spitzen (Power-Quality)?",
+      "attributeKey": "protects_against_voltage_fluctuations"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist ein zentrales Ziel ein kontrolliertes Herunterfahren statt hartem Stromverlust?",
+      "attributeKey": "enables_controlled_shutdown"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Dient es dem Schutz von Hardware und Daten (z. B. Vermeidung von Datenkorruption)?",
+      "attributeKey": "protects_hardware_and_data"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Steigert es die Betriebsstabilität (weniger Ausfälle/Abstürze durch Stromprobleme)?",
+      "attributeKey": "improves_operational_stability"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist es der einfachste Typ (Standby), der bei Ausfall erst umschaltet?",
+      "attributeKey": "is_offline_type"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist es der Typ mit Spannungsregelung (AVR) und mittlerem Schutzlevel?",
+      "attributeKey": "is_line_interactive_type"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist es der Online/Doppelwandler-Typ mit Daueraufbereitung der Spannung?",
+      "attributeKey": "is_online_type"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Bietet es typischerweise den höchsten Schutzlevel gegen Stromprobleme?",
+      "attributeKey": "highest_protection_level"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Programmierung (AP1)",
+  "topic": "UML • Pseudocode/PAP/Struktogramm • Coding-Basics • Datenbanken/SQL • Test & Qualität",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "diagrammwahl-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Welches Diagramm wofür?",
+      "subtitle": "Ordne die Aufgaben den passenden Modellierungs-Zielen zu.",
+      "hintDefault": "Merke: „Was“ = Use Case, „Wie“ = Ablauf/Kommunikation, „Daten“ = Klasse/ERD/DB.",
+      "sortColumns": [
+        { "zone": "was", "label": "Was soll das System können?", "hint": "(Use Case)" },
+        { "zone": "wie", "label": "Wie läuft es ab / wer ruft wen?", "hint": "(Aktivität/Sequenz/PAP)" },
+        { "zone": "daten", "label": "Welche Datenstruktur steckt dahinter?", "hint": "(Klasse/ERD)" }
+      ],
+      "sortCards": [
+        { "id": "dw1", "text": "Passwort zurücksetzen als Fähigkeit aus Nutzersicht", "correctZone": "was" },
+        { "id": "dw2", "text": "Workflow mit Entscheidung „Token gültig?“", "correctZone": "wie" },
+        { "id": "dw3", "text": "Entitäten Kunde–Bestellung–Position mit PK/FK", "correctZone": "daten" },
+        { "id": "dw4", "text": "UI → Service → DB: Nachrichten-Reihenfolge über Zeit", "correctZone": "wie" },
+        { "id": "dw5", "text": "Klasse „Ticket“ mit Attributen und Methoden", "correctZone": "daten" },
+        { "id": "dw6", "text": "Systemgrenze: Was ist intern, was extern?", "correctZone": "was" }
+      ]
+    },
+    {
+      "id": "usecase-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Use Case – AP1-tauglich",
+      "subtitle": "Kleine Details, große Punkte.",
+      "hintDefault": "Use Case zeigt „kann“, nicht „wie“. Details gehören in Ablaufdiagramme.",
+      "questions": [
+        {
+          "id": "uc1",
+          "text": "1. Was ist ein Actor im Use-Case-Diagramm am ehesten?",
+          "options": [
+            { "value": "a", "text": "Eine konkrete Person mit Namen." },
+            { "value": "b", "text": "Eine Rolle (z. B. Mitarbeiter, Admin)." },
+            { "value": "c", "text": "Ein Datenbank-Tabellenname." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "uc2",
+          "text": "2. Was gehört NICHT ins Use-Case-Diagramm?",
+          "options": [
+            { "value": "a", "text": "Systemgrenze." },
+            { "value": "b", "text": "Schritt-für-Schritt-Algorithmus." },
+            { "value": "c", "text": "Use Cases als Verb + Objekt." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "uc3",
+          "text": "3. Welche Ergänzung bringt im Use-Case-Text oft Extra-Punkte?",
+          "options": [
+            { "value": "a", "text": "Alternativen/Fehlerfälle." },
+            { "value": "b", "text": "Emoji zur Motivation." },
+            { "value": "c", "text": "Ein langer Quellcode-Block." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "usecase-text-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Use-Case-Text richtig aufbauen",
+      "subtitle": "Bringe die Bausteine in die richtige Reihenfolge.",
+      "hintDefault": "Mini-Template: Pre → Main → Alt → Post.",
+      "rows": [
+        {
+          "key": "pre",
+          "label": "Vorbedingung (Pre)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "main",
+          "label": "Hauptablauf (Main/Happy Path)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "alt",
+          "label": "Alternativen / Fehlerfälle (Alt)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "post",
+          "label": "Nachbedingung (Post)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "klassendiagramm-kardinalitaet-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Kardinalitäten (Klassendiagramm/ERD)",
+      "subtitle": "Ordne die Aussagen der passenden Kardinalität zu.",
+      "hintDefault": "Kardinalität = „wie viele dürfen/müssen“. Ohne Kardinalität entstehen Logik- und DB-Fehler.",
+      "sortColumns": [
+        { "zone": "genau", "label": "1..1", "hint": "(genau eins)" },
+        { "zone": "optional", "label": "0..1", "hint": "(null oder eins)" },
+        { "zone": "mindestens", "label": "1..*", "hint": "(mindestens eins)" },
+        { "zone": "beliebig", "label": "0..*", "hint": "(null bis viele)" }
+      ],
+      "sortCards": [
+        { "id": "k1", "text": "Pflicht-Beziehung: Es muss immer ein Objekt existieren", "correctZone": "genau" },
+        { "id": "k2", "text": "Optional: Kann fehlen, darf aber da sein", "correctZone": "optional" },
+        { "id": "k3", "text": "Mindestens eins: leer ist nicht erlaubt", "correctZone": "mindestens" },
+        { "id": "k4", "text": "Beliebig viele: auch „keins“ ist erlaubt", "correctZone": "beliebig" },
+        { "id": "k5", "text": "Kunde hat mindestens eine Bestellung (typisches Beispiel)", "correctZone": "mindestens" },
+        { "id": "k6", "text": "Bestellung kann (je nach Modell) optional einen Gutschein haben", "correctZone": "optional" }
+      ]
+    },
+    {
+      "id": "datenmodell-normalisierung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 5: ERD & Normalisierung – Klassiker",
+      "subtitle": "Relational sauber denken.",
+      "hintDefault": "AP1-Fallen: M:N ohne Zwischentabelle, Listen in Spalten, Redundanz/Update-Fehler.",
+      "questions": [
+        {
+          "id": "nm1",
+          "text": "1. Was ist bei einer M:N-Beziehung relational korrekt?",
+          "options": [
+            { "value": "a", "text": "Eine Spalte mit einer Liste von IDs." },
+            { "value": "b", "text": "Eine Zwischentabelle (Junction) mit zwei FKs." },
+            { "value": "c", "text": "Einfach beide Tabellen ohne Verbindung lassen." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "nm2",
+          "text": "2. Was verlangt die 1. Normalform (1NF) am klarsten?",
+          "options": [
+            { "value": "a", "text": "Jede Zelle enthält genau einen atomaren Wert." },
+            { "value": "b", "text": "Alle Tabellen müssen mindestens 20 Spalten haben." },
+            { "value": "c", "text": "Alle Attribute sind immer optional." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "nm3",
+          "text": "3. Warum ist Redundanz im Datenmodell gefährlich?",
+          "options": [
+            { "value": "a", "text": "Sie macht SELECT-Abfragen unmöglich." },
+            { "value": "b", "text": "Sie erzeugt Update-Fehler und Inkonsistenzen." },
+            { "value": "c", "text": "Sie erhöht automatisch die Performance." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "logik-darstellung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 6: Pseudocode, PAP, Struktogramm",
+      "subtitle": "Logik ohne Syntax-Stress – aber eindeutig.",
+      "hintDefault": "Entscheidungen brauchen Bedingungen. PAP: Symbole standardisiert. Struktogramm: blockbasiert, keine wilden Sprünge.",
+      "questions": [
+        {
+          "id": "lg1",
+          "text": "1. Was ist das Ziel von Pseudocode?",
+          "options": [
+            { "value": "a", "text": "Sprachspezifische Syntax perfekt auswendig lernen." },
+            { "value": "b", "text": "Algorithmus/Logik eindeutig beschreiben, ohne an eine Sprache gebunden zu sein." },
+            { "value": "c", "text": "Nur Kommentare zu schreiben." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "lg2",
+          "text": "2. Welches Symbol steht im PAP typischerweise für eine Entscheidung?",
+          "options": [
+            { "value": "a", "text": "Rechteck" },
+            { "value": "b", "text": "Raute" },
+            { "value": "c", "text": "Oval" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "lg3",
+          "text": "3. Welche Prüfungsfalle ist bei Schleifen besonders häufig?",
+          "options": [
+            { "value": "a", "text": "Off-by-one (1× zu viel/zu wenig)" },
+            { "value": "b", "text": "Schleifen dürfen nie Bedingungen haben" },
+            { "value": "c", "text": "Schleifen sind nur für Datenbanken" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "sql-befehlstypen-sort",
+      "type": "sort",
+      "title": "Rätsel 7: SQL-Befehlstypen",
+      "subtitle": "Ordne Befehle den Kategorien zu.",
+      "hintDefault": "DDL = Struktur, DML = Daten ändern, DQL = Daten abfragen, TCL = Transaktion steuern.",
+      "sortColumns": [
+        { "zone": "ddl", "label": "DDL", "hint": "(CREATE/ALTER/DROP)" },
+        { "zone": "dml", "label": "DML", "hint": "(INSERT/UPDATE/DELETE)" },
+        { "zone": "dql", "label": "DQL", "hint": "(SELECT)" },
+        { "zone": "tcl", "label": "TCL", "hint": "(COMMIT/ROLLBACK)" }
+      ],
+      "sortCards": [
+        { "id": "sql1", "text": "CREATE TABLE", "correctZone": "ddl" },
+        { "id": "sql2", "text": "ALTER TABLE", "correctZone": "ddl" },
+        { "id": "sql3", "text": "INSERT", "correctZone": "dml" },
+        { "id": "sql4", "text": "UPDATE", "correctZone": "dml" },
+        { "id": "sql5", "text": "SELECT", "correctZone": "dql" },
+        { "id": "sql6", "text": "COMMIT", "correctZone": "tcl" },
+        { "id": "sql7", "text": "ROLLBACK", "correctZone": "tcl" }
+      ]
+    },
+    {
+      "id": "sql-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 8: SQL-Abfrage logisch aufbauen",
+      "subtitle": "Setze die Teile in die typische Reihenfolge.",
+      "hintDefault": "Gedanklich: Datenquelle → filtern → gruppieren → sortieren → begrenzen.",
+      "rows": [
+        {
+          "key": "from",
+          "label": "FROM (Tabelle/Datenquelle)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "where",
+          "label": "WHERE (Filtern)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "group",
+          "label": "GROUP BY (Gruppieren)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "having",
+          "label": "HAVING (Gruppen filtern)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "order",
+          "label": "ORDER BY (Sortieren)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "limit",
+          "label": "LIMIT (Begrenzen)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finale-pitfalls-quiz",
+      "type": "quiz",
+      "title": "Finale: Prüfungsfallen – schnell erkennen",
+      "subtitle": "Wenn du das kannst, verlierst du keine dummen Punkte mehr.",
+      "hintDefault": "Falle erkennen → kurz begründen → sauber lösen.",
+      "questions": [
+        {
+          "id": "pf1",
+          "text": "1. Warum ist „UPDATE ohne WHERE“ so gefährlich?",
+          "options": [
+            { "value": "a", "text": "Weil es immer syntaktisch falsch ist." },
+            { "value": "b", "text": "Weil es (typisch) alle Datensätze ändert." },
+            { "value": "c", "text": "Weil UPDATE nur mit JOIN erlaubt ist." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf2",
+          "text": "2. Was passiert bei einem JOIN ohne passende Join-Bedingung (ON ...)?",
+          "options": [
+            { "value": "a", "text": "Kartesisches Produkt (Datenexplosion)." },
+            { "value": "b", "text": "Automatische Fehlerkorrektur." },
+            { "value": "c", "text": "Die DB ignoriert den JOIN." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "pf3",
+          "text": "3. Worin liegt der Kernunterschied zwischen WHERE und HAVING?",
+          "options": [
+            { "value": "a", "text": "WHERE filtert nach Aggregation, HAVING davor." },
+            { "value": "b", "text": "WHERE filtert Zeilen vor GROUP BY, HAVING filtert Gruppen nach Aggregation." },
+            { "value": "c", "text": "Beides ist immer identisch." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf4",
+          "text": "4. Welche Testart prüft am ehesten eine einzelne Funktion isoliert?",
+          "options": [
+            { "value": "a", "text": "Unit Test" },
+            { "value": "b", "text": "Integration Test" },
+            { "value": "c", "text": "System Test" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

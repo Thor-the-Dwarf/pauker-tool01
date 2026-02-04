@@ -1,0 +1,225 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Virtualisierung & Container (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "vm",
+      "name": "Virtuelle Maschine (VM)",
+      "attributes": {
+        "is_vm": true,
+        "is_container": false,
+        "has_own_os": true,
+        "shares_host_kernel": false,
+        "uses_hypervisor": true,
+        "strong_isolation": true,
+        "higher_overhead": true,
+        "lightweight_fast_start": false,
+        "isolation_via_kernel_features": false,
+        "benefit_better_utilization": true,
+        "benefit_fast_deployment": true,
+        "benefit_testable_envs": true
+      }
+    },
+    {
+      "id": "container",
+      "name": "Container",
+      "attributes": {
+        "is_vm": false,
+        "is_container": true,
+        "has_own_os": false,
+        "shares_host_kernel": true,
+        "uses_hypervisor": false,
+        "strong_isolation": false,
+        "higher_overhead": false,
+        "lightweight_fast_start": true,
+        "isolation_via_kernel_features": true,
+        "benefit_better_utilization": true,
+        "benefit_fast_deployment": true,
+        "benefit_testable_envs": true
+      }
+    },
+    {
+      "id": "hypervisor",
+      "name": "Hypervisor",
+      "attributes": {
+        "is_vm": false,
+        "is_container": false,
+        "has_own_os": false,
+        "shares_host_kernel": false,
+        "uses_hypervisor": true,
+        "strong_isolation": true,
+        "higher_overhead": true,
+        "lightweight_fast_start": false,
+        "isolation_via_kernel_features": false,
+        "benefit_better_utilization": true,
+        "benefit_fast_deployment": false,
+        "benefit_testable_envs": true
+      }
+    },
+    {
+      "id": "kernel_sharing",
+      "name": "Kernel-Sharing (Container-Prinzip)",
+      "attributes": {
+        "is_vm": false,
+        "is_container": true,
+        "has_own_os": false,
+        "shares_host_kernel": true,
+        "uses_hypervisor": false,
+        "strong_isolation": false,
+        "higher_overhead": false,
+        "lightweight_fast_start": true,
+        "isolation_via_kernel_features": true,
+        "benefit_better_utilization": true,
+        "benefit_fast_deployment": true,
+        "benefit_testable_envs": true
+      }
+    },
+    {
+      "id": "isolation_tradeoff",
+      "name": "Isolation-Unterschied (VM stärker, Container anders)",
+      "attributes": {
+        "is_vm": false,
+        "is_container": false,
+        "has_own_os": false,
+        "shares_host_kernel": false,
+        "uses_hypervisor": false,
+        "strong_isolation": true,
+        "higher_overhead": false,
+        "lightweight_fast_start": false,
+        "isolation_via_kernel_features": true,
+        "benefit_better_utilization": false,
+        "benefit_fast_deployment": false,
+        "benefit_testable_envs": true
+      }
+    },
+    {
+      "id": "benefit_utilization",
+      "name": "Nutzen: bessere Auslastung",
+      "attributes": {
+        "is_vm": false,
+        "is_container": false,
+        "has_own_os": false,
+        "shares_host_kernel": false,
+        "uses_hypervisor": false,
+        "strong_isolation": false,
+        "higher_overhead": false,
+        "lightweight_fast_start": false,
+        "isolation_via_kernel_features": false,
+        "benefit_better_utilization": true,
+        "benefit_fast_deployment": false,
+        "benefit_testable_envs": false
+      }
+    },
+    {
+      "id": "benefit_deployment",
+      "name": "Nutzen: schnelles Deployment",
+      "attributes": {
+        "is_vm": false,
+        "is_container": false,
+        "has_own_os": false,
+        "shares_host_kernel": false,
+        "uses_hypervisor": false,
+        "strong_isolation": false,
+        "higher_overhead": false,
+        "lightweight_fast_start": true,
+        "isolation_via_kernel_features": false,
+        "benefit_better_utilization": false,
+        "benefit_fast_deployment": true,
+        "benefit_testable_envs": false
+      }
+    },
+    {
+      "id": "benefit_test_envs",
+      "name": "Nutzen: testbare Umgebungen",
+      "attributes": {
+        "is_vm": false,
+        "is_container": false,
+        "has_own_os": false,
+        "shares_host_kernel": false,
+        "uses_hypervisor": false,
+        "strong_isolation": false,
+        "higher_overhead": false,
+        "lightweight_fast_start": false,
+        "isolation_via_kernel_features": false,
+        "benefit_better_utilization": false,
+        "benefit_fast_deployment": false,
+        "benefit_testable_envs": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Habe ich pro Instanz ein eigenes Betriebssystem?",
+      "attributeKey": "has_own_os"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Teile ich mir den Kernel mit dem Host-System?",
+      "attributeKey": "shares_host_kernel"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Brauche ich dafür einen Hypervisor?",
+      "attributeKey": "uses_hypervisor"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist meine Isolation typischerweise sehr stark (nahe an echter Maschine)?",
+      "attributeKey": "strong_isolation"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Habe ich typischerweise mehr Overhead (mehr Ressourcen pro Instanz)?",
+      "attributeKey": "higher_overhead"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Starte ich typischerweise leicht/schnell (geringer Overhead)?",
+      "attributeKey": "lightweight_fast_start"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Passiert Isolation primär über Kernel-Mechanismen statt über ein eigenes OS?",
+      "attributeKey": "isolation_via_kernel_features"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist ein Hauptnutzen: bessere Auslastung der Hardware (mehr Workloads pro Host)?",
+      "attributeKey": "benefit_better_utilization"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist ein Hauptnutzen: schnelles Deployment (schnell bereitstellen/rollen)?",
+      "attributeKey": "benefit_fast_deployment"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist ein Hauptnutzen: testbare, reproduzierbare Umgebungen (dev/test/prod ähnlicher)?",
+      "attributeKey": "benefit_testable_envs"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Bin ich selbst eine VM?",
+      "attributeKey": "is_vm"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Bin ich selbst ein Container?",
+      "attributeKey": "is_container"
+    }
+  ]
+}

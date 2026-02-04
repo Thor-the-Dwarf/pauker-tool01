@@ -1,0 +1,742 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – IT-Systeme (AP1)",
+  "topic": "Hardware • Software • Dateiformate • Cloud • USV • Backup",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "it-system-ueberblick-quiz",
+      "type": "quiz",
+      "title": "Rätsel 1: IT-System – wie AP1 das meint",
+      "subtitle": "Nicht nur Specs: Betrieb + Risiken + Wiederherstellung.",
+      "hintDefault": "In Prüfungen: Use-Case nennen, Kompatibilität prüfen, Betrieb/Backup/USV/Sicherheit mitdenken.",
+      "questions": [
+        {
+          "id": "it1",
+          "text": "1. Was ist ein IT-System im AP1-Sinn am ehesten?",
+          "options": [
+            { "value": "a", "text": "Nur Hardware mit guten Spezifikationen." },
+            { "value": "b", "text": "Hardware + Software + Daten + Prozesse (Betrieb/Backup/Sicherheit)." },
+            { "value": "c", "text": "Nur das Betriebssystem." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "it2",
+          "text": "2. Was ist die bessere Prüfungsantwort bei Systemauswahl?",
+          "options": [
+            { "value": "a", "text": "Specs aufzählen: GHz, GB, TB." },
+            { "value": "b", "text": "Use-Case + Kompatibilität + Betrieb (Backup/USV) + Risiken begründen." },
+            { "value": "c", "text": "„Funktioniert bei mir“ schreiben." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "it3",
+          "text": "3. Merksatz: „Funktioniert“ ist erst wahr, wenn …",
+          "options": [
+            { "value": "a", "text": "… die CPU über 5 GHz hat." },
+            { "value": "b", "text": "… Betrieb + Wiederherstellung (Backup/Restore) geklärt sind." },
+            { "value": "c", "text": "… ein PDF dazu existiert." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "hardware-baukasten-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Hardware-Grundbaukasten",
+      "subtitle": "Was gehört wohin?",
+      "hintDefault": "AP1: Komponenten benennen + wichtige Kriterien nennen.",
+      "sortColumns": [
+        { "zone": "cpu", "label": "Rechenwerk", "hint": "(CPU)" },
+        { "zone": "ram", "label": "Arbeitsspeicher", "hint": "(RAM)" },
+        { "zone": "storage", "label": "Massenspeicher", "hint": "(SSD/HDD)" },
+        { "zone": "board", "label": "Mainboard/Chipsatz", "hint": "(Schnittstellen/Formfaktor)" },
+        { "zone": "net", "label": "Netzwerk", "hint": "(LAN/WLAN/Switch/Router)" }
+      ],
+      "sortCards": [
+        { "id": "hb1", "text": "Kerne/Threads, Takt, Cache", "correctZone": "cpu" },
+        { "id": "hb2", "text": "Größe, Typ, Dual-Channel", "correctZone": "ram" },
+        { "id": "hb3", "text": "SATA/NVMe, Kapazität, IOPS", "correctZone": "storage" },
+        { "id": "hb4", "text": "PCIe, M.2, USB, Formfaktor", "correctZone": "board" },
+        { "id": "hb5", "text": "LAN/WLAN, 1G/2.5G/10G", "correctZone": "net" }
+      ]
+    },
+    {
+      "id": "cpu-ram-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: CPU & RAM – Leistung richtig erklären",
+      "subtitle": "Single-Core vs Multi-Core, RAM-Engpass erkennen.",
+      "hintDefault": "Zu wenig RAM → Paging/Swap → „zäh“. Single-Core oft für UI/Office, Multi-Core für VMs/Render.",
+      "questions": [
+        {
+          "id": "cr1",
+          "text": "1. Welche Workloads profitieren typischerweise eher von Multi-Core?",
+          "options": [
+            { "value": "a", "text": "Viele VMs/Render/Parallel-Jobs" },
+            { "value": "b", "text": "Nur Text tippen im Editor" },
+            { "value": "c", "text": "Monitor-Helligkeit ändern" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cr2",
+          "text": "2. Was passiert oft, wenn RAM knapp ist?",
+          "options": [
+            { "value": "a", "text": "Die CPU bekommt mehr Kerne." },
+            { "value": "b", "text": "Das System nutzt Paging/Swap und wird langsam." },
+            { "value": "c", "text": "Die SSD wird automatisch größer." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cr3",
+          "text": "3. Aussage: „RAM ist wie Festplatte“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, beides ist dauerhaft." },
+            { "value": "b", "text": "Falsch: RAM ist flüchtig, sehr schnell, Arbeitsbereich." },
+            { "value": "c", "text": "Nur bei NVMe richtig." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cr4",
+          "text": "4. Merksatz: Erst …, dann …",
+          "options": [
+            { "value": "a", "text": "Erst RAM-Engpass vermeiden, dann CPU-Feintuning." },
+            { "value": "b", "text": "Erst Gehäusefarbe, dann RAM." },
+            { "value": "c", "text": "Erst BIOS, dann Mauspad." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "speicher-ssd-hdd-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Speicher – HDD vs SATA-SSD vs NVMe-SSD",
+      "subtitle": "Ordne typische Aussagen korrekt zu.",
+      "hintDefault": "HDD = günstig/GB, Mechanik. SATA-SSD = schnell & simpel. NVMe = sehr hohe IOPS/Throughput.",
+      "sortColumns": [
+        { "zone": "hdd", "label": "HDD", "hint": "(Archiv/Backup-Target)" },
+        { "zone": "sata", "label": "SSD (SATA)", "hint": "(solide, einfach)" },
+        { "zone": "nvme", "label": "SSD (NVMe)", "hint": "(IOPS/Datendurchsatz)" }
+      ],
+      "sortCards": [
+        { "id": "sh1", "text": "Günstig pro GB, gut fürs Archiv", "correctZone": "hdd" },
+        { "id": "sh2", "text": "Mechanik → höhere Zugriffszeiten", "correctZone": "hdd" },
+        { "id": "sh3", "text": "Guter Standard-Upgrade für ältere Systeme", "correctZone": "sata" },
+        { "id": "sh4", "text": "Hohe Performance, aber durch Interface begrenzt", "correctZone": "sata" },
+        { "id": "sh5", "text": "Sehr viele kleine Zugriffe pro Sekunde (IOPS)", "correctZone": "nvme" },
+        { "id": "sh6", "text": "Sehr hoher Datendurchsatz für große Transfers", "correctZone": "nvme" }
+      ]
+    },
+    {
+      "id": "iops-tbw-raid-quiz",
+      "type": "quiz",
+      "title": "Rätsel 5: IOPS, TBW, RAID – Prüfungsbegriffe",
+      "subtitle": "Kurz, klar, richtig.",
+      "hintDefault": "IOPS = viele kleine Zugriffe. TBW = Schreibhaltbarkeit. RAID = Verfügbarkeit/Performance, aber kein Backup.",
+      "questions": [
+        {
+          "id": "itr1",
+          "text": "1. IOPS beschreibt am ehesten …",
+          "options": [
+            { "value": "a", "text": "Anzahl I/O-Operationen pro Sekunde (viele kleine Zugriffe)." },
+            { "value": "b", "text": "Netzwerkgeschwindigkeit in Mbit/s." },
+            { "value": "c", "text": "CPU-Temperatur." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "itr2",
+          "text": "2. TBW ist wichtig, wenn …",
+          "options": [
+            { "value": "a", "text": "viel geschrieben wird (Logs, Builds, DB)." },
+            { "value": "b", "text": "nur selten gelesen wird." },
+            { "value": "c", "text": "man nur PDFs öffnet." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "itr3",
+          "text": "3. Warum ist RAID kein Backup?",
+          "options": [
+            { "value": "a", "text": "Weil RAID nie funktioniert." },
+            { "value": "b", "text": "Weil Löschen/Ransomware/Fehlbedienung auch im RAID „mitkopiert“ wird." },
+            { "value": "c", "text": "Weil RAID nur für HDD gilt." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "itr4",
+          "text": "4. Für DB/VM-Host ist oft besonders wichtig …",
+          "options": [
+            { "value": "a", "text": "hohe IOPS (NVMe oft sinnvoll)." },
+            { "value": "b", "text": "möglichst viele SATA-Kabel." },
+            { "value": "c", "text": "ein großes Gehäusefenster." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "schnittstellen-kompatibilitaet-sort",
+      "type": "sort",
+      "title": "Rätsel 6: Schnittstellen & Kompatibilität – Stolpersteine",
+      "subtitle": "„Passt mechanisch“ heißt nicht „passt technisch“.",
+      "hintDefault": "Mini-Check: Sockel + RAM-Typ + M.2-Protokoll + PCIe-Lanes + Treiber/Firmware + Netzteil/USV.",
+      "sortColumns": [
+        { "zone": "cpu", "label": "CPU/Mainboard", "hint": "(Sockel/Chipsatz)" },
+        { "zone": "ram", "label": "RAM", "hint": "(Typ/Kompatibilität)" },
+        { "zone": "m2", "label": "M.2/Storage", "hint": "(NVMe vs SATA, Keying)" },
+        { "zone": "pcie", "label": "PCIe/Lanes", "hint": "(Slots/Sharing)" },
+        { "zone": "fw", "label": "Firmware/Treiber", "hint": "(BIOS/UEFI/Driver)" }
+      ],
+      "sortCards": [
+        { "id": "sk1", "text": "CPU passt nur, wenn Sockel/Chipsatz kompatibel sind", "correctZone": "cpu" },
+        { "id": "sk2", "text": "DDR-Generation muss passen (z. B. DDR4 ≠ DDR5)", "correctZone": "ram" },
+        { "id": "sk3", "text": "M.2-Slot kann NVMe oder SATA unterstützen (nicht immer beides)", "correctZone": "m2" },
+        { "id": "sk4", "text": "PCIe-Lanes können geteilt werden → Slots laufen ggf. langsamer", "correctZone": "pcie" },
+        { "id": "sk5", "text": "BIOS/UEFI-Update kann CPU/RAM/Features erst nutzbar machen", "correctZone": "fw" }
+      ]
+    },
+    {
+      "id": "software-schichten-capital",
+      "type": "capital",
+      "title": "Rätsel 7: Software-Schichten – vom Metall bis zur App",
+      "subtitle": "Reihenfolge richtig setzen.",
+      "hintDefault": "Firmware startet Hardware → OS verwaltet Ressourcen/Treiber → Runtime/Middleware → App.",
+      "rows": [
+        {
+          "key": "hardware",
+          "label": "Hardware",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "firmware",
+          "label": "Firmware (BIOS/UEFI)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "os",
+          "label": "Betriebssystem (Windows/Linux) + Treiber",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "runtime",
+          "label": "Middleware/Runtime (z. B. JVM, .NET)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "app",
+          "label": "Anwendung",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system-vs-anwendung-sort",
+      "type": "sort",
+      "title": "Rätsel 8: Systemsoftware vs Anwendungssoftware",
+      "subtitle": "Sauber trennen – schnell Punkte.",
+      "hintDefault": "Systemsoftware: OS, Treiber, Dienste, Tools (Backup/Monitoring). Anwendung: Office/Browser/ERP/IDE.",
+      "sortColumns": [
+        { "zone": "system", "label": "Systemsoftware", "hint": "(Basis/Betrieb)" },
+        { "zone": "app", "label": "Anwendungssoftware", "hint": "(Nutzprogramme)" }
+      ],
+      "sortCards": [
+        { "id": "sa1", "text": "Betriebssystem", "correctZone": "system" },
+        { "id": "sa2", "text": "Gerätetreiber", "correctZone": "system" },
+        { "id": "sa3", "text": "Backup-Agent", "correctZone": "system" },
+        { "id": "sa4", "text": "Monitoring-Tool/Dienst", "correctZone": "system" },
+        { "id": "sa5", "text": "Browser", "correctZone": "app" },
+        { "id": "sa6", "text": "Office", "correctZone": "app" },
+        { "id": "sa7", "text": "ERP/CRM", "correctZone": "app" },
+        { "id": "sa8", "text": "IDE", "correctZone": "app" }
+      ]
+    },
+    {
+      "id": "virtualisierung-container-quiz",
+      "type": "quiz",
+      "title": "Rätsel 9: Virtualisierung & Container (AP1-Kurzformat)",
+      "subtitle": "Nicht verwechseln: VM ≠ Container.",
+      "hintDefault": "VM: eigenes OS, starke Isolation, mehr Overhead. Container: teilen Kernel, leichter/schneller, anderes Sicherheits-/Update-Modell.",
+      "questions": [
+        {
+          "id": "vc1",
+          "text": "1. Was beschreibt eine VM am besten?",
+          "options": [
+            { "value": "a", "text": "Teilt immer denselben Kernel wie der Host." },
+            { "value": "b", "text": "Hat typischerweise ein eigenes OS pro VM (Hypervisor)." },
+            { "value": "c", "text": "Ist nur ein ZIP-Archiv." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "vc2",
+          "text": "2. Was beschreibt Container am besten?",
+          "options": [
+            { "value": "a", "text": "Leichte Isolation von Prozessen, Kernel wird geteilt." },
+            { "value": "b", "text": "Volle Hardware-Emulation inklusive BIOS pro Container." },
+            { "value": "c", "text": "Laufen nur auf Windows 7." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "vc3",
+          "text": "3. Merksatz korrekt?",
+          "options": [
+            { "value": "a", "text": "VM = „Hardware simuliert“, Container = „Prozess isoliert“." },
+            { "value": "b", "text": "Container = „Mini-VM“, exakt identisch." },
+            { "value": "c", "text": "VMs brauchen kein OS." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "dateiformate-text-binaer-sort",
+      "type": "sort",
+      "title": "Rätsel 10: Dateiformate – Text vs Binär",
+      "subtitle": "Schnittstellen-Realität erkennen.",
+      "hintDefault": "Textformate sind lesbar, Binärformate kompakt/komplex.",
+      "sortColumns": [
+        { "zone": "text", "label": "Textformate", "hint": "(lesbar)" },
+        { "zone": "binaer", "label": "Binärformate", "hint": "(komplex/kompakt)" }
+      ],
+      "sortCards": [
+        { "id": "df1", "text": "TXT", "correctZone": "text" },
+        { "id": "df2", "text": "CSV", "correctZone": "text" },
+        { "id": "df3", "text": "JSON", "correctZone": "text" },
+        { "id": "df4", "text": "XML", "correctZone": "text" },
+        { "id": "df5", "text": "DOCX", "correctZone": "binaer" },
+        { "id": "df6", "text": "XLSX", "correctZone": "binaer" },
+        { "id": "df7", "text": "PDF", "correctZone": "binaer" },
+        { "id": "df8", "text": "JPG/PNG", "correctZone": "binaer" },
+        { "id": "df9", "text": "MP4", "correctZone": "binaer" }
+      ]
+    },
+    {
+      "id": "csv-json-xml-quiz",
+      "type": "quiz",
+      "title": "Rätsel 11: Encoding, Delimiter, Schema – die Import-Fallen",
+      "subtitle": "Warum scheitern Schnittstellen wirklich?",
+      "hintDefault": "CSV: Trennzeichen/Quotes/Zeilenumbrüche. Text: Encoding (UTF-8). JSON/XML: Struktur + Schema/Validierung.",
+      "questions": [
+        {
+          "id": "cx1",
+          "text": "1. Was ist bei CSV die häufigste Stolperfalle?",
+          "options": [
+            { "value": "a", "text": "CSV ist immer eindeutig standardisiert." },
+            { "value": "b", "text": "Delimiter/Quotes/Zeilenumbrüche (Komma vs Semikolon etc.)." },
+            { "value": "c", "text": "CSV darf keine Zahlen enthalten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cx2",
+          "text": "2. „Umlaute kaputt“ deutet oft auf …",
+          "options": [
+            { "value": "a", "text": "falsches Encoding (z. B. nicht UTF-8)." },
+            { "value": "b", "text": "zu wenig RAM." },
+            { "value": "c", "text": "zu viele CPU-Kerne." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cx3",
+          "text": "3. Was bringt Schema/Validierung bei JSON/XML?",
+          "options": [
+            { "value": "a", "text": "Prüft Struktur, Pflichtfelder, Datentypen." },
+            { "value": "b", "text": "Macht die Datei automatisch kleiner." },
+            { "value": "c", "text": "Ersetzt jedes Backup." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cx4",
+          "text": "4. Aussage: „PDF ist fälschungssicher.“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, PDF kann nie verändert werden." },
+            { "value": "b", "text": "Falsch, es ist nur nicht so bequem zu bearbeiten." },
+            { "value": "c", "text": "Nur bei PNG stimmt das." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "cloud-modelle-sort",
+      "type": "sort",
+      "title": "Rätsel 12: Cloud-Service-Modelle (IaaS/PaaS/SaaS)",
+      "subtitle": "Wer betreibt was?",
+      "hintDefault": "Mehr „as a Service“ = weniger Betrieb, aber weniger Einfluss.",
+      "sortColumns": [
+        { "zone": "iaas", "label": "IaaS", "hint": "(VM/Storage/Netz – OS/App beim Kunden)" },
+        { "zone": "paas", "label": "PaaS", "hint": "(Plattform/Runtime/DB – weniger Betrieb)" },
+        { "zone": "saas", "label": "SaaS", "hint": "(fertige Anwendung)" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Kunde verwaltet OS + Updates + App selbst", "correctZone": "iaas" },
+        { "id": "c2", "text": "Provider liefert Laufzeit/DB, Kunde deployt Anwendung", "correctZone": "paas" },
+        { "id": "c3", "text": "Fertige App, schnell startklar, geringste Kontrolle", "correctZone": "saas" }
+      ]
+    },
+    {
+      "id": "cloud-shared-responsibility-quiz",
+      "type": "quiz",
+      "title": "Rätsel 13: Cloud – Vorteile, Risiken, Shared Responsibility",
+      "subtitle": "Cloud ist nicht automatisch sicher.",
+      "hintDefault": "Provider sichert „Cloud“, Kunde sichert „Konfiguration + Daten + Zugriffe“.",
+      "questions": [
+        {
+          "id": "cs1",
+          "text": "1. Was ist eine typische Cloud-Risiko-Kategorie?",
+          "options": [
+            { "value": "a", "text": "Vendor Lock-in / Kostenexplosion / Compliance / Fehlkonfiguration" },
+            { "value": "b", "text": "Mehr Farbe im Kabel" },
+            { "value": "c", "text": "Zu viele Tastaturen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cs2",
+          "text": "2. Shared Responsibility bedeutet am ehesten …",
+          "options": [
+            { "value": "a", "text": "Provider macht alles, Kunde nichts." },
+            { "value": "b", "text": "Provider sichert Infrastruktur, Kunde verantwortet Konfiguration/Zugriffe/Daten." },
+            { "value": "c", "text": "Sicherheit ist nur Sache der Firewall." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cs3",
+          "text": "3. Beispiel: Offener Storage-Bucket im Internet. Wer hat typischerweise den Fehler verursacht?",
+          "options": [
+            { "value": "a", "text": "Kunde (Fehlkonfiguration)." },
+            { "value": "b", "text": "Monitorhersteller." },
+            { "value": "c", "text": "Die Dateiendung." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cs4",
+          "text": "4. Aussage: „In der Cloud brauche ich kein Backup mehr.“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, Cloud ist automatisch gesichert." },
+            { "value": "b", "text": "Falsch, Backup-Konzept bleibt nötig (auch bei SaaS oft separat)." },
+            { "value": "c", "text": "Nur bei PaaS stimmt das." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "usv-zweck-typen-quiz",
+      "type": "quiz",
+      "title": "Rätsel 14: USV – Zweck & Typen",
+      "subtitle": "USV kauft Zeit, keine Unsterblichkeit.",
+      "hintDefault": "Überbrückt kurz + schützt vor Schwankungen → kontrolliertes Herunterfahren + Stabilität. Typen: Offline/Line-Interactive/Online.",
+      "questions": [
+        {
+          "id": "u1",
+          "text": "1. Hauptnutzen einer USV im Betrieb?",
+          "options": [
+            { "value": "a", "text": "Mehr Speicherplatz" },
+            { "value": "b", "text": "Kurzzeit überbrücken + Spannungsschwankungen abfangen" },
+            { "value": "c", "text": "Internet beschleunigen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "u2",
+          "text": "2. Wofür ist die Laufzeit meist gedacht?",
+          "options": [
+            { "value": "a", "text": "Stundenlangen Dauerbetrieb" },
+            { "value": "b", "text": "Minuten – für kontrolliertes Herunterfahren" },
+            { "value": "c", "text": "Tage – ohne Generator" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "u3",
+          "text": "3. Typ-Reihenfolge grob nach Schutzlevel (niedrig → hoch)?",
+          "options": [
+            { "value": "a", "text": "Offline → Line-Interactive → Online" },
+            { "value": "b", "text": "Online → Offline → Line-Interactive" },
+            { "value": "c", "text": "Line-Interactive → Online → Offline" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "usv-dimensionierung-capital",
+      "type": "capital",
+      "title": "Rätsel 15: USV praxisnah dimensionieren",
+      "subtitle": "AP1-Logik in Reihenfolge.",
+      "hintDefault": "Verbraucher + Watt → Ziel-Laufzeit → Shutdown automatisieren → Wartung/Test (Akkus altern).",
+      "rows": [
+        {
+          "key": "verbraucher",
+          "label": "Verbraucher bestimmen (Server/Storage/Switch) + Leistung (W) abschätzen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "laufzeit",
+          "label": "Ziel-Laufzeit festlegen (z. B. 5–15 Minuten)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "shutdown",
+          "label": "Shutdown automatisieren (Agent/Skripte) + Reihenfolge beachten",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "wartung",
+          "label": "Wartung planen: Akkus altern → Test/Wechsel einplanen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backup-grundlagen-quiz",
+      "type": "quiz",
+      "title": "Rätsel 16: Backup – Grundprinzipien",
+      "subtitle": "Restore ist der Beweis.",
+      "hintDefault": "3-2-1, Backup-Arten (voll/inkr/diff), Restore-Test ist Pflicht.",
+      "questions": [
+        {
+          "id": "b1",
+          "text": "1. Wozu dient ein Backup primär?",
+          "options": [
+            { "value": "a", "text": "Mehr Performance" },
+            { "value": "b", "text": "Wiederherstellen nach Fehler, Malware, Löschen, Defekt" },
+            { "value": "c", "text": "Mehr RAM erzeugen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "b2",
+          "text": "2. 3-2-1-Regel bedeutet …",
+          "options": [
+            { "value": "a", "text": "3 Kopien, 2 Medien, 1 Kopie extern/offsite" },
+            { "value": "b", "text": "3 Server, 2 Switches, 1 Router" },
+            { "value": "c", "text": "3 Passwörter, 2 Faktoren, 1 Admin" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "b3",
+          "text": "3. Warum ist ein Restore-Test so wichtig?",
+          "options": [
+            { "value": "a", "text": "Weil Logs immer lügen" },
+            { "value": "b", "text": "Weil nur der Restore beweist, dass Wiederherstellung wirklich klappt" },
+            { "value": "c", "text": "Weil Backups sonst illegal sind" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "b4",
+          "text": "4. Welche Zuordnung stimmt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Voll: alles; Inkrementell: seit letztem Backup; Differentiell: seit letztem Vollbackup" },
+            { "value": "b", "text": "Inkrementell: alles; Voll: nur Änderungen" },
+            { "value": "c", "text": "Differentiell: nie nutzbar" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "rpo-rto-retention-capital",
+      "type": "capital",
+      "title": "Rätsel 17: RPO, RTO, Retention – richtig begründen",
+      "subtitle": "Wenn du’s erklären sollst: Begriffe sauber.",
+      "hintDefault": "RPO = max Datenverlust-Zeit. RTO = max Wiederanlaufzeit. Retention = Aufbewahrungsdauer/Versionen.",
+      "rows": [
+        {
+          "key": "rpo",
+          "label": "RPO: maximal akzeptabler Datenverlust (Zeitspanne)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "rto",
+          "label": "RTO: maximal akzeptable Wiederanlaufzeit",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "ret",
+          "label": "Retention: Aufbewahrungsdauer/Versionierung der Backups",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backup-vs-archiv-sort",
+      "type": "sort",
+      "title": "Rätsel 18: Backup vs Archiv",
+      "subtitle": "Häufige Verwechslung.",
+      "hintDefault": "Backup = kurzfristige Wiederherstellung. Archiv = langfristige, unveränderliche Aufbewahrung (Compliance).",
+      "sortColumns": [
+        { "zone": "backup", "label": "Backup", "hint": "(Betrieb retten)" },
+        { "zone": "archiv", "label": "Archiv", "hint": "(Nachweis/Compliance)" }
+      ],
+      "sortCards": [
+        { "id": "ba1", "text": "Schnell wiederherstellen nach Löschen/Ransomware/Defekt", "correctZone": "backup" },
+        { "id": "ba2", "text": "Versionierung für kurze/mittlere Zeiträume", "correctZone": "backup" },
+        { "id": "ba3", "text": "Langfristige Aufbewahrung von Belegen/Records", "correctZone": "archiv" },
+        { "id": "ba4", "text": "Unveränderbarkeit/Suchbarkeit (je nach Anforderung)", "correctZone": "archiv" }
+      ]
+    },
+    {
+      "id": "finale-praxisfaelle-quiz",
+      "type": "quiz",
+      "title": "Finale: Praxisfälle AP1 – schnell einordnen",
+      "subtitle": "Trefferquote zählt.",
+      "hintDefault": "Formel: Use-Case + Kompatibilität + Betrieb (Backup/USV) + Risiko.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Büro-PC wirkt „zäh“, CPU-Auslastung niedrig. Was ist ein häufiger Grund?",
+          "options": [
+            { "value": "a", "text": "Zu wenig RAM → Paging/Swap" },
+            { "value": "b", "text": "Zu viele CPU-Kerne" },
+            { "value": "c", "text": "Zu viele USB-Ports" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f2",
+          "text": "2. VM-Host/DB-System: Welche Speicher-Eigenschaft ist oft entscheidend?",
+          "options": [
+            { "value": "a", "text": "Sehr hohe IOPS (NVMe oft sinnvoll)" },
+            { "value": "b", "text": "Nur günstiger Preis/GB" },
+            { "value": "c", "text": "Nur Dateiendung" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Nur Server hängt an USV, Switch nicht. Was ist das Problem?",
+          "options": [
+            { "value": "a", "text": "Server läuft, aber Netzwerk ist tot → Betrieb trotzdem gestört" },
+            { "value": "b", "text": "USV wird schneller" },
+            { "value": "c", "text": "Das ist optimal, spart Kabel" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f4",
+          "text": "4. CSV-Import: Alles landet in einer Spalte. Was prüfst du zuerst?",
+          "options": [
+            { "value": "a", "text": "Delimiter/Trennzeichen + Quotes (Komma/Semikolon)" },
+            { "value": "b", "text": "CPU-Takt" },
+            { "value": "c", "text": "GPU-Lanes" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f5",
+          "text": "5. Cloud: „Provider macht Sicherheit komplett“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, Kunde hat keine Verantwortung." },
+            { "value": "b", "text": "Falsch, Shared Responsibility: Kunde sichert Konfiguration/Zugriffe/Daten." },
+            { "value": "c", "text": "Nur bei SaaS stimmt das." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

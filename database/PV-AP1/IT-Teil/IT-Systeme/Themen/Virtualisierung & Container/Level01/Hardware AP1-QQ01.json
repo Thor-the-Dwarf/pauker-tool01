@@ -1,0 +1,116 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Virtualisierung & Container (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Eine VM bringt pro Instanz ein eigenes Betriebssystem mit (eigener Kernel, eigene Systemdienste).",
+      "correct": "keine"
+    },
+    {
+      "text": "Hypervisor verwaltet mehrere virtuelle Maschinen auf einem Host (Ressourcen wie CPU/RAM/Storage werden zugeteilt).",
+      "correct": "keine"
+    },
+    {
+      "text": "VMs bieten starke Isolation, weil jede VM wie ein eigener Computer mit eigenem OS wirkt.",
+      "correct": "keine"
+    },
+    {
+      "text": "VMs haben mehr Overhead, weil pro VM ein komplettes OS mitläuft (Bootzeit, Updates, RAM/Storage).",
+      "correct": "keine"
+    },
+    {
+      "text": "Container teilen sich den Kernel des Hosts: Prozesse laufen isoliert, aber nicht mit eigenem Kernel pro Container.",
+      "correct": "keine"
+    },
+    {
+      "text": "Container starten meist deutlich schneller und sind „leichter“ als VMs (weniger Overhead).",
+      "correct": "keine"
+    },
+    {
+      "text": "Container-Isolation ist anders: Sicherheitsgrenzen hängen stark von Kernel, Namespaces/Permissions und Konfiguration ab.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Container sind keine „Mini-VMs“ – sie teilen Kernel und verhalten sich deshalb anders bei Treibern/Kernel-Funktionen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Nutzen von Virtualisierung: bessere Hardware-Auslastung durch Konsolidierung vieler Systeme auf weniger Hosts.",
+      "correct": "keine"
+    },
+    {
+      "text": "Nutzen von Containern: schnelles Deployment durch Images und reproduzierbare Laufzeitumgebungen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Testumgebungen lassen sich mit Containern oft sehr schnell aufziehen und wieder wegwerfen (sauberer Zustand).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Ein Container ersetzt nicht automatisch ein vollständiges Betriebssystem, wenn du OS-spezifische Dinge brauchst.",
+      "correct": "keine"
+    },
+    {
+      "text": "„Jeder Container hat immer ein eigenes Betriebssystem mit eigenem Kernel.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„Eine VM teilt sich immer den Kernel des Hosts und ist deshalb so leicht wie ein Container.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Virtualisierung und Container helfen bei Auslastung, schnellem Deployment und testbaren Umgebungen – je nach Bedarf mit anderer Isolation und anderem Overhead.",
+      "correct": "alle"
+    }
+  ]
+}

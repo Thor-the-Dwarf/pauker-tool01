@@ -1,0 +1,224 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Hardware-Grundbaukasten (AP1)",
+  "topic": "CPU • RAM • SSD/HDD • Mainboard/Chipsatz • Netzwerk",
+  "estimated_minutes": 25,
+  "sections": [
+    {
+      "id": "grundbaukasten-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Was gehört wohin?",
+      "subtitle": "Ordne Hardware-Begriffe dem richtigen Bauteil zu.",
+      "hintDefault": "Merke: CPU=rechnet, RAM=kurzzeitig, SSD/HDD=langzeitig, Mainboard=verbindet, Netzwerk=verbindet nach außen.",
+      "sortColumns": [
+        { "zone": "cpu", "label": "CPU / Rechenwerk", "hint": "(Kerne/Threads/Takt/Cache)" },
+        { "zone": "ram", "label": "RAM / Arbeitsspeicher", "hint": "(Größe/Typ/Dual-Channel)" },
+        { "zone": "storage", "label": "Massenspeicher", "hint": "(SSD/HDD, SATA/NVMe, IOPS)" },
+        { "zone": "board", "label": "Mainboard / Chipsatz", "hint": "(PCIe/M.2/USB/Formfaktor)" },
+        { "zone": "net", "label": "Netzwerk", "hint": "(LAN/WLAN, Switch/Router)" }
+      ],
+      "sortCards": [
+        { "id": "gb1", "text": "Kerne und Threads", "correctZone": "cpu" },
+        { "id": "gb2", "text": "Taktfrequenz (GHz)", "correctZone": "cpu" },
+        { "id": "gb3", "text": "Cache (L1/L2/L3)", "correctZone": "cpu" },
+        { "id": "gb4", "text": "Kapazität in GB (z. B. 16/32)", "correctZone": "ram" },
+        { "id": "gb5", "text": "DDR-Typ (z. B. DDR4/DDR5)", "correctZone": "ram" },
+        { "id": "gb6", "text": "Dual-Channel", "correctZone": "ram" },
+        { "id": "gb7", "text": "SSD oder HDD", "correctZone": "storage" },
+        { "id": "gb8", "text": "SATA oder NVMe", "correctZone": "storage" },
+        { "id": "gb9", "text": "IOPS (viele kleine Zugriffe)", "correctZone": "storage" },
+        { "id": "gb10", "text": "M.2-Steckplatz", "correctZone": "board" },
+        { "id": "gb11", "text": "PCIe-Lanes/Slots", "correctZone": "board" },
+        { "id": "gb12", "text": "USB-Anschlüsse/Header", "correctZone": "board" },
+        { "id": "gb13", "text": "Formfaktor (ATX/mATX/ITX)", "correctZone": "board" },
+        { "id": "gb14", "text": "LAN (Ethernet)", "correctZone": "net" },
+        { "id": "gb15", "text": "WLAN", "correctZone": "net" },
+        { "id": "gb16", "text": "Switch", "correctZone": "net" },
+        { "id": "gb17", "text": "Router", "correctZone": "net" }
+      ]
+    },
+    {
+      "id": "cpu-kurzcheck-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: CPU – die typischen Prüfungs-Punkte",
+      "subtitle": "Was bedeutet was, und wann hilft es?",
+      "hintDefault": "Mehr Kerne helfen bei Parallelität. Takt hilft bei Single-Thread. Cache hilft bei häufigen Datenzugriffen.",
+      "questions": [
+        {
+          "id": "cpu1",
+          "text": "1. Wofür stehen Threads im Kontext einer CPU am ehesten?",
+          "options": [
+            { "value": "a", "text": "Physische Recheneinheiten (immer = Kerne)." },
+            { "value": "b", "text": "Ausführungsstränge, die ein Kern parallel abarbeiten kann (logisch)." },
+            { "value": "c", "text": "Die Kapazität des Arbeitsspeichers." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cpu2",
+          "text": "2. Was bringt Cache typischerweise?",
+          "options": [
+            { "value": "a", "text": "Schnelleren Zugriff auf häufig benötigte Daten/Instruktionen." },
+            { "value": "b", "text": "Mehr Massenspeicherplatz." },
+            { "value": "c", "text": "Bessere WLAN-Reichweite." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cpu3",
+          "text": "3. Welche Aussage ist am ehesten korrekt?",
+          "options": [
+            { "value": "a", "text": "Hoher Takt hilft besonders bei Aufgaben, die kaum parallel sind." },
+            { "value": "b", "text": "Hoher Takt ersetzt immer mehr Kerne." },
+            { "value": "c", "text": "Takt ist nur bei SSDs relevant." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "ram-dualchannel-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Dual-Channel richtig stecken",
+      "subtitle": "Bringe die Schritte in die richtige Reihenfolge.",
+      "hintDefault": "Gleiche Module paaren → richtige Slots laut Mainboard-Handbuch → prüfen im BIOS/UEFI.",
+      "rows": [
+        {
+          "key": "module",
+          "label": "Passende Module wählen (gleiches Kit/Specs)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "slots",
+          "label": "In die richtigen Slots stecken (z. B. A2/B2)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "check",
+          "label": "Dual-Channel/Speed prüfen (BIOS/UEFI/Tool)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "massenspeicher-quiz",
+      "type": "quiz",
+      "title": "Rätsel 4: SSD/HDD – SATA/NVMe und IOPS",
+      "subtitle": "Nicht nur „GB“ zählen.",
+      "hintDefault": "NVMe hängt über PCIe, SATA ist langsamer. IOPS sind wichtig bei vielen kleinen Dateien/DB-Zugriffen.",
+      "questions": [
+        {
+          "id": "ms1",
+          "text": "1. Was unterscheidet NVMe typischerweise von SATA-SSDs?",
+          "options": [
+            { "value": "a", "text": "NVMe nutzt meist PCIe und ist für hohe Parallelität/Throughput ausgelegt." },
+            { "value": "b", "text": "NVMe ist immer eine HDD." },
+            { "value": "c", "text": "SATA ist ein WLAN-Standard." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "ms2",
+          "text": "2. Wofür steht IOPS am ehesten?",
+          "options": [
+            { "value": "a", "text": "Anzahl Ein-/Ausgabe-Operationen pro Sekunde (kleine Zugriffe)." },
+            { "value": "b", "text": "Temperatur der SSD in Grad." },
+            { "value": "c", "text": "Maximale CPU-Kerne." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "ms3",
+          "text": "3. Welche Kombination passt am besten für „viele kleine Dateien / DB-Zugriffe“?",
+          "options": [
+            { "value": "a", "text": "HDD mit niedrigen IOPS." },
+            { "value": "b", "text": "SSD (idealerweise NVMe) mit hohen IOPS." },
+            { "value": "c", "text": "USB-Stick als Systemlaufwerk." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "mainboard-schnittstellen-sort",
+      "type": "sort",
+      "title": "Rätsel 5: Mainboard – Schnittstellen & Formfaktor",
+      "subtitle": "Was steckt wo, und warum ist das wichtig?",
+      "hintDefault": "Mainboard = Verteiler/Backplane: Slots/Ports bestimmen, was überhaupt geht.",
+      "sortColumns": [
+        { "zone": "pcie", "label": "PCIe", "hint": "(Erweiterungskarten/Lanes)" },
+        { "zone": "m2", "label": "M.2", "hint": "(SSD/Keying/Anbindung)" },
+        { "zone": "usb", "label": "USB", "hint": "(Peripherie/Ports/Header)" },
+        { "zone": "form", "label": "Formfaktor", "hint": "(passt ins Gehäuse)" }
+      ],
+      "sortCards": [
+        { "id": "mb1", "text": "Grafikkarte/Netzwerkkarte/Erweiterungskarten", "correctZone": "pcie" },
+        { "id": "mb2", "text": "Lanes bestimmen Bandbreite/Sharing", "correctZone": "pcie" },
+        { "id": "mb3", "text": "Kleiner Steckplatz für SSD-Module", "correctZone": "m2" },
+        { "id": "mb4", "text": "Kann SATA oder PCIe/NVMe angebunden sein (je nach Board)", "correctZone": "m2" },
+        { "id": "mb5", "text": "Anschlüsse für Maus/Tastatur/Stick/Headset", "correctZone": "usb" },
+        { "id": "mb6", "text": "Interne Header für Front-USB am Gehäuse", "correctZone": "usb" },
+        { "id": "mb7", "text": "ATX vs. mATX vs. ITX (Platz/Slots)", "correctZone": "form" },
+        { "id": "mb8", "text": "Entscheidet, ob Board ins Gehäuse passt", "correctZone": "form" }
+      ]
+    },
+    {
+      "id": "netzwerk-kontext-quiz",
+      "type": "quiz",
+      "title": "Finale: Netzwerk – LAN/WLAN, Switch/Router",
+      "subtitle": "Kontext ist König.",
+      "hintDefault": "Switch verbindet Geräte im LAN. Router verbindet Netze (z. B. LAN ↔ Internet). WLAN ist nur das Funkmedium, dahinter steckt trotzdem ein Netzwerk.",
+      "questions": [
+        {
+          "id": "nw1",
+          "text": "1. Wofür ist ein Switch im Standardfall da?",
+          "options": [
+            { "value": "a", "text": "Endgeräte im gleichen LAN verbinden (Layer-2, vereinfacht)." },
+            { "value": "b", "text": "IP-Adressen vergeben (immer)." },
+            { "value": "c", "text": "Stromversorgung des PCs." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "nw2",
+          "text": "2. Wofür ist ein Router im Standardfall da?",
+          "options": [
+            { "value": "a", "text": "Geräte innerhalb eines LANs nur per Kabel verbinden." },
+            { "value": "b", "text": "Netze verbinden und zwischen ihnen weiterleiten (z. B. LAN ↔ Internet)." },
+            { "value": "c", "text": "Nur WLAN-Passwörter speichern." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "nw3",
+          "text": "3. Welche Aussage trifft WLAN am ehesten?",
+          "options": [
+            { "value": "a", "text": "WLAN ersetzt komplett jedes Netzwerkgerät (Switch/Router sind unnötig)." },
+            { "value": "b", "text": "WLAN ist ein Übertragungsmedium; es braucht trotzdem Netzwerk-Komponenten/Logik dahinter." },
+            { "value": "c", "text": "WLAN ist eine Art Massenspeicher." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

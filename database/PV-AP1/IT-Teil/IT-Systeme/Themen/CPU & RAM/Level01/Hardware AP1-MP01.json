@@ -1,0 +1,120 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "CPU & RAM Leistung (AP1) – Single-Core • Multi-Core • Swap • RAM-Parameter – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Leistungsfaktor, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Bewertung, Auswahl, Fehlersuche).",
+  "columnTitles": {
+    "column1": "Begriff / Faktor",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Leistungsfaktor oder RAM-Begriff.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "cpu_single_core",
+      "name": "Single-Core-Leistung",
+      "description": "Leistung eines einzelnen Kerns; wichtig für reaktionsschnelle UI, Office, viele „kurze“ Aufgaben und Programme, die kaum parallelisieren.",
+      "example": "Office + Browser fühlt sich zackiger an, obwohl die CPU weniger Kerne hat, aber pro Kern schneller ist."
+    },
+    {
+      "id": "cpu_multi_core",
+      "name": "Multi-Core-Leistung",
+      "description": "Leistung über viele Kerne/Threads; wichtig bei gut parallelisierbaren Workloads wie VMs, Rendering, Kompilieren, Batch-Verarbeitung.",
+      "example": "Mehrere VMs + Build-Pipeline laufen stabiler mit 8–16 Kernen als mit 4 Kernen."
+    },
+    {
+      "id": "parallelisierbarkeit",
+      "name": "Parallelisierbarkeit (Workload-Faktor)",
+      "description": "Ob eine Aufgabe in mehrere gleichzeitig laufende Teile zerlegt werden kann; bestimmt, ob mehr Kerne wirklich helfen.",
+      "example": "Ein Videorender kann viele Kerne nutzen, ein einzelner Excel-Filter oft nicht."
+    },
+    {
+      "id": "cpu_kerne_threads",
+      "name": "Kerne & Threads",
+      "description": "Mehr Kerne = mehr echte Rechenarbeit parallel; Threads erhöhen die Auslastung (SMT), sind aber kein Ersatz für echte Kerne.",
+      "example": "8C/16T ist bei parallelen Tasks klar besser als 4C/8T – aber nicht doppelt so schnell in jedem Fall."
+    },
+    {
+      "id": "cpu_takt_boost",
+      "name": "Takt/Boost (CPU)",
+      "description": "Höhere Taktung hilft vor allem bei Single-Core-Last; reale Leistung hängt zusätzlich von Architektur, Kühlung und Dauer-Boost ab.",
+      "example": "Bei langen Builds fällt der Boost wegen Temperatur/Power-Limit ab → Leistung sinkt trotz hoher Max-Angabe."
+    },
+    {
+      "id": "cpu_cache_impact",
+      "name": "Cache-Einfluss",
+      "description": "Mehr/effizienter Cache reduziert RAM-Zugriffe und beschleunigt viele typische Programme mit wiederkehrenden Datenzugriffen.",
+      "example": "Große Projektindizes/Compiler profitieren, wenn oft gleiche Datenstrukturen aus dem Cache bedient werden."
+    },
+    {
+      "id": "ram_kapazitaet",
+      "name": "RAM-Kapazität",
+      "description": "Wie viele Daten gleichzeitig im schnellen Arbeitsspeicher liegen können; wichtigster RAM-Faktor, bevor man über Feintuning redet.",
+      "example": "IDE + Browser + VM: 8 GB → ständig am Limit, 16–32 GB → deutlich ruhiger."
+    },
+    {
+      "id": "ram_zu_wenig_swap",
+      "name": "Zu wenig RAM → Paging/Swap",
+      "description": "Wenn RAM voll ist, lagert das System Speicher auf Massenspeicher aus (Swap/Pagefile). Das ist viel langsamer → System wird „zäh“.",
+      "example": "Beim Tab-Wechsel hängt alles kurz: RAM voll, OS schiebt Speicher auf SSD und wieder zurück."
+    },
+    {
+      "id": "swap_indizien",
+      "name": "Swap/Paging erkennen (Symptome)",
+      "description": "Typisch: dauerhafte Datenträgeraktivität, Programme reagieren verzögert, „Hänger“ beim Wechseln, obwohl CPU nicht voll ist.",
+      "example": "Task-Manager zeigt wenig CPU, aber Datenträger 100% → häufig Paging statt echter Rechenlast."
+    },
+    {
+      "id": "ram_takt",
+      "name": "RAM-Takt (MT/s)",
+      "description": "Gibt Datenrate/Transferrate an; kann Leistung in speicherlastigen Szenarien beeinflussen, aber meist nachrangig zur Kapazität.",
+      "example": "Bei iGPU oder speicherlastigen Aufgaben bringt höherer RAM-Takt messbar mehr als bei reiner Office-Nutzung."
+    },
+    {
+      "id": "ram_latenz",
+      "name": "RAM-Latenz",
+      "description": "Zeit bis Daten verfügbar sind (Timings/CL); niedrigere Latenz kann helfen, besonders bei vielen kleinen Zugriffen.",
+      "example": "Zwei RAM-Kits: gleich viel GB, aber eins mit besserer Latenz → minimale Vorteile in manchen Workloads."
+    },
+    {
+      "id": "ram_kompatibilitaet",
+      "name": "RAM-Kompatibilität",
+      "description": "RAM muss zu Mainboard und CPU passen (DDR-Generation, unterstützte Taktraten, Slot-Belegung, ggf. QVL/Profiles).",
+      "example": "DDR5-Kit läuft nur auf Standardtakt, weil Board/CPU das Profil nicht sauber unterstützt."
+    },
+    {
+      "id": "ram_profiles",
+      "name": "RAM-Profile (XMP/EXPO)",
+      "description": "Vordefinierte Einstellungen für höhere Taktraten/Timings; ohne Profil läuft RAM oft langsamer im JEDEC-Standardmodus.",
+      "example": "Nach Einbau: RAM läuft „zu langsam“ → Profil aktivieren, damit der spezifizierte Takt genutzt wird."
+    },
+    {
+      "id": "ram_dual_channel",
+      "name": "Dual-Channel (Bandbreite)",
+      "description": "Zwei Module in passenden Slots erhöhen Speicherbandbreite; relevant für iGPU und speicherhungrige Szenarien.",
+      "example": "1×16 GB (Single-Channel) bremst iGPU spürbar; 2×8 GB (Dual-Channel) bringt mehr FPS."
+    },
+    {
+      "id": "ecc_ram",
+      "name": "ECC-RAM (Server)",
+      "description": "Fehlerkorrektur im Arbeitsspeicher (bit flips erkennen/korrigieren); erhöht Zuverlässigkeit, benötigt unterstützende CPU/Mainboard.",
+      "example": "Server für Datenbank/VM-Host nutzt ECC, um Speicherfehler nicht in Datenkorruption enden zu lassen."
+    },
+    {
+      "id": "kapazitaet_vs_speed",
+      "name": "Merksatz: Erst Kapazität, dann Speed",
+      "description": "Wenn RAM knapp ist, bringt mehr Kapazität fast immer mehr als etwas mehr Takt/Latenz-Tuning.",
+      "example": "Von 8→16 GB beseitigt Swap – das ist ein Riesensprung; DDR-Feintuning bringt danach kleine Prozentwerte."
+    },
+    {
+      "id": "cpu_vs_ram_bottleneck",
+      "name": "Bottleneck: CPU vs RAM",
+      "description": "CPU-Last hoch → Rechenlimit; RAM voll/Swap → Speicherdruck; Diagnose entscheidet, welches Upgrade sinnvoll ist.",
+      "example": "Kompilieren: CPU 100% → mehr Kerne helfen. Browser/VM stottert: RAM voll → mehr RAM hilft."
+    }
+  ]
+}

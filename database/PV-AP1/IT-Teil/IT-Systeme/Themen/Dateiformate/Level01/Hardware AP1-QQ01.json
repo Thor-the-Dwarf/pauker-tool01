@@ -1,0 +1,90 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Dateiformate: Basics (Text vs. Binär) (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Textformat",
+    "Binärformat",
+    "Encoding (UTF-8)",
+    "Trennzeichen (CSV)",
+    "Schema/Validierung",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Menschenlesbar im Editor; gut für Schnittstellen, Logs und einfache Weiterverarbeitung.",
+      "correct": "Textformat"
+    },
+    {
+      "text": "Beispiele: TXT, CSV, JSON, XML.",
+      "correct": "Textformat"
+    },
+    {
+      "text": "Kompakt und oft komplex aufgebaut; ohne passenden Parser/Programm schwer direkt zu lesen.",
+      "correct": "Binärformat"
+    },
+    {
+      "text": "Beispiele: DOCX, XLSX, PDF, JPG/PNG, MP4.",
+      "correct": "Binärformat"
+    },
+    {
+      "text": "Prüfungsfalle: Sieht im Editor „kaputt“ aus, weil Bytes nicht als Text gedacht sind.",
+      "correct": "Binärformat"
+    },
+    {
+      "text": "Legt fest, wie Zeichen in Bytes codiert sind; wichtig, damit Umlaute/Sonderzeichen nicht zu „Müll“ werden.",
+      "correct": "Encoding (UTF-8)"
+    },
+    {
+      "text": "Wenn das falsch ist, entstehen Effekte wie „Ã¼“ statt „ü“.",
+      "correct": "Encoding (UTF-8)"
+    },
+    {
+      "text": "Wichtig bei tabellarischen Textdaten: definiert, woran Spalten getrennt werden (z. B. ; oder ,).",
+      "correct": "Trennzeichen (CSV)"
+    },
+    {
+      "text": "Prüfungsfalle: Falsches Trennzeichen führt dazu, dass alle Werte in einer einzigen Spalte landen.",
+      "correct": "Trennzeichen (CSV)"
+    },
+    {
+      "text": "Regeln/Struktur prüfen lassen, damit Daten wirklich dem erwarteten Aufbau entsprechen (z. B. Pflichtfelder, Datentypen).",
+      "correct": "Schema/Validierung"
+    },
+    {
+      "text": "Relevant, wenn Schnittstellen stabil sein sollen: Änderungen müssen kontrolliert passieren (z. B. Versionierung).",
+      "correct": "Schema/Validierung"
+    },
+    {
+      "text": "„JSON und XML sind typischerweise menschenlesbar und werden oft für APIs/Schnittstellen genutzt.“",
+      "correct": "Textformat"
+    },
+    {
+      "text": "„PDF ist immer ein reines Textformat, weil man Text markieren kann.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„CSV ist standardisiert auf genau ein Trennzeichen, weltweit immer gleich.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„UTF-8 ist ein Dateiformat wie CSV.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„Encoding, Trennzeichen und Schema/Validierung sind typische Qualitäts-Checks für robuste Datenaustausche.“",
+      "correct": "alle"
+    },
+    {
+      "text": "Wenn zwei Systeme Daten austauschen, ist es oft sinnvoll, ein Textformat zu wählen, um Debugging/Integration zu erleichtern.",
+      "correct": "Textformat"
+    },
+    {
+      "text": "Wenn Größe/Performance im Vordergrund stehen (z. B. Bilder, Video), sind kompakte Byte-Strukturen üblich.",
+      "correct": "Binärformat"
+    }
+  ]
+}

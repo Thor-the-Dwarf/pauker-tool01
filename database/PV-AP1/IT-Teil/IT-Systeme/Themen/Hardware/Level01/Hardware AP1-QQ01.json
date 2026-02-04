@@ -1,0 +1,144 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Hardware-Grundbaukasten (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Rechenwerk des PCs: Führt Befehle aus und bestimmt mit Kernen/Threads, Takt und Cache maßgeblich die Rechenleistung.",
+      "correct": "keine"
+    },
+    {
+      "text": "Viele Kerne/Threads helfen besonders bei parallelen Aufgaben (z. B. Rendering), weniger bei rein single-thread-lastigen Jobs.",
+      "correct": "keine"
+    },
+    {
+      "text": "Kleiner, sehr schneller Zwischenspeicher direkt an/auf der CPU, reduziert Zugriffe auf den langsameren RAM.",
+      "correct": "keine"
+    },
+    {
+      "text": "Arbeitsspeicher: Flüchtig, schnell, hält aktuell genutzte Programme/Daten – wird beim Ausschalten gelöscht.",
+      "correct": "keine"
+    },
+    {
+      "text": "Dual-Channel: Zwei passende RAM-Module können den Datendurchsatz erhöhen (richtige Slots beachten).",
+      "correct": "keine"
+    },
+    {
+      "text": "Mehr RAM hilft vor allem gegen Auslagerung auf Massenspeicher, wenn viele Programme/Browser-Tabs offen sind.",
+      "correct": "keine"
+    },
+    {
+      "text": "Massenspeicher: Nicht-flüchtig, speichert OS/Programme/Daten dauerhaft (z. B. SSD oder HDD).",
+      "correct": "keine"
+    },
+    {
+      "text": "NVMe-SSD nutzt typischerweise PCIe und ist meist deutlich schneller als SATA-SSD, vor allem bei vielen parallelen Zugriffen.",
+      "correct": "keine"
+    },
+    {
+      "text": "IOPS beschreibt, wie viele Ein-/Ausgabe-Operationen pro Sekunde möglich sind (wichtig bei vielen kleinen Dateien/DB).",
+      "correct": "keine"
+    },
+    {
+      "text": "HDD: Mechanisch, günstig pro GB, gut für große Archive – aber langsamer und empfindlicher als SSD.",
+      "correct": "keine"
+    },
+    {
+      "text": "Mainboard: Verbindet alle Komponenten; bestimmt u. a. Sockel, RAM-Typ, PCIe-Slots, M.2, USB und Anschlüsse.",
+      "correct": "keine"
+    },
+    {
+      "text": "Chipsatz: Steuert/koordiniert viele Board-Funktionen (I/O), beeinflusst z. B. Anzahl/Art von Ports und Erweiterbarkeit.",
+      "correct": "keine"
+    },
+    {
+      "text": "Formfaktor (z. B. ATX, mATX, ITX) muss zum Gehäuse passen und beeinflusst Anzahl Slots/Ports.",
+      "correct": "keine"
+    },
+    {
+      "text": "M.2 ist ein Steckplatz-Formfaktor; darüber kann SATA- oder NVMe-SSD laufen (nicht automatisch immer NVMe).",
+      "correct": "keine"
+    },
+    {
+      "text": "PCIe-Lanes sind begrenzt: Viele schnelle Geräte teilen sich ggf. Bandbreite oder Slots laufen nicht mit voller Anbindung.",
+      "correct": "keine"
+    },
+    {
+      "text": "Netzwerk: LAN ist kabelgebunden, meist stabiler und mit niedrigerer Latenz als WLAN.",
+      "correct": "keine"
+    },
+    {
+      "text": "WLAN teilt sich Airtime: Viele Clients oder Störungen können die effektive Datenrate spürbar senken.",
+      "correct": "keine"
+    },
+    {
+      "text": "Switch verbindet Geräte im gleichen Netzwerk (Layer 2) und verteilt Frames anhand MAC-Adressen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Router verbindet unterschiedliche Netzwerke (z. B. LAN ↔ Internet) und übernimmt typischerweise Routing/NAT.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Ein Switch ersetzt keinen Router, wenn du ins Internet oder in ein anderes Subnetz musst.",
+      "correct": "keine"
+    },
+    {
+      "text": "Der Hardware-Grundbaukasten umfasst CPU, RAM, Massenspeicher, Mainboard/Chipsatz und Netzwerk – das sind die Kernblöcke im Überblick.",
+      "correct": "alle"
+    },
+    {
+      "text": "„RAM ist ein dauerhafter Massenspeicher wie eine SSD und behält Daten nach dem Ausschalten.“",
+      "correct": "keine"
+    }
+  ]
+}

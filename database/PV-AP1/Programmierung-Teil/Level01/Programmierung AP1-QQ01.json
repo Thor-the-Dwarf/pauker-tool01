@@ -1,0 +1,252 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Programmierung (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Zeigt, was ein System aus Sicht der Nutzer können soll – nicht, wie es intern umgesetzt wird.",
+      "correct": "Use-Case-Diagramm"
+    },
+    {
+      "text": "Actor ist eine Rolle (z. B. Admin), nicht eine konkrete Person.",
+      "correct": "Use-Case-Diagramm"
+    },
+    {
+      "text": "Mini-Template: Vorbedingung → Hauptablauf (Happy Path) → Alternativen/Fehlerfälle → Nachbedingung.",
+      "correct": "Use-Case-Text"
+    },
+    {
+      "text": "Besteht aus Klassenname, Attributen und Methoden; Beziehungen wie Vererbung gehören dazu.",
+      "correct": "Klassendiagramm"
+    },
+    {
+      "text": "1..1, 0..1, 1..*, 0..* beschreiben, wie viele Objekte in einer Beziehung erlaubt oder nötig sind.",
+      "correct": "Kardinalität"
+    },
+    {
+      "text": "Visualisiert Ablauf/Logik mit Start/Ende, Aktionen, Entscheidungen und Schleifen.",
+      "correct": "Aktivitätsdiagramm"
+    },
+    {
+      "text": "Prüfungsfalle: Eine Verzweigung ohne klar beschriftete Bedingung ist praktisch nicht bewertbar.",
+      "correct": "Aktivitätsdiagramm"
+    },
+    {
+      "text": "Zeigt zeitliche Nachrichtenabfolge zwischen Komponenten, z. B. UI → Service → DB.",
+      "correct": "Sequenzdiagramm"
+    },
+    {
+      "text": "Zeit läuft von oben nach unten; Lifelines repräsentieren Objekte oder Komponenten.",
+      "correct": "Sequenzdiagramm"
+    },
+    {
+      "text": "Modelliert Objekte mit Lebensphasen (z. B. Ticket: Neu → Zugewiesen → In Bearbeitung → Gelöst → Geschlossen).",
+      "correct": "Zustandsdiagramm"
+    },
+    {
+      "text": "Warnung: „Prüfen“ ist eine Aktion, kein Zustand.",
+      "correct": "Zustandsdiagramm"
+    },
+    {
+      "text": "Datenmodell mit Entitäten, Beziehungen und Schlüsseln (PK/FK) als Basis für Tabellen.",
+      "correct": "ERD/ERM"
+    },
+    {
+      "text": "Many-to-Many wird relational sauber über eine eigene Verknüpfungstabelle gelöst.",
+      "correct": "M:N-Zwischentabelle"
+    },
+    {
+      "text": "Jede Zelle enthält genau einen atomaren Wert; keine Listen/Mehrfachwerte in einer Spalte.",
+      "correct": "1NF"
+    },
+    {
+      "text": "Attribute dürfen nicht nur von einem Teil eines zusammengesetzten Primärschlüssels abhängen.",
+      "correct": "2NF"
+    },
+    {
+      "text": "Keine Abhängigkeiten zwischen Nicht-Schlüssel-Attributen; Redundanz vermeiden.",
+      "correct": "3NF"
+    },
+    {
+      "text": "Algorithmus/Logik eindeutig darstellen, ohne sprachspezifische Syntax.",
+      "correct": "Pseudocode"
+    },
+    {
+      "text": "Standard-Symbole: Oval für Start/Ende, Rechteck für Prozess, Raute für Entscheidung, Parallelogramm für Ein-/Ausgabe.",
+      "correct": "PAP (Flowchart)"
+    },
+    {
+      "text": "Blockbasiert ohne Pfeile; erzwingt strukturierte Programmierung ohne wilde Sprünge.",
+      "correct": "Struktogramm"
+    },
+    {
+      "text": "Schritte werden strikt nacheinander ausgeführt: erst A, dann B, dann C.",
+      "correct": "Kontrollstruktur: Sequenz"
+    },
+    {
+      "text": "If/Else-Entscheidung mit klarer Bedingung, die den Pfad bestimmt.",
+      "correct": "Kontrollstruktur: Auswahl"
+    },
+    {
+      "text": "Off-by-one: Schleife läuft genau 1× zu viel oder zu wenig wegen falscher Grenze/Abbruchbedingung.",
+      "correct": "Kontrollstruktur: Schleife"
+    },
+    {
+      "text": "Typ bestimmt Verhalten: '10' + '2' ergibt nicht 12, wenn beides Text ist.",
+      "correct": "Datentyp"
+    },
+    {
+      "text": "Reihenfolge ist wichtig; Zugriff oft per Index (Position).",
+      "correct": "Liste/Array"
+    },
+    {
+      "text": "Zuordnung Schlüssel → Wert für schnellen Lookup.",
+      "correct": "Dictionary/Map"
+    },
+    {
+      "text": "Entwicklungsumgebung mit Code-Vervollständigung und Werkzeugunterstützung für Programmierung.",
+      "correct": "IDE"
+    },
+    {
+      "text": "Fehlersuche mit Breakpoints, Step-by-Step und Variablenprüfung.",
+      "correct": "Debugger"
+    },
+    {
+      "text": "Änderungen und Stände nachvollziehbar machen, inkl. Historie und Zusammenarbeit.",
+      "correct": "Versionskontrolle (Git)"
+    },
+    {
+      "text": "Kleine, isolierte Tests für einzelne Funktionen/Methoden.",
+      "correct": "Unit Test"
+    },
+    {
+      "text": "Testet das Zusammenspiel mehrerer Komponenten (z. B. Service + Datenbank).",
+      "correct": "Integration Test"
+    },
+    {
+      "text": "Testet das Gesamtsystem aus Anwendersicht (End-to-End).",
+      "correct": "System Test"
+    },
+    {
+      "text": "Nachvollziehbarkeit durch Protokollierung; dabei datenschutzkonform bleiben.",
+      "correct": "Logging"
+    },
+    {
+      "text": "Grundform: SELECT Spalten FROM Tabelle … (Daten abfragen).",
+      "correct": "SQL SELECT"
+    },
+    {
+      "text": "Prüfungsfalle: Wenn das fehlt, bekommt man oft „alles“ und damit eine falsche Lösung.",
+      "correct": "WHERE"
+    },
+    {
+      "text": "Sortiert Ergebnis auf- oder absteigend (ASC/DESC).",
+      "correct": "ORDER BY"
+    },
+    {
+      "text": "Textmuster filtern mit Platzhaltern wie % und _.",
+      "correct": "LIKE"
+    },
+    {
+      "text": "Prüft, ob ein Wert in einer Liste vorkommt.",
+      "correct": "IN"
+    },
+    {
+      "text": "Definiert einen Wertebereich inklusive Grenzen (z. B. 10 bis 20).",
+      "correct": "BETWEEN"
+    },
+    {
+      "text": "Gruppiert Datensätze vor der Aggregation (z. B. COUNT pro Status).",
+      "correct": "GROUP BY"
+    },
+    {
+      "text": "Filtert Gruppen nach Aggregaten (im Gegensatz zu WHERE, das vor dem Gruppieren wirkt).",
+      "correct": "HAVING"
+    },
+    {
+      "text": "Verknüpft Tabellen über gemeinsame Schlüssel (PK/FK).",
+      "correct": "JOIN"
+    },
+    {
+      "text": "Join ohne Bedingung erzeugt eine Datenexplosion durch Kombination jedes Datensatzes mit jedem anderen.",
+      "correct": "kartesisches Produkt"
+    },
+    {
+      "text": "Befehle für Struktur: CREATE, ALTER, DROP.",
+      "correct": "DDL"
+    },
+    {
+      "text": "Befehle zum Ändern von Daten: INSERT, UPDATE, DELETE.",
+      "correct": "DML"
+    },
+    {
+      "text": "Befehlstyp für Datenabfragen: SELECT.",
+      "correct": "DQL"
+    },
+    {
+      "text": "Mehrere Schritte als unteilbare Einheit: entweder alles oder nichts.",
+      "correct": "Transaktion"
+    },
+    {
+      "text": "Steht für Atomicity, Consistency, Isolation, Durability.",
+      "correct": "ACID"
+    },
+    {
+      "text": "„Use Case zeigt, wie das System intern implementiert ist, inklusive Schleifen und Detail-Schritten.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Ziel: Anforderungen verständlich machen und Kommunikation verbessern – das gilt für alle Modellierungsdarstellungen im Überblick.",
+      "correct": "alle"
+    }
+  ]
+}

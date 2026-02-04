@@ -1,0 +1,372 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "IT-Systeme (AP1) – Hardware • Software • Dateiformate • Cloud • USV • Backup – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Begriff, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Auswahl begründen, Kompatibilität prüfen, Betrieb/Backup/USV/Sicherheit mitdenken).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff oder ein Konzept.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "it_system_definition",
+      "name": "IT-System (AP1-Verständnis)",
+      "description": "Gesamtsystem aus Hardware + Software + Daten + Betrieb/Prozessen (Backup, Updates, Sicherheit).",
+      "example": "Ein Ticketsystem ist nicht nur Server+App, sondern auch Datenbank, Rechtekonzept, Backup, Monitoring und Wiederherstellung."
+    },
+    {
+      "id": "ap1_begruenden_statt_specs",
+      "name": "In Prüfungen: begründen statt nur Specs",
+      "description": "Nicht nur Datenblatt nennen: Use-Case, Kompatibilität und Betrieb (Backup/USV) müssen mit rein.",
+      "example": "„SSD 1 TB“ reicht nicht: Warum SATA/NVMe? Welche IOPS? Wie wird gesichert? Was passiert bei Stromausfall?"
+    },
+    {
+      "id": "betrieb_und_restore",
+      "name": "Merksatz: Betrieb + Wiederherstellung",
+      "description": "„Funktioniert“ ist erst wahr, wenn Betrieb (Updates/Monitoring) und Restore geklärt sind.",
+      "example": "System läuft im Test, aber kein Restore-Test und keine RTO/RPO-Planung → in der Praxis/Prüfung lückenhaft."
+    },
+    {
+      "id": "cpu_grundidee",
+      "name": "CPU (Rechenwerk)",
+      "description": "Leistung hängt nicht nur von GHz ab, sondern von Architektur, Single-Core, Cache und Workload.",
+      "example": "Büro-PC profitiert oft stärker von guter Single-Core-Leistung als von extrem vielen Kernen."
+    },
+    {
+      "id": "cpu_single_vs_multi",
+      "name": "Single-Core vs Multi-Core",
+      "description": "UI/Office oft Single-Core-lastig; VMs/Render/Paralleljobs profitieren von mehr Kernen/Threads.",
+      "example": "VM-Host: mehr Kerne + genug RAM; Büro: weniger Kerne, dafür flott pro Kern."
+    },
+    {
+      "id": "cpu_cache",
+      "name": "CPU-Cache",
+      "description": "Schneller Zwischenspeicher nahe an der CPU; kann bei bestimmten Workloads spürbar helfen.",
+      "example": "Viele wiederholte Datenzugriffe: mehr Cache reduziert Wartezeiten auf RAM."
+    },
+    {
+      "id": "ram_grundidee",
+      "name": "RAM (Arbeitsspeicher)",
+      "description": "Schneller, flüchtiger Arbeitsbereich; zu wenig RAM führt zu Paging/Swap und macht das System zäh.",
+      "example": "Zu viele Browser-Tabs + IDE: RAM voll → System schreibt auf Disk (Swap) → fühlt sich „eingefroren“ an."
+    },
+    {
+      "id": "paging_swap",
+      "name": "Paging/Swap",
+      "description": "OS lagert Speicher auf Massenspeicher aus, wenn RAM knapp ist; massiv langsamer als RAM.",
+      "example": "8 GB RAM in einer VM reichen nicht → Swap greift → Datenbank reagiert extrem langsam."
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "description": "RAM in passenden Paaren kann Bandbreite erhöhen (abhängig von Plattform/Bestückung).",
+      "example": "2×8 GB statt 1×16 GB (wenn Plattform Dual-Channel nutzt) → bessere Speicherbandbreite."
+    },
+    {
+      "id": "ecc_ram",
+      "name": "ECC-RAM",
+      "description": "Fehlerkorrektur-RAM für höhere Stabilität (v. a. Server); benötigt CPU/Mainboard-Support.",
+      "example": "Server mit kritischer Datenbank: ECC + passende Plattform reduzieren Risiko durch Speicherbitfehler."
+    },
+    {
+      "id": "storage_hdd",
+      "name": "HDD",
+      "description": "Günstig pro GB, gut für Archiv/Backup-Targets; langsam wegen Mechanik (Seek/Rotation).",
+      "example": "NAS als Backup-Ziel: große Datenmengen günstig speichern, Geschwindigkeit ist zweitrangig."
+    },
+    {
+      "id": "storage_ssd_sata",
+      "name": "SSD (SATA)",
+      "description": "Deutlich schneller als HDD, einfach nachrüstbar; durch SATA-Limit begrenzt.",
+      "example": "Office-PC: SATA-SSD bringt schnellen Boot/Start, NVMe wäre oft nur „nice-to-have“."
+    },
+    {
+      "id": "storage_ssd_nvme",
+      "name": "SSD (NVMe)",
+      "description": "Sehr hohe IOPS und hoher Datendurchsatz über PCIe; stark bei vielen kleinen Zugriffen/Last.",
+      "example": "VM-Host oder Datenbank: NVMe reduziert I/O-Wartezeiten deutlich."
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "description": "Kennzahl für viele kleine Ein-/Ausgabeoperationen pro Sekunde (Random I/O).",
+      "example": "Viele kleine DB-Reads/Writes: IOPS ist wichtiger als reine MB/s."
+    },
+    {
+      "id": "tbw",
+      "name": "TBW",
+      "description": "Schreibhaltbarkeit einer SSD: wie viel insgesamt geschrieben werden kann (Praxisindikator für „Write-heavy“).",
+      "example": "Log-Server: SSD mit hoher TBW wählen, sonst Verschleißrisiko."
+    },
+    {
+      "id": "raid",
+      "name": "RAID",
+      "description": "Verbund mehrerer Platten für Verfügbarkeit/Performance (je nach Level).",
+      "example": "RAID1 für kleinen Server: eine Platte darf ausfallen, System läuft weiter."
+    },
+    {
+      "id": "raid_not_backup",
+      "name": "Prüfungsfalle: RAID ist kein Backup",
+      "description": "RAID schützt nicht vor Löschen, Malware, Fehlbedienung oder Verschlüsselung – das repliziert sich mit.",
+      "example": "Ransomware verschlüsselt Daten: RAID hilft nicht, nur Backup/Versionierung."
+    },
+    {
+      "id": "mainboard_chipsatz",
+      "name": "Mainboard/Chipsatz",
+      "description": "Legt Schnittstellen, Erweiterbarkeit und Kompatibilität fest (Slots, M.2, USB, RAM-Typ, CPU-Sockel).",
+      "example": "CPU passt nicht in Sockel oder RAM-Typ stimmt nicht → System startet nicht."
+    },
+    {
+      "id": "pcie_lanes",
+      "name": "PCIe-Lanes/Slots",
+      "description": "Bandbreite/Anzahl Lanes bestimmen, wie viele schnelle Geräte sinnvoll parallel laufen (GPU, NVMe, NIC).",
+      "example": "Zweite NVMe teilt sich Lanes → Geschwindigkeit sinkt oder ein Slot wird deaktiviert."
+    },
+    {
+      "id": "m2_protocol",
+      "name": "M.2: Keying/Protokoll",
+      "description": "M.2 ist nur der Formfaktor; entscheidend ist SATA vs NVMe/PCIe und Keying/Support.",
+      "example": "M.2-SSD passt mechanisch, läuft aber nicht: Board unterstützt dort nur NVMe, SSD ist SATA (oder umgekehrt)."
+    },
+    {
+      "id": "ports_net",
+      "name": "Ports & Netzwerk (1G/2.5G/10G, WLAN/LAN)",
+      "description": "Schnittstellen müssen zum Use-Case passen: Geschwindigkeit, Stabilität, Infrastruktur (Switch/Router).",
+      "example": "NAS-Backup dauert ewig über 1G → 2.5G/10G + passender Switch bringt echten Nutzen."
+    },
+    {
+      "id": "treiber_firmware_stabilitaet",
+      "name": "Treiber/Firmware beeinflussen Stabilität",
+      "description": "BIOS/UEFI und Treiber bestimmen Features, Kompatibilität und Stabilität (Updates können fixen oder brechen).",
+      "example": "WLAN instabil nach OS-Update: Treiber-Update/rollback löst es, Hardware ist ok."
+    },
+    {
+      "id": "firmware_bios_uefi",
+      "name": "Firmware (BIOS/UEFI)",
+      "description": "Initialisiert Hardware und startet Bootprozess (Bootreihenfolge, Secure Boot, Hardware-Settings).",
+      "example": "Nach NVMe-Einbau bootet PC nicht: Bootreihenfolge/UEFI-Mode prüfen."
+    },
+    {
+      "id": "os_role",
+      "name": "Betriebssystem (Windows/Linux)",
+      "description": "Verwaltet Ressourcen (CPU/RAM/Disk/Netz), stellt Treiber/APIs bereit und steuert Rechte/Benutzer.",
+      "example": "App kann nicht schreiben: OS-Rechte/Ordnerberechtigungen sind Ursache, nicht „defekte App“."
+    },
+    {
+      "id": "runtime_middleware",
+      "name": "Runtime/Middleware (z. B. JVM, .NET)",
+      "description": "Zwischenschicht zwischen OS und Anwendung; liefert Laufzeitumgebung/Frameworks/Abhängigkeiten.",
+      "example": "Programm startet nicht wegen fehlender Runtime-Version → JVM/.NET nachinstallieren statt Hardware tauschen."
+    },
+    {
+      "id": "schicht_lokalisieren",
+      "name": "Merksatz: Schicht lokalisieren",
+      "description": "Fehler zuerst der Schicht zuordnen: Firmware → OS/Treiber → Runtime → App.",
+      "example": "„Programm startet nicht“: erst Abhängigkeiten/Rechte/Updates prüfen, bevor man Hardware verdächtigt."
+    },
+    {
+      "id": "systemsoftware",
+      "name": "Systemsoftware",
+      "description": "OS, Treiber, Dienste und Tools, die den Betrieb ermöglichen (Backup-Agent, Monitoring, Update-Mechanik).",
+      "example": "Server braucht Patch-/Update-Konzept + Monitoring, sonst ist die App „nur halb“ betrieben."
+    },
+    {
+      "id": "anwendungssoftware",
+      "name": "Anwendungssoftware",
+      "description": "Software für Nutzeraufgaben (Office, Browser, ERP/CRM, IDE).",
+      "example": "CRM ist Anwendung; DB/OS/Backup-Agent sind Systemsoftware-Komponenten drumherum."
+    },
+    {
+      "id": "open_source_kosten",
+      "name": "Prüfungsfalle: Open Source ≠ automatisch kostenlos",
+      "description": "Lizenzkosten können null sein, aber Betrieb/Support/Know-how kosten trotzdem.",
+      "example": "Linux-Server spart Lizenz, braucht aber Admin-Zeit/Monitoring/Updates/Backup."
+    },
+    {
+      "id": "vm",
+      "name": "Virtualisierung: VM",
+      "description": "Eigene virtuelle Maschine mit eigenem OS; starke Isolation, aber mehr Overhead pro VM.",
+      "example": "Zwei Serverrollen getrennt betreiben: je eine VM mit eigenem OS und eigenen Updates."
+    },
+    {
+      "id": "hypervisor",
+      "name": "Hypervisor",
+      "description": "Schicht, die VMs auf Hardware betreibt und Ressourcen zuteilt (CPU/RAM/Disk/Netz).",
+      "example": "VM-Host plant Ressourcen: ohne genug RAM kommt es zu Swap und Performance bricht ein."
+    },
+    {
+      "id": "container",
+      "name": "Container",
+      "description": "Teilen Kernel, sind leichtgewichtig und schnell; anderes Sicherheits-/Update-Modell als VMs.",
+      "example": "Web-App als Container: schneller Rollout, aber Kernel-Patches betreffen alle Container."
+    },
+    {
+      "id": "container_not_mini_vm",
+      "name": "Prüfungsfalle: Container sind keine Mini-VMs",
+      "description": "Isolation ist anders, Updates/Abhängigkeiten werden anders gehandhabt; Kernel wird geteilt.",
+      "example": "Sicherheitslücke im Kernel: betrifft Container-Workloads sofort, auch wenn App-Container „gleich“ bleiben."
+    },
+    {
+      "id": "text_vs_binaer",
+      "name": "Textformat vs Binärformat",
+      "description": "Text (lesbar, gut für Schnittstellen) vs Binär (kompakt, oft komplex/programmgebunden).",
+      "example": "API liefert JSON (Text), Foto ist JPG (Binär), Report ist PDF (Binär/Rendering-fokussiert)."
+    },
+    {
+      "id": "encoding_utf8",
+      "name": "Encoding (UTF-8)",
+      "description": "Legt fest, wie Bytes zu Zeichen werden; falsches Encoding erzeugt kaputte Umlaute/Sonderzeichen.",
+      "example": "CSV zeigt „MÃ¼ller“ statt „Müller“ → Encoding-Mismatch (UTF-8 vs Latin-1)."
+    },
+    {
+      "id": "csv_delimiter",
+      "name": "CSV: Trennzeichen (Delimiter)",
+      "description": "Komma/Semikolon/Tab müssen übereinstimmen; CSV ist nicht „einheitlich standardisiert“ in der Praxis.",
+      "example": "Import erwartet Komma, Datei ist Semikolon → alles landet in einer Spalte."
+    },
+    {
+      "id": "csv_quotes",
+      "name": "CSV: Quotes/Zeilenumbrüche",
+      "description": "Anführungszeichen schützen Felder mit Delimiter/Zeilenumbrüchen; sonst bricht die Struktur.",
+      "example": "Adresse enthält Komma → ohne Quotes verschiebt sich die Spaltenzuordnung."
+    },
+    {
+      "id": "json_schema",
+      "name": "Schema/Validierung (JSON/XML)",
+      "description": "Regeln für Struktur und Datentypen; verhindert „falsche“ Daten und macht Fehler früh sichtbar.",
+      "example": "API lehnt JSON ab, weil Pflichtfeld fehlt oder falscher Typ geliefert wird → Schema-Check findet es vorher."
+    },
+    {
+      "id": "pdf_vs_docx",
+      "name": "PDF vs DOCX",
+      "description": "PDF: Layout fix (gut zum Anzeigen), DOCX: bearbeitbar; PDF ist nicht automatisch fälschungssicher.",
+      "example": "Vertrag als PDF: gut zum Versand, aber Änderungen sind trotzdem möglich (nur weniger bequem)."
+    },
+    {
+      "id": "jpg_vs_png",
+      "name": "JPG vs PNG",
+      "description": "JPG: Fotos (verlustbehaftet, klein), PNG: Grafiken/Transparenz (oft größer, verlustfrei).",
+      "example": "Logo mit Transparenz → PNG; Produktfoto → JPG."
+    },
+    {
+      "id": "zip_tar_gz",
+      "name": "ZIP vs TAR.GZ",
+      "description": "ZIP ist verbreitet plattformübergreifend; TAR.GZ ist typisch in Linux (tar bündeln, gzip komprimieren).",
+      "example": "Logbundle unter Linux als tar.gz exportieren, Windows-User bevorzugen oft zip."
+    },
+    {
+      "id": "cloud_iaas",
+      "name": "Cloud: IaaS",
+      "description": "Infrastruktur mieten (VMs/Storage/Netz). Kunde verwaltet OS, Patches, App, Konfiguration.",
+      "example": "Du mietest eine VM und installierst Linux + Webserver + App selbst."
+    },
+    {
+      "id": "cloud_paas",
+      "name": "Cloud: PaaS",
+      "description": "Plattform/Runtime/DB als Dienst. Weniger Betrieb, weniger Kontrolle.",
+      "example": "Managed Datenbank: Provider patcht DB-Engine, du verwaltest Schema, Nutzer und Datenzugriffe."
+    },
+    {
+      "id": "cloud_saas",
+      "name": "Cloud: SaaS",
+      "description": "Fertige Anwendung. Schnell startklar, geringste technische Kontrolle.",
+      "example": "CRM als SaaS: du konfigurierst Rollen/Workflows, Provider betreibt die Plattform."
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility",
+      "description": "Provider sichert die Cloud-Infrastruktur, Kunde sichert Konfiguration, Zugriffe und Daten.",
+      "example": "Offener Storage-Bucket: Provider ok, Kundenkonfiguration falsch → Datenleck ist Kundenseite."
+    },
+    {
+      "id": "cloud_risiko_vendor_lockin",
+      "name": "Cloud-Risiko: Vendor Lock-in",
+      "description": "Abhängigkeit von proprietären Diensten/Ökosystem erschwert Wechsel und erhöht Langzeitkosten.",
+      "example": "App nutzt viele Spezialdienste → Migration zu anderem Anbieter wird teuer/aufwendig."
+    },
+    {
+      "id": "cloud_risiko_kostenexplosion",
+      "name": "Cloud-Risiko: Kostenexplosion",
+      "description": "Skalierung ist bequem, kann aber durch Fehlkonfig/Traffic/Storage schnell teuer werden.",
+      "example": "Logs ohne Limits + hoher Traffic → unerwartet hohe Kosten; Budgets/Alarme fehlen."
+    },
+    {
+      "id": "usv_zweck",
+      "name": "USV: Zweck",
+      "description": "Überbrückt Stromausfall kurzzeitig und schützt vor Spannungsschwankungen; Hauptziel ist stabiler Betrieb oder sauberer Shutdown.",
+      "example": "Strom fällt aus: USV hält Server/Storage/Switch am Leben, bis automatischer Shutdown greift."
+    },
+    {
+      "id": "usv_typen",
+      "name": "USV-Typen (grob)",
+      "description": "Offline (Basis), Line-Interactive (besser bei Schwankungen), Online/Double-Conversion (höchster Schutz).",
+      "example": "Kritischer Serverraum → eher Online; einzelner Büro-PC → oft Offline ausreichend."
+    },
+    {
+      "id": "usv_missverstaendnis",
+      "name": "Prüfungsfalle: USV läuft nicht „stundenlang“",
+      "description": "Meist Minuten; sie kauft Zeit für kontrolliertes Stoppen, nicht für Dauerbetrieb.",
+      "example": "USV mit 10 Minuten Runtime: reicht für Shutdown, nicht für „weiterarbeiten wie immer“."
+    },
+    {
+      "id": "usv_dimensionierung",
+      "name": "USV dimensionieren (AP1-Logik)",
+      "description": "Verbraucher + Leistung (W) bestimmen, Ziel-Runtime definieren (z. B. 5–15 Min), Shutdown automatisieren, Akkus testen/tauschen.",
+      "example": "Server an USV, Switch nicht → Server lebt, Netzwerk tot: also Switch mit auf USV setzen."
+    },
+    {
+      "id": "backup_ziel",
+      "name": "Backup: Zweck",
+      "description": "Wiederherstellung nach Löschen, Malware, Fehlkonfiguration, Hardware-Defekt oder Desaster.",
+      "example": "User löscht Ordner → Restore aus Versionierung statt „leider weg“."
+    },
+    {
+      "id": "backup_321",
+      "name": "3-2-1-Regel",
+      "description": "3 Kopien, 2 unterschiedliche Medien, 1 Kopie extern/offsite (Schutz vor Totalausfall/Ransomware).",
+      "example": "Produktiv + lokales Backup + Offsite/immutable Backup in getrenntem System."
+    },
+    {
+      "id": "backup_arten",
+      "name": "Backup-Arten: Voll/Inkrementell/Differenziell",
+      "description": "Voll: alles; inkrementell: seit letztem Backup; differenziell: seit letztem Vollbackup.",
+      "example": "Täglich inkrementell, wöchentlich voll → schneller als täglich voll, aber Restore-Kette beachten."
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "description": "Backup ohne getestete Wiederherstellung ist Wunschdenken; Restore ist der Beweis.",
+      "example": "Backup-Log sagt „ok“, aber Restore scheitert wegen fehlender Keys/Defekt → Test hätte es früh gezeigt."
+    },
+    {
+      "id": "rpo",
+      "name": "RPO",
+      "description": "Maximal akzeptabler Datenverlust in Zeit (wie viel „Zeit“ darf fehlen).",
+      "example": "RPO 1 Stunde: tägliches Backup reicht nicht, du brauchst häufigere Sicherungen/Logs/Snapshots."
+    },
+    {
+      "id": "rto",
+      "name": "RTO",
+      "description": "Maximal akzeptable Wiederanlaufzeit (wie schnell muss das System wieder laufen).",
+      "example": "RTO 30 Minuten: Restore-Prozess muss schnell sein (Automatisierung, klare Runbooks, passende Infrastruktur)."
+    },
+    {
+      "id": "retention",
+      "name": "Retention / Aufbewahrung",
+      "description": "Wie lange Backups/Versionen aufbewahrt werden (kurz/mittel/lang), passend zu Anforderungen und Speicherbudget.",
+      "example": "Buchhaltung: längere Retention, aber getrennt und sauber verwaltet (nicht nur „alles ewig“)."
+    },
+    {
+      "id": "backup_vs_archiv",
+      "name": "Backup vs Archiv",
+      "description": "Backup: schnelle Wiederherstellung; Archiv: langfristige, ggf. unveränderliche Aufbewahrung (Compliance/Nachweise).",
+      "example": "„Wir haben Backup“ ersetzt kein Archiv: Archiv braucht ggf. Unveränderbarkeit und Suchbarkeit."
+    }
+  ]
+}

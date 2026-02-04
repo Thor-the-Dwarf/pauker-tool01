@@ -1,0 +1,108 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Cloud: Vorteile • Risiken • Shared Responsibility (AP1) – Skalierung • Kosten • Compliance • Fehlkonfiguration – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Cloud-Aspekt, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Bewertung, Entscheidung, Sicherheitsdenken).",
+  "columnTitles": {
+    "column1": "Begriff / Aspekt",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Vorteil, ein Risiko oder ein Shared-Responsibility-Thema.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "vorteil_skalierung",
+      "name": "Vorteil: Skalierung",
+      "description": "Ressourcen je nach Bedarf hoch/runterfahren (Compute/Storage/Services), ohne neue Hardware zu kaufen.",
+      "example": "Webshop hat Lastspitzen: Instanzen werden automatisch hochskaliert und später wieder reduziert."
+    },
+    {
+      "id": "vorteil_schnelle_bereitstellung",
+      "name": "Vorteil: schnelle Bereitstellung",
+      "description": "Services sind in Minuten statt Wochen verfügbar (Provisioning, Templates, Automatisierung).",
+      "example": "Testumgebung für ein Projekt wird per Template bereitgestellt und nach dem Test wieder gelöscht."
+    },
+    {
+      "id": "vorteil_opex_statt_capex",
+      "name": "Vorteil: OPEX statt CAPEX",
+      "description": "Laufende Kosten (Betriebsausgaben) statt großer einmaliger Investition (Hardwarekauf).",
+      "example": "Start-up vermeidet Serverkauf und zahlt nur die Nutzung pro Monat."
+    },
+    {
+      "id": "vorteil_verfuegbarkeit_optionen",
+      "name": "Vorteil: Verfügbarkeits-Optionen",
+      "description": "Provider bieten oft Zonen/Regionen, Redundanz und Managed Services für höhere Verfügbarkeit (gegen Aufpreis).",
+      "example": "Datenbank läuft redundant über mehrere Zonen, damit ein Ausfall nicht sofort den Betrieb stoppt."
+    },
+    {
+      "id": "risiko_vendor_lockin",
+      "name": "Risiko: Vendor Lock-in",
+      "description": "Starke Abhängigkeit von Provider-spezifischen Services/APIs erschwert Wechsel oder Rückmigration.",
+      "example": "App nutzt proprietären Managed-Queue-Service intensiv → Umzug zu anderem Anbieter wird aufwändig."
+    },
+    {
+      "id": "risiko_kostenexplosion",
+      "name": "Risiko: Kostenexplosion",
+      "description": "Pay-as-you-go kann teuer werden durch Fehlplanung, Dauerbetrieb, Traffic/Storage/Logs oder falsche Skalierung.",
+      "example": "Testsystem läuft 24/7 oder Logs wachsen ungebremst → Monatsrechnung explodiert."
+    },
+    {
+      "id": "risiko_datenstandort_compliance",
+      "name": "Risiko: Datenstandort & Compliance",
+      "description": "Rechtliche/vertragliche Anforderungen an Speicherort, Zugriff, Aufbewahrung und Schutzmaßnahmen müssen erfüllt sein.",
+      "example": "Kundendaten dürfen nur in bestimmter Region gespeichert werden; falsche Region verletzt Vorgaben."
+    },
+    {
+      "id": "risiko_fehlkonfiguration",
+      "name": "Risiko: Fehlkonfiguration",
+      "description": "Häufigster Cloud-Sicherheitsfehler: falsche Rechte, offene Buckets, zu breite Security Groups, unsichere Defaults.",
+      "example": "Storage-Bucket ist öffentlich lesbar oder DB-Port ist ins Internet geöffnet → Datenleck-Risiko."
+    },
+    {
+      "id": "shared_responsibility_model",
+      "name": "Shared Responsibility (Grundprinzip)",
+      "description": "Provider sichert „die Cloud“ (Rechenzentrum, Hardware, Basis-Services). Kunde sichert „in der Cloud“ (Konfiguration, Daten, Zugriffe).",
+      "example": "Provider sorgt für physische Sicherheit; Kunde muss Rollen/Rechte korrekt setzen und Daten schützen."
+    },
+    {
+      "id": "provider_verantwortung",
+      "name": "Provider-Verantwortung: „Security of the Cloud“",
+      "description": "Physische Sicherheit, Rechenzentrumsbetrieb, Hardware, Basis-Netz, Hypervisor/Plattformkomponenten (je nach Service).",
+      "example": "Strom/Brand/Hardwaredefekte und Basisschutz im Datacenter sind Provider-Thema, nicht Kunden-Task."
+    },
+    {
+      "id": "kunde_verantwortung",
+      "name": "Kunden-Verantwortung: „Security in the Cloud“",
+      "description": "Konfiguration (Netz/Firewall/IAM), Datenklassifikation/Backups, Identitäten/Zugriffe, App-Sicherheit und Monitoring.",
+      "example": "IAM-Rolle ist zu breit („admin“ für alle) → Kunde muss Least-Privilege umsetzen."
+    },
+    {
+      "id": "iam_zugriffe",
+      "name": "Zugriffe/IAM (kritischer Hebel)",
+      "description": "Identitäten, Rollen, Policies entscheiden, wer was darf; falsche Rechte sind oft der Einstieg in Vorfälle.",
+      "example": "Service-Account mit Schreibrechten auf alle Daten → bei Leak ist der Schaden maximal."
+    },
+    {
+      "id": "backup_restore",
+      "name": "Backups & Restore-Test",
+      "description": "Backups sind Kundensache (auch bei Managed Services oft konfigurationsabhängig); Restore muss getestet werden.",
+      "example": "Datenbank hat Snapshots, aber niemand testet Restore → im Ernstfall kein sauberes Recovery."
+    },
+    {
+      "id": "kostenkontrolle",
+      "name": "Kostenkontrolle (Guardrails)",
+      "description": "Budgets/Alarme, Tags/Kostenstellen, Limits, Auto-Shutdown für Testsysteme, Logging-Policies.",
+      "example": "Budget-Alarm bei 80% und Auto-Shutdown für Dev-VMs verhindert „Überraschungsrechnung“."
+    },
+    {
+      "id": "ap1_merksatz",
+      "name": "AP1-Merksatz",
+      "description": "Cloud kann schneller, skalierbarer und planbarer sein – aber Fehlkonfiguration, Lock-in und Kosten sind reale Fallen. Provider schützt die Cloud, du schützt Konfiguration, Daten und Zugriffe.",
+      "example": "In einer Prüfungsantwort nennst du 2 Vorteile, 2 Risiken und erklärst Shared Responsibility in einem Satz."
+    }
+  ]
+}

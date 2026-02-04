@@ -1,0 +1,273 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – IT-Sicherheit Basics (CIA, Grundschutz, Schutzbedarf) (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "CIA (Schutzziele)",
+    "Vertraulichkeit",
+    "Integrität",
+    "Verfügbarkeit",
+    "Authentizität",
+    "Nachvollziehbarkeit/Verbindlichkeit",
+    "BSI",
+    "IT-Grundschutz",
+    "Schutzbedarfsanalyse (Workflow)",
+    "Schutzbedarf: normal",
+    "Schutzbedarf: hoch",
+    "Schutzbedarf: sehr hoch",
+    "Gefährdungsquelle: Mensch",
+    "Gefährdungsquelle: Technik",
+    "Gefährdungsquelle: Organisation",
+    "Gefährdungsquelle: Umwelt/Physik",
+    "Social Engineering",
+    "Bedienfehler",
+    "Schwachstelle/Exploit",
+    "Malware",
+    "Patch-Management",
+    "Hardening / sichere Konfiguration",
+    "Berechtigungskonzept / Rollen & Rechte",
+    "Least Privilege / Need-to-know",
+    "MFA",
+    "Defense in Depth",
+    "TOMs (DSGVO)",
+    "Authentisierung",
+    "Autorisierung",
+    "Backup & Restore",
+    "RTO/RPO",
+    "Logging",
+    "Monitoring/Alarmierung",
+    "Incident Response / Notfallmanagement",
+    "Runbook/Eskalation",
+    "Offene Frage (Bonus)",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Nur Berechtigte dürfen Daten lesen oder kennen (z. B. Lohnliste nur für HR).",
+      "correct": "Vertraulichkeit"
+    },
+    {
+      "text": "Daten sind korrekt und nicht manipuliert; Systeme liefern richtige Ergebnisse.",
+      "correct": "Integrität"
+    },
+    {
+      "text": "Zugriff ist rechtzeitig möglich: Der Service läuft, wenn er gebraucht wird.",
+      "correct": "Verfügbarkeit"
+    },
+    {
+      "text": "Echtheit: Ist die Person/System/Nachricht wirklich die, die sie vorgibt zu sein?",
+      "correct": "Authentizität"
+    },
+    {
+      "text": "Verbindlichkeit/Nachweis: Aktionen müssen später zuordenbar und belegbar sein (z. B. wer hat Rechte geändert?).",
+      "correct": "Nachvollziehbarkeit/Verbindlichkeit"
+    },
+    {
+      "text": "Prüfungsfalle: „Integrität = Verschlüsselung“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Das klassische Sicherheitsdreieck besteht aus Vertraulichkeit, Integrität und Verfügbarkeit.",
+      "correct": "CIA (Schutzziele)"
+    },
+    {
+      "text": "Liefert Standards und Methodik zur IT-Sicherheit in Deutschland (Behörde).",
+      "correct": "BSI"
+    },
+    {
+      "text": "Methodisches Vorgehen mit Bausteinen/Maßnahmen gegen typische Bedrohungen: solide Basisabsicherung statt bei Null starten.",
+      "correct": "IT-Grundschutz"
+    },
+    {
+      "text": "Prüfungsfalle: „BSI ist nur für Behörden relevant“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Schutzbedarf wird getrennt bestimmt für Vertraulichkeit, Integrität und Verfügbarkeit.",
+      "correct": "Schutzbedarfsanalyse (Workflow)"
+    },
+    {
+      "text": "Kategorien für Schutzbedarf sind typischerweise: normal, hoch, sehr hoch.",
+      "correct": "Schutzbedarfsanalyse (Workflow)"
+    },
+    {
+      "text": "„Ein Schutzbedarf gilt pauschal für alles im Unternehmen.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Workflow: Asset benennen → Schaden je C/I/A abschätzen → je C/I/A einstufen → Gesamtschutzbedarf ableiten.",
+      "correct": "Schutzbedarfsanalyse (Workflow)"
+    },
+    {
+      "text": "Gesamtschutzbedarf ableiten: typischer Ansatz ist „höchster Wert zählt“.",
+      "correct": "Schutzbedarfsanalyse (Workflow)"
+    },
+    {
+      "text": "Prüfungsfalle: „Wir nehmen überall sehr hoch, dann sind wir safe“ (Kosten/Umsetzbarkeit/Angemessenheit).",
+      "correct": "keine"
+    },
+    {
+      "text": "Gefährdungsquelle: Phishing, Spear-Phishing, Fake-Calls („IT-Support“) zielen auf Menschen.",
+      "correct": "Gefährdungsquelle: Mensch"
+    },
+    {
+      "text": "Gefährdungsquelle: Schwachstellen in Software/OS oder fehlerhafte Technik können zu Ausfällen/Angriffen führen.",
+      "correct": "Gefährdungsquelle: Technik"
+    },
+    {
+      "text": "Gefährdungsquelle: Fehlende Verantwortlichkeiten, Rechtechaos, keine Regeln/Prozesse.",
+      "correct": "Gefährdungsquelle: Organisation"
+    },
+    {
+      "text": "Gefährdungsquelle: Stromausfall, Brand/Wasser, Klima, Diebstahl.",
+      "correct": "Gefährdungsquelle: Umwelt/Physik"
+    },
+    {
+      "text": "Prüfungsfalle: „Hacker von außen“ ist nur ein Teil – interne Fehler/Prozesse sind extrem häufig.",
+      "correct": "keine"
+    },
+    {
+      "text": "Angriff über Manipulation von Personen: z. B. Phishing, Fake-Anruf, Tailgating.",
+      "correct": "Social Engineering"
+    },
+    {
+      "text": "Typischer Fehler: falscher Empfänger, falsche Freigabe, versehentliches Löschen.",
+      "correct": "Bedienfehler"
+    },
+    {
+      "text": "MFA reduziert das Risiko bei gestohlenen Passwörtern deutlich, besonders bei Admin/Cloud/Mail.",
+      "correct": "MFA"
+    },
+    {
+      "text": "Regel für ungewöhnliche Anfragen: „Stop – Check – Confirm“ (kurz anhalten, prüfen, Rückbestätigung).",
+      "correct": "Social Engineering"
+    },
+    {
+      "text": "Kette: Schwachstelle + Exploit → Zugriff/Schaden.",
+      "correct": "Schwachstelle/Exploit"
+    },
+    {
+      "text": "Trojaner, Ransomware, Worm, Spyware sind typische Schadsoftware-Arten.",
+      "correct": "Malware"
+    },
+    {
+      "text": "Gegenmaßnahme: Updates/Patches für OS, Apps und Firmware regelmäßig einspielen.",
+      "correct": "Patch-Management"
+    },
+    {
+      "text": "Gegenmaßnahme: Sichere Konfiguration, unnötige Dienste aus, Default-Passwörter weg, Angriffsfläche reduzieren.",
+      "correct": "Hardening / sichere Konfiguration"
+    },
+    {
+      "text": "Prüfungsfalle: „Firewall reicht“ (ohne Patchen, Rechte, Monitoring, Backups).",
+      "correct": "keine"
+    },
+    {
+      "text": "Wenn Verantwortlichkeiten und Regeln fehlen und jeder alles darf, entsteht ein massives Sicherheitsloch.",
+      "correct": "Berechtigungskonzept / Rollen & Rechte"
+    },
+    {
+      "text": "Prinzip: Jeder bekommt nur die Rechte, die er wirklich braucht (Need-to-know).",
+      "correct": "Least Privilege / Need-to-know"
+    },
+    {
+      "text": "Prüfungsfalle: „Alle sind Admin, sonst geht’s schneller“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Backup im selben Raum wie die Server hilft bei Brand/Wasser/Diebstahl nur begrenzt.",
+      "correct": "Backup & Restore"
+    },
+    {
+      "text": "Schichtenprinzip: Wenn eine Barriere fällt, greift die nächste (organisatorisch, technisch, physisch, personell).",
+      "correct": "Defense in Depth"
+    },
+    {
+      "text": "Prüfungsfalle: Einzelmaßnahme ≠ Konzept (z. B. MFA ohne Rechtekonzept ist halbgar).",
+      "correct": "keine"
+    },
+    {
+      "text": "TOMs sind technische und organisatorische Maßnahmen für ein angemessenes Schutzniveau („Sicherheit der Verarbeitung“).",
+      "correct": "TOMs (DSGVO)"
+    },
+    {
+      "text": "Prüfungsfalle: TOMs sind nicht nur Technik – auch Prozesse, Schulung und Nachweise gehören dazu.",
+      "correct": "TOMs (DSGVO)"
+    },
+    {
+      "text": "„Wer bist du?“ (Login/Identität prüfen).",
+      "correct": "Authentisierung"
+    },
+    {
+      "text": "„Was darfst du?“ (Berechtigungen prüfen).",
+      "correct": "Autorisierung"
+    },
+    {
+      "text": "Geteilte Accounts verhindern saubere Nachvollziehbarkeit und Offboarding.",
+      "correct": "Nachvollziehbarkeit/Verbindlichkeit"
+    },
+    {
+      "text": "Backup-Grundsatz: 3-2-1 (3 Kopien, 2 Medien, 1 extern/offsite) + Restore-Tests.",
+      "correct": "Backup & Restore"
+    },
+    {
+      "text": "RTO/RPO: Wiederanlaufzeit / maximaler Datenverlust (wenn genannt).",
+      "correct": "RTO/RPO"
+    },
+    {
+      "text": "Wichtige Events protokollieren: Logins, Rechteänderungen, Admin-Aktionen, Fehler.",
+      "correct": "Logging"
+    },
+    {
+      "text": "Früh erkennen statt spät bereuen: Metriken/Checks + Alarmierung auf kritische Zustände.",
+      "correct": "Monitoring/Alarmierung"
+    },
+    {
+      "text": "Prüfungsfalle: Logs ohne Auswertung sind ein Datenfriedhof.",
+      "correct": "keine"
+    },
+    {
+      "text": "Ablauf bei Sicherheitsvorfall: Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
+      "correct": "Incident Response / Notfallmanagement"
+    },
+    {
+      "text": "Damit es nicht chaotisch wird: Wer macht was, wann, wie eskalieren? (Plan/Ansprechpartner/Runbook).",
+      "correct": "Runbook/Eskalation"
+    },
+    {
+      "text": "Schnell-Check: Asset → C/I/A-Schaden → Schutzbedarf → Maßnahmenpaket.",
+      "correct": "Schutzbedarfsanalyse (Workflow)"
+    },
+    {
+      "text": "BSI-Grundschutz liefert Standardmaßnahmen für typische Gefährdungen als solide Basis.",
+      "correct": "IT-Grundschutz"
+    },
+    {
+      "text": "Prüfungsfalle: „Wir sind klein, wir brauchen das nicht“ – kleine Ziele werden oft genauso getroffen.",
+      "correct": "keine"
+    },
+    {
+      "text": "BONUS 1: Erkläre Vertraulichkeit, Integrität, Verfügbarkeit jeweils an einem Beispiel aus einem Betrieb.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 2: Wie würdest du den Schutzbedarf einer Lohnabrechnungstabelle für C/I/A einstufen – und warum?",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 3: Nenne 5 typische Gefährdungen und je eine passende Gegenmaßnahme.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 4: Was sind TOMs und warum reicht „eine Firewall“ als Antwort fast nie?",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "Ziel der meisten Sicherheitsmaßnahmen im Überblick: Schutz von Vertraulichkeit, Integrität, Verfügbarkeit und Ergänzungen wie Authentizität/Nachvollziehbarkeit.",
+      "correct": "alle"
+    }
+  ]
+}

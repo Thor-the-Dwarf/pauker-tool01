@@ -1,0 +1,136 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – CPU & RAM Leistung richtig erklären (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "CPU-Leistung ist kontextabhängig: UI/Office profitiert oft stärker von Single-Core-Leistung als von vielen Kernen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Multi-Core-Leistung ist besonders wichtig für parallelisierbare Lasten wie VMs, Rendering oder große Builds.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: „Mehr GHz = immer schneller“ stimmt nicht zwangsläufig (IPC, Cache, Architektur und Last zählen mit).",
+      "correct": "keine"
+    },
+    {
+      "text": "Boost-Takt gilt oft nur kurz oder für wenige Kerne; unter Dauerlast kann der Takt sinken.",
+      "correct": "keine"
+    },
+    {
+      "text": "Thermal Throttling: Wenn die CPU zu heiß wird, reduziert sie Takt/Spannung → Leistung fällt spürbar.",
+      "correct": "keine"
+    },
+    {
+      "text": "Cache hilft, RAM-Zugriffe zu vermeiden: Mehr/effizienter Cache kann reale Performance stark verbessern.",
+      "correct": "keine"
+    },
+    {
+      "text": "Viele Hintergrundprozesse + schwacher Single-Core können ein System „laggy“ wirken lassen, obwohl die CPU-Auslastung nicht 100% ist.",
+      "correct": "keine"
+    },
+    {
+      "text": "Zu wenig RAM führt zu Paging/Swap: Daten werden auf SSD/HDD ausgelagert → das System wird „zäh“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Paging/Swap ist um Größenordnungen langsamer als RAM, weil Massenspeicher viel höhere Latenzen hat.",
+      "correct": "keine"
+    },
+    {
+      "text": "Mehr RAM-Kapazität bringt oft mehr als minimal höherer RAM-Takt, wenn vorher ständig ausgelagert wurde.",
+      "correct": "keine"
+    },
+    {
+      "text": "RAM-Takt beeinflusst Bandbreite; Latenz/Timings beeinflussen, wie schnell einzelne Zugriffe starten können.",
+      "correct": "keine"
+    },
+    {
+      "text": "CL/Timings sind keine alleinige Wahrheit: Effektive Latenz hängt auch vom Takt ab (schnellere MHz können trotz höherem CL schneller sein).",
+      "correct": "keine"
+    },
+    {
+      "text": "Dual-Channel kann die Speicherbandbreite erhöhen (passende Module und richtige Slot-Paarung nötig).",
+      "correct": "keine"
+    },
+    {
+      "text": "Kompatibilität: RAM muss zu Mainboard/CPU-Generation passen (DDR-Generation, unterstützte Profile, Slots/Max-Kapazität).",
+      "correct": "keine"
+    },
+    {
+      "text": "XMP/EXPO sind Profile für höhere RAM-Taktraten/Timings; ohne Aktivierung läuft RAM oft mit Standardwerten.",
+      "correct": "keine"
+    },
+    {
+      "text": "ECC-RAM: Erkennt (und i. d. R. korrigiert) Speicherfehler, wichtig in Servern für Stabilität/Datenintegrität.",
+      "correct": "keine"
+    },
+    {
+      "text": "ECC ist nicht automatisch überall nutzbar: Board/CPU müssen ECC unterstützen (sonst läuft es ggf. ohne ECC-Funktion oder gar nicht).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: „Swap ist ein Ersatz für RAM“ – nein, es ist nur ein Notbehelf und kostet massiv Performance.",
+      "correct": "keine"
+    },
+    {
+      "text": "Wenn ein System beim Programmwechsel ruckelt und die SSD dauerhaft arbeitet, ist das ein typisches Indiz für RAM-Paging.",
+      "correct": "keine"
+    },
+    {
+      "text": "„RAM ist dauerhaft wie SSD und behält Inhalte nach dem Ausschalten“.",
+      "correct": "keine"
+    }
+  ]
+}

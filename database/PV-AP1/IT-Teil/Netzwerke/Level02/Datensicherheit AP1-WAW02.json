@@ -1,0 +1,827 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Netzwerke (AP1): OSI, LAN/WLAN, Verkabelung, DHCP, DNS, IPv4/IPv6, Fehlersuche",
+  "description": "Schritt 1: passendes Konzept/Tool/Layer bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "In der Aufgabe steht nur: „Netzwerk geht nicht.“ Du sollst erklären, wie man das sinnvoll eingrenzt, statt wild zu raten.",
+      "tags": ["Basics", "Troubleshooting", "Eingrenzen"],
+      "options": [
+        {
+          "id": "layer_finden",
+          "label": "Erst Layer finden, dann fixen (OSI/TCP-IP-Denke)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "„Netzwerk geht nicht“ ist ein Symptom, keine Ursache – man muss schrittweise eingrenzen.", "correct": true },
+            { "id": "w2", "text": "Unten anfangen: Kabel/Funk → IP/Gateway → DNS → Dienst.", "correct": true },
+            { "id": "w3", "text": "Sofort Router tauschen ist der schnellste Standardweg.", "correct": false },
+            { "id": "w4", "text": "Kernbegriffe helfen beim Eingrenzen: MAC/IP/Port/Protokoll.", "correct": true }
+          ]
+        },
+        {
+          "id": "random_fix",
+          "label": "Einfach irgendwas neu starten, wird schon",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Eingrenzung lernst du nichts und findest die Ursache nicht reproduzierbar.", "correct": true },
+            { "id": "w2", "text": "Prüfung erwartet ein Vorgehen (Checkliste), nicht Glück.", "correct": true },
+            { "id": "w3", "text": "Neustart ersetzt DNS/Gateway/Layer-Tests vollständig.", "correct": false },
+            { "id": "w4", "text": "Strukturierte Tests sparen Zeit und vermeiden Folgefehler.", "correct": true }
+          ]
+        },
+        {
+          "id": "dns_only",
+          "label": "Netzwerkprobleme sind fast immer DNS",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS ist häufig, aber nicht „fast immer“ – Layer 1/2/3 sind genauso Klassiker.", "correct": true },
+            { "id": "w2", "text": "Erst Gateway/Route prüfen, dann Namen.", "correct": true },
+            { "id": "w3", "text": "Wenn DNS kaputt ist, kann man trotzdem keine IPs pingen.", "correct": false },
+            { "id": "w4", "text": "DNS-Probleme erkennt man oft: IP geht, Name nicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Troubleshooting-Regel: Erst Layer finden, dann fixen (Physik → Adresse → Route → Name → Dienst)."
+    },
+    {
+      "id": "v02",
+      "profile": "Du sollst das OSI-Modell prüfungsfit einordnen: Welche Schicht macht was (Signal/MAC/IP/Ports/Anwendung)?",
+      "tags": ["OSI", "Schichten", "Grundlagen"],
+      "options": [
+        {
+          "id": "osi_7",
+          "label": "OSI 7 Schichten (1 Signal, 2 MAC, 3 IP, 4 Ports, 7 App)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Layer 1: Bitübertragung (Kabel/Funk, Signal).", "correct": true },
+            { "id": "w2", "text": "Layer 2: Sicherung (MAC, Switch, VLAN).", "correct": true },
+            { "id": "w3", "text": "Layer 3: Vermittlung (IP, Router). Layer 4: Transport (TCP/UDP, Ports).", "correct": true },
+            { "id": "w4", "text": "OSI ist 1:1 die Realität, Protokolle passen exakt in eine Schicht.", "correct": false }
+          ]
+        },
+        {
+          "id": "osi_real",
+          "label": "OSI ist Quatsch und für Fehlersuche unbrauchbar",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "OSI ist ein Denkmodell – genau deshalb gut für Troubleshooting.", "correct": true },
+            { "id": "w2", "text": "Prüfungsfalle: OSI ist nicht 1:1 Realität, aber perfekt zum Strukturieren.", "correct": true },
+            { "id": "w3", "text": "Layer 4 hat nichts mit Ports zu tun.", "correct": false },
+            { "id": "w4", "text": "OSI hilft: erst unten prüfen, dann oben.", "correct": true }
+          ]
+        },
+        {
+          "id": "osi_ports_l2",
+          "label": "Ports gehören zu Layer 2 (MAC)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ports (TCP/UDP) sind Transport Layer (OSI 4).", "correct": true },
+            { "id": "w2", "text": "MAC ist Layer 2 und gilt lokal im LAN (Frames).", "correct": true },
+            { "id": "w3", "text": "IP ist Layer 3 und routingfähig (Packets).", "correct": true },
+            { "id": "w4", "text": "Layer 2 ist die Schicht für HTTP und DNS.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "OSI als Merker: 1 Signal, 2 MAC/Switch/VLAN, 3 IP/Router, 4 TCP/UDP/Ports, 7 Anwendungen (HTTP/DNS/SMTP)."
+    },
+    {
+      "id": "v03",
+      "profile": "Du sollst OSI und TCP/IP zusammenbringen: Welche TCP/IP-Schicht entspricht ungefähr welchen OSI-Schichten?",
+      "tags": ["TCP/IP", "OSI", "Praxisbrücke"],
+      "options": [
+        {
+          "id": "tcpip_mapping",
+          "label": "TCP/IP: Link≈OSI1–2, Internet≈OSI3, Transport≈OSI4, Application≈OSI5–7",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Link-Schicht bündelt physisch + Sicherung (Kabel/Funk + MAC).", "correct": true },
+            { "id": "w2", "text": "Internet-Schicht entspricht Routing/ IP (OSI 3).", "correct": true },
+            { "id": "w3", "text": "Transport ist TCP/UDP (Ports) wie OSI 4.", "correct": true },
+            { "id": "w4", "text": "TCP/IP hat 7 Schichten, OSI hat 4.", "correct": false }
+          ]
+        },
+        {
+          "id": "mix_confuse",
+          "label": "OSI und TCP/IP widersprechen sich, man kann nur eins nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gleiche Idee, andere Gruppierung – OSI zum Lernen/Diagnose, TCP/IP im Alltag.", "correct": true },
+            { "id": "w2", "text": "Tools/Fehlersuche denkt oft in TCP/IP, aber OSI strukturiert Probleme sehr sauber.", "correct": true },
+            { "id": "w3", "text": "OSI 7 und TCP/IP 4 sind kompatibel über grobe Zuordnung.", "correct": true },
+            { "id": "w4", "text": "Wenn man TCP/IP kennt, ist DNS kein Thema mehr.", "correct": false }
+          ]
+        },
+        {
+          "id": "wrong_mapping",
+          "label": "TCP/IP Internet ≈ OSI 7, Application ≈ OSI 1",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Internet-Schicht ist IP/Routing (OSI 3).", "correct": true },
+            { "id": "w2", "text": "Application in TCP/IP bündelt OSI 5–7 (Sessions/Format/Apps).", "correct": true },
+            { "id": "w3", "text": "Link ist OSI 1–2 (Signal + MAC).", "correct": true },
+            { "id": "w4", "text": "Transport ist OSI 2 (MAC).", "correct": false }
+          ]
+        }
+      ],
+      "solution": "OSI vs TCP/IP: OSI 7 (Lernen/Diagnose), TCP/IP 4 (Praxis). Mapping: Link≈1–2, Internet≈3, Transport≈4, App≈5–7."
+    },
+    {
+      "id": "v04",
+      "profile": "LAN-Grundlagen: Du sollst Switch, Router und VLAN sauber unterscheiden (kurz, aber korrekt).",
+      "tags": ["LAN", "Switch", "Router", "VLAN"],
+      "options": [
+        {
+          "id": "switch_router_vlan",
+          "label": "Switch (L2 MAC), Router (L3 IP/Gateway), VLAN (Broadcast-Domänen trennen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Switch leitet Frames nach MAC und lernt eine MAC-Tabelle.", "correct": true },
+            { "id": "w2", "text": "Router verbindet Netze und routet nach IP; Default Gateway ist der Router ins nächste Netz.", "correct": true },
+            { "id": "w3", "text": "VLAN trennt logische Netze/Broadcast-Domänen auf demselben Switch.", "correct": true },
+            { "id": "w4", "text": "Switch verteilt „Internet“ automatisch ohne Routing.", "correct": false }
+          ]
+        },
+        {
+          "id": "switch_is_gateway",
+          "label": "Switch ist das Gateway ins Internet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Internet braucht Routing: das macht der Router (Layer 3).", "correct": true },
+            { "id": "w2", "text": "Switch arbeitet primär auf Layer 2 (MAC).", "correct": true },
+            { "id": "w3", "text": "Ein PC kann im LAN über Switch sprechen, aber fürs nächste Netz braucht er Gateway.", "correct": true },
+            { "id": "w4", "text": "VLAN ersetzt Router, weil VLAN automatisch routet.", "correct": false }
+          ]
+        },
+        {
+          "id": "vlan_security_magic",
+          "label": "VLAN macht automatisch Sicherheit, egal wie konfiguriert",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "VLAN trennt logisch, aber Routing/Firewall-Regeln entscheiden Zugriff zwischen VLANs.", "correct": true },
+            { "id": "w2", "text": "Fehlkonfiguration (Trunk/Access) kann Trennung aufheben.", "correct": true },
+            { "id": "w3", "text": "Gäste-WLAN trennt man typischerweise per VLAN/Segment + Regeln.", "correct": true },
+            { "id": "w4", "text": "Mit VLAN braucht man nie wieder Firewall-Regeln.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Switch = L2/MAC, Router = L3/IP/Default-Gateway, VLAN = logische Trennung von Broadcast-Domänen (Zugriff zwischen VLANs via Routing/Regeln)."
+    },
+    {
+      "id": "v05",
+      "profile": "Prüfungsfalle MAC vs IP: Du sollst erklären, was lokal gilt und was geroutet wird. Außerdem: ARP.",
+      "tags": ["MAC", "IP", "ARP", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "mac_ip_arp",
+          "label": "MAC lokal im LAN (L2), IP routingfähig (L3), ARP ermittelt MAC zur IP (IPv4)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "MAC ist die lokale Hardwareadresse für Frames im LAN.", "correct": true },
+            { "id": "w2", "text": "IP ist die logische Adresse, über Router zwischen Netzen routingfähig.", "correct": true },
+            { "id": "w3", "text": "ARP (IPv4) fragt im lokalen Netz: „Wer hat diese IP? Welche MAC?“", "correct": true },
+            { "id": "w4", "text": "MAC wird im Internet geroutet wie IP.", "correct": false }
+          ]
+        },
+        {
+          "id": "mac_internet",
+          "label": "MAC ist im Internet die wichtigste Adresse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Geroutet wird per IP; MAC wird pro Hop im lokalen Segment genutzt.", "correct": true },
+            { "id": "w2", "text": "Beim Router endet das Layer-2-Segment, danach gibt es neue Frames/MACs.", "correct": true },
+            { "id": "w3", "text": "ARP/Neighbor Discovery lösen lokal auf – nicht global.", "correct": true },
+            { "id": "w4", "text": "Wenn MAC stimmt, ist Gateway egal.", "correct": false }
+          ]
+        },
+        {
+          "id": "arp_dns",
+          "label": "ARP löst Domainnamen auf",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS löst Namen → IP.", "correct": true },
+            { "id": "w2", "text": "ARP löst IP → MAC (lokales IPv4-Netz).", "correct": true },
+            { "id": "w3", "text": "ARP ist Layer 2/3-nah, DNS ist Anwendungs-Layer.", "correct": true },
+            { "id": "w4", "text": "ARP wird über Router hinweg genutzt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "MAC ist lokal im Segment, IP wird geroutet. ARP (IPv4) macht IP→MAC lokal."
+    },
+    {
+      "id": "v06",
+      "profile": "Gebäudeverkabelung: Du sollst strukturierte Verkabelung erklären und typische Komponenten korrekt einordnen (passiv vs aktiv).",
+      "tags": ["Verkabelung", "Patchpanel", "Dose", "Passiv/Aktiv"],
+      "options": [
+        {
+          "id": "structured_cabling",
+          "label": "Strukturierte Verkabelung + Kette (Switch→Patchpanel→Gebäudekabel→Dose→Patch→PC)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bereiche: Backbone/Campus, Vertikal (Etagen), Horizontal (Etage→Dose).", "correct": true },
+            { "id": "w2", "text": "Passiv: Patchpanel, Dose, Leitungen, Patchkabel. Aktiv: Switch, Router, Access Point.", "correct": true },
+            { "id": "w3", "text": "Gebäudekabel ist fest verlegt (starr), Patchkabel ist flexibel.", "correct": true },
+            { "id": "w4", "text": "Patchkabel und Gebäudekabel sind dasselbe, nur anderer Name.", "correct": false }
+          ]
+        },
+        {
+          "id": "patch_is_building",
+          "label": "Patchkabel = Gebäudekabel (fest verlegt)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Patch ist flexibel für kurze Strecken (Rack/Arbeitsplatz).", "correct": true },
+            { "id": "w2", "text": "Gebäudekabel ist starr und Teil der festen Installation.", "correct": true },
+            { "id": "w3", "text": "Prüfungsfalle: die beiden werden gern verwechselt.", "correct": true },
+            { "id": "w4", "text": "Switch zählt zu passiven Komponenten.", "correct": false }
+          ]
+        },
+        {
+          "id": "active_passive_wrong",
+          "label": "Aktiv = Patchpanel, Passiv = Switch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Aktive Komponenten benötigen Strom und verarbeiten Daten (Switch/Router/AP).", "correct": true },
+            { "id": "w2", "text": "Passive Komponenten sind nur Infrastruktur ohne Signalverarbeitung (Panel/Dose/Kabel).", "correct": true },
+            { "id": "w3", "text": "Patchpanel ist typischerweise passiv.", "correct": true },
+            { "id": "w4", "text": "Router ist passiv, weil er nur weiterleitet.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Strukturierte Verkabelung: Bereiche + passiv/aktiv sauber trennen. Kette: Switch→Patchpanel→Gebäudekabel→Dose→Patch→Endgerät."
+    },
+    {
+      "id": "v07",
+      "profile": "Kupfer vs Glasfaser: Du sollst entscheiden, wann welche Technik sinnvoll ist. Bonus: PoE.",
+      "tags": ["Kupfer", "Glasfaser", "PoE", "Uplinks"],
+      "options": [
+        {
+          "id": "copper_fiber_poe",
+          "label": "Kupfer für Arbeitsplatz, Glasfaser für Distanz/Uplink/EMV, PoE für AP/VoIP/Kamera",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kupfer (Twisted Pair): günstig, einfach, typisch für Endgeräte im Büro.", "correct": true },
+            { "id": "w2", "text": "Glasfaser: große Distanzen, EMV-robust, hohe Bandbreite (Backbone/Uplinks).", "correct": true },
+            { "id": "w3", "text": "PoE liefert Strom über Ethernet (praktisch für AP/VoIP/Kamera).", "correct": true },
+            { "id": "w4", "text": "Glasfaser ist nur sinnvoll, wenn man Strom über das Kabel schicken will.", "correct": false }
+          ]
+        },
+        {
+          "id": "fiber_everywhere",
+          "label": "Immer Glasfaser bis zum Arbeitsplatz, sonst ist es falsch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Arbeitsplatz ist in der Praxis oft Kupfer, Uplink/Backbone oft Glasfaser.", "correct": true },
+            { "id": "w2", "text": "Kosten/Handling/Endgeräte sprechen häufig für Kupfer am Rand.", "correct": true },
+            { "id": "w3", "text": "Lange Strecken + Störungen: Glasfaser ist oft die saubere Lösung.", "correct": true },
+            { "id": "w4", "text": "PoE funktioniert besser über Glasfaser als über Kupfer.", "correct": false }
+          ]
+        },
+        {
+          "id": "poe_is_wifi",
+          "label": "PoE ist ein WLAN-Standard",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PoE ist Stromversorgung über Ethernet-Kabel, nicht Funk.", "correct": true },
+            { "id": "w2", "text": "PoE reduziert Netzteile an APs/Telefonen/Kameras.", "correct": true },
+            { "id": "w3", "text": "PoE hat nichts mit IP-Adressierung zu tun.", "correct": true },
+            { "id": "w4", "text": "PoE ersetzt DHCP.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Faustregel: Arbeitsplatz meist Kupfer, Uplink/Backbone oft Glasfaser. PoE versorgt Geräte über Ethernet."
+    },
+    {
+      "id": "v08",
+      "profile": "WLAN-Basics: Du sollst erklären, warum WLAN nicht wie Kabel skaliert und warum es oft „gefühlt“ langsam ist.",
+      "tags": ["WLAN", "Shared Medium", "Airtime"],
+      "options": [
+        {
+          "id": "wlan_shared",
+          "label": "WLAN ist Shared Medium: Airtime wird geteilt, Planung/Channel/Signal entscheidend",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Alle Clients teilen sich die Airtime – mehr Geräte = weniger Zeit pro Gerät.", "correct": true },
+            { "id": "w2", "text": "2,4 GHz: weiter, aber störanfälliger; 5 GHz: schneller, kürzer (6 GHz je nach Umfeld).", "correct": true },
+            { "id": "w3", "text": "Access Point ist die Bridge ins LAN.", "correct": true },
+            { "id": "w4", "text": "WLAN ist schneller als Kabel, weil Funk keine Leitungsdämpfung hat.", "correct": false }
+          ]
+        },
+        {
+          "id": "wlan_equals_internet",
+          "label": "WLAN langsam = Internet langsam",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Oft ist es Funk: Signal, Kanal, Airtime, Interferenzen.", "correct": true },
+            { "id": "w2", "text": "Leitung kann schnell sein, aber Funk ist der Engpass.", "correct": true },
+            { "id": "w3", "text": "Prüfungstipp: WLAN messen (nicht „fühlen“).", "correct": true },
+            { "id": "w4", "text": "Wenn WLAN schlecht ist, hilft nur ein größerer DHCP-Pool.", "correct": false }
+          ]
+        },
+        {
+          "id": "ap_is_router",
+          "label": "Access Point ist der Router ins Internet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "AP bridged ins LAN; Routing ins Internet macht meist der Router/Gateway.", "correct": true },
+            { "id": "w2", "text": "AP beeinflusst Funk-Teil (Airtime/Signal), nicht zwingend WAN-Routing.", "correct": true },
+            { "id": "w3", "text": "Default Gateway ist Layer 3 Funktion (Router).", "correct": true },
+            { "id": "w4", "text": "AP arbeitet primär auf Layer 7.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "WLAN ist Shared Medium: Airtime teilen, daher Planung/Signal/Kanal entscheidend. AP bridged ins LAN."
+    },
+    {
+      "id": "v09",
+      "profile": "WLAN-Sicherheit: Du sollst prüfen, was prüfungsrelevant ist (WPA2/3, PSK vs Enterprise, Gäste trennen).",
+      "tags": ["WLAN", "Sicherheit", "WPA2", "WPA3", "802.1X"],
+      "options": [
+        {
+          "id": "wifi_security",
+          "label": "WPA2/WPA3 + passende Auth (PSK vs 802.1X) + Gäste getrennt (VLAN/Segment)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "WEP ist alt/unsicher; WPA2/WPA3 sind prüfungsrelevant.", "correct": true },
+            { "id": "w2", "text": "PSK ist Passphrase; Enterprise nutzt 802.1X/RADIUS (je nach Umfeld).", "correct": true },
+            { "id": "w3", "text": "Gäste-WLAN trennen (Segment/VLAN), kein Zugriff aufs interne Netz.", "correct": true },
+            { "id": "w4", "text": "Versteckte SSID ersetzt Verschlüsselung.", "correct": false }
+          ]
+        },
+        {
+          "id": "hidden_ssid_secure",
+          "label": "Hidden SSID macht WLAN sicher",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Security kommt von WPA2/3 + Auth + Segmentierung, nicht vom Verstecken.", "correct": true },
+            { "id": "w2", "text": "Gäste sollten getrennt sein, unabhängig von SSID-Name/Visibility.", "correct": true },
+            { "id": "w3", "text": "Hidden SSID verhindert automatisch Mitschnitt/Angriffe.", "correct": false },
+            { "id": "w4", "text": "Prüfung erwartet konkrete Maßnahmen, keine „Tricks“.", "correct": true }
+          ]
+        },
+        {
+          "id": "guest_same_net",
+          "label": "Gäste können im gleichen Netz sein, solange Passwort stark ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Segmentierung trennt Risiken: Gäste sollen nicht ins interne Netz.", "correct": true },
+            { "id": "w2", "text": "VLAN/Firewall-Regeln steuern Zugriff – Passwort ist nicht Autorisierung fürs LAN.", "correct": true },
+            { "id": "w3", "text": "Starkes WLAN-Passwort verhindert, dass Gäste interne Freigaben sehen.", "correct": false },
+            { "id": "w4", "text": "Prüfungsfalle: „Passwort reicht“ ist zu kurz.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "WLAN-Security: WPA2/3, passende Auth (PSK/Enterprise), Gäste getrennt (Segment/VLAN + Regeln). Hidden SSID ist kein Sicherheitskonzept."
+    },
+    {
+      "id": "v10",
+      "profile": "DHCP: Du sollst erklären, wozu DHCP da ist und wie der Ablauf heißt (DORA).",
+      "tags": ["DHCP", "DORA", "IP-Konfiguration"],
+      "options": [
+        {
+          "id": "dhcp_dora",
+          "label": "DHCP vergibt IP-Konfig automatisch (IP/Maske/Gateway/DNS) – Ablauf DORA",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "DHCP liefert typischerweise IP, Subnetzmaske, Gateway, DNS-Server.", "correct": true },
+            { "id": "w2", "text": "DORA: Discover → Offer → Request → Acknowledge.", "correct": true },
+            { "id": "w3", "text": "Lease ist zeitlich begrenzt; Reservierungen (MAC→feste IP) sind möglich.", "correct": true },
+            { "id": "w4", "text": "DHCP löst Domainnamen in IPs auf.", "correct": false }
+          ]
+        },
+        {
+          "id": "dhcp_is_dns",
+          "label": "DHCP ist das Telefonbuch (Namen→IP)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das ist DNS; DHCP vergibt Konfigdaten.", "correct": true },
+            { "id": "w2", "text": "Ohne DHCP kann man manuell konfigurieren, aber fehleranfälliger/aufwendiger.", "correct": true },
+            { "id": "w3", "text": "DORA ist DHCP-spezifisch.", "correct": true },
+            { "id": "w4", "text": "169.254.x.x bedeutet: DNS ist kaputt.", "correct": false }
+          ]
+        },
+        {
+          "id": "no_lease",
+          "label": "DHCP vergibt einmal und dann für immer",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Leases laufen aus; das verhindert Dauerbelegung und unterstützt Wechsel.", "correct": true },
+            { "id": "w2", "text": "Reservierungen sind Sonderfall für feste Zuordnung.", "correct": true },
+            { "id": "w3", "text": "Ohne Lease-Konzept gäbe es mehr Konflikte/Chaos.", "correct": true },
+            { "id": "w4", "text": "DHCP kann kein Gateway verteilen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "DHCP: automatische IP-Konfig (IP/Maske/Gateway/DNS), Ablauf DORA, Lease/Reservierungen."
+    },
+    {
+      "id": "v11",
+      "profile": "Typisches Fehlerbild: Ein Client bekommt eine 169.254.x.x-Adresse. Du sollst das korrekt deuten.",
+      "tags": ["DHCP", "APIPA", "Fehlerbild"],
+      "options": [
+        {
+          "id": "apipa",
+          "label": "APIPA/169.254.x.x = DHCP nicht erreicht (oft VLAN/Server/Relay)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "169.254.x.x entsteht meist, wenn kein DHCP-Server erreichbar ist.", "correct": true },
+            { "id": "w2", "text": "Ursachen: DHCP down, falsches VLAN, Relay fehlt, Port/Snooping blockt.", "correct": true },
+            { "id": "w3", "text": "Mit 169.254 ist Internet normal erreichbar, DNS fehlt nur.", "correct": false },
+            { "id": "w4", "text": "Prüfungstipp: erst Layer 2/3 prüfen (VLAN/Link), dann DHCP-Server.", "correct": true }
+          ]
+        },
+        {
+          "id": "dns_issue",
+          "label": "169.254 bedeutet DNS kaputt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS-Probleme zeigen sich eher: IP funktioniert, Name nicht.", "correct": true },
+            { "id": "w2", "text": "169.254 ist schon ein Layer-3-Konfig-Problem (keine gültige IP aus dem Netz).", "correct": true },
+            { "id": "w3", "text": "Wenn DHCP fehlt, fehlen meist auch Gateway/DNS -> „kein Netz“.", "correct": true },
+            { "id": "w4", "text": "APIPA ist ein Beweis, dass der Router kaputt ist.", "correct": false }
+          ]
+        },
+        {
+          "id": "gateway_wrong",
+          "label": "169.254 bedeutet Gateway falsch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gateway falsch kann passieren, aber zuerst braucht man überhaupt eine passende IP-Konfig.", "correct": true },
+            { "id": "w2", "text": "APIPA ist oft der Hinweis: DHCP wurde nicht erreicht.", "correct": true },
+            { "id": "w3", "text": "Wenn Gateway falsch ist, hat man trotzdem meist eine gültige IP aus dem Netz.", "correct": true },
+            { "id": "w4", "text": "Mit APIPA ist man im richtigen Subnetz, nur Internet fehlt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "169.254.x.x (APIPA) = kein DHCP erreicht → häufig VLAN/Relay/Server/Port-Block. Erst unten prüfen."
+    },
+    {
+      "id": "v12",
+      "profile": "DNS: Du sollst DNS in einem Satz erklären und typische Records korrekt zuordnen (A/AAAA/CNAME/MX/TXT).",
+      "tags": ["DNS", "Records", "Grundlagen"],
+      "options": [
+        {
+          "id": "dns_phonebook",
+          "label": "DNS löst Namen → IP (A/AAAA) und liefert weitere Records (CNAME/MX/TXT)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "A = IPv4-Adresse, AAAA = IPv6-Adresse.", "correct": true },
+            { "id": "w2", "text": "CNAME ist Alias, MX für Mailrouting, TXT für Textinfos/Verifikation.", "correct": true },
+            { "id": "w3", "text": "Caching/TTL beschleunigt, kann Änderungen verzögern.", "correct": true },
+            { "id": "w4", "text": "DNS ist das Protokoll, das IP-Adressen automatisch vergibt.", "correct": false }
+          ]
+        },
+        {
+          "id": "dns_is_dhcp",
+          "label": "DNS vergibt IP, DHCP löst Namen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Genau umgekehrt: DHCP vergibt IP-Konfig, DNS löst Namen.", "correct": true },
+            { "id": "w2", "text": "Prüfungsfalle: „Internet geht nicht“ ist oft DNS, nicht DHCP.", "correct": true },
+            { "id": "w3", "text": "nslookup/dig testet DNS-Auflösung.", "correct": true },
+            { "id": "w4", "text": "TTL bedeutet: Router-Lebensdauer.", "correct": false }
+          ]
+        },
+        {
+          "id": "ttl_means_ping",
+          "label": "TTL in DNS heißt: wie oft man pingen darf",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DNS-TTL ist Cache-Lebensdauer des Records.", "correct": true },
+            { "id": "w2", "text": "Caching kann dazu führen, dass Änderungen erst später sichtbar werden.", "correct": true },
+            { "id": "w3", "text": "TTL ist ein typisches Detail für Prüfungsfallen bei „Änderung greift nicht“. ", "correct": true },
+            { "id": "w4", "text": "DNS ohne Cache wäre schneller.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "DNS ist das „Telefonbuch“: Namen → IP (A/AAAA) plus weitere Records. TTL/Caching kann Updates verzögern."
+    },
+    {
+      "id": "v13",
+      "profile": "DNS-Fehlersuche: „Internet geht nicht“, aber Ping auf eine öffentliche IP klappt. Du sollst benennen, was wahrscheinlich kaputt ist und wie du testest.",
+      "tags": ["DNS", "Fehlerbild", "Troubleshooting"],
+      "options": [
+        {
+          "id": "dns_broken",
+          "label": "Vermutlich DNS kaputt (IP geht, Name nicht) – Test mit nslookup/dig",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn IP-Ping klappt, sind Link/Route oft okay – Namenauflösung ist der nächste Verdächtige.", "correct": true },
+            { "id": "w2", "text": "nslookup/dig zeigt, welcher Resolver antwortet und ob der Name auflösbar ist.", "correct": true },
+            { "id": "w3", "text": "Falscher DNS-Server aus DHCP kann Namensauflösung komplett lahmlegen.", "correct": true },
+            { "id": "w4", "text": "Wenn Name nicht geht, ist Gateway definitiv falsch.", "correct": false }
+          ]
+        },
+        {
+          "id": "routing_broken",
+          "label": "Routing kaputt, weil Namen nicht gehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Routingprobleme zeigen sich oft schon bei IP-Pings (z. B. keine externe IP erreichbar).", "correct": true },
+            { "id": "w2", "text": "DNS ist Layer 7 Thema; zuerst IP testen, dann Namen.", "correct": true },
+            { "id": "w3", "text": "Wenn DNS kaputt ist, ist TCP/UDP automatisch auch kaputt.", "correct": false },
+            { "id": "w4", "text": "Prüfungstipp: erst IP testen, dann Namen – genau diese Trennung bringt Punkte.", "correct": true }
+          ]
+        },
+        {
+          "id": "switch_broken",
+          "label": "Switch kaputt, weil DNS nicht geht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wenn du eine öffentliche IP pingen kannst, arbeitet Layer 2 meist.", "correct": true },
+            { "id": "w2", "text": "DNS ist Anwendungs-Layer; Switch ist Layer 2.", "correct": true },
+            { "id": "w3", "text": "Switch tauscht DNS-Server aus.", "correct": false },
+            { "id": "w4", "text": "Die saubere Kette ist: IP-Konnektivität → DNS → Dienst.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn IP geht, Name nicht: DNS/Resolver/DHCP-DNS prüfen (nslookup/dig)."
+    },
+    {
+      "id": "v14",
+      "profile": "IPv4: Du sollst Aufbau, private Bereiche und die Rolle vom Default Gateway erklären.",
+      "tags": ["IPv4", "Private Netze", "Gateway"],
+      "options": [
+        {
+          "id": "ipv4_basics",
+          "label": "IPv4 32 Bit + private Bereiche + Default Gateway (Router ins nächste Netz)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IPv4 hat 32 Bit (z. B. 192.168.1.10).", "correct": true },
+            { "id": "w2", "text": "Private Bereiche: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.", "correct": true },
+            { "id": "w3", "text": "Default Gateway ist der Router ins nächste Netz/Internet.", "correct": true },
+            { "id": "w4", "text": "Wenn IP passt, ist Gateway egal.", "correct": false }
+          ]
+        },
+        {
+          "id": "gateway_irrelevant",
+          "label": "Gateway ist nur für DNS wichtig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gateway ist für alles außerhalb des lokalen Netzes wichtig (Routing).", "correct": true },
+            { "id": "w2", "text": "Gateway falsch: lokal geht, extern/internet nicht.", "correct": true },
+            { "id": "w3", "text": "DNS ist unabhängig: falsches Gateway kann auch DNS-Abfragen nach außen verhindern.", "correct": true },
+            { "id": "w4", "text": "Gateway gehört zu Layer 2 (MAC).", "correct": false }
+          ]
+        },
+        {
+          "id": "private_public_wrong",
+          "label": "192.168.x.x ist öffentlich routbar im Internet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Private IPv4-Bereiche werden nicht öffentlich geroutet.", "correct": true },
+            { "id": "w2", "text": "Zugriff ins Internet passiert typischerweise über NAT am Router.", "correct": true },
+            { "id": "w3", "text": "Private IPs sind fürs interne Netz, nicht als öffentliche Adresse gedacht.", "correct": true },
+            { "id": "w4", "text": "Private IPs sind unsicher, weil sie öffentlich sichtbar sind.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "IPv4: 32 Bit, private Bereiche kennen, Default Gateway ist der Router ins nächste Netz."
+    },
+    {
+      "id": "v15",
+      "profile": "Subnetting Minimum (AP1): Du sollst /24 erklären und den typischen Fehler benennen, wenn Hosts im falschen Netz sind.",
+      "tags": ["Subnetting", "CIDR", "/24", "Fehlerbild"],
+      "options": [
+        {
+          "id": "subnet_24",
+          "label": "/24 = 256 Adressen, typ. 254 Hosts; falsches Netz → erreicht Gateway nicht",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "/24 entspricht 255.255.255.0 (Netz vs Host-Anteil).", "correct": true },
+            { "id": "w2", "text": "In /24 sind 256 Adressen, nutzbar meist 254 Hosts.", "correct": true },
+            { "id": "w3", "text": "Typischer Fehler: Host ist im falschen Subnetz und kommt nicht zum Gateway.", "correct": true },
+            { "id": "w4", "text": "192.168.1.10/24 und 192.168.2.10/24 sind im selben Netz.", "correct": false }
+          ]
+        },
+        {
+          "id": "subnet_broadcast_wrong",
+          "label": "Broadcast ist immer die .0 und Netzadresse immer die .255",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Netzadresse: Host-Bits 0, Broadcast: Host-Bits 1 (abhängig von Maske).", "correct": true },
+            { "id": "w2", "text": "Bei /24 ist Netz .0 und Broadcast .255, aber nicht „immer“ bei anderen Masken.", "correct": true },
+            { "id": "w3", "text": "Subnetting hängt von CIDR ab (/25,/26,…), nicht von einer festen Regel.", "correct": true },
+            { "id": "w4", "text": "Maske ist nur Deko, IP reicht.", "correct": false }
+          ]
+        },
+        {
+          "id": "same_network_any_192",
+          "label": "Alle 192.168.x.x sind automatisch ein Netz",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ob zwei Hosts im selben Netz sind, entscheidet Maske/CIDR.", "correct": true },
+            { "id": "w2", "text": "Mit /24 trennt sich 192.168.1.x von 192.168.2.x.", "correct": true },
+            { "id": "w3", "text": "Typische Prüfung: falsches Subnetz -> kein Gateway/keine Kommunikation.", "correct": true },
+            { "id": "w4", "text": "Wenn DNS stimmt, sind Subnetze egal.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "AP1-Minimum: /24 = 255.255.255.0, 256 Adressen, meist 254 Hosts. Häufigster Fehler: Host im falschen Subnetz → Gateway nicht erreichbar."
+    },
+    {
+      "id": "v16",
+      "profile": "NAT (IPv4-Praxis): Du sollst erklären, was NAT macht – und warum NAT nicht automatisch „Sicherheit“ bedeutet.",
+      "tags": ["NAT", "IPv4", "Portfreigabe", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "nat_basics",
+          "label": "NAT übersetzt private→öffentlich (Adressknappheit) – Sicherheit kommt von Firewall/Regeln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "NAT ist Adress-Übersetzung, typisch am Router (IPv4).", "correct": true },
+            { "id": "w2", "text": "Grund: IPv4-Adressknappheit + Trennung intern/extern.", "correct": true },
+            { "id": "w3", "text": "Portfreigaben sind riskant und sollten nur bei Bedarf sauber geregelt werden.", "correct": true },
+            { "id": "w4", "text": "NAT ist die gleiche Sache wie Verschlüsselung.", "correct": false }
+          ]
+        },
+        {
+          "id": "nat_is_security",
+          "label": "NAT ist die Firewall, damit ist man sicher",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "NAT kann das „von außen erreichbar“-Verhalten beeinflussen, ersetzt aber keine Regeln/Kontrollen.", "correct": true },
+            { "id": "w2", "text": "Sicherheit kommt durch Firewall-Regeln, Segmentierung, Hardening, Monitoring.", "correct": true },
+            { "id": "w3", "text": "Portfreigaben können Angriffsfläche schaffen.", "correct": true },
+            { "id": "w4", "text": "Ohne NAT ist jede Verbindung automatisch offen.", "correct": false }
+          ]
+        },
+        {
+          "id": "nat_required_ipv6",
+          "label": "Bei IPv6 braucht man zwingend NAT, sonst geht es nicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "IPv6 hat genug Adressen, NAT ist meist nicht nötig.", "correct": true },
+            { "id": "w2", "text": "Firewall bleibt Pflicht – egal ob IPv4 oder IPv6.", "correct": true },
+            { "id": "w3", "text": "Prüfungsfalle: „Kein NAT = unsicher“ ist falsch.", "correct": true },
+            { "id": "w4", "text": "IPv6 kann keine Firewalls nutzen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "NAT ist Adress-Trick (IPv4), nicht automatisch Security. Sicherheit kommt von Firewall/Regeln, Portfreigaben sind riskant."
+    },
+    {
+      "id": "v17",
+      "profile": "IPv6-Grundlagen: Du sollst erklären, wie IPv6 aussieht, was link-local ist und wie Adressen vergeben werden (SLAAC/DHCPv6).",
+      "tags": ["IPv6", "SLAAC", "DHCPv6", "Link-local"],
+      "options": [
+        {
+          "id": "ipv6_basics",
+          "label": "IPv6 128 Bit (hex), link-local fe80::/10, /64 im LAN, SLAAC und/oder DHCPv6",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IPv6 ist 128 Bit und wird hexadezimal geschrieben (z. B. 2001:db8::1).", "correct": true },
+            { "id": "w2", "text": "Link-local fe80::/10 ist immer da und gilt nur lokal.", "correct": true },
+            { "id": "w3", "text": "/64 ist Standard im LAN; Adressvergabe über SLAAC (RA) und/oder DHCPv6.", "correct": true },
+            { "id": "w4", "text": "IPv6 nutzt ARP wie IPv4.", "correct": false }
+          ]
+        },
+        {
+          "id": "disable_ipv6_fix",
+          "label": "IPv6 einfach abschalten, dann ist alles korrekt gelöst",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das behebt oft nur Symptome; Dual-Stack muss sauber konfiguriert sein.", "correct": true },
+            { "id": "w2", "text": "Wenn IPv6 aktiv ist, müssen DNS (AAAA) und Firewall-Regeln passen.", "correct": true },
+            { "id": "w3", "text": "IPv6 ist „optional fürs Internet“, man braucht es nie.", "correct": false },
+            { "id": "w4", "text": "Nachbarauflösung läuft über Neighbor Discovery, nicht ARP.", "correct": true }
+          ]
+        },
+        {
+          "id": "linklocal_global",
+          "label": "fe80:: ist eine öffentliche Internet-Adresse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Link-local ist nur im lokalen Segment gültig, nicht geroutet.", "correct": true },
+            { "id": "w2", "text": "Für Internet braucht man globale/unique Adressen und Routing.", "correct": true },
+            { "id": "w3", "text": "Link-local ist nützlich für lokale Kommunikation/Neighbor Discovery.", "correct": true },
+            { "id": "w4", "text": "Wenn man fe80:: hat, braucht man kein Gateway.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "IPv6: 128 Bit, hex, /64 typisch im LAN, fe80:: link-local, SLAAC und/oder DHCPv6. Neighbor Discovery statt ARP."
+    },
+    {
+      "id": "v18",
+      "profile": "IPv4 vs IPv6: Du sollst die wichtigsten Unterschiede nennen (ARP vs Neighbor, Broadcast vs Multicast, NAT typisch vs meist nicht nötig).",
+      "tags": ["IPv4", "IPv6", "Unterschiede", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "v4_v6_diff",
+          "label": "ARP vs Neighbor Discovery, Broadcast vs Multicast, NAT typisch (v4) vs meist nicht nötig (v6)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IPv4 nutzt ARP; IPv6 nutzt Neighbor Discovery.", "correct": true },
+            { "id": "w2", "text": "IPv4 hat Broadcast, IPv6 setzt stärker auf Multicast.", "correct": true },
+            { "id": "w3", "text": "NAT ist bei IPv4 üblich; bei IPv6 meist nicht nötig – Firewall bleibt Pflicht.", "correct": true },
+            { "id": "w4", "text": "Kein NAT bei IPv6 bedeutet automatisch unsicher.", "correct": false }
+          ]
+        },
+        {
+          "id": "nat_security_required",
+          "label": "Ohne NAT ist man unsicher, also braucht IPv6 NAT",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sicherheit kommt von Firewall/Regeln, nicht von NAT.", "correct": true },
+            { "id": "w2", "text": "Prüfungsfalle: NAT ist kein Sicherheitskonzept.", "correct": true },
+            { "id": "w3", "text": "IPv6 hat genug Adressen, NAT ist nicht das Standardmittel.", "correct": true },
+            { "id": "w4", "text": "Firewall ist bei IPv6 optional.", "correct": false }
+          ]
+        },
+        {
+          "id": "broadcast_ipv6",
+          "label": "IPv6 nutzt Broadcast wie IPv4",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "IPv6 reduziert Broadcast und nutzt Multicast/Neighbor Discovery Mechanismen.", "correct": true },
+            { "id": "w2", "text": "Broadcast ist ein IPv4-Klassiker, IPv6 denkt anders.", "correct": true },
+            { "id": "w3", "text": "Neighbor Discovery ersetzt ARP im IPv6-Umfeld.", "correct": true },
+            { "id": "w4", "text": "ARP ist identisch in IPv4 und IPv6.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "IPv4 vs IPv6: ARP vs Neighbor Discovery, Broadcast vs Multicast, NAT typisch (v4) vs meist nicht nötig (v6) – Firewall bleibt Pflicht."
+    },
+    {
+      "id": "v19",
+      "profile": "Fehlersuche-Checkliste (OSI): Du sollst die richtige Reihenfolge wählen (Layer 1→7) und typische Prüfungen pro Layer nennen.",
+      "tags": ["Fehlersuche", "OSI", "Checkliste"],
+      "options": [
+        {
+          "id": "osi_checklist",
+          "label": "OSI-Check: 1 Kabel/Funk → 2 VLAN/MAC/ARP → 3 IP/Gateway/Route → 4 Ports/Firewall → 7 DNS/HTTP/App",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Layer 1 prüfen: Link/LED/Kabel/Signalstärke.", "correct": true },
+            { "id": "w2", "text": "Layer 2: Switch-Port, VLAN, MAC-Tabelle, ARP/Neighbor.", "correct": true },
+            { "id": "w3", "text": "Layer 3: IP/Maske/Gateway/Route. Layer 4: Ports/Firewall (TCP vs UDP).", "correct": true },
+            { "id": "w4", "text": "Man startet immer bei Layer 7 und arbeitet nach unten.", "correct": false }
+          ]
+        },
+        {
+          "id": "jump_layers",
+          "label": "Direkt DNS ändern, bevor irgendwas anderes geprüft ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wenn Layer 1/2/3 kaputt sind, bringt DNS-Ändern nichts.", "correct": true },
+            { "id": "w2", "text": "Prüfungsfalle: Springen kostet Punkte, weil Vorgehen fehlt.", "correct": true },
+            { "id": "w3", "text": "Erst unten, dann oben ist die saubere Regel.", "correct": true },
+            { "id": "w4", "text": "Wenn DNS stimmt, sind Kabel egal.", "correct": false }
+          ]
+        },
+        {
+          "id": "layer1_ignore",
+          "label": "Layer 1 ist unwichtig, weil alles digital ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kabel/Port/Signal sind die Basis – wenn das nicht stimmt, geht nichts darüber.", "correct": true },
+            { "id": "w2", "text": "WLAN-Probleme sind oft Layer-1-nah (Signal/Airtime/Kanal).", "correct": true },
+            { "id": "w3", "text": "Viele Fehler sind banal: falsches Kabel, falscher Port, Port down.", "correct": true },
+            { "id": "w4", "text": "Layer 1 betrifft nur Telefonie, nicht Netzwerke.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "OSI-Troubleshooting: nicht springen. Unten anfangen (Physik) → dann Adressen/Route → dann Name/Dienst."
+    },
+    {
+      "id": "v20",
+      "profile": "Typische Tools: Du sollst zuordnen, welches Tool was prüft (ipconfig/ifconfig, ping, traceroute, nslookup/dig, arp/neighbor).",
+      "tags": ["Tools", "Fehlersuche", "Zuordnung"],
+      "options": [
+        {
+          "id": "tool_mapping",
+          "label": "Tool-Zuordnung: ipconfig=Konfig, ping=Reachability, traceroute=Pfad, nslookup=DNS, arp/neighbor=MAC/ND",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "ipconfig/ifconfig zeigt IP, Maske, Gateway, DNS.", "correct": true },
+            { "id": "w2", "text": "ping testet Erreichbarkeit (ICMP) – erst Gateway, dann extern.", "correct": true },
+            { "id": "w3", "text": "tracert/traceroute zeigt Routing-Pfad; nslookup/dig testet Namensauflösung.", "correct": true },
+            { "id": "w4", "text": "arp -a / neighbor zeigt DNS-Cache.", "correct": false }
+          ]
+        },
+        {
+          "id": "ping_dns",
+          "label": "ping ist ein DNS-Tool",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ping ist primär ICMP/Erreichbarkeit; Name-Ping kann DNS indirekt nutzen, aber ist kein DNS-Test.", "correct": true },
+            { "id": "w2", "text": "DNS testet man sauber mit nslookup/dig.", "correct": true },
+            { "id": "w3", "text": "Standardreihenfolge: Gateway ping → öffentliche IP ping → DNS testen → Dienst testen.", "correct": true },
+            { "id": "w4", "text": "traceroute ändert das Gateway automatisch.", "correct": false }
+          ]
+        },
+        {
+          "id": "arp_routes",
+          "label": "arp -a zeigt die Route ins Internet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "arp -a zeigt lokale IP→MAC Zuordnungen (IPv4).", "correct": true },
+            { "id": "w2", "text": "Routing-Pfad siehst du mit traceroute/tracert, lokale Route über Routing-Tabellen.", "correct": true },
+            { "id": "w3", "text": "Neighbor Discovery (IPv6) ist das Pendant zu ARP.", "correct": true },
+            { "id": "w4", "text": "arp -a kann DNS-Server konfigurieren.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Tools: ipconfig/ifconfig=Konfig, ping=Erreichbarkeit, traceroute=Pfad, nslookup/dig=DNS, arp/neighbor=lokale Auflösung."
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "DSGVO (AP1) – Grundlogik • Begriffe • Pflichten • Rollen • Maßnahmen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen DSGVO-Begriff, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Situationen (Bewerber, Mitarbeiter, Logs, Newsletter, Cloud, Datenpannen).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff oder ein Konzept.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "dsgvo_ziel",
+      "name": "DSGVO: Ziel",
+      "description": "Regelt die Verarbeitung personenbezogener Daten und schützt Rechte/Freiheiten natürlicher Personen durch klare Regeln, Pflichten und Nachweise.",
+      "example": "Kundendaten im Ticketsystem: du brauchst Zweck, Rechtsgrundlage, Infos für Betroffene und passende Schutzmaßnahmen."
+    },
+    {
+      "id": "verbot_mit_erlaubnisvorbehalt",
+      "name": "Verbot mit Erlaubnisvorbehalt",
+      "description": "Grundlogik: Verarbeitung ist nur erlaubt, wenn es eine gültige Rechtsgrundlage gibt (nicht „einfach machen“).",
+      "example": "Newsletter-Versand ohne Einwilligung/andere Rechtsgrundlage → unzulässig, auch wenn niemand sich beschwert."
+    },
+    {
+      "id": "rechenschaftspflicht",
+      "name": "Rechenschaftspflicht",
+      "description": "Verantwortlicher muss Einhaltung nicht nur behaupten, sondern nachweisen können (Dokumentation/Prozesse/Artefakte).",
+      "example": "Bei Prüfung/Anfrage: VVT, AVV, TOMs und Löschkonzept vorzeigen können."
+    },
+    {
+      "id": "transparenz",
+      "name": "Transparenz",
+      "description": "Betroffene müssen verständlich informiert werden: wer, was, wozu, wie lange, wohin, welche Rechte.",
+      "example": "Datenschutzhinweis beim Formular erklärt Zweck, Rechtsgrundlage, Empfänger und Speicherdauer."
+    },
+    {
+      "id": "personenbezogene_daten",
+      "name": "Personenbezogene Daten",
+      "description": "Information über eine identifizierte oder identifizierbare natürliche Person.",
+      "example": "Name, E-Mail, Kundennummer, Standortdaten, Online-Kennung – alles potenziell personenbezogen."
+    },
+    {
+      "id": "identifizierbar",
+      "name": "Identifizierbar",
+      "description": "Person kann direkt oder indirekt bestimmt werden (z. B. über IDs, Merkmale, Kombinationen).",
+      "example": "Kundennummer + Bestellhistorie reicht, um eine Person eindeutig zuzuordnen."
+    },
+    {
+      "id": "ip_adresse",
+      "name": "IP-Adresse (oft personenbezogen)",
+      "description": "IP kann Personenbezug haben, besonders in Logs/Tracking-Kontexten (je nach Möglichkeit der Zuordnung).",
+      "example": "Webserver-Logs speichern IP + Zeitpunkt → kann zur Identifizierung beitragen, daher DSGVO-relevant."
+    },
+    {
+      "id": "anonymisierung",
+      "name": "Anonymisierung",
+      "description": "Kein Personenbezug mehr möglich → DSGVO greift nicht mehr.",
+      "example": "Statistikdaten ohne Zuordnungsmöglichkeit zu einzelnen Personen (keine IDs, keine Rückrechenbarkeit)."
+    },
+    {
+      "id": "pseudonymisierung",
+      "name": "Pseudonymisierung",
+      "description": "Personenbezug bleibt grundsätzlich möglich (z. B. über Schlüssel/Zuordnung) → DSGVO gilt weiterhin.",
+      "example": "User-ID statt Name im Datensatz, aber Mapping-Tabelle existiert → weiterhin DSGVO drin."
+    },
+    {
+      "id": "hash_email",
+      "name": "Hash von E-Mail",
+      "description": "In der Praxis meist pseudonymisiert, nicht anonym (Rückschluss/Matching möglich, besonders bei gleichen Eingaben).",
+      "example": "Newsletter-System speichert nur Hash der E-Mail, kann aber bei erneutem Hashen wieder zugeordnet werden."
+    },
+    {
+      "id": "verarbeitung_definition",
+      "name": "Verarbeitung",
+      "description": "Jeder Umgang mit Daten: erheben, speichern, ändern, auslesen/ansehen, übermitteln, löschen usw.",
+      "example": "Schon das Anzeigen eines Kundendatensatzes im CRM ist Verarbeitung."
+    },
+    {
+      "id": "datenlebenszyklus",
+      "name": "Daten-Lebenszyklus",
+      "description": "Erheben → Nutzen → Teilen → Speichern → Löschen/Archivieren; entlang dieser Kette müssen Regeln greifen.",
+      "example": "Mini-Check: Wer sieht was, wann, wozu, wie lange? (z. B. HR-Daten nur für HR, mit Fristen)."
+    },
+    {
+      "id": "art5_recht_fair_transp",
+      "name": "Grundsatz: Rechtmäßigkeit • Fairness • Transparenz",
+      "description": "Verarbeitung nur mit Rechtsgrundlage, fair gegenüber Betroffenen und nachvollziehbar erklärt.",
+      "example": "Kundenkonto: klare Info im Hinweis + sauberer Zweck + legitime Grundlage statt „heimlich tracken“."
+    },
+    {
+      "id": "art5_zweckbindung",
+      "name": "Grundsatz: Zweckbindung",
+      "description": "Daten nur für festgelegte, eindeutige Zwecke verarbeiten; Zweckänderung muss neu bewertet/kommuniziert werden.",
+      "example": "Bewerberdaten nicht später für Marketing verwenden, außer neu informiert/neu legitimiert."
+    },
+    {
+      "id": "art5_datenminimierung",
+      "name": "Grundsatz: Datenminimierung",
+      "description": "Nur Daten erheben/verarbeiten, die für den Zweck nötig sind.",
+      "example": "Newsletter-Anmeldung nur E-Mail, nicht Geburtsdatum + Adresse „für später vielleicht“."
+    },
+    {
+      "id": "art5_richtigkeit",
+      "name": "Grundsatz: Richtigkeit",
+      "description": "Daten müssen korrekt und aktuell sein; falsche Daten korrigieren/löschen.",
+      "example": "Kunde meldet neue Adresse → System muss Update ermöglichen statt Altdaten dauerhaft zu behalten."
+    },
+    {
+      "id": "art5_speicherbegrenzung",
+      "name": "Grundsatz: Speicherbegrenzung",
+      "description": "Nicht länger speichern als nötig; Löschfristen/Kriterien festlegen und umsetzen.",
+      "example": "Bewerberdaten nach Abschluss löschen, außer Einwilligung für Talentpool mit klarer Frist."
+    },
+    {
+      "id": "art5_integritaet_vertraulichkeit",
+      "name": "Grundsatz: Integrität & Vertraulichkeit",
+      "description": "Daten schützen vor unbefugtem Zugriff, Verlust, Manipulation; passende Sicherheitsmaßnahmen nach Risiko.",
+      "example": "Rollenrechte + MFA + Verschlüsselung + Backup/Restore-Test für ein HR-System."
+    },
+    {
+      "id": "fallstrick_sammeln",
+      "name": "Prüfungsfalle: „Wir sammeln mal…“",
+      "description": "„Könnte später nützlich sein“ ist meistens nicht zulässig (verstößt typischerweise gegen Zweckbindung/Minimierung).",
+      "example": "Support-Formular verlangt Ausweisnummer ohne echten Bedarf → unnötig und riskant."
+    },
+    {
+      "id": "verantwortlicher",
+      "name": "Verantwortlicher",
+      "description": "Entscheidet über Zwecke und Mittel der Verarbeitung (trägt den Hut).",
+      "example": "Unternehmen betreibt Ticket-System und legt fest, welche Daten wozu gespeichert werden → Verantwortlicher."
+    },
+    {
+      "id": "auftragsverarbeiter",
+      "name": "Auftragsverarbeiter",
+      "description": "Verarbeitet personenbezogene Daten im Auftrag nach Weisung des Verantwortlichen (typisch: Hosting/Cloud/Payroll).",
+      "example": "Cloud-CRM hostet Kundendaten für Firma → häufig Auftragsverarbeiter (wenn Firma Zweck+Wie vorgibt)."
+    },
+    {
+      "id": "empfaenger",
+      "name": "Empfänger",
+      "description": "Stelle, an die personenbezogene Daten offengelegt werden (kann Dienstleister, Partner, Behörde sein).",
+      "example": "Versanddienstleister erhält Name+Adresse für Lieferung → Empfänger."
+    },
+    {
+      "id": "dienstleister_fallstrick",
+      "name": "Prüfungsfalle: Dienstleister ≠ automatisch Auftragsverarbeiter",
+      "description": "Entscheidet der Dienstleister selbst über Zwecke/Mittel, kann er eigener Verantwortlicher sein.",
+      "example": "Zahlungsdienst verarbeitet Daten für eigene Abwicklung/Regeln → kann (mit)Verantwortlicher sein, nicht nur AV."
+    },
+    {
+      "id": "gemeinsam_verantwortliche",
+      "name": "Gemeinsame Verantwortliche",
+      "description": "Zwei oder mehr Parteien entscheiden gemeinsam über Zwecke und Mittel; Verantwortlichkeiten müssen geregelt werden.",
+      "example": "Zwei Firmen betreiben gemeinsam ein Portal und bestimmen gemeinsam Tracking/Accounts → gemeinsame Verantwortung."
+    },
+    {
+      "id": "art6_einwilligung",
+      "name": "Rechtsgrundlage: Einwilligung",
+      "description": "Freiwillig, informiert, eindeutig, zweckgebunden; muss widerrufbar und nachweisbar sein.",
+      "example": "Newsletter-Opt-in + Double-Opt-in Nachweis + Abmeldelink."
+    },
+    {
+      "id": "art6_vertrag",
+      "name": "Rechtsgrundlage: Vertrag / vorvertragliche Maßnahmen",
+      "description": "Verarbeitung ist nötig, um Vertrag zu erfüllen oder vorvertragliche Schritte umzusetzen.",
+      "example": "Versand von Rechnung/Lieferung: Kundendaten für Vertragserfüllung verarbeiten."
+    },
+    {
+      "id": "art6_rechtliche_pflicht",
+      "name": "Rechtsgrundlage: Rechtliche Verpflichtung",
+      "description": "Verarbeitung ist nötig, weil ein Gesetz es fordert.",
+      "example": "Aufbewahrung von Rechnungen nach steuerlichen Vorgaben → Löschung nicht sofort möglich."
+    },
+    {
+      "id": "art6_lebenswichtig",
+      "name": "Rechtsgrundlage: Lebenswichtige Interessen",
+      "description": "Selten, aber relevant bei Notfällen (z. B. medizinische Notlagen).",
+      "example": "Notfallkontakt-Daten im Ernstfall verwenden, wenn Betroffene nicht handlungsfähig sind."
+    },
+    {
+      "id": "art6_oeffentliches_interesse",
+      "name": "Rechtsgrundlage: Öffentliches Interesse / öffentliche Gewalt",
+      "description": "Verarbeitung zur Erfüllung öffentlicher Aufgaben (typisch Behörden/öffentliche Stellen).",
+      "example": "Kommunale Stelle verarbeitet Bürgerdaten zur gesetzlich zugewiesenen Aufgabe."
+    },
+    {
+      "id": "art6_berechtigtes_interesse",
+      "name": "Rechtsgrundlage: Berechtigtes Interesse",
+      "description": "Interessenabwägung nötig: legitimer Zweck + Erforderlichkeit + Schutzinteressen der Betroffenen.",
+      "example": "IT-Sicherheits-Logs zur Abwehr von Angriffen, mit Minimierung und kurzen Fristen."
+    },
+    {
+      "id": "einwilligung_fallstrick",
+      "name": "Prüfungsfalle: „Einwilligung ist immer am sichersten“",
+      "description": "Nein: Einwilligung muss freiwillig sein und darf nicht „erzwungen“ werden; Widerruf muss jederzeit leicht möglich sein.",
+      "example": "Service nur nutzbar, wenn man Tracking akzeptiert → häufig problematisch (Kopplung/fehlende Freiwilligkeit)."
+    },
+    {
+      "id": "art7_optout",
+      "name": "Einwilligung: Opt-out / vorangekreuzt",
+      "description": "Vorab angekreuzte Kästchen sind meist nicht „eindeutig“; Zustimmung muss aktiv erfolgen.",
+      "example": "Checkbox „Newsletter“ ist standardmäßig angehakt → in Prüfungen typischer No-Go-Hinweis."
+    },
+    {
+      "id": "art9_besondere_daten",
+      "name": "Besondere Kategorien (Art. 9)",
+      "description": "Sehr sensible Daten (z. B. Gesundheit, biometrisch, Religion, politische Meinung); grundsätzlich verboten, nur mit spezieller Ausnahme.",
+      "example": "Krankmeldung/Attest im Betrieb: streng begrenzen, Zugriff nur Need-to-know, klare Fristen."
+    },
+    {
+      "id": "art10_strafdaten",
+      "name": "Strafdaten (Art. 10)",
+      "description": "Daten zu Straftaten/Verurteilungen unterliegen besonderen Regeln; nicht frei verarbeitbar.",
+      "example": "Background-Checks nur, wenn rechtlich zulässig und klar geregelt."
+    },
+    {
+      "id": "info_pflichten_13_14",
+      "name": "Informationspflichten (Art. 13/14)",
+      "description": "Pflichtinfos: Verantwortlicher/DSB, Zwecke+Rechtsgrundlage, Empfänger, Speicherdauer, Rechte, ggf. Drittlandtransfer/Profiling.",
+      "example": "Formular-Hinweis erklärt: wer verarbeitet, wozu, wie lange, welche Rechte + Kontakt."
+    },
+    {
+      "id": "footer_fallstrick",
+      "name": "Prüfungsfalle: „Hinweis irgendwo im Footer reicht“",
+      "description": "Information muss zeitlich/kontextuell passend und auffindbar sein (nicht versteckt, nicht zu spät).",
+      "example": "Registrierung: Hinweis direkt am Prozess, nicht erst nach dem Absenden in einem Untermenü."
+    },
+    {
+      "id": "betroffenenrechte_liste",
+      "name": "Betroffenenrechte (Überblick)",
+      "description": "Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, kein reines Profiling/Automatismus.",
+      "example": "Kunde fragt: „Welche Daten habt ihr über mich?“ → Prozess für Auskunft muss existieren."
+    },
+    {
+      "id": "frist_1_monat",
+      "name": "Frist: i. d. R. 1 Monat",
+      "description": "Betroffenenanfragen müssen grundsätzlich binnen eines Monats beantwortet werden (Prozess/Workflow nötig).",
+      "example": "Ticket für DSGVO-Anfrage wird automatisch priorisiert und fristüberwacht."
+    },
+    {
+      "id": "loeschung_ausnahme",
+      "name": "Löschung ist nicht immer möglich",
+      "description": "Aufbewahrungspflichten oder andere Gründe können Löschung verhindern; dann z. B. Einschränkung/Archivierung.",
+      "example": "Rechnungsdaten dürfen nicht sofort gelöscht werden → gesetzliche Aufbewahrung, Zugriff stark begrenzen."
+    },
+    {
+      "id": "avv_art28",
+      "name": "Auftragsverarbeitung: AV-Vertrag (AVV)",
+      "description": "Wenn Dienstleister im Auftrag verarbeitet, braucht es AVV mit Pflichtinhalten (Zweck, Dauer, Datenarten, TOMs, Weisungen, Subunternehmer…).",
+      "example": "Cloud-Hosting für Kundendaten: AVV statt nur NDA; Subunternehmer müssen geregelt sein."
+    },
+    {
+      "id": "nda_fallstrick",
+      "name": "Prüfungsfalle: „NDA reicht“",
+      "description": "NDA schützt Vertraulichkeit, ersetzt aber keinen AVV mit DSGVO-Pflichtinhalten.",
+      "example": "Hosting-Anbieter hat nur NDA → in der Prüfung: fehlender AVV ist klarer Mangel."
+    },
+    {
+      "id": "toms_art32",
+      "name": "TOMs / Sicherheit der Verarbeitung (Art. 32)",
+      "description": "Schutzniveau nach Risiko (Stand der Technik, Kosten, Umfang/Zweck). Ziel: Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit.",
+      "example": "Rollenrechte, MFA, Verschlüsselung, Backup/Restore-Test, Logging, Schulungen."
+    },
+    {
+      "id": "passwort_fuer_alle_nogo",
+      "name": "Prüfungsfalle: „Ein Passwort für alle“",
+      "description": "Verstößt gegen Zugriffskontrolle/Need-to-know und ist in Prüfungen ein klarer No-Go-Punkt.",
+      "example": "Gemeinsamer Admin-Login fürs Team → statt dessen personalisierte Accounts + Rollen + MFA."
+    },
+    {
+      "id": "privacy_by_design",
+      "name": "Privacy by Design (Art. 25)",
+      "description": "Datenschutz wird bereits in Architektur/Entwurf eingebaut (nicht erst am Ende).",
+      "example": "API speichert nur notwendige Felder, Logs sind minimiert, Rechtekonzept ist von Anfang an geplant."
+    },
+    {
+      "id": "privacy_by_default",
+      "name": "Privacy by Default (Art. 25)",
+      "description": "Voreinstellungen sind datenschutzfreundlich: minimal, restriktiv, kein unnötiges Tracking/Sharing.",
+      "example": "Profil ist standardmäßig privat, Tracking ist aus, Logs sind kurz und ohne sensible Inhalte."
+    },
+    {
+      "id": "vvt_art30",
+      "name": "Verzeichnis von Verarbeitungstätigkeiten (Art. 30)",
+      "description": "Pflicht-Register über Verarbeitungstätigkeiten (Zweck, Kategorien, Empfänger, Löschfristen, TOMs). Muss vorlegbar sein.",
+      "example": "Eintrag „Newsletter“: Zweck, Daten (E-Mail), Opt-in-Nachweis, Dienstleister, Löschfrist."
+    },
+    {
+      "id": "dsfa_art35",
+      "name": "Datenschutz-Folgenabschätzung (Art. 35)",
+      "description": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking, Profiling, Videoüberwachung). Muss vor Start passieren.",
+      "example": "Neues Tracking im Kundenportal → erst DSFA: Risiken + Maßnahmen, dann live gehen."
+    },
+    {
+      "id": "datenpanne_72h",
+      "name": "Datenpanne (Art. 33/34): 72 Stunden",
+      "description": "Meldung an Aufsichtsbehörde unverzüglich, möglichst binnen 72 Stunden nach Bekanntwerden (wenn Risiko besteht); Betroffene informieren bei hohem Risiko.",
+      "example": "Laptop mit Kundendaten gestohlen: Risiko bewerten, ggf. melden, Betroffene informieren, Beweise/Logs sichern."
+    },
+    {
+      "id": "bekanntwerden_fallstrick",
+      "name": "Prüfungsfalle: 72h ab „Bekanntwerden“",
+      "description": "Frist startet nicht zwingend beim Ereignis, sondern ab dem Zeitpunkt, an dem es bekannt wird.",
+      "example": "Leak passiert am Wochenende, entdeckt am Montag → Frist zählt ab Montag."
+    },
+    {
+      "id": "sanktionen_art83",
+      "name": "Sanktionen (Art. 83)",
+      "description": "Bußgelder je nach Verstoß, bis zu sehr hohen Grenzen; Datenschutz ist nicht „nur Formalität“.",
+      "example": "Fehlende Rechtsgrundlage + fehlende Nachweise + Datenpanne ohne Meldung → massives Risiko."
+    },
+    {
+      "id": "haftung_art82",
+      "name": "Haftung / Schadenersatz (Art. 82)",
+      "description": "Betroffene können Schadenersatz verlangen (materiell/immateriell) bei DSGVO-Verstößen.",
+      "example": "Unzulässige Offenlegung von HR-Daten führt zu Ansprüchen der betroffenen Person."
+    },
+    {
+      "id": "sdm",
+      "name": "Standard-Datenschutzmodell (SDM)",
+      "description": "Vorgehensweise/Denkmatrix, um DSGVO-Anforderungen systematisch in technische/organisatorische Maßnahmen zu übersetzen.",
+      "example": "Für neuen Prozess werden Risiken strukturiert bewertet und daraus TOMs abgeleitet (nicht „Tool klicken“)."
+    },
+    {
+      "id": "drittlandtransfer_art44",
+      "name": "Drittlandtransfer (Kapitel V, Art. 44 ff.)",
+      "description": "Übermittlung in Drittländer nur unter zusätzlichen Bedingungen (Kapitel V ergänzt, ersetzt aber nicht Art. 6).",
+      "example": "US-Cloud: Du brauchst Art. 6 + Transfermechanismus + Info im Datenschutzhinweis."
+    },
+    {
+      "id": "transfer_angemessenheit",
+      "name": "Transfermechanismus: Angemessenheitsbeschluss",
+      "description": "EU stellt fest, dass ein Land ein angemessenes Datenschutzniveau hat; dann ist Transfer unter Bedingungen möglich.",
+      "example": "Cloud-Standort in Land mit Angemessenheitsbeschluss ist einfacher als „wildes Drittland“."
+    },
+    {
+      "id": "transfer_scc",
+      "name": "Transfermechanismus: Standardvertragsklauseln (SCC)",
+      "description": "Vertragliche Garantien für Drittlandtransfer, wenn kein Angemessenheitsbeschluss greift.",
+      "example": "SaaS-Anbieter außerhalb EU: SCC + technische Maßnahmen + Transparenz im Hinweis."
+    },
+    {
+      "id": "transfer_bcr",
+      "name": "Transfermechanismus: Binding Corporate Rules (BCR)",
+      "description": "Interne Datenschutzregeln großer Konzerne für konzerninterne Transfers; aufwendig, aber möglich.",
+      "example": "Internationaler Konzern verarbeitet HR-Daten konzernweit auf Basis genehmigter BCR."
+    },
+    {
+      "id": "praxis_bewerberdaten",
+      "name": "Praxisfall: Bewerberdaten",
+      "description": "Zweck Bewerbung, klare Fristen; nach Abschluss löschen, außer Einwilligung für Talentpool.",
+      "example": "Bewerber abgelehnt: Daten nach definierter Frist löschen; Talentpool nur mit sauberer Einwilligung."
+    },
+    {
+      "id": "praxis_mitarbeiterdaten",
+      "name": "Praxisfall: Mitarbeiterdaten",
+      "description": "Need-to-know, klare Zwecke (Lohn, Zeit, HR); Zugriffe streng, Protokollierung sinnvoll.",
+      "example": "Nur HR sieht Personalakte; Teamleitung sieht nur notwendige Daten (z. B. Abwesenheit, nicht Diagnose)."
+    },
+    {
+      "id": "praxis_logfiles",
+      "name": "Praxisfall: Logfiles",
+      "description": "Oft berechtigtes Interesse/Sicherheit; minimieren, kurze Fristen, kein Klartext-Passwort/Token.",
+      "example": "Login-Logs speichern Zeitpunkt + Ergebnis, aber nicht Passwort/Session-Token."
+    },
+    {
+      "id": "praxis_newsletter",
+      "name": "Praxisfall: Newsletter",
+      "description": "Typisch Einwilligung + Nachweis + einfacher Widerruf (Abmeldelink) + Zweckbindung.",
+      "example": "Double-Opt-in wird gespeichert; Abmeldung ist 1 Klick; danach Löschung/Blacklist je nach Konzept."
+    },
+    {
+      "id": "mini_formel",
+      "name": "Mini-Formel für Prüfungsfälle",
+      "description": "Zweck + Rechtsgrundlage + Frist + Empfänger + TOMs (und dokumentieren).",
+      "example": "Neues Feature „Login-Tracking“: Zweck Sicherheit, Rechtsgrundlage berechtigtes Interesse, 14 Tage Frist, Empfänger none, TOMs Logging/Access-Control."
+    },
+    {
+      "id": "merksatz_dokumentation",
+      "name": "Merksatz: Nicht nur machen",
+      "description": "Nicht nur „machen“, sondern „begründen + dokumentieren“ (Nachweisbarkeit ist prüfungsentscheidend).",
+      "example": "Du hast TOMs umgesetzt, aber nichts dokumentiert → in Prüfungen: Rechenschaftspflicht nicht erfüllt."
+    }
+  ]
+}
