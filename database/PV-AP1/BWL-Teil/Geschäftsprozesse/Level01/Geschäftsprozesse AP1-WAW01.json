@@ -1,0 +1,540 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Geschäftsprozesse (AP1)",
+  "description": "Schritt 1: Begriff/Einordnung bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Ein User meldet: „Laptop ist sehr langsam“. Das IT-Team prüft das Ticket, macht Diagnose, installiert Updates, dokumentiert und schließt das Ticket.",
+      "tags": ["Geschäftsprozesse", "Arbeitsprozess", "Support", "AP1"],
+      "options": [
+        {
+          "id": "arbeitsprozess",
+          "label": "Arbeitsprozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt konkrete Arbeitsschritte auf Team-/Job-Ebene.", "correct": true },
+            { "id": "w2", "text": "Fokus liegt auf Kunde, Geldfluss und Ergebnis auf Unternehmensebene.", "correct": false },
+            { "id": "w3", "text": "Kann regelmäßig wiederkehren (z. B. Tickets bearbeiten).", "correct": true },
+            { "id": "w4", "text": "Ist zwingend einmalig und zeitlich begrenzt wie ein Projekt.", "correct": false }
+          ]
+        },
+        {
+          "id": "geschaeftsprozess",
+          "label": "Geschäftsprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schafft Wert aus Unternehmens-/Kundensicht (z. B. Auftrag → Leistung → Rechnung).", "correct": true },
+            { "id": "w2", "text": "Beschreibt nur technische Einzelschritte wie Imaging und Installation.", "correct": false },
+            { "id": "w3", "text": "Bezieht typischerweise Kunde/Verantwortung/Ergebnis mit ein.", "correct": true },
+            { "id": "w4", "text": "Hat keinen Output, weil nur „Tätigkeit“ zählt.", "correct": false }
+          ]
+        },
+        {
+          "id": "projekt",
+          "label": "Projekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist einmalig, zeitlich befristet und hat ein klares Ende.", "correct": true },
+            { "id": "w2", "text": "Wiederholt sich regelmäßig in gleicher Grundstruktur.", "correct": false },
+            { "id": "w3", "text": "Hat typischerweise definierte Ziele, Budget und Zeitplan.", "correct": true },
+            { "id": "w4", "text": "Ist synonym zu Prozess und kann beliebig oft identisch laufen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Arbeitsprozess: konkrete, wiederholbare Arbeitsschritte im IT-Team (Ticket-Diagnose, Fix, Doku)."
+    },
+    {
+      "id": "v02",
+      "profile": "„Neuer Arbeitsplatz für Mitarbeitende“: Bedarf wird gemeldet, Genehmigung erteilt, Gerät bestellt, bereitgestellt, übergeben und die Person kann produktiv arbeiten.",
+      "tags": ["Geschäftsprozesse", "Arbeitsprozess", "Wertschöpfung", "AP1"],
+      "options": [
+        {
+          "id": "geschaeftsprozess",
+          "label": "Geschäftsprozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Betrachtet Ergebnis/Wert und Verantwortung aus Unternehmenssicht.", "correct": true },
+            { "id": "w2", "text": "Fokussiert nur die IT-Arbeitsschritte (Image, Install, Übergabeprotokoll).", "correct": false },
+            { "id": "w3", "text": "Hat typischerweise Trigger → Ablauf → messbaren Output.", "correct": true },
+            { "id": "w4", "text": "Ist immer gleichbedeutend mit einem einmaligen Projekt.", "correct": false }
+          ]
+        },
+        {
+          "id": "arbeitsprozess",
+          "label": "Arbeitsprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt konkrete Schritte wie Imaging, Softwareinstall und Einweisung.", "correct": true },
+            { "id": "w2", "text": "Umfasst Kunde/Geld/Verantwortung als zentrale Perspektive.", "correct": false },
+            { "id": "w3", "text": "Läuft auf Team-/Job-Ebene ab.", "correct": true },
+            { "id": "w4", "text": "Ist zwingend auf Unternehmensebene mit Fokus auf Wert definiert.", "correct": false }
+          ]
+        },
+        {
+          "id": "prozess_egal",
+          "label": "„Ist egal, beides ist das Gleiche“",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beide Ebenen haben Input → Aktivität → Output, aber unterschiedlichen Fokus.", "correct": true },
+            { "id": "w2", "text": "Arbeitsprozess und Geschäftsprozess sind in der Prüfung austauschbar.", "correct": false },
+            { "id": "w3", "text": "Geschäftsprozess erklärt eher das „Warum/Wert“, Arbeitsprozess eher das „Wie/Schritte“. ", "correct": true },
+            { "id": "w4", "text": "Die Ebenentrennung spielt in AP1-Szenarien keine Rolle.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Geschäftsprozess: Gesamtprozess aus Unternehmens-/Nutzersicht (Bedarf → Genehmigung → Bereitstellung → produktiv)."
+    },
+    {
+      "id": "v03",
+      "profile": "Der IT-Support ist ein zentraler Ablauf, der direkt einen Service für den Nutzer liefert und damit die Leistung des Unternehmens sichtbar macht.",
+      "tags": ["Prozessarten", "Kernprozess", "Service", "AP1"],
+      "options": [
+        {
+          "id": "kernprozess",
+          "label": "Kernprozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Erzeugt direkt Kundennutzen bzw. Wertschöpfung.", "correct": true },
+            { "id": "w2", "text": "Ermöglicht nur indirekt, dass Kernprozesse laufen.", "correct": false },
+            { "id": "w3", "text": "Hier entsteht typischerweise Umsatz/Leistung am Markt.", "correct": true },
+            { "id": "w4", "text": "Ist immer reine Strategie/Steuerung ohne operative Leistung.", "correct": false }
+          ]
+        },
+        {
+          "id": "unterstuetzungsprozess",
+          "label": "Unterstützungsprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ermöglicht den Kernprozess (z. B. Einkauf, IT-Betrieb, Personal).", "correct": true },
+            { "id": "w2", "text": "Erzeugt unmittelbar Kundennutzen am Markt.", "correct": false },
+            { "id": "w3", "text": "Fällt der Support weg, kann der Kernprozess leiden – aber er ist nicht immer der Umsatzträger.", "correct": true },
+            { "id": "w4", "text": "Hat grundsätzlich keinen messbaren Output.", "correct": false }
+          ]
+        },
+        {
+          "id": "fuehrungsprozess",
+          "label": "Führungsprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Steuert und entscheidet (Strategie, Controlling, QM).", "correct": true },
+            { "id": "w2", "text": "Ist der operative Ablauf, der direkt die Leistung liefert.", "correct": false },
+            { "id": "w3", "text": "Gibt die Richtung vor und definiert Ziele/Kennzahlen.", "correct": true },
+            { "id": "w4", "text": "Ist synonym zu „Einkauf/HR/IT-Betrieb“.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Kernprozess: Support/Servicebereitstellung erzeugt direkt Kundennutzen (in vielen IT-Setups der sichtbare Leistungsprozess)."
+    },
+    {
+      "id": "v04",
+      "profile": "Das Unternehmen führt Personalverwaltung, Einkauf und IT-Betrieb durch, damit Teams überhaupt liefern können – aber diese Abläufe sind nicht der eigentliche Umsatztreiber am Markt.",
+      "tags": ["Prozessarten", "Unterstützungsprozess", "AP1"],
+      "options": [
+        {
+          "id": "unterstuetzungsprozess",
+          "label": "Unterstützungsprozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ermöglicht Kernprozesse, ohne selbst der Hauptwertschöpfungsprozess zu sein.", "correct": true },
+            { "id": "w2", "text": "Erzeugt direkt Kundennutzen wie Servicebereitstellung.", "correct": false },
+            { "id": "w3", "text": "Beispiele: Einkauf, IT-Betrieb, Personalverwaltung.", "correct": true },
+            { "id": "w4", "text": "Ist identisch mit Strategie/Controlling.", "correct": false }
+          ]
+        },
+        {
+          "id": "kernprozess",
+          "label": "Kernprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Erzeugt direkt Kundennutzen und hier entsteht typischerweise Umsatz.", "correct": true },
+            { "id": "w2", "text": "Dient primär als Enabler für andere Prozesse.", "correct": false },
+            { "id": "w3", "text": "Ist oft unmittelbar am Kunden sichtbar.", "correct": true },
+            { "id": "w4", "text": "Hat keine messbaren KPIs, weil es „nur intern“ ist.", "correct": false }
+          ]
+        },
+        {
+          "id": "fuehrungsprozess",
+          "label": "Führungsprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Steuert und entscheidet (Strategie, Controlling, QM).", "correct": true },
+            { "id": "w2", "text": "Ist primär operative Unterstützung wie Einkauf/HR/IT-Betrieb.", "correct": false },
+            { "id": "w3", "text": "Setzt Ziele und priorisiert Maßnahmen.", "correct": true },
+            { "id": "w4", "text": "Ist gleichbedeutend mit Ticketbearbeitung.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Unterstützungsprozess: Einkauf/HR/IT-Betrieb machen Kernprozesse erst möglich."
+    },
+    {
+      "id": "v05",
+      "profile": "Ein Prozess startet mit „Störung gemeldet“, endet mit „Dienst wieder verfügbar“. Eine Person ist verantwortlich für Qualität und Optimierung, und eine Kennzahl misst die Durchlaufzeit.",
+      "tags": ["Prozess-Bausteine", "Input", "Output", "Owner", "KPI", "AP1"],
+      "options": [
+        {
+          "id": "prozess_bausteine",
+          "label": "Input/Output/Prozess-Owner/KPI",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Input ist der Trigger/Start des Prozesses.", "correct": true },
+            { "id": "w2", "text": "Output ist ein messbares Ergebnis des Prozesses.", "correct": true },
+            { "id": "w3", "text": "Prozess-Owner misst nur, hat aber keine Verantwortung.", "correct": false },
+            { "id": "w4", "text": "KPI ist eine passende Kennzahl, wenn sie zum Prozessziel passt.", "correct": true }
+          ]
+        },
+        {
+          "id": "stakeholder",
+          "label": "Stakeholder-Analyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unterscheidet interne und externe Beteiligte (z. B. Fachabteilung, Lieferant).", "correct": true },
+            { "id": "w2", "text": "Definiert Trigger, Output und Kennzahlen eines Prozesses.", "correct": false },
+            { "id": "w3", "text": "Hilft, Interessen/Budget/Prioritäten zu erkennen.", "correct": true },
+            { "id": "w4", "text": "Ersetzt die Prozessbeschreibung vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "diagrammform",
+          "label": "Prozessdarstellung (BPMN/Swimlane/Flussdiagramm)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Abläufe, Start/Ende und Entscheidungspunkte sichtbar.", "correct": true },
+            { "id": "w2", "text": "Legt automatisch Prozess-Owner und KPIs fest.", "correct": false },
+            { "id": "w3", "text": "Swimlanes zeigen Zuständigkeiten parallel.", "correct": true },
+            { "id": "w4", "text": "Hat nichts mit Prozessen zu tun, nur mit Projekten.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Das sind die Prozess-Bausteine: Input (Trigger), Output (Ergebnis), Prozess-Owner (verantwortlich), KPI (passende Kennzahl)."
+    },
+    {
+      "id": "v06",
+      "profile": "Das Team misst als einzigen KPI: „Tickets müssen schnell geschlossen werden“. Danach werden viele Tickets vorschnell geschlossen, obwohl die Ursache nicht gelöst ist.",
+      "tags": ["KPI", "Prüfungsfallen", "Fehlanreiz", "AP1"],
+      "options": [
+        {
+          "id": "kpi_falsch",
+          "label": "KPI passt nicht zum Prozessziel (Fehlanreiz)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein KPI muss zum Prozessziel passen, sonst optimierst du am falschen Ende.", "correct": true },
+            { "id": "w2", "text": "Schnelles Schließen ist automatisch gleichbedeutend mit guter Qualität.", "correct": false },
+            { "id": "w3", "text": "Einseitige Kennzahlen können unerwünschtes Verhalten fördern.", "correct": true },
+            { "id": "w4", "text": "KPIs dürfen niemals Zahlen sein, nur Texte.", "correct": false }
+          ]
+        },
+        {
+          "id": "kpi_ok",
+          "label": "KPI ist perfekt gewählt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Geschwindigkeit kann relevant sein, wenn Qualität/Erfolg zusätzlich gemessen wird.", "correct": true },
+            { "id": "w2", "text": "Nur Speed zu messen kann Qualität verschlechtern.", "correct": false },
+            { "id": "w3", "text": "KPI-Auswahl ist egal, Hauptsache man misst irgendwas.", "correct": false },
+            { "id": "w4", "text": "Ein KPI sollte Anreize setzen, die zum Ziel passen (z. B. Erstlösungsquote).", "correct": true }
+          ]
+        },
+        {
+          "id": "sla",
+          "label": "SLA-Verstoß (automatisch)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein SLA definiert messbare Servicequalität (z. B. Verfügbarkeit, Reaktionszeit).", "correct": true },
+            { "id": "w2", "text": "Ein falscher KPI ist immer automatisch ein SLA-Verstoß.", "correct": false },
+            { "id": "w3", "text": "SLA braucht klare Messung/Reporting, sonst bleibt es Marketing.", "correct": true },
+            { "id": "w4", "text": "SLA bedeutet nur „24/7“, Details sind unwichtig.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Fehlanreiz durch falschen KPI: Nur Speed messen → Qualität leidet. KPI muss zum Prozessziel passen."
+    },
+    {
+      "id": "v07",
+      "profile": "1st Level schreibt Details in ein Ticket-Tool. Danach wird per E-Mail nachgefragt, dann in Excel nachgetragen, später manuell wieder ins Tool übertragen. Infos gehen verloren.",
+      "tags": ["Schnittstellen", "Medienbruch", "Risiko-Hotspots", "AP1"],
+      "options": [
+        {
+          "id": "medienbruch",
+          "label": "Medienbruch",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wechsel zwischen Tools/Medien erhöht Zeitaufwand und Fehlerrisiko.", "correct": true },
+            { "id": "w2", "text": "Ist nur eine organisatorische Übergabe ohne Toolwechsel.", "correct": false },
+            { "id": "w3", "text": "Führt oft zu unterschiedlichen Versionen/fehlendem Kontext.", "correct": true },
+            { "id": "w4", "text": "Ist immer sinnvoll, weil dadurch doppelt geprüft wird.", "correct": false }
+          ]
+        },
+        {
+          "id": "schnittstelle",
+          "label": "Schnittstelle",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Übergabe zwischen Rollen/Systemen ist ein typischer Fehler- und Verzögerungsort.", "correct": true },
+            { "id": "w2", "text": "Schnittstellen sind nie problematisch, weil Verantwortliche automatisch klar sind.", "correct": false },
+            { "id": "w3", "text": "Gute Schnittstellen brauchen definierte Infos, Verantwortliche, Zeitpunkt, Kontrolle.", "correct": true },
+            { "id": "w4", "text": "Schnittstelle bedeutet immer Toolwechsel (das ist zwingend).", "correct": false }
+          ]
+        },
+        {
+          "id": "swimlane",
+          "label": "Swimlane-Diagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Zuständigkeiten parallel über Rollen/Abteilungen.", "correct": true },
+            { "id": "w2", "text": "Löst automatisch Medienbrüche, weil es ein Diagramm ist.", "correct": false },
+            { "id": "w3", "text": "Kann Übergaben sichtbar machen, aber verhindert sie nicht automatisch.", "correct": true },
+            { "id": "w4", "text": "Darf in der Prüfung keine Start-/Endpunkte haben.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Medienbruch: Tool → E-Mail → Excel → Tool. Genau dort sterben Prozesse: Infoverlust + Verzögerung."
+    },
+    {
+      "id": "v08",
+      "profile": "Ein Team soll einen Ablauf in der Prüfung skizzieren. Wichtig ist: Start/Ende und Entscheidungspunkte sollen klar erkennbar sein, aber das Diagramm darf simpel bleiben.",
+      "tags": ["Prozessdarstellung", "BPMN", "Flussdiagramm", "Swimlanes", "AP1"],
+      "options": [
+        {
+          "id": "prozessdarstellung",
+          "label": "Flussdiagramm / BPMN / Swimlanes",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Flussdiagramm eignet sich für einfache Abläufe mit klarem Start/Ende.", "correct": true },
+            { "id": "w2", "text": "BPMN ist ein Standard für Business-Prozesse mit Events/Aufgaben/Gateways.", "correct": true },
+            { "id": "w3", "text": "Swimlanes zeigen Zuständigkeiten verschiedener Rollen parallel.", "correct": true },
+            { "id": "w4", "text": "In der Prüfung müssen zwingend 20+ Schritte dargestellt werden.", "correct": false }
+          ]
+        },
+        {
+          "id": "kpi",
+          "label": "KPI-Definition",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Misst Prozessleistung (z. B. Durchlaufzeit, Fehlerquote, Verfügbarkeit).", "correct": true },
+            { "id": "w2", "text": "Ist die grafische Darstellung eines Ablaufs.", "correct": false },
+            { "id": "w3", "text": "Muss zum Prozessziel passen, sonst gibt es Fehlanreize.", "correct": true },
+            { "id": "w4", "text": "Ersetzt Start/Ende/Entscheidungspunkte im Diagramm.", "correct": false }
+          ]
+        },
+        {
+          "id": "prozess_owner",
+          "label": "Prozess-Owner",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist verantwortlich für Qualität, Optimierung und Einhaltung des Prozesses.", "correct": true },
+            { "id": "w2", "text": "Ist die gleiche Person wie der Kunde im Prozess.", "correct": false },
+            { "id": "w3", "text": "Soll mit Kennzahlen und Feedback Verbesserungen anstoßen.", "correct": true },
+            { "id": "w4", "text": "Hat keine Verantwortung, nur Ausführung einzelner Tasks.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Prozessdarstellung: Flussdiagramm/BPMN/Swimlanes – simpel, aber Start/Ende + Entscheidungen klar."
+    },
+    {
+      "id": "v09",
+      "profile": "Ein Kunde beauftragt eine neue Website mit klar definiertem Funktionsumfang. Bezahlt wird, wenn die Website abgenommen wurde und lauffähig ist.",
+      "tags": ["Vertragsrecht", "Werkvertrag", "Abnahme", "AP1"],
+      "options": [
+        {
+          "id": "werkvertrag",
+          "label": "Werkvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Es wird ein konkreter Erfolg geschuldet (fertiges Ergebnis).", "correct": true },
+            { "id": "w2", "text": "Abnahme ist zentral, danach beginnt typischerweise die Gewährleistung.", "correct": true },
+            { "id": "w3", "text": "Bezahlt wird nur nach Zeit, Ergebnis ist egal.", "correct": false },
+            { "id": "w4", "text": "Das Risiko für mangelhaften Erfolg liegt typischerweise beim Auftragnehmer.", "correct": true }
+          ]
+        },
+        {
+          "id": "dienstvertrag",
+          "label": "Dienstvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Es wird Tätigkeit/Bemühen geschuldet, nicht ein konkreter Erfolg.", "correct": true },
+            { "id": "w2", "text": "Abnahme ist der zentrale Dreh- und Angelpunkt.", "correct": false },
+            { "id": "w3", "text": "Abrechnung nach Aufwand/Zeiten ist typisch.", "correct": true },
+            { "id": "w4", "text": "Erfolg ist zwingend geschuldet, sonst kein Vertrag.", "correct": false }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Produkt/Sache gegen Geld, Eigentum geht über.", "correct": true },
+            { "id": "w2", "text": "Typisch für Hardware oder fertige Standardsoftware-Pakete.", "correct": true },
+            { "id": "w3", "text": "Abnahme eines individuell hergestellten Erfolgs ist Kernprinzip.", "correct": false },
+            { "id": "w4", "text": "Schuldet immer Beratung nach Aufwand.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Werkvertrag: Erfolg geschuldet (fertige Website). Abnahme ist zentral."
+    },
+    {
+      "id": "v10",
+      "profile": "Im Vertrag steht nur: „IT macht modernes System“. Der Kunde liefert Zugänge und Infos zu spät, der Termin rutscht, und beide streiten über „Wer ist schuld?“",
+      "tags": ["Vertragsbestandteile", "Mitwirkung", "Leistungsbeschreibung", "Prüfungsfalle", "AP1"],
+      "options": [
+        {
+          "id": "mitwirkung_leistung",
+          "label": "Fehlende Leistungsbeschreibung & Mitwirkungspflichten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Unklare Leistung führt zu Streit: Wer schuldet was? Wann ist es fertig?", "correct": true },
+            { "id": "w2", "text": "Mitwirkungspflichten (Zugänge/Freigaben/Infos) müssen klar geregelt sein.", "correct": true },
+            { "id": "w3", "text": "„Per Mail besprochen“ ist immer ausreichend und rechtssicher.", "correct": false },
+            { "id": "w4", "text": "Termine/Meilensteine und Abnahme sollten explizit festgelegt sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "sla",
+          "label": "SLA-Problem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SLA definiert messbare Servicequalität (Verfügbarkeit/Reaktionszeit/etc.).", "correct": true },
+            { "id": "w2", "text": "Löst fehlende Leistungsbeschreibung in Projekten automatisch.", "correct": false },
+            { "id": "w3", "text": "Ohne Messung/Reporting bleibt es Marketing.", "correct": true },
+            { "id": "w4", "text": "SLA ersetzt Mitwirkungspflichten des Kunden.", "correct": false }
+          ]
+        },
+        {
+          "id": "stakeholder",
+          "label": "Nur Stakeholder vergessen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Stakeholder beeinflussen Budget/Prioritäten (z. B. Fachabteilung, GF).", "correct": true },
+            { "id": "w2", "text": "Fehlende Stakeholder-Liste ist die Hauptursache für unklare Leistung.", "correct": false },
+            { "id": "w3", "text": "Datenschutzbeauftragte/Betriebsrat können relevante Anforderungen setzen.", "correct": true },
+            { "id": "w4", "text": "Stakeholder-Management ersetzt klare Vertragsbestandteile.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Prüfungsfalle: Unklare Leistungsbeschreibung + fehlende Mitwirkungspflichten → Terminrutsch + Schuld-Diskussion."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Serviceanbieter wirbt mit „24/7 Support“, aber im Vertrag steht nichts Konkretes zu Reaktionszeit, Wiederherstellungszeit oder Verfügbarkeit. Bei Ausfällen eskaliert alles chaotisch.",
+      "tags": ["SLA", "Servicequalität", "Prüfungsfalle", "AP1"],
+      "options": [
+        {
+          "id": "sla",
+          "label": "SLA fehlt bzw. ist nicht messbar definiert",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "SLA braucht messbare Ziele (z. B. Verfügbarkeit, Reaktionszeit, Wiederherstellungszeit).", "correct": true },
+            { "id": "w2", "text": "„24/7“ ohne Zeiten ist eher Marketing als echtes SLA.", "correct": true },
+            { "id": "w3", "text": "Messung/Reporting ist unnötig, Hauptsache man verspricht viel.", "correct": false },
+            { "id": "w4", "text": "Eskalation/Pönale regeln, was bei Nichterfüllung passiert.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag-Problem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kaufvertrag: Produkt/Sache gegen Geld, Eigentum geht über.", "correct": true },
+            { "id": "w2", "text": "Definiert Reaktionszeit und Verfügbarkeit automatisch.", "correct": false },
+            { "id": "w3", "text": "Typisch für Hardware oder fertige Software-Pakete.", "correct": true },
+            { "id": "w4", "text": "Ist die übliche Vertragsform für Support nach Aufwand.", "correct": false }
+          ]
+        },
+        {
+          "id": "kpi",
+          "label": "Nur KPI vergessen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "KPI kann SLA-Erfüllung messbar machen (z. B. Verfügbarkeit in %).", "correct": true },
+            { "id": "w2", "text": "Ohne KPI kann ein SLA trotzdem messbar sein.", "correct": false },
+            { "id": "w3", "text": "KPI muss zum Prozessziel passen.", "correct": true },
+            { "id": "w4", "text": "KPI ersetzt Vertragsregeln zu Eskalation/Pönale.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "SLA muss messbar sein: Verfügbarkeit/Reaktionszeit/Wiederherstellungszeit + Messung/Reporting + Eskalation."
+    },
+    {
+      "id": "v12",
+      "profile": "Bei einer Laptop-Beschaffung werden nur die Anschaffungskosten betrachtet. Nach 3 Jahren stellt sich heraus: Lizenzen, Admin-Zeit und Support waren teurer als gedacht.",
+      "tags": ["Wirtschaftlichkeit", "TCO", "Prüfungsfalle", "AP1"],
+      "options": [
+        {
+          "id": "tco",
+          "label": "TCO (Total Cost of Ownership)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Betrachtet Gesamtkosten über die Lebensdauer (Anschaffung bis Betrieb/Support).", "correct": true },
+            { "id": "w2", "text": "Ignoriert Betriebskosten, zählt nur Anschaffung.", "correct": false },
+            { "id": "w3", "text": "Bezieht z. B. Lizenzen, Wartung, Support und Personalkosten mit ein.", "correct": true },
+            { "id": "w4", "text": "Ist identisch mit „Gewinn im Verhältnis zur Investition“. ", "correct": false }
+          ]
+        },
+        {
+          "id": "roi",
+          "label": "ROI (Return on Investment)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Misst Nutzen/Gewinn im Verhältnis zur Investition und braucht einen Zeitraum.", "correct": true },
+            { "id": "w2", "text": "Ist die vollständige Kostenaufsummierung über die Lebensdauer.", "correct": false },
+            { "id": "w3", "text": "Hilft, ob sich eine Investition lohnt (relativ), nicht wie hoch alle Kosten absolut sind.", "correct": true },
+            { "id": "w4", "text": "Ersetzt die Notwendigkeit, Betriebskosten zu erfassen.", "correct": false }
+          ]
+        },
+        {
+          "id": "amortisation",
+          "label": "Amortisation / Break-Even",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt, ab wann sich die Investition „zurückgezahlt“ hat.", "correct": true },
+            { "id": "w2", "text": "Ist eine Liste aller Kostenarten über die Lebensdauer.", "correct": false },
+            { "id": "w3", "text": "Benötigt Kosten und Nutzen über die Zeit.", "correct": true },
+            { "id": "w4", "text": "Hat nichts mit Zeit zu tun, nur mit Technik.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "TCO-Falle: Nur Anschaffung sehen. TCO umfasst auch Betrieb/Lizenzen/Support/Personal über die Lebensdauer."
+    },
+    {
+      "id": "v13",
+      "profile": "Ein Unternehmen muss entscheiden: Ein Helpdesk-Tool selbst entwickeln oder kaufen und anpassen. Zeit, Kosten, Risiko, eigene Kompetenzen und Anbieterabhängigkeit stehen im Raum.",
+      "tags": ["Make-or-Buy", "Entscheidung", "Wirtschaftlichkeit", "AP1"],
+      "options": [
+        {
+          "id": "make_or_buy",
+          "label": "Make-or-Buy-Entscheidung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Make: mehr Kontrolle/Flexibilität, aber hoher Aufwand + Wartungsrisiko.", "correct": true },
+            { "id": "w2", "text": "Buy: schneller Start + Support, aber Abhängigkeit + laufende Lizenzkosten.", "correct": true },
+            { "id": "w3", "text": "Hat nichts mit Risiko oder Kompetenzen zu tun, nur mit Geschmack.", "correct": false },
+            { "id": "w4", "text": "Entscheidungsfaktoren: Zeit, Kosten, Risiko, Kompetenzen, SLA/Vertragsbedingungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nutzwertanalyse",
+          "label": "Nutzwertanalyse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hilft, wenn nicht nur € zählt: Kriterien definieren, gewichten, bewerten, summieren.", "correct": true },
+            { "id": "w2", "text": "Ersetzt die Make-or-Buy-Frage, weil immer „Buy“ gewinnt.", "correct": false },
+            { "id": "w3", "text": "Prüfungsfalle: doppelte Kriterien verzerren (z. B. „Sicherheit“ und „Compliance“ ohne Trennung).", "correct": true },
+            { "id": "w4", "text": "Darf Kriterien nicht gewichten, alle zählen gleich.", "correct": false }
+          ]
+        },
+        {
+          "id": "sla",
+          "label": "SLA-Definition",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Definiert Servicequalität (Verfügbarkeit, Reaktionszeit, Wiederherstellungszeit).", "correct": true },
+            { "id": "w2", "text": "Ist die Entscheidung, ob man selbst baut oder kauft.", "correct": false },
+            { "id": "w3", "text": "Kann bei Buy/Outsourcing wichtig sein (Messung, Pönale, Eskalation).", "correct": true },
+            { "id": "w4", "text": "Macht Wirtschaftlichkeitsbetrachtung überflüssig.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Make-or-Buy: selbst entwickeln vs. kaufen/outsourcen – begründen mit Zeit/Kosten/Risiko/Kompetenzen/Abhängigkeit."
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Mathematik für die AP1",
+  "topic": "Zahlensysteme • Einheiten • Prozent • Speicher • Netz • Medien • Zeit",
+  "estimated_minutes": 40,
+  "sections": [
+    {
+      "id": "einheiten-si-iec-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Einheiten-Fallen (SI vs IEC vs Datenrate)",
+      "subtitle": "Ordne die Aussagen den richtigen Kategorien zu.",
+      "hintDefault": "Erst Einheit klären: kB/MB/GB (1000) ≠ KiB/MiB/GiB (1024). Datenraten sind meist bit/s.",
+      "sortColumns": [
+        { "zone": "si", "label": "SI (Dezimal)", "hint": "(1000er, Hersteller/Netzwerk)" },
+        { "zone": "iec", "label": "IEC (Binär)", "hint": "(1024er, OS/RAM)" },
+        { "zone": "rate", "label": "Datenrate", "hint": "(bit/s, Faktor-8-Falle)" }
+      ],
+      "sortCards": [
+        { "id": "u1", "text": "1 kB = 1.000 Byte", "correctZone": "si" },
+        { "id": "u2", "text": "1 KiB = 1.024 Byte", "correctZone": "iec" },
+        { "id": "u3", "text": "1 MB = 1.000.000 Byte", "correctZone": "si" },
+        { "id": "u4", "text": "1 MiB = 1.048.576 Byte (1024²)", "correctZone": "iec" },
+        { "id": "u5", "text": "Netzwerkgeschwindigkeit wird typischerweise in Mbit/s angegeben", "correctZone": "rate" },
+        { "id": "u6", "text": "Betriebssystem zeigt Festplatten oft „kleiner“ an als der Hersteller", "correctZone": "iec" }
+      ]
+    },
+    {
+      "id": "prozent-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Prozentrechnung & Prozentpunkte",
+      "subtitle": "AP1-sicher: Formeln, Veränderungen, typische Fallen.",
+      "hintDefault": "Prozentpunkte ≠ Prozent. Bei Veränderungen: Alter Wert × (1 ± p/100).",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "1. 15% von 200 GB sind …",
+          "options": [
+            { "value": "a", "text": "3 GB" },
+            { "value": "b", "text": "30 GB" },
+            { "value": "c", "text": "150 GB" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "p2",
+          "text": "2. 200 GB werden um 15% erhöht. Neuer Wert?",
+          "options": [
+            { "value": "a", "text": "215 GB" },
+            { "value": "b", "text": "230 GB" },
+            { "value": "c", "text": "260 GB" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "p3",
+          "text": "3. Von 10% auf 12% ist das …",
+          "options": [
+            { "value": "a", "text": "+2 Prozentpunkte (relativ +20%)" },
+            { "value": "b", "text": "+2% (relativ +2%)" },
+            { "value": "c", "text": "+20 Prozentpunkte" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "bit-byte-transfer-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: Bit vs Byte & Transferzeit",
+      "subtitle": "Die Faktor-8-Falle killt Punkte – nicht heute.",
+      "hintDefault": "1 Byte = 8 bit. Zeit = Datenmenge / Rate. Einheiten zuerst angleichen.",
+      "questions": [
+        {
+          "id": "t1",
+          "text": "1. 100 Mbit/s entsprechen theoretisch wie viel MB/s?",
+          "options": [
+            { "value": "a", "text": "100 MB/s" },
+            { "value": "b", "text": "12,5 MB/s" },
+            { "value": "c", "text": "800 MB/s" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "t2",
+          "text": "2. 500 MB über 100 Mbit/s (ohne Overhead): Wie lange dauert es theoretisch?",
+          "options": [
+            { "value": "a", "text": "40 Sekunden" },
+            { "value": "b", "text": "5 Sekunden" },
+            { "value": "c", "text": "400 Sekunden" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "t3",
+          "text": "3. Warum ist die reale Transferzeit meist länger als die Rechnung?",
+          "options": [
+            { "value": "a", "text": "Weil Byte immer größer als bit ist." },
+            { "value": "b", "text": "Wegen Protokoll-Overhead, Latenz, Retransmits." },
+            { "value": "c", "text": "Weil 1024 schneller ist als 1000." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "subnetz-grundlagen-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Subnetz-Basics (IPv4)",
+      "subtitle": "Ordne die Aussagen den richtigen Begriffen zu.",
+      "hintDefault": "Netzadresse = identifiziert Subnetz · Broadcast = letzte Adresse · Hosts = dazwischen.",
+      "sortColumns": [
+        { "zone": "netz", "label": "Netzadresse", "hint": "(Start des Netzes)" },
+        { "zone": "hosts", "label": "Hostbereich", "hint": "(verwendbare Geräteadressen)" },
+        { "zone": "broadcast", "label": "Broadcast", "hint": "(letzte Adresse)" }
+      ],
+      "sortCards": [
+        { "id": "snb1", "text": "Identifiziert das Subnetz", "correctZone": "netz" },
+        { "id": "snb2", "text": "Letzte Adresse im Subnetz", "correctZone": "broadcast" },
+        { "id": "snb3", "text": "Verwendbare Hosts: 2^(Host-Bits) − 2 (klassisch)", "correctZone": "hosts" },
+        { "id": "snb4", "text": "Zwischen Netzadresse und Broadcast liegen die Client-Adressen", "correctZone": "hosts" },
+        { "id": "snb5", "text": "Wird typischerweise nicht an Endgeräte vergeben", "correctZone": "netz" }
+      ]
+    },
+    {
+      "id": "subnetz-hosts-quiz",
+      "type": "quiz",
+      "title": "Rätsel 5: Hosts pro Netz rechnen",
+      "subtitle": "Präfix → Host-Bits → Hosts.",
+      "hintDefault": "Hosts = 2^(32−Prefix) − 2 (klassisch, ohne Sonderfälle).",
+      "questions": [
+        {
+          "id": "h1",
+          "text": "1. Wie viele Hosts hat ein /24 Netz (klassisch)?",
+          "options": [
+            { "value": "a", "text": "256" },
+            { "value": "b", "text": "254" },
+            { "value": "c", "text": "252" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "h2",
+          "text": "2. Wie viele Hosts hat ein /26 Netz (klassisch)?",
+          "options": [
+            { "value": "a", "text": "62" },
+            { "value": "b", "text": "64" },
+            { "value": "c", "text": "126" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "raid-konzepte-sort",
+      "type": "sort",
+      "title": "Rätsel 6: RAID-Konzepte erkennen",
+      "subtitle": "Ordne die RAID-Level grob nach Konzept.",
+      "hintDefault": "RAID0 = nur Speed/Kapazität · RAID1 = Spiegel · RAID5/6 = Parität.",
+      "sortColumns": [
+        { "zone": "ohne", "label": "Ohne Redundanz", "hint": "(Ausfall = Daten weg)" },
+        { "zone": "spiegel", "label": "Spiegelung", "hint": "(Daten doppelt)" },
+        { "zone": "paritaet", "label": "Parität", "hint": "(Kapazität minus 1/2 Platten)" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "RAID 0 (Striping)", "correctZone": "ohne" },
+        { "id": "r2", "text": "RAID 1 (Mirroring)", "correctZone": "spiegel" },
+        { "id": "r3", "text": "RAID 5 (eine Parität)", "correctZone": "paritaet" },
+        { "id": "r4", "text": "RAID 6 (doppelte Parität)", "correctZone": "paritaet" },
+        { "id": "r5", "text": "Maximale Kapazität, aber keine Ausfallsicherheit", "correctZone": "ohne" }
+      ]
+    },
+    {
+      "id": "raid-kapazitaet-quiz",
+      "type": "quiz",
+      "title": "Rätsel 7: RAID-Kapazität (AP1-typisch)",
+      "subtitle": "Rechne die Nutzkapazität bei 4×2 TB.",
+      "hintDefault": "Merke: RAID0 = n×Größe, RAID1 = (n/2)×Größe, RAID5 = (n−1)×Größe, RAID6 = (n−2)×Größe.",
+      "questions": [
+        {
+          "id": "rk1",
+          "text": "1. 4×2 TB als RAID 0 → nutzbar?",
+          "options": [
+            { "value": "a", "text": "8 TB" },
+            { "value": "b", "text": "6 TB" },
+            { "value": "c", "text": "4 TB" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rk2",
+          "text": "2. 4×2 TB als RAID 5 → nutzbar?",
+          "options": [
+            { "value": "a", "text": "8 TB" },
+            { "value": "b", "text": "6 TB" },
+            { "value": "c", "text": "4 TB" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "rk3",
+          "text": "3. 4×2 TB als RAID 6 → nutzbar?",
+          "options": [
+            { "value": "a", "text": "6 TB" },
+            { "value": "b", "text": "4 TB" },
+            { "value": "c", "text": "2 TB" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "finale-rechenworkflow",
+      "type": "capital",
+      "title": "Finale: Rechen-Workflow (Punkte-Retter)",
+      "subtitle": "Bringe die Schritte in die richtige Reihenfolge – so rechnest du AP1-sicher.",
+      "hintDefault": "Wenn Einheit & Kontext nicht stimmen, ist das Ergebnis wertlos – egal wie schön gerechnet.",
+      "rows": [
+        {
+          "key": "einheit",
+          "label": "Einheiten klären (bit/Byte, SI/IEC, s/min/h …)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "angleichen",
+          "label": "In gleiche Einheiten umrechnen (z. B. MB ↔ Mbit)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "formel",
+          "label": "Passende Formel wählen (z. B. Zeit = Menge/Rate, W = p/100·G)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "rechnen",
+          "label": "Mit vollen Werten rechnen (nicht unterwegs abrunden)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "plausi",
+          "label": "Plausibilität prüfen (Sekunden vs Stunden? MB vs GB?)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "runden",
+          "label": "Erst am Ende runden (falls gefordert)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "antwort",
+          "label": "Ergebnis sauber mit Einheit hinschreiben (sonst Punktabzug)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

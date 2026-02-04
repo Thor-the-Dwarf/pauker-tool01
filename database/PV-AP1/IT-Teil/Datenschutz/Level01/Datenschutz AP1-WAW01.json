@@ -1,0 +1,745 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Datenschutz (AP1)",
+  "description": "Schritt 1: Thema/Begriff bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Im Team sagt jemand: „Datenschutz ist doch einfach IT-Sicherheit.“ Ihr diskutiert, was jeweils gemeint ist.",
+      "tags": ["Begriffe", "Abgrenzung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "datenschutz",
+          "label": "Datenschutz",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schützt personenbezogene Daten und Rechte der betroffenen Person.", "correct": true },
+            { "id": "w2", "text": "Fragt primär: „Darf ich das?“ (Rechtsgrundlage, Zweck, Transparenz).", "correct": true },
+            { "id": "w3", "text": "Gilt nur für technische Maßnahmen wie Verschlüsselung.", "correct": false },
+            { "id": "w4", "text": "Kann auch Pflichten wie Informationspflichten und Dokumentation auslösen.", "correct": true }
+          ]
+        },
+        {
+          "id": "it_sicherheit",
+          "label": "IT-Sicherheit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schützt Systeme und Daten allgemein, auch ohne Personenbezug.", "correct": true },
+            { "id": "w2", "text": "Fragt primär: „Ist es geschützt?“ (z. B. Verfügbarkeit/Integrität).", "correct": true },
+            { "id": "w3", "text": "Erfordert immer eine DSGVO-Rechtsgrundlage nach Art. 6.", "correct": false },
+            { "id": "w4", "text": "Kann TOMs umfassen, die auch dem Datenschutz helfen (z. B. Zugriffsschutz).", "correct": true }
+          ]
+        },
+        {
+          "id": "gleich",
+          "label": "Datenschutz = Verschlüsselung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschlüsselung ist nur eine technische Maßnahme, ersetzt keine Rechtsgrundlage.", "correct": true },
+            { "id": "w2", "text": "Zweckbindung und Informationspflichten bleiben trotzdem nötig.", "correct": true },
+            { "id": "w3", "text": "Wenn Daten verschlüsselt sind, ist Datenschutz automatisch vollständig erfüllt.", "correct": false },
+            { "id": "w4", "text": "Datenschutz umfasst auch Prozesse (z. B. Betroffenenrechte, Löschfristen).", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Datenschutz betrifft personenbezogene Daten + Rechte (Darf ich?). IT-Sicherheit schützt Systeme/Daten allgemein (Ist es geschützt?). Verschlüsselung allein reicht nie."
+    },
+    {
+      "id": "v02",
+      "profile": "Ein Azubi will Kundendaten speichern „weil es praktisch ist“. Du erklärst die DSGVO-Grundlogik.",
+      "tags": ["DSGVO", "Grundprinzip", "Rechtsgrundlage"],
+      "options": [
+        {
+          "id": "verbot_erlaubnis",
+          "label": "Verbot mit Erlaubnisvorbehalt",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verarbeitung ist grundsätzlich verboten, außer es gibt eine Rechtsgrundlage.", "correct": true },
+            { "id": "w2", "text": "„Praktisch“ ist keine Rechtsgrundlage.", "correct": true },
+            { "id": "w3", "text": "Man darf Daten verarbeiten, solange man sie nicht teilt.", "correct": false },
+            { "id": "w4", "text": "Rechenschaftspflicht: Einhaltung muss nachweisbar sein (begründen + dokumentieren).", "correct": true }
+          ]
+        },
+        {
+          "id": "freifahrtschein",
+          "label": "Alles erlaubt, solange keine Beschwerde kommt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Rechtsgrundlage ist die Verarbeitung rechtswidrig, auch ohne Beschwerde.", "correct": true },
+            { "id": "w2", "text": "Rechenschaftspflicht bedeutet: Nachweis zählt, nicht nur „wir machen das schon“. ", "correct": true },
+            { "id": "w3", "text": "DSGVO gilt erst ab 250 Mitarbeitenden.", "correct": false },
+            { "id": "w4", "text": "Transparenz gegenüber Betroffenen ist Pflicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_einwilligung",
+          "label": "Nur Einwilligung ist sicher",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einwilligung muss freiwillig, widerrufbar und nachweisbar sein.", "correct": true },
+            { "id": "w2", "text": "Viele Verarbeitungen laufen besser über Vertrag oder gesetzliche Pflicht.", "correct": true },
+            { "id": "w3", "text": "Einwilligung ist immer die beste und stabilste Rechtsgrundlage.", "correct": false },
+            { "id": "w4", "text": "Wenn Einwilligung wegfällt (Widerruf), muss Verarbeitung beendet werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "DSGVO-Grundlogik: Verbot mit Erlaubnisvorbehalt + Nachweis (Rechenschaftspflicht)."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein System speichert Hashes von E-Mail-Adressen. Jemand behauptet: „Das ist anonym, DSGVO gilt nicht.“",
+      "tags": ["Art. 4", "personenbezogen", "Anonymisierung", "Pseudonymisierung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "pseudonym",
+          "label": "Pseudonymisiert (DSGVO gilt weiterhin)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Pseudonymisierung reduziert Risiko, aber der Personenbezug kann bestehen bleiben.", "correct": true },
+            { "id": "w2", "text": "Wenn Identifizierung mit vertretbarem Aufwand möglich ist, bleibt es personenbezogen.", "correct": true },
+            { "id": "w3", "text": "Hash = immer anonym, egal ob man es zurückführen kann.", "correct": false },
+            { "id": "w4", "text": "Anonymisiert wäre erst, wenn kein Personenbezug mehr herstellbar ist.", "correct": true }
+          ]
+        },
+        {
+          "id": "anonym",
+          "label": "Anonymisiert (DSGVO gilt nicht)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Anonymisierung bedeutet: keine Identifizierbarkeit mehr.", "correct": true },
+            { "id": "w2", "text": "Bei Hashes ist Identifizierung oft noch möglich (z. B. über Vergleichslisten).", "correct": true },
+            { "id": "w3", "text": "Anonymisierung ist erreicht, sobald ein Name entfernt wurde.", "correct": false },
+            { "id": "w4", "text": "Wenn DSGVO nicht gilt, braucht man keine TOMs.", "correct": false }
+          ]
+        },
+        {
+          "id": "kein_bezug",
+          "label": "Nicht personenbezogen (weil kein Klartext gespeichert wird)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Personenbezug hängt nicht nur am Klartext, sondern an Identifizierbarkeit.", "correct": true },
+            { "id": "w2", "text": "Auch Online-Kennungen können personenbezogen sein.", "correct": true },
+            { "id": "w3", "text": "DSGVO gilt nur für Namen und Adressen.", "correct": false },
+            { "id": "w4", "text": "Pseudonymisiert heißt automatisch: DSGVO entfällt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Hash ist meist pseudonymisiert, nicht anonym. DSGVO gilt, solange Identifizierung mit vertretbarem Aufwand möglich bleibt."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein Admin sagt: „Wir speichern doch nur, das ist keine Verarbeitung.“ Du ordnest das ein.",
+      "tags": ["Art. 4 Nr. 2", "Verarbeitung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "verarbeitung",
+          "label": "Verarbeitung (sehr weit gefasst)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verarbeitung umfasst u. a. Erheben, Speichern, Nutzen, Übermitteln, Löschen.", "correct": true },
+            { "id": "w2", "text": "Schon das Ansehen/Abfragen kann Verarbeitung sein.", "correct": true },
+            { "id": "w3", "text": "Verarbeitung ist nur das Teilen an Dritte.", "correct": false },
+            { "id": "w4", "text": "Mini-Check: Wer sieht was, wann, wozu, wie lange?", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_speichern",
+          "label": "Nur Speichern zählt, alles andere nicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Erheben und Auslesen sind ebenfalls Verarbeitung.", "correct": true },
+            { "id": "w2", "text": "Löschen/Vernichten fällt auch unter Verarbeitung.", "correct": true },
+            { "id": "w3", "text": "Verarbeitung beginnt erst bei Veröffentlichung.", "correct": false },
+            { "id": "w4", "text": "Die Definition ist absichtlich breit, um Lücken zu vermeiden.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_technik",
+          "label": "Verarbeitung = technische Datenbank-Aktion",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch organisatorische Vorgänge (z. B. manuelles Sortieren/Ordnen) sind Verarbeitung.", "correct": true },
+            { "id": "w2", "text": "Verarbeitung hängt nicht davon ab, ob ein Computer beteiligt ist.", "correct": true },
+            { "id": "w3", "text": "Papierakten sind nie Verarbeitung im DSGVO-Sinn.", "correct": false },
+            { "id": "w4", "text": "Relevanter ist: Personenbezug + Vorgang mit Daten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "„Verarbeitung“ ist alles, was man mit personenbezogenen Daten macht – nicht nur Speichern."
+    },
+    {
+      "id": "v05",
+      "profile": "Ein Projekt sammelt „so viele Daten wie möglich, man weiß ja nie“. Du willst die passenden DSGVO-Grundsätze nennen.",
+      "tags": ["Art. 5", "Grundsätze", "Prüfungswissen"],
+      "options": [
+        {
+          "id": "grundsaetze",
+          "label": "Grundsätze der Verarbeitung (Art. 5)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zweckbindung: nur für festgelegte legitime Zwecke.", "correct": true },
+            { "id": "w2", "text": "Datenminimierung: nur erforderliche Daten erheben.", "correct": true },
+            { "id": "w3", "text": "Speicherbegrenzung: so kurz wie möglich, nicht „ewig“. ", "correct": true },
+            { "id": "w4", "text": "Grundsatz: „Mehr Daten = mehr Qualität“.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_sicherheit",
+          "label": "Nur Integrität & Vertraulichkeit (Sicherheit) zählt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sicherheit ist nur ein Grundsatz, daneben gibt es Zweck, Minimierung, Fristen usw.", "correct": true },
+            { "id": "w2", "text": "Rechtmäßigkeit/Transparenz ist ebenfalls ein Grundsatz.", "correct": true },
+            { "id": "w3", "text": "Wenn verschlüsselt, sind alle Grundsätze automatisch erfüllt.", "correct": false },
+            { "id": "w4", "text": "Richtigkeit: Daten müssen korrekt/aktuell sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "egal",
+          "label": "Grundsätze sind nur Theorie, in der Praxis egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Grundsätze steuern Anforderungen wie Löschkonzepte und Datenmodelle.", "correct": true },
+            { "id": "w2", "text": "Verstöße können Sanktionen auslösen.", "correct": true },
+            { "id": "w3", "text": "Art. 5 gilt nur für öffentliche Stellen.", "correct": false },
+            { "id": "w4", "text": "Rechenschaftspflicht: Einhaltung muss nachweisbar sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Art. 5 zwingt zu Zweckbindung, Minimierung, Richtigkeit, Speicherbegrenzung und angemessener Sicherheit – „sammeln für später“ ist typisch falsch."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Unternehmen nutzt ein Cloud-Hosting für sein CRM. Wer ist hier typischerweise welche Rolle?",
+      "tags": ["Rollen", "Verantwortlicher", "Auftragsverarbeiter", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "av",
+          "label": "Cloud-Anbieter = Auftragsverarbeiter",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verarbeitet personenbezogene Daten im Auftrag des Unternehmens.", "correct": true },
+            { "id": "w2", "text": "Braucht einen Auftragsverarbeitungsvertrag (AVV) nach Art. 28.", "correct": true },
+            { "id": "w3", "text": "Bestimmt selbst Zwecke und Mittel der Verarbeitung (typisch).", "correct": false },
+            { "id": "w4", "text": "Unternehmen bleibt Verantwortlicher, weil es „Zweck + Wie“ festlegt.", "correct": true }
+          ]
+        },
+        {
+          "id": "verantwortlicher",
+          "label": "Cloud-Anbieter = Verantwortlicher",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wäre nur so, wenn der Anbieter eigene Zwecke/Mittel bestimmt.", "correct": true },
+            { "id": "w2", "text": "Dienstleister sind immer automatisch Verantwortliche.", "correct": false },
+            { "id": "w3", "text": "Wenn der Anbieter Weisungen bekommt, spricht das eher für Auftragsverarbeitung.", "correct": true },
+            { "id": "w4", "text": "Verantwortlicher trägt DSGVO-Compliance für die Verarbeitung.", "correct": true }
+          ]
+        },
+        {
+          "id": "empfaenger",
+          "label": "Cloud-Anbieter = Empfänger",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Empfänger ist eher: Stelle, die Daten erhält (z. B. Versanddienstleister).", "correct": true },
+            { "id": "w2", "text": "Bei AV verarbeitet der Dienstleister aktiv im Auftrag, nicht nur „empfangen“.", "correct": true },
+            { "id": "w3", "text": "Empfänger-Rolle ersetzt AVV-Pflichten.", "correct": false },
+            { "id": "w4", "text": "Rollen hängen daran, wer Zwecke und Mittel festlegt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Typisch: Unternehmen = Verantwortlicher, Cloud-Hosting = Auftragsverarbeiter → AVV nach Art. 28."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Betrieb will Logfiles zur IT-Sicherheit speichern. Welche Rechtsgrundlage passt typischerweise am besten?",
+      "tags": ["Art. 6", "Rechtsgrundlagen", "Logfiles", "Praxisfall"],
+      "options": [
+        {
+          "id": "berechtigtes",
+          "label": "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IT-Sicherheit/Fehleranalyse ist ein typisches berechtigtes Interesse.", "correct": true },
+            { "id": "w2", "text": "Erfordert Interessenabwägung und Begründung.", "correct": true },
+            { "id": "w3", "text": "Berechtigtes Interesse bedeutet: keine Transparenzpflichten mehr.", "correct": false },
+            { "id": "w4", "text": "Datenminimierung und kurze Speicherdauer bleiben wichtig.", "correct": true }
+          ]
+        },
+        {
+          "id": "einwilligung",
+          "label": "Einwilligung (Art. 6 Abs. 1 lit. a)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einwilligung muss freiwillig sein – im Arbeits-/Nutzungsverhältnis oft schwierig.", "correct": true },
+            { "id": "w2", "text": "Widerruf würde Log-Sicherheit aushebeln, daher oft unpraktisch.", "correct": true },
+            { "id": "w3", "text": "Einwilligung ist immer die beste Wahl, weil sie „am sichersten“ ist.", "correct": false },
+            { "id": "w4", "text": "Für Newsletter ist Einwilligung typischer, für Logfiles meist nicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "vertrag",
+          "label": "Vertragserfüllung (Art. 6 Abs. 1 lit. b)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vertrag passt, wenn Verarbeitung erforderlich ist, um den Vertrag zu erfüllen.", "correct": true },
+            { "id": "w2", "text": "Logfiles für Sicherheit sind meist nicht „zwingend Vertragserfüllung“.", "correct": true },
+            { "id": "w3", "text": "Art. 6 lit. b deckt jede IT-Sicherheitsmaßnahme automatisch ab.", "correct": false },
+            { "id": "w4", "text": "Auch bei Vertrag gelten Zweckbindung und Speicherbegrenzung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Logfiles: meist berechtigtes Interesse (Interessenabwägung) + Minimierung + kurze Fristen."
+    },
+    {
+      "id": "v08",
+      "profile": "Marketing will einen Newsletter. Ein Mitarbeiter schlägt vor: „Wir setzen das Häkchen schon vorab und schreiben irgendwo in den Footer was dazu.“",
+      "tags": ["Einwilligung", "Art. 7", "Newsletter", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "wirksame_einwilligung",
+          "label": "Wirksame Einwilligung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Aktive Handlung: keine vorangekreuzten Kästchen.", "correct": true },
+            { "id": "w2", "text": "Informiert und zweckgebunden: klar, wofür zugestimmt wird.", "correct": true },
+            { "id": "w3", "text": "Widerruf muss so leicht sein wie Zustimmung (z. B. Abmeldelink).", "correct": true },
+            { "id": "w4", "text": "Opt-out (Häkchen gesetzt, wenn man nicht will) ist genauso gut.", "correct": false }
+          ]
+        },
+        {
+          "id": "opt_out",
+          "label": "Opt-out mit vorangekreuztem Häkchen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Nicht eindeutig: fehlt aktive Zustimmung.", "correct": true },
+            { "id": "w2", "text": "Kann als nicht freiwillig/transparent bewertet werden.", "correct": true },
+            { "id": "w3", "text": "Ist automatisch nachweisbar, daher immer zulässig.", "correct": false },
+            { "id": "w4", "text": "Einwilligung muss dokumentiert/nachweisbar sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "footer_reicht",
+          "label": "Datenschutzhinweis nur im Footer reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Information muss zum Zeitpunkt und im Kontext der Erhebung verfügbar sein.", "correct": true },
+            { "id": "w2", "text": "Transparenzpflichten sind nicht „irgendwo verstecken“.", "correct": true },
+            { "id": "w3", "text": "Wenn irgendwo ein Hinweis steht, ist Einwilligung automatisch wirksam.", "correct": false },
+            { "id": "w4", "text": "Zweck + Widerruf + Nachweis sind zentrale Punkte.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Newsletter: Einwilligung muss freiwillig, informiert, eindeutig (kein Opt-out), widerrufbar und nachweisbar sein."
+    },
+    {
+      "id": "v09",
+      "profile": "HR verarbeitet Krankmeldungen und Atteste. Jemand meint: „Art. 6 reicht als Rechtsgrundlage.“",
+      "tags": ["Art. 9", "besondere Daten", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "besondere_kategorie",
+          "label": "Besondere Datenkategorie (Art. 9) – zusätzliche Ausnahme nötig",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Gesundheitsdaten sind besonders sensibel und strenger geregelt.", "correct": true },
+            { "id": "w2", "text": "Neben Art. 6 braucht es zusätzlich eine Ausnahme nach Art. 9 Abs. 2.", "correct": true },
+            { "id": "w3", "text": "Für Art.-9-Daten reicht immer berechtigtes Interesse.", "correct": false },
+            { "id": "w4", "text": "Strenge Zugriffskontrollen und Zweckbindung sind besonders wichtig.", "correct": true }
+          ]
+        },
+        {
+          "id": "normale_daten",
+          "label": "Normale personenbezogene Daten (nur Art. 6)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Atteste/Krankmeldungen enthalten Gesundheitsinformationen.", "correct": true },
+            { "id": "w2", "text": "Art. 6 allein ist bei Art.-9-Daten typischerweise nicht ausreichend.", "correct": true },
+            { "id": "w3", "text": "Gesundheitsdaten sind nur sensibel, wenn sie veröffentlicht werden.", "correct": false },
+            { "id": "w4", "text": "Zusätzlich sind besonders strenge TOMs sinnvoll.", "correct": true }
+          ]
+        },
+        {
+          "id": "anonym_daher_ok",
+          "label": "Unproblematisch, wenn man Namen weglässt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Weglassen des Namens kann trotzdem Personenbezug lassen (Identifizierbarkeit).", "correct": true },
+            { "id": "w2", "text": "Bei HR-Kontext ist Identifizierung meist weiterhin möglich.", "correct": true },
+            { "id": "w3", "text": "Ohne Namen ist es automatisch anonym.", "correct": false },
+            { "id": "w4", "text": "Sensible Daten bleiben sensibel, auch ohne Klartext-Namen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Gesundheitsdaten = Art. 9: zusätzlich zu Art. 6 braucht es eine Art.-9-Ausnahme + strenge Zugriffskontrollen."
+    },
+    {
+      "id": "v10",
+      "profile": "Ein Webformular sammelt Daten. Die Frage ist: Was muss der Nutzer beim Absenden zwingend wissen?",
+      "tags": ["Art. 13/14", "Informationspflichten", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "informationspflicht",
+          "label": "Informationspflichten (Art. 13/14)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wer verarbeitet? (Verantwortlicher, Kontakt, ggf. DSB).", "correct": true },
+            { "id": "w2", "text": "Wozu und auf welcher Rechtsgrundlage?", "correct": true },
+            { "id": "w3", "text": "Welche Rechte hat die betroffene Person (z. B. Auskunft/Löschung)?", "correct": true },
+            { "id": "w4", "text": "Es reicht, das nur irgendwo im Footer zu verstecken.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_zweck",
+          "label": "Nur den Zweck nennen reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Rechtsgrundlage und Rechte gehören ebenfalls dazu.", "correct": true },
+            { "id": "w2", "text": "Auch Empfänger/Speicherdauer sind typische Pflichtangaben.", "correct": true },
+            { "id": "w3", "text": "Zweck ohne Rechtsgrundlage ist vollständig ausreichend.", "correct": false },
+            { "id": "w4", "text": "Transparenz muss zum Zeitpunkt der Erhebung gegeben sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "nachträglich",
+          "label": "Hinweise erst nach der Erhebung schicken",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hinweise sollen im Kontext und Zeitpunkt der Erhebung verfügbar sein.", "correct": true },
+            { "id": "w2", "text": "Nachträglich ist oft zu spät und verletzt Transparenzanforderungen.", "correct": true },
+            { "id": "w3", "text": "Transparenzpflichten gelten nur für Newsletter.", "correct": false },
+            { "id": "w4", "text": "Mini-Check: Wer? Was? Wozu? Wie lange? Wohin? Welche Rechte?", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Art. 13/14: Wer (Verantwortlicher), Wozu (Zweck + Rechtsgrundlage), Rechte + weitere Pflichtangaben (Empfänger, Speicherdauer etc.) – im Kontext der Erhebung."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Kunde verlangt: „Welche Daten habt ihr über mich?“ Das Team ist unsicher, wie schnell man reagieren muss.",
+      "tags": ["Betroffenenrechte", "Fristen", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "auskunft",
+          "label": "Auskunftsrecht (Art. 15) – Antwort i. d. R. binnen 1 Monat",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Betroffenenrechte umfassen u. a. Auskunft, Löschung, Berichtigung, Widerspruch.", "correct": true },
+            { "id": "w2", "text": "Frist: in der Regel binnen eines Monats reagieren.", "correct": true },
+            { "id": "w3", "text": "Man kann Anfragen ignorieren, wenn sie nerven.", "correct": false },
+            { "id": "w4", "text": "Prozesse müssen so gestaltet sein, dass Rechte einfach ausübbar sind.", "correct": true }
+          ]
+        },
+        {
+          "id": "loeschung_immer",
+          "label": "Löschung immer sofort (Art. 17) – ohne Ausnahme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Löschung hat Ausnahmen, z. B. bei Aufbewahrungspflichten.", "correct": true },
+            { "id": "w2", "text": "Betroffenenrechte müssen geprüft und dokumentiert bearbeitet werden.", "correct": true },
+            { "id": "w3", "text": "Aufbewahrungspflichten sind egal, DSGVO sticht immer alles.", "correct": false },
+            { "id": "w4", "text": "Einschränkung der Verarbeitung kann Alternative sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "kein_recht",
+          "label": "Kein Anspruch, weil Daten dem Unternehmen gehören",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Betroffenenrechte sind Kern der DSGVO, unabhängig vom „Besitz“ der Daten.", "correct": true },
+            { "id": "w2", "text": "Auskunft muss u. a. Zwecke, Empfänger, Speicherdauer umfassen.", "correct": true },
+            { "id": "w3", "text": "Betroffenenrechte gelten nur für Mitarbeiter, nicht für Kunden.", "correct": false },
+            { "id": "w4", "text": "Fehlende Prozesse sind eine typische Prüfungsfalle.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Auskunft & Co. sind Pflicht. Reaktionsfrist i. d. R. 1 Monat. Löschung ist nicht immer möglich (Aufbewahrungspflichten)."
+    },
+    {
+      "id": "v12",
+      "profile": "Ein Dienstleister verarbeitet Bewerberdaten in einem Online-Tool. Es gibt nur eine NDA, aber keinen speziellen Vertrag zur Auftragsverarbeitung.",
+      "tags": ["Art. 28", "Auftragsverarbeitung", "AVV", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "avv",
+          "label": "Auftragsverarbeitungsvertrag (AVV) ist Pflicht",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sobald ein Dienstleister im Auftrag personenbezogene Daten verarbeitet, ist ein AVV nötig.", "correct": true },
+            { "id": "w2", "text": "NDA ersetzt keinen AVV, weil Pflichtinhalte nach Art. 28 fehlen.", "correct": true },
+            { "id": "w3", "text": "AVV ist nur nötig, wenn Daten das Land verlassen.", "correct": false },
+            { "id": "w4", "text": "AVV regelt u. a. TOMs, Weisungsrecht, Subunternehmer, Löschung/Rückgabe.", "correct": true }
+          ]
+        },
+        {
+          "id": "nda_reicht",
+          "label": "NDA reicht aus",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "NDA deckt Vertraulichkeit ab, aber nicht die DSGVO-Pflichten eines AVV.", "correct": true },
+            { "id": "w2", "text": "Art. 28 verlangt konkrete Regelungen (Zweck, Dauer, TOMs etc.).", "correct": true },
+            { "id": "w3", "text": "Wenn der Dienstleister seriös ist, ist Vertrag egal.", "correct": false },
+            { "id": "w4", "text": "Fehlender AVV ist ein klassischer Audit- und Prüfungsfehler.", "correct": true }
+          ]
+        },
+        {
+          "id": "gemeinsam",
+          "label": "Gemeinsame Verantwortliche (automatisch bei Dienstleistern)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gemeinsame Verantwortlichkeit liegt vor, wenn mehrere gemeinsam Zwecke/Mittel festlegen.", "correct": true },
+            { "id": "w2", "text": "Dienstleister ist nicht automatisch gemeinsam Verantwortlicher.", "correct": true },
+            { "id": "w3", "text": "Gemeinsam Verantwortliche brauchen keinen Vertrag.", "correct": false },
+            { "id": "w4", "text": "Rollenentscheidung hängt daran, wer Zweck + Wie bestimmt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei Auftragsverarbeitung brauchst du AVV nach Art. 28. NDA ist kein Ersatz."
+    },
+    {
+      "id": "v13",
+      "profile": "Ein Unternehmen will zeigen, dass es „angemessen“ schützt: Zugriff, Backups, Protokolle, Schulungen. Wie heißt dieser Block im DSGVO-Kontext?",
+      "tags": ["Art. 32", "TOMs", "Sicherheit", "Prüfungswissen"],
+      "options": [
+        {
+          "id": "toms",
+          "label": "Technisch-organisatorische Maßnahmen (TOMs)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ziel: angemessenes Schutzniveau je nach Risiko, Stand der Technik, Kosten, Zweck.", "correct": true },
+            { "id": "w2", "text": "Beispiele: Verschlüsselung, Rollenrechte/MFA, Backup & Restore, Logging/Monitoring, Schulungen.", "correct": true },
+            { "id": "w3", "text": "TOMs ersetzen die Rechtsgrundlage.", "correct": false },
+            { "id": "w4", "text": "TOMs schützen Vertraulichkeit, Integrität, Verfügbarkeit und Belastbarkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_verschluesselung",
+          "label": "Nur Verschlüsselung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschlüsselung ist wichtig, aber nur ein Teil der TOMs.", "correct": true },
+            { "id": "w2", "text": "Zugriffskontrolle und Backup-Tests sind genauso zentrale Prüfungs-Punkte.", "correct": true },
+            { "id": "w3", "text": "Mit TLS ist alles erledigt, Logging ist überflüssig.", "correct": false },
+            { "id": "w4", "text": "Organisatorische Maßnahmen (Schulungen/Prozesse) zählen ebenfalls.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_papier",
+          "label": "Nur Dokumentation (ohne technische Maßnahmen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dokumentation ist wichtig, aber ohne technische/organisatorische Kontrollen nicht ausreichend.", "correct": true },
+            { "id": "w2", "text": "Art. 32 fordert praktische Maßnahmen, nicht nur Papier.", "correct": true },
+            { "id": "w3", "text": "TOMs sind reine Formulare für die Behörde.", "correct": false },
+            { "id": "w4", "text": "„Angemessen“ hängt am Risiko und der Verarbeitung, nicht an Wunschdenken.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "TOMs (Art. 32) = technische + organisatorische Sicherheitsmaßnahmen, risikobasiert und nachweisbar."
+    },
+    {
+      "id": "v14",
+      "profile": "Ein Produktteam sagt: „Datenschutz patchen wir später rein.“ Du willst den korrekten DSGVO-Ansatz benennen.",
+      "tags": ["Art. 25", "Privacy by Design", "Privacy by Default", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "pbdd",
+          "label": "Privacy by Design & Privacy by Default",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Datenschutz muss in Planung/Entwicklung berücksichtigt werden, nicht nachträglich.", "correct": true },
+            { "id": "w2", "text": "Default: Voreinstellungen restriktiv, nur nötige Daten standardmäßig.", "correct": true },
+            { "id": "w3", "text": "Default heißt: möglichst viele Daten sammeln, damit es später nützlich ist.", "correct": false },
+            { "id": "w4", "text": "Beispiele: kurze Log-Fristen, minimale Freigaben, Tracker standardmäßig aus.", "correct": true }
+          ]
+        },
+        {
+          "id": "patch_spaeter",
+          "label": "Datenschutz als Nacharbeit nach Go-Live",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Späteres „Reinpatchen“ ist teuer und riskant.", "correct": true },
+            { "id": "w2", "text": "Risikoanalyse und Anforderungen sollten vor Produktivstart passieren.", "correct": true },
+            { "id": "w3", "text": "Art. 25 gilt nur für Apps, nicht für interne Systeme.", "correct": false },
+            { "id": "w4", "text": "Default-Einstellungen sind Teil von Datenschutz-Design.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_einwilligung",
+          "label": "Einwilligung einholen und dann ist Design egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch mit Einwilligung gelten Minimierung, Sicherheit und Fristen.", "correct": true },
+            { "id": "w2", "text": "Einwilligung kann widerrufen werden – Design muss trotzdem datenschutzfreundlich sein.", "correct": true },
+            { "id": "w3", "text": "Einwilligung ersetzt TOMs und Default-Einstellungen.", "correct": false },
+            { "id": "w4", "text": "Privacy by Default senkt Risiko unabhängig von Rechtsgrundlage.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Art. 25: Datenschutz von Anfang an einbauen (Design) und datensparsame, restriktive Defaults setzen."
+    },
+    {
+      "id": "v15",
+      "profile": "Die Geschäftsleitung will „Nachweisbarkeit“: Welche internen Pflicht-Artefakte zeigen, dass man Datenschutz im Griff hat?",
+      "tags": ["Dokumentation", "Rechenschaftspflicht", "VVT", "DSFA", "AVV"],
+      "options": [
+        {
+          "id": "artefakte",
+          "label": "Pflicht-Artefakte: VVT, AVV, ggf. DSFA",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "VVT dokumentiert Verarbeitungstätigkeiten (Zwecke, Datenkategorien, Fristen, TOMs...).", "correct": true },
+            { "id": "w2", "text": "AVV ist Pflicht bei Auftragsverarbeitung.", "correct": true },
+            { "id": "w3", "text": "DSFA ist bei hohem Risiko Pflicht und muss vor Start erfolgen.", "correct": true },
+            { "id": "w4", "text": "Diese Artefakte sind nur für Unternehmen mit über 250 Mitarbeitenden.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_policy",
+          "label": "Eine Datenschutz-Policy allein reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Policy hilft, ersetzt aber keine Verzeichnisse/Verträge/Assessments.", "correct": true },
+            { "id": "w2", "text": "Rechenschaftspflicht verlangt konkrete Nachweise zur tatsächlichen Verarbeitung.", "correct": true },
+            { "id": "w3", "text": "Ohne VVT/AVV/DSFA gibt es typischerweise keine Angriffsfläche.", "correct": false },
+            { "id": "w4", "text": "Pflichtartefakte sind häufige Prüfungsfallen, wenn sie fehlen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_toms",
+          "label": "Nur TOMs dokumentieren, der Rest ist optional",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "TOMs sind Teil, aber VVT/AVV/DSFA betreffen auch Zwecke, Rollen, Risiken.", "correct": true },
+            { "id": "w2", "text": "Dokumentation ist nicht nur „Sicherheit“, sondern auch Recht & Prozess.", "correct": true },
+            { "id": "w3", "text": "Ohne Rechtsgrundlage spielt Dokumentation keine Rolle.", "correct": false },
+            { "id": "w4", "text": "Nachweisbarkeit umfasst mehr als Technik.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Rechenschaftspflicht wird greifbar über VVT, AVV und (bei hohem Risiko) DSFA – nicht nur über Policies."
+    },
+    {
+      "id": "v16",
+      "profile": "Ein neues Verfahren trackt Nutzerverhalten umfangreich und erstellt Profile. Die Frage ist: Was muss vor dem Start passieren?",
+      "tags": ["Art. 35", "DSFA", "Risiko", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "dsfa",
+          "label": "Datenschutz-Folgenabschätzung (DSFA) vor Start",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Pflicht bei voraussichtlich hohem Risiko für Rechte/Freiheiten.", "correct": true },
+            { "id": "w2", "text": "Enthält Beschreibung, Notwendigkeit/Verhältnismäßigkeit, Risikobewertung, Maßnahmen.", "correct": true },
+            { "id": "w3", "text": "DSFA ist eine nachträgliche Formalität, kann nach Go-Live kommen.", "correct": false },
+            { "id": "w4", "text": "Maßnahmen: TOMs, Privacy by Design, Zugriffskontrollen etc.", "correct": true }
+          ]
+        },
+        {
+          "id": "vvt_genuegt",
+          "label": "VVT-Eintrag reicht, DSFA nie nötig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "VVT dokumentiert, DSFA bewertet hohes Risiko und Maßnahmen – unterschiedliche Zwecke.", "correct": true },
+            { "id": "w2", "text": "Profiling/Tracking ist ein typischer DSFA-Trigger.", "correct": true },
+            { "id": "w3", "text": "DSFA ist nur bei Papierakten nötig.", "correct": false },
+            { "id": "w4", "text": "DSFA muss vor Start der Verarbeitung durchgeführt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "einwilligung_reicht",
+          "label": "Einwilligung einholen, dann ist DSFA egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch mit Einwilligung kann das Risiko hoch sein und DSFA notwendig bleiben.", "correct": true },
+            { "id": "w2", "text": "DSFA betrifft Risiko und Maßnahmen, nicht nur Rechtsgrundlage.", "correct": true },
+            { "id": "w3", "text": "Einwilligung hebt Art. 35 auf.", "correct": false },
+            { "id": "w4", "text": "DSFA prüft u. a. mildere Mittel und Verhältnismäßigkeit.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei hohem Risiko (Profiling/Tracking etc.) muss vor Start eine DSFA erfolgen: Beschreibung, Risiko, Maßnahmen."
+    },
+    {
+      "id": "v17",
+      "profile": "Ein Laptop mit Kundendaten wird gestohlen. Die Frage: Welche Regel gilt für die Meldung – und ab wann läuft die Frist?",
+      "tags": ["Art. 33/34", "Datenpanne", "72 Stunden", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "datenpanne",
+          "label": "Datenpanne mit 72-Stunden-Regel (ab Bekanntwerden)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Meldung an Aufsichtsbehörde i. d. R. binnen 72 Stunden nach Bekanntwerden (bei Risiko).", "correct": true },
+            { "id": "w2", "text": "Betroffene müssen informiert werden, wenn hohes Risiko für sie besteht.", "correct": true },
+            { "id": "w3", "text": "Frist läuft ab dem Zeitpunkt des Vorfalls, auch wenn niemand es merkt.", "correct": false },
+            { "id": "w4", "text": "Inhalt der Meldung: Art der Verletzung, Kategorien, Folgen, Maßnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "keine_meldung",
+          "label": "Keine Meldung nötig, weil es nur ein Gerät ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch Geräteverlust kann Datenpanne sein, wenn personenbezogene Daten betroffen sind.", "correct": true },
+            { "id": "w2", "text": "Risiko bewerten: ggf. melden und ggf. Betroffene informieren.", "correct": true },
+            { "id": "w3", "text": "Datenpanne ist nur Hackerangriff, nicht Verlust.", "correct": false },
+            { "id": "w4", "text": "Incident Response: Verantwortlichkeiten, Logs/Beweise sichern, dokumentieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "72_tage",
+          "label": "Meldung innerhalb von 72 Tagen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Es sind 72 Stunden, nicht Tage.", "correct": true },
+            { "id": "w2", "text": "Frist zählt ab Bekanntwerden, nicht ab dem Ereigniszeitpunkt.", "correct": true },
+            { "id": "w3", "text": "Meldung ist immer optional.", "correct": false },
+            { "id": "w4", "text": "Auch ohne Meldung muss intern dokumentiert und reagiert werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Datenpanne: 72 Stunden ab Bekanntwerden (bei Risiko) an Behörde; bei hohem Risiko zusätzlich Betroffene informieren."
+    },
+    {
+      "id": "v18",
+      "profile": "Ein US-Cloud-Dienst soll Kundendaten verarbeiten. Jemand sagt: „Kapitel V ist unsere Rechtsgrundlage, damit passt das.“",
+      "tags": ["Drittlandtransfer", "Kapitel V", "SCC", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "kapitel_v",
+          "label": "Drittlandtransfer: zusätzliche Garantien neben Art. 6/9",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kapitel V ergänzt die Rechtsgrundlage, ersetzt sie nicht.", "correct": true },
+            { "id": "w2", "text": "Mögliche Garantien: Angemessenheitsbeschluss, SCC, BCR, eng begrenzte Ausnahmen.", "correct": true },
+            { "id": "w3", "text": "Wenn SCC unterschrieben sind, braucht man keine Rechtsgrundlage mehr.", "correct": false },
+            { "id": "w4", "text": "Betroffene müssen über Drittlandtransfer informiert werden (Transparenz).", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_art6",
+          "label": "Nur Art. 6 reicht, Drittland ist egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Drittlandtransfer braucht zusätzliche Anforderungen/Garantien.", "correct": true },
+            { "id": "w2", "text": "Kapitel V kommt zusätzlich obendrauf.", "correct": true },
+            { "id": "w3", "text": "Drittlandregeln gelten nur für öffentliche Stellen.", "correct": false },
+            { "id": "w4", "text": "SCC/BCR/Angemessenheitsbeschluss sind typische Mechanismen.", "correct": true }
+          ]
+        },
+        {
+          "id": "einwilligung_immer",
+          "label": "Immer Einwilligung nutzen, dann ist Drittland-Problem gelöst",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einwilligung als Ausnahme ist eng auszulegen und nicht immer praktikabel.", "correct": true },
+            { "id": "w2", "text": "Auch dann bleibt Transparenzpflicht und Risiko-/Maßnahmenprüfung relevant.", "correct": true },
+            { "id": "w3", "text": "Einwilligung ist ein universeller Freifahrtschein für jeden Transfer.", "correct": false },
+            { "id": "w4", "text": "Oft sind SCC plus Zusatzmaßnahmen der Standardweg.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Drittlandtransfer: Art. 6/9 bleibt nötig + Kapitel V als Zusatz (Angemessenheit/SCC/BCR/enge Ausnahmen) + transparente Info."
+    }
+  ]
+}

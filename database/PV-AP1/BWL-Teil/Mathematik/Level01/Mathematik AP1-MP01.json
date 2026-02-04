@@ -1,0 +1,192 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Mathematik für die AP1 – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Rechenbegriff, die passende Kurzbeschreibung und ein typisches AP1-Praxisbeispiel (Speicher, Netz, Medien, Prozent, Zeit).",
+  "columnTitles": {
+    "column1": "Begriff / Formel",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Rechenbegriff oder eine Formel.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus IT-Praxis/Prüfung zu."
+  },
+  "sets": [
+    {
+      "id": "si_vs_iec",
+      "name": "SI vs IEC (1000 vs 1024)",
+      "description": "SI nutzt Basis 10 (kB/MB/GB), IEC nutzt Basis 2 (KiB/MiB/GiB) – gleiche Buchstaben, andere Größenordnung.",
+      "example": "Ein Betriebssystem zeigt eine „500 GB“-Platte als ca. „465 GiB“ an – kein Defekt, nur andere Einheit."
+    },
+    {
+      "id": "kb_kib",
+      "name": "kB vs KiB",
+      "description": "1 kB = 1000 B, 1 KiB = 1024 B – Verwechslung kostet fast immer Punkte.",
+      "example": "Logfile-Größe wird in KiB angegeben, du rechnest fälschlich mit 1000 statt 1024 und liegst daneben."
+    },
+    {
+      "id": "bit_vs_byte",
+      "name": "bit vs Byte",
+      "description": "1 Byte = 8 bit; Datenraten oft in bit/s, Dateigrößen in Byte.",
+      "example": "100 Mbit/s Netzwerk sind theoretisch 12,5 MB/s – wer MB/s mit Mbit/s verwechselt, liegt Faktor 8 falsch."
+    },
+    {
+      "id": "runde_regel",
+      "name": "Runden erst am Ende",
+      "description": "Zwischenergebnisse nicht früh runden, sonst summieren sich Fehler; Endergebnis sauber runden.",
+      "example": "Bei Transferzeit-Rechnung erst mit vollen Werten rechnen, am Schluss auf Sekunden/Minuten runden."
+    },
+    {
+      "id": "ueberschlag",
+      "name": "Überschlag",
+      "description": "Schnelle Abschätzung der Größenordnung, um grobe Fehler sofort zu erkennen.",
+      "example": "Backup über langsames WLAN: Überschlag zeigt „Stunden“ statt „Minuten“ – Ergebnis wirkt dann plausibel."
+    },
+    {
+      "id": "plausibilitaet",
+      "name": "Plausibilitätscheck",
+      "description": "Einheiten und Realismus prüfen: passt das Ergebnis zur Praxis (Sekunden vs Stunden, MB vs GB)?",
+      "example": "Download „500 MB in 2 Sekunden“ bei 50 Mbit/s ist unplausibel – Einheit/Umrechnung stimmt nicht."
+    },
+    {
+      "id": "prozentwert",
+      "name": "Prozentwert W",
+      "description": "W = (p/100) · G (Anteil aus Grundwert).",
+      "example": "15% von 200 GB sind 30 GB."
+    },
+    {
+      "id": "grundwert",
+      "name": "Grundwert G",
+      "description": "G = W · (100/p) (Ganzes aus Anteil).",
+      "example": "30 GB sind 15% von 200 GB."
+    },
+    {
+      "id": "prozentsatz",
+      "name": "Prozentsatz p",
+      "description": "p = (W/G) · 100 (Anteil in Prozent).",
+      "example": "30 GB von 200 GB sind 15%."
+    },
+    {
+      "id": "prozentpunkte",
+      "name": "Prozentpunkte vs Prozent",
+      "description": "10% → 12% sind +2 Prozentpunkte, aber relativ +20%.",
+      "example": "Fehlerquote steigt von 1% auf 2%: +1 Prozentpunkt, aber Verdopplung."
+    },
+    {
+      "id": "auslastung",
+      "name": "Auslastung",
+      "description": "Auslastung = (Ist/Max) · 100; zeigt, wie viel Kapazität gerade genutzt wird.",
+      "example": "60 von 80 Prozessen aktiv → 75% Auslastung."
+    },
+    {
+      "id": "reserve",
+      "name": "Reserve",
+      "description": "Reserve = 100% − Auslastung; Puffer für Spitzenlasten.",
+      "example": "Bei 75% Auslastung bleiben 25% Reserve – sonst knallt’s bei Lastspitzen."
+    },
+    {
+      "id": "overhead",
+      "name": "Overhead",
+      "description": "Zusatzanteil (z. B. Protokolle/Codierung) reduziert die Nutzlast; Brutto ≠ Netto.",
+      "example": "Bei Dateiübertragung sind reale MB/s niedriger als theoretisch wegen TCP/IP-Overhead."
+    },
+    {
+      "id": "transferzeit",
+      "name": "Transferzeit",
+      "description": "Zeit = Datenmenge / Rate; beide Seiten müssen in derselben Einheit sein.",
+      "example": "500 MB über 100 Mbit/s: erst 500 MB → 4000 Mbit, dann 4000/100 = 40 s (theoretisch)."
+    },
+    {
+      "id": "raid0",
+      "name": "RAID 0 Kapazität",
+      "description": "Kapazität = n · Größe; keine Redundanz, maximale Kapazität.",
+      "example": "4×2 TB → 8 TB nutzbar, aber Ausfall einer Platte = alles weg."
+    },
+    {
+      "id": "raid1",
+      "name": "RAID 1 Kapazität",
+      "description": "Kapazität = (n/2) · Größe; Spiegelung, halbe Kapazität bei Paaren.",
+      "example": "4×2 TB → 4 TB nutzbar, dafür hohe Ausfallsicherheit."
+    },
+    {
+      "id": "raid5",
+      "name": "RAID 5 Kapazität",
+      "description": "Kapazität = (n−1) · Größe; eine Platte „für Parität“ verteilt.",
+      "example": "4×2 TB → 6 TB nutzbar."
+    },
+    {
+      "id": "raid6",
+      "name": "RAID 6 Kapazität",
+      "description": "Kapazität = (n−2) · Größe; doppelte Parität, mehr Schutz, weniger Nutzplatz.",
+      "example": "4×2 TB → 4 TB nutzbar."
+    },
+    {
+      "id": "hosts_formel",
+      "name": "Hosts pro Subnetz",
+      "description": "Hosts = 2^(32−Prefix) − 2 (klassisch: Netzadresse + Broadcast nicht nutzbar).",
+      "example": "/24 → 254 Hosts, /26 → 62 Hosts."
+    },
+    {
+      "id": "netzadresse",
+      "name": "Netzadresse",
+      "description": "Erste Adresse im Subnetz; identifiziert das Netz, nicht einen Host.",
+      "example": "Im /24 ist x.x.x.0 die Netzadresse (typisch)."
+    },
+    {
+      "id": "broadcast",
+      "name": "Broadcast-Adresse",
+      "description": "Letzte Adresse im Subnetz; Broadcast geht an alle Hosts im Subnetz.",
+      "example": "Im /24 ist x.x.x.255 typischerweise der Broadcast."
+    },
+    {
+      "id": "pixelanzahl",
+      "name": "Pixelanzahl",
+      "description": "Pixel = Breite · Höhe; Grundlage für Mediengrößen und Auflösung.",
+      "example": "1920×1080 = 2.073.600 Pixel (~2,07 MP)."
+    },
+    {
+      "id": "skalierung",
+      "name": "Skalierung 2× → 4× Pixel",
+      "description": "Verdoppeln in Breite und Höhe vervierfacht die Pixelanzahl (und grob die Datenmenge).",
+      "example": "1920×1080 → 3840×2160: viermal so viele Pixel."
+    },
+    {
+      "id": "bildgroesse_unkomprimiert",
+      "name": "Bildgröße (unkomprimiert)",
+      "description": "Größe ≈ Pixel · Farbtiefe / 8 (bit → Byte).",
+      "example": "2.000.000 Pixel bei 24 bit: 2.000.000·24/8 = 6.000.000 B ≈ 6 MB."
+    },
+    {
+      "id": "audio_groesse",
+      "name": "Audiogröße (unkomprimiert)",
+      "description": "Größe = SampleRate · BitTiefe · Kanäle · Dauer / 8.",
+      "example": "44,1 kHz · 16 bit · Stereo · 3 min ≈ 30 MB."
+    },
+    {
+      "id": "base64_overhead",
+      "name": "Base64 Overhead",
+      "description": "Base64 codiert binär zu Text und macht Daten typischerweise ~33% größer; keine Kompression, keine Verschlüsselung.",
+      "example": "Ein Bild als Base64 in JSON wächst sichtbar – Datei wird größer statt kleiner."
+    },
+    {
+      "id": "verfuegbarkeit_downtime",
+      "name": "Verfügbarkeit → Ausfallzeit",
+      "description": "Ausfallzeit = Zeitraum · (1 − Verfügbarkeit).",
+      "example": "99,9% pro 30 Tage → ca. 43,2 Minuten erlaubte Ausfallzeit."
+    },
+    {
+      "id": "reaktionszeit_vs_rto",
+      "name": "Reaktionszeit ≠ RTO",
+      "description": "Reaktionszeit: wann wird begonnen; RTO: wann ist der Service wieder vollständig hergestellt.",
+      "example": "SLA: Reaktion < 30 Min, RTO < 4 Std – beides getrennt bewerten."
+    },
+    {
+      "id": "usv_wh_w",
+      "name": "USV: Energie und Laufzeit",
+      "description": "Energie (Wh) = Leistung (W) · Zeit (h); Laufzeit (h) = Wh / W (Praxis: Verluste).",
+      "example": "1000 Wh Batterie, 200 W Last → 5 h theoretisch, real eher weniger durch Wirkungsgrad."
+    }
+  ]
+}

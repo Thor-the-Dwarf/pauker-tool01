@@ -1,0 +1,525 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Datenschutz (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich einen {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "verbot_mit_erlaubnisvorbehalt",
+      "name": "DSGVO-Grundprinzip: Verbot mit Erlaubnisvorbehalt",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "personenbezogene_daten_art4",
+      "name": "Personenbezogene Daten (Art. 4 Nr. 1 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": true,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": true,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "verarbeitung_art4_2",
+      "name": "Verarbeitung (Art. 4 Nr. 2 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": true,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "anonymisierung",
+      "name": "Anonymisierung",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": true,
+        "dsgvo_still_applies": false,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "pseudonymisierung",
+      "name": "Pseudonymisierung",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": true,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "grundsaetze_art5",
+      "name": "Grundsätze der Verarbeitung (Art. 5 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": true,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "verantwortlicher_rolle",
+      "name": "Rolle: Verantwortlicher",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": true,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "auftragsverarbeiter_rolle",
+      "name": "Rolle: Auftragsverarbeiter",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": true,
+        "requires_av_contract": true,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "rechtsgrundlagen_art6",
+      "name": "Rechtsgrundlagen (Art. 6 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": true,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "einwilligung_art7",
+      "name": "Einwilligung (Art. 7 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": true,
+        "specifies_consent_requirements": true,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "informationspflichten_art13_14",
+      "name": "Informationspflichten (Art. 13/14 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": true,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "betroffenenrechte_art15_22",
+      "name": "Betroffenenrechte (Art. 15–22 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": true,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "toms_art32",
+      "name": "TOMs – Sicherheit der Verarbeitung (Art. 32 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": true,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "vvt_art30",
+      "name": "Verzeichnis von Verarbeitungstätigkeiten (Art. 30 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": true,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "dsfa_art35",
+      "name": "Datenschutz-Folgenabschätzung (Art. 35 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": true,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "datenpanne_72h_art33_34",
+      "name": "Datenpanne: 72-Stunden-Regel (Art. 33/34 DSGVO)",
+      "attributes": {
+        "needs_legal_basis": false,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": true,
+        "requires_transfer_safeguards": false
+      }
+    },
+    {
+      "id": "drittlandtransfer_kapitel_v",
+      "name": "Drittlandtransfer (Kapitel V DSGVO)",
+      "attributes": {
+        "needs_legal_basis": true,
+        "defines_personal_data": false,
+        "defines_processing_actions": false,
+        "distinguishes_anonym_pseudo": false,
+        "dsgvo_still_applies": true,
+        "sets_processing_principles": false,
+        "defines_roles_purpose_means": false,
+        "defines_processor_on_behalf": false,
+        "requires_av_contract": false,
+        "deals_with_legal_bases_art6": false,
+        "specifies_consent_requirements": false,
+        "requires_transparency_info": false,
+        "grants_data_subject_rights": false,
+        "requires_security_toms": false,
+        "requires_documentation_register": false,
+        "requires_high_risk_assessment": false,
+        "requires_breach_notification": false,
+        "requires_transfer_safeguards": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Braucht es zwingend eine Rechtsgrundlage, damit die Verarbeitung überhaupt erlaubt ist?",
+      "attributeKey": "needs_legal_basis"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es vor allem darum, was als personenbezogen gilt (identifiziert/identifizierbar)?",
+      "attributeKey": "defines_personal_data"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es darum, welche Handlungen alles schon „Verarbeitung“ sind (erheben, speichern, weitergeben …)?",
+      "attributeKey": "defines_processing_actions"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um die Unterscheidung Anonymisierung vs. Pseudonymisierung?",
+      "attributeKey": "distinguishes_anonym_pseudo"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Gilt die DSGVO bei diesem Thema weiterhin (Personenbezug bleibt bestehen)?",
+      "attributeKey": "dsgvo_still_applies"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es um die „Gebote“ der Verarbeitung (Zweckbindung, Datenminimierung, Speicherbegrenzung …)?",
+      "attributeKey": "sets_processing_principles"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um die Rolle, die Zwecke und Mittel der Verarbeitung festlegt?",
+      "attributeKey": "defines_roles_purpose_means"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es um einen Dienstleister, der Daten im Auftrag verarbeitet?",
+      "attributeKey": "defines_processor_on_behalf"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist dafür typischerweise ein Auftragsverarbeitungsvertrag (AVV) erforderlich?",
+      "attributeKey": "requires_av_contract"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Geht es um die Liste möglicher Rechtsgrundlagen (Einwilligung, Vertrag, Pflicht, berechtigtes Interesse …)?",
+      "attributeKey": "deals_with_legal_bases_art6"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Geht es um Anforderungen an eine wirksame Einwilligung (freiwillig, informiert, widerrufbar, nachweisbar …)?",
+      "attributeKey": "specifies_consent_requirements"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Geht es darum, welche Infos Betroffene bei Datenerhebung bekommen müssen (Wer? Wozu? Wie lange? Rechte?)",
+      "attributeKey": "requires_transparency_info"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Geht es um Rechte wie Auskunft, Löschung, Widerspruch, Datenübertragbarkeit?",
+      "attributeKey": "grants_data_subject_rights"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Geht es um technische und organisatorische Maßnahmen wie MFA, Rollenrechte, Verschlüsselung, Backups, Logging?",
+      "attributeKey": "requires_security_toms"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es um Dokumentation als Pflicht-Artefakt (Verzeichnis der Verarbeitungstätigkeiten)?",
+      "attributeKey": "requires_documentation_register"
+    },
+    {
+      "id": "q16",
+      "hotkey": "16",
+      "text": "Geht es um eine Pflichtprüfung bei hohem Risiko (Datenschutz-Folgenabschätzung vor Go-Live)?",
+      "attributeKey": "requires_high_risk_assessment"
+    },
+    {
+      "id": "q17",
+      "hotkey": "17",
+      "text": "Geht es um Melde-/Benachrichtigungspflichten bei Datenpannen (72 Stunden ab Bekanntwerden)?",
+      "attributeKey": "requires_breach_notification"
+    },
+    {
+      "id": "q18",
+      "hotkey": "18",
+      "text": "Geht es um zusätzliche Garantien bei Übermittlung in Länder außerhalb EU/EWR (z. B. SCC, Angemessenheitsbeschluss)?",
+      "attributeKey": "requires_transfer_safeguards"
+    }
+  ]
+}

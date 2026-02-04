@@ -1,0 +1,191 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Geschäftsprozesse (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Geschäftsprozess",
+    "Arbeitsprozess",
+    "Prozess",
+    "Projekt",
+    "Kernprozess",
+    "Unterstützungsprozess",
+    "Führungsprozess",
+    "Input",
+    "Output",
+    "Prozess-Owner",
+    "KPI",
+    "Flussdiagramm",
+    "BPMN",
+    "Swimlanes",
+    "Schnittstelle",
+    "Medienbruch",
+    "Stakeholder",
+    "Prozessziel",
+    "Anforderung",
+    "Akzeptanzkriterium",
+    "Kaufvertrag",
+    "Werkvertrag",
+    "Dienstvertrag",
+    "Abnahme",
+    "Mangel",
+    "Lieferverzug",
+    "Zahlungsverzug",
+    "Schlechtleistung",
+    "SLA",
+    "TCO",
+    "ROI",
+    "Amortisation",
+    "Nutzwertanalyse",
+    "Make-or-Buy",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Gesamtprozess aus Kundensicht: Anforderung stellen, Genehmigung einholen, Gerät erhalten, produktiv arbeiten – Fokus auf Wert, Kunde, Geld und Verantwortung.",
+      "correct": "Geschäftsprozess"
+    },
+    {
+      "text": "Konkrete Arbeitsschritte im IT-Team: Image erstellen, Software installieren, Übergabeprotokoll erstellen, Einweisung durchführen.",
+      "correct": "Arbeitsprozess"
+    },
+    {
+      "text": "Wiederholt sich regelmäßig und lässt sich als Input → Aktivität → Output beschreiben.",
+      "correct": "Prozess"
+    },
+    {
+      "text": "Einmalig, zeitlich begrenzt und nicht als Routine gedacht (z. B. eine einmalige Einführung eines neuen Systems).",
+      "correct": "Projekt"
+    },
+    {
+      "text": "Erzeugt direkt Kundennutzen; hier entsteht Umsatz bzw. direkter Leistungswert (z. B. Servicebereitstellung, Support-Leistung).",
+      "correct": "Kernprozess"
+    },
+    {
+      "text": "Ermöglicht den Kernprozess, erzeugt aber nicht direkt Umsatz (z. B. Einkauf, IT-Betrieb, Personalverwaltung).",
+      "correct": "Unterstützungsprozess"
+    },
+    {
+      "text": "Steuert, entscheidet und gibt die Richtung vor (z. B. Strategie, Controlling, Qualitätsmanagement).",
+      "correct": "Führungsprozess"
+    },
+    {
+      "text": "Startauslöser/Trigger eines Ablaufs, z. B. „Störung gemeldet“ oder „Auftrag eingegangen“. ",
+      "correct": "Input"
+    },
+    {
+      "text": "Messbares Ergebnis am Ende, z. B. „Dienst wieder verfügbar“ oder „Rechnung gestellt“. ",
+      "correct": "Output"
+    },
+    {
+      "text": "Rolle, die für Qualität, Optimierung und Einhaltung eines Prozesses verantwortlich ist.",
+      "correct": "Prozess-Owner"
+    },
+    {
+      "text": "Kennzahl zur Messung, z. B. Durchlaufzeit, Fehlerquote oder Verfügbarkeit in Prozent.",
+      "correct": "KPI"
+    },
+    {
+      "text": "Prüfungsfalle: Nur „Ticket-Schließ-Geschwindigkeit“ messen kann dazu führen, dass Tickets vorschnell geschlossen werden, ohne echte Lösung.",
+      "correct": "KPI"
+    },
+    {
+      "text": "Einfache Prozessdarstellung mit klarem Start und Ende, gut für überschaubare Abläufe.",
+      "correct": "Flussdiagramm"
+    },
+    {
+      "text": "Standard-Notation für Business-Prozesse mit Ereignissen, Aufgaben und Entscheidungspunkten (Gateways).",
+      "correct": "BPMN"
+    },
+    {
+      "text": "Darstellung, die Zuständigkeiten mehrerer Rollen/Abteilungen parallel sichtbar macht.",
+      "correct": "Swimlanes"
+    },
+    {
+      "text": "Übergabe zwischen Rollen oder Systemen (z. B. 1st Level → 2nd Level); typischer Hotspot für Fehler und Verzögerungen.",
+      "correct": "Schnittstelle"
+    },
+    {
+      "text": "Wechsel zwischen Tools/Medien (z. B. Tool → E-Mail → Excel → manuelles Eintragen) mit erhöhtem Fehlerrisiko.",
+      "correct": "Medienbruch"
+    },
+    {
+      "text": "Beteiligte mit Einfluss/Interesse am Ergebnis, intern oder extern (z. B. Fachabteilung, Geschäftsführung, Lieferant, Behörde).",
+      "correct": "Stakeholder"
+    },
+    {
+      "text": "Antwort auf: „Was soll am Ende besser sein?“ – konkret über Zeit, Qualität, Kosten oder Risiko.",
+      "correct": "Prozessziel"
+    },
+    {
+      "text": "Beschreibt, was ein System können muss oder wie gut es sein soll (z. B. Funktionalität, Sicherheit, Verfügbarkeit).",
+      "correct": "Anforderung"
+    },
+    {
+      "text": "Messbar formuliert: „Gilt als erledigt, wenn …“ (z. B. Passwort-Reset in unter fünf Minuten inkl. Protokollierung).",
+      "correct": "Akzeptanzkriterium"
+    },
+    {
+      "text": "Sache/Produkt gegen Geld; typisch bei Hardware oder fertigen Software-Paketen, Eigentum geht über.",
+      "correct": "Kaufvertrag"
+    },
+    {
+      "text": "Erfolg ist geschuldet; Abnahme ist zentral (z. B. fertige Website, lauffähiges Feature).",
+      "correct": "Werkvertrag"
+    },
+    {
+      "text": "Tätigkeit ist geschuldet; Bezahlung nach Zeit/Aufwand, nicht nach Ergebnis (z. B. Beratung, Support nach Aufwand).",
+      "correct": "Dienstvertrag"
+    },
+    {
+      "text": "Kunde bestätigt „Leistung entspricht Vereinbarung“; bei Werkverträgen entscheidend und Startpunkt für Gewährleistungslogik.",
+      "correct": "Abnahme"
+    },
+    {
+      "text": "Abweichung vom Vereinbarten oder Üblichen; kann funktional oder qualitativ sein.",
+      "correct": "Mangel"
+    },
+    {
+      "text": "Vereinbarter Termin wurde gerissen; Ursachen können fehlende Mitwirkung, falsche Planung oder Scope-Änderungen sein.",
+      "correct": "Lieferverzug"
+    },
+    {
+      "text": "Rechnung wird nicht fristgerecht bezahlt; Mahnung und Verzugszinsen sind möglich.",
+      "correct": "Zahlungsverzug"
+    },
+    {
+      "text": "Geliefert, aber mangelhaft (z. B. Performance bricht ein, Funktionen fehlen, Sicherheitslücken).",
+      "correct": "Schlechtleistung"
+    },
+    {
+      "text": "Definiert messbare Servicequalität wie Verfügbarkeit, Reaktionszeit und Wiederherstellungszeit inkl. Messung/Reporting sowie Eskalationsregeln.",
+      "correct": "SLA"
+    },
+    {
+      "text": "Prüfungsfalle: „Rund-um-die-Uhr-Support“ ohne konkrete Reaktionszeiten ist kein echtes Qualitätsversprechen.",
+      "correct": "SLA"
+    },
+    {
+      "text": "Gesamtkosten über die Lebensdauer: Anschaffung plus Betrieb, Schulung, Wartung, Support und Lizenzen.",
+      "correct": "TCO"
+    },
+    {
+      "text": "Nutzen oder Gewinn im Verhältnis zur Investition – sinnvoll nur mit klar definiertem Zeitraum.",
+      "correct": "ROI"
+    },
+    {
+      "text": "Zeitpunkt, ab dem sich eine Investition „zurückgezahlt“ hat (Break-even).",
+      "correct": "Amortisation"
+    },
+    {
+      "text": "Entscheidungsmethode mit Kriterien definieren, gewichten, bewerten und Gesamtpunktzahl berechnen (nicht nur Euro zählen).",
+      "correct": "Nutzwertanalyse"
+    },
+    {
+      "text": "Entscheidung: selbst entwickeln oder kaufen/outsourcen; Faktoren sind Zeit, Kosten, Risiko, Kompetenzen, SLA- und Vertragsbedingungen.",
+      "correct": "Make-or-Buy"
+    }
+  ]
+}
