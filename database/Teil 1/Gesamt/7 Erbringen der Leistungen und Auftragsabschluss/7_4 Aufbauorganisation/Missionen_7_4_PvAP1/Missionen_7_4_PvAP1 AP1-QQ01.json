@@ -1,0 +1,99 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Aufbauorganisation",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Organisationsformen und Vollmachten zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Einliniensystem",
+    "Mehrliniensystem",
+    "Matrixorganisation",
+    "Handlungsspielraum",
+    "Entscheidungsspielraum",
+    "Vollmacht",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Jede Person hat genau eine direkte Führungskraft; klare Zuständigkeiten und eindeutige Weisungswege.",
+      "correct": "Einliniensystem"
+    },
+    {
+      "text": "Mitarbeitende können von mehreren Stellen fachlich angewiesen werden; kurze Wege, aber Konfliktpotenzial.",
+      "correct": "Mehrliniensystem"
+    },
+    {
+      "text": "Doppelunterstellung: z. B. fachlich im Projekt, disziplinarisch in der Linie; typisches „zwei Chefs“-Setup.",
+      "correct": "Matrixorganisation"
+    },
+    {
+      "text": "Rahmen, in dem man selbst handeln darf, ohne jedes Detail abzustimmen (z. B. Lösungsvorschläge erarbeiten).",
+      "correct": "Handlungsspielraum"
+    },
+    {
+      "text": "Rahmen, in dem man Entscheidungen selbst treffen darf (z. B. Priorisierung, Auswahl einer Option).",
+      "correct": "Entscheidungsspielraum"
+    },
+    {
+      "text": "Formale Befugnis, im Namen des Unternehmens rechtsverbindlich zu handeln (z. B. Bestellungen freigeben).",
+      "correct": "Vollmacht"
+    },
+    {
+      "text": "„Ich darf nur über meinen Teamleiter Aufgaben erhalten“ ist ein typisches Merkmal hiervon.",
+      "correct": "Einliniensystem"
+    },
+    {
+      "text": "„Der Admin bekommt Anweisungen vom IT-Leiter und zusätzlich vom Datenschutzbeauftragten“ passt am ehesten hierzu.",
+      "correct": "Mehrliniensystem"
+    },
+    {
+      "text": "„Projektleiter entscheidet fachlich, Abteilungsleiter entscheidet über Urlaub/Personal“ passt am ehesten hierzu.",
+      "correct": "Matrixorganisation"
+    },
+    {
+      "text": "„Du darfst bis 500 € selbst bestellen“ ist primär ein Beispiel für …",
+      "correct": "Vollmacht"
+    },
+    {
+      "text": "„Du darfst eigenständig Lösungsschritte planen, musst aber vor Umsetzung freigeben lassen“ beschreibt vor allem …",
+      "correct": "Handlungsspielraum"
+    },
+    {
+      "text": "„Du darfst den Ticketstatus ändern und Prioritäten setzen“ beschreibt vor allem …",
+      "correct": "Entscheidungsspielraum"
+    },
+    {
+      "text": "Vorteil: sehr klare Verantwortlichkeiten; Nachteil: Entscheidungen können langsamer werden.",
+      "correct": "Einliniensystem"
+    },
+    {
+      "text": "Vorteil: schnelle fachliche Entscheidungen; Nachteil: widersprüchliche Weisungen sind möglich.",
+      "correct": "Mehrliniensystem"
+    },
+    {
+      "text": "Vorteil: Expertise aus mehreren Bereichen; Nachteil: Abstimmungsaufwand und Konflikte bei Zielkonflikten.",
+      "correct": "Matrixorganisation"
+    },
+    {
+      "text": "Wenn Rollen unklar sind, kann es passieren, dass niemand Entscheidungen trifft, obwohl alle handeln könnten – das betrifft meist …",
+      "correct": "Entscheidungsspielraum"
+    },
+    {
+      "text": "Wenn jemand zwar entscheiden soll, aber rechtlich nicht unterschreiben darf, fehlt oft genau das.",
+      "correct": "Vollmacht"
+    },
+    {
+      "text": "Handlungs- und Entscheidungsspielräume können je nach Organisation und Rolle gleichzeitig existieren.",
+      "correct": "alle"
+    },
+    {
+      "text": "„Wer darf was?“ sauber festlegen reduziert Reibung in Projekten und Betrieb.",
+      "correct": "alle"
+    },
+    {
+      "text": "„Ich darf die Lösung umsetzen, aber nicht freigeben“ trennt typischerweise Handlungsspielraum von dieser Sache.",
+      "correct": "Vollmacht"
+    }
+  ]
+}

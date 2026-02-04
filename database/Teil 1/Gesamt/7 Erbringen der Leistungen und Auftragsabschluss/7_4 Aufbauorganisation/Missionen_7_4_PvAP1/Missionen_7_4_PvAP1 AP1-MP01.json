@@ -1,0 +1,60 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Aufbauorganisation – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils das passende Organisationsprinzip mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Organisationsform/Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Organisationsform oder einen Begriff zu Vollmachten.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "einliniensystem",
+      "name": "Einliniensystem",
+      "description": "Jede Stelle hat genau einen direkten Vorgesetzten; klare Weisungslinie, eindeutige Zuständigkeiten, weniger Konflikte.",
+      "example": "Ein Admin meldet Probleme immer an seinen Teamleiter; Entscheidungen laufen über eine feste Kette."
+    },
+    {
+      "id": "mehrliniensystem",
+      "name": "Mehrliniensystem",
+      "description": "Eine Stelle kann mehrere Vorgesetzte/Fachstellen haben; fachliche Spezialisierung, aber Risiko widersprüchlicher Anweisungen.",
+      "example": "Ein Entwickler bekommt Vorgaben vom Teamleiter und zusätzlich verbindliche Anweisungen vom Security- und QA-Verantwortlichen."
+    },
+    {
+      "id": "matrixorganisation",
+      "name": "Matrixorganisation",
+      "description": "Kombination aus Linien- und Projektorganisation: Mitarbeitende berichten fachlich/organisatorisch an Linie und zusätzlich an Projektleitung.",
+      "example": "Eine Adminin arbeitet im Betriebsteam (Linie), ist aber für das Rollout-Projekt dem Projektleiter berichtspflichtig."
+    },
+    {
+      "id": "handlungs_und_entscheidungsspielraum",
+      "name": "Handlungs- und Entscheidungsspielräume",
+      "description": "Festgelegter Rahmen, in dem Mitarbeitende selbstständig entscheiden dürfen (z. B. welche Lösungen, welche Priorisierung).",
+      "example": "Der 1st-Level darf Standardsoftware nach Checkliste installieren, muss aber bei Sonderfällen eskalieren."
+    },
+    {
+      "id": "vollmacht",
+      "name": "Vollmacht",
+      "description": "Rechtliche/organisatorische Befugnis, im Namen des Unternehmens zu handeln (z. B. Bestellungen, Verträge, Freigaben).",
+      "example": "Der Teamleiter darf Bestellungen bis 2.000 € freigeben, alles darüber braucht Abteilungsleitung."
+    },
+    {
+      "id": "unterschriftsregelung",
+      "name": "Unterschriftsregelung",
+      "description": "Festlegung, wer Dokumente/Bestellungen/Verträge rechtsverbindlich unterschreiben darf und in welcher Höhe.",
+      "example": "Azubis dürfen keine Hardware bestellen; Admins bestellen bis 500 €, darüber nur Teamleitung."
+    },
+    {
+      "id": "eskalationswege",
+      "name": "Eskalationswege",
+      "description": "Definierte Wege, wie bei Konflikten oder fehlender Entscheidungskompetenz schnell entschieden wird.",
+      "example": "Bei widersprüchlichen Anweisungen in der Matrix wird an Projektleitung + Linienleitung eskaliert, die Priorität festlegen."
+    }
+  ]
+}

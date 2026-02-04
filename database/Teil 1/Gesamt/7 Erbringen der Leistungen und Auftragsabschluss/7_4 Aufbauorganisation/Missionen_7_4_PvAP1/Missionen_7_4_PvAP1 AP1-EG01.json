@@ -1,0 +1,176 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Aufbauorganisation",
+  "topic": "Einliniensystem, Mehrliniensystem, Matrixorganisation sowie Handlungs- und Entscheidungsspielräume/Vollmachten",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "aufbauorg-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Organisationsformen & Begriffe zuordnen",
+      "subtitle": "Ordne die Begriffe den passenden Kategorien zu.",
+      "hintDefault": "Tipp: Einlinie = eine Weisungslinie, Mehrlinie = mehrere fachliche Weisungen, Matrix = zwei Dimensionen (z. B. Funktion + Projekt). Vollmacht/Spielraum = wer darf was entscheiden.",
+      "sortColumns": [
+        { "zone": "einlinie", "label": "Einliniensystem", "hint": "(eine klare Weisungskette)" },
+        { "zone": "mehrlinie", "label": "Mehrliniensystem", "hint": "(mehrere Weisungsgeber möglich)" },
+        { "zone": "matrix", "label": "Matrixorganisation", "hint": "(zwei Berichtslinien: Funktion + Projekt/Produkt)" },
+        { "zone": "vollmachten", "label": "Spielräume & Vollmachten", "hint": "(Entscheidungsrechte, Verantwortung)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Mitarbeiter hat genau eine direkte Führungskraft", "correctZone": "einlinie" },
+        { "id": "s2", "text": "Klare Hierarchie und eindeutige Zuständigkeiten", "correctZone": "einlinie" },
+        { "id": "s3", "text": "Mitarbeiter erhält Weisungen von mehreren Fachvorgesetzten", "correctZone": "mehrlinie" },
+        { "id": "s4", "text": "Spezialisierung durch Fachabteilungen mit direkten Vorgaben", "correctZone": "mehrlinie" },
+        { "id": "s5", "text": "Bericht an Linienvorgesetzten und Projektleiter", "correctZone": "matrix" },
+        { "id": "s6", "text": "Konfliktpotenzial: zwei Prioritäten (Linie vs. Projekt)", "correctZone": "matrix" },
+        { "id": "s7", "text": "Entscheidungsspielraum: bis Betrag X selbst entscheiden", "correctZone": "vollmachten" },
+        { "id": "s8", "text": "Vollmacht: darf Verträge im Namen des Unternehmens unterschreiben", "correctZone": "vollmachten" },
+        { "id": "s9", "text": "Handlungsspielraum: wie Aufgaben erledigt werden, innerhalb von Regeln", "correctZone": "vollmachten" },
+        { "id": "s10", "text": "Verantwortung folgt der Entscheidung (wer entscheidet, trägt Verantwortung)", "correctZone": "vollmachten" }
+      ]
+    },
+    {
+      "id": "aufbauorg-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Aufbauorganisation",
+      "subtitle": "Teste dein Wissen zu Linien/Matrix und Vollmachten.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist das Kernelement des Einliniensystems?",
+          "options": [
+            { "value": "a", "text": "Mehrere Weisungsgeber gleichzeitig" },
+            { "value": "b", "text": "Genau eine Weisungslinie pro Mitarbeiter" },
+            { "value": "c", "text": "Keine Hierarchien" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist ein typisches Risiko in der Matrixorganisation?",
+          "options": [
+            { "value": "a", "text": "Doppelte Ziele/Prioritäten und Konflikte zwischen Führungslinien" },
+            { "value": "b", "text": "Keine Spezialisierung möglich" },
+            { "value": "c", "text": "Es gibt keine Projekte" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was beschreibt „Vollmacht“ am besten?",
+          "options": [
+            { "value": "a", "text": "Nur Wissen über Prozesse" },
+            { "value": "b", "text": "Formales Recht, Entscheidungen/Handlungen verbindlich zu treffen" },
+            { "value": "c", "text": "Nur Zugriff auf ein Ticketsystem" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Aussage passt zum Mehrliniensystem?",
+          "options": [
+            { "value": "a", "text": "Weisungen können aus mehreren Fachrichtungen kommen" },
+            { "value": "b", "text": "Es gibt immer nur einen Chef pro Thema" },
+            { "value": "c", "text": "Weisungen sind grundsätzlich verboten" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "aufbauorg-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Organisationsform auswählen & Spielräume festlegen",
+      "subtitle": "Bringe die Schritte zur Gestaltung einer Aufbauorganisation in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Aufgaben/Struktur klären, dann Organisationsform wählen, dann Entscheidungsrechte sauber regeln und kommunizieren.",
+      "rows": [
+        {
+          "key": "aufgaben",
+          "label": "Aufgaben und Verantwortungsbereiche definieren (Abteilungen/Teams/Projekte)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "formwahl",
+          "label": "Organisationsform wählen (Einlinie/Mehrlinie/Matrix)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "wege",
+          "label": "Weisungs- und Kommunikationswege festlegen (wer berichtet wem?)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "vollmachten",
+          "label": "Handlungs- und Entscheidungsspielräume/Vollmachten definieren (z. B. Budgetgrenzen)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Vollmachten dokumentieren (Organigramm, Rollenbeschreibungen, Unterschriftsregelung)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "kommunikation",
+          "label": "Kommunizieren & leben (Einweisung, Konfliktregeln, Eskalationsweg)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

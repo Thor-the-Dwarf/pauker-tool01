@@ -1,0 +1,225 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Vertragsarten, -bestandteile und -störungen-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "kaufvertrag",
+      "name": "Kaufvertrag",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": true,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "lizenzvertrag",
+      "name": "Lizenzvertrag",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "servicevertrag_sla",
+      "name": "Servicevertrag / SLA",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "mietvertrag_leasing",
+      "name": "Mietvertrag / Leasing",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": true,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "vertragsbestandteile",
+      "name": "Vertragsbestandteile (z. B. Leistungsbeschreibung, Termine, Entgelte, Lasten-/Pflichtenheft, Konventionalstrafen)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "verzug",
+      "name": "Verzug",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um den klassischen Kauf einer Sache/Leistung gegen Zahlung (Eigentumsübergang, Lieferung, Preis)?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um Nutzungsrechte an Software/Content (Lizenzbedingungen, Umfang, Laufzeit, Compliance)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um laufende Services mit klaren Leistungskennzahlen (SLA: Verfügbarkeit, Reaktionszeit, Supportzeiten)?",
+      "attributeKey": "mixed_liability"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Nutzung statt Kauf (Miete/Leasing: monatlich, Laufzeit, Rückgabe, Eigentümer bleibt Anbieter)?",
+      "attributeKey": "capital_market_access"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, was in einem Vertrag alles festgelegt wird (Leistungsbeschreibung, Termine, Entgelte, Lasten-/Pflichtenheft, Strafen)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es darum, dass Fristen nicht eingehalten werden (Verzug) und daraus Rechte/Ansprüche entstehen?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Sind typischerweise mehrere Parteien involviert (Kunde, Anbieter, ggf. Hersteller/Reseller/Servicepartner)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist der Formal- und Prüfaufwand hoch (Vertragsprüfung, Anhänge, Nachweise, Eskalationsregeln)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Sind Rollen/Verantwortlichkeiten getrennt (Auftraggeber vs. Auftragnehmer, Service Owner, Ansprechpartner, Support)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Wird vieles zentral festgelegt (Standardverträge, AGB, zentrale Einkaufs-/Legal-Freigabe)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wirkt das nach außen professionell (SLA, saubere Vertragsanlagen, klare Leistungsbeschreibung)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist das besonders relevant bei großen Projekten/Skalierung (viele Verträge, viele Services, viele Lizenzen)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist das Thema stark risikobehaftet (Haftung, Vertragsstrafen, Lizenzverstöße, Schadensersatz, Ausfallkosten)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Geht es um wirtschaftliche Attraktivität/Finanzierungslogik (Leasing statt Kauf, OPEX/CAPEX, planbare Kosten)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Spielt Mitwirkung/Abstimmung vieler Beteiligter eine Rolle (Fachbereich, IT, Einkauf, Legal, Service-Team)?",
+      "attributeKey": "democratic_principle"
+    }
+  ]
+}

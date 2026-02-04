@@ -1,0 +1,96 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Zielsetzungen des Unternehmens",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Unternehmenszielen zu starten.",
+  "sublineText": "Wähle die passende Zielart zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "ökologisches Ziel",
+    "ökonomisches Ziel",
+    "soziales Ziel",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Reduktion von CO₂-Emissionen durch weniger Dienstreisen und mehr Videokonferenzen.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Senkung des Stromverbrauchs im Rechenzentrum durch effizientere Hardware und Virtualisierung.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Einführung eines Recycling- und Rücknahmekonzepts für Altgeräte und Toner.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Erhöhung der Gewinnmarge von 12% auf 18% durch bessere Kalkulation und geringere Kosten.",
+      "correct": "ökonomisches Ziel"
+    },
+    {
+      "text": "Steigerung des Umsatzes durch neue Serviceverträge und planbare wiederkehrende Einnahmen.",
+      "correct": "ökonomisches Ziel"
+    },
+    {
+      "text": "Optimierung der Auslastung, um gleiche Leistung mit weniger Ressourcenstunden zu erbringen.",
+      "correct": "ökonomisches Ziel"
+    },
+    {
+      "text": "Verbesserung der Mitarbeiterzufriedenheit durch flexible Arbeitszeiten und klare Einarbeitung.",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Reduzierung der Fluktuation durch Weiterbildung, Entwicklungspfade und faire Führung.",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Erhöhung der Arbeitssicherheit und Gesundheitsprävention (Ergonomie, Pausenregeln, Unterweisungen).",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Einführung von Homeoffice-Regeln, um Familie und Beruf besser vereinbar zu machen.",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Umstellung auf Ökostrom für Standorte, um den ökologischen Fußabdruck zu senken.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Ziel: „Mindestens 20% Marge pro Projekt“ ist ein Beispiel für diese Zielart.",
+      "correct": "ökonomisches Ziel"
+    },
+    {
+      "text": "Ziel: „Gleichberechtigte Teilhabe und respektvolle Unternehmenskultur“ ist ein Beispiel für diese Zielart.",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Ziel: „Weniger Abfall, weniger Ressourcenverbrauch“ ist ein Beispiel für diese Zielart.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Kombination aus messbaren Kennzahlen (z. B. Marge), Umweltmaßnahmen und Mitarbeiter-Themen kann in einem Unternehmen gleichzeitig verfolgt werden.",
+      "correct": "alle"
+    },
+    {
+      "text": "Erhöhung der Kundenzufriedenheit durch besseren Support kann je nach Sichtweise wirtschaftliche UND soziale Effekte haben.",
+      "correct": "alle"
+    },
+    {
+      "text": "Wenn ein Unternehmen bewusst auf billige, aber umweltschädliche Entsorgung verzichtet, hat das primär diesen Ziel-Fokus.",
+      "correct": "ökologisches Ziel"
+    },
+    {
+      "text": "Wenn ein Unternehmen Löhne drückt, um kurzfristig die Marge zu erhöhen, ist das primär diese Zielart (auch wenn es soziale Nebenwirkungen hat).",
+      "correct": "ökonomisches Ziel"
+    },
+    {
+      "text": "Wenn ein Unternehmen Ausbildungsplätze schafft und Mentoring etabliert, ist das primär diese Zielart.",
+      "correct": "soziales Ziel"
+    },
+    {
+      "text": "Wenn ein Unternehmen Projekte nur annimmt, wenn sie sich rechnen, ist das primär diese Zielart.",
+      "correct": "ökonomisches Ziel"
+    }
+  ]
+}

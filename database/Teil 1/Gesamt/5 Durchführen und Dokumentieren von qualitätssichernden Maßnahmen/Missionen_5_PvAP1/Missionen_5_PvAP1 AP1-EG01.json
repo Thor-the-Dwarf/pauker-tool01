@@ -1,0 +1,175 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Kriterien der Softwarequalität",
+  "topic": "Funktionalität, Zuverlässigkeit, Benutzbarkeit, Effizienz, Änderbarkeit, Übertragbarkeit",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "softwarequalitaet-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Qualitätskriterien zuordnen",
+      "subtitle": "Ordne jede Karte dem passenden Qualitätskriterium zu.",
+      "hintDefault": "Tipp: Frage dich: Geht’s um *kann es das?* (Funktion), *läuft es stabil?* (Zuverlässigkeit), *kommt man klar?* (Benutzbarkeit), *wie schnell/ressourcenschonend?* (Effizienz), *wie leicht änderbar?* (Änderbarkeit), *wie leicht übertragbar?* (Übertragbarkeit).",
+      "sortColumns": [
+        { "zone": "funktion", "label": "Funktionalität", "hint": "(Features, Korrektheit)" },
+        { "zone": "zuver", "label": "Zuverlässigkeit", "hint": "(stabil, verfügbar, fehlertolerant)" },
+        { "zone": "usability", "label": "Benutzbarkeit", "hint": "(verständlich, bedienbar)" },
+        { "zone": "effizienz", "label": "Effizienz", "hint": "(Performance, Ressourcen)" },
+        { "zone": "change", "label": "Änderbarkeit", "hint": "(Wartung, Erweiterung)" },
+        { "zone": "port", "label": "Übertragbarkeit", "hint": "(andere Systeme/Umgebungen)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Die Software erfüllt die fachlichen Anforderungen korrekt (z. B. Rabatte stimmen).", "correctZone": "funktion" },
+        { "id": "s2", "text": "Alle notwendigen Features sind vorhanden und sinnvoll kombiniert (z. B. Export + Filter).", "correctZone": "funktion" },
+
+        { "id": "s3", "text": "System läuft 24/7 ohne häufige Abstürze und hat geringe Ausfallzeiten.", "correctZone": "zuver" },
+        { "id": "s4", "text": "Fehler werden abgefangen (z. B. Retry/Timeouts), statt dass alles sofort crasht.", "correctZone": "zuver" },
+
+        { "id": "s5", "text": "UI ist verständlich: klare Begriffe, gute Fehlermeldungen, konsistente Bedienung.", "correctZone": "usability" },
+        { "id": "s6", "text": "Barrierearm: Tastaturbedienung, ausreichender Kontrast, sinnvolle Fokusreihenfolge.", "correctZone": "usability" },
+
+        { "id": "s7", "text": "Antwortzeiten sind niedrig, auch unter Last; CPU/RAM werden nicht unnötig verbraten.", "correctZone": "effizienz" },
+        { "id": "s8", "text": "Datenbankabfragen sind optimiert (Indexe, keine unnötigen Vollscans).", "correctZone": "effizienz" },
+
+        { "id": "s9", "text": "Neue Features können mit wenig Risiko ergänzt werden (modularer Code, klare Schnittstellen).", "correctZone": "change" },
+        { "id": "s10", "text": "Bugs sind schnell zu finden (Tests, Logging, verständlicher Code).", "correctZone": "change" },
+
+        { "id": "s11", "text": "Software läuft auch auf anderer Plattform/Umgebung (z. B. Windows ↔ Linux) mit wenig Aufwand.", "correctZone": "port" },
+        { "id": "s12", "text": "Deployment in neue Umgebung ist leicht (wenig hardcodierte Pfade, saubere Konfiguration).", "correctZone": "port" }
+      ]
+    },
+    {
+      "id": "quiz-softwarequalitaet",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Softwarequalität",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: Achte auf das Signalwort: korrekt/stabil/bedienbar/schnell/leicht ändern/leicht portieren.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage passt am besten zu „Zuverlässigkeit“?",
+          "options": [
+            { "value": "a", "text": "Die Software hat alle Features, die im Pflichtenheft stehen." },
+            { "value": "b", "text": "Die Software läuft stabil, hat wenig Ausfälle und fängt Fehler ab." },
+            { "value": "c", "text": "Die Software lässt sich leicht auf ein anderes OS portieren." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. „Änderbarkeit“ bedeutet am ehesten…",
+          "options": [
+            { "value": "a", "text": "Neue Anforderungen lassen sich mit geringem Aufwand und Risiko umsetzen." },
+            { "value": "b", "text": "Die UI ist besonders schön gestaltet." },
+            { "value": "c", "text": "Die Software ist extrem schnell." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Eine gute „Übertragbarkeit“ erkennt man typischerweise daran, dass…",
+          "options": [
+            { "value": "a", "text": "die Software nur auf einem Gerät aktiviert werden kann." },
+            { "value": "b", "text": "das System viele Logs schreibt." },
+            { "value": "c", "text": "der Betrieb in einer anderen Umgebung mit wenig Anpassung möglich ist." }
+          ],
+          "correct": "c"
+        }
+      ]
+    },
+    {
+      "id": "qualitaet-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Qualitätscheck in sinnvoller Reihenfolge",
+      "subtitle": "Bringe die Kriterien in eine sinnvolle Prüfreihenfolge, um Software schnell bewerten zu können.",
+      "hintDefault": "Hinweis: Erst muss es korrekt funktionieren, dann stabil laufen, dann gut nutzbar sein, dann performant, dann wartbar, dann portierbar.",
+      "rows": [
+        {
+          "key": "funktion",
+          "label": "Funktionalität (korrekt, vollständig, passend)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "zuver",
+          "label": "Zuverlässigkeit (stabil, verfügbar, fehlertolerant)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "usability",
+          "label": "Benutzbarkeit (verständlich, bedienbar, barrierearm)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "effizienz",
+          "label": "Effizienz (Performance, Ressourcenverbrauch, Skalierung)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "change",
+          "label": "Änderbarkeit (Tests, Struktur, Wartbarkeit, geringe Kopplung)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "port",
+          "label": "Übertragbarkeit (Plattformwechsel, Deployment, Konfiguration)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

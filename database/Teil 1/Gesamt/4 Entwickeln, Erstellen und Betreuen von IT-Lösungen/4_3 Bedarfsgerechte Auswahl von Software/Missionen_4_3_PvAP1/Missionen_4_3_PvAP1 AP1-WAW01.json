@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Bedarfsgerechte Auswahl von Software",
+  "description": "Schritt 1: Passende Software-Entscheidung wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen braucht schnell eine Lösung für Zeiterfassung und Urlaubsverwaltung. Prozesse sind üblich, keine besonderen Sonderfälle. Budget ist begrenzt und die Lösung soll schnell produktiv gehen.",
+      "tags": ["Standardsoftware", "Anwendungssoftware", "Time-to-Value"],
+      "options": [
+        {
+          "id": "standardsoftware",
+          "label": "Standardsoftware",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schneller einführbar, weil Funktionen und Updates bereits vorhanden sind.", "correct": true },
+            { "id": "w2", "text": "Geringeres Projektrisiko als komplette Neuentwicklung.", "correct": true },
+            { "id": "w3", "text": "Ist immer perfekt passend, ohne Konfiguration oder Anpassung.", "correct": false },
+            { "id": "w4", "text": "Typisch geeignet, wenn Prozesse weitgehend „Standard“ sind.", "correct": true }
+          ]
+        },
+        {
+          "id": "individualsoftware",
+          "label": "Individualsoftware",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Passt gut bei sehr speziellen Prozessen oder klarer Differenzierung.", "correct": true },
+            { "id": "w2", "text": "Braucht meist mehr Zeit, Budget und laufende Pflege.", "correct": true },
+            { "id": "w3", "text": "Ist die beste Wahl, wenn es schnell gehen muss und Budget knapp ist.", "correct": false },
+            { "id": "w4", "text": "Erfordert eigene Verantwortung für Wartung, Bugfixes und Weiterentwicklung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn Prozesse standardnah sind und es schnell/ günstig sein soll: Standardsoftware. Individualsoftware lohnt sich bei Spezialfällen oder echtem Wettbewerbsvorteil."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Betrieb hat sehr spezielle Abläufe in der Produktion. Die vorhandene Standardlösung lässt sich nur mit teuren Workarounds nutzen und würde ständig gegen den Prozess arbeiten.",
+      "tags": ["Individualsoftware", "Prozessfit", "Sonderfälle"],
+      "options": [
+        {
+          "id": "individualsoftware",
+          "label": "Individualsoftware",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sinnvoll, wenn Prozesse einzigartig sind und Standardsoftware nicht gut passt.", "correct": true },
+            { "id": "w2", "text": "Kann Workarounds reduzieren und die Prozessqualität verbessern.", "correct": true },
+            { "id": "w3", "text": "Ist immer billiger als Standardsoftware, weil keine Lizenzen anfallen.", "correct": false },
+            { "id": "w4", "text": "Erfordert klare Anforderungen, Tests und langfristige Pflege.", "correct": true }
+          ]
+        },
+        {
+          "id": "standardsoftware",
+          "label": "Standardsoftware",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann gut sein, wenn sich Prozesse anpassen lassen oder Konfiguration reicht.", "correct": true },
+            { "id": "w2", "text": "Wenn teure Workarounds nötig sind, kann der Fit schlecht sein.", "correct": true },
+            { "id": "w3", "text": "Passt immer, egal wie speziell der Prozess ist.", "correct": false },
+            { "id": "w4", "text": "Reduziert automatisch Integrationsaufwand mit anderen Systemen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Wenn Standardsoftware dauerhaft gegen den Prozess arbeitet: Individualsoftware (oder Prozessänderung). Sonst stapelst du Workarounds und Frust."
+    },
+    {
+      "id": "c03",
+      "profile": "Du sollst eine Lösung für Arztpraxen auswählen. Es gibt viele Regeln, typische Schnittstellen (z. B. Abrechnung, Terminplanung) und bewährte Standardprozesse in der Branche.",
+      "tags": ["Branchensoftware", "Standardsoftware", "Compliance"],
+      "options": [
+        {
+          "id": "branchensoftware",
+          "label": "Branchensoftware",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bringt typische Funktionen der Branche mit (Workflows, Masken, Begriffe).", "correct": true },
+            { "id": "w2", "text": "Schnittstellen/Regeln sind oft bereits berücksichtigt.", "correct": true },
+            { "id": "w3", "text": "Ist generell schlechter als Universal-Software, weil sie spezialisiert ist.", "correct": false },
+            { "id": "w4", "text": "Reduziert Einführungsaufwand, weil Abläufe „passen“ und erprobt sind.", "correct": true }
+          ]
+        },
+        {
+          "id": "allgemeine_app",
+          "label": "Allgemeine Anwendungssoftware (universell)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann reichen, wenn Anforderungen sehr generisch sind (z. B. Office).", "correct": true },
+            { "id": "w2", "text": "Für branchentypische Regeln/Workflows fehlen oft zentrale Funktionen.", "correct": true },
+            { "id": "w3", "text": "Enthält automatisch alle branchenspezifischen Vorgaben und Schnittstellen.", "correct": false },
+            { "id": "w4", "text": "Kann mehr Anpassung/Workarounds bedeuten, wenn Branchenbedarf speziell ist.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei klaren Branchen-Standards und typischen Schnittstellen: Branchensoftware. Universelle Tools passen nur bei wirklich generischen Anforderungen."
+    },
+    {
+      "id": "c04",
+      "profile": "Du musst entscheiden: Open Source oder proprietär. Wichtig sind Support/Haftung, Update-Strategie, Budget und rechtliche/vertragliche Anforderungen.",
+      "tags": ["Open Source", "Proprietär", "Lizenz", "Betrieb"],
+      "options": [
+        {
+          "id": "open_source",
+          "label": "Open Source Software",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Quellcode ist einsehbar; Anpassungen und Audits sind leichter möglich.", "correct": true },
+            { "id": "w2", "text": "Lizenzmodelle können Kosten senken, aber Betrieb/Support muss geklärt sein.", "correct": true },
+            { "id": "w3", "text": "Open Source bedeutet automatisch: kein Wartungsaufwand und immer Premium-Support.", "correct": false },
+            { "id": "w4", "text": "Kann Vendor Lock-in reduzieren, wenn Austauschbarkeit gegeben ist.", "correct": true }
+          ]
+        },
+        {
+          "id": "proprietaer",
+          "label": "Proprietäre Software",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Support, Garantien und klare Zuständigkeiten sind oft vertraglich geregelt.", "correct": true },
+            { "id": "w2", "text": "Kann Vendor Lock-in erhöhen, je nach Datenformat/API-Verfügbarkeit.", "correct": true },
+            { "id": "w3", "text": "Ist immer günstiger als Open Source.", "correct": false },
+            { "id": "w4", "text": "Quellcode ist meist nicht offen; Anpassungen sind eingeschränkter.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Open Source: Flexibilität/Transparenz, aber Support/Betrieb klären. Proprietär: oft klarer Support/Verträge, aber potenziell mehr Lock-in."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Team entwickelt Software. Es braucht Code-Vervollständigung, Debugging, Git-Integration und Build/Run-Configs. Das Tool soll die Produktivität stark erhöhen.",
+      "tags": ["IDE", "Entwicklung", "Tooling"],
+      "options": [
+        {
+          "id": "ide",
+          "label": "Integrierte Entwicklungsumgebung (IDE)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bündelt Editor, Debugger, Build/Run und Projektverwaltung in einem Tool.", "correct": true },
+            { "id": "w2", "text": "Erhöht Produktivität durch Refactoring, Navigation und Code-Analyse.", "correct": true },
+            { "id": "w3", "text": "Ist ein Betriebssystem, das auf dem PC installiert wird.", "correct": false },
+            { "id": "w4", "text": "Git-Integration und Debugging sind typische Kernfeatures.", "correct": true }
+          ]
+        },
+        {
+          "id": "betriebssystem",
+          "label": "Betriebssystem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Stellt Basisdienste bereit (Prozesse, Speicher, Treiber, Rechte).", "correct": true },
+            { "id": "w2", "text": "Ist nicht das Entwicklungswerkzeug, sondern die Plattform darunter.", "correct": true },
+            { "id": "w3", "text": "Enthält automatisch alle IDE-Funktionen wie Refactoring und Debugger.", "correct": false },
+            { "id": "w4", "text": "OS-Wahl kann Tooling beeinflussen, ersetzt aber keine IDE.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für Entwicklerproduktivität: IDE. Das Betriebssystem ist Grundlage, aber nicht das Entwicklungswerkzeug."
+    },
+    {
+      "id": "c06",
+      "profile": "Eine neue Software soll in eine bestehende Landschaft passen. Es gibt schon Benutzerverwaltung, Schnittstellen zu anderen Systemen und klare Plattformvorgaben. Du musst entscheiden, ob die neue Software überhaupt sinnvoll integrierbar ist.",
+      "tags": ["Kompatibilität", "Schnittstellen", "Anpassbarkeit", "Integration"],
+      "options": [
+        {
+          "id": "schnittstellen_kompat",
+          "label": "Schnittstellen & Kompatibilität prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "APIs/Import-Export/Standards entscheiden, ob Integration realistisch ist.", "correct": true },
+            { "id": "w2", "text": "Kompatibilität umfasst auch Plattformen, Versionen, Auth (z. B. SSO) und Datenformate.", "correct": true },
+            { "id": "w3", "text": "Wenn die Software gut aussieht, sind Schnittstellen unwichtig.", "correct": false },
+            { "id": "w4", "text": "Fehlende Schnittstellen führen oft zu manuellen Workarounds und Folgekosten.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_funktionen",
+          "label": "Nur Funktionsumfang vergleichen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Features sind wichtig, aber ohne Integration kann das Produkt trotzdem scheitern.", "correct": true },
+            { "id": "w2", "text": "Ignoriert Kompatibilität, SSO und Datenflüsse – das wird später teuer.", "correct": true },
+            { "id": "w3", "text": "Reicht immer aus, weil Integration automatisch funktioniert.", "correct": false },
+            { "id": "w4", "text": "Kann als erster Filter dienen, ersetzt aber keine Integrationsprüfung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bedarfsgerechte Auswahl heißt: nicht nur Features, sondern Schnittstellen/Kompatibilität/Anpassbarkeit prüfen – sonst kaufst du Insellösungen."
+    }
+  ]
+}

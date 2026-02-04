@@ -1,0 +1,253 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Dateiformate (AP1): Text vs Binär, Encoding, CSV/JSON/XML",
+  "description": "Schritt 1: passendes Format/Konzept bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Du sollst Daten zwischen zwei Systemen austauschen. Menschen sollen die Datei notfalls im Editor lesen und Fehler schnell sehen können. Welcher Format-Typ passt am besten?",
+      "tags": ["Schnittstelle", "Textformat", "Lesbarkeit"],
+      "options": [
+        {
+          "id": "textformate",
+          "label": "Textformate (z. B. TXT, CSV, JSON, XML)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sind mit Editor lesbar und dadurch gut debugbar.", "correct": true },
+            { "id": "w2", "text": "Sind oft gut für Schnittstellen/Datenaustausch geeignet.", "correct": true },
+            { "id": "w3", "text": "Sind immer kompakter als Binärformate.", "correct": false },
+            { "id": "w4", "text": "Brauchen trotzdem klare Regeln (Encoding, Struktur), sonst entstehen Fehler.", "correct": true }
+          ]
+        },
+        {
+          "id": "binaerformate",
+          "label": "Binärformate (z. B. DOCX, XLSX, PDF, JPG/PNG, MP4)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sind nicht sinnvoll im Editor lesbar (komplex/komprimiert/strukturreich).", "correct": true },
+            { "id": "w2", "text": "Sind oft kompakt und für bestimmte Medien/Office-Dokumente optimiert.", "correct": true },
+            { "id": "w3", "text": "Sind ideal, wenn Menschen den Inhalt direkt im Texteditor prüfen sollen.", "correct": false },
+            { "id": "w4", "text": "Für Schnittstellen nutzt man sie oft nur mit spezialisierter Parser-/Viewer-Software.", "correct": true }
+          ]
+        },
+        {
+          "id": "pdf_als_schnittstelle",
+          "label": "PDF als Datenschnittstelle",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDF ist primär ein Layout-/Anzeigeformat, kein ideales Austauschformat für strukturierte Daten.", "correct": true },
+            { "id": "w2", "text": "PDF ist im Editor direkt sauber lesbar und strukturiert wie JSON.", "correct": false },
+            { "id": "w3", "text": "Maschinelles Auslesen ist möglich, aber oft fehleranfälliger als bei JSON/CSV.", "correct": true },
+            { "id": "w4", "text": "Für Datenintegration ist ein echtes Datenformat meist besser.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Textformate: Wenn Lesbarkeit/Debugging und Schnittstellen im Fokus sind, nimm TXT/CSV/JSON/XML."
+    },
+    {
+      "id": "v02",
+      "profile": "In einer CSV-Datei sind Umlaute kaputt (z. B. „MÃ¼ller“ statt „Müller“). In der Aufgabe sollst du den typischen Grund nennen.",
+      "tags": ["Encoding", "UTF-8", "CSV"],
+      "options": [
+        {
+          "id": "encoding_falsch",
+          "label": "Falsches Encoding (z. B. UTF-8 vs. anderes)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn Sender/Empfänger unterschiedliche Zeichenkodierung annehmen, werden Zeichen falsch interpretiert.", "correct": true },
+            { "id": "w2", "text": "UTF-8 ist ein häufig erwartetes Encoding für Schnittstellen/Textdateien.", "correct": true },
+            { "id": "w3", "text": "Encoding betrifft nur Binärdateien, nicht Textdateien.", "correct": false },
+            { "id": "w4", "text": "Typischer Prüfpunkt: „Datei ist Text, aber falsch decodiert“.", "correct": true }
+          ]
+        },
+        {
+          "id": "trennzeichen_falsch",
+          "label": "Falsches Trennzeichen in CSV",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Falsches Trennzeichen führt zu falsch gesplitteten Spalten, nicht zu kaputten Umlauten.", "correct": true },
+            { "id": "w2", "text": "CSV nutzt immer Komma; Semikolon ist grundsätzlich ungültig.", "correct": false },
+            { "id": "w3", "text": "Trennzeichen-Probleme zeigen sich als Spaltenchaos, nicht als Zeichensalat.", "correct": true },
+            { "id": "w4", "text": "Delimiter ist wichtig, aber nicht die Ursache für „MÃ¼ller“.", "correct": true }
+          ]
+        },
+        {
+          "id": "json_schema_fehlt",
+          "label": "Fehlendes Schema/Validierung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schema/Validierung betrifft Struktur/Datentypen, nicht die Zeichen-Decodierung.", "correct": true },
+            { "id": "w2", "text": "Ohne Schema werden Umlaute automatisch zerstört.", "correct": false },
+            { "id": "w3", "text": "Validierung hilft gegen fehlende Felder/Typfehler, nicht gegen Encoding-Mismatch.", "correct": true },
+            { "id": "w4", "text": "Encoding-Fehler entstehen beim Interpretieren der Bytes als Zeichen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Encoding: Umlaute kaputt = Bytes werden mit falscher Zeichenkodierung interpretiert (oft: nicht UTF-8)."
+    },
+    {
+      "id": "v03",
+      "profile": "Beim Import einer CSV verrutschen Spalten: In Deutschland wird häufig Semikolon genutzt, weil Komma als Dezimaltrenner vorkommt. In der Aufgabe sollst du den Prüfpunkt nennen.",
+      "tags": ["CSV", "Trennzeichen", "Import"],
+      "options": [
+        {
+          "id": "csv_delimiter",
+          "label": "CSV-Trennzeichen korrekt festlegen (Komma/Semikolon/Tab)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "CSV ist nur „werte getrennt“ – das Trennzeichen muss klar sein.", "correct": true },
+            { "id": "w2", "text": "Falsches Trennzeichen führt zu zu vielen/zu wenigen Spalten beim Split.", "correct": true },
+            { "id": "w3", "text": "CSV hat weltweit immer nur Komma als Trennzeichen.", "correct": false },
+            { "id": "w4", "text": "Prüfpunkt: Import-Einstellungen (Delimiter, Quote, Encoding) müssen zusammenpassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "utf8_only",
+          "label": "Nur UTF-8 einstellen, dann ist CSV-Import immer korrekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "UTF-8 löst Zeichensatzprobleme, aber nicht Spalten-Trennprobleme.", "correct": true },
+            { "id": "w2", "text": "Delimiter und Quote-Regeln bleiben entscheidend.", "correct": true },
+            { "id": "w3", "text": "Mit UTF-8 werden Komma und Semikolon automatisch richtig erkannt.", "correct": false },
+            { "id": "w4", "text": "Encoding und Trennzeichen sind zwei getrennte Fehlerklassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "bin_format",
+          "label": "CSV in ein Binärformat umwandeln, dann gibt es keine Spaltenprobleme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Binärformat ändert nicht das Verständnisproblem; du brauchst definierte Struktur/Parser.", "correct": true },
+            { "id": "w2", "text": "CSV ist gerade wegen Einfachheit beliebt, aber braucht klare Konventionen.", "correct": true },
+            { "id": "w3", "text": "Spaltenprobleme entstehen primär durch falsches Trennzeichen/Quoting.", "correct": true },
+            { "id": "w4", "text": "Binärformate sind immer besser für Schnittstellen als Text.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "CSV: Trennzeichen ist der Klassiker. Falsch = Spalten verrutschen (plus Encoding/Quote beachten)."
+    },
+    {
+      "id": "v04",
+      "profile": "Du brauchst strukturierte Daten mit verschachtelten Objekten/Listen (z. B. Bestellung mit Positionen). In der Aufgabe sollst du das passende Textformat wählen.",
+      "tags": ["Struktur", "JSON", "XML"],
+      "options": [
+        {
+          "id": "json",
+          "label": "JSON",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eignet sich gut für strukturierte Daten (Objekte/Listen) in Schnittstellen.", "correct": true },
+            { "id": "w2", "text": "Ist textbasiert und daher gut lesbar/debugbar.", "correct": true },
+            { "id": "w3", "text": "Hat keine Struktur und ist nur für freie Texte geeignet.", "correct": false },
+            { "id": "w4", "text": "Validierung ist möglich (Schema), wenn Regeln/Felder fest sein sollen.", "correct": true }
+          ]
+        },
+        {
+          "id": "csv",
+          "label": "CSV",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist gut für tabellarische Daten (Zeilen/Spalten), aber schlecht für verschachtelte Strukturen.", "correct": true },
+            { "id": "w2", "text": "Verschachtelte Listen lassen sich ohne Tricks nicht sauber abbilden.", "correct": true },
+            { "id": "w3", "text": "Ist ideal für komplexe Objekt-Hierarchien mit Unterlisten.", "correct": false },
+            { "id": "w4", "text": "Delimiter/Quote/Encoding sind typische Stolpersteine beim Austausch.", "correct": true }
+          ]
+        },
+        {
+          "id": "txt",
+          "label": "TXT (freier Text)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hat keine definierte Datenstruktur; Parser-Regeln wären individuell.", "correct": true },
+            { "id": "w2", "text": "Ist gut für Logs/Notizen, aber nicht für standardisierte Datenschnittstellen.", "correct": true },
+            { "id": "w3", "text": "TXT ist automatisch ein validierbares Schema-Format.", "correct": false },
+            { "id": "w4", "text": "Für feste Felder/Listen ist JSON/XML meist besser.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "JSON: Wenn verschachtelte Struktur gebraucht wird, passt JSON (oder XML) deutlich besser als CSV/TXT."
+    },
+    {
+      "id": "v05",
+      "profile": "Du sollst erklären, warum eine Schnittstelle trotz „korrekter“ JSON/XML-Datei abgelehnt wird: Pflichtfeld fehlt, Datentyp falsch, Struktur passt nicht. Welches Konzept ist hier zentral?",
+      "tags": ["Validierung", "Schema", "JSON", "XML"],
+      "options": [
+        {
+          "id": "schema_validation",
+          "label": "Schema/Validierung (JSON Schema / XML Schema)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein Schema definiert, welche Felder/Typen/Strukturen erlaubt oder Pflicht sind.", "correct": true },
+            { "id": "w2", "text": "Validierung prüft die Datei gegen diese Regeln (z. B. Pflichtfelder, Datentypen).", "correct": true },
+            { "id": "w3", "text": "Schema ist nur für Binärformate relevant, nicht für Textformate.", "correct": false },
+            { "id": "w4", "text": "Ohne Schema kann man Strukturfehler oft erst spät (zur Laufzeit) finden.", "correct": true }
+          ]
+        },
+        {
+          "id": "delimiter",
+          "label": "CSV-Trennzeichen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Delimiter ist ein CSV-Thema und löst keine JSON/XML-Strukturregeln.", "correct": true },
+            { "id": "w2", "text": "Falscher Delimiter führt zu Spaltenverschiebung, nicht zu Schemaverletzung in JSON/XML.", "correct": true },
+            { "id": "w3", "text": "JSON wird über Delimiter validiert.", "correct": false },
+            { "id": "w4", "text": "Bei JSON/XML sind Struktur/Datentypen das zentrale Thema.", "correct": true }
+          ]
+        },
+        {
+          "id": "encoding_only",
+          "label": "Nur Encoding (UTF-8)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Encoding löst Zeichenprobleme, aber nicht fehlende Pflichtfelder/Typregeln.", "correct": true },
+            { "id": "w2", "text": "Eine Datei kann korrekt UTF-8 sein und trotzdem strukturell ungültig.", "correct": true },
+            { "id": "w3", "text": "Wenn Encoding stimmt, ist JSON automatisch validiert.", "correct": false },
+            { "id": "w4", "text": "Validierung ist ein separater Schritt neben dem Dekodieren.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Schema/Validierung: Nicht nur „gut geparst“, sondern „entspricht den Regeln“ (Pflichtfelder/Typen/Struktur)."
+    },
+    {
+      "id": "v06",
+      "profile": "Du sollst einordnen, warum Formate wie DOCX/XLSX/PDF/JPG/MP4 anders behandelt werden als TXT/CSV/JSON/XML. Es geht um „Binär“ vs „Text“ und typische Folgen.",
+      "tags": ["Text vs Binär", "Komplexität", "Struktur"],
+      "options": [
+        {
+          "id": "binaer",
+          "label": "Binärformate",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sind meist kompakt, aber intern komplex/strukturreich und nicht sinnvoll im Editor lesbar.", "correct": true },
+            { "id": "w2", "text": "Benötigen oft spezialisierte Software/Parser (Viewer, Libraries).", "correct": true },
+            { "id": "w3", "text": "Sind automatisch besser für jede Schnittstelle als Textformate.", "correct": false },
+            { "id": "w4", "text": "Fehleranalyse ist oft schwerer als bei Text, weil man nicht einfach „reinschauen“ kann.", "correct": true }
+          ]
+        },
+        {
+          "id": "text",
+          "label": "Textformate",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sind lesbar, debugbar und häufig für Datenaustausch gedacht.", "correct": true },
+            { "id": "w2", "text": "Brauchen klare Regeln: Encoding, Delimiter/Quote, Schema/Validierung.", "correct": true },
+            { "id": "w3", "text": "Sind immer kleiner als Binärformate.", "correct": false },
+            { "id": "w4", "text": "Sind ideal, wenn Maschinen UND Menschen schnell prüfen sollen.", "correct": true }
+          ]
+        },
+        {
+          "id": "pdf_text",
+          "label": "PDF ist ein Textformat wie JSON",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDF ist primär ein Anzeige-/Layoutformat, nicht vergleichbar mit JSON-Struktur.", "correct": true },
+            { "id": "w2", "text": "PDF ist standardmäßig im Editor genauso gut lesbar wie CSV.", "correct": false },
+            { "id": "w3", "text": "Für strukturierte Daten sind JSON/XML/CSV meist geeigneter.", "correct": true },
+            { "id": "w4", "text": "PDF kann Text enthalten, ist aber kein schlichtes „Textdatenformat“ für Schnittstellen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Binärformate: kompakt, aber komplex und nicht „einfach lesbar“. Textformate: lesbar, gut für Schnittstellen, brauchen Encoding/Delimiter/Schema-Regeln."
+    }
+  ]
+}

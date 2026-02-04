@@ -1,0 +1,90 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Backup-Grundprinzipien (AP1) – Ziele • 3-2-1 • Voll/Ink/Diff – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils ein Backup-Grundprinzip, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Konzept, Auswahl, Wiederherstellung).",
+  "columnTitles": {
+    "column1": "Begriff / Prinzip",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle ein Backup-Ziel, eine Regel oder eine Backup-Art.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "backup_ziel",
+      "name": "Backup-Ziel (Wiederherstellen)",
+      "description": "Backups sind dafür da, Daten/ Systeme nach Fehlern, Malware, versehentlichem Löschen oder Hardware-Defekt wiederherzustellen.",
+      "example": "User löscht Projektordner oder Ransomware verschlüsselt Dateien → Restore aus Backup statt Neuaufbau."
+    },
+    {
+      "id": "restore_ist_der_punkt",
+      "name": "Merksatz: Backup ohne Restore ist wertlos",
+      "description": "Entscheidend ist nicht das Sichern, sondern das erfolgreiche Wiederherstellen (Restore-Test).",
+      "example": "Backup läuft „grün“, aber Restore schlägt fehl → im Ernstfall sind die Daten trotzdem weg."
+    },
+    {
+      "id": "dreizwei_eins",
+      "name": "3-2-1-Regel",
+      "description": "3 Kopien der Daten, auf 2 unterschiedlichen Medien, davon 1 Kopie extern/offsite (außerhalb des Standorts).",
+      "example": "Produktivdaten + lokales Backup auf NAS + Offsite-Kopie in anderem Gebäude/Cloud."
+    },
+    {
+      "id": "drei_kopien",
+      "name": "3 Kopien",
+      "description": "Mindestens drei Versionen: Original + zwei Backups, damit ein einzelner Defekt nicht alles vernichtet.",
+      "example": "Platte im Server stirbt und NAS hat auch Fehler → dritte Kopie rettet die Wiederherstellung."
+    },
+    {
+      "id": "zwei_medien",
+      "name": "2 unterschiedliche Medien",
+      "description": "Nicht alles auf demselben Medium/Typ lagern; reduziert Risiko durch Medienfehler oder gleiche Ausfallursache.",
+      "example": "Backup nicht nur auf zweiter Festplatte im gleichen System, sondern z.B. zusätzlich Tape/Cloud."
+    },
+    {
+      "id": "eins_offsite",
+      "name": "1 Kopie extern/offsite",
+      "description": "Mindestens eine Kopie außerhalb des Standorts, damit Brand/Diebstahl/Wasser am Standort nicht alles zerstört.",
+      "example": "Serverraum brennt: nur Offsite-Backup ermöglicht Wiederanlauf."
+    },
+    {
+      "id": "vollbackup",
+      "name": "Vollbackup",
+      "description": "Sichert alle ausgewählten Daten vollständig; Restore ist einfach, benötigt aber mehr Zeit und Speicher.",
+      "example": "Wöchentlich Vollbackup aller Projektdaten auf Backup-Storage."
+    },
+    {
+      "id": "inkrementell",
+      "name": "Inkrementelles Backup",
+      "description": "Sichert nur Änderungen seit dem letzten Backup (egal ob Voll oder inkrementell). Spart Zeit/Speicher, Restore braucht Kette.",
+      "example": "Sonntag Vollbackup, Mo–Sa inkrementell: Restore braucht Vollbackup + alle Inkremente bis zum Zieltag."
+    },
+    {
+      "id": "differentiell",
+      "name": "Differentielles Backup",
+      "description": "Sichert nur Änderungen seit dem letzten Vollbackup. Wird über die Woche größer, Restore braucht Vollbackup + letztes Differential.",
+      "example": "Sonntag Vollbackup, jeden Tag differentiell: Restore am Freitag = Vollbackup + Differential vom Freitag."
+    },
+    {
+      "id": "vergleich_ink_diff",
+      "name": "Inkrementell vs Differentiell (Restore-Aufwand)",
+      "description": "Inkrementell: kleinste Backups, aber viele Schritte beim Restore. Differentiell: größer, aber Restore mit weniger Teilen.",
+      "example": "Bei häufigem Restore ist differentiell oft praktischer; bei knappem Speicher inkrementell."
+    },
+    {
+      "id": "ransomware_schutz",
+      "name": "Schutz gegen Ransomware (Backup-Konzept)",
+      "description": "Backups müssen getrennt/geschützt sein, sonst verschlüsselt Malware auch die Backups (z.B. Offsite/Immutable/Write-protected).",
+      "example": "Ransomware trifft Fileserver: Offsite/immutable Backup bleibt sauber und kann wiederherstellen."
+    },
+    {
+      "id": "ap1_merksatz",
+      "name": "AP1-Merksatz",
+      "description": "Backup = Wiederherstellung nach Unfall/Angriff/Defekt. 3-2-1 ist Standard. Voll/ink/diff sauber unterscheiden (Restore-Kette!).",
+      "example": "Prüfungsantwort: „Wir sichern wöchentlich Vollbackup, täglich inkrementell und halten 1 Kopie offsite.“"
+    }
+  ]
+}

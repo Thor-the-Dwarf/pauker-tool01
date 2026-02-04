@@ -1,0 +1,96 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Grundlagen Datenbanken – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Datenbank-Grundbegriff mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff aus ER-Modell oder SQL-Grundlagen.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "er_modell",
+      "name": "ER-Modell (Entity-Relationship)",
+      "description": "Modelliert Daten als Entitäten mit Attributen und Beziehungen; Grundlage für das Datenbankschema.",
+      "example": "Entitäten „Kunde“ und „Auftrag“ mit Beziehung „Kunde erteilt Auftrag“."
+    },
+    {
+      "id": "entitaet",
+      "name": "Entität",
+      "description": "Objekt/„Ding“ der realen Welt, das gespeichert wird (z. B. Kunde, Ticket, Produkt).",
+      "example": "„Ticket“ ist eine Entität mit Attributen wie status, prio und erstellt_am."
+    },
+    {
+      "id": "attribut",
+      "name": "Attribut",
+      "description": "Eigenschaft einer Entität, die als Spalte/Feld gespeichert wird.",
+      "example": "Beim Kunden: name, email, telefon."
+    },
+    {
+      "id": "beziehung",
+      "name": "Beziehung",
+      "description": "Verknüpfung zwischen Entitäten (z. B. 1:1, 1:n, n:m) und deren Kardinalitäten.",
+      "example": "1:n: Ein Kunde kann viele Aufträge haben, ein Auftrag gehört zu genau einem Kunden."
+    },
+    {
+      "id": "primaerschluessel",
+      "name": "Primärschlüssel (PK)",
+      "description": "Eindeutiger Identifikator eines Datensatzes; darf nicht NULL sein und kommt pro Tabelle nur einmal vor.",
+      "example": "kunden.id identifiziert jeden Kunden eindeutig."
+    },
+    {
+      "id": "fremdschluessel",
+      "name": "Fremdschlüssel (FK)",
+      "description": "Verweis auf einen Primärschlüssel einer anderen (oder derselben) Tabelle, um Beziehungen abzubilden.",
+      "example": "auftrag.kunde_id verweist auf kunde.id."
+    },
+    {
+      "id": "er_einfach",
+      "name": "Einfaches ER-Modell",
+      "description": "Kleines ER-Diagramm mit wenigen Entitäten und klaren Beziehungen, oft ohne Spezialfälle wie n:m-Auflösung.",
+      "example": "„Mitarbeiter“ (id, name) und „Abteilung“ (id, name) mit 1:n: Abteilung hat viele Mitarbeiter."
+    },
+    {
+      "id": "select",
+      "name": "SELECT",
+      "description": "SQL-Anweisung zum Abfragen von Daten aus einer Tabelle (Spalten auswählen, filtern, sortieren, begrenzen).",
+      "example": "SELECT name, status FROM tickets;"
+    },
+    {
+      "id": "from",
+      "name": "FROM",
+      "description": "Teil von SELECT, der die Tabelle angibt, aus der gelesen wird.",
+      "example": "SELECT * FROM kunden;"
+    },
+    {
+      "id": "where",
+      "name": "WHERE",
+      "description": "Filtert Datensätze nach Bedingung (z. B. Gleichheit, Bereich, LIKE, IN).",
+      "example": "SELECT * FROM tickets WHERE status = 'offen';"
+    },
+    {
+      "id": "order_by",
+      "name": "ORDER BY",
+      "description": "Sortiert das Ergebnis nach einer oder mehreren Spalten (ASC/DESC).",
+      "example": "SELECT * FROM tickets ORDER BY erstellt_am DESC;"
+    },
+    {
+      "id": "limit",
+      "name": "LIMIT",
+      "description": "Begrenzt die Anzahl der zurückgegebenen Zeilen (nicht in allen DBMS identisch benannt, aber Grundprinzip gleich).",
+      "example": "SELECT * FROM logs ORDER BY zeit DESC LIMIT 10;"
+    },
+    {
+      "id": "select_eine_tabelle",
+      "name": "SELECT bezogen auf eine Tabelle",
+      "description": "Abfrage ohne JOINs/Subselects: Daten werden ausschließlich aus genau einer Tabelle gelesen.",
+      "example": "SELECT name FROM mitarbeiter WHERE abteilung = 'Support';"
+    }
+  ]
+}

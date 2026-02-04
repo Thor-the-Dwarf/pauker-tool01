@@ -1,0 +1,102 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Konsolenbefehle – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Befehl der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Befehl",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Befehl.",
+    "column2": "Wähle die richtige Bedeutung.",
+    "column3": "Ordne eine typische Anwendung zu."
+  },
+  "sets": [
+    {
+      "id": "dir",
+      "name": "dir",
+      "description": "Listet Dateien und Ordner im aktuellen Verzeichnis (Windows CMD).",
+      "example": "Du prüfst im CMD schnell, welche Dateien im Ordner liegen: dir"
+    },
+    {
+      "id": "ls",
+      "name": "ls",
+      "description": "Listet Dateien und Ordner im aktuellen Verzeichnis (Linux/macOS).",
+      "example": "Du schaust im Terminal, welche Dateien vorhanden sind: ls"
+    },
+    {
+      "id": "mkdir",
+      "name": "mkdir",
+      "description": "Erstellt einen neuen Ordner (Windows/Linux/macOS).",
+      "example": "Du legst einen Projektordner an: mkdir projekt"
+    },
+    {
+      "id": "ipconfig",
+      "name": "ipconfig",
+      "description": "Zeigt IP-Konfiguration an (Windows).",
+      "example": "Du prüfst IP-Adresse und Gateway bei Netzwerkproblemen: ipconfig /all"
+    },
+    {
+      "id": "ifconfig",
+      "name": "ifconfig",
+      "description": "Zeigt/konfiguriert Netzwerkschnittstellen (älter, Unix/Linux/macOS; oft durch ip ersetzt).",
+      "example": "Du schaust, ob ein Interface eine IP hat: ifconfig"
+    },
+    {
+      "id": "alias",
+      "name": "alias",
+      "description": "Legt eine Abkürzung für einen Befehl an oder zeigt Aliase (Unix-Shells).",
+      "example": "Du definierst eine Kurzform für 'ls -la': alias ll='ls -la'"
+    },
+    {
+      "id": "iproute2",
+      "name": "ip (iproute2)",
+      "description": "Moderne Linux-Tools für Netzwerk (Interfaces, Routen, Adressen), Ersatz für ifconfig/route.",
+      "example": "Du prüfst IP-Adressen und Routen: ip a und ip r"
+    },
+    {
+      "id": "arp",
+      "name": "arp",
+      "description": "Zeigt/verwaltet die ARP-Tabelle (Zuordnung IP ↔ MAC) im lokalen Netz.",
+      "example": "Du prüfst, ob das Gateway korrekt aufgelöst wird: arp -a"
+    },
+    {
+      "id": "del",
+      "name": "del",
+      "description": "Löscht Dateien (Windows CMD).",
+      "example": "Du entfernst eine Datei im CMD: del test.txt"
+    },
+    {
+      "id": "cp",
+      "name": "cp",
+      "description": "Kopiert Dateien/Ordner (Linux/macOS).",
+      "example": "Du kopierst eine Datei: cp config.ini config.bak"
+    },
+    {
+      "id": "copy",
+      "name": "copy",
+      "description": "Kopiert Dateien (Windows CMD).",
+      "example": "Du erstellst eine Sicherung: copy config.ini config.bak"
+    },
+    {
+      "id": "chmod",
+      "name": "chmod",
+      "description": "Ändert Dateirechte (Unix/Linux/macOS).",
+      "example": "Du machst ein Skript ausführbar: chmod +x deploy.sh"
+    },
+    {
+      "id": "ping",
+      "name": "ping",
+      "description": "Testet Erreichbarkeit und Latenz zu einem Ziel über ICMP.",
+      "example": "Du prüfst, ob der Server erreichbar ist: ping 8.8.8.8"
+    },
+    {
+      "id": "traceroute",
+      "name": "traceroute (Windows: tracert)",
+      "description": "Zeigt den Netzwerkpfad (Hops) zum Ziel, hilfreich bei Routing-Problemen.",
+      "example": "Du suchst die Stelle, an der Pakete hängen bleiben: traceroute example.com"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Kriterien der Softwarequalität-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "funktionalitaet",
+      "name": "Funktionalität",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "zuverlaessigkeit",
+      "name": "Zuverlässigkeit",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": false,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "benutzbarkeit",
+      "name": "Benutzbarkeit",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": true,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "effizienz",
+      "name": "Effizienz",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": true,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": true,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "aenderbarkeit",
+      "name": "Änderbarkeit",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "uebertragbarkeit",
+      "name": "Übertragbarkeit",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": true,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es darum, ob die Software die geforderten Funktionen vollständig und korrekt erfüllt?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es darum, ob die Software stabil läuft (wenig Ausfälle, sauberes Fehlerverhalten, hohe Verfügbarkeit)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es darum, wie gut Nutzer mit der Software zurechtkommen (verständlich, erlernbar, barrierearm)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es darum, wie schnell/ressourcenschonend die Software arbeitet (CPU/RAM/Netzwerk/Antwortzeiten)?",
+      "attributeKey": "mixed_liability"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, wie leicht die Software geändert/erweitert/gewartet werden kann (lesbar, modular, testbar)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es darum, wie gut die Software auf andere Systeme/Plattformen übertragbar ist (OS, Hardware, Umgebung)?",
+      "attributeKey": "capital_market_access"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Sind dafür häufig formale Kriterien/Checklisten/Standards im Einsatz (Qualitätsmodell, Definition of Done)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird das oft zentral gesteuert (Qualitätsziele, Performance-Budgets, Coding-Standards)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Spielt Zusammenarbeit vieler Rollen eine große Rolle (Dev, Test, UX, Ops) um das Kriterium zu erreichen?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist das Thema besonders wichtig bei großen Systemen/Skalierung (viele Nutzer, hohe Last, viele Releases)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wirkt das nach außen professionell (verlässliches Produkt, gute UX, messbare Performance)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist das Kriterium besonders entscheidend für Business/Entscheider (Kosten/Nutzen, Risiko, Time-to-Market)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist das Kriterium „schnell sichtbar“ (z. B. Feature vorhanden, UI fühlt sich gut an) statt nur intern messbar?",
+      "attributeKey": "simple_foundation"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist das Kriterium stark risikobehaftet, wenn es fehlt (Ausfälle, Sicherheitsprobleme, schlechte Bedienung)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es darum, dass Änderungen/Portierung ohne großen Aufwand möglich bleiben (Wartbarkeit & Übertragbarkeit)?",
+      "attributeKey": "separation_owner_management"
+    }
+  ]
+}

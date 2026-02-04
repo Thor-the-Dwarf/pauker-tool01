@@ -1,0 +1,573 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Datensicherheit (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich einen Begriff gewählt: {SECRET_NAME}.",
+  "legalForms": [
+    {
+      "id": "datensicherheit",
+      "name": "Datensicherheit",
+      "attributes": {
+        "is_security_domain_broad": true,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "datenschutz",
+      "name": "Datenschutz",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": true,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "vertraulichkeit",
+      "name": "Vertraulichkeit (Confidentiality)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": true,
+        "focuses_confidentiality": true,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "integritaet",
+      "name": "Integrität (Integrity)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": true,
+        "focuses_confidentiality": false,
+        "focuses_integrity": true,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "verfuegbarkeit",
+      "name": "Verfügbarkeit (Availability)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": true,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": true,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "bsi",
+      "name": "BSI (Bundesamt für Sicherheit in der Informationstechnik)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": true,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "it_grundschutz",
+      "name": "IT-Grundschutz",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": true,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "schutzbedarfsanalyse",
+      "name": "Schutzbedarfsanalyse",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": true,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "phishing",
+      "name": "Phishing",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": true,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "patch_management",
+      "name": "Patch-Management",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": true,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "mfa",
+      "name": "Multi-Faktor-Authentifizierung (MFA)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": true,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "least_privilege",
+      "name": "Least Privilege (Prinzip der minimalen Rechte)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": true,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "toms",
+      "name": "TOMs (Technische und organisatorische Maßnahmen)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": true,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "backup_3_2_1",
+      "name": "3-2-1-Backup-Regel",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": true,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "rpo",
+      "name": "RPO (Recovery Point Objective)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": true,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "rto",
+      "name": "RTO (Recovery Time Objective)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": true,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "logging_monitoring",
+      "name": "Logging & Monitoring",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": true,
+        "is_incident_response_process": false
+      }
+    },
+    {
+      "id": "incident_response",
+      "name": "Incident Response (Notfallmanagement)",
+      "attributes": {
+        "is_security_domain_broad": false,
+        "is_privacy_legal_focus": false,
+        "is_security_goal": false,
+        "focuses_confidentiality": false,
+        "focuses_integrity": false,
+        "focuses_availability": false,
+        "is_authority_bsi": false,
+        "is_framework_grundschutz": false,
+        "is_risk_analysis_method": false,
+        "is_attack_vector": false,
+        "is_update_hardening_measure": false,
+        "is_authentication_measure": false,
+        "is_access_control_principle": false,
+        "is_dsgvo_art32_measure": false,
+        "is_backup_strategy": false,
+        "is_recovery_metric_data_loss": false,
+        "is_recovery_metric_downtime": false,
+        "is_logging_monitoring": false,
+        "is_incident_response_process": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um den Schutz von Informationen und Systemen insgesamt (breit, nicht nur personenbezogen)?",
+      "attributeKey": "is_security_domain_broad"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es primär um personenbezogene Daten und rechtliche Zulässigkeit?",
+      "attributeKey": "is_privacy_legal_focus"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist es ein konkretes Schutzziel der Informationssicherheit?",
+      "attributeKey": "is_security_goal"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es darum, dass Unbefugte Informationen nicht lesen dürfen?",
+      "attributeKey": "focuses_confidentiality"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, dass Daten korrekt und nicht manipuliert sind?",
+      "attributeKey": "focuses_integrity"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es darum, dass Systeme/Daten rechtzeitig verfügbar sind?",
+      "attributeKey": "focuses_availability"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist es eine deutsche Sicherheitsbehörde, die Standards/Best Practices bereitstellt?",
+      "attributeKey": "is_authority_bsi"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist es ein Maßnahmen-/Baustein-Framework für solide Basisabsicherung?",
+      "attributeKey": "is_framework_grundschutz"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist es eine Methode zur Einstufung von Assets nach Schaden (normal/hoch/sehr hoch) getrennt für C/I/A?",
+      "attributeKey": "is_risk_analysis_method"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist es ein typischer Angriffsweg über Manipulation von Menschen (z. B. E-Mail/Link)?",
+      "attributeKey": "is_attack_vector"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Geht es um Updates/Schließen von Schwachstellen (regelmäßig einspielen)?",
+      "attributeKey": "is_update_hardening_measure"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist es eine Maßnahme zur Anmeldung, bei der mindestens zwei Faktoren genutzt werden?",
+      "attributeKey": "is_authentication_measure"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist es ein Berechtigungsprinzip: so wenig Rechte wie möglich, so viel wie nötig?",
+      "attributeKey": "is_access_control_principle"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist es ein Paket aus technischen UND organisatorischen Maßnahmen als Nachweis der Sicherheit der Verarbeitung (DSGVO-Kontext)?",
+      "attributeKey": "is_dsgvo_art32_measure"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es um eine Backup-Strategie mit Kopien/Medien/Offsite?",
+      "attributeKey": "is_backup_strategy"
+    },
+    {
+      "id": "q16",
+      "hotkey": "16",
+      "text": "Ist es eine Kennzahl für maximal tolerierten Datenverlust (Zeitspanne)?",
+      "attributeKey": "is_recovery_metric_data_loss"
+    },
+    {
+      "id": "q17",
+      "hotkey": "17",
+      "text": "Ist es eine Kennzahl für maximal tolerierte Ausfallzeit (wie schnell wieder online)?",
+      "attributeKey": "is_recovery_metric_downtime"
+    },
+    {
+      "id": "q18",
+      "hotkey": "18",
+      "text": "Geht es um Protokolle, Alarme und Überwachung zur Erkennung und Nachvollziehbarkeit?",
+      "attributeKey": "is_logging_monitoring"
+    },
+    {
+      "id": "q19",
+      "hotkey": "19",
+      "text": "Geht es um das Vorgehen bei Sicherheitsvorfällen (Erkennen, Eindämmen, Beseitigen, Wiederherstellen, Lessons Learned)?",
+      "attributeKey": "is_incident_response_process"
+    }
+  ]
+}

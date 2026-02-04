@@ -1,0 +1,78 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Geschäfts- und Leistungsprozesse – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Prozess-Begriff mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Prozess/Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Prozess-Begriff.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "kundenkommunikation",
+      "name": "Kundenkommunikation",
+      "description": "Geplante und nachvollziehbare Kommunikation mit Kunden über Anforderungen, Änderungen, Termine, Risiken und Ergebnisse.",
+      "example": "Der Kunde erhält nach jedem Sprint ein kurzes Update mit Status, offenen Punkten und nächstem Liefertermin."
+    },
+    {
+      "id": "fehlermanagement",
+      "name": "Fehlermanagement",
+      "description": "Systematisches Erfassen, Priorisieren, Beheben und Nachverfolgen von Fehlern inklusive Ursachenanalyse und Prävention.",
+      "example": "Ein Bug wird als „kritisch“ eingestuft, reproduziert, gefixt, per Code-Review geprüft und als Regressionstest abgesichert."
+    },
+    {
+      "id": "stoerungsmanagement",
+      "name": "Störungsmanagement (Incident Management)",
+      "description": "Schnelle Wiederherstellung des Betriebs bei Störungen; Fokus: Service schnellstmöglich wieder nutzbar machen.",
+      "example": "Nach Ausfall des VPN wird ein Incident eröffnet, Workaround bereitgestellt und der Service innerhalb von 30 Minuten stabilisiert."
+    },
+    {
+      "id": "supportanfragen",
+      "name": "Supportanfragen (Service Requests)",
+      "description": "Bearbeitung standardisierter Nutzeranfragen wie Zugänge, Berechtigungen, Installationen oder Informationen, meist nach klaren Regeln.",
+      "example": "Ein Mitarbeiter beantragt Software X; der Support prüft Berechtigung, installiert und dokumentiert die Umsetzung im Ticket."
+    },
+    {
+      "id": "bearbeitungsstatus",
+      "name": "Bearbeitungsstatus im Ticketsystem",
+      "description": "Transparente Statusführung eines Tickets (z. B. Neu, In Bearbeitung, Wartet auf Kunde, Gelöst, Geschlossen) inklusive Verantwortlichkeiten.",
+      "example": "Ein Ticket wird auf „Wartet auf Kunde“ gesetzt, weil Logs fehlen; nach Upload der Logs geht es zurück auf „In Bearbeitung“."
+    },
+    {
+      "id": "priorisierung",
+      "name": "Priorisierung",
+      "description": "Einordnung von Tickets nach Auswirkung und Dringlichkeit, um Reihenfolge und Reaktionszeiten festzulegen.",
+      "example": "„Drucker für alle ausgefallen“ wird höher priorisiert als „Einzelplatz hat Darstellungsfehler in Excel“."
+    },
+    {
+      "id": "eskalation",
+      "name": "Eskalation",
+      "description": "Gezieltes Hochstufen eines Vorgangs (fachlich oder hierarchisch), wenn SLA/Komplexität/Risiko es erfordert.",
+      "example": "Bei drohendem SLA-Verstoß eskaliert der 1st-Level an den 2nd-Level und informiert den Teamleiter."
+    },
+    {
+      "id": "sla",
+      "name": "SLA (Service Level Agreement)",
+      "description": "Vereinbarte Serviceziele wie Reaktionszeit, Lösungszeit, Verfügbarkeit und Supportzeiten als messbare Vorgaben.",
+      "example": "Im SLA steht: Kritische Incidents werden innerhalb von 1 Stunde angenommen und innerhalb von 4 Stunden gelöst."
+    },
+    {
+      "id": "dokumentation_ticket",
+      "name": "Ticket-Dokumentation",
+      "description": "Nachvollziehbares Festhalten von Symptomen, Maßnahmen, Entscheidungen und Ergebnissen für Wissensaufbau und Auditierbarkeit.",
+      "example": "Im Ticket stehen: Fehlerbild, Log-Auszug, durchgeführte Schritte, finaler Fix und Link zum KB-Artikel."
+    },
+    {
+      "id": "knowledge_base",
+      "name": "Wissensdatenbank (KB)",
+      "description": "Sammlung wiederverwendbarer Lösungen/Anleitungen zur schnelleren Bearbeitung und Entlastung des Supports.",
+      "example": "Nach dem dritten gleichen Fehler wird ein KB-Artikel erstellt, damit der 1st-Level ihn sofort lösen kann."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Grundlagen Datenbanken",
+  "topic": "Einfache ER-Modelle und SELECT-Abfragen auf einer Tabelle",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "db-sort-grundlagen",
+      "type": "sort",
+      "title": "Rätsel 1: ER & SQL richtig einordnen",
+      "subtitle": "Ordne die Begriffe den passenden Grundlagen zu.",
+      "hintDefault": "Tipp: ER-Modell = Struktur/Beziehungen, Tabelle = Attribute/Schlüssel, SELECT = Abfrage/Filter/Sortierung.",
+      "sortColumns": [
+        { "zone": "er", "label": "ER-Modell", "hint": "(Entitäten, Beziehungen, Kardinalitäten)" },
+        { "zone": "tabelle", "label": "Tabelle & Schlüssel", "hint": "(Spalten, PK/FK, Datensätze)" },
+        { "zone": "select", "label": "SELECT (1 Tabelle)", "hint": "(WHERE, ORDER BY, LIMIT)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Entität (z. B. Kunde)", "correctZone": "er" },
+        { "id": "s2", "text": "Beziehung (z. B. bestellt)", "correctZone": "er" },
+        { "id": "s3", "text": "Kardinalität (1:n)", "correctZone": "er" },
+        { "id": "s4", "text": "Attribut (Spalte)", "correctZone": "tabelle" },
+        { "id": "s5", "text": "Datensatz (Zeile)", "correctZone": "tabelle" },
+        { "id": "s6", "text": "Primärschlüssel (PK)", "correctZone": "tabelle" },
+        { "id": "s7", "text": "Fremdschlüssel (FK)", "correctZone": "tabelle" },
+        { "id": "s8", "text": "SELECT * FROM ...", "correctZone": "select" },
+        { "id": "s9", "text": "WHERE (Filtern)", "correctZone": "select" },
+        { "id": "s10", "text": "ORDER BY (Sortieren)", "correctZone": "select" },
+        { "id": "s11", "text": "LIMIT (Begrenzen)", "correctZone": "select" }
+      ]
+    },
+    {
+      "id": "db-quiz-select",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz ER & SELECT",
+      "subtitle": "Teste dein Wissen zu ER-Grundlagen und einfachen Abfragen.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was beschreibt eine Kardinalität im ER-Modell?",
+          "options": [
+            { "value": "a", "text": "Wie viele Datensätze eine Tabelle hat" },
+            { "value": "b", "text": "Wie viele Entitäten zu einer anderen in Beziehung stehen können" },
+            { "value": "c", "text": "Wie viele Spalten ein SELECT hat" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Wofür nutzt man einen Primärschlüssel (PK) typischerweise?",
+          "options": [
+            { "value": "a", "text": "Datensätze eindeutig identifizieren" },
+            { "value": "b", "text": "Textfelder zu formatieren" },
+            { "value": "c", "text": "SQL schneller zu tippen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welcher SQL-Teil filtert Zeilen nach einer Bedingung?",
+          "options": [
+            { "value": "a", "text": "ORDER BY" },
+            { "value": "b", "text": "WHERE" },
+            { "value": "c", "text": "FROM" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Aussage stimmt für SELECT auf *einer* Tabelle?",
+          "options": [
+            { "value": "a", "text": "Du brauchst zwingend JOIN" },
+            { "value": "b", "text": "Du kannst mit WHERE/ORDER BY/LIMIT filtern und sortieren" },
+            { "value": "c", "text": "Du kannst keine Spalten auswählen" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "db-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Von ER-Modell zur ersten Abfrage",
+      "subtitle": "Bringe die Schritte in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst modellieren, dann Tabelle denken, dann SELECT schreiben und verfeinern.",
+      "rows": [
+        {
+          "key": "entitaeten",
+          "label": "Entitäten identifizieren (z. B. Kunde, Auftrag)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "beziehungen",
+          "label": "Beziehungen & Kardinalitäten festlegen (z. B. 1:n)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "attribute",
+          "label": "Attribute festlegen (Spalten wie name, datum, status)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "schluessel",
+          "label": "Schlüssel bestimmen (PK, ggf. FK)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "select",
+          "label": "Erste Abfrage schreiben: SELECT ... FROM tabelle",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "verfeinern",
+          "label": "Abfrage verfeinern: WHERE/ORDER BY/LIMIT",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

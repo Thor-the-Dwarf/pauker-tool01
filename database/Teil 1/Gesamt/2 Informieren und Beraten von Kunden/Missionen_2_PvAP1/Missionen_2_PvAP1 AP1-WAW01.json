@@ -1,0 +1,337 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Marketingaktivitäten",
+  "description": "Schritt 1: Passenden Schwerpunkt wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen muss entscheiden, welche Marketingmaßnahme zuerst umgesetzt wird: Google Ads, Messeauftritt oder Content-Marketing. Es gibt Kriterien wie Kosten, Reichweite, Zielgruppenfit, Aufwand, Messbarkeit und Risiko. Die Entscheidung soll nachvollziehbar dokumentiert werden.",
+      "tags": [
+        "Nutzwertanalyse",
+        "Entscheidung",
+        "Kriterien"
+      ],
+      "options": [
+        {
+          "id": "nutzwertanalyse",
+          "label": "Nutzwertanalyse",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Alternativen werden anhand definierter Kriterien bewertet und vergleichbar gemacht.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Kriterien können gewichtet werden, damit Wichtiges stärker zählt.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Ergebnis ist eine nachvollziehbare Rangfolge statt Bauchgefühl.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Sie bestimmt primär, ob direkter oder indirekter Vertrieb eingesetzt wird.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "vertriebsformen",
+          "label": "Vertriebsformen (direkter / indirekter Vertrieb)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Direkter Vertrieb bedeutet Verkauf ohne Zwischenhändler (z. B. eigener Sales, Webshop).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Indirekter Vertrieb läuft über Partner/Reseller/Plattformen.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Ziel ist das Punktesystem mit Kriterien, Gewichtung und Gesamtscore.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Das Thema hilft, Kanäle zu wählen, ersetzt aber kein Scoring-Modell.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Nutzwertanalyse: Kriterien definieren und gewichten, Alternativen bewerten, Gesamtscore berechnen und daraus eine begründete Reihenfolge ableiten."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Softwarehersteller verkauft an Mittelstandskunden. Variante A: eigener Vertrieb mit Sales-Team und eigener Website. Variante B: Verkauf über IT-Systemhäuser und Reseller, die das Produkt weiterverkaufen und integrieren.",
+      "tags": [
+        "Vertrieb",
+        "Kanäle",
+        "Partner"
+      ],
+      "options": [
+        {
+          "id": "vertriebsformen",
+          "label": "Vertriebsformen (direkter / indirekter Vertrieb)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Direkter Vertrieb: Hersteller verkauft selbst und kontrolliert Preis/Beziehung stärker.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Indirekter Vertrieb: Verkauf über Partner, die Reichweite und lokale Nähe bieten.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Indirekter Vertrieb kann Marge reduzieren, weil Partner mitverdienen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Direkter Vertrieb ist immer günstiger und immer besser skalierbar.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "staerken_schwaechenanalyse",
+          "label": "Stärken- und Schwächenanalyse",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Stärken/Schwächen analysieren interne Faktoren (z. B. Know-how, Budget, Prozesse).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Es geht hier primär um die Wahl zwischen Verkauf ohne oder mit Zwischenhändlern.",
+              "correct": false
+            },
+            {
+              "id": "w3",
+              "text": "Kann helfen zu entscheiden, ob man Partner braucht (z. B. fehlende Sales-Kapazität).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Ist identisch mit einem Punktesystem zur Bewertung von Vertriebsalternativen.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Vertriebsformen: Direkt = Hersteller verkauft selbst; Indirekt = Verkauf über Partner/Reseller (mehr Reichweite, aber weniger Kontrolle/Marge)."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Start-up will seine Marketingstrategie festlegen. Intern gibt es Stärken wie ein sehr gutes Produkt, aber Schwächen wie wenig Budget und keine Marke. Das Team will klar benennen, worauf man bauen kann und was die Strategie einschränkt.",
+      "tags": [
+        "Analyse",
+        "Strategie",
+        "Intern"
+      ],
+      "options": [
+        {
+          "id": "staerken_schwaechenanalyse",
+          "label": "Stärken- und Schwächenanalyse",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Stärken/Schwächen betrachten interne Faktoren (Ressourcen, Kompetenzen, Prozesse).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Schwächen zeigen Engpässe, die Marketingmaßnahmen begrenzen (z. B. Budget, Personal).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Stärken helfen, ein klares Nutzenversprechen zu formulieren.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Es geht dabei primär um die Auswahl zwischen direktem und indirektem Vertrieb.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nutzwertanalyse",
+          "label": "Nutzwertanalyse",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Bewertet Alternativen anhand Kriterien und Gewichtung.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ist primär dafür da, interne Stärken/Schwächen zu sammeln und zu strukturieren.",
+              "correct": false
+            },
+            {
+              "id": "w3",
+              "text": "Kann später helfen, konkrete Marketingoptionen (z. B. Ads vs. Content) zu priorisieren.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Ersetzt die interne Bestandsaufnahme, weil Scores alles erklären.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Stärken- und Schwächenanalyse: Interne Faktoren systematisch benennen (Worauf können wir bauen? Was bremst uns?), um Strategie realistisch auszurichten."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Unternehmen vergleicht zwei Go-to-Market-Varianten: (1) direkter Vertrieb mit eigenem Sales-Team oder (2) indirekter Vertrieb über Systemhäuser. Es bewertet Kriterien wie Reichweite, Kundenbindung, Marge, Implementierungsaufwand, Supportlast und Skalierbarkeit.",
+      "tags": [
+        "Nutzwertanalyse",
+        "Vertrieb",
+        "Entscheidung"
+      ],
+      "options": [
+        {
+          "id": "nutzwertanalyse",
+          "label": "Nutzwertanalyse",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Kriterien werden definiert und gewichtet, um Varianten fair zu vergleichen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Bewertungen erzeugen eine transparente Entscheidungsvorlage.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Sie liefert automatisch den rechtlich zulässigen Vertriebskanal.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Sie hilft, Trade-offs (z. B. Marge vs. Reichweite) sichtbar zu machen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "vertriebsformen",
+          "label": "Vertriebsformen (direkter / indirekter Vertrieb)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Direkt vs. indirekt beschreibt grundsätzlich die Kanalstruktur.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Das Thema erklärt Unterschiede, aber priorisiert nicht automatisch anhand vieler Kriterien.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Es geht hier primär um die Bewertung interner Stärken/Schwächen.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Die Wahl des Kanals hat Auswirkungen auf Kontrolle, Marge und Reichweite.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Nutzwertanalyse: Mehrere Kriterien (inkl. Gewichtung) bewerten, Varianten vergleichen und eine transparente Entscheidung für die Vertriebsstrategie ableiten."
+    },
+    {
+      "id": "c05",
+      "profile": "Das Marketingteam ist stark in Content, aber schwach in Performance-Tracking. Es hat gute Branchenkontakte, aber wenig Erfahrung mit Partnervertrieb. Es will entscheiden, ob es eher indirekt über Partner verkauft oder direkt über einen eigenen Funnel.",
+      "tags": [
+        "Stärken/Schwächen",
+        "Vertrieb",
+        "Strategie"
+      ],
+      "options": [
+        {
+          "id": "staerken_schwaechenanalyse",
+          "label": "Stärken- und Schwächenanalyse",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Interne Fähigkeiten und Engpässe werden sichtbar (z. B. Content stark, Tracking schwach).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Daraus lassen sich passende Kanäle ableiten (z. B. Partner nutzen bei fehlender Sales-Power).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Die Analyse betrachtet nur externe Faktoren wie Konkurrenz und Marktpreise.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Sie ist eine Grundlage, ersetzt aber nicht die konkrete Bewertung einzelner Optionen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "vertriebsformen",
+          "label": "Vertriebsformen (direkter / indirekter Vertrieb)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Direkter Vertrieb bedeutet mehr Kontrolle über Kundenbeziehung und Daten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Indirekter Vertrieb nutzt Partner-Reichweite, teilt aber Marge/Kontrolle.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Dieses Thema liefert automatisch eine Bewertung der Teamfähigkeiten.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Es beschreibt Kanäle, aber keine strukturierte interne Bestandsaufnahme.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Stärken- und Schwächenanalyse: Interne Kompetenz-/Ressourcenlage prüfen, um eine Vertriebs-/Marketingstrategie zu wählen, die zum Team passt."
+    }
+  ]
+}

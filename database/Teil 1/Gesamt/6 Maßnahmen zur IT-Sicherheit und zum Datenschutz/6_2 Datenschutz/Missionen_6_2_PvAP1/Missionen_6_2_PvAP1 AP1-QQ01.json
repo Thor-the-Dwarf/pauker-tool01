@@ -1,0 +1,105 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Datenschutz (6.2)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Datenschutz (DSGVO/BDSG) zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "DSGVO",
+    "BDSG",
+    "Personenbezogene Daten",
+    "Besondere Kategorien personenbezogener Daten",
+    "Auskunftsrecht",
+    "Recht auf Berichtigung",
+    "Recht auf Löschung",
+    "Recht auf Einschränkung",
+    "Recht auf Datenübertragbarkeit",
+    "Widerspruchsrecht",
+    "Widerruf Einwilligung",
+    "Beschwerderecht",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "EU-weit geltendes Datenschutzrecht, das die Verarbeitung personenbezogener Daten regelt.",
+      "correct": "DSGVO"
+    },
+    {
+      "text": "Nationales deutsches Datenschutzgesetz, das die DSGVO ergänzt (z. B. spezielle Regelungen in Deutschland).",
+      "correct": "BDSG"
+    },
+    {
+      "text": "Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.",
+      "correct": "Personenbezogene Daten"
+    },
+    {
+      "text": "Beispiel: Name + E-Mail-Adresse + Personalnummer sind in der Regel solche Daten.",
+      "correct": "Personenbezogene Daten"
+    },
+    {
+      "text": "Beispiel: IP-Adresse oder Geräte-ID kann darunter fallen, wenn eine Person dadurch identifizierbar ist.",
+      "correct": "Personenbezogene Daten"
+    },
+    {
+      "text": "Datenarten wie Gesundheitsdaten oder biometrische Daten zählen typischerweise dazu und sind besonders geschützt.",
+      "correct": "Besondere Kategorien personenbezogener Daten"
+    },
+    {
+      "text": "Recht, zu erfahren, ob und welche personenbezogenen Daten über dich verarbeitet werden (inkl. Zwecke/Empfänger).",
+      "correct": "Auskunftsrecht"
+    },
+    {
+      "text": "Recht, falsche oder unvollständige personenbezogene Daten korrigieren zu lassen.",
+      "correct": "Recht auf Berichtigung"
+    },
+    {
+      "text": "Recht, dass Daten gelöscht werden, wenn es keinen zulässigen Grund für die weitere Verarbeitung gibt.",
+      "correct": "Recht auf Löschung"
+    },
+    {
+      "text": "Recht, die Verarbeitung vorübergehend „einzufrieren“ (z. B. während einer Prüfung/bei Streit über Richtigkeit).",
+      "correct": "Recht auf Einschränkung"
+    },
+    {
+      "text": "Recht, bereitgestellte Daten in einem strukturierten, gängigen, maschinenlesbaren Format zu erhalten.",
+      "correct": "Recht auf Datenübertragbarkeit"
+    },
+    {
+      "text": "Recht, einer Verarbeitung aus bestimmten Gründen zu widersprechen (z. B. bei Direktwerbung).",
+      "correct": "Widerspruchsrecht"
+    },
+    {
+      "text": "Wenn du eine Einwilligung gegeben hast, kannst du sie jederzeit für die Zukunft zurücknehmen.",
+      "correct": "Widerruf Einwilligung"
+    },
+    {
+      "text": "Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du einen Verstoß vermutest.",
+      "correct": "Beschwerderecht"
+    },
+    {
+      "text": "Wenn eine Firma dir Werbemails schickt, kannst du dich darauf besonders direkt berufen.",
+      "correct": "Widerspruchsrecht"
+    },
+    {
+      "text": "Wenn deine Adresse falsch gespeichert ist und Lieferungen scheitern, ist das das passende Recht.",
+      "correct": "Recht auf Berichtigung"
+    },
+    {
+      "text": "Wenn du wissen willst, welche Daten ein Anbieter über dich gespeichert hat, ist das das passende Recht.",
+      "correct": "Auskunftsrecht"
+    },
+    {
+      "text": "Wenn du zu einem anderen Anbieter wechseln willst und deine Daten „mitnehmen“ möchtest, ist das das passende Recht.",
+      "correct": "Recht auf Datenübertragbarkeit"
+    },
+    {
+      "text": "Die Betroffenenrechte sind ein zentraler Teil der DSGVO und müssen organisatorisch im Unternehmen erfüllbar sein.",
+      "correct": "DSGVO"
+    },
+    {
+      "text": "Diese Begriffe hängen zusammen: Gesetze (EU/DE), Definitionen (personenbezogen) und Rechte (Auskunft, Löschung, etc.).",
+      "correct": "alle"
+    }
+  ]
+}

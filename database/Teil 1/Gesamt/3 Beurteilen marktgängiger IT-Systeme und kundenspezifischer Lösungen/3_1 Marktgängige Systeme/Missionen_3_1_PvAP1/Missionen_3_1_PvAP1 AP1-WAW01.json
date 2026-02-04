@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Marktgängige Systeme (Hardware, Software, Virtualisierung, Cloud)",
+  "description": "Schritt 1: Passendes System/Modell wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Büro-PC soll spürbar schneller werden, ohne dass du die komplette Maschine neu kaufst. Engpass ist vor allem „Warten“ beim Starten von Programmen und beim Öffnen vieler Dateien.",
+      "tags": ["Hardwareprodukte", "Speicher", "Performance", "Büro"],
+      "options": [
+        {
+          "id": "ssd",
+          "label": "Speicher (SSD statt HDD)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Massiv geringere Zugriffszeiten beschleunigen Starten und Laden von Programmen.", "correct": true },
+            { "id": "w2", "text": "Verbessert spürbar das Arbeiten mit vielen kleinen Dateien.", "correct": true },
+            { "id": "w3", "text": "Erhöht automatisch die WLAN-Reichweite des PCs.", "correct": false },
+            { "id": "w4", "text": "Ist nur relevant für Spiele, nicht für Office-Arbeit.", "correct": false }
+          ]
+        },
+        {
+          "id": "grafikkarte",
+          "label": "Grafikkarte",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hilft stark bei 3D/GPU-Workloads (CAD, Rendering, Spiele).", "correct": true },
+            { "id": "w2", "text": "Beschleunigt typische Dateizugriffe und Programmstarts am stärksten.", "correct": false },
+            { "id": "w3", "text": "Kann bei Multi-Monitor/Video-Workflows sinnvoll sein.", "correct": true },
+            { "id": "w4", "text": "Ersetzt CPU und RAM vollständig, weil GPU alles übernimmt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Für „Warten“ bei Programmen/Dateien ist Speicher/SSD der größte Hebel. GPU ist eher für 3D/Video, nicht für typische Office-Ladezeiten."
+    },
+    {
+      "id": "c02",
+      "profile": "Du planst einen PC für Videobearbeitung und Rendering. Der Workload skaliert mit Rechenleistung, und das System soll unter Dauerlast stabil laufen.",
+      "tags": ["Hardwareprodukte", "CPU", "Netzteil", "Stabilität"],
+      "options": [
+        {
+          "id": "cpu",
+          "label": "CPU",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Rendering/Encoding profitiert direkt von mehr Kernen/Threads und Takt.", "correct": true },
+            { "id": "w2", "text": "Die CPU ist zentral für allgemeine Rechenlasten außerhalb der GPU.", "correct": true },
+            { "id": "w3", "text": "Ist zuständig für WLAN und IP-Konfiguration.", "correct": false },
+            { "id": "w4", "text": "Hat keinen Einfluss auf die Laufzeit von CPU-lastigen Aufgaben.", "correct": false }
+          ]
+        },
+        {
+          "id": "netzteil",
+          "label": "Netzteil",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Stabilität unter Last hängt auch von sauberer Stromversorgung ab.", "correct": true },
+            { "id": "w2", "text": "Ein gutes Netzteil verhindert Ausfälle/Instabilität bei hoher Last.", "correct": true },
+            { "id": "w3", "text": "Bestimmt direkt die Rendergeschwindigkeit stärker als CPU/GPU.", "correct": false },
+            { "id": "w4", "text": "Ist egal, solange es irgendwie passt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "CPU ist der direkte Performance-Hebel bei CPU-lastigen Workloads. Netzteil ist wichtig für Stabilität, aber nicht der Hauptfaktor für Rechenleistung."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Unternehmen braucht WLAN für Büro und Besprechungsräume. Es gibt viele Endgeräte. Du willst stabile Abdeckung, Sicherheit und gute Verwaltung.",
+      "tags": ["Netzwerkkomponenten", "WLAN", "Infrastruktur"],
+      "options": [
+        {
+          "id": "access_points",
+          "label": "WLAN-Infrastruktur mit Access Points",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrere Access Points verbessern Abdeckung und Kapazität bei vielen Geräten.", "correct": true },
+            { "id": "w2", "text": "Zentrale Verwaltung (z. B. Controller/Cloud-Management) erleichtert Betrieb.", "correct": true },
+            { "id": "w3", "text": "Ein einziger Consumer-Router reicht immer, egal wie viele Nutzer.", "correct": false },
+            { "id": "w4", "text": "Sicherheit (z. B. WPA2/WPA3, Gäste-Netz) lässt sich sauber umsetzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "grafikkarte",
+          "label": "Grafikkarte",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hat keinen direkten Einfluss auf WLAN-Abdeckung oder Roaming.", "correct": true },
+            { "id": "w2", "text": "Verbessert WLAN-Sicherheit durch mehr VRAM.", "correct": false },
+            { "id": "w3", "text": "Ist eine Netzwerkkomponente im OSI-Layer 2.", "correct": false },
+            { "id": "w4", "text": "Kann für Remote-Desktop-Grafik relevant sein, aber nicht für WLAN-Design.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für WLAN: Access Points + sinnvolle Planung/Verwaltung. GPU ist dafür komplett die falsche Baustelle."
+    },
+    {
+      "id": "c04",
+      "profile": "Du musst für eine Schulungsumgebung mehrere Server auf einem physischen Host betreiben. Jeder soll isoliert sein, eigene IP haben und unabhängig starten/stoppen können.",
+      "tags": ["Virtualisierung", "VM", "Isolation"],
+      "options": [
+        {
+          "id": "virtualisierung",
+          "label": "Virtualisierung (virtuelle Maschinen auf einem Host)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrere isolierte Systeme laufen parallel auf derselben Hardware.", "correct": true },
+            { "id": "w2", "text": "Ressourcen wie CPU/RAM/Storage können pro VM zugewiesen werden.", "correct": true },
+            { "id": "w3", "text": "Jede VM kann eigene Netzwerkeinstellungen und IPs erhalten.", "correct": true },
+            { "id": "w4", "text": "Ersetzt das Betriebssystem, weil nur noch Hardware läuft.", "correct": false }
+          ]
+        },
+        {
+          "id": "saas",
+          "label": "SaaS (Software as a Service)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SaaS ist fertige Software, die du nutzt, ohne sie selbst zu betreiben.", "correct": true },
+            { "id": "w2", "text": "SaaS liefert dir mehrere isolierte Server-VMs auf deinem eigenen Host.", "correct": false },
+            { "id": "w3", "text": "Passt eher für Anwendungen wie Mail, CRM, Ticketsysteme.", "correct": true },
+            { "id": "w4", "text": "Ist ein Cloud-Servicemodell, keine lokale Virtualisierung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mehrere isolierte Server auf einem Host: Virtualisierung/VMs. SaaS ist fertige Software aus der Cloud, kein VM-Setup auf deinem Host."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Team will schnell eine Webanwendung entwickeln und betreiben, ohne sich um Server-OS, Patches und Infrastruktur kümmern zu müssen. Es will aber Kontrolle über Laufzeit/Deployments.",
+      "tags": ["Cloud", "PaaS", "Betrieb", "Entwicklung"],
+      "options": [
+        {
+          "id": "paas",
+          "label": "PaaS (Platform as a Service)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Du bekommst eine Plattform (Runtime, Deploy, Skalierung), ohne Serverbetrieb im Detail.", "correct": true },
+            { "id": "w2", "text": "Fokus auf Code und Deployment statt OS-Patching.", "correct": true },
+            { "id": "w3", "text": "Du kaufst fertige Software, die du nur noch nutzt (z. B. Mail/CRM).", "correct": false },
+            { "id": "w4", "text": "Mehr Kontrolle als SaaS, weniger Betriebsaufwand als IaaS.", "correct": true }
+          ]
+        },
+        {
+          "id": "iaas",
+          "label": "IaaS (Infrastructure as a Service)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Du erhältst virtuelle Server/Netz/Storage, OS und Patches sind oft dein Job.", "correct": true },
+            { "id": "w2", "text": "Bietet maximale Flexibilität, aber mehr Betriebsaufwand.", "correct": true },
+            { "id": "w3", "text": "Ist die beste Wahl, wenn du keinerlei OS-Verantwortung willst.", "correct": false },
+            { "id": "w4", "text": "Passt, wenn du spezielle Setups brauchst, die PaaS nicht anbietet.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für „Code deployen ohne Serverpflege“: PaaS. IaaS ist VM/Infra und bringt mehr Betriebsverantwortung mit."
+    },
+    {
+      "id": "c06",
+      "profile": "Ein Unternehmen will eine fertige Lösung für E-Mail, Kalender und Videokonferenzen. Es will nichts selbst installieren, skalieren oder patchen.",
+      "tags": ["Cloud", "SaaS", "Softwareprodukte"],
+      "options": [
+        {
+          "id": "saas",
+          "label": "SaaS (Software as a Service)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Fertige Anwendung wird genutzt, Betrieb/Updates macht der Anbieter.", "correct": true },
+            { "id": "w2", "text": "Schneller Start, wenig Administrationsaufwand im Vergleich zu Eigenbetrieb.", "correct": true },
+            { "id": "w3", "text": "Du verwaltest das Server-Betriebssystem und installierst alles selbst.", "correct": false },
+            { "id": "w4", "text": "Typische Beispiele sind Kollaborationstools, Mail, CRM, Ticketsysteme.", "correct": true }
+          ]
+        },
+        {
+          "id": "on_prem_os",
+          "label": "On-Premise Betriebssystem + Anwendungen (Eigenbetrieb)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Du betreibst Server/Updates/Backups selbst oder über Dienstleister.", "correct": true },
+            { "id": "w2", "text": "Kann sinnvoll sein bei strengen Vorgaben/Customizing, aber ist mehr Aufwand.", "correct": true },
+            { "id": "w3", "text": "Ist automatisch günstiger und schneller als SaaS, immer.", "correct": false },
+            { "id": "w4", "text": "Erfordert typischerweise mehr Betriebs-Know-how und Ressourcen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fertige Lösung ohne Eigenbetrieb: SaaS. On-Prem ist möglich, aber bedeutet Betrieb/Updates/Backups selbst verantworten."
+    }
+  ]
+}

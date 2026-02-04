@@ -1,0 +1,745 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Projekt- & Qualitätsmanagement (AP1)",
+  "description": "Schritt 1: Methode/Begriff bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Im Betrieb werden täglich Tickets bearbeitet (wiederkehrend). Parallel läuft einmalig die Einführung eines neuen Ticketsystems mit Go-Live-Termin.",
+      "tags": ["Grundlagen", "Projekt", "Prozess", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "prozess",
+          "label": "Ticketbearbeitung = Prozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wiederholbar und standardisiert, läuft dauerhaft.", "correct": true },
+            { "id": "w2", "text": "Einmalig und endet mit einer Abnahme und Übergabe.", "correct": false },
+            { "id": "w3", "text": "Gleichbleibender Ablauf mit klaren Rollen (z. B. 1st/2nd Level).", "correct": true },
+            { "id": "w4", "text": "Hat zwingend ein fixes Budget und einen einmaligen Terminplan.", "correct": false }
+          ]
+        },
+        {
+          "id": "projekt",
+          "label": "Einführung neues Ticketsystem = Projekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einmalig, zeitlich begrenzt, klares Ende (Go-Live/Abnahme).", "correct": true },
+            { "id": "w2", "text": "Läuft identisch jeden Tag und ist dauerhaft wiederholbar.", "correct": false },
+            { "id": "w3", "text": "Änderungen (Scope/Termine) müssen gesteuert werden.", "correct": true },
+            { "id": "w4", "text": "Ist nur ein anderer Begriff für Prozess.", "correct": false }
+          ]
+        },
+        {
+          "id": "gleich",
+          "label": "Beides ist dasselbe",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Projekt und Prozess unterscheiden sich vor allem durch Einmaligkeit vs. Wiederholbarkeit.", "correct": true },
+            { "id": "w2", "text": "In der Prüfung ist die Unterscheidung unwichtig.", "correct": false },
+            { "id": "w3", "text": "Falsche Zuordnung führt oft zu falscher Methodik und Punktverlust.", "correct": true },
+            { "id": "w4", "text": "Ticketbearbeitung ist immer ein Projekt, weil Tickets ein Ende haben.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Ticketbearbeitung = Prozess (wiederholbar). Einführung eines neuen Ticketsystems = Projekt (einmalig, terminiert)."
+    },
+    {
+      "id": "v02",
+      "profile": "Ziel im Projektauftrag: „Wir führen ein neues Ticketsystem ein.“ Die Prüfer fragen nach Abnahme-Kriterien.",
+      "tags": ["SMART", "Ziele", "Abnahme", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "smart",
+          "label": "SMART-Ziel",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Spezifisch: Wer nutzt was genau?", "correct": true },
+            { "id": "w2", "text": "Messbar: Erfolgskriterium (z. B. Quote erfasster Tickets).", "correct": true },
+            { "id": "w3", "text": "Reicht, wenn es nur „modern“ klingt.", "correct": false },
+            { "id": "w4", "text": "Terminiert: klare Deadline für produktiven Einsatz.", "correct": true }
+          ]
+        },
+        {
+          "id": "vage",
+          "label": "Vages Ziel (nicht abnahmefähig)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unklar: wann, für wen, was heißt „eingeführt“?", "correct": true },
+            { "id": "w2", "text": "Ohne Messbarkeit ist Abnahme schwer objektiv möglich.", "correct": true },
+            { "id": "w3", "text": "Ist automatisch SMART, weil „einführen“ ein Verb ist.", "correct": false },
+            { "id": "w4", "text": "Führt typischerweise zu Streit über Erfolg/Nachforderungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_termin",
+          "label": "Nur Termin ergänzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein Datum hilft, aber ohne klare Kriterien bleibt es nicht abnahmefähig.", "correct": true },
+            { "id": "w2", "text": "Terminiert allein ersetzt Spezifisch und Messbar.", "correct": false },
+            { "id": "w3", "text": "Akzeptiert bedeutet: Stakeholder tragen das Ziel mit.", "correct": true },
+            { "id": "w4", "text": "Realistisch prüft Ressourcen/Umfeldbedingungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "SMART-Ziele liefern Abnahmefähigkeit: spezifisch, messbar, akzeptiert, realistisch, terminiert."
+    },
+    {
+      "id": "v03",
+      "profile": "Im Projekt kommt plötzlich die Forderung: „Wenn wir schon dabei sind, bauen wir auch gleich noch ein Self-Service-Portal.“ Das war bisher nicht geplant.",
+      "tags": ["Scope", "Leistungsumfang", "Abnahme", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "scope",
+          "label": "Scope festlegen (In/Out) – sonst keine saubere Abnahme",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Scope definiert, was Teil des Projekts ist – und was ausdrücklich nicht.", "correct": true },
+            { "id": "w2", "text": "Ohne Scope entstehen Nachforderungen und Streit über „fertig“.", "correct": true },
+            { "id": "w3", "text": "Scope ist identisch mit dem Budget und ersetzt die Zieldefinition.", "correct": false },
+            { "id": "w4", "text": "Scope hilft, Change Requests überhaupt bewertbar zu machen.", "correct": true }
+          ]
+        },
+        {
+          "id": "meilenstein",
+          "label": "Meilensteinliste reicht als Scope-Ersatz",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Meilensteine markieren Ereignisse, definieren aber nicht automatisch Inhalte.", "correct": true },
+            { "id": "w2", "text": "Meilensteine enthalten keine Abgrenzung „nicht Teil des Projekts“.", "correct": true },
+            { "id": "w3", "text": "Mit Meilensteinen sind Nachforderungen unmöglich.", "correct": false },
+            { "id": "w4", "text": "Meilensteine haben keine eigene Dauer, aber sehr wohl Bedeutung als Entscheidungspunkt.", "correct": true }
+          ]
+        },
+        {
+          "id": "wip",
+          "label": "WIP-Limit lösen das Scope-Problem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "WIP-Limit begrenzt parallele Arbeit, aber definiert nicht den Leistungsumfang.", "correct": true },
+            { "id": "w2", "text": "Scope Creep wird nicht verhindert, nur langsamer.", "correct": true },
+            { "id": "w3", "text": "WIP-Limit ist ein Scrum-Artefakt.", "correct": false },
+            { "id": "w4", "text": "Scope muss formal gesteuert werden, nicht „wegorganisiert“.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Scope (In/Out) ist Pflicht: Ohne klare Abgrenzung keine saubere Abnahme und kein kontrollierter Leistungsumfang."
+    },
+    {
+      "id": "v04",
+      "profile": "Bei einer neuen Personal-Software wurden nur IT und Management einbezogen. Kurz vor Go-Live stoppt der Betriebsrat das Vorhaben.",
+      "tags": ["Stakeholder", "Kommunikation", "Prüfungsfalle", "Change"],
+      "options": [
+        {
+          "id": "stakeholder_mgmt",
+          "label": "Stakeholder identifizieren & früh einbinden",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Projekte scheitern oft an Menschen, nicht an Technik.", "correct": true },
+            { "id": "w2", "text": "Betriebsrat/Datenschutz/Key-User können harte Anforderungen setzen.", "correct": true },
+            { "id": "w3", "text": "Stakeholder sind nur die Entscheider mit Budget.", "correct": false },
+            { "id": "w4", "text": "Kritiker früh abholen verhindert Blockaden und Nachforderungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_entscheider",
+          "label": "Nur Entscheider informieren reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Betroffene Mitarbeitende müssen Anforderungen/Tests/Schulung mittragen.", "correct": true },
+            { "id": "w2", "text": "Ohne Betroffene drohen Akzeptanzprobleme und Widerstand.", "correct": true },
+            { "id": "w3", "text": "Wenn das Management zustimmt, ist Akzeptanz automatisch garantiert.", "correct": false },
+            { "id": "w4", "text": "Stakeholder-Management reduziert Risiko von Projektstillstand.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_support",
+          "label": "Nur Unterstützer (Key-User) einbinden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unterstützer helfen, ersetzen aber nicht Entscheider und Kritiker.", "correct": true },
+            { "id": "w2", "text": "Kritische Stakeholder können sonst spät eskalieren.", "correct": true },
+            { "id": "w3", "text": "Kritiker sind unwichtig, weil sie ohnehin immer dagegen sind.", "correct": false },
+            { "id": "w4", "text": "Ein vollständiges Bild braucht Betroffene, Entscheider, Unterstützer, Kritiker.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Stakeholder früh identifizieren und einbinden (inkl. Kritiker/Betriebsrat), sonst drohen Stopps, Widerstand und Nachforderungen."
+    },
+    {
+      "id": "v05",
+      "profile": "Im Projekt gibt es Gerüchte und Missverständnisse: Fachabteilung fühlt sich übergangen, IT-Betrieb erfährt Go-Live-Termine zu spät.",
+      "tags": ["Kommunikationsplan", "Stakeholder", "Projektsteuerung"],
+      "options": [
+        {
+          "id": "kommunikationsplan",
+          "label": "Kommunikationsplan (Wer bekommt wann was über welchen Kanal?)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regelt Empfänger, Frequenz, Inhalte und Kanal.", "correct": true },
+            { "id": "w2", "text": "Verhindert Informationslücken, Gerüchte und Widerstände.", "correct": true },
+            { "id": "w3", "text": "Ist dasselbe wie ein PSP.", "correct": false },
+            { "id": "w4", "text": "Zeigt in der Prüfung: systematisches Stakeholder-Denken.", "correct": true }
+          ]
+        },
+        {
+          "id": "ein_mail",
+          "label": "Eine Rundmail an alle reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unterschiedliche Gruppen brauchen unterschiedliche Infos (Status vs Technik vs Schulung).", "correct": true },
+            { "id": "w2", "text": "Zu viel/zu wenig Info erzeugt Rückfragen und Frust.", "correct": true },
+            { "id": "w3", "text": "Eine Mail ersetzt regelmäßige Updates und abgestufte Inhalte.", "correct": true },
+            { "id": "w4", "text": "Rundmails verhindern automatisch Widerstand.", "correct": false }
+          ]
+        },
+        {
+          "id": "daily_fuer_alle",
+          "label": "Daily Standup mit allen Stakeholdern jeden Tag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Daily ist für das Team gedacht, nicht als Großgruppen-Meeting.", "correct": true },
+            { "id": "w2", "text": "Management braucht eher Status/Risiken/Budget in passender Frequenz.", "correct": true },
+            { "id": "w3", "text": "Jeden Tag alle einzuladen erhöht Fokus und senkt Durchlaufzeit.", "correct": false },
+            { "id": "w4", "text": "Kommunikation muss zielgruppengerecht und effizient sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kommunikationsplan: Wer bekommt wann welche Infos über welchen Kanal – verhindert Chaos und sorgt für Akzeptanz."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Hardware-Rollout ist vollständig spezifiziert und stabil. Eine neue Web-App dagegen bekommt laufend Feedback und Anforderungen ändern sich.",
+      "tags": ["Vorgehensmodell", "Wasserfall", "Agil", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "wasserfall",
+          "label": "Wasserfall (bei stabilen Anforderungen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Passt, wenn Anforderungen von Anfang an klar und stabil sind.", "correct": true },
+            { "id": "w2", "text": "Guter Fit für planbaren Hardware-Rollout nach festem Plan.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Tests, weil man vorher alles plant.", "correct": false },
+            { "id": "w4", "text": "Spätere Änderungen sind möglich, aber oft teurer und formaler.", "correct": true }
+          ]
+        },
+        {
+          "id": "scrum",
+          "label": "Scrum (bei unsicheren/ändernden Anforderungen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gut, wenn Anforderungen sich ändern und Feedback früh rein soll.", "correct": true },
+            { "id": "w2", "text": "Sprint Review holt Feedback, Retrospektive verbessert Prozess.", "correct": true },
+            { "id": "w3", "text": "Agil bedeutet ohne Planung zu arbeiten.", "correct": false },
+            { "id": "w4", "text": "Planung passiert häufiger und in kleineren Schritten.", "correct": true }
+          ]
+        },
+        {
+          "id": "kanban",
+          "label": "Kanban (Flow & WIP-Limit)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Visualisiert Arbeit (To Do → Doing → Done).", "correct": true },
+            { "id": "w2", "text": "WIP-Limit erzwingt Fokus und reduziert Durchlaufzeit.", "correct": true },
+            { "id": "w3", "text": "Kanban hat zwingend Sprints mit 1–4 Wochen.", "correct": false },
+            { "id": "w4", "text": "Passt oft gut für Betrieb/Support und kontinuierliche Arbeit.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wasserfall bei stabilen Anforderungen (z. B. Rollout). Agil (Scrum/Kanban) bei wechselnden Anforderungen – aber nicht „ohne Planung“."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Team plant Tests erst ganz am Ende, „wenn alles fertig ist“. In der Prüfung wird das als schlechter Plan bewertet.",
+      "tags": ["V-Modell", "Teststufen", "Planung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "v_modell",
+          "label": "V-Modell-Logik: Spezifikation ↔ passende Teststufe",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zu jedem Spezifikationsschritt gehört eine passende Teststufe.", "correct": true },
+            { "id": "w2", "text": "Anforderungen ↔ Abnahmetest; Implementierung ↔ Unit-Test.", "correct": true },
+            { "id": "w3", "text": "Tests sind nur am Ende sinnvoll, weil erst dann alles integriert ist.", "correct": false },
+            { "id": "w4", "text": "Testkonzept gehört in die Planung, nicht ans Projektende.", "correct": true }
+          ]
+        },
+        {
+          "id": "testen_spaeter",
+          "label": "Tests erst am Ende einplanen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Späte Fehlerfindung macht Behebung deutlich teurer.", "correct": true },
+            { "id": "w2", "text": "Frühe Tests/Reviews senken Risiko und Nacharbeit.", "correct": true },
+            { "id": "w3", "text": "Je später der Fehler entdeckt wird, desto günstiger ist er.", "correct": false },
+            { "id": "w4", "text": "Ohne Testplanung wirkt der Plan unprofessionell.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_unit",
+          "label": "Nur Unit-Tests reichen immer",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unit-Tests prüfen einzelne Komponenten, nicht das Gesamtsystem.", "correct": true },
+            { "id": "w2", "text": "Integration/System/Abnahme testen andere Risiken (Zusammenspiel, Anforderungen).", "correct": true },
+            { "id": "w3", "text": "Abnahmetest ist nur Deko und bringt keine Punkte.", "correct": false },
+            { "id": "w4", "text": "Teststufen bauen aufeinander auf (Unit → Integration → System → Abnahme).", "correct": true }
+          ]
+        }
+      ],
+      "solution": "V-Modell-Denke: Was du spezifizierst, musst du testen können. Testkonzept gehört in die Planung, nicht ans Ende."
+    },
+    {
+      "id": "v08",
+      "profile": "Im Team sagt jemand: „Der Scrum Master ist der Chef und verteilt Aufgaben.“",
+      "tags": ["Scrum", "Rollen", "Prüfungsfalle", "Agil"],
+      "options": [
+        {
+          "id": "scrum_master",
+          "label": "Scrum Master",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verantwortlich für das „Wie“: Prozess funktioniert, Hindernisse entfernen.", "correct": true },
+            { "id": "w2", "text": "Ist nicht der Chef, sondern unterstützt Selbstorganisation.", "correct": true },
+            { "id": "w3", "text": "Priorisiert das Backlog und entscheidet über das „Was“.", "correct": false },
+            { "id": "w4", "text": "Coacht Events wie Daily, Review, Retro (Prinzip, nicht Befehlsverteilung).", "correct": true }
+          ]
+        },
+        {
+          "id": "product_owner",
+          "label": "Product Owner",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verantwortlich für das „Was“ (Backlog, Priorisierung).", "correct": true },
+            { "id": "w2", "text": "Beseitigt Blocker im Teamalltag als Hauptaufgabe.", "correct": false },
+            { "id": "w3", "text": "Definiert fachliche Ziele und Reihenfolge der Anforderungen.", "correct": true },
+            { "id": "w4", "text": "Ist automatisch disziplinarische Führungskraft.", "correct": false }
+          ]
+        },
+        {
+          "id": "team",
+          "label": "Scrum Team",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Selbstorganisiert, liefert ein nutzbares Increment.", "correct": true },
+            { "id": "w2", "text": "Wird vom Scrum Master täglich operativ gesteuert.", "correct": false },
+            { "id": "w3", "text": "Wählt Items ins Sprint Backlog (gemeinsam) und setzt um.", "correct": true },
+            { "id": "w4", "text": "Hat keine Verantwortung für Qualität/Definition of Done.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Scrum Master ist nicht „Chef“, sondern sorgt für funktionierenden Prozess und entfernt Hindernisse."
+    },
+    {
+      "id": "v09",
+      "profile": "Auf dem Board sind 30 Tasks gleichzeitig „in Arbeit“. Nach zwei Wochen ist fast nichts fertig. Alle sind gestresst.",
+      "tags": ["Kanban", "WIP-Limit", "Flow", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "wip_limit",
+          "label": "WIP-Limit (Work in Progress begrenzen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Begrenzt parallele Arbeit und erzwingt Fokus.", "correct": true },
+            { "id": "w2", "text": "Reduziert Durchlaufzeit, weil weniger Kontextwechsel.", "correct": true },
+            { "id": "w3", "text": "Je mehr parallel gestartet wird, desto schneller ist alles fertig.", "correct": false },
+            { "id": "w4", "text": "Kanban nutzt typischerweise Spalten wie To Do → Doing → Done.", "correct": true }
+          ]
+        },
+        {
+          "id": "mehr_parallel",
+          "label": "Noch mehr parallel anfangen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Parallelität erhöht Kontextwechsel und Blockaden.", "correct": true },
+            { "id": "w2", "text": "Das führt oft dazu, dass nichts fertig wird.", "correct": true },
+            { "id": "w3", "text": "WIP-Limit ist unnötig, wenn alle motiviert sind.", "correct": false },
+            { "id": "w4", "text": "Fokus ist wichtiger als „Busy sein“.", "correct": true }
+          ]
+        },
+        {
+          "id": "psp",
+          "label": "PSP erstellen löst das sofort",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PSP strukturiert Arbeit, verhindert aber nicht automatisch zu viel WIP.", "correct": true },
+            { "id": "w2", "text": "WIP-Limit ist ein Flow-/Ausführungsproblem, nicht nur Struktur.", "correct": true },
+            { "id": "w3", "text": "PSP ersetzt Kanban vollständig.", "correct": false },
+            { "id": "w4", "text": "Beides kann kombiniert werden: strukturieren (PSP) + fokussieren (WIP).", "correct": true }
+          ]
+        }
+      ],
+      "solution": "WIP-Limit setzt Fokus durch: weniger parallel starten, mehr fertigstellen, kürzere Durchlaufzeiten."
+    },
+    {
+      "id": "v10",
+      "profile": "Im Projektplan steht als Arbeitspaket nur: „Implementierung“. Die Prüfer kritisieren: „Nicht plan- und prüfbar.“",
+      "tags": ["PSP", "Arbeitspaket", "Planung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "psp_ap",
+          "label": "Gutes Arbeitspaket (klarer Output, testbar, Verantwortliche)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Arbeitspaket liefert ein konkretes Ergebnis (Output).", "correct": true },
+            { "id": "w2", "text": "Muss so formuliert sein, dass man es prüfen/abnehmen kann.", "correct": true },
+            { "id": "w3", "text": "„Implementierung“ reicht, weil jeder weiß, was gemeint ist.", "correct": false },
+            { "id": "w4", "text": "Beispiel gut: „Login implementieren und Unit-Tests schreiben“.", "correct": true }
+          ]
+        },
+        {
+          "id": "todo_liste",
+          "label": "To-Do-Liste ohne Ergebnisse",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Ergebnis ist Aufwand/Abnahme schwer planbar.", "correct": true },
+            { "id": "w2", "text": "PSP zerlegt hierarchisch in Arbeitspakete mit Ergebnis und Verantwortlichen.", "correct": true },
+            { "id": "w3", "text": "Vage Formulierungen bringen in der Prüfung meist volle Punkte.", "correct": false },
+            { "id": "w4", "text": "Zu vage Pakete verhindern sinnvolle Schätzung/Zeitplanung.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_gantt",
+          "label": "Nur Gantt-Chart zeichnen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeitplan braucht Inhalte: Arbeitspakete sind Basis.", "correct": true },
+            { "id": "w2", "text": "Ein Gantt ersetzt nicht die saubere Strukturierung.", "correct": true },
+            { "id": "w3", "text": "Gantt macht Arbeitspakete automatisch präzise.", "correct": false },
+            { "id": "w4", "text": "PSP ist Grundlage für Aufwand, Zeit und Kosten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "PSP/Arbeitspakete müssen prüfbar sein: klarer Output + Verantwortliche Rolle + Zeitrahmen (vage „Implementierung“ ist Punktkiller)."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Azubi schätzt Dauer eines Tasks mit „3 Tage“ ohne Begründung. Später dauert es 8 Tage, weil Zugänge fehlen.",
+      "tags": ["Aufwandsschätzung", "Drei-Punkt", "Annahmen", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "drei_punkt",
+          "label": "Drei-Punkt-Schätzung + Annahmen dokumentieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Optimistisch/realistisch/pessimistisch liefern Bandbreite statt Wunschzahl.", "correct": true },
+            { "id": "w2", "text": "Annahmen gehören dazu (z. B. „Zugriff ab Tag 1“).", "correct": true },
+            { "id": "w3", "text": "Schätzung ohne Annahmen ist trotzdem aussagekräftig.", "correct": false },
+            { "id": "w4", "text": "Alternativ: Vergleichsschätzung mit ähnlichen Projekten/Erfahrungswerten.", "correct": true }
+          ]
+        },
+        {
+          "id": "einzahl",
+          "label": "Einzahl-Schätzung ohne Annahmen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Annahmen ist unklar, wovon die Zahl abhängt.", "correct": true },
+            { "id": "w2", "text": "Führt in der Prüfung zu wenig Punkten, weil Begründung fehlt.", "correct": true },
+            { "id": "w3", "text": "Ist besser als Drei-Punkt, weil es einfacher aussieht.", "correct": false },
+            { "id": "w4", "text": "Bandbreiten helfen beim Risikopuffer und Erwartungsmanagement.", "correct": true }
+          ]
+        },
+        {
+          "id": "kein_schaetzen",
+          "label": "Nicht schätzen, weil es immer unsicher ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Planung braucht Schätzung, sonst kein Zeit-/Kostenplan.", "correct": true },
+            { "id": "w2", "text": "Unsicherheit wird über Bandbreiten/Risiken/Annahmen sichtbar gemacht.", "correct": true },
+            { "id": "w3", "text": "Schätzen ist in Projekten grundsätzlich verboten.", "correct": false },
+            { "id": "w4", "text": "Risikomanagement ergänzt Schätzung, ersetzt sie nicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Drei-Punkt-Schätzung + dokumentierte Annahmen: realistische Bandbreite und prüfungsstark begründet."
+    },
+    {
+      "id": "v12",
+      "profile": "Im Plan gibt es Tasks mit Abhängigkeiten. Du sollst erklären, warum Verzögerung an Task X die gesamte Dauer verschiebt.",
+      "tags": ["Zeitplanung", "Abhängigkeiten", "Kritischer Pfad", "Meilenstein"],
+      "options": [
+        {
+          "id": "kritischer_pfad",
+          "label": "Kritischer Pfad",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Längste Kette von Abhängigkeiten bestimmt Mindest-Projektdauer.", "correct": true },
+            { "id": "w2", "text": "Wenn ein Task auf dem kritischen Pfad rutscht, rutscht das Projekt.", "correct": true },
+            { "id": "w3", "text": "Tasks außerhalb des kritischen Pfads haben nie Einfluss auf Termine.", "correct": false },
+            { "id": "w4", "text": "Abhängigkeiten zeigen Reihenfolge (Ende-Start, Start-Start etc.).", "correct": true }
+          ]
+        },
+        {
+          "id": "meilenstein",
+          "label": "Meilenstein",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wichtiges Ereignis ohne eigene Dauer (z. B. „Abnahme abgeschlossen“).", "correct": true },
+            { "id": "w2", "text": "Markiert Entscheidungspunkte, erklärt aber nicht automatisch die Mindestdauer.", "correct": true },
+            { "id": "w3", "text": "Meilensteine sind Tasks mit besonders langer Dauer.", "correct": false },
+            { "id": "w4", "text": "Meilensteine helfen Status/Steuerung, ersetzen aber keine Abhängigkeitslogik.", "correct": true }
+          ]
+        },
+        {
+          "id": "random_todo",
+          "label": "To-Do-Liste ohne Abhängigkeiten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wirkt wie zufällige Liste, Reihenfolge und Kritikalität fehlen.", "correct": true },
+            { "id": "w2", "text": "Ohne Abhängigkeiten kannst du kritischen Pfad kaum begründen.", "correct": true },
+            { "id": "w3", "text": "Abhängigkeiten sind unnötig, weil man alles parallel machen kann.", "correct": false },
+            { "id": "w4", "text": "Abhängigkeit entscheidet, wo Puffer sinnvoll ist.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kritischer Pfad erklärt Projekt-Dauer: längste Abhängigkeitskette bestimmt Mindestlaufzeit, Verzögerung dort verschiebt alles."
+    },
+    {
+      "id": "v13",
+      "profile": "Im Projekt gibt es Unsicherheiten: Liefertermine, fehlende Zugänge, Datenmigration. Du sollst zeigen, wie du Risiken professionell behandelst.",
+      "tags": ["Risikomanagement", "Bewertung", "Maßnahmen", "Strategien"],
+      "options": [
+        {
+          "id": "risiko_mgmt",
+          "label": "Risikomanagement (identifizieren, bewerten, Maßnahmen planen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Risiko = unsicheres Ereignis mit negativer Auswirkung.", "correct": true },
+            { "id": "w2", "text": "Bewertung z. B. Eintrittswahrscheinlichkeit × Auswirkung.", "correct": true },
+            { "id": "w3", "text": "Risiken nennt man nur, Maßnahmen sind optional.", "correct": false },
+            { "id": "w4", "text": "Strategien: vermeiden, reduzieren, übertragen, akzeptieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_nennen",
+          "label": "Risiken nur aufzählen (ohne Maßnahmen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Gegenmaßnahme gibt es in der Prüfung oft nur halbe Punkte.", "correct": true },
+            { "id": "w2", "text": "Steuerung fehlt: Risiko bleibt reines Bauchgefühl.", "correct": true },
+            { "id": "w3", "text": "Maßnahmen sind unnötig, weil Risiken ohnehin passieren.", "correct": false },
+            { "id": "w4", "text": "Risikomanagement macht Zeit-/Kostenpuffer begründbar.", "correct": true }
+          ]
+        },
+        {
+          "id": "risiko_ignorieren",
+          "label": "Risiken ignorieren, um keinen Stress zu erzeugen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ignorieren führt zu bösen Überraschungen (Termine, Qualität, Budget).", "correct": true },
+            { "id": "w2", "text": "Professionell ist: sichtbar machen, bewerten, steuern.", "correct": true },
+            { "id": "w3", "text": "In der AP1 gibt es dafür meist Extra-Punkte.", "correct": false },
+            { "id": "w4", "text": "Risiken sind normal – entscheidend ist der Umgang damit.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Risikomanagement: Risiken identifizieren, bewerten (E×A) und pro Risiko eine Gegenmaßnahme + Strategie angeben."
+    },
+    {
+      "id": "v14",
+      "profile": "Ein Projekt leidet unter: Lieferverzug, fehlenden Zugängen, Risiko von Datenverlust und Widerstand der Nutzer.",
+      "tags": ["Risiken", "Gegenmaßnahmen", "Praxis", "AP1"],
+      "options": [
+        {
+          "id": "massnahmen",
+          "label": "Passende Gegenmaßnahmen zu typischen Risiken",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Lieferverzug → früh bestellen, Alternativen prüfen.", "correct": true },
+            { "id": "w2", "text": "Fehlende Zugänge → rechtzeitig beantragen, Eskalationsweg klären.", "correct": true },
+            { "id": "w3", "text": "Datenverlust → Backup testen, Rollback-Plan vorbereiten.", "correct": true },
+            { "id": "w4", "text": "Widerstand Nutzer → frühe Einbindung, Schulung, Change-Management.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_hoffnung",
+          "label": "„Wird schon klappen“ als Maßnahme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Keine Maßnahme → kein Steuerungsnachweis, schwach in der Prüfung.", "correct": true },
+            { "id": "w2", "text": "Risikomanagement ist geplant, nicht gehofft.", "correct": true },
+            { "id": "w3", "text": "Optimismus reduziert Eintrittswahrscheinlichkeit messbar.", "correct": false },
+            { "id": "w4", "text": "Konkrete Maßnahmen zeigen Professionalität und Risiko-Bewusstsein.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_versicherung",
+          "label": "Alles per Versicherung lösen (Risiko übertragen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Übertragen ist nur eine Strategie, nicht für alle Risiken passend.", "correct": true },
+            { "id": "w2", "text": "Zugänge/Nutzerakzeptanz lassen sich nicht sinnvoll „versichern“.", "correct": true },
+            { "id": "w3", "text": "Übertragen ersetzt technische/organisatorische Gegenmaßnahmen vollständig.", "correct": false },
+            { "id": "w4", "text": "Oft brauchst du vermeiden/reduzieren + Notfall-/Rollback-Plan.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Typische Risiken brauchen typische Maßnahmen: Lieferverzug (früh/Alternativen), Zugänge (rechtzeitig/Eskalation), Datenverlust (Backup testen/Rollback), Widerstand (Einbindung/Schulung)."
+    },
+    {
+      "id": "v15",
+      "profile": "Ein Kunde fordert „noch schnell“ eine Zusatzfunktion. Das Team baut sie ein, ohne Aufwand/Risiko zu bewerten und ohne Freigabe. Später kippt der Zeitplan.",
+      "tags": ["Change Request", "Scope Creep", "Prüfungsfalle", "Steuerung"],
+      "options": [
+        {
+          "id": "scope_creep",
+          "label": "Scope Creep (schleichende Erweiterung ohne Planung/Budget)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Erweiterung passiert „nebenbei“ ohne Bewertung und Mehrbudget.", "correct": true },
+            { "id": "w2", "text": "Projekt kippt still, weil Umfang wächst, aber Zeit/Kosten nicht.", "correct": true },
+            { "id": "w3", "text": "Ist gut, weil der Kunde glücklich ist und das immer Priorität hat.", "correct": false },
+            { "id": "w4", "text": "Prüfungsfalle: „kleine Änderung“ ohne Steuerung akzeptieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "change_request",
+          "label": "Change Request (formal bewerten & freigeben)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Formale Änderung von Umfang/Zeit/Kosten mit Bewertung und Freigabe.", "correct": true },
+            { "id": "w2", "text": "Änderung wird gesteuert statt verhindert.", "correct": true },
+            { "id": "w3", "text": "Change Request bedeutet: immer sofort umsetzen, ohne Diskussion.", "correct": false },
+            { "id": "w4", "text": "Bewertung umfasst Aufwand, Risiko und Nutzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "bugfix",
+          "label": "Das ist nur ein Bugfix, keine Änderung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Neue Funktion ist Umfangsänderung, nicht Bugfix.", "correct": true },
+            { "id": "w2", "text": "Bugfixes können auch Aufwand bedeuten, aber hier ist es Scope-Erweiterung.", "correct": true },
+            { "id": "w3", "text": "Neue Features sind nie Scope, weil sie ja „klein“ sein können.", "correct": false },
+            { "id": "w4", "text": "Ohne Bewertung/Freigabe riskierst du Termin-/Budget-Desaster.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne Bewertung/Freigabe wird aus „kleiner Änderung“ Scope Creep. Change Requests müssen formal bewertet und freigegeben werden."
+    },
+    {
+      "id": "v16",
+      "profile": "Die Geschäftsleitung will ein Qualitätsmanagement „nachweisbar im Betrieb“ verankern und sich zertifizieren lassen. Die Prüfer fragen nach dem passenden ISO-Bezug.",
+      "tags": ["ISO 9000", "ISO 9001", "QM", "Zertifizierung"],
+      "options": [
+        {
+          "id": "iso9001",
+          "label": "ISO 9001 (Anforderungen an ein QM-System, Basis für Zertifizierung)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "ISO 9001 beschreibt Anforderungen an ein QM-System.", "correct": true },
+            { "id": "w2", "text": "Nachweisbar im Betrieb durch dokumentierte Prozesse, Audits, Verbesserungen.", "correct": true },
+            { "id": "w3", "text": "ISO 9001 ist nur ein Sammelbegriff für Qualität im Allgemeinen.", "correct": false },
+            { "id": "w4", "text": "Kerngedanke: Prozesse definieren, messen und kontinuierlich verbessern.", "correct": true }
+          ]
+        },
+        {
+          "id": "iso9000",
+          "label": "ISO 9000 (Begriffe und Grundlagen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ISO 9000 liefert Begriffe/Grundlagen des Qualitätsmanagements.", "correct": true },
+            { "id": "w2", "text": "Ist typischerweise die konkrete Zertifizierungs-Anforderungsnorm.", "correct": false },
+            { "id": "w3", "text": "Hilft, QM-Begriffe sauber zu verwenden.", "correct": true },
+            { "id": "w4", "text": "Ersetzt Audits und Prozessdokumentation vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "tqm",
+          "label": "TQM (Total Quality Management)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "TQM ist Kultur/Mindset: Qualität als Aufgabe aller.", "correct": true },
+            { "id": "w2", "text": "Ziel: Fehlerprävention statt Fehlerbehebung (Qualität wird eingebaut).", "correct": true },
+            { "id": "w3", "text": "TQM ist identisch mit ISO 9001-Zertifizierung.", "correct": false },
+            { "id": "w4", "text": "Gibt Struktur, Dokumentation und Zertifizierung als Hauptfokus vor.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "ISO 9001 ist die Zertifizierungsnorm (QM-System nachweisbar). ISO 9000 = Grundlagen/Begriffe. TQM = Kultur/Mindset."
+    },
+    {
+      "id": "v17",
+      "profile": "Nach einem Incident will das Team dauerhaft besser werden. Es wird eine Maßnahme ausprobiert, Daten werden ausgewertet und anschließend als Standard übernommen.",
+      "tags": ["PDCA", "Kontinuierliche Verbesserung", "Prüfungswissen"],
+      "options": [
+        {
+          "id": "pdca",
+          "label": "PDCA-Zyklus (Plan–Do–Check–Act)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Plan: Änderung planen, Ziel/Kriterium festlegen.", "correct": true },
+            { "id": "w2", "text": "Check: Wirkung mit Daten prüfen (sonst optimierst du ins Blaue).", "correct": true },
+            { "id": "w3", "text": "Act: Verbesserung standardisieren/ausrollen, nicht nur experimentieren.", "correct": true },
+            { "id": "w4", "text": "PDCA bedeutet: Do–Do–Do–Do, Hauptsache schnell.", "correct": false }
+          ]
+        },
+        {
+          "id": "ad_hoc",
+          "label": "Ad-hoc-Optimierung ohne Check/Act",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Check fehlt Nachweis, ob es wirklich besser wurde.", "correct": true },
+            { "id": "w2", "text": "Ohne Act wird Verbesserung nicht standardisiert (bleibt Einzelfall).", "correct": true },
+            { "id": "w3", "text": "Wenn man Daten prüft, ist Act automatisch erledigt.", "correct": false },
+            { "id": "w4", "text": "PDCA ist genau dafür da: Verbesserungen systematisch machen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_plan",
+          "label": "Nur Plan erstellen, dann fertig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Plan ohne Do ist nur Papier.", "correct": true },
+            { "id": "w2", "text": "Plan ersetzt nicht Check und Act.", "correct": true },
+            { "id": "w3", "text": "PDCA endet nach Plan, weil der Rest optional ist.", "correct": false },
+            { "id": "w4", "text": "Kontinuierliche Verbesserung braucht Loop, nicht Einmalaktion.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "PDCA: Planen → Umsetzen → Prüfen → Standardisieren. „Check“ und „Act“ sind die klassischen Prüfungsfallen."
+    },
+    {
+      "id": "v18",
+      "profile": "In der Doku steht: „Qualität = bugfrei“. Gleichzeitig heißt es: „Wir testen später“ und es gibt keine Review- oder Dokumentationspflichten.",
+      "tags": ["Softwarequalität", "Produktqualität", "Prozessqualität", "QS", "Dokumentation", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "prozessqualitaet",
+          "label": "Prozessqualität (wie wir zu Qualität kommen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Prozessqualität: Reviews, Tests, Standards eingehalten.", "correct": true },
+            { "id": "w2", "text": "„Wir testen später“ ist teuer: je später, desto teurer die Fehlerbehebung.", "correct": true },
+            { "id": "w3", "text": "Dokumentation ist Selbstzweck und daher verzichtbar.", "correct": false },
+            { "id": "w4", "text": "„Was nicht dokumentiert ist, ist nicht passiert“ (Nachweisbarkeit).", "correct": true }
+          ]
+        },
+        {
+          "id": "produktqualitaet",
+          "label": "Produktqualität (was am Ende herauskommt)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Produktqualität umfasst mehr als „bugfrei“: z. B. Sicherheit, Nutzbarkeit, Wartbarkeit.", "correct": true },
+            { "id": "w2", "text": "Nur „bugfrei“ zu nennen ist eine Prüfungsfalle, Qualität ist mehrdimensional.", "correct": true },
+            { "id": "w3", "text": "Produktqualität beschreibt ausschließlich, ob Unit-Tests existieren.", "correct": false },
+            { "id": "w4", "text": "Ein guter Prozess führt oft zu gutem Produkt, aber nicht automatisch.", "correct": true }
+          ]
+        },
+        {
+          "id": "buzzwords",
+          "label": "Buzzwords reichen („Wir nutzen Scrum und PDCA“)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Nur Begriffe nennen bringt wenig Punkte.", "correct": true },
+            { "id": "w2", "text": "Punkte gibt es für: begründen + anwenden + Risiko ohne Methode benennen.", "correct": true },
+            { "id": "w3", "text": "Je mehr Methoden-Namen, desto mehr Punkte – auch ohne Beispiel.", "correct": false },
+            { "id": "w4", "text": "Qualität muss geplant werden: Kriterien, Reviews/Tests, Doku, Abnahme.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Prozessqualität heißt: Reviews/Tests/Standards/Dokumentation von Anfang an planen. Produktqualität ist mehrdimensional (nicht nur „bugfrei“). Buzzwords ohne Anwendung kosten Punkte."
+    }
+  ]
+}

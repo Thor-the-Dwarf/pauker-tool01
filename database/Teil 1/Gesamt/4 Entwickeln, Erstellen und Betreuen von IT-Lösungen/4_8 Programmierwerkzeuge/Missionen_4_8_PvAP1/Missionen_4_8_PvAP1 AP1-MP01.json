@@ -1,0 +1,66 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Programmierwerkzeuge – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jedes Werkzeug der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Werkzeug",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle das passende Werkzeug.",
+    "column2": "Wähle die richtige Bedeutung.",
+    "column3": "Ordne eine typische Anwendung zu."
+  },
+  "sets": [
+    {
+      "id": "struktogramm",
+      "name": "Struktogramm (Nassi-Shneiderman)",
+      "description": "Blockdiagramm zur Darstellung von Programmstruktur (Sequenz, Auswahl, Schleife) ohne Fluss-Pfeile.",
+      "example": "Du modellierst einen Login-Ablauf mit IF/ELSE und Wiederholung für maximal 3 Versuche als Struktogramm."
+    },
+    {
+      "id": "pap",
+      "name": "PAP (Programmablaufplan / Flowchart)",
+      "description": "Ablaufdiagramm mit standardisierten Symbolen (Start/Ende, Prozess, Entscheidung) und Pfeilen für den Kontrollfluss.",
+      "example": "Du zeichnest den Ablauf „Passwort zurücksetzen“ mit Entscheidungen (Token gültig?) als PAP."
+    },
+    {
+      "id": "pseudocode",
+      "name": "Pseudocode",
+      "description": "Textuelle, sprachnahe Beschreibung eines Algorithmus, unabhängig von einer konkreten Programmiersprache.",
+      "example": "Du beschreibst die Sortierlogik: „für jedes Element… wenn kleiner… tauschen…“ bevor du Code schreibst."
+    },
+    {
+      "id": "uml_use_case",
+      "name": "UML: Use-Case-Diagramm",
+      "description": "Zeigt Akteure und deren Anwendungsfälle (Funktionen) – Fokus auf Anforderungen und Systemgrenzen.",
+      "example": "Akteure „Kunde“ und „Admin“ mit Use Cases „Registrieren“, „Bestellen“, „Rechnung ansehen“, „Benutzer verwalten“."
+    },
+    {
+      "id": "uml_klassendiagramm",
+      "name": "UML: Klassendiagramm",
+      "description": "Strukturmodell: Klassen mit Attributen/Methoden sowie Beziehungen (Assoziation, Vererbung, Aggregation/Komposition).",
+      "example": "Klassen „Kunde“, „Bestellung“, „Artikel“ mit Beziehungen und Kardinalitäten für ein Shopsystem."
+    },
+    {
+      "id": "ui_entwurf",
+      "name": "Entwurf von Bildschirmausgabemasken (UI)",
+      "description": "Planung von Screens/Forms: Layout, Navigation, Eingabefelder, Feedback, Fehlermeldungen und Konsistenz.",
+      "example": "Du entwirfst eine Maske „Neuer Benutzer“ mit Pflichtfeldern, Inline-Validierung und klarer Button-Hierarchie."
+    },
+    {
+      "id": "softwareergonomie",
+      "name": "Softwareergonomie",
+      "description": "Bedienbarkeit/Usability: effizient, verständlich, fehlertolerant, konsistent und passend zur Zielgruppe.",
+      "example": "Du reduzierst Klickwege, nutzt klare Labels statt interner Fachbegriffe und zeigst hilfreiche Fehlermeldungen."
+    },
+    {
+      "id": "ui_barrierefreiheit",
+      "name": "Barrierefreiheit im UI",
+      "description": "Gestaltung, damit alle Nutzer das System bedienen können (Kontrast, Tastaturbedienung, Screenreader, Alternativtexte).",
+      "example": "Formular ist vollständig per Tastatur nutzbar, Fokus ist sichtbar, Kontrast stimmt, Labels sind mit Inputs verknüpft."
+    }
+  ]
+}

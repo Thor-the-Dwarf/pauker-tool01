@@ -1,0 +1,414 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Netzwerke (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich einen Begriff gewählt: {SECRET_NAME}.",
+  "legalForms": [
+    {
+      "id": "switch",
+      "name": "Switch",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": true,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "router_default_gateway",
+      "name": "Router (Default Gateway)",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": true,
+        "layer4_focus": false,
+        "segments_broadcast_domain": true,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "vlan",
+      "name": "VLAN",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": true,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": true,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "access_point",
+      "name": "Access Point",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": true,
+        "layer2_focus": true,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "dhcp",
+      "name": "DHCP",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": true,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "dns",
+      "name": "DNS",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": true,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "nat",
+      "name": "NAT",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": true,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": true,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "arp_ipv4",
+      "name": "ARP (IPv4)",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": true,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": true,
+        "ip_version_4": true,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "ipv4",
+      "name": "IPv4",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": true,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": true,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "ipv6",
+      "name": "IPv6",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": true,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": true,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "subnetzmaske_cidr",
+      "name": "Subnetzmaske/CIDR (Subnetting)",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": true,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": true,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "patchpanel",
+      "name": "Patchpanel",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": true,
+        "structured_cabling_component": true,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "kupfer_twisted_pair",
+      "name": "Kupfer (Twisted Pair)",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": true,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    },
+    {
+      "id": "glasfaser_lwl",
+      "name": "Glasfaser (LWL)",
+      "attributes": {
+        "physical_component": true,
+        "passive_component": true,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": false,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": true
+      }
+    },
+    {
+      "id": "port",
+      "name": "Port (TCP/UDP-Port)",
+      "attributes": {
+        "physical_component": false,
+        "passive_component": false,
+        "structured_cabling_component": false,
+        "wireless": false,
+        "layer2_focus": false,
+        "layer3_focus": false,
+        "layer4_focus": true,
+        "segments_broadcast_domain": false,
+        "auto_ip_config": false,
+        "name_resolution": false,
+        "address_translation": false,
+        "ip_to_mac_mapping": false,
+        "ip_version_4": false,
+        "ip_version_6": false,
+        "long_distance_high_bandwidth": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Ist es eine physische Komponente (Hardware/Kabel)?",
+      "attributeKey": "physical_component"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Ist es eine passive Komponente (ohne eigene Logik/Strombedarf)?",
+      "attributeKey": "passive_component"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist es ein typisches Element der strukturierten Gebäudeverkabelung (z. B. Patchpanel)?",
+      "attributeKey": "structured_cabling_component"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Hat es primär mit Funk/WLAN zu tun?",
+      "attributeKey": "wireless"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Liegt der Schwerpunkt auf OSI-Layer 2 (MAC/Frames/Switching)?",
+      "attributeKey": "layer2_focus"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Liegt der Schwerpunkt auf OSI-Layer 3 (IP/Routing/Adressierung)?",
+      "attributeKey": "layer3_focus"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Liegt der Schwerpunkt auf OSI-Layer 4 (Ports/Transport)?",
+      "attributeKey": "layer4_focus"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Trennt es Broadcast-Domänen bzw. segmentiert Netze logisch?",
+      "attributeKey": "segments_broadcast_domain"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Vergibt es automatisch IP-Konfiguration an Clients (DHCP-Prinzip)?",
+      "attributeKey": "auto_ip_config"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Löst es Namen in IP-Adressen auf (DNS-Prinzip)?",
+      "attributeKey": "name_resolution"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Übersetzt es private in öffentliche Adressen (NAT-Prinzip)?",
+      "attributeKey": "address_translation"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ordnet es im lokalen Netz eine IP-Adresse einer MAC-Adresse zu (ARP-Prinzip)?",
+      "attributeKey": "ip_to_mac_mapping"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Geht es speziell um IPv4?",
+      "attributeKey": "ip_version_4"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Geht es speziell um IPv6?",
+      "attributeKey": "ip_version_6"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Ist es besonders geeignet für lange Strecken/Backbone mit hoher Bandbreite?",
+      "attributeKey": "long_distance_high_bandwidth"
+    }
+  ]
+}

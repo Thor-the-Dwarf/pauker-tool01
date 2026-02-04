@@ -1,0 +1,213 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Dateiformate (AP1)",
+  "topic": "Text vs Binär • Struktur & Schnittstellen • Encoding (UTF-8) • CSV-Trennzeichen • JSON/XML Schema & Validierung",
+  "estimated_minutes": 25,
+  "sections": [
+    {
+      "id": "text-vs-binaer-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Textformat oder Binärformat?",
+      "subtitle": "Ordne die Dateiendungen richtig zu.",
+      "hintDefault": "Text: direkt lesbar/editierbar. Binär: kompakt, oft komplex/verschachtelt.",
+      "sortColumns": [
+        { "zone": "text", "label": "Textformate", "hint": "(lesbar, gut für Schnittstellen)" },
+        { "zone": "binaer", "label": "Binärformate", "hint": "(kompakt, komplex)" }
+      ],
+      "sortCards": [
+        { "id": "t1", "text": "TXT", "correctZone": "text" },
+        { "id": "t2", "text": "CSV", "correctZone": "text" },
+        { "id": "t3", "text": "JSON", "correctZone": "text" },
+        { "id": "t4", "text": "XML", "correctZone": "text" },
+        { "id": "b1", "text": "DOCX", "correctZone": "binaer" },
+        { "id": "b2", "text": "XLSX", "correctZone": "binaer" },
+        { "id": "b3", "text": "PDF", "correctZone": "binaer" },
+        { "id": "b4", "text": "JPG/PNG", "correctZone": "binaer" },
+        { "id": "b5", "text": "MP4", "correctZone": "binaer" }
+      ]
+    },
+    {
+      "id": "struktur-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Struktur – was bedeutet das?",
+      "subtitle": "Dateiformat ist nicht nur „Endung“. Es ist ein Vertrag.",
+      "hintDefault": "CSV = Trennzeichen/Zeilen/Spalten. JSON/XML = Struktur + (optional) Schema/Validierung. Encoding entscheidet, wie Bytes zu Zeichen werden.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Warum eignen sich Textformate oft gut für Schnittstellen?",
+          "options": [
+            { "value": "a", "text": "Sie sind für Menschen und Tools direkt lesbar und leicht zu parsen." },
+            { "value": "b", "text": "Sie sind immer kleiner als Binärformate." },
+            { "value": "c", "text": "Sie können keine Struktur haben." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s2",
+          "text": "2. Was ist bei CSV in der Praxis eine typische Fehlerquelle?",
+          "options": [
+            { "value": "a", "text": "Das Trennzeichen (Komma vs Semikolon) und Quotes/Escaping." },
+            { "value": "b", "text": "CSV darf keine Zeilenumbrüche enthalten." },
+            { "value": "c", "text": "CSV ist immer verschlüsselt." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s3",
+          "text": "3. Was bringt Schema/Validierung bei JSON/XML am ehesten?",
+          "options": [
+            { "value": "a", "text": "Es prüft, ob Struktur und Pflichtfelder/Datentypen eingehalten werden." },
+            { "value": "b", "text": "Es macht die Datei automatisch kleiner." },
+            { "value": "c", "text": "Es ersetzt jede Art von Test." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s4",
+          "text": "4. Was bedeutet Encoding (z. B. UTF-8) am ehesten?",
+          "options": [
+            { "value": "a", "text": "Wie Zeichen als Bytes gespeichert/interpretierbar sind." },
+            { "value": "b", "text": "Welche CPU die Datei erstellt hat." },
+            { "value": "c", "text": "Dass eine Datei immer Binär ist." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "schnittstellen-checkliste-capital",
+      "type": "capital",
+      "title": "Rätsel 3: Schnittstelle absichern – Reihenfolge",
+      "subtitle": "Setze die Schritte in eine sinnvolle Prüfreihenfolge.",
+      "hintDefault": "Erst Encoding klären, dann Format-Regeln (z. B. CSV), dann Struktur/Schemaprüfung, dann Tests mit Beispieldaten.",
+      "rows": [
+        {
+          "key": "encoding",
+          "label": "Encoding festlegen/prüfen (z. B. UTF-8)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "formatregeln",
+          "label": "Format-Regeln klären (CSV: Trennzeichen/Quotes; JSON/XML: Struktur)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "schema",
+          "label": "Schema/Validierung definieren (Pflichtfelder, Datentypen, erlaubte Werte)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "beispieldaten",
+          "label": "Mit Beispiel-Dateien testen (Happy Path + Fehlerfälle)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "robust",
+          "label": "Robustheit prüfen (leere Felder, Sonderzeichen, Zeilenumbrüche, große Dateien)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerbilder-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Typische Fehlerbilder",
+      "subtitle": "Ordne das Problem der passenden Ursache zu.",
+      "hintDefault": "Umlaute kaputt = Encoding. Spalten verrutschen = Trennzeichen/Quotes. Felder fehlen/Typ falsch = Schema/Validierung.",
+      "sortColumns": [
+        { "zone": "encoding", "label": "Encoding", "hint": "(UTF-8 etc.)" },
+        { "zone": "csv", "label": "CSV-Regeln", "hint": "(Trennzeichen/Quotes)" },
+        { "zone": "schema", "label": "Schema/Validierung", "hint": "(Struktur/Datentypen)" }
+      ],
+      "sortCards": [
+        { "id": "f1", "text": "Umlaute/ß werden zu „�“ oder komischen Zeichen", "correctZone": "encoding" },
+        { "id": "f2", "text": "CSV hat „zu viele Spalten“, weil Werte ein Komma enthalten", "correctZone": "csv" },
+        { "id": "f3", "text": "CSV wird in Excel „falsch getrennt“ (alles in einer Spalte)", "correctZone": "csv" },
+        { "id": "f4", "text": "JSON: Pflichtfeld fehlt oder Datentyp stimmt nicht (String statt Zahl)", "correctZone": "schema" },
+        { "id": "f5", "text": "XML: Struktur stimmt nicht zur erwarteten Definition", "correctZone": "schema" },
+        { "id": "f6", "text": "Textdatei ist lesbar, aber Zeichenkodierung passt nicht zur Schnittstelle", "correctZone": "encoding" }
+      ]
+    },
+    {
+      "id": "finale-szenarien-quiz",
+      "type": "quiz",
+      "title": "Finale: Formatwahl – schnell & korrekt",
+      "subtitle": "Wähle das passendste Format für das Szenario.",
+      "hintDefault": "Schnittstelle/Debugbarkeit = Text (CSV/JSON/XML). Medien/Office/PDF = Binär. Und immer Encoding/Regeln klären.",
+      "questions": [
+        {
+          "id": "qf1",
+          "text": "1. Zwei Systeme tauschen strukturierte Daten mit verschachtelten Objekten aus. Was passt am besten?",
+          "options": [
+            { "value": "a", "text": "JSON" },
+            { "value": "b", "text": "JPG" },
+            { "value": "c", "text": "MP4" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "qf2",
+          "text": "2. Du willst eine einfache Tabelle exportieren/importieren (Zeilen/Spalten), möglichst kompatibel.",
+          "options": [
+            { "value": "a", "text": "CSV" },
+            { "value": "b", "text": "PDF" },
+            { "value": "c", "text": "PNG" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "qf3",
+          "text": "3. Du bekommst „komische Zeichen“ bei Umlauten in einer Textdatei. Wo prüfst du zuerst?",
+          "options": [
+            { "value": "a", "text": "Encoding (z. B. UTF-8)" },
+            { "value": "b", "text": "CPU-Takt" },
+            { "value": "c", "text": "RAID-Level" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

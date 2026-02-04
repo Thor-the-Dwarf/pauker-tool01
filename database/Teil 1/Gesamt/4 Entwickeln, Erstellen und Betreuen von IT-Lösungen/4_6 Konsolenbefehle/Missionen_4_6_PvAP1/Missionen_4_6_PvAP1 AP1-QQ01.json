@@ -1,0 +1,107 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Konsolenbefehle (4.6)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu Konsolenbefehlen zu starten.",
+  "sublineText": "Wähle den passenden Befehl zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "dir",
+    "ls",
+    "mkdir",
+    "del",
+    "cp",
+    "copy",
+    "ipconfig",
+    "ifconfig",
+    "iproute2",
+    "alias",
+    "arp",
+    "chmod",
+    "ping",
+    "traceroute",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Windows: Zeigt den Inhalt eines Verzeichnisses an.",
+      "correct": "dir"
+    },
+    {
+      "text": "Linux/macOS: Listet Dateien und Ordner im aktuellen Verzeichnis.",
+      "correct": "ls"
+    },
+    {
+      "text": "Erstellt einen neuen Ordner (z. B. 'mkdir logs').",
+      "correct": "mkdir"
+    },
+    {
+      "text": "Windows: Löscht eine Datei (z. B. 'del test.txt').",
+      "correct": "del"
+    },
+    {
+      "text": "Linux/macOS: Kopiert Dateien/Ordner (z. B. 'cp a.txt b.txt' oder 'cp -r src dst').",
+      "correct": "cp"
+    },
+    {
+      "text": "Windows: Kopiert Dateien (z. B. 'copy a.txt b.txt').",
+      "correct": "copy"
+    },
+    {
+      "text": "Windows: Zeigt IP-Konfiguration (IP, Gateway, DNS) an.",
+      "correct": "ipconfig"
+    },
+    {
+      "text": "Linux/macOS (klassisch): Zeigt Netzwerkinterfaces und IPs an.",
+      "correct": "ifconfig"
+    },
+    {
+      "text": "Linux (modern): Befehls-Suite wie 'ip addr', 'ip route', 'ip link' zur Netzwerkkonfiguration.",
+      "correct": "iproute2"
+    },
+    {
+      "text": "Legt eine Abkürzung für einen Befehl fest (z. B. 'alias ll=\"ls -la\"').",
+      "correct": "alias"
+    },
+    {
+      "text": "Zeigt/verwaltet ARP-Tabellen (Zuordnung IP ↔ MAC) im lokalen Netz.",
+      "correct": "arp"
+    },
+    {
+      "text": "Ändert Dateirechte unter Linux/macOS (z. B. 'chmod 644 file.txt').",
+      "correct": "chmod"
+    },
+    {
+      "text": "Testet Erreichbarkeit über ICMP und misst grob die Laufzeit (Round Trip Time).",
+      "correct": "ping"
+    },
+    {
+      "text": "Zeigt den Weg (Hops) zu einem Ziel im Netzwerk an (Routing-Pfad).",
+      "correct": "traceroute"
+    },
+    {
+      "text": "Windows: Befehl zum Löschen von Dateien ist dieser.",
+      "correct": "del"
+    },
+    {
+      "text": "Linux/macOS: Standardbefehl zum Listen von Dateien ist dieser.",
+      "correct": "ls"
+    },
+    {
+      "text": "Windows: Standardbefehl zum Anzeigen der Netzwerkkonfiguration ist dieser.",
+      "correct": "ipconfig"
+    },
+    {
+      "text": "Linux: Wenn 'ifconfig' fehlt, ist das moderne Werkzeug dafür meist dieses Paket/Toolset.",
+      "correct": "iproute2"
+    },
+    {
+      "text": "Wenn du prüfen willst, ob DNS/HTTP nicht das Problem sind, sondern überhaupt Netzwerk da ist, nutzt du oft zuerst diesen Befehl.",
+      "correct": "ping"
+    },
+    {
+      "text": "Wenn du herausfinden willst, an welchem Hop/Router die Verbindung hängen bleibt, nutzt du diesen Befehl.",
+      "correct": "traceroute"
+    }
+  ]
+}

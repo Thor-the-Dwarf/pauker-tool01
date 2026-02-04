@@ -1,0 +1,88 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Virtualisierung & Container (AP1-Kurzformat)",
+  "topic": "VMs (Hypervisor, eigenes OS, Overhead) • Container (Kernel teilen, leicht) • Nutzen (Auslastung, Deployment, Tests)",
+  "estimated_minutes": 15,
+  "sections": [
+    {
+      "id": "vm-vs-container-sort",
+      "type": "sort",
+      "title": "Rätsel 1: VM oder Container?",
+      "subtitle": "Ordne Aussagen sauber zu.",
+      "hintDefault": "VM = eigenes OS pro Instanz. Container = teilen Kernel. Beides isoliert, aber anders.",
+      "sortColumns": [
+        { "zone": "vm", "label": "Virtuelle Maschine (VM)", "hint": "(eigenes OS, Hypervisor)" },
+        { "zone": "container", "label": "Container", "hint": "(Kernel teilen, leicht)" },
+        { "zone": "beides", "label": "Beides", "hint": "(kommt bei beiden vor)" }
+      ],
+      "sortCards": [
+        { "id": "v1", "text": "Jede Instanz bringt ein komplettes Gast-Betriebssystem mit", "correctZone": "vm" },
+        { "id": "v2", "text": "Läuft auf einem Hypervisor", "correctZone": "vm" },
+        { "id": "v3", "text": "Höherer Overhead (RAM/Storage) pro Instanz", "correctZone": "vm" },
+        { "id": "v4", "text": "Teilt sich den Kernel des Hosts", "correctZone": "container" },
+        { "id": "v5", "text": "Startet typischerweise sehr schnell", "correctZone": "container" },
+        { "id": "v6", "text": "Isolation ist vorhanden, aber anders umgesetzt als bei VMs", "correctZone": "container" },
+        { "id": "v7", "text": "Eignet sich für testbare, reproduzierbare Umgebungen", "correctZone": "beides" },
+        { "id": "v8", "text": "Kann für bessere Auslastung von Hardware sorgen", "correctZone": "beides" }
+      ]
+    },
+    {
+      "id": "quickcheck-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz (AP1)",
+      "subtitle": "Die drei Standardpunkte sicher treffen.",
+      "hintDefault": "VM: stark isoliert, aber schwerer. Container: leicht/schnell, Kernel geteilt. Nutzen: Auslastung/Deployment/Test.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist der Kern-Unterschied bei VMs?",
+          "options": [
+            { "value": "a", "text": "VMs teilen sich immer den Kernel." },
+            { "value": "b", "text": "VMs haben typischerweise ein eigenes OS pro Maschine." },
+            { "value": "c", "text": "VMs sind nur für Datenbanken geeignet." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Warum sind Container oft „leichter“ als VMs?",
+          "options": [
+            { "value": "a", "text": "Weil sie den Kernel teilen und kein komplettes Gast-OS pro Instanz brauchen." },
+            { "value": "b", "text": "Weil sie keine CPU brauchen." },
+            { "value": "c", "text": "Weil sie immer auf HDD laufen." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was ist ein typischer Nutzen von Virtualisierung/Containern?",
+          "options": [
+            { "value": "a", "text": "Schlechtere Auslastung durch mehr Leerlauf." },
+            { "value": "b", "text": "Schnelles Deployment und gut testbare Umgebungen." },
+            { "value": "c", "text": "Mehr Monitor-Anschlüsse." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "einsatz-sort",
+      "type": "sort",
+      "title": "Finale: Wann nimmt man eher was?",
+      "subtitle": "Grob entscheiden können.",
+      "hintDefault": "VM, wenn du starke Trennung/anderes OS brauchst. Container, wenn du schnell & leicht deployen willst.",
+      "sortColumns": [
+        { "zone": "vm", "label": "Eher VM", "hint": "(anderes OS, starke Trennung)" },
+        { "zone": "container", "label": "Eher Container", "hint": "(schnell, leicht, skalierbar)" }
+      ],
+      "sortCards": [
+        { "id": "e1", "text": "Mehrere unterschiedliche Betriebssysteme parallel betreiben", "correctZone": "vm" },
+        { "id": "e2", "text": "Legacy-Software mit festem OS-Abhängigkeiten-Paket", "correctZone": "vm" },
+        { "id": "e3", "text": "Microservices schnell ausrollen und skalieren", "correctZone": "container" },
+        { "id": "e4", "text": "CI/CD: identische Testumgebung pro Pipeline-Run", "correctZone": "container" },
+        { "id": "e5", "text": "Viele kleine Services auf einem Host mit wenig Overhead", "correctZone": "container" }
+      ]
+    }
+  ]
+}

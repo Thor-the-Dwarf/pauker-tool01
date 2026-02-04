@@ -1,0 +1,745 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – IT-Systeme (AP1): Hardware, Software, Dateiformate, Cloud, USV, Backup",
+  "description": "Schritt 1: passendes Konzept/Komponente bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "In der Aufgabe sollst du erklären, was ein „IT-System“ im AP1-Sinn ist. Es geht nicht nur um Teilelisten, sondern um Betrieb und Wiederherstellung.",
+      "tags": ["IT-System", "Überblick", "Prüfungslogik"],
+      "options": [
+        {
+          "id": "it_system_ganzheit",
+          "label": "Hardware + Software + Daten + Prozesse (Betrieb/Backup/Sicherheit)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein IT-System ist mehr als Hardware: Ohne Software/Daten/Prozesse liefert es keinen Nutzen.", "correct": true },
+            { "id": "w2", "text": "In Prüfungen zählt auch: Betrieb, Risiken, Backup/Restore, USV – nicht nur Specs.", "correct": true },
+            { "id": "w3", "text": "„Funktioniert“ ist erst plausibel, wenn Wiederherstellung (Restore) geklärt ist.", "correct": true },
+            { "id": "w4", "text": "IT-System = nur CPU, RAM und SSD; der Rest ist „optional“.", "correct": false }
+          ]
+        },
+        {
+          "id": "it_system_nur_hw",
+          "label": "Nur Hardware (CPU/RAM/SSD) – Software ist „extra“",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne OS/Anwendung ist Hardware kein einsatzfähiges System.", "correct": true },
+            { "id": "w2", "text": "Betrieb (Updates, Backup, Rechte) ist Teil der Systembetrachtung.", "correct": true },
+            { "id": "w3", "text": "Specs aufzählen reicht in AP1 oft nicht ohne Use-Case + Kompatibilität + Betrieb.", "correct": true },
+            { "id": "w4", "text": "Backup und USV sind nie Teil eines IT-Systems.", "correct": false }
+          ]
+        },
+        {
+          "id": "it_system_nur_sw",
+          "label": "Nur Software (OS + Apps) – Hardware ist austauschbar und irrelevant",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Software braucht Hardware-Ressourcen; Auswahl/Kompatibilität beeinflusst Stabilität/Leistung.", "correct": true },
+            { "id": "w2", "text": "Engpässe (RAM/IO) sind oft Hardware-/Betrieb-Themen.", "correct": true },
+            { "id": "w3", "text": "Prozesse (Backup/Restore, Patch-Konzept) gehören zur Systemrealität.", "correct": true },
+            { "id": "w4", "text": "Hardware hat keinen Einfluss auf Performance oder Ausfallrisiko.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "AP1-Sicht: IT-System = Hardware + Software + Daten + Betriebsprozesse (Backup/USV/Sicherheit). Nur Specs ohne Use-Case/Betrieb ist zu dünn."
+    },
+    {
+      "id": "v02",
+      "profile": "Du sollst Hardware passend zum Use-Case begründen. Zwei Szenarien: (A) Büro/Office/Browser, (B) VM-Host/Render. Was ist die richtige Logik?",
+      "tags": ["Hardware", "Use-Case", "CPU", "RAM"],
+      "options": [
+        {
+          "id": "workload_logik",
+          "label": "Büro: gutes Single-Core + SSD · VM/Render: mehr Kerne + viel RAM",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "UI/Office profitieren oft stärker von Single-Core-Reaktionszeit als von vielen Kernen.", "correct": true },
+            { "id": "w2", "text": "VMs/Render skalieren typischerweise mit mehr Kernen/Threads und RAM.", "correct": true },
+            { "id": "w3", "text": "Use-Case-basierte Begründung ist AP1-typisch (nicht nur Zahlen).", "correct": true },
+            { "id": "w4", "text": "Immer nur maximaler GHz-Wert entscheidet über „schnell“. ", "correct": false }
+          ]
+        },
+        {
+          "id": "ghz_immer",
+          "label": "Immer höchste GHz nehmen – das ist automatisch am schnellsten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "GHz allein sagt wenig ohne Architektur/Cache/Workload.", "correct": true },
+            { "id": "w2", "text": "Mehr Kerne können bei Multi-Core-Workloads wichtiger sein als Takt.", "correct": true },
+            { "id": "w3", "text": "AP1-Falle: „GHz = schnell“ ist zu kurz gedacht.", "correct": true },
+            { "id": "w4", "text": "Cache und RAM-Engpässe spielen keine Rolle.", "correct": false }
+          ]
+        },
+        {
+          "id": "ram_unwichtig",
+          "label": "RAM ist kaum wichtig – zur Not wird auf die SSD ausgelagert",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zu wenig RAM führt zu Paging/Swap → System wird deutlich zäher.", "correct": true },
+            { "id": "w2", "text": "Auslagern ist Größenordnungen langsamer als RAM.", "correct": true },
+            { "id": "w3", "text": "Erst RAM-Engpass vermeiden, dann CPU feinjustieren, ist eine saubere Prüfungslogik.", "correct": true },
+            { "id": "w4", "text": "Paging macht Systeme schneller, weil SSDs sehr schnell sind.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Nicht „Specs feiern“, sondern Workload begründen: Büro eher Single-Core + SSD; VM/Render eher viele Kerne + viel RAM."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein PC „ruckelt“ plötzlich, Programme reagieren träge, die SSD-LED ist fast dauerhaft aktiv. In der Aufgabe sollst du den typischen Engpass benennen.",
+      "tags": ["RAM", "Paging", "Fehlerbild"],
+      "options": [
+        {
+          "id": "ram_zu_wenig",
+          "label": "Zu wenig RAM → Paging/Swap → zäh",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn RAM voll ist, wird Speicher auf SSD/HDD ausgelagert → massiv langsamer.", "correct": true },
+            { "id": "w2", "text": "Symptom: hohe Datenträgeraktivität bei „eigentlich einfachen“ Aufgaben.", "correct": true },
+            { "id": "w3", "text": "AP1-taugliche Erklärung: RAM ist Arbeitsbereich, schnell und flüchtig.", "correct": true },
+            { "id": "w4", "text": "Das ist immer ein CPU-Cache-Defekt.", "correct": false }
+          ]
+        },
+        {
+          "id": "cpu_defekt",
+          "label": "CPU ist defekt – deshalb wird alles langsam",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CPU-Defekt ist selten; typische Ursache ist Ressourcendruck (RAM/IO).", "correct": true },
+            { "id": "w2", "text": "Paging erklärt die starke SSD-Aktivität besser als „CPU kaputt“.", "correct": true },
+            { "id": "w3", "text": "Fehlerbilder sauber deuten ist AP1-relevant.", "correct": true },
+            { "id": "w4", "text": "Wenn SSD-LED leuchtet, ist immer das Netzteil schuld.", "correct": false }
+          ]
+        },
+        {
+          "id": "ram_wie_festplatte",
+          "label": "RAM ist wie Festplatte – nur größer",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAM ist flüchtig, extrem schnell, Arbeitsbereich; Festplatte/SSD ist persistent.", "correct": true },
+            { "id": "w2", "text": "„Auslagern“ ist Notlösung, kein Normalbetrieb.", "correct": true },
+            { "id": "w3", "text": "Begriffsverwechslung kostet Punkte.", "correct": true },
+            { "id": "w4", "text": "RAM bleibt nach Stromausfall erhalten.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Klassiker: RAM zu klein → Paging/Swap → alles wird zäh (viel Datenträgeraktivität)."
+    },
+    {
+      "id": "v04",
+      "profile": "Du sollst den passenden Speicher für drei Zwecke wählen: (1) Archiv/Backup-Target, (2) Office-PC, (3) Datenbank/VM-Host. Was passt am besten?",
+      "tags": ["Speicher", "HDD", "SSD", "NVMe", "Use-Case"],
+      "options": [
+        {
+          "id": "speicher_usecase",
+          "label": "Archiv/Backup: HDD · Office: SATA-SSD · DB/VM: NVMe",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "HDD ist günstig pro GB, gut für große, selten genutzte Daten (Archiv/Backup-Targets).", "correct": true },
+            { "id": "w2", "text": "SATA-SSD ist ein guter Standard: schnell, kompatibel, spürbarer Boost gegenüber HDD.", "correct": true },
+            { "id": "w3", "text": "NVMe liefert sehr hohe IOPS/Durchsatz → sinnvoll bei vielen kleinen Zugriffen (DB/VM).", "correct": true },
+            { "id": "w4", "text": "NVMe ist immer Pflicht, auch für Archiv, sonst ist es „nicht professionell“.", "correct": false }
+          ]
+        },
+        {
+          "id": "alles_hdd",
+          "label": "Alles als HDD – ist am günstigsten, reicht immer",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mechanik macht HDD bei Random-IO langsam; OS/Apps profitieren stark von SSD.", "correct": true },
+            { "id": "w2", "text": "DB/VM-Workloads brauchen oft IOPS, nicht nur Kapazität.", "correct": true },
+            { "id": "w3", "text": "AP1: Auswahl begründen – Kosten sind ein Faktor, aber nicht der einzige.", "correct": true },
+            { "id": "w4", "text": "IOPS sind nur Marketing, haben keine praktische Relevanz.", "correct": false }
+          ]
+        },
+        {
+          "id": "alles_nvme",
+          "label": "Alles als NVMe – maximaler Durchsatz löst alle Probleme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Archiv/Backup braucht oft Kapazität/Preis, nicht Max-IO.", "correct": true },
+            { "id": "w2", "text": "Kompatibilität/Slots/PCIe-Lanes können limitieren.", "correct": true },
+            { "id": "w3", "text": "AP1: wirtschaftlich und passend auswählen, nicht „immer das Schnellste“.", "correct": true },
+            { "id": "w4", "text": "NVMe ersetzt automatisch Backup/Restore-Strategie.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Use-Case schlägt „immer schnell“: Archiv/Backup meist HDD, Office meist SATA-SSD, DB/VM-Host oft NVMe (IOPS!)."
+    },
+    {
+      "id": "v05",
+      "profile": "In der Aufgabe werden Begriffe abgefragt: IOPS, TBW, RAID. Du sollst zuordnen, was worauf abzielt.",
+      "tags": ["IOPS", "TBW", "RAID", "Begriffe"],
+      "options": [
+        {
+          "id": "begriffspaket",
+          "label": "IOPS = viele kleine Zugriffe · TBW = Schreibhaltbarkeit · RAID = Verfügbarkeit/Performance (kein Backup)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IOPS ist entscheidend bei Random-IO (VMs, DB, viele kleine Dateien).", "correct": true },
+            { "id": "w2", "text": "TBW beschreibt, wie viel über Lebenszeit geschrieben werden kann (Endurance).", "correct": true },
+            { "id": "w3", "text": "RAID kann Ausfälle abfedern/Performance erhöhen, ersetzt aber kein Backup.", "correct": true },
+            { "id": "w4", "text": "RAID schützt auch vor Löschen/Malware – deshalb ist Backup überflüssig.", "correct": false }
+          ]
+        },
+        {
+          "id": "tbw_iops_vertauscht",
+          "label": "TBW = Performance · IOPS = Haltbarkeit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vertauscht: IOPS ist Performance bei vielen kleinen Zugriffen.", "correct": true },
+            { "id": "w2", "text": "TBW ist Endurance/Schreibhaltbarkeit.", "correct": true },
+            { "id": "w3", "text": "Begriffe sauber trennen bringt schnelle AP1-Punkte.", "correct": true },
+            { "id": "w4", "text": "IOPS sind nur für Netzwerke relevant, nicht für Storage.", "correct": false }
+          ]
+        },
+        {
+          "id": "raid_ist_backup",
+          "label": "RAID = Backup, weil es ja „doppelt“ ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID spiegelt auch Fehler: Löschen/Verschlüsselung/Mülldaten werden mit übernommen.", "correct": true },
+            { "id": "w2", "text": "Backup braucht Versionierung/Offline/Offsite (z. B. 3-2-1).", "correct": true },
+            { "id": "w3", "text": "RAID ist eher Verfügbarkeits-/Redundanzmaßnahme, nicht Restore-Historie.", "correct": true },
+            { "id": "w4", "text": "RAID ersetzt Restore-Tests, weil es „automatisch“ wiederherstellt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "IOPS = viele kleine Zugriffe, TBW = Schreibhaltbarkeit, RAID = Redundanz/Verfügbarkeit/Performance – aber RAID ist kein Backup."
+    },
+    {
+      "id": "v06",
+      "profile": "Du willst eine M.2-SSD einbauen. Sie passt mechanisch, aber das System erkennt sie nicht. In der Prüfung sollst du den typischen Denkfehler nennen.",
+      "tags": ["Kompatibilität", "M.2", "NVMe", "SATA", "PCIe-Lanes"],
+      "options": [
+        {
+          "id": "passt_mechanisch_nicht_technisch",
+          "label": "„Passt mechanisch ≠ passt technisch“ (Keying/Protokoll/PCIe-Lanes prüfen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "M.2 ist Formfaktor – dahinter kann SATA oder NVMe stecken.", "correct": true },
+            { "id": "w2", "text": "Keying/Protokoll und ggf. PCIe-Lanes/BIOS-Settings entscheiden, ob es funktioniert.", "correct": true },
+            { "id": "w3", "text": "AP1-Check: Sockel + RAM-Typ + M.2-Protokoll + Netzteil/USV.", "correct": true },
+            { "id": "w4", "text": "Wenn es physisch passt, ist es immer kompatibel.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_treiber",
+          "label": "Immer nur Treiberproblem im Betriebssystem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wenn Firmware/UEFI sie nicht sieht, ist es eher Slot/Protokoll/Settings als OS-Treiber.", "correct": true },
+            { "id": "w2", "text": "Kompatibilität beginnt unterhalb des OS (Firmware/Board).", "correct": true },
+            { "id": "w3", "text": "Treiber können Thema sein – aber nicht die einzige Erklärung.", "correct": true },
+            { "id": "w4", "text": "UEFI hat keinen Einfluss auf Storage-Erkennung.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_defekt",
+          "label": "Die SSD ist sicher defekt – Kompatibilität spielt keine Rolle",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Defekt ist möglich, aber AP1 erwartet zuerst die typischen Kompatibilitätsprüfungen.", "correct": true },
+            { "id": "w2", "text": "Keying/Protokoll/Lanes sind klassische Stolpersteine.", "correct": true },
+            { "id": "w3", "text": "Firmware/BIOS/UEFI kann Features aktivieren/deaktivieren.", "correct": true },
+            { "id": "w4", "text": "Mechanisches Passen beweist technische Kompatibilität.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Klassiker: M.2 ist nicht gleich NVMe. „Passt mechanisch“ heißt nicht „passt technisch“ (Keying/Protokoll/Lanes/UEFI)."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Programm startet nicht. Jemand sagt sofort: „Hardware kaputt.“ Du sollst die Fehleranalyse nach Software-Schichten begründen.",
+      "tags": ["Firmware", "OS", "Treiber", "App", "Runtime"],
+      "options": [
+        {
+          "id": "schicht_lokalisieren",
+          "label": "Erst Schicht lokalisieren: Firmware → OS/Treiber → Runtime/Middleware → App",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "BIOS/UEFI startet Hardware – Boot-Probleme sind oft firmware-nah.", "correct": true },
+            { "id": "w2", "text": "OS verwaltet Ressourcen/Treiber – viele Fehler sind Rechte/Abhängigkeiten/Updates.", "correct": true },
+            { "id": "w3", "text": "Runtime/Middleware (z. B. JVM/.NET) kann App-Start verhindern, ohne dass Hardware schuld ist.", "correct": true },
+            { "id": "w4", "text": "Wenn eine App nicht startet, ist das fast immer ein CPU-Defekt.", "correct": false }
+          ]
+        },
+        {
+          "id": "immer_hardware",
+          "label": "„Programm startet nicht“ = Hardwaredefekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Häufiger sind fehlende Rechte, Abhängigkeiten, Runtime, Treiber oder Updates.", "correct": true },
+            { "id": "w2", "text": "Schichtenmodell hilft, Fehler schnell einzugrenzen.", "correct": true },
+            { "id": "w3", "text": "OS/Runtime können Fehler verursachen, auch wenn Hardware okay ist.", "correct": true },
+            { "id": "w4", "text": "Firmware/UEFI ist irrelevant, solange Strom da ist.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_app_neuinstall",
+          "label": "Immer einfach neu installieren, Analyse unnötig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Neuinstallation behebt Ursachen wie Treiber/UEFI/Abhängigkeiten nicht zuverlässig.", "correct": true },
+            { "id": "w2", "text": "AP1 will Begründung/Diagnose, nicht nur „Aktionismus“.", "correct": true },
+            { "id": "w3", "text": "Schicht-Lokalisierung ist systematisch und prüfungsnah.", "correct": true },
+            { "id": "w4", "text": "Neuinstallation löst jede Art von BIOS/UEFI-Problem.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "AP1-Logik: Erst die Schicht finden (Firmware → OS/Treiber → Runtime → App), statt sofort „Hardware kaputt“ zu rufen."
+    },
+    {
+      "id": "v08",
+      "profile": "Du sollst Systemsoftware vs. Anwendungssoftware sauber trennen. Beispiele: Windows/Linux, Treiber, Backup-Agent, Monitoring, Office, Browser, ERP, IDE.",
+      "tags": ["Systemsoftware", "Anwendungssoftware", "Begriffe"],
+      "options": [
+        {
+          "id": "trennung_sauber",
+          "label": "Systemsoftware: OS/Treiber/Dienste/Tools (Backup/Monitoring) · Anwendungssoftware: Office/Browser/ERP/IDE",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Systemsoftware stellt die Laufzeitumgebung bereit und verwaltet Hardware/Services.", "correct": true },
+            { "id": "w2", "text": "Anwendungssoftware löst konkrete Nutzer-/Business-Aufgaben.", "correct": true },
+            { "id": "w3", "text": "Backup-Agent und Monitoring sind typischerweise System-Tools/Dienste.", "correct": true },
+            { "id": "w4", "text": "Office ist Systemsoftware, weil es auf jedem PC installiert ist.", "correct": false }
+          ]
+        },
+        {
+          "id": "alles_anwendung",
+          "label": "Alles ist Anwendungssoftware – Systemsoftware gibt’s praktisch nicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "OS/Treiber/Dienste sind klar Systemsoftware – ohne sie laufen Apps nicht.", "correct": true },
+            { "id": "w2", "text": "Begriffe sauber trennen ist ein typischer Prüfpunkt.", "correct": true },
+            { "id": "w3", "text": "Systemsoftware ist oft der Betriebsteil (Patch/Backup/Monitoring).", "correct": true },
+            { "id": "w4", "text": "Treiber sind Anwendungssoftware, weil sie „Programme“ sind.", "correct": false }
+          ]
+        },
+        {
+          "id": "alles_system",
+          "label": "Alles ist Systemsoftware – auch ERP/Browser/IDE",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ERP/Browser/IDE sind Anwendungen mit fachlichem Zweck, nicht Systemverwaltung.", "correct": true },
+            { "id": "w2", "text": "Systemsoftware ist näher am Betrieb/Plattform, Anwendungen näher am Nutzerprozess.", "correct": true },
+            { "id": "w3", "text": "Falsche Zuordnung kostet Punkte bei Definitions-/Sortieraufgaben.", "correct": true },
+            { "id": "w4", "text": "Wenn etwas Lizenzen hat, ist es automatisch Systemsoftware.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Systemsoftware: OS, Treiber, Dienste, Betriebs-Tools (Backup/Monitoring). Anwendungen: Office, Browser, ERP, IDE."
+    },
+    {
+      "id": "v09",
+      "profile": "AP1-Kurzformat: Du sollst VM vs Container erklären und passend auswählen. Szenario: (A) zwei unterschiedliche OS-Versionen isoliert, (B) schneller Deploy eines Services mit wenig Overhead.",
+      "tags": ["Virtualisierung", "Container", "Isolation", "Kernel"],
+      "options": [
+        {
+          "id": "vm_vs_container",
+          "label": "A: VM · B: Container",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "VM: eigenes OS pro Maschine, starke Isolation, höherer Overhead.", "correct": true },
+            { "id": "w2", "text": "Container: teilen Kernel, leichter/schneller, anderes Sicherheits-/Update-Modell.", "correct": true },
+            { "id": "w3", "text": "Container sind keine „Mini-VMs“, sondern Prozess-/Kernel-basierte Isolation.", "correct": true },
+            { "id": "w4", "text": "Container können immer beliebige andere Kernel/OS starten wie eine VM.", "correct": false }
+          ]
+        },
+        {
+          "id": "container_immer",
+          "label": "Immer Container – sind grundsätzlich sicherer als VMs",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Isolation ist anders; VM-Isolation ist oft stärker durch eigenes OS.", "correct": true },
+            { "id": "w2", "text": "Für unterschiedliche OS/Kernels sind VMs typischer.", "correct": true },
+            { "id": "w3", "text": "AP1 will Unterschiede/Trade-offs, nicht „immer X“.", "correct": true },
+            { "id": "w4", "text": "Container brauchen keine Updates, weil sie ja isoliert sind.", "correct": false }
+          ]
+        },
+        {
+          "id": "vm_immer",
+          "label": "Immer VM – Container sind nur Spielzeug",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Container sind produktiv verbreitet, aber mit anderem Modell (Kernel teilen).", "correct": true },
+            { "id": "w2", "text": "Für schnelle Deployments und bessere Auslastung sind Container oft sinnvoll.", "correct": true },
+            { "id": "w3", "text": "AP1: Nutzen nennen (Auslastung, Deployment, testbare Umgebungen).", "correct": true },
+            { "id": "w4", "text": "Container haben immer mehr Overhead als VMs.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "VM = eigenes OS, starke Isolation; Container = Kernel teilen, leichter/schneller. Auswahl nach Bedarf begründen."
+    },
+    {
+      "id": "v10",
+      "profile": "Du sollst Text- vs Binärformate unterscheiden und begründen, was für Schnittstellen typischer ist. Beispiele: TXT/CSV/JSON/XML vs DOCX/XLSX/PDF/JPG/MP4.",
+      "tags": ["Dateiformate", "Text", "Binär", "Schnittstellen"],
+      "options": [
+        {
+          "id": "text_vs_binaer",
+          "label": "Textformate (lesbar, gut für Schnittstellen) vs Binärformate (kompakt, komplex)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Textformate sind gut für Austausch/Debugging (z. B. JSON/CSV/XML).", "correct": true },
+            { "id": "w2", "text": "Binärformate sind oft kompakter, aber schwerer direkt lesbar (z. B. PDF/JPG/DOCX).", "correct": true },
+            { "id": "w3", "text": "Für Schnittstellen zählen oft Encoding (UTF-8) und Schema/Validierung.", "correct": true },
+            { "id": "w4", "text": "CSV ist ein Binärformat, weil es Tabellen „komprimiert“.", "correct": false }
+          ]
+        },
+        {
+          "id": "pdf_ist_textformat",
+          "label": "PDF ist ein Textformat wie TXT, weil man Text sehen kann",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDF ist in der Praxis ein komplexes Binärformat (Layout fix, nicht „einfach editierbar“).", "correct": true },
+            { "id": "w2", "text": "„Lesbar“ im Viewer heißt nicht „Textformat“ im Schnittstellen-Sinn.", "correct": true },
+            { "id": "w3", "text": "Formatwahl ist Zweckfrage (Bearbeiten? Austausch? Archiv?).", "correct": true },
+            { "id": "w4", "text": "PDF ist grundsätzlich fälschungssicher.", "correct": false }
+          ]
+        },
+        {
+          "id": "json_ist_binaer",
+          "label": "JSON ist Binärformat, weil APIs schnell sein müssen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "JSON ist textbasiert; Geschwindigkeit hängt von Parsing/Netz/Design ab, nicht „Binär“. ", "correct": true },
+            { "id": "w2", "text": "JSON profitiert von UTF-8 und Schema/Validierung (z. B. Struktur prüfen).", "correct": true },
+            { "id": "w3", "text": "Textformate sind oft Standard für APIs.", "correct": true },
+            { "id": "w4", "text": "Textformate können kein Encoding haben.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Textformate (CSV/JSON/XML) sind typischer für Schnittstellen; Binär (PDF/DOCX/JPG/MP4) ist kompakt, aber komplex."
+    },
+    {
+      "id": "v11",
+      "profile": "CSV-Import scheitert im Betrieb ständig. Du sollst die typischen Ursachen nennen, ohne in Nebel zu reden.",
+      "tags": ["CSV", "Encoding", "Delimiter", "Quotes"],
+      "options": [
+        {
+          "id": "csv_stolpersteine",
+          "label": "Encoding (UTF-8), Trennzeichen (Komma/Semikolon), Quotes/Zeilenumbrüche",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "CSV ist nicht einheitlich standardisiert; Delimiter/Quotes variieren.", "correct": true },
+            { "id": "w2", "text": "Umlaute/„komische Zeichen“ sind oft Encoding-Themen (UTF-8 vs ANSI etc.).", "correct": true },
+            { "id": "w3", "text": "Zeilenumbrüche in Feldern (in Quotes) sind ein Klassiker beim Parsen.", "correct": true },
+            { "id": "w4", "text": "CSV kann nicht kaputt gehen, weil es ja nur Text ist.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_server_problem",
+          "label": "CSV-Import scheitert fast immer wegen Serverauslastung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Häufiger sind Formatdetails (Delimiter/Encoding/Quotes) als Performance.", "correct": true },
+            { "id": "w2", "text": "AP1 erwartet meist die typischen Formatfehler, nicht „der Server ist schuld“. ", "correct": true },
+            { "id": "w3", "text": "Prüfbar ist: Datei ansehen, Encoding erkennen, Delimiter prüfen, Parser-Settings anpassen.", "correct": true },
+            { "id": "w4", "text": "Encoding spielt bei CSV keine Rolle.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_json_nutzen",
+          "label": "CSV ist grundsätzlich falsch, man muss immer JSON nehmen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CSV ist für einfache tabellarische Daten weiterhin sinnvoll – aber man muss sauber definieren.", "correct": true },
+            { "id": "w2", "text": "Formatwahl hängt vom Zweck ab (einfacher Export vs strukturierte Daten).", "correct": true },
+            { "id": "w3", "text": "Prüfungsnah ist: CSV-Probleme erkennen und beheben können.", "correct": true },
+            { "id": "w4", "text": "JSON löst automatisch Encoding-Probleme, ohne dass man UTF-8 beachten muss.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "CSV-Fallen: Encoding (UTF-8), Delimiter (Komma/Semikolon), Quotes/Zeilenumbrüche. Das sind die Standardpunkte."
+    },
+    {
+      "id": "v12",
+      "profile": "Cloud-Service-Modelle: Du sollst IaaS/PaaS/SaaS zuordnen. Szenarien: (A) VM mieten, OS und App selbst betreiben. (B) Managed DB/Runtime nutzen. (C) Fertige Anwendung nutzen (z. B. CRM).",
+      "tags": ["Cloud", "IaaS", "PaaS", "SaaS"],
+      "options": [
+        {
+          "id": "iaas_paas_saas",
+          "label": "A=IaaS · B=PaaS · C=SaaS",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IaaS: Infrastruktur mieten, Kunde betreibt OS/App selbst.", "correct": true },
+            { "id": "w2", "text": "PaaS: Plattform/Runtime/DB wird gemanagt → weniger Betrieb, weniger Kontrolle.", "correct": true },
+            { "id": "w3", "text": "SaaS: fertige Anwendung → schnell startklar, geringste Kontrolle.", "correct": true },
+            { "id": "w4", "text": "SaaS bedeutet: Kunde verwaltet das Betriebssystem der Server.", "correct": false }
+          ]
+        },
+        {
+          "id": "alles_iaas",
+          "label": "Alles ist IaaS – Cloud ist immer nur gemietete Server",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PaaS/SaaS nehmen dir Betriebsschichten ab (Runtime/DB/App).", "correct": true },
+            { "id": "w2", "text": "AP1: Unterschied = Verantwortlichkeiten/Control vs Convenience.", "correct": true },
+            { "id": "w3", "text": "„As a Service“ skaliert von Infrastruktur bis fertiger Anwendung.", "correct": true },
+            { "id": "w4", "text": "SaaS gibt es nicht, das ist nur Marketing.", "correct": false }
+          ]
+        },
+        {
+          "id": "paas_ist_saas",
+          "label": "PaaS und SaaS sind dasselbe, weil beides „Cloud“ ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PaaS liefert Plattformbausteine, SaaS liefert fertige Anwendung.", "correct": true },
+            { "id": "w2", "text": "Kontrollgrad/Betriebsaufwand unterscheiden sich deutlich.", "correct": true },
+            { "id": "w3", "text": "Prüfungslogik: Je mehr Service, desto weniger Betrieb – aber auch weniger Einfluss.", "correct": true },
+            { "id": "w4", "text": "Bei PaaS musst du nie deine Anwendung updaten.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "IaaS/PaaS/SaaS sauber zuordnen: IaaS = VM/Infra, PaaS = Runtime/DB-Plattform, SaaS = fertige App."
+    },
+    {
+      "id": "v13",
+      "profile": "„Cloud ist automatisch sicher.“ Du sollst den Denkfehler erklären und Shared Responsibility korrekt einordnen (Beispiel: offener Storage-Bucket).",
+      "tags": ["Cloud", "Shared Responsibility", "Risiko", "Fehlkonfiguration"],
+      "options": [
+        {
+          "id": "shared_responsibility",
+          "label": "Provider sichert die Cloud – Kunde sichert Konfiguration, Daten und Zugriffe",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sicherheit ist geteilt: Infrastruktur vs. Konfiguration/Identitäten/Daten.", "correct": true },
+            { "id": "w2", "text": "Fehlkonfiguration ist ein Klassiker (z. B. öffentlich freigegebener Bucket).", "correct": true },
+            { "id": "w3", "text": "Auch in SaaS braucht man oft ein Backup-Konzept (Versionierung/Export/Recovery).", "correct": true },
+            { "id": "w4", "text": "Wenn es Cloud ist, ist Backup automatisch inklusive und immer ausreichend.", "correct": false }
+          ]
+        },
+        {
+          "id": "cloud_immer_sicher",
+          "label": "Cloud ist per Definition sicher, weil große Provider es können",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Große Provider reduzieren viele Risiken, aber Kundenfehler bleiben möglich.", "correct": true },
+            { "id": "w2", "text": "Zugriffsrechte, MFA, Netzwerkregeln, Bucket-Policies liegen oft beim Kunden.", "correct": true },
+            { "id": "w3", "text": "Vendor Lock-in und Kostenexplosion sind zusätzliche Risiken neben Sicherheit.", "correct": true },
+            { "id": "w4", "text": "Fehlkonfigurationen können nicht passieren, weil Cloud alles automatisch richtig setzt.", "correct": false }
+          ]
+        },
+        {
+          "id": "provider_muss_alles",
+          "label": "Der Provider ist für alles verantwortlich, weil er die Plattform betreibt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Shared Responsibility: Kunde bleibt verantwortlich für Daten, Identitäten, Konfiguration.", "correct": true },
+            { "id": "w2", "text": "Offener Bucket ist typischerweise Kundenseite, nicht Provider-Fehler.", "correct": true },
+            { "id": "w3", "text": "AP1-Punkt: Verantwortung erklären, nicht nur „Cloud = sicher“. ", "correct": true },
+            { "id": "w4", "text": "MFA ist Provider-Aufgabe, Kunde darf daran nichts ändern.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Shared Responsibility: Provider sichert die Plattform, Kunde sichert Konfiguration/Daten/Zugriffe. Fehlkonfig ist der Klassiker."
+    },
+    {
+      "id": "v14",
+      "profile": "USV: Jemand denkt, USV bedeutet „läuft stundenlang weiter“. In der Prüfung sollst du Zweck und Nutzen korrekt erklären.",
+      "tags": ["USV", "Stromausfall", "Shutdown", "Schutz"],
+      "options": [
+        {
+          "id": "usv_kauft_zeit",
+          "label": "USV überbrückt kurz + schützt vor Schwankungen, primär für kontrollierten Shutdown",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "USV gibt meist Minuten, damit Systeme sauber herunterfahren können.", "correct": true },
+            { "id": "w2", "text": "Schützt zusätzlich vor Spannungsschwankungen/kurzen Aussetzern.", "correct": true },
+            { "id": "w3", "text": "Ziel: Schutz von Daten/Hardware + Betriebsstabilität.", "correct": true },
+            { "id": "w4", "text": "USV ersetzt Generatoren und versorgt ein Rechenzentrum tagelang.", "correct": false }
+          ]
+        },
+        {
+          "id": "usv_stundenlang",
+          "label": "USV soll stundenlang weiterlaufen, sonst ist sie sinnlos",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Viele USVs sind für kurze Überbrückung und Shutdown ausgelegt.", "correct": true },
+            { "id": "w2", "text": "Der Hauptnutzen ist „Zeit kaufen“, nicht Dauerbetrieb.", "correct": true },
+            { "id": "w3", "text": "Shutdown-Automation ist oft wichtiger als maximale Laufzeit.", "correct": true },
+            { "id": "w4", "text": "Wenn Laufzeit kurz ist, bringt USV keinen Daten-/Hardware-Schutz.", "correct": false }
+          ]
+        },
+        {
+          "id": "usv_nur_server",
+          "label": "USV ist nur für Server relevant, Netzwerk/Storage kann man weglassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Wenn Switch/Storage nicht an USV hängt, kann das System trotzdem ausfallen/korrupt werden.", "correct": true },
+            { "id": "w2", "text": "Praxis: relevante Verbraucher vollständig betrachten.", "correct": true },
+            { "id": "w3", "text": "AP1-Falle: „Server lebt, Netzwerk tot“ ist ein typischer Denkfehler.", "correct": true },
+            { "id": "w4", "text": "Nur CPU braucht USV, weil sie am empfindlichsten ist.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "USV kauft Zeit: kurze Überbrückung + Schutz vor Schwankungen, damit kontrollierter Shutdown möglich ist."
+    },
+    {
+      "id": "v15",
+      "profile": "USV dimensionieren (AP1-Logik): Du sollst zeigen, wie man sinnvoll plant, ohne sich in Datenblättern zu verlieren.",
+      "tags": ["USV", "Dimensionierung", "Shutdown", "Wartung"],
+      "options": [
+        {
+          "id": "usv_plan",
+          "label": "Verbraucher + Watt abschätzen, Ziel-Laufzeit festlegen, Shutdown automatisieren, Akkus testen/wechseln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Erst Last (Server/Storage/Switch) bestimmen, dann Laufzeit (z. B. 5–15 Min) ableiten.", "correct": true },
+            { "id": "w2", "text": "Shutdown-Agent/Automatisierung ist Kern, sonst endet es im harten Stromausfall.", "correct": true },
+            { "id": "w3", "text": "Akkus altern → regelmäßige Tests und Austausch einplanen.", "correct": true },
+            { "id": "w4", "text": "USV muss nicht getestet werden, weil sie „eh immer funktioniert“.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_groesse",
+          "label": "Einfach die größte USV kaufen – Planung ist Zeitverschwendung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Last/Laufzeit/Shutdown-Konzept kann es trotzdem scheitern.", "correct": true },
+            { "id": "w2", "text": "Wirtschaftlichkeit zählt: passend statt überdimensioniert.", "correct": true },
+            { "id": "w3", "text": "Akkualterung bleibt, egal wie groß.", "correct": true },
+            { "id": "w4", "text": "Switch muss nie auf USV, weil er wenig Strom braucht.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_server",
+          "label": "Nur den Server an USV, alles andere egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Switch/Storage kann der Server nicht sinnvoll arbeiten und Shutdown kann scheitern.", "correct": true },
+            { "id": "w2", "text": "AP1-Mini-Check: USV + Shutdown-Agent + regelmäßiger Test.", "correct": true },
+            { "id": "w3", "text": "Wichtige Systeme sind oft Kette: Server + Storage + Netzwerk.", "correct": true },
+            { "id": "w4", "text": "Netzwerk ist bei Stromausfall immer noch da, weil es „nur Kabel“ ist.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "USV-Planung: Last bestimmen, Ziel-Laufzeit festlegen, Shutdown automatisieren, Wartung/Tests einplanen (inkl. Switch/Storage)."
+    },
+    {
+      "id": "v16",
+      "profile": "Backup-Grundprinzipien: Du sollst erklären, was Backup wirklich soll und welche Regel als Standardbegründung gilt.",
+      "tags": ["Backup", "3-2-1", "Restore-Test", "Prinzipien"],
+      "options": [
+        {
+          "id": "backup_321",
+          "label": "3-2-1-Regel + Restore-Test als Beweis",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "3 Kopien, 2 unterschiedliche Medien, 1 Kopie extern/offsite.", "correct": true },
+            { "id": "w2", "text": "Backup-Ziel: Wiederherstellung nach Löschen, Malware, Defekt, Bedienfehler.", "correct": true },
+            { "id": "w3", "text": "Ohne Restore-Test ist Backup nur Hoffnung (Logs beweisen nichts).", "correct": true },
+            { "id": "w4", "text": "Wenn das Backup-Log grün ist, ist Restore garantiert möglich.", "correct": false }
+          ]
+        },
+        {
+          "id": "raid_reicht",
+          "label": "RAID reicht als Backup, weil es redundant ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID schützt nicht vor logischen Fehlern (Löschen, Malware, Korruption).", "correct": true },
+            { "id": "w2", "text": "Backup braucht Versionierung und getrennte Kopien (idealerweise offsite).", "correct": true },
+            { "id": "w3", "text": "Restore-Test bleibt Pflicht, egal ob RAID existiert.", "correct": true },
+            { "id": "w4", "text": "RAID ermöglicht Zeitreisen zu alten Versionen.", "correct": false }
+          ]
+        },
+        {
+          "id": "nur_vollbackup",
+          "label": "Nur Vollbackups – inkrementell/differentiell ist „unsicher“",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Inkrementell/differentiell sind Standardstrategien, wenn Zeit/Storage begrenzt sind.", "correct": true },
+            { "id": "w2", "text": "Sicherheit hängt von Konzept/Prüfung/Restore-Tests ab, nicht nur vom Typ.", "correct": true },
+            { "id": "w3", "text": "AP1: Begriffe kennen (Voll/inkrementell/differentiell) und passend wählen.", "correct": true },
+            { "id": "w4", "text": "Inkrementell bedeutet: jedes Mal alles sichern.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Backup: Wiederherstellen können. Standardbegründung: 3-2-1 + Restore-Test (Beweis statt Hoffnung)."
+    },
+    {
+      "id": "v17",
+      "profile": "Du sollst RPO und RTO sauber erklären, weil du ein Backup-Konzept begründen sollst.",
+      "tags": ["RPO", "RTO", "Wiederanlauf", "Datenverlust"],
+      "options": [
+        {
+          "id": "rpo_rto",
+          "label": "RPO = maximal akzeptabler Datenverlust (Zeit) · RTO = maximal akzeptable Wiederanlaufzeit",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RPO beantwortet: „Wie viel Zeit an Daten darf ich verlieren?“", "correct": true },
+            { "id": "w2", "text": "RTO beantwortet: „Wie schnell muss der Betrieb wieder laufen?“", "correct": true },
+            { "id": "w3", "text": "Wenn RPO 1 Stunde ist, reicht „täglich sichern“ meistens nicht.", "correct": true },
+            { "id": "w4", "text": "RPO und RTO sind dasselbe, nur unterschiedliche Wörter.", "correct": false }
+          ]
+        },
+        {
+          "id": "vertauscht",
+          "label": "RPO = Wiederanlaufzeit · RTO = Datenverlust",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vertauscht: RTO ist Zeit bis wieder läuft, RPO ist Zeit an Datenverlust.", "correct": true },
+            { "id": "w2", "text": "Begriffe sauber trennen ist typisch AP1.", "correct": true },
+            { "id": "w3", "text": "Retention/Versionierung ist ein weiteres Thema, aber nicht identisch mit RPO/RTO.", "correct": true },
+            { "id": "w4", "text": "RPO bedeutet „Restore Performance Objective“.", "correct": false }
+          ]
+        },
+        {
+          "id": "irrelevant",
+          "label": "RPO/RTO sind nur für große Konzerne relevant",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Jedes Backup-Konzept hat implizit RPO/RTO – sonst ist es nicht begründbar.", "correct": true },
+            { "id": "w2", "text": "AP1 will häufig genau diese Begründungslogik (Anforderung → Maßnahme).", "correct": true },
+            { "id": "w3", "text": "Ohne RPO/RTO kann man nicht sinnvoll entscheiden, wie oft und wie schnell man sichern/wiederherstellen muss.", "correct": true },
+            { "id": "w4", "text": "RPO/RTO sind rein technische Metriken ohne Bezug zum Betrieb.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "RPO = akzeptabler Datenverlust (Zeitfenster), RTO = akzeptable Wiederanlaufzeit. Daraus leitet sich Backup-Frequenz/Restore-Plan ab."
+    },
+    {
+      "id": "v18",
+      "profile": "Backup vs Archiv wird verwechselt. Du sollst das sauber trennen und den typischen Prüfungsfehler korrigieren.",
+      "tags": ["Backup", "Archiv", "Compliance", "Aufbewahrung"],
+      "options": [
+        {
+          "id": "backup_vs_archiv",
+          "label": "Backup = kurzfristige Wiederherstellung · Archiv = langfristige, ggf. unveränderliche Aufbewahrung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Backup rettet den Betrieb nach Fehler/Desaster, oft mit Versionen und Restore-Tests.", "correct": true },
+            { "id": "w2", "text": "Archiv dient Nachweis/Compliance und braucht ggf. Unveränderbarkeit und Suchbarkeit.", "correct": true },
+            { "id": "w3", "text": "„Wir haben Backup, also Archiv erledigt“ ist ein typischer Prüfungsfehler.", "correct": true },
+            { "id": "w4", "text": "Archiv bedeutet: gleiche Backups nur länger aufbewahren, ohne weitere Anforderungen.", "correct": false }
+          ]
+        },
+        {
+          "id": "archiv_ist_backup",
+          "label": "Archiv = Backup, nur auf einer großen HDD",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Archiv hat andere Ziele (langfristig, oft unveränderlich, auffindbar, regelkonform).", "correct": true },
+            { "id": "w2", "text": "Backup ist für Restore-Tempo und Fehlerfälle optimiert, nicht für Nachweisführung.", "correct": true },
+            { "id": "w3", "text": "AP1: Ziele unterscheiden und passende Maßnahmen ableiten.", "correct": true },
+            { "id": "w4", "text": "Wenn man ZIP nutzt, wird Backup automatisch zum Archiv.", "correct": false }
+          ]
+        },
+        {
+          "id": "backup_ist_archiv",
+          "label": "Backup = Archiv, weil man ja alles aufbewahrt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup-Aufbewahrung (Retention) ist nicht automatisch Archivierung nach Compliance-Anforderungen.", "correct": true },
+            { "id": "w2", "text": "Archiv braucht oft definierte Regeln zu Unveränderbarkeit/Prüfbarkeit.", "correct": true },
+            { "id": "w3", "text": "Backup kann rotieren/überschreiben – Archiv darf das oft nicht.", "correct": true },
+            { "id": "w4", "text": "Archiv ist nur ein anderes Wort für „täglich sichern“. ", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Backup rettet Betrieb (Restore), Archiv erfüllt Nachweispflichten (langfristig/ggf. unveränderlich/suchbar). Nicht verwechseln."
+    }
+  ]
+}

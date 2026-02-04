@@ -1,0 +1,127 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Urheberrechtsgesetz und Lizenzmodelle",
+  "description": "Schritt 1: Passendes Lizenz-/Nutzungsmodell wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen kauft eine Standardsoftware. Beim Installieren muss der Nutzer eine Lizenzvereinbarung akzeptieren, in der Nutzung, Weitergabe, Updates und Haftung geregelt sind. Ohne Zustimmung lässt sich die Software nicht installieren.",
+      "tags": ["Lizenzarten", "EULA", "Standardsoftware"],
+      "options": [
+        {
+          "id": "eula",
+          "label": "EULA",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "EULA ist die Endnutzer-Lizenzvereinbarung, die Nutzungsrechte und Bedingungen festlegt.", "correct": true },
+            { "id": "w2", "text": "Akzeptanz ist oft Voraussetzung für Installation/Nutzung.", "correct": true },
+            { "id": "w3", "text": "EULA bedeutet automatisch, dass der Quellcode offengelegt werden muss.", "correct": false },
+            { "id": "w4", "text": "Typisch sind Einschränkungen zu Kopien, Weitergabe, Reverse Engineering und Haftung.", "correct": true }
+          ]
+        },
+        {
+          "id": "gnu",
+          "label": "GNU (z. B. GPL)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "GNU-Lizenzen sind Open-Source-Lizenzen mit definierten Freiheiten.", "correct": true },
+            { "id": "w2", "text": "GPL kann Pflichten auslösen, wenn Software weitergegeben wird (z. B. Quellcode).", "correct": true },
+            { "id": "w3", "text": "GNU ist die typische Klick-Lizenz beim Installieren proprietärer Standardsoftware.", "correct": false },
+            { "id": "w4", "text": "GNU bedeutet immer: Nutzung ist nur auf einem Gerät erlaubt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "EULA: Endnutzer-Lizenzvertrag, der Nutzungsrechte/Bedingungen regelt und oft beim Installieren akzeptiert werden muss."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Laptop wird mit vorinstalliertem Betriebssystem verkauft. Die Lizenz ist an das Gerät gebunden und soll nicht auf andere Hardware übertragen werden. Der Hersteller liefert das Gerät inklusive Lizenz aus.",
+      "tags": ["Lizenzarten", "OEM", "Hardwarebindung"],
+      "options": [
+        {
+          "id": "oem",
+          "label": "OEM",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "OEM-Lizenzen sind typischerweise an ein konkretes Gerät gebunden.", "correct": true },
+            { "id": "w2", "text": "Sie werden häufig zusammen mit Hardware ausgeliefert (vorinstalliert/gebündelt).", "correct": true },
+            { "id": "w3", "text": "OEM bedeutet, dass der Quellcode zwingend veröffentlicht werden muss.", "correct": false },
+            { "id": "w4", "text": "Übertragung auf andere Hardware ist oft eingeschränkt oder ausgeschlossen.", "correct": true }
+          ]
+        },
+        {
+          "id": "eula",
+          "label": "EULA",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "EULA regelt die Endnutzer-Nutzungsbedingungen, ist aber kein Synonym für Hardwarebindung.", "correct": true },
+            { "id": "w2", "text": "EULA beschreibt immer eine Lizenz, die frei auf beliebige Geräte übertragen werden darf.", "correct": false },
+            { "id": "w3", "text": "Auch bei OEM gibt es meist eine EULA, aber OEM beschreibt das Lizenz-/Vertriebsmodell.", "correct": true },
+            { "id": "w4", "text": "EULA ist ein Open-Source-Lizenztyp.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "OEM: Lizenz wird zusammen mit Hardware geliefert und ist in der Praxis meist an das Gerät gebunden (Transfer eingeschränkt)."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Entwickler möchte eine Bibliothek in ein eigenes Produkt integrieren und später an Kunden ausliefern. Er will wissen, welche Rechte er hat (nutzen, verändern, weitergeben) und ob er beim Weitergeben Pflichten wie Quellcodebereitstellung auslösen kann.",
+      "tags": ["Lizenzarten", "GNU", "Weitergabe"],
+      "options": [
+        {
+          "id": "gnu",
+          "label": "GNU (z. B. GPL)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "GNU/Open-Source-Lizenzen definieren Freiheiten zur Nutzung, Änderung und Weitergabe.", "correct": true },
+            { "id": "w2", "text": "Bei manchen Varianten (z. B. GPL) können bei Weitergabe Pflichten entstehen (z. B. Quellcode bereitstellen).", "correct": true },
+            { "id": "w3", "text": "GNU bedeutet immer: keine Bedingungen und keine Pflichten, egal was man macht.", "correct": false },
+            { "id": "w4", "text": "Die Lizenzprüfung ist Teil von Compliance, um Urheberrechtsverletzungen zu vermeiden.", "correct": true }
+          ]
+        },
+        {
+          "id": "oem",
+          "label": "OEM",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "OEM beschreibt typischerweise Lizenzbindung an Hardware/Bundle-Vertrieb.", "correct": true },
+            { "id": "w2", "text": "OEM ist die passende Lizenz, um Code-Rechte zur Weitergabe zu klären.", "correct": false },
+            { "id": "w3", "text": "OEM spielt vor allem bei vorinstallierter Software auf Geräten eine Rolle.", "correct": true },
+            { "id": "w4", "text": "OEM verpflichtet immer zur Veröffentlichung des Quellcodes.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "GNU (z. B. GPL): regelt Nutzung/Änderung/Weitergabe und kann bei Distribution Pflichten auslösen (Compliance wichtig)."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Unternehmen nutzt eine Software, bei der nur die tatsächliche Nutzung abgerechnet wird: pro aktiven Nutzer im Monat oder pro ausgeführter Transaktion. In ruhigen Monaten sinken die Kosten automatisch, bei hoher Nutzung steigen sie.",
+      "tags": ["Pay by Use", "Kosten", "Abrechnung"],
+      "options": [
+        {
+          "id": "pay_by_use",
+          "label": "Pay by Use",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kosten richten sich nach tatsächlicher Nutzung (z. B. User/Transaktion/Minute).", "correct": true },
+            { "id": "w2", "text": "Die Kosten sind nutzungsabhängig und können stark schwanken.", "correct": true },
+            { "id": "w3", "text": "Pay by Use ist immer eine einmalige Zahlung beim Kauf.", "correct": false },
+            { "id": "w4", "text": "Das Modell passt gut bei variabler Auslastung und Bedarfsspitzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "eula",
+          "label": "EULA",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Eine EULA regelt Bedingungen, nicht die konkrete Abrechnungslogik.", "correct": true },
+            { "id": "w2", "text": "EULA bedeutet automatisch nutzungsbasierte Abrechnung.", "correct": false },
+            { "id": "w3", "text": "Auch Pay-by-Use-Software hat oft eine EULA, aber das sind unterschiedliche Ebenen.", "correct": true },
+            { "id": "w4", "text": "EULA ist ein Synonym für OEM-Lizenz.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Pay by Use: Abrechnung nach tatsächlichem Verbrauch (z. B. pro Nutzer/Transaktion), daher variable Kosten je nach Auslastung."
+    }
+  ]
+}

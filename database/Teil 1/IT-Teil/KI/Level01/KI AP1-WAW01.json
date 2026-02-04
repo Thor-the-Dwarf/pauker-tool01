@@ -1,0 +1,367 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – KI-Überblick (AP1)",
+  "description": "Schritt 1: Passendes KI-Konzept wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Programm berechnet die Lohnsteuer exakt nach festen Regeln. Bei gleicher Eingabe kommt immer exakt die gleiche Ausgabe heraus.",
+      "tags": ["KI", "Grundlagen", "Klassische Software"],
+      "options": [
+        {
+          "id": "classic_software",
+          "label": "Klassische Software (deterministisch)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Die Logik basiert auf festen Regeln (z. B. if/else).", "correct": true },
+            { "id": "w2", "text": "Gleiche Eingabe führt immer zur gleichen Ausgabe.", "correct": true },
+            { "id": "w3", "text": "Das System arbeitet probabilistisch mit Wahrscheinlichkeiten.", "correct": false },
+            { "id": "w4", "text": "Es lernt Muster aus Beispieldaten und generalisiert auf neue Daten.", "correct": false }
+          ]
+        },
+        {
+          "id": "ml_system",
+          "label": "Machine Learning (probabilistisch)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ML lernt aus Daten statt festen Regeln.", "correct": true },
+            { "id": "w2", "text": "ML-Ausgaben sind häufig probabilistisch (Wahrscheinlichkeiten).", "correct": true },
+            { "id": "w3", "text": "Determinismus ist das Hauptmerkmal von ML.", "correct": false },
+            { "id": "w4", "text": "ML ersetzt automatisch rechtliche Vorgaben und Regeln.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Klassische Software: feste Regeln + deterministische Ausgabe."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein System entscheidet, ob eine E-Mail Spam ist oder nicht – anhand gelabelter Beispieldaten.",
+      "tags": ["KI", "Machine Learning", "Klassifikation"],
+      "options": [
+        {
+          "id": "classification",
+          "label": "Machine Learning: Klassifikation",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Klassifikation ordnet Eingaben Kategorien zu (z. B. Spam/kein Spam).", "correct": true },
+            { "id": "w2", "text": "Das Modell lernt aus Beispieldaten und wendet Muster auf neue Daten an.", "correct": true },
+            { "id": "w3", "text": "Das Ergebnis ist immer ein exakter, unveränderlicher Wert ohne Unsicherheit.", "correct": false },
+            { "id": "w4", "text": "Regression wäre hier passend, weil sie Klassen statt Zahlen vorhersagt.", "correct": false }
+          ]
+        },
+        {
+          "id": "regression",
+          "label": "Machine Learning: Regression",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Regression sagt typischerweise kontinuierliche Werte voraus (z. B. Preis).", "correct": true },
+            { "id": "w2", "text": "Regression ist das Standardverfahren für Ja/Nein-Entscheidungen.", "correct": false },
+            { "id": "w3", "text": "Regression kann Wahrscheinlichkeiten liefern, ist hier aber nicht das typische Labeling-Beispiel.", "correct": true },
+            { "id": "w4", "text": "Regression benötigt grundsätzlich keine Trainingsdaten.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Spam/kein Spam ist eine Klassifikationsaufgabe (ML mit gelabelten Beispielen)."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Modell soll aus historischen Daten den Preis eines Gebrauchtwagens vorhersagen (Zahl in Euro).",
+      "tags": ["KI", "Machine Learning", "Regression"],
+      "options": [
+        {
+          "id": "regression",
+          "label": "Machine Learning: Regression",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regression sagt kontinuierliche Zahlenwerte voraus.", "correct": true },
+            { "id": "w2", "text": "Das Modell lernt Muster aus Beispielen und generalisiert.", "correct": true },
+            { "id": "w3", "text": "Klassifikation wäre passender, weil sie Kategorien liefert.", "correct": false },
+            { "id": "w4", "text": "Die Ausgabe ist häufig eine Vorhersage mit Unsicherheit (probabilistisch).", "correct": true }
+          ]
+        },
+        {
+          "id": "classification",
+          "label": "Machine Learning: Klassifikation",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Klassifikation ordnet Klassen zu (z. B. A/B/C).", "correct": true },
+            { "id": "w2", "text": "Klassifikation ist zwingend für Preisprognosen.", "correct": false },
+            { "id": "w3", "text": "Man könnte Preise in Klassen einteilen, das wäre aber eine andere Aufgabenformulierung.", "correct": true },
+            { "id": "w4", "text": "Klassifikation benötigt keine Trainingsdaten.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Preisprognose als Zahl → Regression."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Team setzt ein Modell ein, das Texte formuliert und Code generiert. Es wirkt überzeugend, aber liefert manchmal erfundene Fakten.",
+      "tags": ["KI", "Generative KI", "Halluzination"],
+      "options": [
+        {
+          "id": "generative_llm",
+          "label": "Generatives Modell (LLM) mit Halluzinationsrisiko",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Generative KI erzeugt neue Inhalte (Text/Code) aus Trainingsmustern und Prompt.", "correct": true },
+            { "id": "w2", "text": "KI kann überzeugend klingen, ohne tatsächlich zu „verstehen“.", "correct": true },
+            { "id": "w3", "text": "Halluzination bedeutet: plausible, aber falsche Aussagen oder erfundene Quellen.", "correct": true },
+            { "id": "w4", "text": "Generative KI zitiert automatisch immer verlässliche Quellen.", "correct": false }
+          ]
+        },
+        {
+          "id": "search_engine",
+          "label": "Suchmaschine (liefert geprüfte Quellen)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Eine Suchmaschine sucht Inhalte, generiert sie nicht.", "correct": true },
+            { "id": "w2", "text": "„Generativ = Suchmaschine“ ist ein typischer Denkfehler.", "correct": true },
+            { "id": "w3", "text": "Suchergebnisse sind immer richtig, daher keine Prüfung nötig.", "correct": false },
+            { "id": "w4", "text": "Ein LLM kann Inhalte erzeugen, ohne sie „nachzuschlagen“.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das ist generative KI (LLM): Inhalte werden erzeugt, nicht automatisch recherchiert; Halluzinationen sind möglich."
+    },
+    {
+      "id": "c05",
+      "profile": "Eine Firma nutzt KI für Bewerber-Screening. Die Entscheidung wirkt diskriminierend, weil Trainingsdaten einseitig waren.",
+      "tags": ["KI", "Risiken", "Bias"],
+      "options": [
+        {
+          "id": "bias_risk",
+          "label": "Bias/Verzerrung durch Trainingsdaten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Einseitige Trainingsdaten können verzerrte Ergebnisse erzeugen.", "correct": true },
+            { "id": "w2", "text": "Modelle können bestehende Vorurteile reproduzieren oder verstärken.", "correct": true },
+            { "id": "w3", "text": "Bias ist ausgeschlossen, wenn das Modell sehr groß ist.", "correct": false },
+            { "id": "w4", "text": "Gegenmaßnahmen sind z. B. Datenqualität, Tests und menschliche Kontrolle.", "correct": true }
+          ]
+        },
+        {
+          "id": "hallucination_only",
+          "label": "Nur Halluzination (erfundene Fakten)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Halluzination betrifft erfundene Inhalte/Fakten, nicht primär systematische Verzerrung.", "correct": true },
+            { "id": "w2", "text": "Diskriminierung entsteht typischerweise durch Bias, nicht durch zufällige Erfindungen.", "correct": true },
+            { "id": "w3", "text": "Halluzination ist die einzige relevante KI-Gefahr im HR-Kontext.", "correct": false },
+            { "id": "w4", "text": "Bias kann auch bei klassischem ML auftreten, nicht nur bei generativen Modellen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Diskriminierende Ergebnisse → Bias-Risiko. Ursache oft Trainingsdaten/Features; Gegenmaßnahmen: Datenqualität, Tests, Human Oversight."
+    },
+    {
+      "id": "c06",
+      "profile": "Ein Mitarbeiter kopiert Kundendaten und interne Passwörter in ein öffentliches KI-Tool, um schneller eine E-Mail zu formulieren.",
+      "tags": ["KI", "Risiken", "Datenschutz", "Sicherheit"],
+      "options": [
+        {
+          "id": "privacy_security_risk",
+          "label": "Datenschutz- & Sicherheitsrisiko durch sensible Prompts",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Prompts können personenbezogene Daten oder Betriebsgeheimnisse enthalten.", "correct": true },
+            { "id": "w2", "text": "Sensible Daten in öffentliche Tools einzugeben kann zu Datenabfluss führen.", "correct": true },
+            { "id": "w3", "text": "Das ist unkritisch, weil KI-Eingaben grundsätzlich privat bleiben.", "correct": false },
+            { "id": "w4", "text": "Sichere Nutzung braucht Regeln/Policies und Schulung (AI Literacy).", "correct": true }
+          ]
+        },
+        {
+          "id": "copyright_risk_only",
+          "label": "Nur Urheberrechtsrisiko (sonst unbedenklich)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Urheberrecht kann relevant sein, ist hier aber nicht das Hauptproblem.", "correct": true },
+            { "id": "w2", "text": "Passwörter/Secrets sind Datenschutz- und Sicherheits-No-Go, unabhängig von Urheberrecht.", "correct": true },
+            { "id": "w3", "text": "Urheberrecht betrifft nur Bilder, nicht Texte.", "correct": false },
+            { "id": "w4", "text": "Compliance umfasst oft Datenschutz, Sicherheit und Rechte gleichzeitig.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Sensible Daten in Prompts sind ein Datenschutz-/Sicherheitsproblem. Regel: keine Kundendaten/Secrets in öffentliche Tools."
+    },
+    {
+      "id": "c07",
+      "profile": "Ein Kollege sagt: „KI versteht den Inhalt und merkt sich alles dauerhaft.“",
+      "tags": ["KI", "Grundlagen", "Kontextfenster", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "probabilities_context",
+          "label": "KI rechnet Wahrscheinlichkeiten; „Gedächtnis“ ist meist nur Kontext",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "KI wirkt überzeugend, aber „versteht“ nicht wie ein Mensch.", "correct": true },
+            { "id": "w2", "text": "Das Kontextfenster begrenzt, wie viel Text gleichzeitig berücksichtigt wird.", "correct": true },
+            { "id": "w3", "text": "„KI merkt sich alles“ ist eine typische Prüfungsfalle.", "correct": true },
+            { "id": "w4", "text": "Das Modell speichert standardmäßig jede Unterhaltung permanent als Wissen ab.", "correct": false }
+          ]
+        },
+        {
+          "id": "true_understanding",
+          "label": "KI versteht immer und ist daher automatisch verlässlich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Überzeugender Stil ist kein Beweis für Wahrheit.", "correct": true },
+            { "id": "w2", "text": "Halluzinationen zeigen, dass KI plausibel falsch liegen kann.", "correct": true },
+            { "id": "w3", "text": "Wenn es professionell klingt, stimmt es sicher.", "correct": false },
+            { "id": "w4", "text": "Verantwortung bleibt beim Menschen: Output prüfen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "KI berechnet Wahrscheinlichkeiten; Kontextfenster begrenzt den „Arbeitsgedächtnis“-Bereich. Output prüfen bleibt Pflicht."
+    },
+    {
+      "id": "c08",
+      "profile": "Ein Unternehmen nutzt ein KI-Tool „nur als Anwender“ und sagt: „Wir haben keine Pflichten, das gilt nur für große Hersteller.“",
+      "tags": ["EU-KI-VO", "AI Act", "Rollen", "Compliance"],
+      "options": [
+        {
+          "id": "deployer_duties",
+          "label": "Auch Betreiber/Nutzer (Deployer) können Pflichten haben",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Die Regulierung betrifft Anbieter/Hersteller und auch Betreiber/Nutzer – je nach Rolle.", "correct": true },
+            { "id": "w2", "text": "Pflichten hängen vom Risiko und Einsatzkontext ab, nicht nur von Unternehmensgröße.", "correct": true },
+            { "id": "w3", "text": "„Wir nutzen nur ein Tool“ kann trotzdem Betreiberpflichten auslösen.", "correct": true },
+            { "id": "w4", "text": "EU-KI-Regeln gelten grundsätzlich nur für Konzerne außerhalb der EU.", "correct": false }
+          ]
+        },
+        {
+          "id": "only_big_tech",
+          "label": "Gilt nur für große Tech-Firmen, Anwender sind ausgenommen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das ist eine typische Prüfungsfalle: Anwender können betroffen sein.", "correct": true },
+            { "id": "w2", "text": "Risikobasierte Logik: je höher das Risiko, desto strenger die Anforderungen.", "correct": true },
+            { "id": "w3", "text": "Betreiberpflichten können u. a. Dokumentation, Information, Kontrolle, Schulung betreffen.", "correct": true },
+            { "id": "w4", "text": "Es gibt keine Transparenzpflichten bei KI-Interaktion.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "EU-KI-VO ist rollen- und risikobasiert: auch Betreiber/Nutzer können Pflichten haben (Doku, Info, Kontrolle, Schulung, ggf. Human Oversight)."
+    },
+    {
+      "id": "c09",
+      "profile": "Ein Team soll einen KI-Einsatz in vier EU-Risikoklassen einordnen. Welche Einordnung passt zu „Social Scoring“?",
+      "tags": ["EU-KI-VO", "Risikoklassen", "Prüfungswissen"],
+      "options": [
+        {
+          "id": "unacceptable",
+          "label": "Verbotene KI (Unacceptable Risk)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bestimmte Praktiken wie Social Scoring gelten als unzulässig.", "correct": true },
+            { "id": "w2", "text": "Unacceptable Risk bedeutet: darf nicht eingesetzt werden.", "correct": true },
+            { "id": "w3", "text": "Das ist nur „Limited Risk“ mit reiner Transparenzpflicht.", "correct": false },
+            { "id": "w4", "text": "Risikoklasse hängt stark am Einsatzkontext; Social Scoring ist ein typisches Negativbeispiel.", "correct": true }
+          ]
+        },
+        {
+          "id": "minimal",
+          "label": "Minimales Risiko (Minimal Risk)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Minimal Risk hat wenige Zusatzpflichten (z. B. einfache Textvorschläge/Spamfilter).", "correct": true },
+            { "id": "w2", "text": "Social Scoring fällt typischerweise nicht in „minimal“.", "correct": true },
+            { "id": "w3", "text": "Minimal Risk bedeutet automatisch „verboten“.", "correct": false },
+            { "id": "w4", "text": "„Alles ist Hochrisiko“ ist falsch – Einordnung braucht Kontext.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Social Scoring → Verbotene KI (Unacceptable Risk)."
+    },
+    {
+      "id": "c10",
+      "profile": "Ein Azubi schreibt einen Prompt: „Mach mir was zu Netzwerke“. Die Antwort ist schwammig und unbrauchbar formatiert.",
+      "tags": ["Prompting", "AP1", "Qualität"],
+      "options": [
+        {
+          "id": "five_blocks",
+          "label": "5-Baustein-Formel anwenden (Rolle/Ziel/Kontext/Constraints/Format)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Vage Prompts führen zu vagen Antworten.", "correct": true },
+            { "id": "w2", "text": "Rolle und Ziel machen die Erwartung klar (z. B. Prüfer/Ausbilder, messbares Ergebnis).", "correct": true },
+            { "id": "w3", "text": "Constraints definieren No-Gos (z. B. Länge, Stil, keine Spekulation).", "correct": true },
+            { "id": "w4", "text": "Format ist egal, KI liefert immer automatisch das richtige Output-Format.", "correct": false }
+          ]
+        },
+        {
+          "id": "force_truth",
+          "label": "„Chain-of-thought“ verlangen, damit es automatisch wahr wird",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Begründung hilft, erzwingt aber keine Wahrheit.", "correct": true },
+            { "id": "w2", "text": "Besser: Begründung + Risiken + Checkliste + Fakten prüfen/testen.", "correct": true },
+            { "id": "w3", "text": "Wenn es ausführlich begründet ist, ist es garantiert korrekt.", "correct": false },
+            { "id": "w4", "text": "Qualitätssicherung braucht menschliche Kontrolle und Tests, nicht nur schöne Texte.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für brauchbare Ergebnisse: 5-Baustein-Formel (Rolle/Ziel/Kontext/Constraints/Format). Vage Prompts → vage Antworten."
+    },
+    {
+      "id": "c11",
+      "profile": "Ein Team will KI-Ausgaben direkt automatisiert in Produktion übernehmen, ohne Prüfung, um Zeit zu sparen.",
+      "tags": ["KI", "Qualität", "Betrieb", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "four_stage_control",
+          "label": "4-Stufen-Kontrolle (Faktencheck/Plausibilität/Datenschutz/Freigabe)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Faktencheck mit zweiter Quelle, interner Doku oder Tests reduziert Halluzinationsrisiko.", "correct": true },
+            { "id": "w2", "text": "Plausibilitätsprüfung entdeckt Widersprüche bei Zahlen/Normen/Details.", "correct": true },
+            { "id": "w3", "text": "Freigabe: bei wichtigen Bereichen (z. B. HR/Recht/Finanzen) muss ein Mensch entscheiden.", "correct": true },
+            { "id": "w4", "text": "Automatisiert durchreichen ist sicher, weil KI nie systematisch falsch liegt.", "correct": false }
+          ]
+        },
+        {
+          "id": "autopilot",
+          "label": "Automatisiert „durchreichen“ (keine Prüfung nötig)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ungeprüfte Automatisierung skaliert Fehler und Verantwortung.", "correct": true },
+            { "id": "w2", "text": "Datenschutz/Secrets in Prompts sind ein No-Go.", "correct": true },
+            { "id": "w3", "text": "Sicherheit (z. B. Prompt-Injection) kann zu ungewolltem Output führen.", "correct": true },
+            { "id": "w4", "text": "Wenn KI in 9 von 10 Fällen korrekt ist, ist Freigabe überflüssig.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "KI-Ausgaben nicht ungeprüft in Produktion: 4-Stufen-Kontrolle + menschliche Entscheidung bei kritischen Themen."
+    },
+    {
+      "id": "c12",
+      "profile": "Ein Unternehmen setzt KI ein und will „AI Literacy“ aufbauen. Was ist der passende Schwerpunkt?",
+      "tags": ["KI", "AI Literacy", "Organisation"],
+      "options": [
+        {
+          "id": "ai_literacy",
+          "label": "Grenzen/Risiken verstehen + sichere Nutzung im Alltag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "AI Literacy heißt: Mitarbeitende kennen Grenzen, Risiken und sinnvolle Nutzung.", "correct": true },
+            { "id": "w2", "text": "Praktische Regeln: keine sensiblen Daten, Bias/Halluzination erkennen, Policies einhalten.", "correct": true },
+            { "id": "w3", "text": "Einmalige Schulung reicht meist – Wiederholungen sind unnötig.", "correct": false },
+            { "id": "w4", "text": "Kurze, regelmäßige Wiederholungen mit Praxisbeispielen stabilisieren Wissen.", "correct": true }
+          ]
+        },
+        {
+          "id": "tool_only",
+          "label": "Nur Tool-Bedienung (Buttons lernen), Risiken ignorieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Tool-Bedienung ohne Risiko-/Compliance-Verständnis ist eine Haftungsfalle.", "correct": true },
+            { "id": "w2", "text": "Grenzen und Verantwortlichkeit sind zentral: Mensch bleibt verantwortlich.", "correct": true },
+            { "id": "w3", "text": "Bias/Datenschutz/Sicherheit sind nebensächlich, wenn das Tool „professionell“ ist.", "correct": false },
+            { "id": "w4", "text": "Sichere Prompts und interne Freigaben/Policies gehören zur Kompetenz.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "AI Literacy = sichere, verantwortliche Nutzung: Grenzen/Risiken kennen, Datenschutz beachten, Ergebnisse prüfen, Policies leben."
+    }
+  ]
+}

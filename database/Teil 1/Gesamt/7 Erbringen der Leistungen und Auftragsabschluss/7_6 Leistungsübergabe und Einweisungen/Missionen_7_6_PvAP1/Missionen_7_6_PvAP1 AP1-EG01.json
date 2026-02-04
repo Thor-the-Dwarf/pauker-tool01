@@ -1,0 +1,204 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Leistungsübergabe & Einweisungen",
+  "topic": "Abnahmeprotokoll und übergebene Dokumentationen (Benutzer, Schnittstellen, Programm, Netzwerk, Tests)",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "uebergabe-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Abnahmeprotokoll vs. Dokumentationsarten",
+      "subtitle": "Ordne die Inhalte korrekt zu.",
+      "hintDefault": "Tipp: Abnahmeprotokoll = wer/was/wann/wo + Ergebnis. Dokumentation = wie nutzen, wie integriert, wie gebaut, wie betrieben, wie getestet.",
+      "sortColumns": [
+        { "zone": "abnahme", "label": "Abnahmeprotokoll – Inhalt", "hint": "(Gegenstand, Personen, Ort, Datum/Uhrzeit, Ergebnis)" },
+        { "zone": "benutzer", "label": "Benutzerdokumentation", "hint": "(Bedienung, typische Abläufe)" },
+        { "zone": "schnittstelle", "label": "Schnittstellendokumentation", "hint": "(APIs, Datenformate, Verträge)" },
+        { "zone": "programm", "label": "Programmdokumentation", "hint": "(Code, Architektur, Deployment)" },
+        { "zone": "netzwerk", "label": "Netzwerkdokumentation", "hint": "(IP-Plan, Ports, Topologie)" },
+        { "zone": "tests", "label": "Testprotokolle", "hint": "(Testfälle, Ergebnisse, Nachweise)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Gegenstand der Abnahme", "correctZone": "abnahme" },
+        { "id": "s2", "text": "Beteiligte Personen (Kunde, Auftragnehmer)", "correctZone": "abnahme" },
+        { "id": "s3", "text": "Ort der Abnahme", "correctZone": "abnahme" },
+        { "id": "s4", "text": "Datum und Uhrzeit", "correctZone": "abnahme" },
+        { "id": "s5", "text": "Abnahmeergebnis (angenommen/unter Vorbehalt/abgelehnt)", "correctZone": "abnahme" },
+        { "id": "s6", "text": "Bedienungsschritte/Workflows (Login, Funktionen, Fehlermeldungen)", "correctZone": "benutzer" },
+        { "id": "s7", "text": "Systemvoraussetzungen und Rollen/Benutzerrechte aus Anwendersicht", "correctZone": "benutzer" },
+        { "id": "s8", "text": "API-Endpunkte und Methoden (z. B. GET/POST)", "correctZone": "schnittstelle" },
+        { "id": "s9", "text": "Datenformate (JSON/XML), Validierung, Fehlercodes", "correctZone": "schnittstelle" },
+        { "id": "s10", "text": "Architekturübersicht/Module, Build/Deploy-Schritte", "correctZone": "programm" },
+        { "id": "s11", "text": "Konfigurationsparameter/Secrets-Handling (ohne Passwörter im Klartext)", "correctZone": "programm" },
+        { "id": "s12", "text": "Netzplan/Topologie, VLANs, Routing", "correctZone": "netzwerk" },
+        { "id": "s13", "text": "IP-Adressplan, DNS, Ports/Firewall-Regeln", "correctZone": "netzwerk" },
+        { "id": "s14", "text": "Testfälle, Soll-/Ist-Ergebnis, Tester, Datum", "correctZone": "tests" },
+        { "id": "s15", "text": "Abnahmetests/Regressionstests als Nachweis", "correctZone": "tests" }
+      ]
+    },
+    {
+      "id": "uebergabe-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Übergabe & Einweisung",
+      "subtitle": "Teste dein Wissen zu Abnahmeprotokoll und Dokumentationsarten.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was gehört zwingend in ein Abnahmeprotokoll?",
+          "options": [
+            { "value": "a", "text": "Ort, Datum/Uhrzeit, beteiligte Personen, Gegenstand" },
+            { "value": "b", "text": "Nur der Quellcode" },
+            { "value": "c", "text": "Nur das Firmenlogo" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welche Dokumentation hilft am meisten beim Betrieb/Netzwerkbetrieb?",
+          "options": [
+            { "value": "a", "text": "Netzwerkdokumentation" },
+            { "value": "b", "text": "Benutzerdokumentation" },
+            { "value": "c", "text": "Produktflyer" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Wo beschreibst du API-Endpunkte, Formate und Fehlercodes?",
+          "options": [
+            { "value": "a", "text": "Schnittstellendokumentation" },
+            { "value": "b", "text": "Abnahmeprotokoll" },
+            { "value": "c", "text": "Urlaubsplan" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Warum sind Testprotokolle bei der Übergabe wichtig?",
+          "options": [
+            { "value": "a", "text": "Als Nachweis, dass Anforderungen geprüft wurden" },
+            { "value": "b", "text": "Damit WLAN schneller wird" },
+            { "value": "c", "text": "Damit weniger Benutzer angelegt werden" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "uebergabe-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Übergabeprozess in Reihenfolge",
+      "subtitle": "Bringe die Schritte einer sauberen Leistungsübergabe in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst vorbereiten, dann testen, dann dokumentieren, dann einweisen, dann abnehmen und abschließen.",
+      "rows": [
+        {
+          "key": "vorbereitung",
+          "label": "Übergabe vorbereiten (Lieferumfang prüfen, Ansprechpartner festlegen)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "tests",
+          "label": "Tests/Abnahmetests durchführen und Testprotokolle erstellen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Dokumentationen finalisieren (Benutzer, Schnittstellen, Programm, Netzwerk)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "uebergabe",
+          "label": "Lieferung/Übergabe durchführen (Zugänge, Installationspakete, Konfig-Infos)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "einweisung",
+          "label": "Einweisung durchführen (Bedienung, Betrieb, Supportwege, FAQ)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "abnahme",
+          "label": "Abnahmeprotokoll ausfüllen (Gegenstand, Personen, Ort, Datum/Uhrzeit, Ergebnis)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "abschluss",
+          "label": "Abschluss/Übergang in Betrieb (Ticket/Support aktiv, offene Punkte, Lessons Learned)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

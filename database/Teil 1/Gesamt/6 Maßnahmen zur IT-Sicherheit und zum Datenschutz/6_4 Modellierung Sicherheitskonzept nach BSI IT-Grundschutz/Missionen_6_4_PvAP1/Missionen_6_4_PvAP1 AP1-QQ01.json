@@ -1,0 +1,100 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – BSI IT-Grundschutz Sicherheitskonzept (6.4)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zum Sicherheitskonzept nach BSI IT-Grundschutz zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Grundschutz-Baustein",
+    "Grundschutzkatalog",
+    "Schutzbedarf: normal",
+    "Schutzbedarf: hoch",
+    "Schutzbedarf: sehr hoch",
+    "ISMS",
+    "IT-Sicherheitsbeauftragter",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Modul mit Maßnahmenempfehlungen für einen konkreten Bereich (z. B. Server, Client, Netz, Anwendungen).",
+      "correct": "Grundschutz-Baustein"
+    },
+    {
+      "text": "Sammlung/Struktur aller Bausteine und Maßnahmen, die als Basis für Grundschutz-Umsetzung dienen.",
+      "correct": "Grundschutzkatalog"
+    },
+    {
+      "text": "Schutzbedarfskategorie: Standardanforderungen reichen aus; Schäden wären begrenzt und beherrschbar.",
+      "correct": "Schutzbedarf: normal"
+    },
+    {
+      "text": "Schutzbedarfskategorie: erhebliche Schäden möglich (z. B. spürbare finanzielle/operative Auswirkungen).",
+      "correct": "Schutzbedarf: hoch"
+    },
+    {
+      "text": "Schutzbedarfskategorie: existenzbedrohende Schäden möglich (z. B. massive Ausfälle, sehr große Schäden).",
+      "correct": "Schutzbedarf: sehr hoch"
+    },
+    {
+      "text": "Managementsystem, das Rollen, Prozesse, Richtlinien und Kontrollen definiert, um Informationssicherheit dauerhaft zu steuern.",
+      "correct": "ISMS"
+    },
+    {
+      "text": "Rolle im Unternehmen, die Informationssicherheit koordiniert (z. B. Richtlinien, Awareness, Maßnahmen-Tracking, Audits begleiten).",
+      "correct": "IT-Sicherheitsbeauftragter"
+    },
+    {
+      "text": "Wenn du für einen Bereich passende Maßnahmen auswählst und daraus ein Set an Controls ableitest, nutzt du typischerweise das.",
+      "correct": "Grundschutz-Baustein"
+    },
+    {
+      "text": "Wenn du wissen willst, welche Bausteine es überhaupt gibt und wie sie strukturiert sind, ist das die Quelle.",
+      "correct": "Grundschutzkatalog"
+    },
+    {
+      "text": "Wenn Ausfall/Manipulation nur geringe Auswirkungen hätte und Ersatzprozesse einfach möglich sind, passt diese Einstufung.",
+      "correct": "Schutzbedarf: normal"
+    },
+    {
+      "text": "Wenn ein Vorfall zu schwerem Reputationsschaden, großen Vertragsstrafen oder längerem Stillstand führen kann, passt diese Einstufung.",
+      "correct": "Schutzbedarf: hoch"
+    },
+    {
+      "text": "Wenn ein Vorfall z. B. die Existenz des Unternehmens gefährden könnte oder kritische Infrastruktur betroffen wäre, passt diese Einstufung.",
+      "correct": "Schutzbedarf: sehr hoch"
+    },
+    {
+      "text": "Beispiel: Richtlinie, Risiko-/Schutzbedarfsprozess, Verantwortlichkeiten, kontinuierliche Verbesserung – das gehört dazu.",
+      "correct": "ISMS"
+    },
+    {
+      "text": "Beispiel: Sicherheitsleitlinie einführen, Maßnahmen umsetzen, prüfen, verbessern (PDCA) – das ist typisch dafür.",
+      "correct": "ISMS"
+    },
+    {
+      "text": "Beispiel: Koordiniert Sicherheitsmaßnahmen, berichtet an Management, ist Ansprechpartner für Audits – das ist diese Rolle.",
+      "correct": "IT-Sicherheitsbeauftragter"
+    },
+    {
+      "text": "Schutzbedarfs-Kategorien sind immer eine Abstufung der möglichen Schäden – die drei Stufen sind genau diese.",
+      "correct": "alle"
+    },
+    {
+      "text": "In einem Grundschutz-Projekt brauchst du typischerweise Bausteine, Katalog, Schutzbedarf, ISMS-Prozesse und eine verantwortliche Rolle.",
+      "correct": "alle"
+    },
+    {
+      "text": "Wenn eine Organisation Informationssicherheit nicht als Einmalprojekt, sondern als Dauerbetrieb betreibt, ist das der Kern davon.",
+      "correct": "ISMS"
+    },
+    {
+      "text": "Wenn du für 'Server' oder 'Netzwerk' konkrete Maßnahmenlisten brauchst, suchst du primär hier.",
+      "correct": "Grundschutz-Baustein"
+    },
+    {
+      "text": "Die operative Koordination der Sicherheitsarbeit im Unternehmen liegt typischerweise bei dieser Rolle.",
+      "correct": "IT-Sicherheitsbeauftragter"
+    }
+  ]
+}

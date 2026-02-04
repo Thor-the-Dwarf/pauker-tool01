@@ -1,0 +1,581 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Mathematik für die AP1",
+  "description": "Schritt 1: Rechenprinzip/Einordnung bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Eine Festplatte wird vom Hersteller mit „500 GB“ beworben. Im Betriebssystem erscheinen aber nur ungefähr „465 GiB“. Der Azubi vermutet einen Defekt.",
+      "tags": ["Einheiten", "SI", "IEC", "Speicher", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "si_vs_iec",
+          "label": "SI- vs. IEC-Präfix (1000 vs 1024)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Hersteller nutzen meist dezimal (GB = 10^9 Byte), OS oft binär (GiB = 2^30 Byte).", "correct": true },
+            { "id": "w2", "text": "1 GiB ist größer als 1 GB, deshalb wirkt die Anzeige kleiner.", "correct": true },
+            { "id": "w3", "text": "Das ist immer ein Hardwaredefekt, weil 500 GB exakt 500 GiB sein müssen.", "correct": false },
+            { "id": "w4", "text": "Die Verwechslung kB/KB/MB/MiB führt in Prüfungen häufig zu Punktabzug.", "correct": true }
+          ]
+        },
+        {
+          "id": "dateisystem_overhead",
+          "label": "Nur Dateisystem-Overhead (Metadaten/Journaling) ist die Ursache",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateisysteme kosten Platz, erklären aber nicht den typischen 500 GB → ~465 GiB Sprung allein.", "correct": true },
+            { "id": "w2", "text": "Der Unterschied entsteht primär durch 1000 vs 1024, nicht durch Metadaten.", "correct": true },
+            { "id": "w3", "text": "Overhead kann relevant sein, aber er ersetzt nicht die SI/IEC-Umrechnung.", "correct": true },
+            { "id": "w4", "text": "Overhead macht die Anzeige immer exakt 10% kleiner.", "correct": false }
+          ]
+        },
+        {
+          "id": "kompression",
+          "label": "Kompression macht die Festplatte kleiner",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompression betrifft Dateninhalte, nicht die physische Kapazitätsangabe.", "correct": true },
+            { "id": "w2", "text": "Die Herstellerangabe ist eine Einheitenfrage, keine Kompressionsfrage.", "correct": true },
+            { "id": "w3", "text": "Kompression kann die Nutzung effizienter machen, ist aber nicht die Ursache der Anzeige in GiB.", "correct": true },
+            { "id": "w4", "text": "Kompression ist identisch mit IEC-Präfixen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "SI vs IEC: Hersteller rechnet 10er-Potenzen (GB), Betriebssystem oft 2er-Potenzen (GiB). Deshalb wirkt die Kapazität kleiner."
+    },
+    {
+      "id": "v02",
+      "profile": "In der AP1-Aufgabe steht: „100 Mbit/s Leitung“. Ein Azubi rechnet direkt mit „100 MB/s“ und kommt auf extrem kurze Downloadzeiten.",
+      "tags": ["bit_vs_byte", "Datenrate", "Transferzeit", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "bit_vs_byte",
+          "label": "Bit vs Byte korrekt umrechnen (Faktor 8)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "1 Byte = 8 bit, deshalb muss bei bit/s ↔ Byte/s mit 8 umgerechnet werden.", "correct": true },
+            { "id": "w2", "text": "100 Mbit/s entsprechen theoretisch 12,5 MB/s (100 ÷ 8).", "correct": true },
+            { "id": "w3", "text": "Mbit/s und MB/s sind gleich, das sind nur unterschiedliche Schreibweisen.", "correct": false },
+            { "id": "w4", "text": "Overhead reduziert die reale Rate meist zusätzlich, aber die Faktor-8-Umrechnung bleibt Pflicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "si_vs_iec",
+          "label": "SI vs IEC ist hier der Hauptfehler (1000 vs 1024)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SI/IEC kann kleine Abweichungen erzeugen, aber der große Fehler ist meist bit vs Byte.", "correct": true },
+            { "id": "w2", "text": "Der Faktor-8-Fehler ist viel gravierender als 1000/1024.", "correct": true },
+            { "id": "w3", "text": "SI/IEC löst automatisch den Bit/Byte-Fehler.", "correct": false },
+            { "id": "w4", "text": "Für Datenraten wird typischerweise bit/s verwendet.", "correct": true }
+          ]
+        },
+        {
+          "id": "runden",
+          "label": "Zu früh gerundet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zu frühes Runden kann Fehler erzeugen, aber nicht den typischen Faktor-8-Versatz.", "correct": true },
+            { "id": "w2", "text": "Der Kernfehler ist Einheit/Grundgröße (bit vs Byte), nicht Rundung.", "correct": true },
+            { "id": "w3", "text": "Runden ist immer verboten.", "correct": false },
+            { "id": "w4", "text": "Runden ist sinnvoll – aber erst am Ende, wenn verlangt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bit vs Byte: Datenraten in Mbit/s müssen in MB/s durch 8 geteilt werden. Sonst liegst du um Faktor 8 daneben."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein Kunde hat eine Leitung mit 100 Mbit/s. Er lädt 500 MB herunter. Gesucht ist die theoretische Transferzeit ohne Overhead.",
+      "tags": ["Transferzeit", "Formel", "Einheiten", "AP1"],
+      "options": [
+        {
+          "id": "einheiten_angleichen",
+          "label": "Einheiten angleichen und Zeit = Datenmenge / Rate rechnen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zeit = Datenmenge / Rate ist die Grundformel.", "correct": true },
+            { "id": "w2", "text": "500 MB müssen zu Mbit umgerechnet werden: 500 MB = 4000 Mbit.", "correct": true },
+            { "id": "w3", "text": "4000 Mbit / 100 Mbit/s = 40 s (theoretisch).", "correct": true },
+            { "id": "w4", "text": "Man darf MB und Mbit direkt teilen, weil beide „Mega“ sind.", "correct": false }
+          ]
+        },
+        {
+          "id": "ohne_umrechnung",
+          "label": "500 / 100 = 5 Sekunden (ohne Umrechnung)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "MB und Mbit sind nicht kompatibel ohne Faktor 8.", "correct": true },
+            { "id": "w2", "text": "Der Faktor-8-Fehler zerstört die Größenordnung.", "correct": true },
+            { "id": "w3", "text": "Das Ergebnis ist plausibel, weil 100 sehr groß ist.", "correct": false },
+            { "id": "w4", "text": "In Prüfungen gibt es dafür fast sicher Punktabzug wegen falscher Einheiten.", "correct": true }
+          ]
+        },
+        {
+          "id": "overhead_pflicht",
+          "label": "Ohne Overhead kann man nicht rechnen, daher keine Lösung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Theoretisch ist rechenbar; Overhead erklärt nur, warum es real länger dauert.", "correct": true },
+            { "id": "w2", "text": "Aufgaben nennen oft bewusst die Brutto-Rate und wollen die Idealrechnung.", "correct": true },
+            { "id": "w3", "text": "Overhead kann grob 10–20% ausmachen, aber er verhindert die Rechnung nicht.", "correct": true },
+            { "id": "w4", "text": "Ohne Overhead ist jedes Ergebnis automatisch falsch.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Einheiten angleichen: 500 MB = 4000 Mbit; Zeit = 4000/100 = 40 Sekunden (theoretisch)."
+    },
+    {
+      "id": "v04",
+      "profile": "Eine Kennzahl steigt von 10% auf 12%. Ein Azubi schreibt: „Das sind +2%“.",
+      "tags": ["Prozent", "Prozentpunkte", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "prozentpunkte",
+          "label": "Prozentpunkte (nicht Prozent) korrekt unterscheiden",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Von 10% auf 12% sind +2 Prozentpunkte.", "correct": true },
+            { "id": "w2", "text": "Relativ ist es +20% Steigerung (2/10).", "correct": true },
+            { "id": "w3", "text": "„+2%“ ist immer korrekt, weil Prozentpunkte dasselbe sind.", "correct": false },
+            { "id": "w4", "text": "Die Unterscheidung ist prüfungsrelevant, weil Formulierungen sonst falsch sind.", "correct": true }
+          ]
+        },
+        {
+          "id": "rabatt",
+          "label": "Rabattformel (0,8-Faktor) anwenden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Rabatt (z. B. 20% → 0,8) passt zu Preisänderungen, nicht zu Prozentpunkten.", "correct": true },
+            { "id": "w2", "text": "Hier geht es um Differenz zwischen zwei Prozentwerten.", "correct": true },
+            { "id": "w3", "text": "Rabatt ist identisch mit Prozentpunkten.", "correct": false },
+            { "id": "w4", "text": "Rabatt wird mit (1 − p/100) gerechnet.", "correct": true }
+          ]
+        },
+        {
+          "id": "rundung",
+          "label": "Rundung ist der Kernfehler",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Der Fehler ist sprachlich/konzeptuell, nicht rundungsbedingt.", "correct": true },
+            { "id": "w2", "text": "10 und 12 sind exakt, hier wird nichts gerundet.", "correct": true },
+            { "id": "w3", "text": "Rundung würde das Problem lösen.", "correct": false },
+            { "id": "w4", "text": "Prozentpunkte beschreiben absolute Unterschiede in Prozentwerten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das sind +2 Prozentpunkte. Relativ betrachtet ist es +20% Steigerung."
+    },
+    {
+      "id": "v05",
+      "profile": "Ein Betrieb hat 4 Festplatten à 2 TB. Gesucht ist die nutzbare Kapazität bei RAID 5 (klassisch, gleiche Plattengrößen).",
+      "tags": ["RAID", "Speicher", "Kapazität", "AP1"],
+      "options": [
+        {
+          "id": "raid5",
+          "label": "RAID 5: (n−1) · Plattengröße",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RAID 5 nutzt eine Platte äquivalent für Parität: (n−1) · Größe.", "correct": true },
+            { "id": "w2", "text": "4×2 TB → (4−1)×2 TB = 6 TB nutzbar.", "correct": true },
+            { "id": "w3", "text": "RAID 5 spiegelt alles, daher nur halbe Kapazität.", "correct": false },
+            { "id": "w4", "text": "Bei gemischten Plattengrößen zählt immer die kleinste Platte für alle.", "correct": true }
+          ]
+        },
+        {
+          "id": "raid1",
+          "label": "RAID 1: (n/2) · Plattengröße",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID 1 ist Mirroring, typischerweise halbe Kapazität.", "correct": true },
+            { "id": "w2", "text": "4×2 TB wären dann 4 TB nutzbar – aber das ist RAID 1, nicht RAID 5.", "correct": true },
+            { "id": "w3", "text": "RAID 1 hat Parität wie RAID 5.", "correct": false },
+            { "id": "w4", "text": "RAID 1 erhöht Kapazität maximal.", "correct": false }
+          ]
+        },
+        {
+          "id": "raid0",
+          "label": "RAID 0: n · Plattengröße",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID 0 hat keine Redundanz, dafür maximale Kapazität.", "correct": true },
+            { "id": "w2", "text": "4×2 TB wären 8 TB – passt aber nicht zu RAID 5.", "correct": true },
+            { "id": "w3", "text": "RAID 0 hat immer eine Platte für Parität.", "correct": false },
+            { "id": "w4", "text": "RAID 0 schützt vor Plattenausfall.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "RAID 5: (n−1)·Größe → 6 TB nutzbar bei 4×2 TB."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein IPv4-Subnetz hat /26. Gesucht ist die Anzahl verwendbarer Hosts (klassische Regel).",
+      "tags": ["Netz", "Subnetting", "IPv4", "AP1"],
+      "options": [
+        {
+          "id": "hosts_formel",
+          "label": "Hosts = 2^(32−Prefix) − 2",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bei /26 sind Host-Bits: 32−26 = 6.", "correct": true },
+            { "id": "w2", "text": "2^6 = 64 Adressen insgesamt.", "correct": true },
+            { "id": "w3", "text": "−2 für Netz- und Broadcast-Adresse → 62 Hosts.", "correct": true },
+            { "id": "w4", "text": "Bei /26 gibt es 254 Hosts wie bei /24.", "correct": false }
+          ]
+        },
+        {
+          "id": "ohne_minus2",
+          "label": "Hosts = 2^(32−Prefix) (ohne −2)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne −2 würdest du Netz- und Broadcast-Adresse fälschlich mitzählen.", "correct": true },
+            { "id": "w2", "text": "Klassische AP1-Regel: −2 ist Standard (ohne Spezialfälle /31,/32).", "correct": true },
+            { "id": "w3", "text": "Netz- und Broadcast-Adresse sind in normalen Netzen nicht als Host nutzbar.", "correct": true },
+            { "id": "w4", "text": "−2 gilt nur bei /24, nicht bei /26.", "correct": false }
+          ]
+        },
+        {
+          "id": "si_iec",
+          "label": "SI/IEC-Rechnung (1000 vs 1024) anwenden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Subnetting basiert auf 2er-Potenzen, nicht auf SI/IEC-Präfixen.", "correct": true },
+            { "id": "w2", "text": "Relevant sind Host-Bits und 2^(Host-Bits).", "correct": true },
+            { "id": "w3", "text": "SI/IEC entscheidet über Broadcast-Adresse.", "correct": false },
+            { "id": "w4", "text": "Die 32 Bit stammen aus IPv4-Adresslänge.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "/26 → 6 Host-Bits → 64 Adressen → 62 nutzbare Hosts (klassisch: −2)."
+    },
+    {
+      "id": "v07",
+      "profile": "Eine Grafik wird in beiden Richtungen verdoppelt (Breite ×2 und Höhe ×2). Ein Azubi sagt: „Doppelte Auflösung = doppelte Datenmenge“.",
+      "tags": ["Medien", "Pixel", "Skalierung", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "vierfach_pixel",
+          "label": "Vierfache Pixelanzahl (und damit grob vierfache Datenmenge)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Pixel = Breite · Höhe; wenn beide ×2, dann insgesamt ×4.", "correct": true },
+            { "id": "w2", "text": "„Doppelt“ klingt nach ×2, aber in 2D wird es ×4.", "correct": true },
+            { "id": "w3", "text": "Die Pixelanzahl bleibt gleich, nur die Darstellung wird größer.", "correct": false },
+            { "id": "w4", "text": "Mehr Pixel bedeuten ohne Kompression meist deutlich mehr Daten.", "correct": true }
+          ]
+        },
+        {
+          "id": "doppelt",
+          "label": "Doppelte Pixelanzahl",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "×2 in nur einer Dimension wäre ×2 Pixel, aber hier sind es zwei Dimensionen.", "correct": true },
+            { "id": "w2", "text": "Breite ×2 und Höhe ×2 ergibt ×4, nicht ×2.", "correct": true },
+            { "id": "w3", "text": "Das ist nur bei 1D-Signalen korrekt.", "correct": true },
+            { "id": "w4", "text": "„Doppelt“ gilt immer unabhängig von Dimensionen.", "correct": false }
+          ]
+        },
+        {
+          "id": "kompression",
+          "label": "Kompression sorgt automatisch für gleiche Dateigröße",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompression kann die Größe reduzieren, aber mehr Pixel erhöhen die Rohdatenmenge.", "correct": true },
+            { "id": "w2", "text": "Ohne Kompression ist die Rechnung direkt: mehr Pixel → mehr Byte.", "correct": true },
+            { "id": "w3", "text": "Kompression ist garantiert immer exakt proportional zur Auflösung.", "correct": false },
+            { "id": "w4", "text": "Prüfungen fragen oft explizit unkomprimierte Größen, um das Prinzip zu testen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn Breite und Höhe verdoppelt werden, vervierfacht sich die Pixelanzahl – und grob auch die Datenmenge."
+    },
+    {
+      "id": "v08",
+      "profile": "Für ein unkomprimiertes Bild soll grob die Dateigröße abgeschätzt werden. Es hat 2.000.000 Pixel und 24 bit Farbtiefe (RGB).",
+      "tags": ["Medien", "Farbtiefe", "Dateigröße", "AP1"],
+      "options": [
+        {
+          "id": "rohgroesse",
+          "label": "Größe ≈ Pixel · Farbtiefe / 8",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "24 bit = 3 Byte pro Pixel (24/8).", "correct": true },
+            { "id": "w2", "text": "2.000.000 · 3 Byte = 6.000.000 Byte ≈ 6 MB.", "correct": true },
+            { "id": "w3", "text": "Man darf bit und Byte gleichsetzen, weil beide „Daten“ sind.", "correct": false },
+            { "id": "w4", "text": "Kompression (JPEG/PNG) kann kleiner sein, aber hier geht es um unkomprimiert.", "correct": true }
+          ]
+        },
+        {
+          "id": "falscher_faktor",
+          "label": "Größe ≈ Pixel · Farbtiefe (ohne /8)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne /8 würdest du bit als Byte behandeln.", "correct": true },
+            { "id": "w2", "text": "Die Division durch 8 ist Pflicht: 8 bit = 1 Byte.", "correct": true },
+            { "id": "w3", "text": "Das Ergebnis wäre um Faktor 8 zu groß.", "correct": true },
+            { "id": "w4", "text": "bit und Byte sind austauschbar.", "correct": false }
+          ]
+        },
+        {
+          "id": "rgba_verwechslung",
+          "label": "Immer mit 32 bit rechnen, weil Bilder Alpha haben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Die Aufgabe gibt 24 bit (RGB) vor; Alpha wäre 32 bit.", "correct": true },
+            { "id": "w2", "text": "32 bit würde 4 Byte/Pixel bedeuten, ist aber hier nicht gefordert.", "correct": true },
+            { "id": "w3", "text": "Farbtiefe ist egal, Hauptsache man nimmt eine Zahl.", "correct": false },
+            { "id": "w4", "text": "Farbtiefe beeinflusst die Rohgröße direkt proportional.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Unkomprimiert: Pixel · Farbtiefe/8 → 2.000.000 · 24/8 = 6.000.000 Byte ≈ 6 MB."
+    },
+    {
+      "id": "v09",
+      "profile": "Ein Azubi sagt: „Base64 ist wie Verschlüsselung und spart Platz“. Es geht um das Einbetten von Binärdaten in JSON/E-Mail.",
+      "tags": ["Base64", "Codierung", "Overhead", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "base64_was",
+          "label": "Base64 ist Codierung (Texttransport) mit Größen-Overhead",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Base64 wandelt binär in Text um (nützlich für E-Mail/JSON/HTML-Einbettung).", "correct": true },
+            { "id": "w2", "text": "Base64 ist keine Verschlüsselung und bietet keinen Schutz.", "correct": true },
+            { "id": "w3", "text": "Base64 macht Daten typischerweise größer (ca. ~33% Overhead).", "correct": true },
+            { "id": "w4", "text": "Base64 komprimiert Daten zuverlässig und macht sie kleiner.", "correct": false }
+          ]
+        },
+        {
+          "id": "verschluesselung",
+          "label": "Base64 ist Verschlüsselung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschlüsselung braucht Schlüssel und ist ohne Schlüssel nicht lesbar.", "correct": true },
+            { "id": "w2", "text": "Base64 ist ohne Schlüssel rückwandelbar und daher kein Schutz.", "correct": true },
+            { "id": "w3", "text": "Base64 schützt vor unbefugtem Zugriff.", "correct": false },
+            { "id": "w4", "text": "Base64 wird genutzt, um binäre Daten in Textkanälen zu transportieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "kompression",
+          "label": "Base64 ist Kompression",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompression reduziert Größe, Base64 erhöht sie typischerweise.", "correct": true },
+            { "id": "w2", "text": "Base64 ist ein Verpackungsformat, nicht ein Kompressionsalgorithmus.", "correct": true },
+            { "id": "w3", "text": "Base64 ist für Texttransport da, nicht zur Platzersparnis.", "correct": true },
+            { "id": "w4", "text": "Base64 spart immer mindestens 10% Speicher.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Base64 = Codierung für Texttransport, kein Schutz, keine Kompression. Meist ~33% größer."
+    },
+    {
+      "id": "v10",
+      "profile": "Ein SLA verspricht 99,9% Verfügbarkeit pro Monat (30 Tage). Gesucht ist die erlaubte Ausfallzeit in Minuten.",
+      "tags": ["SLA", "Verfügbarkeit", "Zeit", "AP1"],
+      "options": [
+        {
+          "id": "downtime",
+          "label": "Ausfallzeit = Zeitraum · (1 − Verfügbarkeit)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "30 Tage = 30·24·60 = 43.200 Minuten.", "correct": true },
+            { "id": "w2", "text": "1 − 0,999 = 0,001; 43.200 · 0,001 = 43,2 Minuten.", "correct": true },
+            { "id": "w3", "text": "99,9% heißt immer exakt 1 Stunde Ausfall pro Monat.", "correct": false },
+            { "id": "w4", "text": "Reaktionszeit ist nicht dasselbe wie Wiederherstellungszeit; hier geht es um Ausfallzeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "verwechslung_neunen",
+          "label": "99,9% ≈ 4,3 Minuten pro Monat",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "4,3 Minuten passt eher zu 99,99% (vier Neun), nicht zu 99,9%.", "correct": true },
+            { "id": "w2", "text": "99,9% ist grob ~43 Minuten pro Monat (30 Tage).", "correct": true },
+            { "id": "w3", "text": "Mehr „Neun“ bedeutet weniger Ausfallzeit.", "correct": true },
+            { "id": "w4", "text": "Alle „Neun“-Werte sind ungefähr gleich.", "correct": false }
+          ]
+        },
+        {
+          "id": "falsche_basis",
+          "label": "Ausfallzeit = 30 Tage · 0,999",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "0,999 ist die Verfügbarkeit, nicht der Ausfall.", "correct": true },
+            { "id": "w2", "text": "Ausfallanteil ist (1 − Verfügbarkeit).", "correct": true },
+            { "id": "w3", "text": "So würdest du Verfügbarkeitszeit statt Ausfallzeit berechnen.", "correct": true },
+            { "id": "w4", "text": "Der Ausfallanteil ist 0,999.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "99,9% pro 30 Tage → 43.200 min · 0,001 = 43,2 Minuten erlaubter Ausfall."
+    },
+    {
+      "id": "v11",
+      "profile": "USV-Berechnung: Batterie hat 1000 Wh. Ein Server zieht 200 W. Gesucht ist die theoretische Laufzeit (ohne Verluste).",
+      "tags": ["USV", "Leistung", "Energie", "Zeit", "AP1"],
+      "options": [
+        {
+          "id": "wh_formel",
+          "label": "Laufzeit (h) = Wh / W",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Energie (Wh) = Leistung (W) · Zeit (h).", "correct": true },
+            { "id": "w2", "text": "Zeit = 1000 Wh / 200 W = 5 h.", "correct": true },
+            { "id": "w3", "text": "Wh und W sind gleich, daher ist Zeit immer 1 Stunde.", "correct": false },
+            { "id": "w4", "text": "In der Praxis sind Verluste/Alterung relevant, aber hier ist die Idealrechnung gefragt.", "correct": true }
+          ]
+        },
+        {
+          "id": "mal_statt_geteilt",
+          "label": "Laufzeit (h) = Wh · W",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einheiten würden dann unsinnig (Wh·W).", "correct": true },
+            { "id": "w2", "text": "Für Zeit musst du dividieren, nicht multiplizieren.", "correct": true },
+            { "id": "w3", "text": "Multiplikation ist korrekt, weil mehr Leistung länger hält.", "correct": false },
+            { "id": "w4", "text": "Mehr Leistung bedeutet bei gleicher Batterie kürzere Laufzeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "kw_verwechslung",
+          "label": "Man muss immer kW und kWh nutzen, sonst geht es nicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "W und Wh sind völlig ok; kW/kWh sind nur andere Skalierung.", "correct": true },
+            { "id": "w2", "text": "Rechnung bleibt identisch: Energie / Leistung = Zeit.", "correct": true },
+            { "id": "w3", "text": "Ohne kW ist jede Rechnung automatisch falsch.", "correct": false },
+            { "id": "w4", "text": "Wichtig ist die konsistente Einheit (Wh zu W).", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Laufzeit = Wh/W → 1000/200 = 5 Stunden (theoretisch)."
+    },
+    {
+      "id": "v12",
+      "profile": "Ein Team rechnet viele Zwischenschritte und rundet nach jedem Schritt. Am Ende weicht das Ergebnis sichtbar ab. In der AP1 wird das als Fehler gewertet.",
+      "tags": ["Runden", "Plausibilität", "Prüfungsstrategie", "AP1"],
+      "options": [
+        {
+          "id": "erst_am_ende",
+          "label": "Erst am Ende runden (Zwischenergebnisse voll lassen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Rundungsfehler summieren sich über mehrere Schritte.", "correct": true },
+            { "id": "w2", "text": "Zwischenwerte möglichst genau halten und nur das Endergebnis runden.", "correct": true },
+            { "id": "w3", "text": "Frühes Runden ist immer besser, weil es schneller geht.", "correct": false },
+            { "id": "w4", "text": "Wenn Runden verlangt ist, dann transparent dokumentieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "immer_runden",
+          "label": "Immer nach jedem Schritt runden, um Fehler zu vermeiden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das erhöht die Fehlerfortpflanzung statt sie zu vermeiden.", "correct": true },
+            { "id": "w2", "text": "Das Ergebnis driftet mit jedem Rundungsschritt weiter weg.", "correct": true },
+            { "id": "w3", "text": "Prüfungen erwarten meist nachvollziehbare, präzise Rechenwege.", "correct": true },
+            { "id": "w4", "text": "Runden macht Ergebnisse immer exakter.", "correct": false }
+          ]
+        },
+        {
+          "id": "ueberschlag",
+          "label": "Nur Überschlag machen, genaue Rechnung ist unnötig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Überschlag hilft zur Plausibilität, ersetzt aber keine exakte Rechnung.", "correct": true },
+            { "id": "w2", "text": "AP1 will oft den nachvollziehbaren Rechenweg.", "correct": true },
+            { "id": "w3", "text": "Überschlag ist immer ausreichend, weil es nur um Größenordnung geht.", "correct": false },
+            { "id": "w4", "text": "Plausibilitätscheck ist sinnvoll: Sekunden vs Stunden, MB vs GB usw.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Prüfungsregel: Zwischenergebnisse nicht kaputtrunden. Erst am Ende runden, wenn es verlangt ist."
+    },
+    {
+      "id": "v13",
+      "profile": "Ein Server nutzt aktuell 60 von maximal 80 gleichzeitigen Prozessen. Gesucht sind Auslastung und Reserve.",
+      "tags": ["Prozent", "Auslastung", "Reserve", "AP1"],
+      "options": [
+        {
+          "id": "auslastung_reserve",
+          "label": "Auslastung = (Ist/Max)·100; Reserve = 100% − Auslastung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Auslastung = (60/80)·100 = 75%.", "correct": true },
+            { "id": "w2", "text": "Reserve = 100% − 75% = 25%.", "correct": true },
+            { "id": "w3", "text": "75% Auslastung heißt automatisch „25% schneller“ möglich.", "correct": false },
+            { "id": "w4", "text": "In der Praxis ist Performance oft nicht linear; Puffer einplanen.", "correct": true }
+          ]
+        },
+        {
+          "id": "falsche_formel",
+          "label": "Auslastung = (Max/Ist)·100",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das würde 80/60 rechnen und ergibt eine Zahl >100%, was falsch ist.", "correct": true },
+            { "id": "w2", "text": "Auslastung ist Anteil der Nutzung an der Kapazität: Ist/Max.", "correct": true },
+            { "id": "w3", "text": "So rechnet man nur, wenn man „Wie viel mal größer“ sucht.", "correct": true },
+            { "id": "w4", "text": "Max/Ist ist immer die richtige Auslastungsformel.", "correct": false }
+          ]
+        },
+        {
+          "id": "reserve_gleich",
+          "label": "Reserve ist identisch mit Auslastung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Reserve ist der freie Anteil, also 100% minus Auslastung.", "correct": true },
+            { "id": "w2", "text": "Wenn Auslastung 75% ist, kann Reserve nicht auch 75% sein.", "correct": true },
+            { "id": "w3", "text": "Reserve misst den Anteil, der noch verfügbar ist.", "correct": true },
+            { "id": "w4", "text": "Reserve und Auslastung sind zwei Wörter für dasselbe.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Auslastung 75%, Reserve 25% (und bitte nicht linear als „25% schneller“ interpretieren)."
+    },
+    {
+      "id": "v14",
+      "profile": "Planung: 50 Tickets dauern jeweils 15 Minuten. Gesucht ist der Gesamtaufwand in Stunden.",
+      "tags": ["Zeit", "Aufwand", "Umrechnung", "AP1"],
+      "options": [
+        {
+          "id": "aufwand",
+          "label": "Aufwand = Anzahl · Zeit pro Stück, dann Minuten → Stunden",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "50 · 15 min = 750 min.", "correct": true },
+            { "id": "w2", "text": "750 min / 60 = 12,5 h.", "correct": true },
+            { "id": "w3", "text": "Man darf Minuten direkt als Stunden lesen, weil beides Zeit ist.", "correct": false },
+            { "id": "w4", "text": "Realistische Planung braucht zusätzlich Puffer (z. B. 20–30%), aber hier ist die Rechenbasis gefragt.", "correct": true }
+          ]
+        },
+        {
+          "id": "falsche_umrechnung",
+          "label": "50 · 15 = 750 Stunden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "750 ist in Minuten, nicht in Stunden.", "correct": true },
+            { "id": "w2", "text": "Ohne Division durch 60 ist die Einheit falsch.", "correct": true },
+            { "id": "w3", "text": "Die Größenordnung wäre völlig unrealistisch (Plausibilitätscheck).", "correct": true },
+            { "id": "w4", "text": "750 min sind genau 750 h, weil 1 min = 1 h.", "correct": false }
+          ]
+        },
+        {
+          "id": "ueberschlag",
+          "label": "Nur überschlagen: „ungefähr ein paar Stunden“, exakte Zahl unnötig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "AP1 will meist eine konkrete, nachvollziehbare Rechnung.", "correct": true },
+            { "id": "w2", "text": "Überschlag ist als Kontrolle ok, ersetzt aber das Ergebnis nicht.", "correct": true },
+            { "id": "w3", "text": "Ohne Zahl gibt es in der Regel keine Punkte.", "correct": true },
+            { "id": "w4", "text": "Überschlag ist immer besser als exakte Rechnung.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Aufwand = 50×15 min = 750 min = 12,5 Stunden (Basis ohne Puffer)."
+    }
+  ]
+}

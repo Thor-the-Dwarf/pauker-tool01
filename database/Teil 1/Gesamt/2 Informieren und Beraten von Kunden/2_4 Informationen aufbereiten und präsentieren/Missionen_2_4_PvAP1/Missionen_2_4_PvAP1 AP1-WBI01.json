@@ -1,0 +1,204 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Informationen aufbereiten und präsentieren-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "technische_und_nicht_technische_texte",
+      "name": "Technische und nicht-technische Texte",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "digitale_suchabfragen_und_suchoperatoren",
+      "name": "Digitale Suchabfragen, Einsatz von Suchoperatoren",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": true,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": false,
+        "decision_power_centralized": true,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "auswertung_von_englischen_texten",
+      "name": "Auswertung von englischen Texten",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "qualitaetsmerkmale_von_praesentationen",
+      "name": "Qualitätsmerkmale von Präsentationen",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": true,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "medienkompetenz",
+      "name": "Medienkompetenz",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": true,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es darum, Inhalte für unterschiedliche Zielgruppen passend zu formulieren (fachlich vs. allgemeinverständlich)?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Steht hier die Suche nach Informationen im Vordergrund (Google/DB/Tools), inklusive Operatoren wie AND/OR/\"...\"/site:?",
+      "attributeKey": "mixed_liability"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es darum, englische Inhalte zu verstehen, zu filtern und die Kernaussagen zu extrahieren?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Regeln für gute Präsentationen (Struktur, Lesbarkeit, Foliengestaltung, Storyline)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es darum, Medien richtig zu nutzen und zu bewerten (Quellen prüfen, Urheberrecht, Manipulation erkennen)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist hier ein hoher Abstimmungs-/Überarbeitungsaufwand typisch, weil Verständlichkeit und Genauigkeit wichtig sind?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Trennst du hier stark zwischen Inhalt (was?) und Darstellung (wie?)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist das oft schnell anwendbar (z. B. Suchoperatoren sofort einsetzen) und liefert sofort bessere Ergebnisse?",
+      "attributeKey": "simple_foundation"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Spielt hier Zusammenarbeit/Feedback eine große Rolle (Review von Texten/Folien)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Gibt es dabei klare Standards/Regeln, die man einhalten muss (z. B. Quellenangaben, Corporate Design, Qualitätskriterien)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wird bei Präsentationen oft zentral entschieden, welche Aussagen/Charts/Story verwendet werden?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Wirkt das Ergebnis nach außen besonders professionell und repräsentativ (z. B. Pitch, Management, Kunde)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Geht es auch darum, Informationen so aufzubereiten, dass sie für Entscheidungen relevant werden (z. B. Management Summary)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist Vielfalt von Perspektiven wichtig (z. B. unterschiedliche Sichtweisen aus Team/Kunde/Management)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Wird das Thema wichtiger, je größer das Projekt/Unternehmen wird (mehr Stakeholder, mehr Kommunikation, mehr Risiko durch Falschinfos)?",
+      "attributeKey": "growth_large_scale"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – DSGVO Grundlagen & Prüfungsfallen (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "DSGVO Grundprinzip (Verbot mit Erlaubnisvorbehalt)",
+    "Rechenschaftspflicht",
+    "Personenbezogene Daten",
+    "Anonymisierung",
+    "Pseudonymisierung",
+    "Verarbeitung",
+    "Grundsätze Art. 5",
+    "Verantwortlicher",
+    "Auftragsverarbeiter",
+    "Empfänger",
+    "Rechtsgrundlagen Art. 6",
+    "Einwilligung Art. 7",
+    "Besondere Daten Art. 9/10",
+    "Informationspflichten Art. 13/14",
+    "Betroffenenrechte",
+    "Auftragsverarbeitung / AVV Art. 28",
+    "TOMs Art. 32",
+    "Privacy by Design/Default Art. 25",
+    "VVT Art. 30",
+    "DSFA Art. 35",
+    "Datenpanne Art. 33/34",
+    "Sanktionen/Haftung Art. 83/82",
+    "SDM",
+    "Drittlandtransfer Art. 44 ff.",
+    "Praxisfälle AP1",
+    "Prüfungsfallen-Check",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Grundlogik: Personenbezogene Daten zu verarbeiten ist grundsätzlich verboten – außer es gibt eine klare Erlaubnis (z. B. Gesetz, Vertrag, Einwilligung).",
+      "correct": "DSGVO Grundprinzip (Verbot mit Erlaubnisvorbehalt)"
+    },
+    {
+      "text": "Kerngedanke: Rechtmäßig handeln, transparent sein und das Ganze nachweisen können.",
+      "correct": "Rechenschaftspflicht"
+    },
+    {
+      "text": "Prüfungsfalle: „Wenn niemand meckert, passt’s“ ist falsch – der Verantwortliche muss die Einhaltung belegen können.",
+      "correct": "Rechenschaftspflicht"
+    },
+    {
+      "text": "Merksatz: Nicht nur „machen“, sondern „begründen + dokumentieren“.",
+      "correct": "Rechenschaftspflicht"
+    },
+    {
+      "text": "Info über eine identifizierte oder identifizierbare natürliche Person (direkt oder indirekt).",
+      "correct": "Personenbezogene Daten"
+    },
+    {
+      "text": "Typische Beispiele: Name, E-Mail, Kundennummer, Standortdaten, Online-Kennung; IP-Adresse oft ebenfalls.",
+      "correct": "Personenbezogene Daten"
+    },
+    {
+      "text": "Wenn der Personenbezug wirklich nicht mehr herstellbar ist, fällt das in der Regel nicht mehr unter DSGVO.",
+      "correct": "Anonymisierung"
+    },
+    {
+      "text": "Wenn die Identität durch Zusatzwissen wieder hergestellt werden kann (z. B. Zuordnungstabelle), gilt DSGVO weiterhin.",
+      "correct": "Pseudonymisierung"
+    },
+    {
+      "text": "Prüfungsfalle: „Pseudonymisiert = anonym“ ist falsch.",
+      "correct": "Prüfungsfallen-Check"
+    },
+    {
+      "text": "Beispiel: Hash einer E-Mail-Adresse ist meistens weiterhin personenbezogen (wenn Re-Identifikation möglich/realistisch ist).",
+      "correct": "Pseudonymisierung"
+    },
+    {
+      "text": "Jeder Umgang mit Daten zählt: erheben, speichern, verändern, übermitteln, löschen – sogar ansehen.",
+      "correct": "Verarbeitung"
+    },
+    {
+      "text": "Prüfungsfalle: „Nur Speichern zählt“ ist falsch – schon Erheben/Ansehen ist Verarbeitung.",
+      "correct": "Verarbeitung"
+    },
+    {
+      "text": "Daten-Lebenszyklus: Erheben → Nutzen → Teilen → Speichern → Löschen/Archiv.",
+      "correct": "Verarbeitung"
+    },
+    {
+      "text": "Mini-Check: „Wer sieht was, wann, wozu, wie lange?“",
+      "correct": "Verarbeitung"
+    },
+    {
+      "text": "Die „6 Gebote“: Rechtmäßigkeit/Fairness/Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität & Vertraulichkeit (+ Nachweis).",
+      "correct": "Grundsätze Art. 5"
+    },
+    {
+      "text": "Prüfungsfalle: „Wir sammeln mal, könnte später nützlich sein“ ist bei DSGVO meistens ein No-Go.",
+      "correct": "Grundsätze Art. 5"
+    },
+    {
+      "text": "Wer Zwecke und Mittel („wozu“ und „wie“) festlegt, trägt den Hut.",
+      "correct": "Verantwortlicher"
+    },
+    {
+      "text": "Verarbeitet Daten im Auftrag eines anderen und handelt nach Weisung (typisch: Cloud/Hosting/Payroll – je nach Setup).",
+      "correct": "Auftragsverarbeiter"
+    },
+    {
+      "text": "Prüfungsfalle: „Dienstleister = automatisch Auftragsverarbeiter“ stimmt nicht – wenn er Zweck+Wie selbst bestimmt, ist er eher eigener Verantwortlicher.",
+      "correct": "Prüfungsfallen-Check"
+    },
+    {
+      "text": "Bekommen Daten übermittelt (z. B. Versanddienstleister als Empfänger der Adressdaten).",
+      "correct": "Empfänger"
+    },
+    {
+      "text": "Die 6 Klassiker: Einwilligung, Vertrag, rechtliche Pflicht, lebenswichtige Interessen, öffentliche Aufgabe, berechtigtes Interesse (mit Abwägung).",
+      "correct": "Rechtsgrundlagen Art. 6"
+    },
+    {
+      "text": "Prüfungsfalle: „Einwilligung ist immer am sichersten“ ist falsch – sie muss freiwillig, widerrufbar und nachweisbar sein.",
+      "correct": "Rechtsgrundlagen Art. 6"
+    },
+    {
+      "text": "Beispiel: Rechnung versenden basiert meist auf Vertrag/gesetzlicher Pflicht, nicht auf Einwilligung.",
+      "correct": "Rechtsgrundlagen Art. 6"
+    },
+    {
+      "text": "Wirksam nur wenn freiwillig, informiert, eindeutig und zweckgebunden; Widerruf jederzeit.",
+      "correct": "Einwilligung Art. 7"
+    },
+    {
+      "text": "Widerruf muss so leicht sein wie Zustimmung (kein „Abmelden nur per Brief“).",
+      "correct": "Einwilligung Art. 7"
+    },
+    {
+      "text": "Prüfungsfalle: Vorangekreuztes Opt-out ist problematisch/oft unwirksam.",
+      "correct": "Einwilligung Art. 7"
+    },
+    {
+      "text": "Prüfungsfalle: Zustimmung an eine Leistung koppeln ist häufig nicht freiwillig.",
+      "correct": "Einwilligung Art. 7"
+    },
+    {
+      "text": "Extra scharf: Gesundheit, biometrische/genetische Daten, Religion, politische Meinung, Gewerkschaft, Sexualleben/Orientierung; grundsätzlich verboten, außer spezielle Ausnahmen.",
+      "correct": "Besondere Daten Art. 9/10"
+    },
+    {
+      "text": "Prüfungsfalle: Art.-6-Rechtsgrundlage allein reicht bei besonderen Daten nicht; zusätzlich braucht es eine passende Ausnahme.",
+      "correct": "Besondere Daten Art. 9/10"
+    },
+    {
+      "text": "Was Betroffene wissen müssen: Wer? Zwecke+Rechtsgrundlage? Empfänger? Speicherdauer? Rechte? ggf. Drittland/Profiling/Pflichtangaben.",
+      "correct": "Informationspflichten Art. 13/14"
+    },
+    {
+      "text": "Prüfungsfalle: Datenschutzhinweis muss zum Zeitpunkt und Kontext passen, nicht irgendwo versteckt.",
+      "correct": "Informationspflichten Art. 13/14"
+    },
+    {
+      "text": "Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, kein reines Profiling/Automatismus; Frist i. d. R. 1 Monat.",
+      "correct": "Betroffenenrechte"
+    },
+    {
+      "text": "Prüfungsfalle: Löschung ist nicht immer sofort möglich (z. B. gesetzliche Aufbewahrungspflichten).",
+      "correct": "Betroffenenrechte"
+    },
+    {
+      "text": "Wenn ein Dienstleister „im Auftrag“ verarbeitet, braucht es einen Vertrag mit Pflichtinhalten (z. B. Zweck, Dauer, Datenarten, TOMs, Weisungen, Subunternehmer).",
+      "correct": "Auftragsverarbeitung / AVV Art. 28"
+    },
+    {
+      "text": "Prüfungsfalle: NDA reicht nicht als Ersatz für einen AV-Vertrag.",
+      "correct": "Auftragsverarbeitung / AVV Art. 28"
+    },
+    {
+      "text": "Sicherheit der Verarbeitung: Maßnahmen nach Risiko (Stand der Technik, Kosten, Art/Umfang/Zweck) – Ziel: Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit.",
+      "correct": "TOMs Art. 32"
+    },
+    {
+      "text": "Beispiele für TOMs: Verschlüsselung, Zugriffskontrolle, Backup/Restore, Logging, Berechtigungskonzept, Schulungen.",
+      "correct": "TOMs Art. 32"
+    },
+    {
+      "text": "Prüfungsfalle: „Ein Passwort für alle“ ist ein No-Go.",
+      "correct": "TOMs Art. 32"
+    },
+    {
+      "text": "Datenschutz schon beim Entwurf berücksichtigen (Architektur/Prozesse) und nicht erst später „reinpatchen“.",
+      "correct": "Privacy by Design/Default Art. 25"
+    },
+    {
+      "text": "Voreinstellungen datenschutzfreundlich: minimal, restriktiv (z. B. kurze Logs, Tracker aus, Freigaben dicht).",
+      "correct": "Privacy by Design/Default Art. 25"
+    },
+    {
+      "text": "Pflicht-Register der Verarbeitungstätigkeiten: Zweck, Kategorien, Empfänger, Löschfristen, TOMs; muss bei Nachfrage vorzeigbar sein.",
+      "correct": "VVT Art. 30"
+    },
+    {
+      "text": "Prüfungsfalle: „Nur für große Unternehmen“ ist irreführend – Ausnahmen sind eng, in der Praxis wird es fast immer erwartet/sinnvoll.",
+      "correct": "VVT Art. 30"
+    },
+    {
+      "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking, Videoüberwachung, Profiling) und muss vor Start passieren.",
+      "correct": "DSFA Art. 35"
+    },
+    {
+      "text": "DSFA-Inhalt grob: Beschreibung Verarbeitung, Zweck, Notwendigkeit/Verhältnismäßigkeit, Risiken, Maßnahmen zur Risikosenkung.",
+      "correct": "DSFA Art. 35"
+    },
+    {
+      "text": "Meldung an Aufsichtsbehörde „unverzüglich“ und möglichst binnen 72 Stunden nach Bekanntwerden, wenn Risiko besteht.",
+      "correct": "Datenpanne Art. 33/34"
+    },
+    {
+      "text": "Prüfungsfalle: 72 Stunden laufen ab „Bekanntwerden“, nicht ab „Passiert“.",
+      "correct": "Datenpanne Art. 33/34"
+    },
+    {
+      "text": "Bei hohem Risiko müssen Betroffene informiert werden; intern braucht es Incident-Plan, Logs, Beweissicherung, Lessons Learned.",
+      "correct": "Datenpanne Art. 33/34"
+    },
+    {
+      "text": "Bußgelder je nach Verstoß bis 20 Mio € oder 4% weltweiter Jahresumsatz; zusätzlich Schadenersatzansprüche Betroffener möglich.",
+      "correct": "Sanktionen/Haftung Art. 83/82"
+    },
+    {
+      "text": "Prüfungsfalle: „Nur Behörden zahlen Strafe“ ist falsch – Unternehmen sind regelmäßig betroffen.",
+      "correct": "Sanktionen/Haftung Art. 83/82"
+    },
+    {
+      "text": "Vorgehensmodell/Denkmatrix, um DSGVO-Anforderungen systematisch in technische und organisatorische Maßnahmen zu übersetzen.",
+      "correct": "SDM"
+    },
+    {
+      "text": "Prüfungsfalle: SDM ist kein konkretes Software-Tool, sondern eine Methode.",
+      "correct": "SDM"
+    },
+    {
+      "text": "Übermittlung in Drittländer nur unter zusätzlichen Bedingungen (z. B. Angemessenheitsbeschluss, SCC, BCR) – und Art. 6 etc. braucht man trotzdem.",
+      "correct": "Drittlandtransfer Art. 44 ff."
+    },
+    {
+      "text": "Prüfungsfalle: Kapitel V ist nicht „die“ Rechtsgrundlage, sondern ergänzt die übrigen Anforderungen.",
+      "correct": "Drittlandtransfer Art. 44 ff."
+    },
+    {
+      "text": "Bewerberdaten: Zweck Bewerbung, danach löschen – Talentpool nur mit extra Einwilligung.",
+      "correct": "Praxisfälle AP1"
+    },
+    {
+      "text": "Logfiles: oft berechtigtes Interesse/Sicherheit; Datenminimierung und kurze Speicherfristen sind Pflichtthemen.",
+      "correct": "Praxisfälle AP1"
+    },
+    {
+      "text": "Newsletter: Einwilligung + Nachweis + Abmeldelink.",
+      "correct": "Praxisfälle AP1"
+    },
+    {
+      "text": "Mini-Formel für Einordnung: Zweck + Rechtsgrundlage + Frist + Empfänger + TOMs.",
+      "correct": "Praxisfälle AP1"
+    },
+    {
+      "text": "Prüfungsfalle: „Einmal Einwilligung, immer okay“ ist falsch – Zweckänderung bedeutet neu bewerten/neu informieren.",
+      "correct": "Prüfungsfallen-Check"
+    },
+    {
+      "text": "„Rechenschaftspflicht“ heißt: Prozesse/Artefakte wie VVT, AVV, DSFA und Nachweise müssen greifbar sein.",
+      "correct": "Rechenschaftspflicht"
+    },
+    {
+      "text": "„Ein Use-Case-Diagramm ist ein DSGVO-Dokumentationsartefakt und ersetzt das VVT.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Ziel: Anforderungen verständlich machen und Kommunikation verbessern – das gilt für Datenschutzhinweis, Prozesse und Doku insgesamt.",
+      "correct": "alle"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Datenschutz-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "datenschutzgesetze",
+      "name": "Datenschutzgesetze (national & EU: DSGVO, BDSG)",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": true,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": true
+      }
+    },
+    {
+      "id": "personenbezogene_daten",
+      "name": "Definition von personenbezogenen Daten",
+      "attributes": {
+        "only_one_owner": true,
+        "minimum_two_persons": false,
+        "limited_liability": false,
+        "mixed_liability": false,
+        "entry_in_register_required": false,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": true,
+        "high_administrative_effort": false,
+        "separation_owner_management": false,
+        "decision_power_centralized": false,
+        "professional_market_image": false,
+        "capital_market_access": false,
+        "democratic_principle": false,
+        "growth_large_scale": false
+      }
+    },
+    {
+      "id": "rechte_der_betroffenen",
+      "name": "Rechte der Betroffenen",
+      "attributes": {
+        "only_one_owner": false,
+        "minimum_two_persons": true,
+        "limited_liability": true,
+        "mixed_liability": false,
+        "entry_in_register_required": true,
+        "minimum_capital_required": false,
+        "suitable_for_investors": false,
+        "simple_foundation": false,
+        "high_administrative_effort": true,
+        "separation_owner_management": true,
+        "decision_power_centralized": false,
+        "professional_market_image": true,
+        "capital_market_access": false,
+        "democratic_principle": true,
+        "growth_large_scale": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um verbindliche Regeln/Gesetze, die Datenverarbeitung steuern (DSGVO/BDSG, Pflichten, Bußgelder)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es darum, was überhaupt als personenbezogen gilt (direkt/indirekt identifizierbar, z. B. Name, ID, IP)?",
+      "attributeKey": "only_one_owner"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um Ansprüche von Personen gegen Unternehmen/Behörden (Auskunft, Löschung, Widerspruch, Datenübertragbarkeit)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist das Thema stark risikobehaftet bei Fehlern (Rechtsverstöße, Bußgelder, Reputationsschaden)?",
+      "attributeKey": "limited_liability"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Erfordert das typischerweise viel Dokumentation/Prozesse (Verzeichnis, Einwilligungen, TOMs, Löschkonzept)?",
+      "attributeKey": "high_administrative_effort"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Wird das oft zentral gesteuert (DPO/Datenschutzbeauftragter, Richtlinien, Freigaben, Policies)?",
+      "attributeKey": "decision_power_centralized"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Sind Rollen klar getrennt (Verantwortlicher, Auftragsverarbeiter, Betroffener, Aufsichtsbehörde)?",
+      "attributeKey": "separation_owner_management"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Spielt Zusammenarbeit mit vielen Beteiligten eine Rolle (IT, HR, Legal, Fachbereich, Support)?",
+      "attributeKey": "minimum_two_persons"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist das Thema eher „Grundlagenwissen“ (Definitionen/Begriffe) oder eher „Betriebsprozess“ (Umsetzung im Unternehmen)?",
+      "attributeKey": "simple_foundation"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Wirkt das nach außen professionell/vertrauensbildend (Compliance, Transparenz, sauberer Umgang mit Daten)?",
+      "attributeKey": "professional_market_image"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wird das Thema wichtiger, je größer das Unternehmen/Projekt ist (viele Daten, viele Systeme, viele Anfragen)?",
+      "attributeKey": "growth_large_scale"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist das Thema eher Pflicht/Compliance als Investorenziel (Risikominimierung statt Rendite)?",
+      "attributeKey": "suitable_for_investors"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist die Umsetzung ohne formale Regeln kaum möglich (Fristen, Informationspflichten, Rechtsgrundlagen)?",
+      "attributeKey": "entry_in_register_required"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Geht es um Mitbestimmung/Autonomie der Betroffenen über ihre Daten (Kontrolle, Einwilligung, Widerspruch)?",
+      "attributeKey": "democratic_principle"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Geht es um Schutzmaßnahmen/Compliance, um Schäden für Betroffene zu verhindern (Missbrauch, Datenleck)?",
+      "attributeKey": "limited_liability"
+    }
+  ]
+}

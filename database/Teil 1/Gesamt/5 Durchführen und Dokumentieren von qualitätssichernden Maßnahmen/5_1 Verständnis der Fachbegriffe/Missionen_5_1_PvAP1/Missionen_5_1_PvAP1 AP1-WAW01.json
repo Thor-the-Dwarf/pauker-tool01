@@ -1,0 +1,157 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Verständnis der Fachbegriffe (QM/QS)",
+  "description": "Schritt 1: Passenden Fachbegriff wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Unternehmen sagt: „Qualität heißt bei uns: Wir erfüllen die Anforderungen und sorgen dafür, dass der Kunde zufrieden ist.“ Es geht nicht um „Luxus“, sondern um die Frage, ob Vorgaben und Erwartungen eingehalten werden.",
+      "tags": ["ISO 9000", "Qualitätsbegriff", "Grundlagen"],
+      "options": [
+        {
+          "id": "qualitaetsbegriff_iso9000",
+          "label": "Qualitätsbegriff nach ISO 9000",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Qualität wird als Grad der Erfüllung von Anforderungen verstanden.", "correct": true },
+            { "id": "w2", "text": "Fokus liegt auf Kundenanforderungen, Spezifikationen und Eignung für den Zweck.", "correct": true },
+            { "id": "w3", "text": "Qualität bedeutet immer: möglichst teuer und maximal ausgestattet.", "correct": false },
+            { "id": "w4", "text": "Qualität ist mess- und bewertbar über Kriterien/Anforderungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "audit",
+          "label": "Audit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein Audit ist eine systematische Prüfung, ob Anforderungen/Regeln eingehalten werden.", "correct": true },
+            { "id": "w2", "text": "Es beschreibt den allgemeinen Qualitätsbegriff nach ISO 9000.", "correct": false },
+            { "id": "w3", "text": "Audits liefern Nachweise und finden Abweichungen/Verbesserungspotenziale.", "correct": true },
+            { "id": "w4", "text": "Audits ersetzen die Definition von Qualität, weil sie nur kontrollieren.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "ISO 9000 Qualitätsbegriff: Qualität = Grad der Erfüllung von Anforderungen (Fit for purpose), nicht „teuer“ oder „maximal“."
+    },
+    {
+      "id": "c02",
+      "profile": "In einem Betrieb gibt es dokumentierte Prozesse, Rollen, Formulare, Korrekturmaßnahmen, Kennzahlen und regelmäßige Reviews. Ziel ist, Qualität dauerhaft zu steuern und kontinuierlich zu verbessern, nicht nur einzelne Fehler zu beheben.",
+      "tags": ["QM-System", "Prozesse", "Organisation"],
+      "options": [
+        {
+          "id": "betriebliche_qm_systeme",
+          "label": "Betriebliche QM-Systeme",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "QM-Systeme beschreiben, wie Qualität organisatorisch geplant, umgesetzt und verbessert wird.", "correct": true },
+            { "id": "w2", "text": "Dokumentation/Prozesslandschaft/Verantwortlichkeiten sind typische Bestandteile.", "correct": true },
+            { "id": "w3", "text": "QM-Systeme sind nur ein einzelner Test am Ende der Entwicklung.", "correct": false },
+            { "id": "w4", "text": "Ziel ist reproduzierbare Qualität und kontinuierliche Verbesserung (z. B. PDCA).", "correct": true }
+          ]
+        },
+        {
+          "id": "zertifizierung",
+          "label": "Zertifizierung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zertifizierung ist eine formelle Bestätigung durch eine Stelle.", "correct": true },
+            { "id": "w2", "text": "Sie beschreibt den internen Aufbau von Prozessen, Rollen und Korrekturmaßnahmen.", "correct": false },
+            { "id": "w3", "text": "Zertifizierung setzt häufig ein Audit/Prüfung als Nachweis voraus.", "correct": true },
+            { "id": "w4", "text": "Ein QM-System kann existieren, auch ohne zertifiziert zu sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Betriebliches QM-System: organisatorischer Rahmen (Prozesse, Rollen, Doku, Kennzahlen) zur Steuerung und Verbesserung von Qualität."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Kunde verlangt, dass ein Lieferant bestimmte Qualitätsstandards einhält. Dazu gibt es festgelegte Anforderungen und Regeln, nach denen Prozesse und Ergebnisse bewertet werden. Diese Regeln sind als Normen veröffentlicht.",
+      "tags": ["Normen", "QS", "Compliance"],
+      "options": [
+        {
+          "id": "qs_normen",
+          "label": "QS-Normen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Normen definieren Anforderungen, Begriffe und Regeln für Qualitätssicherung.", "correct": true },
+            { "id": "w2", "text": "Sie schaffen Vergleichbarkeit und Nachweisbarkeit gegenüber Kunden/Partnern.", "correct": true },
+            { "id": "w3", "text": "Normen sind immer freiwillige Tipps ohne jede Relevanz für Verträge.", "correct": false },
+            { "id": "w4", "text": "QS-Normen können als Grundlage für Audits und Zertifizierungen dienen.", "correct": true }
+          ]
+        },
+        {
+          "id": "audit",
+          "label": "Audit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Audit ist die Prüfung gegen Anforderungen/Normen, nicht die Norm selbst.", "correct": true },
+            { "id": "w2", "text": "Audit ist ein veröffentlichtes Regelwerk wie eine ISO-Norm.", "correct": false },
+            { "id": "w3", "text": "Audits erzeugen Feststellungen (Abweichungen/Verbesserungen).", "correct": true },
+            { "id": "w4", "text": "Ohne Norm/Anforderung wüsste ein Audit nicht, wogegen geprüft wird.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "QS-Normen: veröffentlichte Anforderungen/Regeln als Referenz für QS, Audits und oft Zertifizierungen."
+    },
+    {
+      "id": "c04",
+      "profile": "Eine externe Stelle kommt in den Betrieb und prüft systematisch, ob Prozesse eingehalten werden und ob die Anforderungen einer Norm erfüllt sind. Dabei werden Nachweise angesehen, Interviews geführt und Abweichungen dokumentiert.",
+      "tags": ["Audit", "Prüfung", "Nachweise"],
+      "options": [
+        {
+          "id": "audit",
+          "label": "Audit",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Audit ist eine systematische, dokumentierte Prüfung gegen Anforderungen.", "correct": true },
+            { "id": "w2", "text": "Es nutzt Nachweise (Dokumente, Interviews, Stichproben) und dokumentiert Feststellungen.", "correct": true },
+            { "id": "w3", "text": "Audit bedeutet automatisch, dass ein Zertifikat vergeben wird.", "correct": false },
+            { "id": "w4", "text": "Ergebnis sind u. a. Abweichungen und Maßnahmen zur Verbesserung.", "correct": true }
+          ]
+        },
+        {
+          "id": "betriebliche_qm_systeme",
+          "label": "Betriebliche QM-Systeme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein QM-System ist der organisatorische Rahmen, der geprüft werden kann.", "correct": true },
+            { "id": "w2", "text": "Das QM-System ist die Prüfung selbst.", "correct": false },
+            { "id": "w3", "text": "Ein Audit kann das QM-System bewerten (z. B. Reife, Konformität).", "correct": true },
+            { "id": "w4", "text": "QM-Systeme bestehen aus Prozessen, Rollen, Doku und Verbesserungsmechanismen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Audit: systematische Prüfung gegen Anforderungen (z. B. Norm), mit Nachweisen und dokumentierten Feststellungen."
+    },
+    {
+      "id": "c05",
+      "profile": "Ein Unternehmen will ein offizielles Zertifikat bekommen, das bestätigt, dass es eine Norm (z. B. im Qualitätsmanagement) erfüllt. Dafür muss eine unabhängige Stelle nachweisbar prüfen und am Ende formell bestätigen.",
+      "tags": ["Zertifizierung", "Nachweis", "Extern"],
+      "options": [
+        {
+          "id": "zertifizierung",
+          "label": "Zertifizierung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zertifizierung ist die formelle Bestätigung der Konformität durch eine Stelle.", "correct": true },
+            { "id": "w2", "text": "Sie basiert typischerweise auf einem Audit/Prüfprozess.", "correct": true },
+            { "id": "w3", "text": "Zertifizierung ist identisch mit der internen Einführung von Prozessen.", "correct": false },
+            { "id": "w4", "text": "Ziel ist ein offizieller Nachweis gegenüber Kunden/Partnern (Vertrauen/Marktanforderung).", "correct": true }
+          ]
+        },
+        {
+          "id": "qs_normen",
+          "label": "QS-Normen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Normen definieren die Anforderungen, gegen die zertifiziert werden kann.", "correct": true },
+            { "id": "w2", "text": "Eine Norm ist bereits das Zertifikat.", "correct": false },
+            { "id": "w3", "text": "Ohne Norm/Anforderung gibt es keine objektive Basis für Zertifizierung.", "correct": true },
+            { "id": "w4", "text": "Normen können in Verträgen als Qualitätsanforderung festgelegt werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Zertifizierung: offizieller, externer Konformitätsnachweis (meist nach Audit) zu einer Norm."
+    }
+  ]
+}

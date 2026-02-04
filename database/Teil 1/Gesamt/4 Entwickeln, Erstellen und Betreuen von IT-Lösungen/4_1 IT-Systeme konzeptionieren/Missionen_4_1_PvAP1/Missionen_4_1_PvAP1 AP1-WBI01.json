@@ -1,0 +1,117 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – IT-Systeme konzeptionieren-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "bedarfsanalyse",
+      "name": "Bedarfsanalyse",
+      "attributes": {
+        "gathers_requirements": true,
+        "creates_spec_documents": false,
+        "defines_solution_how": false,
+        "defines_needs_what": true,
+        "technical_execution": false,
+        "system_setup": false,
+        "os_or_firmware_focus": false,
+        "network_config_focus": false,
+        "remote_access_focus": false,
+        "includes_partitioning_formatting": false
+      }
+    },
+    {
+      "id": "lasten_plichtenheft",
+      "name": "Lasten- und Pflichtenheft",
+      "attributes": {
+        "gathers_requirements": true,
+        "creates_spec_documents": true,
+        "defines_solution_how": true,
+        "defines_needs_what": true,
+        "technical_execution": false,
+        "system_setup": false,
+        "os_or_firmware_focus": false,
+        "network_config_focus": false,
+        "remote_access_focus": false,
+        "includes_partitioning_formatting": false
+      }
+    },
+    {
+      "id": "installation_konfiguration",
+      "name": "Installation und Konfiguration",
+      "attributes": {
+        "gathers_requirements": false,
+        "creates_spec_documents": false,
+        "defines_solution_how": false,
+        "defines_needs_what": false,
+        "technical_execution": true,
+        "system_setup": true,
+        "os_or_firmware_focus": true,
+        "network_config_focus": true,
+        "remote_access_focus": true,
+        "includes_partitioning_formatting": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es darum, Anforderungen/Bedarf zu ermitteln (Infos sammeln, Fragen stellen, Ist/Soll)?",
+      "attributeKey": "gathers_requirements"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Entstehen dabei formale Spezifikations-Dokumente (Lastenheft/Pflichtenheft)?",
+      "attributeKey": "creates_spec_documents"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Wird beschrieben, WIE die Lösung umgesetzt wird (Konzept/Design/Umsetzungsvorgaben)?",
+      "attributeKey": "defines_solution_how"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Wird beschrieben, WAS gebraucht wird (Ziele, Anforderungen, Rahmenbedingungen)?",
+      "attributeKey": "defines_needs_what"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es um praktische Umsetzung am System (installieren, einrichten, testen)?",
+      "attributeKey": "technical_execution"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Wird ein System konkret aufgesetzt (Hardware/OS bereitstellen, Grundbetrieb herstellen)?",
+      "attributeKey": "system_setup"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Liegt der Fokus auf Betriebssystem oder Firmware (BIOS/UEFI, Boot, Treiber)?",
+      "attributeKey": "os_or_firmware_focus"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Liegt der Fokus auf Netzwerk-Anbindung (IP-Konfiguration, DNS, DHCP, Routing)?",
+      "attributeKey": "network_config_focus"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Geht es um Remotezugriff/Remotedesktop (RDP/VNC/SSH/Remote-Tools)?",
+      "attributeKey": "remote_access_focus"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Spielen Partitionierung/Formatierung/Dateisystem-Setup eine zentrale Rolle?",
+      "attributeKey": "includes_partitioning_formatting"
+    }
+  ]
+}

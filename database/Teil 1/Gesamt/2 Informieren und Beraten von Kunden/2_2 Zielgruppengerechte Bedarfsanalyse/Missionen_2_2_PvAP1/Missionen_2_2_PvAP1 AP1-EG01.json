@@ -1,0 +1,197 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Zielgruppengerechte Bedarfsanalyse",
+  "topic": "Fragetechnik, aktives Zuhören, Datenerhebung und Datenauswertung für Anforderungen",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "bedarfsanalyse-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Methoden richtig einordnen",
+      "subtitle": "Ordne die Aussagen den passenden Bausteinen der Bedarfsanalyse zu.",
+      "hintDefault": "Tipp: Erst Informationen bekommen (Fragen/Zuhören), dann Daten sammeln, dann auswerten und präsentieren.",
+      "sortColumns": [
+        { "zone": "gespraech", "label": "Gesprächsführung", "hint": "(Fragetechnik, aktives Zuhören)" },
+        { "zone": "erhebung", "label": "Datenerhebung", "hint": "(Befragung, Beobachtung, Messung)" },
+        { "zone": "auswertung", "label": "Auswertung", "hint": "(Interpretieren, Anforderungen ableiten)" },
+        { "zone": "praesentation", "label": "Präsentation", "hint": "(adressatengerecht, verständlich)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Offene Fragen stellen (W-Fragen) statt Ja/Nein", "correctZone": "gespraech" },
+        { "id": "s2", "text": "Paraphrasieren: „Wenn ich dich richtig verstehe, …“", "correctZone": "gespraech" },
+        { "id": "s3", "text": "Aktiv zuhören: nachfragen, zusammenfassen, Verständnis sichern", "correctZone": "gespraech" },
+        { "id": "s4", "text": "Kundenbefragung mit standardisiertem Fragebogen", "correctZone": "erhebung" },
+        { "id": "s5", "text": "Beobachtung am Arbeitsplatz (z. B. Bildschirmhöhe, Wege, Lärm)", "correctZone": "erhebung" },
+        { "id": "s6", "text": "Messung/Inventur: Geräteanzahl, Softwareversionen, Nutzungszeiten", "correctZone": "erhebung" },
+        { "id": "s7", "text": "Daten clustern: Muster erkennen (z. B. viele klagen über Rücken/Blendung)", "correctZone": "auswertung" },
+        { "id": "s8", "text": "Anforderungen ableiten: Muss/Kann, Prioritäten, Zielgruppenbedarf", "correctZone": "auswertung" },
+        { "id": "s9", "text": "Ergebnis für Management: kurz, zahlenbasiert, Entscheidungsvorlage", "correctZone": "praesentation" },
+        { "id": "s10", "text": "Ergebnis für Anwender: Nutzen, Alltagssprache, konkrete Beispiele", "correctZone": "praesentation" }
+      ]
+    },
+    {
+      "id": "bedarfsanalyse-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Bedarfsanalyse",
+      "subtitle": "Teste dein Wissen zu Fragen, Zuhören, Erhebung und Auswertung.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Fragetechnik liefert typischerweise die meisten Details?",
+          "options": [
+            { "value": "a", "text": "Offene Fragen" },
+            { "value": "b", "text": "Suggestivfragen" },
+            { "value": "c", "text": "Ja/Nein-Fragen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist ein typisches Zeichen für aktives Zuhören?",
+          "options": [
+            { "value": "a", "text": "Sofort Lösungen vorschlagen und unterbrechen" },
+            { "value": "b", "text": "Zusammenfassen und Verständnis abgleichen" },
+            { "value": "c", "text": "Nur Stichworte mitschreiben, ohne Rückfragen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Datenerhebung passt am besten, wenn du viele Nutzer schnell erreichen musst?",
+          "options": [
+            { "value": "a", "text": "Kundenbefragung (Fragebogen)" },
+            { "value": "b", "text": "Tiefeninterview mit einer Person" },
+            { "value": "c", "text": "Ad-hoc-Chat ohne Leitfaden" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was ist ein sinnvolles Ergebnis einer Datenauswertung für Büroarbeitsplätze?",
+          "options": [
+            { "value": "a", "text": "Priorisierte Anforderungen (z. B. Monitorgrößen, Docking, Ergonomie)" },
+            { "value": "b", "text": "Nur Rohdatenliste ohne Interpretation" },
+            { "value": "c", "text": "Neue Produktnamen für die Ausstattung" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "bedarf-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Bedarfsanalyse in der richtigen Reihenfolge",
+      "subtitle": "Bringe die Schritte von Erstkontakt bis Ergebnispräsentation in die korrekte Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Zielgruppe/Context klären, dann erheben, dann auswerten, dann passend präsentieren.",
+      "rows": [
+        {
+          "key": "zielgruppe",
+          "label": "Zielgruppe und Kontext klären (Wer? Wofür? Rahmenbedingungen?)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "leitfaden",
+          "label": "Leitfaden/Fragen vorbereiten (offen, strukturiert, ohne Suggestion)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "gespraech",
+          "label": "Gespräch führen (Fragetechnik + aktives Zuhören + Mitschrift)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "erhebung",
+          "label": "Daten erheben (z. B. Kundenbefragung, Beobachtung, Inventur)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "bereinigen",
+          "label": "Daten bereinigen und strukturieren (Dubletten, Kategorien, Cluster)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "anforderungen",
+          "label": "Anforderungen ableiten (Muss/Soll/Kann, Prioritäten, Begründungen)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "praesentation",
+          "label": "Adressatengerecht präsentieren (Management vs. Anwender, Nutzen + Fakten)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Machbarkeit von Projekten – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "machbarkeitsanalyse",
+      "name": "Machbarkeitsanalyse",
+      "description": "Prüfung, ob ein Projekt technisch, organisatorisch, rechtlich und wirtschaftlich überhaupt realisierbar ist.",
+      "example": "Vor dem Cloud-Umzug wird geprüft, ob Bandbreite, Budget, Personal und Compliance-Anforderungen ausreichen."
+    },
+    {
+      "id": "stakeholderanalyse",
+      "name": "Stakeholderanalyse",
+      "description": "Identifikation und Bewertung aller Beteiligten/Betroffenen nach Einfluss, Interesse und Erwartungen.",
+      "example": "IT-Leitung, Datenschutz, Fachbereich, Betriebsrat und Endanwender werden nach Einfluss und Bedarf eingeordnet und Kommunikationswege festgelegt."
+    },
+    {
+      "id": "risikoanalyse",
+      "name": "Risikoanalyse",
+      "description": "Ermittlung, Bewertung und Behandlung von Risiken nach Eintrittswahrscheinlichkeit und Auswirkung.",
+      "example": "Risiko „Lieferverzug Firewall“ wird mit hoher Auswirkung bewertet und durch Pufferzeit sowie Zweitlieferant abgesichert."
+    },
+    {
+      "id": "stammdaten",
+      "name": "Stammdaten",
+      "description": "Relativ stabile Grunddaten, die dauerhaft genutzt und selten geändert werden.",
+      "example": "Kundennummer, Name, Adresse und Vertragsart werden als Stammdaten im CRM geführt."
+    },
+    {
+      "id": "bewegungsdaten",
+      "name": "Bewegungsdaten",
+      "description": "Vorgangs- und Transaktionsdaten, die bei laufenden Prozessen entstehen und sich häufig ändern.",
+      "example": "Bestellungen, Rechnungen, Lagerbuchungen und Support-Tickets fallen täglich als Bewegungsdaten an."
+    },
+    {
+      "id": "datenschutz_sicherheit",
+      "name": "Datenschutz und -sicherheit",
+      "description": "Schutz personenbezogener Daten und Systeme durch Regeln, Prozesse und technische Maßnahmen.",
+      "example": "Für eine Mitarbeiter-App werden Zugriffsrechte, Verschlüsselung, Protokollierung und eine DSFA geplant, bevor Daten produktiv verarbeitet werden."
+    },
+    {
+      "id": "umsatz",
+      "name": "Betriebswirtschaftliche Kennzahl: Umsatz",
+      "description": "Erlöse aus Verkäufen/Leistungen in einem Zeitraum, ohne Abzug von Kosten.",
+      "example": "Das Projekt soll den Online-Verkauf steigern: Erwartet werden 120.000 € zusätzlicher Umsatz pro Quartal."
+    },
+    {
+      "id": "gewinn",
+      "name": "Betriebswirtschaftliche Kennzahl: Gewinn",
+      "description": "Ergebnis nach Abzug aller Kosten vom Umsatz (vereinfacht: Umsatz − Kosten).",
+      "example": "Durch Automatisierung sinken Betriebskosten um 30.000 € pro Jahr, wodurch der Gewinn trotz gleichbleibendem Umsatz steigt."
+    },
+    {
+      "id": "deckungsbeitrag",
+      "name": "Betriebswirtschaftliche Kennzahl: Deckungsbeitrag",
+      "description": "Beitrag eines Produkts/Projekts zur Deckung der Fixkosten (vereinfacht: Umsatz − variable Kosten).",
+      "example": "Die neue Service-Option bringt 50.000 € Umsatz bei 20.000 € variablen Kosten → 30.000 € Deckungsbeitrag zur Fixkostendeckung."
+    }
+  ]
+}

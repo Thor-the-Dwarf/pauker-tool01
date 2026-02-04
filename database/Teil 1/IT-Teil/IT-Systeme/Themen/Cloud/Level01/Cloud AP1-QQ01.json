@@ -1,0 +1,120 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Cloud: Vorteile, Risiken, Shared Responsibility (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Vorteil: Ressourcen lassen sich schnell hoch- und runter skalieren, ohne neue Hardware zu kaufen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Vorteil: Schnelle Bereitstellung – neue Systeme/Services können in Minuten statt Tagen/Wochen stehen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Vorteil: OPEX statt CAPEX – laufende Betriebskosten statt hoher Einmalinvestitionen für Hardware.",
+      "correct": "keine"
+    },
+    {
+      "text": "Vorteil: Verfügbarkeit kann über Zonen/Regionen-Optionen erhöht werden (wenn korrekt geplant und gebucht).",
+      "correct": "keine"
+    },
+    {
+      "text": "Risiko: Vendor Lock-in – Wechsel wird teuer/aufwendig durch proprietäre Dienste, APIs oder Datenformate.",
+      "correct": "keine"
+    },
+    {
+      "text": "Risiko: Kostenexplosion durch falsches Sizing, Dauerbetrieb, Datenverkehr, fehlende Limits oder „vergessene“ Ressourcen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Risiko: Datenstandort/Compliance – rechtliche Vorgaben (z. B. Aufbewahrung, DSGVO, Branchenregeln) müssen erfüllt sein.",
+      "correct": "keine"
+    },
+    {
+      "text": "Risiko: Fehlkonfiguration ist ein Klassiker (z. B. öffentliche Buckets, zu breite Rollen/Rechte, offene Ports).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Cloud ist nicht automatisch sicher – Sicherheit hängt stark von Konfiguration, Rechten und Prozessen ab.",
+      "correct": "keine"
+    },
+    {
+      "text": "Shared Responsibility: Provider sichert die „Cloud“ (z. B. Rechenzentrum, Host-Infrastruktur, Basisschichten).",
+      "correct": "keine"
+    },
+    {
+      "text": "Shared Responsibility: Kunde sichert Konfiguration, Daten und Zugriffe (z. B. IAM/Rollen, Passwörter, MFA, Policies).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: „Der Provider macht Backups automatisch“ stimmt nur, wenn der Service/Plan das vorsieht und du es aktiv konfigurierst.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Ein öffentlich erreichbarer Dienst ist nicht automatisch ein Fehler – aber er braucht Absicherung (Auth, Firewall, Logging, Updates).",
+      "correct": "keine"
+    },
+    {
+      "text": "Kostenkontrolle in der Cloud heißt typischerweise: Budgets/Alarme, Tags, Limits/Quotas, Abschaltregeln und Monitoring.",
+      "correct": "keine"
+    },
+    {
+      "text": "„Shared Responsibility bedeutet: Der Provider ist für alles verantwortlich, inklusive deiner Nutzerrechte und Daten.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Cloud-Vorteile, -Risiken und Shared Responsibility gehören zusammen: schnell & skalierbar, aber nur sicher und bezahlbar mit sauberer Konfiguration und Governance.",
+      "correct": "alle"
+    }
+  ]
+}

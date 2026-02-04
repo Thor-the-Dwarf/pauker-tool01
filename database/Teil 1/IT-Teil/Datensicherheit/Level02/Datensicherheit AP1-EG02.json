@@ -1,0 +1,772 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – IT-Sicherheit Basics (AP1)",
+  "topic": "CIA • BSI/IT-Grundschutz • Schutzbedarf • Gefährdungen • Defense in Depth • TOMs • Identitäten • Verfügbarkeit • Monitoring • Notfall",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "cia-quiz",
+      "type": "quiz",
+      "title": "Schutzziele – CIA + Ergänzungen",
+      "subtitle": "Definitionen + typische Fallen.",
+      "hintDefault": "Mini-Bild: CIA-Dreieck + daneben „Authentizität“ und „Logging/Nachvollziehbarkeit“. Integrität ist „korrekt/nicht manipuliert“, nicht „verschlüsselt“.",
+      "questions": [
+        {
+          "id": "cia1",
+          "text": "1. Vertraulichkeit bedeutet am ehesten …",
+          "options": [
+            { "value": "a", "text": "Nur Berechtigte dürfen Daten lesen/kennen." },
+            { "value": "b", "text": "Daten sind immer verschlüsselt gespeichert." },
+            { "value": "c", "text": "Der Service läuft ohne Unterbrechung." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cia2",
+          "text": "2. Integrität bedeutet am ehesten …",
+          "options": [
+            { "value": "a", "text": "Daten sind korrekt und nicht unbemerkt verändert; Systeme funktionieren korrekt." },
+            { "value": "b", "text": "Daten sind geheim." },
+            { "value": "c", "text": "Daten sind auf zwei Festplatten gespeichert." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "cia3",
+          "text": "3. Verfügbarkeit bedeutet am ehesten …",
+          "options": [
+            { "value": "a", "text": "Jede Änderung wird geloggt." },
+            { "value": "b", "text": "Zugriff ist rechtzeitig möglich; Service läuft." },
+            { "value": "c", "text": "Jeder Nutzer ist eindeutig identifiziert." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cia4",
+          "text": "4. Prüfungsfalle: „Integrität = Verschlüsselung“ ist …",
+          "options": [
+            { "value": "a", "text": "richtig, weil Verschlüsselung jede Manipulation verhindert." },
+            { "value": "b", "text": "falsch: Integrität meint „nicht manipuliert/korrekt“, Verschlüsselung schützt primär Vertraulichkeit." },
+            { "value": "c", "text": "richtig, weil Integrität nur bei VPN zählt." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "cia5",
+          "text": "5. Welche Ergänzung passt zu „Echtheit“ (wer/was ist es wirklich)?",
+          "options": [
+            { "value": "a", "text": "Authentizität" },
+            { "value": "b", "text": "Verfügbarkeit" },
+            { "value": "c", "text": "Kompatibilität" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "bsi-grundschutz-quiz",
+      "type": "quiz",
+      "title": "BSI & IT-Grundschutz – wozu in einem Satz?",
+      "subtitle": "Standardfälle systematisch absichern.",
+      "hintDefault": "Grundschutz = Methode + Bausteine + Maßnahmen für solide Basisabsicherung (Checkliste + Vorgehen).",
+      "questions": [
+        {
+          "id": "bsi1",
+          "text": "1. Wofür steht BSI am ehesten?",
+          "options": [
+            { "value": "a", "text": "Eine private Antivirus-Firma." },
+            { "value": "b", "text": "Bundesamt für Sicherheit in der Informationstechnik (Standards/Methodik)." },
+            { "value": "c", "text": "Ein Cloud-Anbieter." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "bsi2",
+          "text": "2. IT-Grundschutz ist am ehesten …",
+          "options": [
+            { "value": "a", "text": "ein Zufalls-Mix aus Tipps ohne Struktur." },
+            { "value": "b", "text": "methodisches Vorgehen mit Bausteinen/Maßnahmen gegen typische Bedrohungen." },
+            { "value": "c", "text": "nur ein Passwort-Generator." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "bsi3",
+          "text": "3. Prüfungsfalle: „BSI = nur Behörden“ ist …",
+          "options": [
+            { "value": "a", "text": "richtig, Unternehmen dürfen das nicht nutzen." },
+            { "value": "b", "text": "falsch, auch Unternehmen nutzen Grundschutz/Kompendium als Orientierung." },
+            { "value": "c", "text": "richtig, sobald Cloud im Spiel ist." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "schutzbedarf-logik-quiz",
+      "type": "quiz",
+      "title": "Schutzbedarf – Kategorien + Grundlogik",
+      "subtitle": "Schaden denken, nicht Bauchgefühl.",
+      "hintDefault": "Schutzbedarf pro Asset/System UND getrennt für C/I/A: normal/hoch/sehr hoch. Frage: Wie groß wäre der Schaden?",
+      "questions": [
+        {
+          "id": "sb1",
+          "text": "1. Schutzbedarf wird korrekt bestimmt …",
+          "options": [
+            { "value": "a", "text": "einmal pauschal für alles im Unternehmen." },
+            { "value": "b", "text": "pro Asset/System und getrennt für Vertraulichkeit, Integrität, Verfügbarkeit." },
+            { "value": "c", "text": "nur für Datenbanken, nicht für Systeme." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sb2",
+          "text": "2. Die Kategorien beim Schutzbedarf sind typischerweise …",
+          "options": [
+            { "value": "a", "text": "klein / mittel / groß" },
+            { "value": "b", "text": "normal / hoch / sehr hoch" },
+            { "value": "c", "text": "schnell / langsam / offline" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sb3",
+          "text": "3. Grundprinzip: Schutzbedarf hängt vor allem ab von …",
+          "options": [
+            { "value": "a", "text": "der Anzahl der Nutzer im Netzwerk." },
+            { "value": "b", "text": "dem Schaden, wenn C/I/A verletzt wird (Recht/Finanzen/Image/Betrieb)." },
+            { "value": "c", "text": "der Farbe des Serverracks." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "schutzbedarf-workflow-capital",
+      "type": "capital",
+      "title": "Schutzbedarf praktisch bestimmen (AP1-Workflow)",
+      "subtitle": "Vier Schritte, immer gleich.",
+      "hintDefault": "Asset → Schaden je C/I/A → Einstufen je C/I/A → Gesamtschutzbedarf (typisch: höchster Wert zählt). Nicht überall „hoch“ raten.",
+      "rows": [
+        {
+          "key": "asset",
+          "label": "Asset/System benennen (z. B. Kundendatenbank, ERP, Mail, Backup)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "schaden",
+          "label": "Schaden je C/I/A abschätzen (Recht, Finanzen, Image, Ausfall)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "einstufen",
+          "label": "Einstufen je C/I/A: normal / hoch / sehr hoch",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "gesamt",
+          "label": "Gesamtschutzbedarf ableiten (typisch: „höchster Wert zählt“)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gefaehrdungen-quellen-sort",
+      "type": "sort",
+      "title": "Gefährdungen – woher kommt Ärger?",
+      "subtitle": "Mehr als „Hacker von außen“.",
+      "hintDefault": "Gefährdungsquellen: Mensch • Technik • Organisation • Umgebung/Physik. Viele Vorfälle sind intern/Prozessfehler.",
+      "sortColumns": [
+        { "zone": "mensch", "label": "Mensch", "hint": "(Social Engineering/Fehler)" },
+        { "zone": "technik", "label": "Technik", "hint": "(Schwachstellen/Malware)" },
+        { "zone": "orga", "label": "Organisation", "hint": "(Prozesse/Rollen/Rechte)" },
+        { "zone": "physik", "label": "Umgebung/Physik", "hint": "(Strom/Wasser/Diebstahl)" }
+      ],
+      "sortCards": [
+        { "id": "gq1", "text": "Phishing-Mail mit gefälschtem Login-Link", "correctZone": "mensch" },
+        { "id": "gq2", "text": "Tailgating: jemand läuft „mit rein“", "correctZone": "mensch" },
+        { "id": "gq3", "text": "Ungepatchte Schwachstelle wird ausgenutzt", "correctZone": "technik" },
+        { "id": "gq4", "text": "Ransomware verschlüsselt Systeme", "correctZone": "technik" },
+        { "id": "gq5", "text": "Alle sind Admin, Rechtechaos", "correctZone": "orga" },
+        { "id": "gq6", "text": "Fehlkonfiguration: Datenablage öffentlich", "correctZone": "orga" },
+        { "id": "gq7", "text": "Stromausfall/Spannungsspitzen", "correctZone": "physik" },
+        { "id": "gq8", "text": "Diebstahl von Notebook/Server", "correctZone": "physik" }
+      ]
+    },
+    {
+      "id": "social-engineering-quiz",
+      "type": "quiz",
+      "title": "Mensch als Risiko – Social Engineering & Bedienfehler",
+      "subtitle": "Stop – Check – Confirm.",
+      "hintDefault": "Gegenmaßnahmen: Awareness + klare Meldewege, MFA, Passwortmanager, saubere Freigabeprozesse. Schulung ohne Übung ist schwach.",
+      "questions": [
+        {
+          "id": "se1",
+          "text": "1. Spear-Phishing ist am ehesten …",
+          "options": [
+            { "value": "a", "text": "zielgerichtetes Phishing, auf eine Person/Abteilung zugeschnitten." },
+            { "value": "b", "text": "ein Virus, der nur USB-Sticks befällt." },
+            { "value": "c", "text": "eine Firewall-Regel." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "se2",
+          "text": "2. Tailgating bedeutet …",
+          "options": [
+            { "value": "a", "text": "Passwörter im Klartext speichern." },
+            { "value": "b", "text": "jemand schleicht sich durch eine Tür mit rein, ohne Berechtigung." },
+            { "value": "c", "text": "eine Datenbank zu replizieren." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "se3",
+          "text": "3. Welche Maßnahme ist bei „Fake-IT-Support-Anruf“ am passendsten?",
+          "options": [
+            { "value": "a", "text": "Sofort Zugangsdaten durchgeben, um Zeit zu sparen." },
+            { "value": "b", "text": "Stop – Check – Confirm: Rückruf über offizielle Nummer / Identität prüfen / Prozess folgen." },
+            { "value": "c", "text": "Laptop neu starten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "se4",
+          "text": "4. Warum bringen Phishing-Simulationen oft mehr als reine Folien-Schulung?",
+          "options": [
+            { "value": "a", "text": "Weil sie reale Situationen üben und Verhalten messbar verbessern." },
+            { "value": "b", "text": "Weil sie Passwörter automatisch ändern." },
+            { "value": "c", "text": "Weil sie die CPU entlasten." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "technik-malware-sort",
+      "type": "sort",
+      "title": "Technische Gefährdungen – Schwachstellen & Malware",
+      "subtitle": "Ungepatcht = Einladung.",
+      "hintDefault": "Schwachstelle + Exploit → Zugriff/Schaden. Gegenmaßnahmen: Patch-Management, AV/EDR, Hardening, sichere Konfiguration. Firewall allein reicht nicht.",
+      "sortColumns": [
+        { "zone": "schwachstelle", "label": "Schwachstelle/Exploit", "hint": "(Lücke wird ausgenutzt)" },
+        { "zone": "malware", "label": "Malware-Arten", "hint": "(Trojaner/Ransomware/Worm/Spyware)" },
+        { "zone": "massnahmen", "label": "Gegenmaßnahmen", "hint": "(Patch/EDR/Hardening)" }
+      ],
+      "sortCards": [
+        { "id": "tm1", "text": "Softwarefehler ermöglicht Code-Ausführung", "correctZone": "schwachstelle" },
+        { "id": "tm2", "text": "Exploit nutzt eine bekannte CVE aus", "correctZone": "schwachstelle" },
+        { "id": "tm3", "text": "Trojaner tarnt sich als legitimes Programm", "correctZone": "malware" },
+        { "id": "tm4", "text": "Ransomware verschlüsselt Daten und fordert Lösegeld", "correctZone": "malware" },
+        { "id": "tm5", "text": "Worm verbreitet sich selbstständig im Netzwerk", "correctZone": "malware" },
+        { "id": "tm6", "text": "Spyware spioniert Daten/Verhalten aus", "correctZone": "malware" },
+        { "id": "tm7", "text": "Patch-Management für OS/Apps/Firmware", "correctZone": "massnahmen" },
+        { "id": "tm8", "text": "Endpoint-Schutz (AV/EDR) + Monitoring", "correctZone": "massnahmen" },
+        { "id": "tm9", "text": "Hardening und sichere Konfiguration (z. B. Dienste reduzieren)", "correctZone": "massnahmen" }
+      ]
+    },
+    {
+      "id": "orga-rechte-quiz",
+      "type": "quiz",
+      "title": "Organisatorische Gefährdungen – Prozesse, Rollen, Rechte",
+      "subtitle": "„Alle Admin“ ist kein Plan.",
+      "hintDefault": "Gegenmaßnahmen: Rollen/Rechte (Least Privilege), Vier-Augen bei kritischen Änderungen, Richtlinien, sauberes On-/Offboarding, Rechte-Reviews.",
+      "questions": [
+        {
+          "id": "or1",
+          "text": "1. Was ist ein typisches organisatorisches Sicherheitsloch?",
+          "options": [
+            { "value": "a", "text": "Keine Verantwortlichkeiten, keine Regeln, kein Berechtigungskonzept." },
+            { "value": "b", "text": "Zu viele USB-Ports." },
+            { "value": "c", "text": "Zu wenig CPU-Kerne." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "or2",
+          "text": "2. Schatten-IT ist gefährlich, weil …",
+          "options": [
+            { "value": "a", "text": "sie automatisch schnelleres WLAN erzeugt." },
+            { "value": "b", "text": "unkontrollierte Tools/Cloud-Shares Datenabfluss und Compliance-Probleme erzeugen können." },
+            { "value": "c", "text": "sie nur auf Servern funktioniert." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "or3",
+          "text": "3. Prüfungsfalle: „Alle sind Admin, sonst geht’s schneller“ ist …",
+          "options": [
+            { "value": "a", "text": "gut, weil es Support spart." },
+            { "value": "b", "text": "schlecht, weil es Risiken erhöht und Nachvollziehbarkeit/Trennung zerstört." },
+            { "value": "c", "text": "egal, wenn man Cloud nutzt." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "physik-umwelt-sort",
+      "type": "sort",
+      "title": "Physische/Umwelt-Gefährdungen",
+      "subtitle": "Physik hackt immer.",
+      "hintDefault": "Risiken: Strom/Brand/Wasser/Klima/Diebstahl. Maßnahmen: Zutritt, USV, Brandschutz, Klima, sichere Aufbewahrung. Backup nicht im selben Raum.",
+      "sortColumns": [
+        { "zone": "risiko", "label": "Gefährdung", "hint": "(Strom/Wasser/Diebstahl…)" },
+        { "zone": "massnahme", "label": "Gegenmaßnahme", "hint": "(USV/Zutritt/Brandschutz…)" }
+      ],
+      "sortCards": [
+        { "id": "pu1", "text": "Stromausfall/Spannungsspitzen", "correctZone": "risiko" },
+        { "id": "pu2", "text": "Brand im Serverraum", "correctZone": "risiko" },
+        { "id": "pu3", "text": "Wasserschaden (Rohrbruch)", "correctZone": "risiko" },
+        { "id": "pu4", "text": "Diebstahl von Hardware", "correctZone": "risiko" },
+        { "id": "pu5", "text": "USV einsetzen", "correctZone": "massnahme" },
+        { "id": "pu6", "text": "Zutrittskontrolle/Schließsysteme", "correctZone": "massnahme" },
+        { "id": "pu7", "text": "Brandschutz + Regeln im Serverraum", "correctZone": "massnahme" },
+        { "id": "pu8", "text": "Offsite-Backup / sichere Aufbewahrung/Transport", "correctZone": "massnahme" }
+      ]
+    },
+    {
+      "id": "defense-in-depth-capital",
+      "type": "capital",
+      "title": "Gegenmaßnahmen-Logik – Defense in Depth",
+      "subtitle": "Wenn eine Schicht fällt, greift die nächste.",
+      "hintDefault": "Einzelmaßnahme ≠ Konzept. Mini-Kette: Policy → Rechte → Technik → Monitoring → Notfallplan.",
+      "rows": [
+        {
+          "key": "policy",
+          "label": "Policy/Richtlinien (Regeln, Verantwortlichkeiten, Prozesse)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "rechte",
+          "label": "Rechtekonzept (Least Privilege, Rollen, MFA wo kritisch)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "technik",
+          "label": "Technik (Patchen, Hardening, EDR, Firewall, Segmentierung)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "monitor",
+          "label": "Monitoring/Logging (erkennen & reagieren)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "notfall",
+          "label": "Notfallplan/Backup/Runbook (wenn’s trotzdem knallt)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toms-quiz",
+      "type": "quiz",
+      "title": "TOMs (DSGVO) – „Sicherheit der Verarbeitung“",
+      "subtitle": "Nicht nur Technik.",
+      "hintDefault": "TOMs = technische + organisatorische Maßnahmen. Auswahl hängt vom Risiko ab. Nachweis gehört dazu.",
+      "questions": [
+        {
+          "id": "tom1",
+          "text": "1. TOMs sind am ehesten …",
+          "options": [
+            { "value": "a", "text": "nur Firewall-Regeln." },
+            { "value": "b", "text": "technische und organisatorische Maßnahmen für ein angemessenes Schutzniveau." },
+            { "value": "c", "text": "ein Hardware-Bauteil im Server." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "tom2",
+          "text": "2. Welche Auswahl-Logik ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Immer das Maximum einbauen, egal was es kostet." },
+            { "value": "b", "text": "Maßnahmen müssen zum Risiko/Schutzbedarf passen („angemessen“)." },
+            { "value": "c", "text": "Nur Kundenwunsch zählt, Risiko ist egal." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "tom3",
+          "text": "3. Was ist ein typisches TOM-Beispiel?",
+          "options": [
+            { "value": "a", "text": "Verschlüsselung + Zugriffskontrollen + Backup/Restore + regelmäßige Tests/Evaluierung." },
+            { "value": "b", "text": "Mehr RGB-Lüfter im Server." },
+            { "value": "c", "text": "Browser-Startseite ändern." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "tom4",
+          "text": "4. Prüfungsfalle: „TOMs sind nur Technik“ ist …",
+          "options": [
+            { "value": "a", "text": "richtig, Prozesse sind egal." },
+            { "value": "b", "text": "falsch, auch Prozesse/Schulung/Dokumentation gehören dazu." },
+            { "value": "c", "text": "richtig, wenn man Cloud nutzt." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "identitaeten-quiz",
+      "type": "quiz",
+      "title": "Zugriff & Identitäten – der häufigste Hebel",
+      "subtitle": "Wer bist du? Was darfst du?",
+      "hintDefault": "Authentisierung = Identität prüfen. Autorisierung = Rechte prüfen. Keine geteilten Accounts. MFA für kritische Zugänge.",
+      "questions": [
+        {
+          "id": "id1",
+          "text": "1. Authentisierung bedeutet …",
+          "options": [
+            { "value": "a", "text": "wer bist du? (Identität prüfen)" },
+            { "value": "b", "text": "was darfst du? (Rechte prüfen)" },
+            { "value": "c", "text": "wie schnell ist dein Netzwerk?" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "id2",
+          "text": "2. Autorisierung bedeutet …",
+          "options": [
+            { "value": "a", "text": "wer bist du? (Identität prüfen)" },
+            { "value": "b", "text": "was darfst du? (Zugriffsrechte/Permissions)" },
+            { "value": "c", "text": "welche CPU hast du?" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "id3",
+          "text": "3. Warum sind geteilte Accounts problematisch?",
+          "options": [
+            { "value": "a", "text": "Keine Nachvollziehbarkeit, Offboarding/Rechteentzug wird unsauber." },
+            { "value": "b", "text": "Weil sie die SSD langsamer machen." },
+            { "value": "c", "text": "Weil MFA dann automatisch aktiv ist." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "id4",
+          "text": "4. Welche Mini-Regel ist sinnvoll?",
+          "options": [
+            { "value": "a", "text": "Admin-Konten getrennt von normalen Nutzerkonten." },
+            { "value": "b", "text": "Ein Admin-Konto für alle spart Zeit." },
+            { "value": "c", "text": "Admin nur per E-Mail bestätigen." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "verfuegbarkeit-quiz",
+      "type": "quiz",
+      "title": "Verfügbarkeit – Backup, Restore, Redundanz",
+      "subtitle": "Backup ohne Restore-Test ist Hoffnung.",
+      "hintDefault": "3-2-1-Regel + Restore-Tests. RTO = Wiederanlaufzeit, RPO = max. Datenverlust (wenn erwähnt).",
+      "questions": [
+        {
+          "id": "ver1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Wenn Backup durchläuft, klappt Restore automatisch." },
+            { "value": "b", "text": "Nur ein getestetes Restore ist ein Backup." },
+            { "value": "c", "text": "Backups sind nur für Compliance, nicht für Betrieb." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "ver2",
+          "text": "2. 3-2-1 bedeutet …",
+          "options": [
+            { "value": "a", "text": "3 Kopien, 2 unterschiedliche Medien, 1 Kopie extern/offsite." },
+            { "value": "b", "text": "3 Server, 2 Switches, 1 Router." },
+            { "value": "c", "text": "3 Passwörter, 2 Nutzer, 1 Admin." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "ver3",
+          "text": "3. RTO meint am ehesten …",
+          "options": [
+            { "value": "a", "text": "maximal erlaubter Datenverlust." },
+            { "value": "b", "text": "Zeit bis der Service wieder läuft (Wiederanlaufzeit)." },
+            { "value": "c", "text": "Temperaturgrenze im Serverraum." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "ver4",
+          "text": "4. RPO meint am ehesten …",
+          "options": [
+            { "value": "a", "text": "maximal tolerierter Datenverlust (Zeitfenster)." },
+            { "value": "b", "text": "Dauer eines Passwort-Resets." },
+            { "value": "c", "text": "Bandbreite eines LAN-Ports." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "monitoring-logging-sort",
+      "type": "sort",
+      "title": "Monitoring & Nachvollziehbarkeit",
+      "subtitle": "Früh erkennen statt spät bereuen.",
+      "hintDefault": "Logging: Events festhalten (Logins, Rechteänderungen, Admin-Aktionen). Monitoring: Metriken/Alarmierung. Logs ohne Auswertung = Datenfriedhof.",
+      "sortColumns": [
+        { "zone": "logging", "label": "Logging (Events)", "hint": "(wer tat was?)" },
+        { "zone": "monitoring", "label": "Monitoring/Alarmierung", "hint": "(was passiert gerade?)" },
+        { "zone": "falle", "label": "Prüfungsfalle", "hint": "(klingt gut, hilft nicht)" }
+      ],
+      "sortCards": [
+        { "id": "ml1", "text": "Login-Versuche (erfolgreich/fehlgeschlagen)", "correctZone": "logging" },
+        { "id": "ml2", "text": "Rechteänderungen und Admin-Aktionen protokollieren", "correctZone": "logging" },
+        { "id": "ml3", "text": "Fehlermeldungen/Service-Abstürze erfassen", "correctZone": "logging" },
+        { "id": "ml4", "text": "Alarm bei ungewöhnlich vielen Login-Fehlschlägen", "correctZone": "monitoring" },
+        { "id": "ml5", "text": "Alarm bei Speicher voll / CPU dauerhaft am Limit", "correctZone": "monitoring" },
+        { "id": "ml6", "text": "Logs sammeln, aber niemand schaut rein", "correctZone": "falle" },
+        { "id": "ml7", "text": "Keine Zuständigkeit: Niemand bekommt Alerts", "correctZone": "falle" }
+      ]
+    },
+    {
+      "id": "incident-response-capital",
+      "type": "capital",
+      "title": "Notfallmanagement – Incident Response",
+      "subtitle": "Im Notfall folgst du Plan, nicht Bauchgefühl.",
+      "hintDefault": "Ablauf: Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned. Mit Runbook/Ansprechpartnern.",
+      "rows": [
+        {
+          "key": "erkennen",
+          "label": "Erkennen (Incident feststellen/validieren)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "eindaemmen",
+          "label": "Eindämmen (Schaden begrenzen, isolieren)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "beseitigen",
+          "label": "Beseitigen (Ursache entfernen, Patch/Fix, Bereinigung)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "restore",
+          "label": "Wiederherstellen (Services/Daten zurück, Betrieb stabil)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "lessons",
+          "label": "Lessons Learned (nachbessern, dokumentieren, verhindern)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pruefungsfallen-schnellcheck-quiz",
+      "type": "quiz",
+      "title": "Prüfungsfallen & Merksätze – Schnell-Check",
+      "subtitle": "Die Klassiker in 60 Sekunden.",
+      "hintDefault": "Formel: Asset → C/I/A-Schaden → Schutzbedarf → Maßnahmenpaket. Maßnahmen müssen angemessen sein. Grundschutz = Standardmaßnahmen für typische Gefährdungen.",
+      "questions": [
+        {
+          "id": "pf1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Schutzbedarf wird einmal pauschal festgelegt, dann ist alles erledigt." },
+            { "value": "b", "text": "Schutzbedarf pro Asset und getrennt für C/I/A bestimmen." },
+            { "value": "c", "text": "Schutzbedarf braucht man nur bei Cloud." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf2",
+          "text": "2. Warum ist „überall hoch“ als Schutzbedarf schlecht?",
+          "options": [
+            { "value": "a", "text": "Weil es teuer/unkonkret wird und Maßnahmen nicht mehr zielgerichtet sind." },
+            { "value": "b", "text": "Weil es automatisch illegal ist." },
+            { "value": "c", "text": "Weil damit Verfügbarkeit sinkt." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "pf3",
+          "text": "3. Was trifft IT-Grundschutz am besten?",
+          "options": [
+            { "value": "a", "text": "Standardmaßnahmen + Methodik für typische Fälle, solide Basisabsicherung." },
+            { "value": "b", "text": "Ein einzelnes Tool, das alles automatisch patcht." },
+            { "value": "c", "text": "Nur für Behörden, nicht für KMU." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "pf4",
+          "text": "4. Welche Aussage passt zur Realität am ehesten?",
+          "options": [
+            { "value": "a", "text": "Angriffe treffen nur große Konzerne." },
+            { "value": "b", "text": "Kleine/ungeübte Ziele sind oft besonders gefährdet." },
+            { "value": "c", "text": "Mit VPN ist alles sicher." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "bonus-quiz-4",
+      "type": "quiz",
+      "title": "BONUS: Mini-Quiz (4 Fragen)",
+      "subtitle": "Alles einmal sauber zusammenziehen.",
+      "hintDefault": "Denk in Beispielen aus dem Betrieb: CIA, Schutzbedarf, Gefährdung→Maßnahme, TOMs als Paket.",
+      "questions": [
+        {
+          "id": "bq1",
+          "text": "1. Welche Kombination ist ein gutes Beispiel für CIA aus dem Betrieb?",
+          "options": [
+            { "value": "a", "text": "C: Lohnabrechnungen nur für HR; I: Änderung nur mit Freigabe/Checks; A: Mail/ERP mit Restore/Redundanz verfügbar." },
+            { "value": "b", "text": "C: Monitor heller; I: SSD größer; A: Maus schneller." },
+            { "value": "c", "text": "C: WLAN aus; I: Passwort kurz; A: Backup im gleichen Raum." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "bq2",
+          "text": "2. Schutzbedarf Lohnabrechnungstabelle: Welche Einstufung ist am plausibelsten?",
+          "options": [
+            { "value": "a", "text": "Vertraulichkeit hoch, Integrität hoch, Verfügbarkeit normal/hoch (je nach Prozess) – wegen Personaldaten/Fehlerfolgen." },
+            { "value": "b", "text": "Alles normal, weil es nur Excel ist." },
+            { "value": "c", "text": "Verfügbarkeit sehr hoch, Vertraulichkeit normal." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "bq3",
+          "text": "3. Welche Gefährdung→Gegenmaßnahme-Kombination passt?",
+          "options": [
+            { "value": "a", "text": "Phishing → Awareness+MFA; Ungepatcht → Patch-Management; Rechtechaos → Rollen/Least Privilege; Stromausfall → USV; Diebstahl → Zutrittskontrolle." },
+            { "value": "b", "text": "Phishing → mehr RAM; Stromausfall → Browser wechseln; Diebstahl → Wallpaper ändern." },
+            { "value": "c", "text": "Malware → nur Firewall; Fehlkonfig → ignorieren; Rechtechaos → alle Admin." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "bq4",
+          "text": "4. Warum reicht „eine Firewall“ als Antwort fast nie?",
+          "options": [
+            { "value": "a", "text": "Weil TOMs ein angemessenes Maßnahmenpaket sind: Prozesse+Rechte+Patchen+Monitoring+Backups+Nachweis." },
+            { "value": "b", "text": "Weil Firewalls verboten sind." },
+            { "value": "c", "text": "Weil Firewalls nur bei Druckern funktionieren." }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

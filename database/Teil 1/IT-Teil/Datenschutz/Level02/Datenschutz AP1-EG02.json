@@ -1,0 +1,691 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – DSGVO (AP1)",
+  "topic": "Ziel & Logik • Begriffe (personenbezogen/anonym/pseudonym) • Verarbeitung • Art. 5 Grundsätze • Rollen • Art. 6 Rechtsgrundlagen • Einwilligung • Art. 9/10 Daten • Info-Pflichten • Betroffenenrechte • AVV • TOMs • Privacy by Design/Default • VVT/DSFA • Datenpanne • Sanktionen • SDM • Drittlandtransfer • Praxisfälle",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "dsgvo-logik-quiz",
+      "type": "quiz",
+      "title": "Rätsel 1: DSGVO – Ziel, Logik, Grundprinzip",
+      "subtitle": "Nicht nur „machen“, sondern „begründen + dokumentieren“.",
+      "hintDefault": "Verbot mit Erlaubnisvorbehalt + Rechenschaftspflicht: Einhaltung muss nachweisbar sein.",
+      "questions": [
+        {
+          "id": "dl1",
+          "text": "1. Was trifft die DSGVO-Logik am besten?",
+          "options": [
+            { "value": "a", "text": "Alles ist erlaubt, solange niemand sich beschwert." },
+            { "value": "b", "text": "Verarbeitung ist grundsätzlich verboten – erlaubt nur mit Rechtsgrundlage." },
+            { "value": "c", "text": "Nur Speichern ist geregelt, nicht der Rest." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "dl2",
+          "text": "2. Was bedeutet Rechenschaftspflicht (Accountability) in der Praxis?",
+          "options": [
+            { "value": "a", "text": "Man muss nur versprechen, dass man sich Mühe gibt." },
+            { "value": "b", "text": "Der Verantwortliche muss Einhaltung belegen können (Nachweis/Doku)." },
+            { "value": "c", "text": "Nur die Aufsichtsbehörde muss etwas nachweisen." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "dl3",
+          "text": "3. Aussage: „Wenn niemand meckert, passt’s.“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, solange keine Beschwerde kommt." },
+            { "value": "b", "text": "Falsch, der Verantwortliche muss Compliance nachweisen können." },
+            { "value": "c", "text": "Kommt nur auf die IT an." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "personenbezogen-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Personenbezogen, pseudonym, anonym?",
+      "subtitle": "Schnell sicher erkennen.",
+      "hintDefault": "Anonym = kein Personenbezug mehr. Pseudonym = DSGVO gilt weiter. Personenbezogen = identifizierbar (direkt/indirekt).",
+      "sortColumns": [
+        { "zone": "pb", "label": "Personenbezogen", "hint": "(identifizierbar)" },
+        { "zone": "pseudo", "label": "Pseudonymisiert", "hint": "(DSGVO bleibt)" },
+        { "zone": "anon", "label": "Anonymisiert", "hint": "(DSGVO raus)" }
+      ],
+      "sortCards": [
+        { "id": "p1", "text": "Name + Vorname", "correctZone": "pb" },
+        { "id": "p2", "text": "E-Mail-Adresse", "correctZone": "pb" },
+        { "id": "p3", "text": "Kundennummer (im System einer Person zuordenbar)", "correctZone": "pb" },
+        { "id": "p4", "text": "IP-Adresse (typisch: einer Person zuordenbar)", "correctZone": "pb" },
+        { "id": "p5", "text": "Standortdaten eines Smartphones", "correctZone": "pb" },
+        { "id": "p6", "text": "Hash einer E-Mail (ohne Beweis, dass kein Rückschluss möglich ist)", "correctZone": "pseudo" },
+        { "id": "p7", "text": "Kunden-ID, Zuordnungstabelle getrennt/gesichert gespeichert", "correctZone": "pseudo" },
+        { "id": "p8", "text": "Tagesstatistik: „30 Besuche heute“, ohne IDs/IP/Tracking", "correctZone": "anon" }
+      ]
+    },
+    {
+      "id": "verarbeitung-sort",
+      "type": "sort",
+      "title": "Rätsel 3: Was ist „Verarbeitung“?",
+      "subtitle": "Schon anschauen zählt.",
+      "hintDefault": "Verarbeitung = jeder Umgang: erheben, speichern, ändern, ansehen, übermitteln, löschen …",
+      "sortColumns": [
+        { "zone": "ja", "label": "Ist Verarbeitung", "hint": "(Art. 4)" },
+        { "zone": "nein", "label": "Keine Verarbeitung", "hint": "(kein Umgang mit Daten)" }
+      ],
+      "sortCards": [
+        { "id": "v1", "text": "Erheben (Formular ausfüllen lassen)", "correctZone": "ja" },
+        { "id": "v2", "text": "Ansehen (Support öffnet Kundendatensatz)", "correctZone": "ja" },
+        { "id": "v3", "text": "Speichern (Datenbank-Insert)", "correctZone": "ja" },
+        { "id": "v4", "text": "Ändern (Adresse korrigieren)", "correctZone": "ja" },
+        { "id": "v5", "text": "Übermitteln (Daten an Dienstleister schicken)", "correctZone": "ja" },
+        { "id": "v6", "text": "Löschen/Archivieren", "correctZone": "ja" },
+        { "id": "v7", "text": "System erfasst keinerlei personenbezogene Daten und zeigt nichts an", "correctZone": "nein" }
+      ]
+    },
+    {
+      "id": "art5-grundsaetze-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Art. 5 – die „6 Gebote“ + Nachweis",
+      "subtitle": "Ordne Prinzip → Kategorie.",
+      "hintDefault": "Zweck klar, Daten schlank, Fristen fest, Schutz aktiv, und alles belegbar.",
+      "sortColumns": [
+        { "zone": "recht", "label": "Recht/Fair/Transparent", "hint": "(Legalität + Offenheit)" },
+        { "zone": "zweck", "label": "Zweckbindung", "hint": "(klarer Zweck)" },
+        { "zone": "min", "label": "Datenminimierung", "hint": "(nur nötig)" },
+        { "zone": "richtig", "label": "Richtigkeit", "hint": "(korrekt/aktuell)" },
+        { "zone": "frist", "label": "Speicherbegrenzung", "hint": "(nicht ewig)" },
+        { "zone": "schutz", "label": "Integrität/Vertraulichkeit", "hint": "(Schutz)" },
+        { "zone": "nachweis", "label": "Rechenschaftspflicht", "hint": "(Nachweis/Doku)" }
+      ],
+      "sortCards": [
+        { "id": "g1", "text": "Rechtmäßigkeit", "correctZone": "recht" },
+        { "id": "g2", "text": "Fairness", "correctZone": "recht" },
+        { "id": "g3", "text": "Transparenz", "correctZone": "recht" },
+        { "id": "g4", "text": "Zweckbindung", "correctZone": "zweck" },
+        { "id": "g5", "text": "Datenminimierung", "correctZone": "min" },
+        { "id": "g6", "text": "Richtigkeit", "correctZone": "richtig" },
+        { "id": "g7", "text": "Speicherbegrenzung", "correctZone": "frist" },
+        { "id": "g8", "text": "Integrität & Vertraulichkeit", "correctZone": "schutz" },
+        { "id": "g9", "text": "Einhaltung nachweisen können", "correctZone": "nachweis" }
+      ]
+    },
+    {
+      "id": "rollen-sort",
+      "type": "sort",
+      "title": "Rätsel 5: Rollen – wer ist wer?",
+      "subtitle": "Wer „Zweck + Wie“ festlegt, trägt den Hut.",
+      "hintDefault": "Verantwortlicher entscheidet Zwecke/Mittel. Auftragsverarbeiter handelt auf Weisung. Empfänger bekommt Daten. Gemeinsam = gemeinsam entscheiden.",
+      "sortColumns": [
+        { "zone": "verantwortlicher", "label": "Verantwortlicher", "hint": "(Zweck + Mittel)" },
+        { "zone": "av", "label": "Auftragsverarbeiter", "hint": "(im Auftrag)" },
+        { "zone": "empfaenger", "label": "Empfänger", "hint": "(bekommt Daten)" },
+        { "zone": "gemeinsam", "label": "Gemeinsam Verantwortliche", "hint": "(gemeinsam entscheiden)" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "Unternehmen entscheidet, wozu Kundendaten genutzt werden (CRM, Support)", "correctZone": "verantwortlicher" },
+        { "id": "r2", "text": "Hosting/Cloud speichert Kundendaten nach Weisung des Kunden", "correctZone": "av" },
+        { "id": "r3", "text": "Versanddienstleister erhält Name/Adresse für Lieferung", "correctZone": "empfaenger" },
+        { "id": "r4", "text": "Zwei Firmen betreiben gemeinsames Portal und definieren Zwecke gemeinsam", "correctZone": "gemeinsam" },
+        { "id": "r5", "text": "Dienstleister nutzt Daten für eigene Zwecke (z. B. eigene Bonitätsentscheidung)", "correctZone": "verantwortlicher" }
+      ]
+    },
+    {
+      "id": "art6-rechtsgrundlagen-sort",
+      "type": "sort",
+      "title": "Rätsel 6: Art. 6 – die 6 Klassiker",
+      "subtitle": "Ordne Szenario → Rechtsgrundlage.",
+      "hintDefault": "Einwilligung ist nicht immer „am sichersten“: muss freiwillig, widerrufbar, nachweisbar sein.",
+      "sortColumns": [
+        { "zone": "einw", "label": "Einwilligung", "hint": "(Opt-in)" },
+        { "zone": "vertrag", "label": "Vertrag", "hint": "(Leistung)" },
+        { "zone": "pflicht", "label": "Rechtliche Pflicht", "hint": "(Gesetz)" },
+        { "zone": "vital", "label": "Lebenswichtig", "hint": "(Notfall)" },
+        { "zone": "oeff", "label": "Öffentliches Interesse", "hint": "(Behörde)" },
+        { "zone": "berechtigt", "label": "Berechtigtes Interesse", "hint": "(Abwägung)" }
+      ],
+      "sortCards": [
+        { "id": "a1", "text": "Newsletter-Versand an Privatkunden", "correctZone": "einw" },
+        { "id": "a2", "text": "Versand einer bestellten Ware inkl. Lieferadresse", "correctZone": "vertrag" },
+        { "id": "a3", "text": "Rechnung/Aufbewahrung wegen steuerlicher Vorschriften", "correctZone": "pflicht" },
+        { "id": "a4", "text": "Notfall: Datenweitergabe zur Rettung einer Person", "correctZone": "vital" },
+        { "id": "a5", "text": "Behörde verarbeitet Daten zur Erfüllung gesetzlicher Aufgabe", "correctZone": "oeff" },
+        { "id": "a6", "text": "Security-Logfiles zur Angriffserkennung (kurze Frist, Minimierung)", "correctZone": "berechtigt" }
+      ]
+    },
+    {
+      "id": "einwilligung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 7: Einwilligung (Art. 7) – wann wirksam?",
+      "subtitle": "„Ja“ muss echt sein – und belegbar.",
+      "hintDefault": "Freiwillig + informiert + eindeutig + zweckgebunden. Widerruf so leicht wie Zustimmung. Nachweis beim Verantwortlichen.",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "1. Welche Kombination passt zur wirksamen Einwilligung?",
+          "options": [
+            { "value": "a", "text": "Vorangekreuztes Häkchen + versteckter Text im Footer" },
+            { "value": "b", "text": "Freiwillig, informiert, eindeutig, zweckgebunden" },
+            { "value": "c", "text": "Nur mündlich ohne Dokumentation" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e2",
+          "text": "2. Widerruf: Welche Aussage stimmt am ehesten?",
+          "options": [
+            { "value": "a", "text": "Widerruf ist nur per Brief möglich." },
+            { "value": "b", "text": "Widerruf muss so leicht sein wie Zustimmung." },
+            { "value": "c", "text": "Widerruf gilt erst nach 12 Monaten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e3",
+          "text": "3. „Opt-out vorangekreuzt“ (Häkchen ist schon gesetzt) – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Unkritisch, spart Klicks." },
+            { "value": "b", "text": "Problematisch, meist keine wirksame Einwilligung." },
+            { "value": "c", "text": "Pflicht, sonst DSGVO-Verstoß." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e4",
+          "text": "4. Warum ist „Einwilligung ist immer am sichersten“ oft falsch?",
+          "options": [
+            { "value": "a", "text": "Weil sie freiwillig sein muss und widerrufbar ist – und das muss man nachweisen." },
+            { "value": "b", "text": "Weil Einwilligungen automatisch 10 Jahre gültig sind." },
+            { "value": "c", "text": "Weil Einwilligung nur für Behörden gilt." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "besondere-daten-quiz",
+      "type": "quiz",
+      "title": "Rätsel 8: Besondere Daten (Art. 9) & Strafdaten (Art. 10)",
+      "subtitle": "Extra scharf: Art. 6 allein reicht nicht.",
+      "hintDefault": "Art. 9-Daten = grundsätzlich verboten, außer Ausnahme. Bei Art. 9 brauchst du zusätzlich passende Art. 9-Ausnahme.",
+      "questions": [
+        {
+          "id": "s9_1",
+          "text": "1. Welche Daten sind typischerweise „besonders“ i. S. d. Art. 9?",
+          "options": [
+            { "value": "a", "text": "Lieferadresse" },
+            { "value": "b", "text": "Gesundheitsdaten (z. B. Attest/Krankmeldung)" },
+            { "value": "c", "text": "Rechnungsnummer" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s9_2",
+          "text": "2. Aussage: „Art. 6 reicht immer als Rechtsgrundlage.“ – Bewertung bei Art. 9-Daten?",
+          "options": [
+            { "value": "a", "text": "Falsch, zusätzlich braucht es eine Ausnahme nach Art. 9." },
+            { "value": "b", "text": "Richtig, Art. 9 ist nur Deko." },
+            { "value": "c", "text": "Kommt nur auf die Dateiendung an." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s9_3",
+          "text": "3. Was ist bei sensiblen HR-Daten (z. B. Attest) besonders wichtig?",
+          "options": [
+            { "value": "a", "text": "Offener Zugriff für alle, damit es transparent ist." },
+            { "value": "b", "text": "Strenge Zugriffe (Need-to-know) + klare Zweckbindung." },
+            { "value": "c", "text": "Dauerhafte Speicherung ohne Fristen." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "info-pflichten-capital",
+      "type": "capital",
+      "title": "Rätsel 9: Informationspflichten (Art. 13/14) – Reihenfolge",
+      "subtitle": "„Wer? Was? Wozu? Wie lange? Wohin? Welche Rechte?“",
+      "hintDefault": "Zum passenden Zeitpunkt/kontext. Nicht irgendwo verstecken.",
+      "rows": [
+        {
+          "key": "wer",
+          "label": "Wer verarbeitet? (Verantwortlicher, Kontakt, ggf. DSB)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "zweck",
+          "label": "Zwecke + Rechtsgrundlage(n)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "empfaenger",
+          "label": "Empfänger / Kategorien von Empfängern",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "dauer",
+          "label": "Speicherdauer / Kriterien für Löschfristen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "rechte",
+          "label": "Rechte der Betroffenen + Beschwerderecht",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "extras",
+          "label": "Falls relevant: Drittlandtransfer, Profiling/Tracking, Pflicht zur Bereitstellung",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "betroffenenrechte-quiz",
+      "type": "quiz",
+      "title": "Rätsel 10: Betroffenenrechte – prüfungsrelevant",
+      "subtitle": "Rechte müssen einfach ausübbar sein.",
+      "hintDefault": "Liste kennen + 1 Monat Frist (typisch). Löschung ist nicht immer möglich (Aufbewahrungspflichten).",
+      "questions": [
+        {
+          "id": "br1",
+          "text": "1. Welche Kombination enthält nur Betroffenenrechte?",
+          "options": [
+            { "value": "a", "text": "Auskunft, Berichtigung, Löschung, Widerspruch" },
+            { "value": "b", "text": "DNS, DHCP, VLAN, NAT" },
+            { "value": "c", "text": "Commit, Push, Merge, Rebase" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "br2",
+          "text": "2. Typische Frist zur Beantwortung eines Auskunftsersuchens?",
+          "options": [
+            { "value": "a", "text": "1 Woche" },
+            { "value": "b", "text": "In der Regel 1 Monat" },
+            { "value": "c", "text": "12 Monate" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "br3",
+          "text": "3. Aussage: „Löschung muss immer sofort gehen.“ – stimmt das?",
+          "options": [
+            { "value": "a", "text": "Ja, immer, egal was." },
+            { "value": "b", "text": "Nein, z. B. Aufbewahrungspflichten können entgegenstehen." },
+            { "value": "c", "text": "Nur bei PDFs." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "br4",
+          "text": "4. Welche Formulierung trifft Datenübertragbarkeit (Art. 20) am ehesten?",
+          "options": [
+            { "value": "a", "text": "Daten müssen automatisch in die Cloud hochgeladen werden." },
+            { "value": "b", "text": "Betroffene können Daten in einem gängigen, maschinenlesbaren Format erhalten." },
+            { "value": "c", "text": "Nur Behörden dürfen Daten exportieren." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "avv-quiz",
+      "type": "quiz",
+      "title": "Rätsel 11: Auftragsverarbeitung (Art. 28) – AVV in 30 Sekunden",
+      "subtitle": "NDA ≠ AVV.",
+      "hintDefault": "Wenn „im Auftrag“ verarbeitet: AVV nötig. Pflichtinhalte: Zweck/Dauer, Datenarten, Betroffenengruppen, TOMs, Weisungen, Subunternehmer usw.",
+      "questions": [
+        {
+          "id": "av1",
+          "text": "1. Wann brauchst du typischerweise einen AV-Vertrag (AVV)?",
+          "options": [
+            { "value": "a", "text": "Wenn ein Dienstleister personenbezogene Daten im Auftrag verarbeitet." },
+            { "value": "b", "text": "Immer, sobald man ein Passwort benutzt." },
+            { "value": "c", "text": "Nur bei USB-Sticks." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "av2",
+          "text": "2. Aussage: „NDA reicht.“ – Bewertung?",
+          "options": [
+            { "value": "a", "text": "Richtig, NDA deckt alles ab." },
+            { "value": "b", "text": "Falsch, AVV hat Pflichtinhalte und andere Funktion." },
+            { "value": "c", "text": "Kommt nur auf die Schriftart an." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "av3",
+          "text": "3. Was gehört typischerweise in einen AVV?",
+          "options": [
+            { "value": "a", "text": "Gegenstand/Dauer, Zweck, Datenarten, Betroffene, TOMs, Weisungen, Subunternehmer" },
+            { "value": "b", "text": "Nur eine Klausel: „Wir sind lieb.“" },
+            { "value": "c", "text": "Nur der Preis pro Stunde" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "toms-sort",
+      "type": "sort",
+      "title": "Rätsel 12: TOMs (Art. 32) – typische Maßnahmen",
+      "subtitle": "Schutzziele praktisch treffen.",
+      "hintDefault": "Schutzniveau nach Risiko. Ziel: Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit.",
+      "sortColumns": [
+        { "zone": "v", "label": "Vertraulichkeit", "hint": "(nur Berechtigte)" },
+        { "zone": "i", "label": "Integrität", "hint": "(nicht unbemerkt ändern)" },
+        { "zone": "a", "label": "Verfügbarkeit", "hint": "(wiederherstellbar)" },
+        { "zone": "b", "label": "Belastbarkeit", "hint": "(stabil/robust)" }
+      ],
+      "sortCards": [
+        { "id": "t1", "text": "Rollen-/Berechtigungskonzept + Least Privilege", "correctZone": "v" },
+        { "id": "t2", "text": "MFA für Admin-Accounts", "correctZone": "v" },
+        { "id": "t3", "text": "Verschlüsselung (Transport/Storage)", "correctZone": "v" },
+        { "id": "t4", "text": "Logging/Monitoring (Manipulationen/Anomalien erkennen)", "correctZone": "i" },
+        { "id": "t5", "text": "Plausibilitäts-/Validierungschecks (z. B. Eingaben)", "correctZone": "i" },
+        { "id": "t6", "text": "Backup + Restore-Test", "correctZone": "a" },
+        { "id": "t7", "text": "Redundanz/Failover-Plan (kritische Systeme)", "correctZone": "b" },
+        { "id": "t8", "text": "Schulungen/Prozesse (z. B. Incident-Handling)", "correctZone": "b" }
+      ]
+    },
+    {
+      "id": "privacy-by-design-default-sort",
+      "type": "sort",
+      "title": "Rätsel 13: Privacy by Design & Default (Art. 25)",
+      "subtitle": "Datenschutz in Projekte einbauen – nicht nachträglich ankleben.",
+      "hintDefault": "By Design = im Entwurf/Architektur. By Default = datenschutzfreundliche Voreinstellungen.",
+      "sortColumns": [
+        { "zone": "design", "label": "By Design", "hint": "(Entwurf/Architektur)" },
+        { "zone": "default", "label": "By Default", "hint": "(Voreinstellungen)" }
+      ],
+      "sortCards": [
+        { "id": "pd1", "text": "Schon beim Entwurf: Datenflüsse, Zwecke, Rollen, Löschkonzept definieren", "correctZone": "design" },
+        { "id": "pd2", "text": "Tracker/Analytics standardmäßig deaktiviert", "correctZone": "default" },
+        { "id": "pd3", "text": "Restriktive Freigaben: Standard = privat, nicht öffentlich", "correctZone": "default" },
+        { "id": "pd4", "text": "Logging so planen, dass nur nötige Daten anfallen (Minimierung)", "correctZone": "design" },
+        { "id": "pd5", "text": "Standardmäßig kurze Log-/Speicherfristen", "correctZone": "default" }
+      ]
+    },
+    {
+      "id": "datenpanne-72h-capital",
+      "type": "capital",
+      "title": "Rätsel 14: Datenpanne (Art. 33/34) – 72 Stunden",
+      "subtitle": "Reihenfolge: sauber reagieren statt panisch raten.",
+      "hintDefault": "72h ab Bekanntwerden. Risiko bewerten. Behörde bei Risiko, Betroffene bei hohem Risiko. Alles dokumentieren.",
+      "rows": [
+        {
+          "key": "bekannt",
+          "label": "Bekanntwerden/Incident feststellen (Time-Stamp setzen)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "risiko",
+          "label": "Risiko bewerten (welche Daten? Schutz? Folgen?)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "behoerde",
+          "label": "Meldung an Aufsichtsbehörde (wenn Risiko besteht) – möglichst binnen 72h",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "betroffene",
+          "label": "Betroffene informieren (wenn hohes Risiko)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Dokumentation, Beweissicherung, Maßnahmen, Lessons Learned",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drittlandtransfer-quiz",
+      "type": "quiz",
+      "title": "Rätsel 15: Drittlandtransfer (Kapitel V, Art. 44 ff.)",
+      "subtitle": "Kapitel V ergänzt – ersetzt aber Art. 6 nicht.",
+      "hintDefault": "Für Transfer brauchst du Mechanismus (z. B. Angemessenheit, SCC, BCR) UND trotzdem passende Rechtsgrundlage (Art. 6 etc.).",
+      "questions": [
+        {
+          "id": "dt1",
+          "text": "1. Aussage: „Kapitel V ist die Rechtsgrundlage, Art. 6 ist dann egal.“ – stimmt das?",
+          "options": [
+            { "value": "a", "text": "Ja, Kapitel V ersetzt Art. 6." },
+            { "value": "b", "text": "Nein, Kapitel V ergänzt nur; Art. 6 etc. müssen trotzdem passen." },
+            { "value": "c", "text": "Nur bei PDFs richtig." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "dt2",
+          "text": "2. Welche Mechanismen sind typische Transfer-„Werkzeuge“?",
+          "options": [
+            { "value": "a", "text": "Angemessenheitsbeschluss, Standardvertragsklauseln (SCC), Binding Corporate Rules" },
+            { "value": "b", "text": "RAID 1, RAID 5, RAID 10" },
+            { "value": "c", "text": "UTF-8, ASCII, Base64" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "dt3",
+          "text": "3. Beispiel: US-Cloud verarbeitet Kundendaten. Was ist mindestens zu prüfen?",
+          "options": [
+            { "value": "a", "text": "Nur die Farbe des Rechenzentrums" },
+            { "value": "b", "text": "Transfer-Bedingungen (Kap. V) + Rechtsgrundlage + Info-Pflichten" },
+            { "value": "c", "text": "Nur ob der Anbieter ein Logo hat" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "pruefungsfallen-finale-quiz",
+      "type": "quiz",
+      "title": "Finale: Prüfungsfallen – die Klassiker",
+      "subtitle": "Begriffe trennen + Pflicht-Artefakte nennen.",
+      "hintDefault": "DSGVO ist halb Recht, halb Dokumentation/Prozess. VVT/AVV/DSFA machen Rechenschaftspflicht greifbar.",
+      "questions": [
+        {
+          "id": "pf1",
+          "text": "1. „Pseudonymisiert = anonym“ – stimmt das?",
+          "options": [
+            { "value": "a", "text": "Ja, DSGVO gilt dann nicht mehr." },
+            { "value": "b", "text": "Nein, pseudonymisiert bleibt i. d. R. DSGVO-relevant." },
+            { "value": "c", "text": "Nur bei CSV-Dateien." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf2",
+          "text": "2. „Dienstleister = automatisch Auftragsverarbeiter“ – stimmt das?",
+          "options": [
+            { "value": "a", "text": "Ja, immer." },
+            { "value": "b", "text": "Nein, hängt davon ab, wer Zweck/Mittel entscheidet." },
+            { "value": "c", "text": "Nur wenn der Dienstleister aus der EU kommt." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf3",
+          "text": "3. 72 Stunden laufen ab …",
+          "options": [
+            { "value": "a", "text": "… dem Zeitpunkt des tatsächlichen Vorfalls." },
+            { "value": "b", "text": "… dem Bekanntwerden beim Verantwortlichen." },
+            { "value": "c", "text": "… dem Zeitpunkt der Pressemitteilung." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf4",
+          "text": "4. Was ist die passende Kurzformel für DSGVO-„richtig machen“?",
+          "options": [
+            { "value": "a", "text": "Machen + hoffen" },
+            { "value": "b", "text": "Begründen + dokumentieren + umsetzen" },
+            { "value": "c", "text": "Nur verschlüsseln, sonst egal" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pf5",
+          "text": "5. Welche Aussage zu Sanktionen ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Nur Behörden zahlen Bußgelder." },
+            { "value": "b", "text": "Bußgelder können sehr hoch sein; Betroffene können Schadenersatz verlangen." },
+            { "value": "c", "text": "Es gibt keine Sanktionen, nur Hinweise." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "bonus-mini-quiz",
+      "type": "quiz",
+      "title": "Bonus: Mini-Quiz (Abschlussfolie)",
+      "subtitle": "AP1: kurz, sauber, treffsicher.",
+      "hintDefault": "Stichworte reichen – aber korrekt zuordnen.",
+      "questions": [
+        {
+          "id": "bq1",
+          "text": "1. Welche Liste passt am besten zu den Grundsätzen aus Art. 5?",
+          "options": [
+            { "value": "a", "text": "Rechtmäßigkeit/Fairness/Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität/Vertraulichkeit" },
+            { "value": "b", "text": "DNS, DHCP, NAT, VLAN, VPN, WPA2" },
+            { "value": "c", "text": "Commit, Push, Pull, Merge, Rebase, Tag" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "bq2",
+          "text": "2. Ordne zu: Wer ist Verantwortlicher vs. Auftragsverarbeiter?",
+          "options": [
+            { "value": "a", "text": "Verantwortlicher: Cloud-Anbieter; Auftragsverarbeiter: Firma, die Zweck bestimmt" },
+            { "value": "b", "text": "Verantwortlicher: wer Zweck+Mittel festlegt; Auftragsverarbeiter: wer im Auftrag auf Weisung verarbeitet" },
+            { "value": "c", "text": "Beide sind immer dasselbe" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "bq3",
+          "text": "3. Welche 3 Inhalte sind mindestens typische Muss-Bausteine eines Datenschutzhinweises?",
+          "options": [
+            { "value": "a", "text": "Verantwortlicher/Kontakt, Zweck+Rechtsgrundlage, Rechte der Betroffenen" },
+            { "value": "b", "text": "CPU-Modell, Bildschirmgröße, Lieblingsfarbe" },
+            { "value": "c", "text": "Nur „Wir achten auf Datenschutz“" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "bq4",
+          "text": "4. Unterschied Anonymisierung vs. Pseudonymisierung?",
+          "options": [
+            { "value": "a", "text": "Anonym = Personenbezug weg (DSGVO raus); Pseudonym = Bezug prinzipiell möglich (DSGVO drin)" },
+            { "value": "b", "text": "Beides ist identisch" },
+            { "value": "c", "text": "Pseudonymisierung ist nur ein anderes Wort für Verschlüsselung" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

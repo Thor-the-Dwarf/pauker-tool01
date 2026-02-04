@@ -1,0 +1,102 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Software-Schichten (AP1) – Hardware • Firmware • OS • Treiber • Runtime • Middleware • App – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils eine Schicht/Komponente, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Startvorgang, Ressourcen, Plattformen, Laufzeitumgebungen).",
+  "columnTitles": {
+    "column1": "Begriff / Schicht",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine Schicht oder Komponente.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "hardware",
+      "name": "Hardware (Metall)",
+      "description": "Physische Komponenten: CPU, RAM, Mainboard, SSD/HDD, Netzwerkkarte – ohne Software nur Elektronik.",
+      "example": "Ohne Betriebssystem kannst du keine Programme starten, obwohl CPU/RAM/SSD eingebaut sind."
+    },
+    {
+      "id": "firmware_bios_uefi",
+      "name": "Firmware (BIOS/UEFI)",
+      "description": "Startet/initialisiert Hardware, führt Selbsttests aus und lädt den Bootloader bzw. startet den Bootprozess.",
+      "example": "UEFI-Reihenfolge: zuerst NVMe/SSD booten; Secure Boot kann das Starten unbekannter Bootloader blockieren."
+    },
+    {
+      "id": "bootloader",
+      "name": "Bootloader",
+      "description": "Kleine Startsoftware zwischen Firmware und OS-Kernel: lädt das Betriebssystem in den Speicher und startet es.",
+      "example": "Dual-Boot: Bootloader bietet Auswahl zwischen Windows und Linux beim Einschalten."
+    },
+    {
+      "id": "kernel",
+      "name": "Kernel",
+      "description": "Kern des Betriebssystems: verwaltet CPU-Zeit, Speicher, Prozesse, Dateisystemzugriffe und Hardwarezugriffe.",
+      "example": "Viele Programme gleichzeitig: Kernel plant Prozesse und verteilt CPU-Zeit fair/priorisiert."
+    },
+    {
+      "id": "betriebssystem",
+      "name": "Betriebssystem (Windows/Linux)",
+      "description": "Verwaltet Ressourcen und stellt Systemdienste/APIs bereit; bildet die Basis, auf der Anwendungen laufen.",
+      "example": "Benutzerverwaltung, Rechte, Netzwerk, Dateisystem – alles kommt vom OS."
+    },
+    {
+      "id": "treiber",
+      "name": "Treiber",
+      "description": "Übersetzer zwischen OS und Hardware: macht Geräte nutzbar (Grafik, WLAN, Drucker, Storage-Controller).",
+      "example": "WLAN geht nach Neuinstallation nicht → passender Treiber fehlt oder ist inkompatibel."
+    },
+    {
+      "id": "systemdienste",
+      "name": "Systemdienste / Daemons / Services",
+      "description": "Hintergrundprozesse des OS, die Funktionen bereitstellen (z. B. Logging, Netzwerk, Druck, Updates).",
+      "example": "Druckauftrag bleibt hängen, weil der Print-Spooler-Service gestoppt ist."
+    },
+    {
+      "id": "api_syscalls",
+      "name": "System-API / Syscalls",
+      "description": "Schnittstelle, über die Programme OS-Funktionen nutzen (Dateien öffnen, Netzwerk, Prozesse starten).",
+      "example": "App speichert Datei: ruft OS-Funktionen auf statt direkt auf die SSD zu „schreiben“."
+    },
+    {
+      "id": "runtime_jvm",
+      "name": "Runtime: JVM",
+      "description": "Laufzeitumgebung für Java: führt Bytecode aus, verwaltet Speicher (GC) und bietet Plattform-Unabhängigkeit.",
+      "example": "Java-App startet nicht → falsche/fehlende Java-Version; Installation einer passenden JRE löst es."
+    },
+    {
+      "id": "runtime_dotnet",
+      "name": "Runtime: .NET",
+      "description": "Laufzeitumgebung für .NET-Anwendungen: stellt Libraries bereit und führt IL-Code aus (JIT/AOT je nach Setup).",
+      "example": ".NET-Tool meldet fehlendes Runtime-Paket → passende .NET-Runtime installieren."
+    },
+    {
+      "id": "middleware",
+      "name": "Middleware",
+      "description": "Zwischenschicht, die Dienste/Kommunikation vereinfacht (z. B. Webserver, Appserver, Message Broker, DB-Connector).",
+      "example": "Web-App läuft über einen Webserver/Reverse-Proxy; Backend spricht per Treiber/Connector mit der DB."
+    },
+    {
+      "id": "frameworks_libs",
+      "name": "Frameworks / Libraries",
+      "description": "Wiederverwendbare Bausteine oberhalb der Runtime/OS-APIs: sparen Entwicklungszeit und standardisieren Muster.",
+      "example": "ORM kapselt SQL-Zugriffe, damit die App nicht überall SELECT/UPDATE strings bauen muss."
+    },
+    {
+      "id": "anwendung",
+      "name": "Anwendung (App)",
+      "description": "Programm, das Nutzeraufgaben löst; läuft auf OS (direkt oder via Runtime/Middleware).",
+      "example": "Ticket-System im Browser oder als Desktop-App nutzt OS, Netzwerk, Dateien und ggf. JVM/.NET."
+    },
+    {
+      "id": "schichten_merksatz",
+      "name": "Merksatz: vom Metall bis zur App",
+      "description": "Hardware → Firmware (BIOS/UEFI) → Bootloader → OS (Kernel/Dienste/Treiber) → Runtime/Middleware → Anwendung.",
+      "example": "Startproblem eingrenzen: Kommt man ins UEFI? Bootloader? OS lädt? Erst dann App/Runtime prüfen."
+    }
+  ]
+}

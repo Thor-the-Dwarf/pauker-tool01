@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Grundlagen Datenbanken (ER-Modell & SELECT auf eine Tabelle)",
+  "description": "Schritt 1: Passendes Konzept/Statement wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Du sollst ein einfaches Datenmodell für „Kunde bestellt Produkt“ skizzieren. Ziel: Daten sinnvoll aufteilen, damit nicht alles in einer riesigen Tabelle doppelt steht.",
+      "tags": ["ER-Modell", "Entitäten", "Beziehungen", "Normalisierung"],
+      "options": [
+        {
+          "id": "er_modell",
+          "label": "Einfaches ER-Modell (Entitäten + Beziehung)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Entitäten (z. B. Kunde, Bestellung, Produkt) trennen Daten nach „Dingen“ im Fachbereich.", "correct": true },
+            { "id": "w2", "text": "Beziehungen zeigen, wie Entitäten zusammenhängen (z. B. Kunde hat Bestellungen).", "correct": true },
+            { "id": "w3", "text": "ER-Modelle beschreiben nur die GUI, nicht die Daten.", "correct": false },
+            { "id": "w4", "text": "Hilft, Redundanz und Änderungsprobleme (Anomalien) zu vermeiden.", "correct": true }
+          ]
+        },
+        {
+          "id": "eine_tabelle",
+          "label": "Alles in eine Tabelle schreiben (Kunde+Bestellung+Produkt in einer Zeile)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Führt schnell zu Dopplungen (Kundendaten wiederholen sich bei jeder Bestellung).", "correct": true },
+            { "id": "w2", "text": "Änderungen werden riskant (Adresse ändern = viele Zeilen anfassen).", "correct": true },
+            { "id": "w3", "text": "Ist immer besser, weil weniger Tabellen automatisch schneller sind.", "correct": false },
+            { "id": "w4", "text": "Kann für Mini-Listen reichen, ist aber für echte Prozesse meist falsch.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Einfaches ER-Modell: Entitäten trennen (Kunde, Bestellung, Produkt) und Beziehungen definieren. Alles-in-einer-Tabelle erzeugt Redundanz und Fehler."
+    },
+    {
+      "id": "c02",
+      "profile": "In einem ER-Modell hat ein Kunde mehrere Bestellungen. Jede Bestellung gehört genau zu einem Kunden. Du willst die Kardinalität korrekt ausdrücken.",
+      "tags": ["ER-Modell", "Kardinalität", "1:n"],
+      "options": [
+        {
+          "id": "one_to_many",
+          "label": "1:n-Beziehung (Kunde → Bestellungen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein Kunde kann viele Bestellungen haben.", "correct": true },
+            { "id": "w2", "text": "Jede Bestellung gehört zu genau einem Kunden.", "correct": true },
+            { "id": "w3", "text": "Das ist eine n:m-Beziehung, weil es mehrere Kunden und mehrere Bestellungen gibt.", "correct": false },
+            { "id": "w4", "text": "In relationalen Tabellen wird das meist über einen Fremdschlüssel (customer_id) in Bestellung abgebildet.", "correct": true }
+          ]
+        },
+        {
+          "id": "many_to_many",
+          "label": "n:m-Beziehung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "n:m bedeutet: beide Seiten können viele Verknüpfungen haben (z. B. Bestellung enthält viele Produkte, Produkt ist in vielen Bestellungen).", "correct": true },
+            { "id": "w2", "text": "Passt nicht, wenn jede Bestellung genau einem Kunden gehört.", "correct": true },
+            { "id": "w3", "text": "n:m wird typischerweise mit Zwischentabelle modelliert.", "correct": true },
+            { "id": "w4", "text": "n:m ist immer der Standard für alle Beziehungen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Kunde → Bestellung ist 1:n. n:m ist eher bei Bestellung ↔ Produkt (über Positionen/Join-Tabelle)."
+    },
+    {
+      "id": "c03",
+      "profile": "Du hast eine Tabelle „mitarbeiter“. Du willst alle Datensätze anzeigen, ohne Filter und ohne Sortierung.",
+      "tags": ["SQL", "SELECT", "eine Tabelle", "Grundlagen"],
+      "options": [
+        {
+          "id": "select_all",
+          "label": "SELECT * FROM mitarbeiter;",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "SELECT liest Daten aus einer Tabelle.", "correct": true },
+            { "id": "w2", "text": "Das Sternchen (*) bedeutet: alle Spalten.", "correct": true },
+            { "id": "w3", "text": "Damit werden Datensätze gelöscht.", "correct": false },
+            { "id": "w4", "text": "FROM gibt an, aus welcher Tabelle gelesen wird.", "correct": true }
+          ]
+        },
+        {
+          "id": "delete_all",
+          "label": "DELETE * FROM mitarbeiter;",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "DELETE löscht Zeilen, es ist keine Leseabfrage.", "correct": true },
+            { "id": "w2", "text": "DELETE verwendet typischerweise kein '*'.", "correct": true },
+            { "id": "w3", "text": "Ist gleichbedeutend mit SELECT, nur schneller.", "correct": false },
+            { "id": "w4", "text": "Für „anzeigen“ ist SELECT das richtige Statement.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für „alles anzeigen“ auf einer Tabelle: SELECT * FROM mitarbeiter;. DELETE ist gefährlich und löscht Daten."
+    },
+    {
+      "id": "c04",
+      "profile": "Du willst aus der Tabelle „mitarbeiter“ nur Name und Abteilung sehen, nicht alle Spalten.",
+      "tags": ["SQL", "SELECT", "Spaltenauswahl"],
+      "options": [
+        {
+          "id": "select_columns",
+          "label": "SELECT name, abteilung FROM mitarbeiter;",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Du kannst bei SELECT gezielt Spalten auflisten statt '*'.", "correct": true },
+            { "id": "w2", "text": "Das reduziert Ausgabe auf relevante Daten (z. B. weniger Daten, mehr Übersicht).", "correct": true },
+            { "id": "w3", "text": "FROM ist optional, weil die Datenbank schon weiß, woher die Spalten kommen.", "correct": false },
+            { "id": "w4", "text": "Die Reihenfolge der Spalten in SELECT bestimmt die Reihenfolge der Ausgabe.", "correct": true }
+          ]
+        },
+        {
+          "id": "select_where_only",
+          "label": "SELECT FROM mitarbeiter WHERE name, abteilung;",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Spalten werden direkt nach SELECT angegeben, nicht im WHERE.", "correct": true },
+            { "id": "w2", "text": "WHERE ist für Filterbedingungen (z. B. abteilung='IT'), nicht für Spaltenlisten.", "correct": true },
+            { "id": "w3", "text": "Das ist gültige SQL-Syntax in allen Datenbanken.", "correct": false },
+            { "id": "w4", "text": "Für Spaltenauswahl nutzt man SELECT col1, col2 ...", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Spalten gezielt auswählen: SELECT name, abteilung FROM mitarbeiter;. WHERE ist Filter, nicht Spaltenliste."
+    },
+    {
+      "id": "c05",
+      "profile": "Du willst nur Mitarbeitende aus der Abteilung „IT“ anzeigen. Es gibt genau eine Tabelle, keine Joins.",
+      "tags": ["SQL", "SELECT", "WHERE", "Filter"],
+      "options": [
+        {
+          "id": "where_filter",
+          "label": "SELECT * FROM mitarbeiter WHERE abteilung = 'IT';",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "WHERE filtert Zeilen nach einer Bedingung.", "correct": true },
+            { "id": "w2", "text": "Strings werden typischerweise in einfachen Anführungszeichen geschrieben.", "correct": true },
+            { "id": "w3", "text": "WHERE bestimmt, welche Spalten ausgegeben werden.", "correct": false },
+            { "id": "w4", "text": "Du kannst WHERE mit bestimmten Spalten oder mit '*' kombinieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "order_by_filter",
+          "label": "SELECT * FROM mitarbeiter ORDER BY abteilung = 'IT';",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ORDER BY sortiert, filtert aber nicht.", "correct": true },
+            { "id": "w2", "text": "Eine Filterbedingung gehört in WHERE, nicht in ORDER BY.", "correct": true },
+            { "id": "w3", "text": "ORDER BY wird genutzt, um Ausgabe zu sortieren (z. B. name ASC).", "correct": true },
+            { "id": "w4", "text": "Dieser Ausdruck filtert zuverlässig nur die IT-Abteilung heraus.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Filtern in einer Tabelle: WHERE. Sortieren: ORDER BY. Nicht verwechseln – sonst kommt die falsche Ergebnismenge."
+    },
+    {
+      "id": "c06",
+      "profile": "Du hast ein ER-Modell mit „Bestellung“ und „Produkt“. Eine Bestellung kann mehrere Produkte enthalten, und ein Produkt kann in vielen Bestellungen vorkommen. Du willst das korrekt modellieren.",
+      "tags": ["ER-Modell", "n:m", "Zwischentabelle"],
+      "options": [
+        {
+          "id": "many_to_many",
+          "label": "n:m-Beziehung mit Zwischentabelle (z. B. bestellposition)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "n:m wird relational über eine Zwischentabelle abgebildet.", "correct": true },
+            { "id": "w2", "text": "In der Zwischentabelle stehen Fremdschlüssel auf Bestellung und Produkt.", "correct": true },
+            { "id": "w3", "text": "Mengen/Preise können dort als zusätzliche Attribute pro Position gespeichert werden.", "correct": true },
+            { "id": "w4", "text": "Man setzt einfach zwei Fremdschlüssel in Bestellung, dann ist n:m gelöst.", "correct": false }
+          ]
+        },
+        {
+          "id": "one_to_many_wrong",
+          "label": "1:n-Beziehung ohne Zwischentabelle",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "1:n passt, wenn eine Seite genau eine Zuordnung hat – das ist hier nicht so.", "correct": true },
+            { "id": "w2", "text": "Ohne Zwischentabelle kannst du pro Bestellung nicht sauber mehrere Produkte abbilden.", "correct": true },
+            { "id": "w3", "text": "Du verlierst die Möglichkeit, Positionsdaten (Menge, Einzelpreis) sauber zu speichern.", "correct": true },
+            { "id": "w4", "text": "Ist immer besser, weil weniger Tabellen automatisch korrekt sind.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Bestellung ↔ Produkt ist n:m und braucht eine Zwischentabelle (Bestellposition). Dort hängen auch Menge/Preis pro Position."
+    }
+  ]
+}

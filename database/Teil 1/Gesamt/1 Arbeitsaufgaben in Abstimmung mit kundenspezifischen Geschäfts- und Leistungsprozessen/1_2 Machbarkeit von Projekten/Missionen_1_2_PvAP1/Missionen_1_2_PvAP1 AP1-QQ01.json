@@ -1,0 +1,103 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Machbarkeit von Projekten (1.2)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zur Machbarkeit von Projekten zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Machbarkeitsanalyse",
+    "Stakeholderanalyse",
+    "Risikoanalyse",
+    "Stammdaten",
+    "Bewegungsdaten",
+    "Datenschutz",
+    "Datensicherheit",
+    "Umsatz",
+    "Gewinn",
+    "Deckungsbeitrag",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Prüft, ob ein Vorhaben technisch, wirtschaftlich, organisatorisch und rechtlich realistisch umsetzbar ist.",
+      "correct": "Machbarkeitsanalyse"
+    },
+    {
+      "text": "Identifiziert betroffene Personen/ Gruppen, bewertet deren Einfluss, Erwartungen und mögliche Konflikte.",
+      "correct": "Stakeholderanalyse"
+    },
+    {
+      "text": "Ermittelt Unsicherheiten, bewertet Eintrittswahrscheinlichkeit und Schaden und leitet Gegenmaßnahmen ab.",
+      "correct": "Risikoanalyse"
+    },
+    {
+      "text": "Daten, die relativ stabil sind und Objekte beschreiben, z. B. Kundennummer, Artikelstamm, Adresse.",
+      "correct": "Stammdaten"
+    },
+    {
+      "text": "Daten, die Ereignisse/Transaktionen abbilden, z. B. Bestellung, Zahlung, Lagerbewegung, Zeitbuchung.",
+      "correct": "Bewegungsdaten"
+    },
+    {
+      "text": "Regelt, ob und wie personenbezogene Daten verarbeitet werden dürfen (Zweck, Rechtsgrundlage, Betroffenenrechte).",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Schützt Daten und Systeme vor unbefugtem Zugriff, Manipulation und Ausfall (z. B. Rechte, Backup, Verschlüsselung).",
+      "correct": "Datensicherheit"
+    },
+    {
+      "text": "Einnahmen aus Verkäufen/Leistungen in einem Zeitraum, ohne Abzug von Kosten.",
+      "correct": "Umsatz"
+    },
+    {
+      "text": "Ergebnis nach Abzug aller Kosten vom Umsatz (vereinfacht: Umsatz minus Gesamtkosten).",
+      "correct": "Gewinn"
+    },
+    {
+      "text": "Differenz aus Umsatz und variablen Kosten; Beitrag zur Deckung fixer Kosten und danach zum Gewinn.",
+      "correct": "Deckungsbeitrag"
+    },
+    {
+      "text": "Muss bei Projekten mit personenbezogenen Daten immer geprüft und dokumentiert werden (z. B. TOMs, Rollen/Rechte).",
+      "correct": "alle"
+    },
+    {
+      "text": "Dient dazu, die wichtigsten Betroffenen zu priorisieren und Kommunikations-/Einbindungsmaßnahmen zu planen.",
+      "correct": "Stakeholderanalyse"
+    },
+    {
+      "text": "Hilft, Budgetpuffer und Zeitreserven zu begründen, weil Risiken quantifiziert und bewertet werden.",
+      "correct": "Risikoanalyse"
+    },
+    {
+      "text": "Beispiel: 'Rechnung 2026-01-31 erstellt' gehört typischerweise in diese Datenart.",
+      "correct": "Bewegungsdaten"
+    },
+    {
+      "text": "Beispiel: 'Kunde: Max Mustermann, Kundennr. 4711' gehört typischerweise in diese Datenart.",
+      "correct": "Stammdaten"
+    },
+    {
+      "text": "Wenn ein Projekt wirtschaftlich nicht tragfähig ist, fällt es typischerweise spätestens hier durch.",
+      "correct": "Machbarkeitsanalyse"
+    },
+    {
+      "text": "Kennzahl, die besonders für Produkt-/Projektentscheidungen im Controlling genutzt wird, weil sie fixe Kosten ausklammert.",
+      "correct": "Deckungsbeitrag"
+    },
+    {
+      "text": "Zielt auf Vertraulichkeit, Integrität und Verfügbarkeit der Daten ab.",
+      "correct": "Datensicherheit"
+    },
+    {
+      "text": "Zielt auf rechtmäßige Verarbeitung personenbezogener Daten und Schutz der Betroffenenrechte ab.",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Kann ergeben, dass ein Projekt zwar technisch möglich ist, aber wegen Kosten/Nutzen oder Risiken nicht sinnvoll ist.",
+      "correct": "Machbarkeitsanalyse"
+    }
+  ]
+}

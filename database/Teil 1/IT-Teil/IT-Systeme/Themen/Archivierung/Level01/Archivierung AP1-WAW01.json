@@ -1,0 +1,327 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Backup vs Archiv (häufige Verwechslung) (AP1)",
+  "description": "Schritt 1: Backup oder Archiv bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Nach einem Bedienfehler, Malware oder Hardware-Defekt sollen Daten kurzfristig wiederhergestellt werden. In der Aufgabe sollst du benennen, ob das Backup oder Archiv ist.",
+      "tags": [
+        "Backup",
+        "Restore",
+        "Desaster"
+      ],
+      "options": [
+        {
+          "id": "backup",
+          "label": "Backup (kurzfristige Wiederherstellung)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ziel ist Wiederherstellung nach Fehler, Löschen, Malware oder Defekt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Fokus: schnelle Rücksicherung (Restore) und geringe Ausfallzeit.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Backup ist primär für langfristige Aufbewahrung von Belegen über Jahre.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Backup-Daten dürfen sich ändern/überschrieben werden (Rotation), solange Restore-Ziele erfüllt sind.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "archiv",
+          "label": "Archiv (langfristige Aufbewahrung)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Archiv dient der langfristigen Aufbewahrung, nicht der schnellen Disaster-Wiederherstellung.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Archiv kann unveränderlich sein und hat oft Anforderungen an Nachvollziehbarkeit.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Archiv wird täglich überschrieben, damit der Speicher nicht voll wird.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Archiv ist eher Compliance/Belege, Backup ist eher Restore/Notfall.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "raid",
+          "label": "RAID (Redundanz) ersetzt Backup/Archiv",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "RAID hilft gegen Plattenausfall, nicht gegen Löschen/Malware/Versionen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "RAID ist keine langfristige Aufbewahrung mit Nachweis/Unveränderbarkeit.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "RAID ist automatisch ein Archiv, weil Daten auf mehreren Platten liegen.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Backup/Archiv sind Prozesse/Konzepte, RAID ist nur technische Redundanz.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Backup: kurzfristige Wiederherstellung nach Fehler/Desaster. Archiv ist nicht für schnelle Rücksicherung gedacht, sondern für langfristige Aufbewahrung."
+    },
+    {
+      "id": "v02",
+      "profile": "Rechnungen, Verträge oder Protokolle müssen über Jahre aufbewahrt werden. Sie sollen nicht nachträglich manipuliert werden können. In der Aufgabe sollst du entscheiden: Backup oder Archiv?",
+      "tags": [
+        "Archiv",
+        "Compliance",
+        "Unveränderbarkeit"
+      ],
+      "options": [
+        {
+          "id": "archiv",
+          "label": "Archiv (langfristig, ggf. unveränderlich)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ziel ist langfristige Aufbewahrung für Nachweis/Compliance, nicht primär Restore nach Fehler.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Unveränderbarkeit/Manipulationsschutz ist oft gefordert (je nach Vorgabe).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Archiv braucht häufig Suchbarkeit/Index, um Inhalte später wiederzufinden.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Archiv bedeutet: täglich überschreiben, Hauptsache irgendwas ist da.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "backup",
+          "label": "Backup (kurzfristige Wiederherstellung)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Backup ist für Wiederherstellung nach Fehlern gedacht, nicht für jahrelange Belegaufbewahrung.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Backups werden oft rotiert/überschrieben und sind nicht automatisch revisionssicher.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Backup garantiert automatisch Unveränderbarkeit, weil es Kopien sind.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Für Compliance braucht man oft Regeln zu Aufbewahrungsfristen und Zugriffen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "snapshot",
+          "label": "Snapshots als Archiv (immer ausreichend)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Snapshots sind eher kurzfristige Zustände und nicht automatisch langfristig revisionssicher.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Suchbarkeit/Index und Aufbewahrungsfristen sind bei Archiv typischer als bei Snapshots.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Snapshots sind per Definition unveränderlich und erfüllen immer jede Compliance-Anforderung.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Archiv kann spezielle Anforderungen haben (z. B. WORM/Write-Once), Snapshots nicht zwingend.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Archiv: langfristige Aufbewahrung (Compliance/Belege), oft mit Unveränderbarkeit und Suchbarkeit. Backup ist nicht automatisch revisionssicher."
+    },
+    {
+      "id": "v03",
+      "profile": "In der Prüfung steht: „Ein Backup ist ein Archiv.“ Du sollst den Denkfehler benennen und kurz begründen, warum das nicht stimmt.",
+      "tags": [
+        "Prüfungsfalle",
+        "Backup",
+        "Archiv",
+        "Abgrenzung"
+      ],
+      "options": [
+        {
+          "id": "verwechslung",
+          "label": "Backup und Archiv sind unterschiedliche Ziele",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Backup = Wiederherstellung (kurz-/mittelfristig), Archiv = Aufbewahrung/Nachweis (langfristig).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Backups werden typischerweise rotiert/überschrieben; Archive behalten definiert lange und nachvollziehbar.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Archive benötigen oft Suchbarkeit und ggf. Unveränderbarkeit (je nach Anforderung).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Backup ist automatisch unveränderlich und erfüllt damit immer Compliance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "backup_equals_archive",
+          "label": "Backup ist immer Archiv, weil beides Kopien sind",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Kopie allein sagt nichts über Zweck, Aufbewahrungsfristen oder Unveränderbarkeit.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Rotation/Restore-Ketten sind Backup-Themen, Nachweis/Suchbarkeit sind Archiv-Themen.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Wenn es eine Kopie gibt, ist es automatisch revisionssicher.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Die Prüfung will die Zielsetzung sauber getrennt sehen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "only_time_diff",
+          "label": "Der einzige Unterschied ist: Archiv ist einfach ein sehr altes Backup",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Archiv ist nicht nur „alt“, sondern hat andere Anforderungen (Nachweis, Unveränderbarkeit, Suche).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Backup kann auch lange aufbewahrt werden, bleibt aber ohne Regeln nicht automatisch Archiv.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Archiv braucht nie Suchbarkeit, weil man ja weiß, wo es liegt.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Unveränderbarkeit kann Pflicht sein (je nach Vorgabe), das ist mehr als „Zeit“. ",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Backup ≠ Archiv: Backup = Restore nach Fehler/Desaster, oft mit Rotation. Archiv = langfristige, nachvollziehbare Aufbewahrung, oft mit Suchbarkeit und ggf. Unveränderbarkeit."
+    },
+    {
+      "id": "v04",
+      "profile": "In der Aufgabe steht: „Archiv braucht Suchbarkeit/Unveränderbarkeit (je nach Anforderung)“. Du sollst erklären, warum diese Eigenschaften wichtig sind.",
+      "tags": [
+        "Archiv",
+        "Suchbarkeit",
+        "Unveränderbarkeit",
+        "Compliance"
+      ],
+      "options": [
+        {
+          "id": "archive_properties",
+          "label": "Archiv-Eigenschaften: Suchbarkeit & (ggf.) Unveränderbarkeit",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Suchbarkeit: Inhalte müssen später gezielt gefunden werden (z. B. Belege/Verträge).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Unveränderbarkeit: Manipulation soll verhindert oder nachvollziehbar gemacht werden (Nachweis).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Archiv ist nur ein Ordner, da braucht man keine Regeln oder Metadaten.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Diese Anforderungen dienen der Einhaltung von Compliance-Vorgaben.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Suchbarkeit und Unveränderbarkeit sind Kernpunkte für ein professionelles Archiv, um Belege langfristig sicher und findbar aufzubewahren."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Leistungserbringung bewerten",
+  "topic": "Bestätigung erbrachter Leistungen, Soll-Ist-Vergleich, Abweichungsanalyse, Lessons Learned",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "bewertung-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Bewertungsbausteine richtig zuordnen",
+      "subtitle": "Ordne die Begriffe den vier Bausteinen der Leistungsbewertung zu.",
+      "hintDefault": "Tipp: Bestätigung = Nachweis/Abnahme, Soll-Ist = Zahlen/Termine/Umfang, Abweichung = Ursachen, Lessons Learned = verbessern fürs nächste Mal.",
+      "sortColumns": [
+        { "zone": "bestaetigung", "label": "Bestätigung erbrachter Leistungen", "hint": "(Nachweis, Abnahme, Sign-off)" },
+        { "zone": "sollist", "label": "Soll-Ist-Vergleich", "hint": "(Plan vs. Realität)" },
+        { "zone": "abweichung", "label": "Abweichungsanalyse", "hint": "(Warum ist es anders?)" },
+        { "zone": "lessons", "label": "Lessons Learned", "hint": "(Was nehmen wir mit?)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Abnahme/Sign-off durch den Kunden", "correctZone": "bestaetigung" },
+        { "id": "s2", "text": "Leistungsnachweis (z. B. Ticket abgeschlossen, Protokoll unterschrieben)", "correctZone": "bestaetigung" },
+        { "id": "s3", "text": "Lieferumfang prüfen: vereinbart vs. geliefert", "correctZone": "sollist" },
+        { "id": "s4", "text": "Terminplan prüfen: Meilensteine geplant vs. erreicht", "correctZone": "sollist" },
+        { "id": "s5", "text": "Kosten/Aufwand prüfen: geplant vs. verbraucht", "correctZone": "sollist" },
+        { "id": "s6", "text": "Ursache suchen: fehlende Anforderungen/Scope Creep", "correctZone": "abweichung" },
+        { "id": "s7", "text": "Ursache suchen: Schätzfehler/zu wenig Puffer", "correctZone": "abweichung" },
+        { "id": "s8", "text": "Ursache suchen: technische Probleme/Abhängigkeiten", "correctZone": "abweichung" },
+        { "id": "s9", "text": "Verbesserung ableiten: Checkliste/Standard einführen", "correctZone": "lessons" },
+        { "id": "s10", "text": "Verbesserung ableiten: Kommunikation/Eskalation früher", "correctZone": "lessons" },
+        { "id": "s11", "text": "Verbesserung ableiten: Teststrategie anpassen", "correctZone": "lessons" }
+      ]
+    },
+    {
+      "id": "bewertung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Leistungsbewertung",
+      "subtitle": "Teste dein Wissen zu Soll-Ist, Abweichungen und Lessons Learned.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist ein typisches Ergebnis der „Bestätigung erbrachter Leistungen“?",
+          "options": [
+            { "value": "a", "text": "Unterschriebenes Abnahmeprotokoll / Freigabe" },
+            { "value": "b", "text": "Eine neue Firewall-Regel" },
+            { "value": "c", "text": "Ein neues Passwort" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Wozu dient der Soll-Ist-Vergleich primär?",
+          "options": [
+            { "value": "a", "text": "Planwerte mit tatsächlichen Ergebnissen vergleichen" },
+            { "value": "b", "text": "Nur Fehler suchen, egal wo" },
+            { "value": "c", "text": "Nur Marketingzahlen erstellen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was gehört in eine Abweichungsanalyse?",
+          "options": [
+            { "value": "a", "text": "Ursachen und Einflussfaktoren der Abweichung" },
+            { "value": "b", "text": "Nur die Namen der Teammitglieder" },
+            { "value": "c", "text": "Nur die Farbe des Firmenlogos" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was sind „Lessons Learned“ am ehesten?",
+          "options": [
+            { "value": "a", "text": "Konkrete Verbesserungen für zukünftige Projekte" },
+            { "value": "b", "text": "Eine Liste von Geräten im Lager" },
+            { "value": "c", "text": "Ein Ersatz für Abnahme" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "bewertung-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Bewertungsschritte in Reihenfolge",
+      "subtitle": "Bringe die Schritte der Leistungsbewertung in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst bestätigen, dann Soll-Ist messen, dann Ursachen klären, dann Verbesserungen sichern.",
+      "rows": [
+        {
+          "key": "bestaetigen",
+          "label": "Erbrachte Leistungen bestätigen (Nachweise/Abnahme/Sign-off)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "sollist",
+          "label": "Soll-Ist-Vergleich durchführen (Umfang, Termine, Aufwand/Kosten, Qualität)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "abweichung",
+          "label": "Abweichungsanalyse erstellen (Ursachen, Auswirkungen, Verantwortlichkeiten)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        },
+        {
+          "key": "lessons",
+          "label": "Lessons Learned ableiten (Maßnahmen, Standards, Checklisten fürs nächste Mal)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – USV (AP1)",
+  "topic": "Zweck & Nutzen • Stromausfall/Spannungsschwankungen • kontrolliertes Herunterfahren • Offline/Line-Interactive/Online",
+  "estimated_minutes": 20,
+  "sections": [
+    {
+      "id": "usv-zweck-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Was macht eine USV eigentlich?",
+      "subtitle": "Ordne Aussagen den passenden Zielen zu.",
+      "hintDefault": "USV = kurz überbrücken + Spannung glätten → Zeit für kontrolliertes Herunterfahren und Schutz von Daten/Hardware.",
+      "sortColumns": [
+        { "zone": "ueberbruecken", "label": "Überbrücken", "hint": "(kurz weiter Strom)" },
+        { "zone": "schutz", "label": "Schutz", "hint": "(Spannungsschwankungen)" },
+        { "zone": "betrieb", "label": "Betriebsstabilität", "hint": "(sauber weiterlaufen/abschalten)" }
+      ],
+      "sortCards": [
+        { "id": "u1", "text": "Hält Geräte bei Stromausfall noch kurz am Laufen", "correctZone": "ueberbruecken" },
+        { "id": "u2", "text": "Gibt Zeit für kontrolliertes Herunterfahren von Servern/PCs", "correctZone": "betrieb" },
+        { "id": "u3", "text": "Reduziert Risiken durch Spannungsspitzen/Unterspannung", "correctZone": "schutz" },
+        { "id": "u4", "text": "Schützt Daten vor Korruption durch abruptes Ausschalten", "correctZone": "betrieb" },
+        { "id": "u5", "text": "Kann empfindliche Hardware vor Netzproblemen schützen", "correctZone": "schutz" },
+        { "id": "u6", "text": "Sorgt für stabileren Betrieb bei kurzen Netzstörungen", "correctZone": "betrieb" }
+      ]
+    },
+    {
+      "id": "usv-typen-sort",
+      "type": "sort",
+      "title": "Rätsel 2: USV-Typen grob einordnen",
+      "subtitle": "Ordne nach Schutzlevel (grob).",
+      "hintDefault": "Offline = Basis, Line-Interactive = besser gegen Schwankungen, Online = höchster Schutz (Dauer-Umwandlung).",
+      "sortColumns": [
+        { "zone": "offline", "label": "Offline", "hint": "(Basis-Schutz)" },
+        { "zone": "line", "label": "Line-Interactive", "hint": "(mehr Netzschutz)" },
+        { "zone": "online", "label": "Online", "hint": "(höchstes Schutzlevel)" }
+      ],
+      "sortCards": [
+        { "id": "t1", "text": "Einfacher Einstieg: überbrückt Ausfall, Schutzlevel eher basic", "correctZone": "offline" },
+        { "id": "t2", "text": "Besser bei Spannungsschwankungen als reine Offline-Lösung", "correctZone": "line" },
+        { "id": "t3", "text": "Für kritische Systeme, maximaler Schutz gegen Netzprobleme", "correctZone": "online" },
+        { "id": "t4", "text": "Schutzlevel in der Mitte: mehr Stabilität ohne High-End", "correctZone": "line" },
+        { "id": "t5", "text": "Höchstes Schutzlevel, dafür typischerweise aufwendiger/teurer", "correctZone": "online" },
+        { "id": "t6", "text": "Primär für kurze Ausfälle gedacht, nicht für stundenlangen Betrieb", "correctZone": "offline" }
+      ]
+    },
+    {
+      "id": "usv-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: Prüfungsfragen – schnell & sauber",
+      "subtitle": "Die Klassiker zur USV.",
+      "hintDefault": "Stromausfall + Spannungsschwankung. Ziel: kontrolliertes Shutdown + Daten/Hardware schützen.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Was ist der Hauptzweck einer USV im Betrieb?",
+          "options": [
+            { "value": "a", "text": "Internet schneller machen" },
+            { "value": "b", "text": "Stromausfall kurz überbrücken und Netzprobleme abfedern" },
+            { "value": "c", "text": "Festplatten automatisch defragmentieren" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welches Ziel bringt in der Praxis die meisten Punkte?",
+          "options": [
+            { "value": "a", "text": "Kontrolliertes Herunterfahren, um Datenverlust zu vermeiden" },
+            { "value": "b", "text": "RGB-Beleuchtung stabil halten" },
+            { "value": "c", "text": "Mehr Speicherplatz erzeugen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage ist am ehesten korrekt?",
+          "options": [
+            { "value": "a", "text": "USV ist nur für Server sinnvoll, nie für Netzkomponenten" },
+            { "value": "b", "text": "USV kann auch Switch/Router stabil halten und kurze Ausfälle überbrücken" },
+            { "value": "c", "text": "USV ersetzt ein Backup vollständig" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Typ-Reihenfolge passt grob zum Schutzlevel (niedrig → hoch)?",
+          "options": [
+            { "value": "a", "text": "Online → Line-Interactive → Offline" },
+            { "value": "b", "text": "Offline → Line-Interactive → Online" },
+            { "value": "c", "text": "Line-Interactive → Offline → Online" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "finale-szenarien-quiz",
+      "type": "quiz",
+      "title": "Finale: Szenario → Nutzen benennen",
+      "subtitle": "Wähle die beste Begründung.",
+      "hintDefault": "Begründung immer: Stabilität + Zeit fürs Shutdown + Schutz vor Netzproblemen.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Serverraum hat gelegentlich kurze Stromaussetzer. Warum USV?",
+          "options": [
+            { "value": "a", "text": "Damit man keine Passwörter mehr braucht" },
+            { "value": "b", "text": "Damit Systeme stabil bleiben und kontrolliert herunterfahren können" },
+            { "value": "c", "text": "Damit Windows schneller startet" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Datenbank schreibt gerade Transaktionen, Strom fällt abrupt weg. Was verhindert USV am ehesten?",
+          "options": [
+            { "value": "a", "text": "Datenkorruption durch hartes Ausschalten" },
+            { "value": "b", "text": "Dass CSV-Dateien Trennzeichen haben" },
+            { "value": "c", "text": "Dass die CPU warm wird" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

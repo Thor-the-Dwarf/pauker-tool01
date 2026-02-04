@@ -1,0 +1,104 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – IT-Sicherheit auf Grundschutzniveau im Betrieb",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zu organisatorischen/technischen Maßnahmen und Standards zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "organisatorische Maßnahme",
+    "IT-Sicherheitsbeauftragter",
+    "IT-Sicherheitsrichtlinie",
+    "Passwort-Policy",
+    "technische Maßnahme",
+    "Virenschutzsystem",
+    "Firewall",
+    "Anti-Spam",
+    "Norm/Branchenstandard",
+    "ISO 2700x",
+    "BSI IT-Grundschutz",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Regelt Verantwortlichkeiten, Prozesse und Verhaltensregeln zur Sicherheit, ohne selbst ein technisches Tool zu sein.",
+      "correct": "organisatorische Maßnahme"
+    },
+    {
+      "text": "Rolle/Person, die Informationssicherheit koordiniert, Maßnahmen anstößt und als Ansprechpartner dient.",
+      "correct": "IT-Sicherheitsbeauftragter"
+    },
+    {
+      "text": "Dokument mit verbindlichen Regeln, z. B. Umgang mit Daten, Geräte-Nutzung, Updates, Meldewege bei Vorfällen.",
+      "correct": "IT-Sicherheitsrichtlinie"
+    },
+    {
+      "text": "Regelwerk zu Passwortlänge, Komplexität, Ablauf, Wiederverwendung, MFA und Umgang mit Passwortmanagern.",
+      "correct": "Passwort-Policy"
+    },
+    {
+      "text": "Schutz durch konkrete Technik/Software/Hardware, z. B. Filter, Scanner, Zugriffskontrolle oder Netzsegmentierung.",
+      "correct": "technische Maßnahme"
+    },
+    {
+      "text": "Erkennt und blockiert Schadsoftware (z. B. per Signaturen/Heuristik) und überwacht Dateien/Prozesse.",
+      "correct": "Virenschutzsystem"
+    },
+    {
+      "text": "Kontrolliert Netzwerkverkehr per Regeln (Ports/Protokolle/IPs) und kann Verbindungen erlauben oder blockieren.",
+      "correct": "Firewall"
+    },
+    {
+      "text": "Filtert unerwünschte E-Mails, z. B. Spam/Phishing, oft mit Blacklists, Inhaltsanalyse und Reputation.",
+      "correct": "Anti-Spam"
+    },
+    {
+      "text": "Sammlung von anerkannten Anforderungen/Best Practices, an denen sich Unternehmen orientieren können.",
+      "correct": "Norm/Branchenstandard"
+    },
+    {
+      "text": "Normenreihe für Informationssicherheits-Management (ISMS) und zugehörige Controls/Leitlinien.",
+      "correct": "ISO 2700x"
+    },
+    {
+      "text": "Deutscher Standard mit Bausteinen, Maßnahmenkatalogen und Vorgehen für Informationssicherheit auf Grundschutzniveau.",
+      "correct": "BSI IT-Grundschutz"
+    },
+    {
+      "text": "„Wir definieren einen Meldeweg für Sicherheitsvorfälle und schulen Mitarbeitende jährlich“ ist vor allem eine …",
+      "correct": "organisatorische Maßnahme"
+    },
+    {
+      "text": "„Wir blockieren ausgehende Verbindungen außer zu definierten Zielen und protokollieren Regelverletzungen“ passt am ehesten zu …",
+      "correct": "Firewall"
+    },
+    {
+      "text": "„E-Mail-Anhänge werden in Quarantäne verschoben, wenn sie verdächtig sind“ passt am ehesten zu …",
+      "correct": "Anti-Spam"
+    },
+    {
+      "text": "„Ein Mitarbeiter installiert versehentlich Malware, aber der Scanner stoppt sie beim Download“ passt am ehesten zu …",
+      "correct": "Virenschutzsystem"
+    },
+    {
+      "text": "Wenn Regeln zu Passwort-Änderung, MFA und Mindestlänge fehlen, fehlt vor allem diese Grundlage.",
+      "correct": "Passwort-Policy"
+    },
+    {
+      "text": "Wenn ein Unternehmen nach anerkannten Vorgaben ein ISMS ausrichten will, sind diese Referenzen besonders typisch.",
+      "correct": "ISO 2700x"
+    },
+    {
+      "text": "Wenn ein Unternehmen Maßnahmen über Bausteine (z. B. Clients, Server, Netze, Räume) strukturiert ableiten will, passt das besonders zu.",
+      "correct": "BSI IT-Grundschutz"
+    },
+    {
+      "text": "„Wer ist zuständig, wer entscheidet, wer dokumentiert?“ ist eine Frage, die zuerst diese Kategorie betrifft.",
+      "correct": "organisatorische Maßnahme"
+    },
+    {
+      "text": "„Welche technischen Kontrollen verhindern/erkennen Angriffe im Alltag?“ ist eine Frage, die zuerst diese Kategorie betrifft.",
+      "correct": "technische Maßnahme"
+    }
+  ]
+}

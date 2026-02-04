@@ -1,0 +1,192 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Geschäftsprozesse (AP1) – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Begriff, die passende Kurzbeschreibung und ein realistisches Praxisbeispiel aus dem IT-Betrieb (AP1-Szenarien).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff oder ein Konzept.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein typisches Beispiel aus der Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "geschaeftsprozess",
+      "name": "Geschäftsprozess",
+      "description": "End-to-end Ablauf auf Unternehmensebene, der Wert schafft (Kunde/Geld/Verantwortung) – z. B. Auftrag → Leistung → Rechnung.",
+      "example": "Ein interner Laptop-Request läuft von Anforderung über Genehmigung und Beschaffung bis zur Kostenstellen-Buchung und Übergabe."
+    },
+    {
+      "id": "arbeitsprozess",
+      "name": "Arbeitsprozess",
+      "description": "Konkrete Arbeitsschritte auf Team-/Job-Ebene: wer macht was, in welcher Reihenfolge, mit welchen Tools.",
+      "example": "IT rollt ein Notebook aus: Image erstellen, Software installieren, Übergabeprotokoll, kurze Einweisung."
+    },
+    {
+      "id": "prozess_vs_projekt",
+      "name": "Prozess ≠ Projekt",
+      "description": "Prozess ist wiederkehrend; Projekt ist einmalig, zeitlich begrenzt und hat ein eigenes Ziel/Budget/Planung.",
+      "example": "Passwort-Reset ist Prozess; Einführung eines neuen Identity-Systems ist Projekt."
+    },
+    {
+      "id": "kernprozess",
+      "name": "Kernprozess",
+      "description": "Erzeugt direkt Kundennutzen und typischerweise Umsatz/Wertschöpfung.",
+      "example": "Bereitstellung eines IT-Services für Kunden inkl. Support und Abrechnung."
+    },
+    {
+      "id": "unterstuetzungsprozess",
+      "name": "Unterstützungsprozess",
+      "description": "Ermöglicht Kernprozesse (Ressourcen/Organisation) – ohne ihn bricht der Kernprozess weg.",
+      "example": "Einkauf beschafft Hardware und Lizenzen, damit Rollouts überhaupt stattfinden können."
+    },
+    {
+      "id": "fuehrungsprozess",
+      "name": "Führungsprozess",
+      "description": "Steuert und entscheidet: Strategie, Controlling, Qualitätsmanagement, Zielvorgaben.",
+      "example": "IT-Leitung definiert Serviceziele, Budgets und KPI-Reporting für den Betrieb."
+    },
+    {
+      "id": "input_trigger",
+      "name": "Input (Trigger)",
+      "description": "Startauslöser eines Prozesses – das Ereignis oder die Anforderung, die den Ablauf startet.",
+      "example": "Störung wird gemeldet oder ein Auftrag geht im Ticketsystem ein."
+    },
+    {
+      "id": "output_ergebnis",
+      "name": "Output (Ergebnis)",
+      "description": "Messbares Prozessergebnis, das am Ende herauskommt.",
+      "example": "Service ist wieder verfügbar oder Rechnung wurde erstellt und versendet."
+    },
+    {
+      "id": "prozess_owner",
+      "name": "Prozess-Owner",
+      "description": "Verantwortlich für Qualität, Einhaltung und Verbesserung des Prozesses (nicht zwingend die Person, die alles ausführt).",
+      "example": "Service-Owner definiert Pflichtfelder im Ticket, Eskalationswege und überprüft die Prozessdaten."
+    },
+    {
+      "id": "kpi",
+      "name": "KPI (Kennzahl)",
+      "description": "Messgröße zur Steuerung eines Prozessziels – muss zum Ziel passen, sonst optimierst du am falschen Ende.",
+      "example": "Durchlaufzeit vom Ticket-Eingang bis Lösung wird gemessen und monatlich ausgewertet."
+    },
+    {
+      "id": "flussdiagramm",
+      "name": "Flussdiagramm",
+      "description": "Einfache Prozessdarstellung mit klaren Schritten, Start/Ende und Entscheidungen – gut für kurze Abläufe.",
+      "example": "Password-Reset: Start → Identitätsprüfung → Reset → Logging → Ende."
+    },
+    {
+      "id": "bpmn",
+      "name": "BPMN",
+      "description": "Standard-Notation für Business-Prozesse mit Events, Aufgaben und Gateways – strukturierter als ein Flussdiagramm.",
+      "example": "Incident-Prozess mit Ereignis (Störung), Aufgaben (Analyse), Gateway (gelöst?), Eskalation und Abschluss."
+    },
+    {
+      "id": "swimlanes",
+      "name": "Swimlanes",
+      "description": "Darstellung von Zuständigkeiten parallel nach Rollen/Abteilungen (wer macht welchen Schritt).",
+      "example": "1st Level nimmt Ticket an, 2nd Level behebt Ursache, Einkauf bestellt Ersatzteil, User testet."
+    },
+    {
+      "id": "schnittstelle",
+      "name": "Schnittstelle",
+      "description": "Übergabe zwischen Rollen oder Systemen – typischer Fehler- und Verzögerungspunkt in Prozessen.",
+      "example": "Übergabe vom 1st Level an 2nd Level mit allen Logs, Reproduktionsschritten und Priorität."
+    },
+    {
+      "id": "medienbruch",
+      "name": "Medienbruch",
+      "description": "Wechsel zwischen Tools/Medien (z. B. Ticket → E-Mail → Excel) – kostet Zeit und erhöht Fehlerrisiko.",
+      "example": "Status wird per Mail weitergegeben und später manuell ins Ticketsystem nachgetragen – dabei fehlen Infos."
+    },
+    {
+      "id": "stakeholder",
+      "name": "Stakeholder",
+      "description": "Personen/Gruppen mit Interesse am Prozess/Projekt oder die betroffen sind (intern und extern).",
+      "example": "Fachabteilung, IT, Geschäftsführung, Datenschutzbeauftragter, Lieferant und Endanwender."
+    },
+    {
+      "id": "prozessziel",
+      "name": "Prozessziel",
+      "description": "Konkret: was soll am Ende besser sein (Zeit, Qualität, Kosten, Risiko) – Grundlage für Messung.",
+      "example": "„Passwort-Resets in unter 5 Minuten inkl. Protokollierung“."
+    },
+    {
+      "id": "anforderungen",
+      "name": "Anforderungen (funktional / nichtfunktional)",
+      "description": "Funktional = was soll es können; nichtfunktional = wie gut (Sicherheit, Performance, Verfügbarkeit).",
+      "example": "Funktional: Self-Service Reset; Nichtfunktional: MFA-Pflicht und Audit-Logs."
+    },
+    {
+      "id": "akzeptanzkriterien",
+      "name": "Akzeptanzkriterien",
+      "description": "Messbar formulierte Bedingungen, wann etwas als erledigt/abgenommen gilt („gilt als fertig, wenn …“).",
+      "example": "„Ticket gilt als gelöst, wenn der User bestätigt und der Log-Eintrag vorhanden ist“."
+    },
+    {
+      "id": "kaufvertrag",
+      "name": "Kaufvertrag",
+      "description": "Produkt/Sache gegen Geld; Eigentum geht über (typisch: Hardware, fertige Software-Pakete).",
+      "example": "Beschaffung von 50 Laptops inklusive Rechnung und Lieferung."
+    },
+    {
+      "id": "werkvertrag",
+      "name": "Werkvertrag",
+      "description": "Erfolg geschuldet: ein fertiges Ergebnis ist vereinbart; Abnahme ist zentral, Risiko liegt beim Auftragnehmer.",
+      "example": "Entwicklung eines Features: „funktioniert laut Spezifikation und ist abgenommen“."
+    },
+    {
+      "id": "dienstvertrag",
+      "name": "Dienstvertrag",
+      "description": "Tätigkeit geschuldet: Bezahlung nach Aufwand/Zeit, nicht nach konkretem Ergebnis.",
+      "example": "Beratung zur Netzwerk-Optimierung mit Abrechnung nach Stunden."
+    },
+    {
+      "id": "abnahme",
+      "name": "Abnahme",
+      "description": "Kunde bestätigt Vertrags-/Anforderungserfüllung (bei Werkverträgen entscheidend); Startpunkt für Gewährleistung.",
+      "example": "Kunde bestätigt schriftlich, dass das neue Ticket-Workflow-Feature wie vereinbart läuft."
+    },
+    {
+      "id": "sla",
+      "name": "SLA (Service Level Agreement)",
+      "description": "Vertraglich definierte, messbare Servicequalität (z. B. Verfügbarkeit, Reaktionszeit, Wiederherstellungszeit) inkl. Reporting/Eskalation.",
+      "example": "Kritischer Service: 99,5% Verfügbarkeit/Monat, Reaktion < 30 Min, Wiederherstellung < 4 Std."
+    },
+    {
+      "id": "tco",
+      "name": "TCO (Total Cost of Ownership)",
+      "description": "Gesamtkosten über die Lebensdauer: Anschaffung + Betrieb + Wartung + Support + Lizenzen + Schulung.",
+      "example": "Laptop-Flotte: nicht nur Kaufpreis, sondern auch Lizenzen, Admin-Zeit, Support und Ersatzgeräte."
+    },
+    {
+      "id": "roi",
+      "name": "ROI (Return on Investment)",
+      "description": "Nutzen/Gewinn im Verhältnis zur Investition – immer mit Zeitraum betrachten.",
+      "example": "Automatisierung spart 10 Std/Monat; ROI wird über 12 Monate gerechnet und mit Kosten verglichen."
+    },
+    {
+      "id": "amortisation",
+      "name": "Amortisation (Break-even)",
+      "description": "Zeitpunkt, ab dem sich eine Investition „zurückgezahlt“ hat (Kosten = kumulierter Nutzen).",
+      "example": "Neues Monitoring-Tool kostet 6.000 € und spart 500 €/Monat → Break-even nach 12 Monaten."
+    },
+    {
+      "id": "nutzwertanalyse",
+      "name": "Nutzwertanalyse",
+      "description": "Entscheidungsmethode für mehrere Kriterien: Kriterien definieren, gewichten, bewerten, Gesamtpunkte vergleichen.",
+      "example": "Cloud vs. On-Prem: Kriterien wie Sicherheit, Kosten, Skalierbarkeit, Bedienbarkeit werden bewertet."
+    },
+    {
+      "id": "make_or_buy",
+      "name": "Make-or-Buy",
+      "description": "Entscheidung: selbst entwickeln (Make) oder kaufen/outsourcen (Buy) – abhängig von Zeit, Kosten, Risiko, Know-how, Abhängigkeit.",
+      "example": "Helpdesk-Tool: SaaS kaufen und konfigurieren vs. Eigenbau mit langfristiger Wartung."
+    }
+  ]
+}

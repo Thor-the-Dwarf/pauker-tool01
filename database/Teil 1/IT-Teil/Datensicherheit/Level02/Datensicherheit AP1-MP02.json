@@ -1,0 +1,348 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "IT-Sicherheit (AP1) – CIA • BSI-Grundschutz • Schutzbedarf • Gefährdungen • Maßnahmen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Sicherheitsbegriff, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Schutzziele, Grundschutz, Schutzbedarf, Risiken, Maßnahmen, Notfall).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff aus IT-Sicherheit/Grundschutz.",
+    "column2": "Wähle die passende Erklärung (AP1-tauglich).",
+    "column3": "Ordne ein realistisches Beispiel oder eine typische Prüfungsfalle zu."
+  },
+  "sets": [
+    {
+      "id": "cia_triade",
+      "name": "CIA (Schutzziel-Triade)",
+      "description": "Grundmodell aus Vertraulichkeit, Integrität, Verfügbarkeit. Damit beschreibst du, was geschützt werden soll.",
+      "example": "Bei Kundendaten: C hoch (nicht leaken), I hoch (nicht manipulieren), A normal/hoch (je nach Betrieb)."
+    },
+    {
+      "id": "vertraulichkeit",
+      "name": "Vertraulichkeit (Confidentiality)",
+      "description": "Nur Berechtigte dürfen Daten lesen/kennen (Need-to-know).",
+      "example": "Lohnabrechnungen nur für HR/GL – nicht für alle Mitarbeitenden."
+    },
+    {
+      "id": "integritaet",
+      "name": "Integrität (Integrity)",
+      "description": "Daten sind korrekt und nicht unbemerkt verändert; Systeme funktionieren korrekt.",
+      "example": "Bankverbindung in der Rechnung darf nicht manipuliert werden, sonst geht Geld an den falschen Empfänger."
+    },
+    {
+      "id": "verfuegbarkeit",
+      "name": "Verfügbarkeit (Availability)",
+      "description": "System/Daten sind rechtzeitig nutzbar; Service läuft, wenn er gebraucht wird.",
+      "example": "Ticket-System ist während der Supportzeiten erreichbar, sonst steht die Arbeit."
+    },
+    {
+      "id": "authentizitaet",
+      "name": "Authentizität (Echtheit)",
+      "description": "Identität/Quelle ist echt (Person, System, Nachricht).",
+      "example": "Mail „von der IT“ ist wirklich von der IT – nicht von einem Angreifer."
+    },
+    {
+      "id": "nachvollziehbarkeit_verbindlichkeit",
+      "name": "Nachvollziehbarkeit / Verbindlichkeit",
+      "description": "Aktionen sind nachvollziehbar (Wer hat was wann getan?) und können zugeordnet werden (Accountability).",
+      "example": "Rechteänderungen werden geloggt, damit du später belegen kannst, wer Admin-Rechte vergeben hat."
+    },
+    {
+      "id": "pruefungsfalle_integritaet_verschluesselung",
+      "name": "Prüfungsfalle: „Integrität = Verschlüsselung“",
+      "description": "Falsch: Verschlüsselung dient primär Vertraulichkeit. Integrität heißt „nicht manipuliert/korrekt“ (z.B. Prüfsumme/Signatur/Controls).",
+      "example": "Daten sind verschlüsselt, aber wurden vorher manipuliert → trotzdem Integritätsproblem."
+    },
+    {
+      "id": "bsi",
+      "name": "BSI (Bundesamt für Sicherheit in der Informationstechnik)",
+      "description": "Liefert Standards, Empfehlungen und Methodik für IT-Sicherheit (Orientierung/Best Practices).",
+      "example": "Ein Betrieb nutzt BSI-Empfehlungen als Grundlage für Policies, Schutzbedarf und Maßnahmen."
+    },
+    {
+      "id": "it_grundschutz",
+      "name": "IT-Grundschutz",
+      "description": "Methodisches Vorgehen + Bausteine + Maßnahmen gegen typische Gefährdungen. Ziel: solide Basisabsicherung ohne bei Null zu starten.",
+      "example": "Statt „irgendwas mit Firewall“ nutzt du Standardmaßnahmenpakete für Server, Clients, Netze, Prozesse."
+    },
+    {
+      "id": "pruefungsfalle_bsi_nur_behoerden",
+      "name": "Prüfungsfalle: „BSI ist nur für Behörden“",
+      "description": "Falsch: Auch Unternehmen nutzen Grundschutz/Kompendium als Orientierung.",
+      "example": "KMU nutzt Grundschutz als Checkliste für Standardfälle (Backups, Rechte, Patchen, Logging)."
+    },
+    {
+      "id": "schutzbedarf_definition",
+      "name": "Schutzbedarf (Grundlogik)",
+      "description": "Schutzbedarf heißt: Wie groß wäre der Schaden, wenn C/I/A verletzt wird?",
+      "example": "Ausfall ERP 1 Tag: Produktionsstillstand → Verfügbarkeit eher hoch."
+    },
+    {
+      "id": "schutzbedarf_getrennt_cia",
+      "name": "Schutzbedarf getrennt je C/I/A",
+      "description": "Kein „ein Schutzbedarf für alles“: pro Asset/System und je Grundwert (C, I, A) separat bewerten.",
+      "example": "Public Website: C normal, I hoch (Manipulation), A hoch (Erreichbarkeit)."
+    },
+    {
+      "id": "schutzbedarf_kategorien",
+      "name": "Schutzbedarf-Kategorien",
+      "description": "Üblich: normal / hoch / sehr hoch.",
+      "example": "Lohnabrechnung: C sehr hoch, I hoch, A normal/hoch (je nach Prozess)."
+    },
+    {
+      "id": "gesamt_schutzbedarf_hoechster_wert",
+      "name": "Gesamtschutzbedarf ableiten (höchster Wert zählt)",
+      "description": "Typische Praxisregel: Der höchste Bedarf aus C/I/A dominiert die Gesamteinstufung.",
+      "example": "Wenn C sehr hoch ist, wird das Asset insgesamt sehr hoch behandelt – auch wenn A nur normal ist."
+    },
+    {
+      "id": "workflow_schutzbedarf",
+      "name": "Schutzbedarf bestimmen (AP1-Workflow)",
+      "description": "1) Asset benennen 2) Schaden je C/I/A abschätzen 3) Einstufen normal/hoch/sehr hoch 4) Gesamtschutzbedarf ableiten.",
+      "example": "Asset „Kundendatenbank“ → C hoch, I hoch, A normal/hoch → Maßnahmen passend ableiten."
+    },
+    {
+      "id": "pruefungsfalle_ueberall_hoch",
+      "name": "Prüfungsfalle: „Überall hoch, dann sind wir safe“",
+      "description": "Teuer und unkonkret. Maßnahmen müssen angemessen zum Risiko sein.",
+      "example": "Alles „sehr hoch“ führt zu Overkill (Kosten/Komplexität) ohne klare Priorisierung."
+    },
+    {
+      "id": "gefaehrdungsquellen",
+      "name": "Gefährdungsquellen (BSI-Denke)",
+      "description": "Woher kommt Ärger? Mensch • Technik • Organisation • Umgebung/Physik.",
+      "example": "Nicht nur „Hacker“: auch Fehlkonfiguration, Prozesschaos, Stromausfall, Bedienfehler."
+    },
+    {
+      "id": "pruefungsfalle_hacker_nur_aussen",
+      "name": "Prüfungsfalle: „Hacker von außen“ ist alles",
+      "description": "Falsch: Interne Fehler, Prozesse und Rechteprobleme sind extrem häufig.",
+      "example": "Falsche Freigabe oder Admin-Rechte für alle → Datenabfluss ohne „Hightech-Hack“."
+    },
+    {
+      "id": "social_engineering",
+      "name": "Social Engineering (Mensch als Risiko)",
+      "description": "Manipulation von Menschen statt Technik: Phishing, Fake-Calls, Druck/Stress/Autorität.",
+      "example": "Anruf „IT-Support“: „Gib mir kurz deinen MFA-Code“ → Konto weg."
+    },
+    {
+      "id": "phishing_spear",
+      "name": "Phishing / Spear-Phishing",
+      "description": "Massenphishing vs. zielgerichtet (Spear). Ziel: Zugangsdaten, Malware, Zahlungen auslösen.",
+      "example": "Spear-Mail an Buchhaltung mit echter Lieferanteninfo → Überweisung an falsches Konto."
+    },
+    {
+      "id": "tailgating",
+      "name": "Tailgating (mit reinlaufen)",
+      "description": "Angreifer nutzt Höflichkeit/Stress: läuft hinter Mitarbeitenden in gesperrte Bereiche.",
+      "example": "Jemand trägt Kartons und „braucht nur kurz rein“ → steht plötzlich im Serverraum."
+    },
+    {
+      "id": "bedienfehler",
+      "name": "Bedienfehler",
+      "description": "Klassiker: falscher Empfänger, falsche Freigabe, versehentliches Löschen, falsche Konfiguration.",
+      "example": "OneDrive-Ordner „öffentlich“ statt „nur intern“ → Daten leaken ohne Angriff."
+    },
+    {
+      "id": "massnahmen_awareness_meldewege",
+      "name": "Gegenmaßnahmen: Awareness + Meldewege",
+      "description": "Schulung mit Praxis (Simulation/Übung) + klarer Prozess: Wohin melden? Was tun?",
+      "example": "Phishing-Button, Checkliste, sofortige Meldung statt „peinlich, ich sag nix“."
+    },
+    {
+      "id": "mini_regel_stop_check_confirm",
+      "name": "Mini-Regel: Stop – Check – Confirm",
+      "description": "Bei ungewöhnlichen Anfragen kurz stoppen, prüfen, über zweiten Kanal bestätigen.",
+      "example": "„Chef will sofort Überweisung“ → Rückruf über bekannte Nummer statt Mail beantworten."
+    },
+    {
+      "id": "schwachstelle_exploit",
+      "name": "Schwachstelle + Exploit",
+      "description": "Schwachstelle ist die Lücke; Exploit nutzt sie aus → Zugriff/Schaden.",
+      "example": "Ungepatchter Dienst hat bekannte Lücke → Exploit installiert Ransomware."
+    },
+    {
+      "id": "malware_typen",
+      "name": "Malware-Arten",
+      "description": "Trojaner, Ransomware, Worm, Spyware – unterschiedliche Ziele/Verbreitung.",
+      "example": "Ransomware verschlüsselt Dateien; Worm verbreitet sich selbstständig im Netz."
+    },
+    {
+      "id": "patch_management",
+      "name": "Patch-Management",
+      "description": "Updates für OS, Apps, Firmware regelmäßig planen und ausrollen. Ungepatcht = Einladung.",
+      "example": "Browser/Office ungepatcht → Drive-by-Download möglich, obwohl Firewall aktiv ist."
+    },
+    {
+      "id": "endpoint_schutz",
+      "name": "Endpoint-Schutz (AV/EDR) + Hardening",
+      "description": "Schutzsoftware + Härtung (sichere Defaults, unnötige Dienste aus, Rechte minimieren) reduzieren Risiko.",
+      "example": "Makros eingeschränkt, lokale Adminrechte weg, EDR schlägt bei verdächtigem Verhalten Alarm."
+    },
+    {
+      "id": "pruefungsfalle_firewall_reicht",
+      "name": "Prüfungsfalle: „Firewall reicht“",
+      "description": "Falsch: Patchen + Rechte + Monitoring + Backups + Prozesse gehören dazu.",
+      "example": "Firewall an, aber Admin-Passwort schwach und System ungepatcht → trotzdem kompromittiert."
+    },
+    {
+      "id": "orga_gefaehrdung",
+      "name": "Organisatorische Gefährdungen",
+      "description": "Keine Verantwortlichkeiten, keine Regeln, kein Berechtigungskonzept → Sicherheitsloch.",
+      "example": "Niemand ist Owner für Rechte/Offboarding → Ex-Mitarbeiter hat noch Zugriff."
+    },
+    {
+      "id": "schatten_it",
+      "name": "Schatten-IT",
+      "description": "Private Tools/Cloud-Shares außerhalb der Regeln → Datenabfluss und Compliance-Risiko.",
+      "example": "Kundendaten in privatem Cloud-Drive „weil’s schneller geht“."
+    },
+    {
+      "id": "least_privilege",
+      "name": "Least Privilege / Need-to-know",
+      "description": "Nur die Rechte vergeben, die nötig sind. Rollenmodell statt Wildwuchs.",
+      "example": "Azubi braucht Leserechte, nicht „Admin überall“."
+    },
+    {
+      "id": "vier_augen",
+      "name": "Vier-Augen-Prinzip bei kritischen Änderungen",
+      "description": "Kritische Aktionen (Rechte, Freigaben, Prod-Changes) werden gegengeprüft.",
+      "example": "Admin-Rechtevergabe braucht Review/Approval im Ticket."
+    },
+    {
+      "id": "on_offboarding_rechte_review",
+      "name": "On-/Offboarding + Rechte-Review",
+      "description": "Prozesse sichern: Neue bekommen passende Rechte, Gehende verlieren sie sofort; regelmäßig Reviews.",
+      "example": "Offboarding: Konto deaktivieren, Tokens entziehen, Gruppen entfernen, Geräte zurückholen."
+    },
+    {
+      "id": "pruefungsfalle_alle_admin",
+      "name": "Prüfungsfalle: „Alle sind Admin, sonst geht’s schneller“",
+      "description": "Kurzfristig bequem, langfristig Brandbeschleuniger. Keine Nachvollziehbarkeit, maximale Schadenshöhe.",
+      "example": "Ein Klick installiert Malware systemweit, weil jeder Admin ist."
+    },
+    {
+      "id": "physisch_umwelt",
+      "name": "Physische/Umwelt-Gefährdungen",
+      "description": "Stromausfall/Spannungsspitzen, Brand, Wasser, Klima, Diebstahl.",
+      "example": "Wasserrohrbruch im Serverraum → Hardware tot, Betrieb steht."
+    },
+    {
+      "id": "usv_brandschutz_klima",
+      "name": "Gegenmaßnahmen physisch",
+      "description": "Zutrittskontrolle, Serverraum-Regeln, USV, Brandschutz, Klimaüberwachung, sichere Aufbewahrung/Transport.",
+      "example": "USV überbrückt kurze Ausfälle; Zutritt nur mit Karte/Protokoll."
+    },
+    {
+      "id": "pruefungsfalle_backup_im_selben_raum",
+      "name": "Prüfungsfalle: Backup im selben Raum",
+      "description": "Bei Brand/Wasser/Diebstahl fällt alles gleichzeitig aus. Offsite/extern ist Pflichtgedanke.",
+      "example": "NAS neben Server: beide weg nach Brand → kein Restore möglich."
+    },
+    {
+      "id": "defense_in_depth",
+      "name": "Defense in Depth (Schichtenprinzip)",
+      "description": "Mehrere Schutzschichten: organisatorisch • technisch • physisch • personell. Wenn eine fällt, greift die nächste.",
+      "example": "MFA + Least Privilege + Patchen + Monitoring + Notfallplan statt „eine Maßnahme reicht“."
+    },
+    {
+      "id": "massnahmen_kette",
+      "name": "Mini-Kette: Policy → Rechte → Technik → Monitoring → Notfallplan",
+      "description": "Ein brauchbares Sicherheitskonzept ist eine Kette aus Regeln, Zugriffen, Technik, Überwachung und Reaktion.",
+      "example": "Policy sagt „kein Shared Account“ → IAM setzt es um → Logs überwachen → Incident-Plan greift bei Vorfall."
+    },
+    {
+      "id": "toms",
+      "name": "TOMs (DSGVO) – technische und organisatorische Maßnahmen",
+      "description": "Maßnahmen für ein angemessenes Schutzniveau: Technik + Prozesse + Dokumentation + Nachweis.",
+      "example": "Zugriffskontrollen, Backup/Restore, Verschlüsselung, Schulung, regelmäßige Evaluierung."
+    },
+    {
+      "id": "pruefungsfalle_toms_nur_technik",
+      "name": "Prüfungsfalle: TOMs sind nur Technik",
+      "description": "Falsch: Auch Prozesse, Schulung, Rollen, Dokumentation gehören dazu.",
+      "example": "Technisch MFA aktiv, aber kein Offboarding-Prozess → Daten bleiben trotzdem gefährdet."
+    },
+    {
+      "id": "authentisierung_vs_autorisierung",
+      "name": "Authentisierung vs Autorisierung",
+      "description": "Authentisierung: Wer bist du? Autorisierung: Was darfst du?",
+      "example": "Login erfolgreich (auth), aber Zugriff auf HR-Ordner verboten (autor)."
+    },
+    {
+      "id": "mfa_kritisch",
+      "name": "MFA für kritische Zugänge",
+      "description": "MFA überall, wo’s kritisch ist: Admin, Cloud, Mail, Remote-Zugänge.",
+      "example": "Admin-Login nur mit MFA → Passwort-Diebstahl allein reicht nicht."
+    },
+    {
+      "id": "geteilte_accounts",
+      "name": "Prüfungsfalle: geteilte Accounts",
+      "description": "Keine Nachvollziehbarkeit, kein sauberes Offboarding, keine Verantwortlichkeit.",
+      "example": "„admin/admin“ wird von allen genutzt → du kannst Vorfälle nicht zuordnen."
+    },
+    {
+      "id": "admin_konto_getrennt",
+      "name": "Admin-Konto getrennt vom Nutzerkonto",
+      "description": "Normales Arbeiten ohne Adminrechte; Adminkonto nur für Admin-Tätigkeiten (weniger Risiko).",
+      "example": "Mail/Browser läuft im User-Konto, Adminkonto nur für Change am Server."
+    },
+    {
+      "id": "backup_3_2_1",
+      "name": "Backup 3-2-1 + Restore-Test",
+      "description": "3 Kopien, 2 Medien, 1 extern/offsite. Ohne getestetes Restore ist Backup nur Hoffnung.",
+      "example": "Monatlicher Restore-Test: zufällige Datei/VM zurückholen und dokumentieren."
+    },
+    {
+      "id": "rto_rpo",
+      "name": "RTO/RPO (wenn genannt)",
+      "description": "RTO: Wiederanlaufzeit. RPO: maximal akzeptabler Datenverlust.",
+      "example": "RPO 4h: du brauchst Backups/Replicas, die mindestens alle 4 Stunden aktuell sind."
+    },
+    {
+      "id": "logging",
+      "name": "Logging (wichtige Events)",
+      "description": "Logins, Rechteänderungen, Admin-Aktionen, Fehler – aber datenschutzkonform und sinnvoll.",
+      "example": "Login fehlgeschlagen 10× → Alarm. Admin-Rechte vergeben → Ticket-ID im Log."
+    },
+    {
+      "id": "monitoring_alerting",
+      "name": "Monitoring & Alarmierung",
+      "description": "Früh erkennen statt spät bereuen: Metriken/Logs/Healthchecks + klare Alerts.",
+      "example": "Service down oder Platte 95% voll → Alarm an zuständiges Team."
+    },
+    {
+      "id": "pruefungsfalle_logs_ohne_auswertung",
+      "name": "Prüfungsfalle: Logs ohne Auswertung",
+      "description": "Dann sind Logs nur Datenfriedhof. Es braucht Regeln: was ist kritisch, wer reagiert, wie eskaliert wird.",
+      "example": "Alerts gehen ins Nirvana → Vorfall wird erst entdeckt, wenn Kunden anrufen."
+    },
+    {
+      "id": "incident_response",
+      "name": "Incident Response (Notfallmanagement)",
+      "description": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
+      "example": "Ransomware: Netz trennen, Systeme isolieren, bereinigen, aus Backup restoren, Ursachen fixen."
+    },
+    {
+      "id": "runbook_ansprechpartner",
+      "name": "Runbook + Ansprechpartner",
+      "description": "Ohne Plan und Rollen wird jede Störung chaotisch. Dokumentiert: wer macht was, wann, wie eskalieren?",
+      "example": "Notfallkontaktliste + Checkliste für „Mail down“ spart Stunden im Ernstfall."
+    },
+    {
+      "id": "quick_check_formel",
+      "name": "10-Sekunden-Formel (Prüfung)",
+      "description": "Asset → C/I/A-Schaden → Schutzbedarf → Maßnahmenpaket (angemessen).",
+      "example": "„Kundendatenbank“ → Schaden hoch → C/I hoch → Maßnahmen: Rechte, Verschlüsselung, Logging, Backup/Restore, Patchen."
+    },
+    {
+      "id": "mini_quiz",
+      "name": "BONUS: Mini-Quiz (4 offene Fragen)",
+      "description": "1) Erkläre C/I/A je an einem Beispiel. 2) Schutzbedarf Lohnabrechnung für C/I/A + warum. 3) Nenne 5 Gefährdungen + je 1 Maßnahme. 4) Was sind TOMs und warum reicht „Firewall“ fast nie?",
+      "example": "Mündlich beantworten oder als kurze Stichpunkte in 3–5 Minuten pro Frage."
+    }
+  ]
+}

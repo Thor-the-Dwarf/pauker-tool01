@@ -1,0 +1,101 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Leistungsübergabe & Einweisungen-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "abnahmeprotokoll_inhalt",
+      "name": "Inhalt des Abnahmeprotokolls",
+      "attributes": {
+        "formal_handover_focus": true,
+        "training_instruction_focus": false,
+        "document_types_focus": false,
+        "contains_acceptance_criteria": true,
+        "contains_participants": true,
+        "contains_time_place": true,
+        "contains_object_of_acceptance": true,
+        "technical_details_deep": false,
+        "evidence_records": true,
+        "customer_signoff": true
+      }
+    },
+    {
+      "id": "dokumentationsarten",
+      "name": "Arten der zu übergebenden Dokumentationen",
+      "attributes": {
+        "formal_handover_focus": false,
+        "training_instruction_focus": false,
+        "document_types_focus": true,
+        "contains_acceptance_criteria": false,
+        "contains_participants": false,
+        "contains_time_place": false,
+        "contains_object_of_acceptance": false,
+        "technical_details_deep": true,
+        "evidence_records": true,
+        "customer_signoff": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um eine formale Übergabe/Abnahme mit offizieller Bestätigung (Unterschrift, Abnahme)?",
+      "attributeKey": "formal_handover_focus"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um Einweisung/Schulung von Nutzern oder Admins (Bedienung erklären, Übergabe-Workshop)?",
+      "attributeKey": "training_instruction_focus"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es darum, welche Dokumentarten übergeben werden (User-/Schnittstellen-/Programm-/Netzwerkdoku, Testprotokoll)?",
+      "attributeKey": "document_types_focus"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Enthält es Abnahmekriterien oder Abnahmeergebnis (mängelfrei, Restmängel, Nachbesserung)?",
+      "attributeKey": "contains_acceptance_criteria"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Werden beteiligte Personen festgehalten (Kunde, Auftragnehmer, Rollen)?",
+      "attributeKey": "contains_participants"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Werden Ort, Datum und Uhrzeit festgehalten?",
+      "attributeKey": "contains_time_place"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Wird der Gegenstand der Abnahme beschrieben (was genau wurde abgenommen/übergeben)?",
+      "attributeKey": "contains_object_of_acceptance"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Sind die Inhalte eher tief technisch (z. B. Architektur, Schnittstellen, Netzwerkdetails)?",
+      "attributeKey": "technical_details_deep"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Dient es als Nachweis/Beleg (Dokumentation, Testprotokolle, Historie, Prüfbarkeit)?",
+      "attributeKey": "evidence_records"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist eine Kundenfreigabe/Sign-off zentral (Abnahme bestätigt Leistung vertraglich)?",
+      "attributeKey": "customer_signoff"
+    }
+  ]
+}

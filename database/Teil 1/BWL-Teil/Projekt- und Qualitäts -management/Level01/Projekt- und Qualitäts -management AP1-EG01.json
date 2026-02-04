@@ -1,0 +1,320 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Projekt- & Qualitätsmanagement (AP1)",
+  "topic": "Projekt vs. Prozess • Ziele & Scope • Vorgehensmodelle • Planung • Risiken & Changes • Qualität (ISO/PDCA/TQM) • Tests & Doku",
+  "estimated_minutes": 40,
+  "sections": [
+    {
+      "id": "projekt-vs-prozess-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Projekt oder Prozess?",
+      "subtitle": "Ordne die Beispiele richtig zu.",
+      "hintDefault": "Projekt = einmalig & befristet · Prozess = wiederholbar & standardisiert · Routine = kleiner, alltäglicher Ablauf ohne Projektcharakter.",
+      "sortColumns": [
+        { "zone": "projekt", "label": "Projekt", "hint": "(einmalig, Ziel/Deadline)" },
+        { "zone": "prozess", "label": "Prozess", "hint": "(wiederholbar, Standard)" },
+        { "zone": "routine", "label": "Routine/Task", "hint": "(alltäglich, klein)" }
+      ],
+      "sortCards": [
+        { "id": "pp1", "text": "Rollout eines neuen Ticketsystems im Betrieb", "correctZone": "projekt" },
+        { "id": "pp2", "text": "Ticketbearbeitung im Support (erfassen → lösen → dokumentieren)", "correctZone": "prozess" },
+        { "id": "pp3", "text": "Einmalige Migration von Postfächern auf eine neue Plattform", "correctZone": "projekt" },
+        { "id": "pp4", "text": "Wöchentliche Statusmail an Stakeholder senden", "correctZone": "routine" },
+        { "id": "pp5", "text": "Standardisierte Benutzeranlage inkl. Rechtevergabe", "correctZone": "prozess" },
+        { "id": "pp6", "text": "Hotfix auf einem Server einspielen (einmaliger Einzelfall)", "correctZone": "routine" }
+      ]
+    },
+    {
+      "id": "smart-scope-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: SMART & Scope – Punktegaranten",
+      "subtitle": "Nur sauber formulierte Ziele sind abnahmefähig.",
+      "hintDefault": "SMART + klarer Scope (inkl. „NICHT Teil des Projekts“) = weniger Streit, mehr Punkte.",
+      "questions": [
+        {
+          "id": "ss1",
+          "text": "1. Was macht ein Ziel „messbar“ im SMART-Sinn?",
+          "options": [
+            { "value": "a", "text": "Viele Fachbegriffe verwenden." },
+            { "value": "b", "text": "Ein konkretes Erfolgskriterium mit Zahl/Prüfpunkt." },
+            { "value": "c", "text": "Das Ziel möglichst allgemein halten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "ss2",
+          "text": "2. Welche Ergänzung verhindert typische Abnahme-Diskussionen am besten?",
+          "options": [
+            { "value": "a", "text": "Ein Logo für das Projektdokument." },
+            { "value": "b", "text": "Ein klarer Scope inkl. Abgrenzung („nicht im Projekt“)." },
+            { "value": "c", "text": "Eine lange Liste an Tools." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "ss3",
+          "text": "3. Welches Ziel ist am ehesten SMART?",
+          "options": [
+            { "value": "a", "text": "Wir verbessern den Support deutlich." },
+            { "value": "b", "text": "Bis 31.03. ist das Ticketsystem für 45 Support-Mitarbeitende produktiv; 90% der Tickets werden dort erfasst." },
+            { "value": "c", "text": "Wir führen irgendwann ein neues System ein." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "stakeholder-sort",
+      "type": "sort",
+      "title": "Rätsel 3: Stakeholder richtig einordnen",
+      "subtitle": "Ordne Personen/Beispiele den Stakeholder-Typen zu.",
+      "hintDefault": "Prüfungsfalle: Fachabteilung vergessen = Akzeptanzproblem. Betriebsrat bei Personal-Software übersehen = Projektstopp.",
+      "sortColumns": [
+        { "zone": "betroffene", "label": "Betroffene", "hint": "(arbeiten später damit)" },
+        { "zone": "entscheider", "label": "Entscheider", "hint": "(Budget/Freigabe)" },
+        { "zone": "kritiker", "label": "Kritiker", "hint": "(Vorbehalte/Blockaden)" }
+      ],
+      "sortCards": [
+        { "id": "st1", "text": "Key-User aus der Fachabteilung, die täglich im System arbeiten", "correctZone": "betroffene" },
+        { "id": "st2", "text": "IT-Leitung, die Budget und Ressourcen freigibt", "correctZone": "entscheider" },
+        { "id": "st3", "text": "Betriebsrat bei Einführung einer Personal-Software", "correctZone": "kritiker" },
+        { "id": "st4", "text": "Support-Team, das Tickets künftig im neuen Tool bearbeiten muss", "correctZone": "betroffene" },
+        { "id": "st5", "text": "CFO/Controlling, die Kosten und Nutzen bewerten", "correctZone": "entscheider" },
+        { "id": "st6", "text": "Team, das Angst vor Mehrarbeit hat und „das alte System“ bevorzugt", "correctZone": "kritiker" }
+      ]
+    },
+    {
+      "id": "vorgehensmodelle-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Wasserfall, Agil, V-Modell – wann passt was?",
+      "subtitle": "Ordne Aussagen den passenden Vorgehensarten zu.",
+      "hintDefault": "Prüfungsfalle: „Agil = ohne Planung“ ist falsch. Planung passiert nur öfter und in kleineren Schritten.",
+      "sortColumns": [
+        { "zone": "klassisch", "label": "Klassisch (Wasserfall)", "hint": "(Anforderungen stabil)" },
+        { "zone": "agil", "label": "Agil (Scrum/Kanban)", "hint": "(Anforderungen ändern sich)" },
+        { "zone": "vmodell", "label": "V-Modell (Spezifikation↔Test)", "hint": "(Testlogik fest verknüpft)" }
+      ],
+      "sortCards": [
+        { "id": "vm1", "text": "Geeignet, wenn Anforderungen von Anfang an klar und stabil sind", "correctZone": "klassisch" },
+        { "id": "vm2", "text": "Feedback-Schleifen, Iterationen, regelmäßige Reviews", "correctZone": "agil" },
+        { "id": "vm3", "text": "Zu jeder Spezifikationsstufe gehört eine passende Teststufe", "correctZone": "vmodell" },
+        { "id": "vm4", "text": "Änderungen sind teuer, weil späte Phasen betroffen sind", "correctZone": "klassisch" },
+        { "id": "vm5", "text": "WIP-Limits/Flow-Fokus statt „alles parallel anfangen“", "correctZone": "agil" },
+        { "id": "vm6", "text": "Testkonzept gehört in die Planung, nicht ans Ende", "correctZone": "vmodell" }
+      ]
+    },
+    {
+      "id": "scrum-kanban-quiz",
+      "type": "quiz",
+      "title": "Rätsel 5: Scrum & Kanban – Basics ohne Buzzwords",
+      "subtitle": "Rollen, Artefakte, Ablauf – sauber erkennen.",
+      "hintDefault": "Scrum Master ist nicht „Chef“, sondern räumt Hindernisse aus dem Weg. Kanban: WIP-Limit = Fokus.",
+      "questions": [
+        {
+          "id": "sk1",
+          "text": "1. Wer priorisiert das Product Backlog (Was wird gebaut)?",
+          "options": [
+            { "value": "a", "text": "Product Owner" },
+            { "value": "b", "text": "Scrum Master" },
+            { "value": "c", "text": "Team" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "sk2",
+          "text": "2. Was ist das „Increment“?",
+          "options": [
+            { "value": "a", "text": "Die tägliche Abstimmung" },
+            { "value": "b", "text": "Ein nutzbares Teil-Ergebnis am Sprint-Ende" },
+            { "value": "c", "text": "Eine Liste aller Risiken" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sk3",
+          "text": "3. Wozu dient ein WIP-Limit im Kanban?",
+          "options": [
+            { "value": "a", "text": "Um mehr Aufgaben parallel zu starten" },
+            { "value": "b", "text": "Um Fokus zu erzwingen und Durchlaufzeit zu senken" },
+            { "value": "c", "text": "Um Tests zu vermeiden" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "planung-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 6: Projektplanung – richtige Reihenfolge",
+      "subtitle": "Bringe die Schritte in eine sinnvolle Reihenfolge (prüfungsfähig).",
+      "hintDefault": "Ohne Ziele/Scope kannst du weder PSP noch Abnahme sauber begründen.",
+      "rows": [
+        {
+          "key": "auftrag",
+          "label": "Projektauftrag/Anlass klären (Warum?)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "ziele",
+          "label": "Ziele SMART formulieren (Was ist Erfolg?)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "scope",
+          "label": "Scope definieren (inkl. „nicht im Projekt“)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "stake",
+          "label": "Stakeholder identifizieren & Kommunikationsplan skizzieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "psp",
+          "label": "PSP erstellen (Arbeitspakete mit klaren Outputs)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "zeit",
+          "label": "Zeitplanung (Meilensteine, Abhängigkeiten, kritischer Pfad grob)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "risiko",
+          "label": "Risiken + Maßnahmen planen (inkl. Test-/Rollback-Idee)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risiken-changes-quiz",
+      "type": "quiz",
+      "title": "Rätsel 7: Risiken & Change Requests",
+      "subtitle": "Erkennen, bewerten, steuern – nicht nur aufzählen.",
+      "hintDefault": "Zu jedem Risiko gehört eine Maßnahme. Scope Creep entsteht durch „kleine Änderungen“ ohne Bewertung.",
+      "questions": [
+        {
+          "id": "rc1",
+          "text": "1. Was gehört zwingend zu einer sauberen Risiko-Bearbeitung?",
+          "options": [
+            { "value": "a", "text": "Risiko nennen, aber ohne Maßnahme" },
+            { "value": "b", "text": "Eintrittswahrscheinlichkeit × Auswirkung bewerten und Maßnahme planen" },
+            { "value": "c", "text": "Nur ein Gefühl („könnte schiefgehen“)" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "rc2",
+          "text": "2. Was ist ein Change Request im Projektkontext?",
+          "options": [
+            { "value": "a", "text": "Eine spontane Idee, die sofort umgesetzt wird" },
+            { "value": "b", "text": "Formale Änderung von Umfang/Zeit/Kosten mit Bewertung und Freigabe" },
+            { "value": "c", "text": "Ein Bugfix nach Go-Live" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "rc3",
+          "text": "3. Was beschreibt Scope Creep am besten?",
+          "options": [
+            { "value": "a", "text": "Geplante Erweiterung mit Budget und Terminupdate" },
+            { "value": "b", "text": "Schleichende Erweiterung ohne Planung/Mehrbudget – Projekt kippt" },
+            { "value": "c", "text": "Ein Meilenstein ohne Dauer" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "qm-iso-pdca-sort",
+      "type": "sort",
+      "title": "Finale: Qualität richtig einordnen (ISO/PDCA/TQM)",
+      "subtitle": "Ordne die Aussagen zu: Norm/System, Verbesserungszyklus, Kultur/Mindset.",
+      "hintDefault": "ISO 9001 = QM nachweisbar im Betrieb. PDCA = Loop. TQM = Qualität ist Aufgabe aller.",
+      "sortColumns": [
+        { "zone": "iso", "label": "ISO/QM-System", "hint": "(Struktur, Nachweis, Audits)" },
+        { "zone": "pdca", "label": "PDCA-Zyklus", "hint": "(Plan-Do-Check-Act)" },
+        { "zone": "tqm", "label": "TQM/Kultur", "hint": "(Haltung, Beteiligung)" }
+      ],
+      "sortCards": [
+        { "id": "q1", "text": "Dokumentierte Prozesse und Nachweisbarkeit im Betrieb", "correctZone": "iso" },
+        { "id": "q2", "text": "Ohne „Check“ optimiert man ohne Daten", "correctZone": "pdca" },
+        { "id": "q3", "text": "Qualität ist Aufgabe aller, nicht nur der QM-Abteilung", "correctZone": "tqm" },
+        { "id": "q4", "text": "„Act“ bedeutet: Verbesserung standardisieren und verankern", "correctZone": "pdca" },
+        { "id": "q5", "text": "Zertifizierbares QM-System mit Anforderungen an Prozesse", "correctZone": "iso" },
+        { "id": "q6", "text": "Fehlerprävention statt Fehlerbehebung („Qualität wird eingebaut“)", "correctZone": "tqm" }
+      ]
+    }
+  ]
+}

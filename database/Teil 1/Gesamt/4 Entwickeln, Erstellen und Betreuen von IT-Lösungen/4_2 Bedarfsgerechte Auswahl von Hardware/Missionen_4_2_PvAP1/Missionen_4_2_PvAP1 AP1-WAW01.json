@@ -1,0 +1,157 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Bedarfsgerechte Auswahl von Hardware",
+  "description": "Schritt 1: Passenden Schwerpunkt wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein Team arbeitet überwiegend im Büro mit zwei großen Monitoren, vielen parallel geöffneten Anwendungen und permanenter Stromversorgung. Mobilität ist kaum relevant, dafür zählen Leistung, Erweiterbarkeit und ergonomisches Setup.",
+      "tags": ["Geräteklassen", "Stationär", "Arbeitsplatz"],
+      "options": [
+        {
+          "id": "desktop",
+          "label": "Desktop-PC (stationär)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Stationäre Systeme sind gut erweiterbar (RAM, Storage, GPU) und oft preis/leistungsstark.", "correct": true },
+            { "id": "w2", "text": "Mehrere Monitore und Peripherie lassen sich unkompliziert anschließen.", "correct": true },
+            { "id": "w3", "text": "Akkulaufzeit ist das wichtigste Kriterium.", "correct": false },
+            { "id": "w4", "text": "Ein Desktop ist für dauerhafte Büroarbeitsplätze meist wirtschaftlich und robust.", "correct": true }
+          ]
+        },
+        {
+          "id": "smartphone",
+          "label": "Smartphone",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Smartphones sind für mobile Kommunikation und leichte Aufgaben optimiert.", "correct": true },
+            { "id": "w2", "text": "Mehrschirm-Arbeitsplatz und hohe Erweiterbarkeit sind typische Smartphone-Stärken.", "correct": false },
+            { "id": "w3", "text": "Eingeschränkte Eingabemöglichkeiten begrenzen komplexe Office-/Dev-Workflows.", "correct": true },
+            { "id": "w4", "text": "Für einen festen Arbeitsplatz ersetzen Smartphones selten einen vollwertigen PC.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Desktop-PC: Stationär, gut erweiterbar, starkes Preis/Leistung und ideal für Mehrmonitor- und Peripherie-Setups."
+    },
+    {
+      "id": "c02",
+      "profile": "Mitarbeitende sind täglich bei Kunden, arbeiten unterwegs, müssen viel tippen, präsentieren und auch offline produktiv sein. Sie benötigen ein vollwertiges Betriebssystem, Docking im Büro und akzeptable Akkulaufzeit.",
+      "tags": ["Geräteklassen", "Mobil", "Produktivität"],
+      "options": [
+        {
+          "id": "notebook",
+          "label": "Notebook",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Notebook bietet volle Tastatur, produktives Arbeiten und meist vollwertiges OS.", "correct": true },
+            { "id": "w2", "text": "Docking/externen Monitor im Büro nutzen ist typisch und praktikabel.", "correct": true },
+            { "id": "w3", "text": "Notebook ist nur für Medienkonsum geeignet, nicht für produktive Arbeit.", "correct": false },
+            { "id": "w4", "text": "Akkulaufzeit und Mobilität sind zentrale Kriterien, ohne komplett auf Leistung zu verzichten.", "correct": true }
+          ]
+        },
+        {
+          "id": "tablet",
+          "label": "Tablet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Tablets sind gut für Meetings, Notizen, Präsentationen und leichte Aufgaben.", "correct": true },
+            { "id": "w2", "text": "Komplexe Workflows (z. B. viele Tools, lokale Dev-Umgebungen) sind oft eingeschränkt.", "correct": true },
+            { "id": "w3", "text": "Tablets sind immer besser als Notebooks, weil sie leichter sind.", "correct": false },
+            { "id": "w4", "text": "Mit Tastatur-Cover kann es reichen, ersetzt aber nicht immer ein Notebook-Setup.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Notebook: mobile Vollwert-Arbeitsmaschine mit Tastatur, Docking-Möglichkeit und ausreichender Akkulaufzeit."
+    },
+    {
+      "id": "c03",
+      "profile": "Ein Service-Center nutzt einen zentralen Server. Am Arbeitsplatz sollen Geräte möglichst günstig, wartungsarm und sicher sein. Es reicht, wenn die Mitarbeitenden per Remote-Session arbeiten; lokal muss kaum Leistung vorhanden sein.",
+      "tags": ["Arbeitsplatzsysteme", "Terminal", "Zentral"],
+      "options": [
+        {
+          "id": "terminal",
+          "label": "Terminal/Thin Client",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Rechenleistung und Daten liegen zentral; Clients sind günstiger und wartungsarm.", "correct": true },
+            { "id": "w2", "text": "Sicherheit steigt oft, weil lokal weniger Daten gespeichert werden.", "correct": true },
+            { "id": "w3", "text": "Für Terminalbetrieb ist eine stabile Netzwerkverbindung besonders wichtig.", "correct": true },
+            { "id": "w4", "text": "Terminal ist ideal, wenn viel lokal gerendert oder offline gearbeitet werden muss.", "correct": false }
+          ]
+        },
+        {
+          "id": "pc",
+          "label": "PC (vollwertiger Arbeitsplatz)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein PC bietet lokale Leistung und ist gut für Offline-/Spezialsoftware geeignet.", "correct": true },
+            { "id": "w2", "text": "PC ist immer günstiger als Terminal, weil keine Server-Infrastruktur nötig ist.", "correct": false },
+            { "id": "w3", "text": "Bei PCs ist Patch-/Update-Aufwand pro Gerät typischerweise höher.", "correct": true },
+            { "id": "w4", "text": "Wenn lokal kaum Leistung benötigt wird, kann ein PC überdimensioniert sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Terminal/Thin Client: zentrale Verarbeitung, günstige und wartungsarme Clients, aber abhängig von stabiler Netzwerkverbindung."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Außendienstteam arbeitet teils im Büro (LAN), teils unterwegs (mobil). Im Büro soll es stabile, schnelle Verbindungen geben; unterwegs muss zuverlässig über mobilen Datenfunk gearbeitet werden, inklusive VPN.",
+      "tags": ["LAN", "WAN", "Mobilfunk", "Arbeitsplatzsysteme"],
+      "options": [
+        {
+          "id": "mobile_und_stationaere_arbeitsplatzsysteme",
+          "label": "Mobile und stationäre Arbeitsplatzsysteme (LAN/WAN/LTE/5G)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Im Büro ist LAN typischerweise stabiler, schneller und planbarer als Mobilfunk.", "correct": true },
+            { "id": "w2", "text": "Unterwegs sind LTE/5G typische WAN-Zugänge mit schwankender Latenz/Bandbreite.", "correct": true },
+            { "id": "w3", "text": "VPN ist häufig nötig, um unterwegs sicher auf interne Systeme zuzugreifen.", "correct": true },
+            { "id": "w4", "text": "LAN ist immer ein Funknetz und benötigt SIM-Karten.", "correct": false }
+          ]
+        },
+        {
+          "id": "geraeteklassen",
+          "label": "Geräteklassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Geräteklassen beschreiben Gerätetypen wie Desktop/Notebook/Tablet/Smartphone.", "correct": true },
+            { "id": "w2", "text": "Hier steht aber die Netz-Anbindung (LAN vs. WAN/mobiler Datenfunk) im Vordergrund.", "correct": false },
+            { "id": "w3", "text": "Die Geräteklasse allein sagt nichts über die Qualität der Verbindung unterwegs aus.", "correct": true },
+            { "id": "w4", "text": "Netzthemen wie LTE/5G/VPN sind unabhängig davon, ob es ein Notebook oder Tablet ist.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mobile/stationäre Arbeitsplatzsysteme: LAN fürs Büro, unterwegs WAN über LTE/5G; VPN oft notwendig, Mobilfunk schwankt stärker."
+    },
+    {
+      "id": "c05",
+      "profile": "Eine Mitarbeiterin hat eine Hörbeeinträchtigung und arbeitet häufig in Videokonferenzen. Außerdem liest sie Inhalte besser auf größerer Fläche und braucht klare Audioausgabe. Das Team soll den Arbeitsplatz so ausstatten, dass sie ohne Nachteile arbeiten kann.",
+      "tags": ["Barrierefreiheit", "Arbeitsplatz", "Inklusion"],
+      "options": [
+        {
+          "id": "barrierefreiheit",
+          "label": "Barrierefreiheit",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein zweiter Monitor kann Lesbarkeit, Übersicht und Produktivität verbessern.", "correct": true },
+            { "id": "w2", "text": "Lautsprecher/Mikrofon/Headset sind sinnvoll, um Audioqualität und Verständlichkeit zu erhöhen.", "correct": true },
+            { "id": "w3", "text": "Barrierefreiheit ist nur ein Thema für öffentliche Websites, nicht für Arbeitsplätze.", "correct": false },
+            { "id": "w4", "text": "Ziel ist, Einschränkungen durch passende Ausstattung und Einstellungen auszugleichen.", "correct": true }
+          ]
+        },
+        {
+          "id": "mobile_und_stationaere_arbeitsplatzsysteme",
+          "label": "Mobile und stationäre Arbeitsplatzsysteme (LAN/WAN/LTE/5G)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "LAN/WAN beschreibt die Art der Netzwerkverbindung.", "correct": true },
+            { "id": "w2", "text": "Hier geht es primär um Hilfsmittel am Arbeitsplatz (Monitor/Audio), nicht um Netztechnik.", "correct": false },
+            { "id": "w3", "text": "Stabile Verbindung hilft bei Videokonferenzen, löst aber nicht die Barriere selbst.", "correct": true },
+            { "id": "w4", "text": "LTE/5G sind typische mobile Zugänge.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Barrierefreiheit: Arbeitsplatz so ausstatten (z. B. 2. Monitor, gutes Mikro/Audio), dass Einschränkungen kompensiert werden und gleichwertiges Arbeiten möglich ist."
+    }
+  ]
+}

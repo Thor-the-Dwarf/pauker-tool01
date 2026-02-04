@@ -1,0 +1,112 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Backup Grundprinzipien (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Backup-Ziel: Daten und Systeme nach Fehlern, Malware/Ransomware, versehentlichem Löschen oder Hardware-Defekt wiederherstellen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Backup ist nicht gleich Hochverfügbarkeit – ein Backup hilft beim Restore, nicht beim nahtlosen Weiterbetrieb.",
+      "correct": "keine"
+    },
+    {
+      "text": "3-2-1-Regel: Insgesamt 3 Kopien der Daten (Original + 2 Backups).",
+      "correct": "keine"
+    },
+    {
+      "text": "3-2-1-Regel: 2 unterschiedliche Medien/Technologien nutzen (z. B. NAS + Tape/Cloud), um gemeinsame Ausfälle zu vermeiden.",
+      "correct": "keine"
+    },
+    {
+      "text": "3-2-1-Regel: 1 Kopie extern/offsite lagern (z. B. anderes Gebäude/Cloud), damit Brand/Diebstahl nicht alles zerstört.",
+      "correct": "keine"
+    },
+    {
+      "text": "Vollbackup: Sichert alle ausgewählten Daten komplett – einfaches Restore, aber mehr Zeit und Speicherbedarf.",
+      "correct": "keine"
+    },
+    {
+      "text": "Inkrementell: Sichert nur Änderungen seit dem letzten Backup (egal ob voll oder inkrementell) – schnell, aber Restore braucht die Kette.",
+      "correct": "keine"
+    },
+    {
+      "text": "Differentiell: Sichert alle Änderungen seit dem letzten Vollbackup – wächst täglich an, Restore braucht Voll + letztes Differential.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Inkrementell und differentiell werden oft verwechselt – entscheidend ist, worauf „seit wann“ sich die Änderungen beziehen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Restore-Realität: Backups sind wertlos, wenn Wiederherstellung nie getestet wird (Stichwort Restore-Test).",
+      "correct": "keine"
+    },
+    {
+      "text": "Ransomware-Schutz: Mindestens eine Kopie sollte vor Überschreiben/Manipulation geschützt sein (z. B. offline/immutable).",
+      "correct": "keine"
+    },
+    {
+      "text": "Typischer Stolperstein: Wenn Backup und Produktivdaten im selben System ohne Trennung liegen, kann ein Angriff beides treffen.",
+      "correct": "keine"
+    },
+    {
+      "text": "„Ein Backup verhindert, dass Daten verloren gehen, selbst wenn man nichts wiederherstellen muss.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Backup-Grundprinzipien (Ziel, 3-2-1, Voll/inkrementell/differentiell) sind Basiswissen und tauchen in vielen AP1-Szenarien auf.",
+      "correct": "alle"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – CPU & RAM Leistung erklären (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "single_core_performance",
+      "name": "Single-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": true,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": true,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": false,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": false,
+        "symptom_is_paging_swap": false,
+        "effect_system_feels_slow": false
+      }
+    },
+    {
+      "id": "multi_core_performance",
+      "name": "Multi-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": true,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": true,
+        "about_ram_capacity": false,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": false,
+        "symptom_is_paging_swap": false,
+        "effect_system_feels_slow": false
+      }
+    },
+    {
+      "id": "ram_capacity",
+      "name": "RAM-Kapazität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": true,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": true,
+        "symptom_is_paging_swap": true,
+        "effect_system_feels_slow": true
+      }
+    },
+    {
+      "id": "ram_speed_latency",
+      "name": "RAM-Takt & Latenz",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": false,
+        "about_ram_speed_latency": true,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": false,
+        "symptom_is_paging_swap": false,
+        "effect_system_feels_slow": false
+      }
+    },
+    {
+      "id": "ram_compatibility",
+      "name": "RAM-Kompatibilität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": false,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": true,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": false,
+        "symptom_is_paging_swap": false,
+        "effect_system_feels_slow": false
+      }
+    },
+    {
+      "id": "ecc_ram",
+      "name": "ECC-RAM (Server)",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": false,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": true,
+        "problem_is_ram_too_low": false,
+        "symptom_is_paging_swap": false,
+        "effect_system_feels_slow": false
+      }
+    },
+    {
+      "id": "paging_swap",
+      "name": "Paging/Swap (zu wenig RAM → Massenspeicher wird genutzt)",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_vms_render": false,
+        "bottleneck_if_single_threaded": false,
+        "improves_with_more_cores": false,
+        "about_ram_capacity": true,
+        "about_ram_speed_latency": false,
+        "about_ram_compatibility": false,
+        "about_ecc_ram": false,
+        "problem_is_ram_too_low": true,
+        "symptom_is_paging_swap": true,
+        "effect_system_feels_slow": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um Leistung pro Kern/Thread, also wie schnell ein einzelner Ablauf läuft?",
+      "attributeKey": "focus_cpu_single_core"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um parallele Leistung mit vielen Kernen/Threads (z. B. mehrere Aufgaben gleichzeitig)?",
+      "attributeKey": "focus_cpu_multi_core"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist das typischerweise wichtig für UI/Office/Alltagsprogramme, die oft nicht stark parallelisieren?",
+      "attributeKey": "typical_for_ui_office"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist das typischerweise wichtig für VMs/Rendering/Builds, also gut parallelisierbare Last?",
+      "attributeKey": "typical_for_vms_render"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist das Problem vor allem: ein Programm nutzt nur einen Thread → mehr Kerne helfen kaum?",
+      "attributeKey": "bottleneck_if_single_threaded"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Wird es spürbar besser, wenn man mehr Kerne/Threads hat (Skalierung nach oben)?",
+      "attributeKey": "improves_with_more_cores"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um die reine Menge an Arbeitsspeicher (GB), die Programme gleichzeitig haben können?",
+      "attributeKey": "about_ram_capacity"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es um RAM-Takt und Zugriffszeiten (Latenz), also wie schnell RAM Daten liefern kann?",
+      "attributeKey": "about_ram_speed_latency"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Geht es darum, ob der RAM überhaupt passt (DDR-Generation, Mainboard/CPU-Support, Profile)?",
+      "attributeKey": "about_ram_compatibility"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Geht es um Fehlerkorrektur im RAM (ECC), also Stabilität/Datensicherheit statt Maximum-Speed?",
+      "attributeKey": "about_ecc_ram"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist die Ursache: zu wenig RAM für die aktuelle Last?",
+      "attributeKey": "problem_is_ram_too_low"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist das typische Merkmal: das System nutzt Swap/Pagefile, weil RAM voll ist?",
+      "attributeKey": "symptom_is_paging_swap"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Fühlt sich das System dann insgesamt „zäh“ an (Hänger, lange Wartezeiten, Nachladen)?",
+      "attributeKey": "effect_system_feels_slow"
+    }
+  ]
+}

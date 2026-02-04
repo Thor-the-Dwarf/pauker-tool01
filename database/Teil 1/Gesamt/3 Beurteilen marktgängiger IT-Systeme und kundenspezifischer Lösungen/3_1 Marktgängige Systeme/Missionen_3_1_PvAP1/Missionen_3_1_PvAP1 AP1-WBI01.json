@@ -1,0 +1,153 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Marktgängige Systeme-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "hardwareprodukte",
+      "name": "Hardwareprodukte",
+      "attributes": {
+        "is_physical": true,
+        "runs_software": false,
+        "is_os_or_app": false,
+        "requires_installation": true,
+        "virtualization_layer": false,
+        "cloud_service": false,
+        "subscription_based": false,
+        "scales_elastically": false,
+        "managed_by_provider": false,
+        "requires_network_connection": false,
+        "multi_tenant": false,
+        "resource_abstraction": false
+      }
+    },
+    {
+      "id": "softwareprodukte",
+      "name": "Softwareprodukte",
+      "attributes": {
+        "is_physical": false,
+        "runs_software": true,
+        "is_os_or_app": true,
+        "requires_installation": true,
+        "virtualization_layer": false,
+        "cloud_service": false,
+        "subscription_based": false,
+        "scales_elastically": false,
+        "managed_by_provider": false,
+        "requires_network_connection": false,
+        "multi_tenant": false,
+        "resource_abstraction": false
+      }
+    },
+    {
+      "id": "virtualisierungen",
+      "name": "Virtualisierungen",
+      "attributes": {
+        "is_physical": false,
+        "runs_software": true,
+        "is_os_or_app": false,
+        "requires_installation": true,
+        "virtualization_layer": true,
+        "cloud_service": false,
+        "subscription_based": false,
+        "scales_elastically": true,
+        "managed_by_provider": false,
+        "requires_network_connection": false,
+        "multi_tenant": false,
+        "resource_abstraction": true
+      }
+    },
+    {
+      "id": "cloudloesungen",
+      "name": "Cloudlösungen (SaaS, IaaS, PaaS)",
+      "attributes": {
+        "is_physical": false,
+        "runs_software": true,
+        "is_os_or_app": false,
+        "requires_installation": false,
+        "virtualization_layer": true,
+        "cloud_service": true,
+        "subscription_based": true,
+        "scales_elastically": true,
+        "managed_by_provider": true,
+        "requires_network_connection": true,
+        "multi_tenant": true,
+        "resource_abstraction": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Ist es ein physisches Produkt, das man anfassen kann (Gerät/Komponente)?",
+      "attributeKey": "is_physical"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Handelt es sich grundsätzlich um Software (Programm/Code), die ausgeführt wird?",
+      "attributeKey": "runs_software"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist es direkt ein Betriebssystem oder eine Anwendung (statt Infrastruktur/Plattform)?",
+      "attributeKey": "is_os_or_app"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Musst du es typischerweise lokal installieren (Setup, Paket, Treiber)?",
+      "attributeKey": "requires_installation"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist es eine Virtualisierungsschicht (VM/Container/Hypervisor), die Ressourcen abstrahiert?",
+      "attributeKey": "virtualization_layer"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Wird es als Cloud-Service bereitgestellt (über Internet bezogen)?",
+      "attributeKey": "cloud_service"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Wird es typischerweise als Abo/Pay-per-Use bezahlt?",
+      "attributeKey": "subscription_based"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Kann es schnell hoch/runter skalieren (elastisch, Ressourcen nach Bedarf)?",
+      "attributeKey": "scales_elastically"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Wird Betrieb/Wartung hauptsächlich vom Anbieter übernommen (Managed Service)?",
+      "attributeKey": "managed_by_provider"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Braucht es für die Nutzung zwingend eine Netzwerk-/Internetverbindung?",
+      "attributeKey": "requires_network_connection"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Teilen sich mehrere Kunden dieselbe Plattform/Instanz (Multi-Tenant)?",
+      "attributeKey": "multi_tenant"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Werden darunterliegende Ressourcen bewusst verborgen/abstrahiert (du siehst eher Service als Hardware)?",
+      "attributeKey": "resource_abstraction"
+    }
+  ]
+}

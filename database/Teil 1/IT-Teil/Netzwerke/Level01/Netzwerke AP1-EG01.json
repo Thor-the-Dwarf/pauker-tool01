@@ -1,0 +1,136 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – KI (AP1): Der Prompt im Nebel",
+  "topic": "KI-Grundlagen, KI-Arten, Risiken, Begriffe, EU-KI-Verordnung (AI Act), Prompting, Qualitätssicherung",
+  "estimated_minutes": 40,
+  "sections": [
+    {
+      "id": "ki-basics-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Was ist was?",
+      "subtitle": "Ordne Aussagen den passenden Kategorien zu: klassische Software, ML, generative KI.",
+      "hintDefault": "Merker: Klassisch = feste Regeln. ML = lernt aus Daten. Generativ = erzeugt neue Inhalte aus Mustern + Prompt.",
+      "sortColumns": [
+        {
+          "zone": "classic",
+          "label": "Klassische Software",
+          "hint": "(deterministisch, Regeln)"
+        },
+        {
+          "zone": "ml",
+          "label": "KI / Machine Learning",
+          "hint": "(lernt Muster, probabilistisch)"
+        },
+        {
+          "zone": "genai",
+          "label": "Generative KI",
+          "hint": "(Text/Bild/Code erzeugen)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "kb01",
+          "text": "Gleiche Eingabe → immer gleiche Ausgabe",
+          "correctZone": "classic"
+        },
+        {
+          "id": "kb02",
+          "text": "Wenn-dann-Logik und feste Abläufe",
+          "correctZone": "classic"
+        },
+        {
+          "id": "kb03",
+          "text": "Klassifikation: Spam oder kein Spam",
+          "correctZone": "ml"
+        },
+        {
+          "id": "kb04",
+          "text": "Regression: Preisprognose aus Beispieldaten",
+          "correctZone": "ml"
+        },
+        {
+          "id": "kb05",
+          "text": "Viele neuronale Schichten für komplexe Muster",
+          "correctZone": "ml"
+        },
+        {
+          "id": "kb06",
+          "text": "Erstellt Entwürfe, Antworten oder Code aus einem Prompt",
+          "correctZone": "genai"
+        },
+        {
+          "id": "kb07",
+          "text": "Diffusion erzeugt Bilder",
+          "correctZone": "genai"
+        },
+        {
+          "id": "kb08",
+          "text": "Erzeugt Inhalte, ist keine Suchmaschine",
+          "correctZone": "genai"
+        }
+      ]
+    },
+    {
+      "id": "ki-risiken-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Die 5 KI-Risiken erkennen",
+      "subtitle": "Ordne kurze Szenarien dem passenden Risiko zu.",
+      "hintDefault": "Prüfungsfalle: Klingt professionell ≠ stimmt. Risiko zuerst benennen, dann Gegenmaßnahmen ableiten.",
+      "sortColumns": [
+        {
+          "zone": "halluzination",
+          "label": "Halluzination",
+          "hint": "Klingt plausibel, ist aber faktisch falsch."
+        },
+        {
+          "zone": "bias",
+          "label": "Bias / Verzerrung",
+          "hint": "Voreingenommenheit durch Trainingsdaten."
+        },
+        {
+          "zone": "blackbox",
+          "label": "Blackbox-Problem",
+          "hint": "Fehlende Nachvollziehbarkeit der Entscheidung."
+        },
+        {
+          "zone": "copyright",
+          "label": "Copyright-Verletzung",
+          "hint": "Nutzung geschützter Daten ohne Erlaubnis."
+        },
+        {
+          "zone": "deepfake",
+          "label": "Deepfake / Manipulation",
+          "hint": "Verwechslungsgefahr mit der Realität."
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "kr01",
+          "text": "KI erfindet Quellenangaben, die es nicht gibt.",
+          "correctZone": "halluzination"
+        },
+        {
+          "id": "kr02",
+          "text": "Bewerber-KI benachteiligt bestimmte Gruppen.",
+          "correctZone": "bias"
+        },
+        {
+          "id": "kr03",
+          "text": "Entwickler kann nicht sagen, warum die KI so entschieden hat.",
+          "correctZone": "blackbox"
+        },
+        {
+          "id": "kr04",
+          "text": "Trainingsdaten enthalten urheberrechtlich geschützte Bilder.",
+          "correctZone": "copyright"
+        },
+        {
+          "id": "kr05",
+          "text": "Täuschend echtes Video eines Politikers.",
+          "correctZone": "deepfake"
+        }
+      ]
+    }
+  ]
+}

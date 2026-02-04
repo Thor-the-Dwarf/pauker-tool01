@@ -1,0 +1,108 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Backup vs Archiv (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Use-Case-Diagramm",
+    "Use-Case-Text",
+    "Klassendiagramm",
+    "Aktivitätsdiagramm",
+    "Sequenzdiagramm",
+    "Zustandsdiagramm",
+    "ERD/ERM",
+    "Kardinalität",
+    "M:N-Zwischentabelle",
+    "1NF",
+    "2NF",
+    "3NF",
+    "Pseudocode",
+    "PAP (Flowchart)",
+    "Struktogramm",
+    "Kontrollstruktur: Sequenz",
+    "Kontrollstruktur: Auswahl",
+    "Kontrollstruktur: Schleife",
+    "Datentyp",
+    "Liste/Array",
+    "Dictionary/Map",
+    "IDE",
+    "Debugger",
+    "Versionskontrolle (Git)",
+    "Unit Test",
+    "Integration Test",
+    "System Test",
+    "Logging",
+    "SQL SELECT",
+    "WHERE",
+    "ORDER BY",
+    "LIKE",
+    "IN",
+    "BETWEEN",
+    "GROUP BY",
+    "HAVING",
+    "JOIN",
+    "DDL",
+    "DML",
+    "DQL",
+    "Transaktion",
+    "ACID",
+    "kartesisches Produkt",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Backup dient der kurzfristigen Wiederherstellung nach Fehler, Malware, Löschen oder Desaster.",
+      "correct": "keine"
+    },
+    {
+      "text": "Backup ist typischerweise überschreibbar und rotiert (z. B. tägliche Stände), weil es auf Restore-Zeitpunkte optimiert ist.",
+      "correct": "keine"
+    },
+    {
+      "text": "Archiv dient der langfristigen Aufbewahrung (z. B. Belege/Compliance) und ist nicht primär für schnelle System-Restores gedacht.",
+      "correct": "keine"
+    },
+    {
+      "text": "Archivdaten sollen nachträglich nicht (oder nur nachvollziehbar) veränderbar sein – je nach Anforderung WORM/Immutability.",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: „Ich hab ein Backup, also bin ich compliant“ – nein, Aufbewahrungsfristen und Unveränderbarkeit sind Archiv-Themen.",
+      "correct": "keine"
+    },
+    {
+      "text": "Archiv braucht meist Suchbarkeit (Index/Metadaten), damit man einzelne Dokumente schnell finden und nachweisen kann.",
+      "correct": "keine"
+    },
+    {
+      "text": "Archiv kann Retention-Regeln haben (Aufbewahren bis Datum X) und danach geregelte Löschung – abhängig von Vorgaben.",
+      "correct": "keine"
+    },
+    {
+      "text": "Backup-Restore zielt oft auf „System wieder lauffähig“ oder „Datenstand von gestern“ – nicht auf Beleg-Nachweis über Jahre.",
+      "correct": "keine"
+    },
+    {
+      "text": "Archiv zielt oft auf „Nachweisbarkeit“: Wer hat was wann abgelegt, unverändert, auffindbar, revisionssicher (wenn gefordert).",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Wenn Archivdaten beliebig überschrieben werden können, ist das häufig kein echtes Archiv im Compliance-Sinn.",
+      "correct": "keine"
+    },
+    {
+      "text": "„Archiv = kurzfristige Wiederherstellung nach Ransomware, Hauptziel ist schnelles Restore.“",
+      "correct": "keine"
+    },
+    {
+      "text": "„Backup = langfristige, unveränderliche Aufbewahrung von Belegen über viele Jahre.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Backup und Archiv sind unterschiedliche Zwecke: Restore nach Zwischenfällen vs. langfristige, ggf. unveränderliche Aufbewahrung mit Suchbarkeit.",
+      "correct": "alle"
+    }
+  ]
+}

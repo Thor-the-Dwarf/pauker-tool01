@@ -1,0 +1,120 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Programmiersprachen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Begriff aus Programmiersprachen und Entwicklung mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff aus Übersetzung, Paradigmen, Grundlagen oder Tools.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "compiler",
+      "name": "Compiler",
+      "description": "Übersetzt Quellcode vor der Ausführung in Maschinencode oder Bytecode; Fehler werden oft schon beim Übersetzen gefunden.",
+      "example": "Ein Java-Programm wird kompiliert; ein fehlendes Semikolon führt sofort zu einem Compile-Fehler."
+    },
+    {
+      "id": "linker",
+      "name": "Linker",
+      "description": "Verbindet kompilierte Programmteile und Bibliotheken zu einer ausführbaren Datei; löst Symbolverweise auf.",
+      "example": "Ein C-Programm kompiliert, aber beim Linken fehlt eine Bibliothek → „undefined reference“."
+    },
+    {
+      "id": "interpreter",
+      "name": "Interpreter",
+      "description": "Führt Code direkt aus (oft zeilenweise/bytecodebasiert), ohne vorher eine native EXE zu bauen.",
+      "example": "Ein Python-Skript wird direkt gestartet; ein Tippfehler im Variablennamen erzeugt einen Runtime-Fehler."
+    },
+    {
+      "id": "prozedural",
+      "name": "Prozedurale Programmierung",
+      "description": "Programm wird als Folge von Funktionen/Prozeduren und Daten geschrieben; Fokus auf Ablauf und Teilfunktionen.",
+      "example": "Ein Skript hat Funktionen wie parse(), validate(), export() und ruft sie nacheinander im Hauptprogramm auf."
+    },
+    {
+      "id": "objektorientiert",
+      "name": "Objektorientierte Programmierung (OOP)",
+      "description": "Modelliert Software mit Objekten/Klassen; kapselt Daten und Verhalten, nutzt z. B. Vererbung und Polymorphie.",
+      "example": "Klasse User mit Attributen und Methoden; Unterklassen AdminUser und GuestUser verhalten sich unterschiedlich."
+    },
+    {
+      "id": "variablen",
+      "name": "Variablen",
+      "description": "Benannte Speicherplätze für Werte; Werte können je nach Sprache veränderbar oder konstant sein.",
+      "example": "Eine Variable counter wird erhöht, um Schleifendurchläufe zu zählen."
+    },
+    {
+      "id": "datentypen",
+      "name": "Datentypen",
+      "description": "Legt fest, welche Art von Wert gespeichert wird und welche Operationen möglich sind (z. B. int, float, string, boolean).",
+      "example": "Eine Zahl als String führt bei „+“ zu Verkettung statt Addition, wenn nicht konvertiert wird."
+    },
+    {
+      "id": "datenstrukturen",
+      "name": "Datenstrukturen",
+      "description": "Strukturierte Sammlungen von Daten (z. B. Array/Liste, Map/Dictionary, Set), um Daten effizient zu organisieren.",
+      "example": "User werden in einer Map nach userId gespeichert, damit Zugriffe schnell sind."
+    },
+    {
+      "id": "kontrollstrukturen_verzweigung",
+      "name": "Kontrollstruktur: Verzweigung",
+      "description": "Entscheidungen im Code (z. B. if/else, switch) steuern, welcher Pfad ausgeführt wird.",
+      "example": "Wenn loginOk true ist, wird das Dashboard geladen, sonst Fehlermeldung angezeigt."
+    },
+    {
+      "id": "kontrollstrukturen_schleife",
+      "name": "Kontrollstruktur: Schleife",
+      "description": "Wiederholt Anweisungen (z. B. for/while) bis eine Bedingung erfüllt ist oder über eine Sammlung iteriert wurde.",
+      "example": "Alle Dateien im Ordner werden in einer for-Schleife geprüft und bei Bedarf umbenannt."
+    },
+    {
+      "id": "klassen",
+      "name": "Klassen",
+      "description": "Baupläne für Objekte; definieren Attribute (Daten) und Methoden (Verhalten).",
+      "example": "Klasse Ticket mit Feldern status/prio und Methode close(), die den Status auf „geschlossen“ setzt."
+    },
+    {
+      "id": "vererbung",
+      "name": "Vererbung",
+      "description": "Eine Klasse erbt Eigenschaften/Methoden einer Basisklasse; erweitert oder überschreibt Verhalten in Subklassen.",
+      "example": "BaseLogger liefert log(); FileLogger erweitert um Schreiben in Datei, ConsoleLogger schreibt in die Konsole."
+    },
+    {
+      "id": "methoden",
+      "name": "Methoden",
+      "description": "Funktionen, die zu einer Klasse gehören; arbeiten mit dem Objektzustand und kapseln Logik.",
+      "example": "user.resetPassword() führt den kompletten Reset-Ablauf aus, statt ihn überall zu duplizieren."
+    },
+    {
+      "id": "bibliotheken",
+      "name": "Bibliotheken",
+      "description": "Wiederverwendbare Code-Sammlungen für typische Aufgaben; werden ins Projekt eingebunden, ohne das Projektgerüst vorzugeben.",
+      "example": "Eine JSON-Bibliothek wird genutzt, um Konfigurationsdateien zu parsen, statt selbst Parser zu schreiben."
+    },
+    {
+      "id": "frameworks",
+      "name": "Frameworks",
+      "description": "Vorgegebenes Grundgerüst mit Regeln und Lebenszyklus; Anwendung hängt sich ein (Inversion of Control).",
+      "example": "Ein Web-Framework startet Server, routing übernimmt das Framework, eigene Controller liefern die Logik."
+    },
+    {
+      "id": "skriptsprachen",
+      "name": "Skriptsprachen",
+      "description": "Sprachen für schnelle Automatisierung/Glue-Code, oft interpretiert und mit kurzer Feedback-Schleife.",
+      "example": "Ein Bash/Python-Skript automatisiert Log-Analyse und verschickt bei Fehlern eine Benachrichtigung."
+    },
+    {
+      "id": "debugging",
+      "name": "Debugging",
+      "description": "Fehlersuche durch Breakpoints, Step-by-Step, Watch-Variablen, Logging und Reproduzieren des Problems.",
+      "example": "Mit Breakpoint in der Login-Funktion wird geprüft, warum das Token leer ist, obwohl die Eingabe korrekt wirkt."
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Projekt- & Qualitätsmanagement (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Projekt",
+    "Prozess",
+    "SMART-Ziel",
+    "Scope",
+    "Stakeholder",
+    "Kommunikationsplan",
+    "Projektphasen",
+    "Wasserfall",
+    "Agil",
+    "V-Modell",
+    "Scrum",
+    "Kanban",
+    "WIP-Limit",
+    "Projektstrukturplan (PSP)",
+    "Arbeitspaket",
+    "Drei-Punkt-Schätzung",
+    "Meilenstein",
+    "Abhängigkeit",
+    "Kritischer Pfad",
+    "Risiko",
+    "Risikobewertung",
+    "Gegenmaßnahme",
+    "Change Request",
+    "Scope Creep",
+    "ISO 9000",
+    "ISO 9001",
+    "PDCA",
+    "TQM",
+    "Produktqualität",
+    "Prozessqualität",
+    "Review",
+    "Teststufe",
+    "Dokumentation",
+    "Abnahme",
+    "Lessons Learned",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Einmalig, zeitlich begrenzt, klares Ziel und Ergebnis (z. B. Rollout eines neuen Ticketsystems).",
+      "correct": "Projekt"
+    },
+    {
+      "text": "Wiederholbar, standardisiert, läuft regelmäßig nach gleichem Muster (z. B. Ticketbearbeitung).",
+      "correct": "Prozess"
+    },
+    {
+      "text": "Ohne klare Ziel-Formulierung ist am Ende unklar, ob das Vorhaben „fertig“ ist.",
+      "correct": "SMART-Ziel"
+    },
+    {
+      "text": "Definiert ausdrücklich auch, was NICHT Teil des Vorhabens ist – sonst wird die Abnahme schwierig.",
+      "correct": "Scope"
+    },
+    {
+      "text": "Betroffene, Entscheider, Unterstützer, Kritiker: wer Einfluss hat oder vom Ergebnis betroffen ist.",
+      "correct": "Stakeholder"
+    },
+    {
+      "text": "Regelt: Wer bekommt wann welche Informationen über welchen Kanal.",
+      "correct": "Kommunikationsplan"
+    },
+    {
+      "text": "Typischer Ablauf von Start bis Ende: Auftrag/Start, Planung, Umsetzung, Übergabe/Abschluss.",
+      "correct": "Projektphasen"
+    },
+    {
+      "text": "Geeignet, wenn Anforderungen von Anfang an klar und stabil sind (z. B. Hardware-Rollout nach Plan).",
+      "correct": "Wasserfall"
+    },
+    {
+      "text": "Geeignet, wenn Anforderungen unsicher sind oder sich ändern (z. B. neue Web-App mit Feedback).",
+      "correct": "Agil"
+    },
+    {
+      "text": "Zu jedem Schritt der Spezifikation gehört eine passende Teststufe – Tests sind von Anfang an mitzudenken.",
+      "correct": "V-Modell"
+    },
+    {
+      "text": "Rollen-Set: Product Owner (Was), Scrum Master (Prozess), Team (liefert Ergebnis).",
+      "correct": "Scrum"
+    },
+    {
+      "text": "Artefakte: Product Backlog, Sprint Backlog, Increment (nutzbares Teil-Ergebnis).",
+      "correct": "Scrum"
+    },
+    {
+      "text": "Board mit Spalten wie To Do → Doing → Done, Fokus auf Flow und Durchlaufzeit.",
+      "correct": "Kanban"
+    },
+    {
+      "text": "Begrenzt, wie viele Aufgaben gleichzeitig bearbeitet werden dürfen, um Fokus zu erzwingen.",
+      "correct": "WIP-Limit"
+    },
+    {
+      "text": "Zerlegt das Gesamtvorhaben hierarchisch in überschaubare Teile und bildet die Basis für Zeit/Kosten/Aufwand.",
+      "correct": "Projektstrukturplan (PSP)"
+    },
+    {
+      "text": "Muss ein klares Ergebnis liefern und prüfbar sein, statt nur ein vages Wort wie „Implementierung“.",
+      "correct": "Arbeitspaket"
+    },
+    {
+      "text": "Schätzung mit drei Werten: optimistisch, realistisch, pessimistisch – ergibt eine Bandbreite.",
+      "correct": "Drei-Punkt-Schätzung"
+    },
+    {
+      "text": "Wichtiger Zeitpunkt ohne eigene Dauer, z. B. „Abnahme abgeschlossen“.",
+      "correct": "Meilenstein"
+    },
+    {
+      "text": "Zeigt Reihenfolge/Logik zwischen Tasks, z. B. Ende-Start oder Start-Start.",
+      "correct": "Abhängigkeit"
+    },
+    {
+      "text": "Längste Kette von Abhängigkeiten bestimmt die Mindestdauer; Verzögerung dort verschiebt den Endtermin direkt.",
+      "correct": "Kritischer Pfad"
+    },
+    {
+      "text": "Unsicheres Ereignis mit potenziell negativem Effekt auf Zeit, Kosten, Qualität oder Umfang.",
+      "correct": "Risiko"
+    },
+    {
+      "text": "Bewertung nach Eintrittswahrscheinlichkeit × Auswirkung.",
+      "correct": "Risikobewertung"
+    },
+    {
+      "text": "In Prüfungen zählt nicht nur das Risiko nennen, sondern auch: Was tust du konkret dagegen?",
+      "correct": "Gegenmaßnahme"
+    },
+    {
+      "text": "Formale Änderung an Umfang/Zeit/Kosten mit Bewertung und Freigabe.",
+      "correct": "Change Request"
+    },
+    {
+      "text": "Schleichende Erweiterung ohne Planung oder Mehrbudget; kippt Projekte „still und heimlich“.",
+      "correct": "Scope Creep"
+    },
+    {
+      "text": "Normteil für Begriffe und Grundlagen des Qualitätsmanagements.",
+      "correct": "ISO 9000"
+    },
+    {
+      "text": "Normteil mit Anforderungen an ein QM-System; Basis für Zertifizierung und Nachweisbarkeit im Betrieb.",
+      "correct": "ISO 9001"
+    },
+    {
+      "text": "Verbesserungs-Loop mit den vier Schritten Plan, Do, Check, Act.",
+      "correct": "PDCA"
+    },
+    {
+      "text": "Qualität als Kultur: Aufgabe aller, Fehlerprävention statt Fehlerbehebung.",
+      "correct": "TQM"
+    },
+    {
+      "text": "Beschreibt, wie gut das Endergebnis ist (z. B. funktioniert es, ist es sicher, nutzbar, wartbar).",
+      "correct": "Produktqualität"
+    },
+    {
+      "text": "Beschreibt, wie man zum Ergebnis kommt (z. B. Reviews, Tests, Standards, Definition of Done).",
+      "correct": "Prozessqualität"
+    },
+    {
+      "text": "4-Augen-Prinzip/Peer-Review/Code-Review: Fehler früh finden, bevor sie teuer werden.",
+      "correct": "Review"
+    },
+    {
+      "text": "Kette von Prüfungen: Unit → Integration → System → Abnahme (je später entdeckt, desto teurer).",
+      "correct": "Teststufe"
+    },
+    {
+      "text": "Nachweisbarkeit: Entscheidungen, Tests, Abnahmen und Risiken müssen nachvollziehbar festgehalten sein.",
+      "correct": "Dokumentation"
+    },
+    {
+      "text": "Kunde bestätigt, dass die Leistung dem Vereinbarten entspricht; zentraler Schritt vor Übergabe.",
+      "correct": "Abnahme"
+    },
+    {
+      "text": "Projektabschluss ist nicht nur „fertig“, sondern inklusive Übergabe und systematischer Rückschau auf Verbesserungen.",
+      "correct": "Lessons Learned"
+    }
+  ]
+}

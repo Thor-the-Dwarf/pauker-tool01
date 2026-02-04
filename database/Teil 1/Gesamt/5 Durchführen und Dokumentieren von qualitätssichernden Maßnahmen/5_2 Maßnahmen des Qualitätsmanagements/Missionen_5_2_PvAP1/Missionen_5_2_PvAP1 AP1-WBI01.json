@@ -1,0 +1,149 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Qualitätsmanagement-Edition",
+  "secretHintText": "Das System hat heimlich eine {SECRET_NAME} gewählt.",
+  "legalForms": [
+    {
+      "id": "verbesserungsmassnahmen",
+      "name": "Maßnahmen zur Verbesserung der Prozess-, Arbeits-, Produkt- und Dienstleistungsqualität",
+      "attributes": {
+        "improvement_actions": true,
+        "planning_focus": false,
+        "goal_definition_focus": false,
+        "control_steering_focus": false,
+        "uses_pdca": true,
+        "process_oriented": true,
+        "product_oriented": true,
+        "service_oriented": true,
+        "measures_as_is_state": false,
+        "defines_target_state": false
+      }
+    },
+    {
+      "id": "qualitaetsplanung",
+      "name": "Qualitätsplanung",
+      "attributes": {
+        "improvement_actions": false,
+        "planning_focus": true,
+        "goal_definition_focus": true,
+        "control_steering_focus": false,
+        "uses_pdca": true,
+        "process_oriented": true,
+        "product_oriented": true,
+        "service_oriented": true,
+        "measures_as_is_state": true,
+        "defines_target_state": true
+      }
+    },
+    {
+      "id": "qualitaetsziele",
+      "name": "Qualitätsziele (Ist-Zustand ermitteln und Ziel-Zustand festlegen)",
+      "attributes": {
+        "improvement_actions": false,
+        "planning_focus": false,
+        "goal_definition_focus": true,
+        "control_steering_focus": false,
+        "uses_pdca": false,
+        "process_oriented": true,
+        "product_oriented": true,
+        "service_oriented": true,
+        "measures_as_is_state": true,
+        "defines_target_state": true
+      }
+    },
+    {
+      "id": "qualitaetslenkung",
+      "name": "Qualitätslenkung",
+      "attributes": {
+        "improvement_actions": false,
+        "planning_focus": false,
+        "goal_definition_focus": false,
+        "control_steering_focus": true,
+        "uses_pdca": true,
+        "process_oriented": true,
+        "product_oriented": true,
+        "service_oriented": true,
+        "measures_as_is_state": true,
+        "defines_target_state": false
+      }
+    },
+    {
+      "id": "pdca",
+      "name": "PDCA-Plan (Plan, Do, Check, Act)",
+      "attributes": {
+        "improvement_actions": true,
+        "planning_focus": true,
+        "goal_definition_focus": false,
+        "control_steering_focus": true,
+        "uses_pdca": true,
+        "process_oriented": true,
+        "product_oriented": true,
+        "service_oriented": true,
+        "measures_as_is_state": true,
+        "defines_target_state": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um konkrete Verbesserungsmaßnahmen (Optimieren, Fehler reduzieren, Qualität erhöhen)?",
+      "attributeKey": "improvement_actions"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Steht Planung im Mittelpunkt (Vorgehen festlegen, Ressourcen/Methoden bestimmen)?",
+      "attributeKey": "planning_focus"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um das Festlegen von Qualitätszielen (Ist ermitteln, Soll definieren)?",
+      "attributeKey": "goal_definition_focus"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Lenkung/Steuerung/Überwachung der Qualität im laufenden Betrieb?",
+      "attributeKey": "control_steering_focus"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Wird explizit der PDCA-Zyklus verwendet (Plan–Do–Check–Act)?",
+      "attributeKey": "uses_pdca"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Liegt der Fokus auf Prozessen (Abläufe, Prozessqualität)?",
+      "attributeKey": "process_oriented"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Liegt der Fokus auf Produkten (Produktqualität, Eigenschaften, Fehlerfreiheit)?",
+      "attributeKey": "product_oriented"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Liegt der Fokus auf Dienstleistungen (Servicequalität, Support, SLA)?",
+      "attributeKey": "service_oriented"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Wird der Ist-Zustand gemessen/ermittelt (Kennzahlen, Audits, Checks)?",
+      "attributeKey": "measures_as_is_state"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Wird ein Ziel-Zustand definiert (Sollwerte, Zielkennzahlen, gewünschtes Niveau)?",
+      "attributeKey": "defines_target_state"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Qualitätsmanagement – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden QM-Begriff mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "QM-Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle einen Begriff aus Qualitätsmanagement und Verbesserung.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "qualitaetsmassnahmen",
+      "name": "Maßnahmen zur Qualitätsverbesserung",
+      "description": "Konkrete Aktionen zur Verbesserung von Prozess-, Arbeits-, Produkt- und Dienstleistungsqualität (z. B. Standards, Reviews, Schulungen, Automatisierung).",
+      "example": "Ein Team führt Code-Reviews und eine Definition of Done ein, um weniger Bugs in Releases zu haben."
+    },
+    {
+      "id": "prozessqualitaet",
+      "name": "Prozessqualität",
+      "description": "Wie gut ein Ablauf funktioniert: klar definiert, wiederholbar, messbar und effizient; reduziert Fehler und Reibung.",
+      "example": "Ein standardisierter Rollout-Prozess mit Checkliste senkt die Anzahl der Fehlkonfigurationen bei neuen Clients."
+    },
+    {
+      "id": "arbeitsqualitaet",
+      "name": "Arbeitsqualität",
+      "description": "Qualität der Ausführung einzelner Tätigkeiten (Sorgfalt, Fachlichkeit, Dokumentation, Zusammenarbeit) im Arbeitsalltag.",
+      "example": "Support dokumentiert jeden Ticket-Schritt sauber, damit Kollegen nahtlos übernehmen können."
+    },
+    {
+      "id": "produktqualitaet",
+      "name": "Produktqualität",
+      "description": "Qualität eines Produkts/Systems (Funktionalität, Zuverlässigkeit, Benutzbarkeit, Sicherheit, Performance) im Ergebnis.",
+      "example": "Nach Einführung automatisierter Tests sinkt die Anzahl der Produktionsfehler pro Release deutlich."
+    },
+    {
+      "id": "dienstleistungsqualitaet",
+      "name": "Dienstleistungsqualität",
+      "description": "Qualität einer Serviceleistung (z. B. Support) gemessen an Reaktionszeit, Lösungszeit, Kommunikation und Kundenzufriedenheit.",
+      "example": "Ein SLA wird eingehalten, weil Tickets priorisiert werden und Status-Updates an Kunden verbindlich sind."
+    },
+    {
+      "id": "qualitaetsplanung",
+      "name": "Qualitätsplanung",
+      "description": "Festlegen, welche Qualität erreicht werden soll und wie: Kriterien, Methoden, Verantwortlichkeiten, Prüfungen und Messgrößen.",
+      "example": "Für ein Release werden Testarten, Abnahmekriterien, Review-Pflicht und Messgrößen (Bugrate, Durchlaufzeit) definiert."
+    },
+    {
+      "id": "qualitaetsziele",
+      "name": "Qualitätsziele",
+      "description": "Messbare Zielvorgaben basierend auf Ist-Zustand und gewünschtem Ziel-Zustand (SMART: spezifisch, messbar, erreichbar, relevant, terminiert).",
+      "example": "Ist: 12 Incidents/Woche → Ziel: 6 Incidents/Woche bis Quartalsende durch Patch- und Monitoring-Verbesserungen."
+    },
+    {
+      "id": "ist_zustand",
+      "name": "Ist-Zustand ermitteln",
+      "description": "Aktuelle Situation messen/erfassen, um eine belastbare Grundlage für Ziele und Maßnahmen zu haben.",
+      "example": "Aus Tickets: durchschnittliche Lösungszeit 2,5 Tage; häufigste Ursache sind fehlende Standard-Images."
+    },
+    {
+      "id": "ziel_zustand",
+      "name": "Ziel-Zustand festlegen",
+      "description": "Beschreiben, wie es künftig sein soll, inklusive messbarer Kennzahlen und Qualitätskriterien.",
+      "example": "Ziel: 90% der Standard-Requests innerhalb von 8 Stunden erledigt, dokumentiert im Ticketsystem."
+    },
+    {
+      "id": "qualitaetslenkung",
+      "name": "Qualitätslenkung",
+      "description": "Steuerung und Überwachung der Qualität im laufenden Betrieb: prüfen, nachsteuern, Abweichungen behandeln.",
+      "example": "Bei steigender Fehlerrate wird ein Release gestoppt, Hotfix-Prozess gestartet und Ursachenanalyse angefordert."
+    },
+    {
+      "id": "pdca",
+      "name": "PDCA-Zyklus (Plan–Do–Check–Act)",
+      "description": "Kontinuierlicher Verbesserungsprozess: planen, umsetzen, prüfen, anpassen/standardisieren.",
+      "example": "Plan: neues Onboarding-Template → Do: 2 Wochen pilotieren → Check: Ticketzeiten messen → Act: Template verbessern und verbindlich machen."
+    }
+  ]
+}

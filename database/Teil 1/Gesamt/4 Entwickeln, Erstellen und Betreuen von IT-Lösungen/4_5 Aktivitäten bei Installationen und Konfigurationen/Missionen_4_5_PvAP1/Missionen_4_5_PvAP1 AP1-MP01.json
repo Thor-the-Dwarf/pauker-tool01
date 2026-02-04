@@ -1,0 +1,96 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Installationen & Konfigurationen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils die passende Aktivität bei Installation/Konfiguration mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Aktivität/Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle eine typische Installations- oder Konfigurationsaktivität.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "hardware_installation",
+      "name": "Installation: Hardware",
+      "description": "Physischer Einbau/Anschluss von Komponenten und Geräten inkl. Basischeck (Kompatibilität, Verkabelung, Treiberbedarf).",
+      "example": "SSD einbauen, RAM erweitern, Monitor/Docking anschließen, danach Boot-Test und Geräteerkennung prüfen."
+    },
+    {
+      "id": "os_installation_config",
+      "name": "Installation & Konfiguration: Betriebssystem",
+      "description": "OS aufsetzen und grundkonfigurieren: Updates, Treiber, Benutzer/Rollen, Security-Basics, Standardsoftware.",
+      "example": "Windows installieren, Treiberpaket, Updates, BitLocker aktivieren, Domänenbeitritt und Office installieren."
+    },
+    {
+      "id": "firmware_settings",
+      "name": "Konfiguration: BIOS/UEFI",
+      "description": "Firmware-Setup für Boot, Sicherheit und Hardwareoptionen (z. B. Boot-Reihenfolge, Secure Boot, TPM, Virtualisierung).",
+      "example": "UEFI aktiv, Secure Boot an, TPM an, Boot vom USB-Stick für Installation, danach wieder auf SSD."
+    },
+    {
+      "id": "cli_work",
+      "name": "Arbeiten mit der Kommandozeile",
+      "description": "Administration/Diagnose per Shell (z. B. cmd/PowerShell/Bash) für schnelle, reproduzierbare Aufgaben.",
+      "example": "Netzwerk prüfen mit Befehlen, Dienste starten/stoppen, Logs auslesen und Konfigs automatisiert setzen."
+    },
+    {
+      "id": "command_syntax",
+      "name": "Befehlssyntax",
+      "description": "Aufbau eines Befehls: Kommando + Optionen/Flags + Argumente; Reihenfolge und Schreibweise sind wichtig.",
+      "example": "Ein Befehl scheitert, weil ein Flag falsch geschrieben ist oder ein Argument in der falschen Position steht."
+    },
+    {
+      "id": "parameters",
+      "name": "Parameter",
+      "description": "Zusatzangaben, die einen Befehl steuern (z. B. Ziel, Modus, Ausgabeformat); oft als Optionen oder Argumente.",
+      "example": "Ein Ping wird mit Parameter für Anzahl und Timeout ausgeführt, um Paketverlust sauber zu messen."
+    },
+    {
+      "id": "ip_configuration",
+      "name": "IP-Konfiguration",
+      "description": "Einrichten von IP-Adresse, Subnetzmaske, Gateway und DNS (statisch oder per DHCP) für korrekte Kommunikation.",
+      "example": "Server bekommt statische IP + DNS, Clients nutzen DHCP; falsches Gateway führt zu „kein Internet“."
+    },
+    {
+      "id": "dhcp",
+      "name": "DHCP",
+      "description": "Automatische Vergabe von Netzwerkeinstellungen (IP, Gateway, DNS) über Lease und Pools; reduziert manuelle Fehler.",
+      "example": "Ein DHCP-Scope wird angepasst, weil die Adressen knapp werden; Clients erhalten danach wieder gültige Leases."
+    },
+    {
+      "id": "wlan_psk_enterprise",
+      "name": "WLAN-Zugang: PSK vs. Enterprise",
+      "description": "PSK = gemeinsamer Schlüssel; Enterprise = nutzerbezogene Anmeldung (z. B. 802.1X), besser steuerbar und auditierbar.",
+      "example": "Firma wechselt von WPA2-PSK zu Enterprise, damit Nutzerkonten entzogen werden können, ohne den WLAN-Key zu ändern."
+    },
+    {
+      "id": "vpn",
+      "name": "VPN",
+      "description": "Sicherer Tunnel für Remote-Zugriff; umfasst Client-Setup, Authentifizierung, Zertifikate, Routing und Policies.",
+      "example": "Homeoffice-User installiert VPN-Client, erhält MFA, danach Zugriff nur auf interne Netze laut Richtlinie."
+    },
+    {
+      "id": "network_test",
+      "name": "Test von Netzwerkverbindungen",
+      "description": "Prüfen von Erreichbarkeit und Pfad (z. B. DNS-Auflösung, Ping, Port-Check, Routen), um Fehler einzugrenzen.",
+      "example": "DNS ok, Ping ok, aber Port 443 zu → Firewall-Regel fehlt oder Dienst läuft nicht."
+    },
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting",
+      "description": "Systematische Fehlersuche: Symptome erfassen, Hypothesen testen, Ursache isolieren, Fix prüfen, Rückfall verhindern.",
+      "example": "Kein WLAN: erst Funk an/SSID/Passwort, dann DHCP-Lease, dann AP-Logs, dann Kanal-Interferenzen prüfen."
+    },
+    {
+      "id": "documentation",
+      "name": "Dokumentation",
+      "description": "Nachvollziehbares Festhalten von Konfiguration, Änderungen, Tests und Ergebnissen für Betrieb, Support und Audit.",
+      "example": "IP-Plan, VLANs, WLAN-Profile, VPN-Setup, Admin-Zugänge, durchgeführte Tests und Ticket-Verlauf werden dokumentiert."
+    }
+  ]
+}

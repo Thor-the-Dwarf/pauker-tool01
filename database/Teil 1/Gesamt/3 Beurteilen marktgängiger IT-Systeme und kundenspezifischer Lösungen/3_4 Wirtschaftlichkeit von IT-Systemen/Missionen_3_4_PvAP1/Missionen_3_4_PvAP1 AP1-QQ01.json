@@ -1,0 +1,107 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Wirtschaftlichkeit von IT-Systemen (3.4)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zur Wirtschaftlichkeit von IT-Systemen zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Anschaffungskosten",
+    "Betriebskosten",
+    "Fixe Kosten",
+    "Variable Kosten",
+    "Lizenzkosten",
+    "Finanzierungskosten",
+    "Leasing",
+    "Kauf",
+    "Miete",
+    "Pay-per-use",
+    "Auslastungsfähigkeit",
+    "Anpassungsfähigkeit",
+    "Quantitativer Angebotsvergleich",
+    "Qualitativer Angebotsvergleich",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Einmalige oder initiale Kosten für Beschaffung/Implementierung (z. B. Hardware, Setup, Rollout).",
+      "correct": "Anschaffungskosten"
+    },
+    {
+      "text": "Laufende Kosten im Betrieb (z. B. Strom, Wartung, Support, Personalaufwand, Rechenzentrum).",
+      "correct": "Betriebskosten"
+    },
+    {
+      "text": "Kosten, die unabhängig von der Nutzung anfallen (z. B. Grundgebühr, Miete, Festgehälter).",
+      "correct": "Fixe Kosten"
+    },
+    {
+      "text": "Kosten, die mit Nutzung/Menge steigen oder fallen (z. B. pro User, pro Transaktion, Verbrauch).",
+      "correct": "Variable Kosten"
+    },
+    {
+      "text": "Kosten für Nutzungsrechte an Software (z. B. pro Gerät, pro User, Abo, Subscription).",
+      "correct": "Lizenzkosten"
+    },
+    {
+      "text": "Kosten durch Kapitalbeschaffung oder Zahlungsaufschub (z. B. Zinsen, Gebühren, Kreditkosten).",
+      "correct": "Finanzierungskosten"
+    },
+    {
+      "text": "Nutzung gegen regelmäßige Raten; Eigentum bleibt meist beim Anbieter, oft mit Laufzeit und Restwert.",
+      "correct": "Leasing"
+    },
+    {
+      "text": "Einmal zahlen und Eigentum erwerben; Risiko für Wartung/Abschreibung liegt stärker beim Käufer.",
+      "correct": "Kauf"
+    },
+    {
+      "text": "Zeitlich begrenzte Nutzung gegen regelmäßige Zahlung; keine Eigentumsübertragung.",
+      "correct": "Miete"
+    },
+    {
+      "text": "Abrechnung nach tatsächlicher Nutzung (z. B. pro Stunde, pro GB, pro Request).",
+      "correct": "Pay-per-use"
+    },
+    {
+      "text": "Bewertet, wie gut ein System Lastspitzen abfangen und Ressourcen effizient nutzen kann.",
+      "correct": "Auslastungsfähigkeit"
+    },
+    {
+      "text": "Bewertet, wie gut ein System an neue Anforderungen angepasst werden kann (z. B. Skalierung, Module, Schnittstellen).",
+      "correct": "Anpassungsfähigkeit"
+    },
+    {
+      "text": "Vergleich anhand messbarer Zahlen: Gesamtkosten, TCO, Kosten pro User/Monat, Vertragslaufzeit, Zinsen.",
+      "correct": "Quantitativer Angebotsvergleich"
+    },
+    {
+      "text": "Vergleich anhand nicht nur Zahlen: Supportqualität, Usability, Risiken, Flexibilität, Anbieterstabilität.",
+      "correct": "Qualitativer Angebotsvergleich"
+    },
+    {
+      "text": "Beispiel: '15 € pro Benutzer und Monat' ist typischerweise dieser Kostenblock.",
+      "correct": "Lizenzkosten"
+    },
+    {
+      "text": "Beispiel: 'Stromkosten für Server + Admin-Zeit für Patches' gehört typischerweise hierhin.",
+      "correct": "Betriebskosten"
+    },
+    {
+      "text": "Beispiel: 'Grundgebühr 500 € monatlich, egal wie viele Tickets anfallen' ist das.",
+      "correct": "Fixe Kosten"
+    },
+    {
+      "text": "Beispiel: '0,02 € pro API-Call' ist das.",
+      "correct": "Variable Kosten"
+    },
+    {
+      "text": "Wenn du Kauf vs. Leasing vs. Miete vs. nutzungsbasierte Abrechnung gegenüberstellst, ist das ein.",
+      "correct": "Quantitativer Angebotsvergleich"
+    },
+    {
+      "text": "Wenn du Anbieter A trotz höherem Preis nimmst, weil er bessere SLA, schnelleren Support und geringeres Risiko bietet, ist das primär ein.",
+      "correct": "Qualitativer Angebotsvergleich"
+    }
+  ]
+}

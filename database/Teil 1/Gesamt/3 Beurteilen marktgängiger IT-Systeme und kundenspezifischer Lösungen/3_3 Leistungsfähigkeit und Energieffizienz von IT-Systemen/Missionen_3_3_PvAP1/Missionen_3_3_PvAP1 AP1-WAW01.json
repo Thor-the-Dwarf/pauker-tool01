@@ -1,0 +1,187 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Leistungsfähigkeit & Energieeffizienz von IT-Systemen",
+  "description": "Schritt 1: Passende Kenngröße/Technik/Regel wählen (What) · Schritt 2: Zutreffende Begründungen markieren (Why).",
+  "cases": [
+    {
+      "id": "c01",
+      "profile": "Ein PC wirkt „langsam“. Du willst zuerst herausfinden, ob es eher CPU, RAM oder Datenspeicher ist – ohne sofort Teile zu tauschen.",
+      "tags": ["Kenngrößen", "CPU", "RAM", "Datenspeicher", "Diagnose"],
+      "options": [
+        {
+          "id": "ram_bottleneck",
+          "label": "RAM als Engpass (zu wenig Arbeitsspeicher)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn RAM knapp ist, wird stark auf Datenträger ausgelagert (Swap/Pagefile) und alles wird zäh.", "correct": true },
+            { "id": "w2", "text": "Viele parallel offene Anwendungen/Browser-Tabs erhöhen RAM-Bedarf massiv.", "correct": true },
+            { "id": "w3", "text": "RAM-Mangel macht WLAN langsamer, weil Funkkanäle überlastet sind.", "correct": false },
+            { "id": "w4", "text": "RAM hat keinen Einfluss auf Multitasking, nur CPU zählt.", "correct": false }
+          ]
+        },
+        {
+          "id": "cpu_bottleneck",
+          "label": "CPU als Engpass (Rechenlast zu hoch)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bei dauerhafter 100%-CPU-Last werden rechenintensive Aufgaben langsam (z. B. Encoding).", "correct": true },
+            { "id": "w2", "text": "CPU-Engpass ist typisch bei vielen Hintergrundprozessen oder schwerer Berechnung.", "correct": true },
+            { "id": "w3", "text": "CPU-Last erklärt automatisch langsame Dateizugriffe auf HDD/SSD.", "correct": false },
+            { "id": "w4", "text": "CPU-Engpass ist unabhängig von RAM, Swap und Speicherzugriffen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Für „alles zäh bei vielen offenen Dingen“ ist RAM-Mangel typisch (Swap). CPU-Engpass ist eher bei echter Rechenlast sichtbar."
+    },
+    {
+      "id": "c02",
+      "profile": "Ein Server soll ausfallsicherer werden. Du willst, dass bei Ausfall einer Festplatte der Betrieb weiterläuft und Daten nicht sofort weg sind.",
+      "tags": ["RAID", "Datenspeicher", "Verfügbarkeit"],
+      "options": [
+        {
+          "id": "raid",
+          "label": "RAID (z. B. RAID 1/5/6 je nach Ziel)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RAID kann Redundanz schaffen, sodass ein Plattenausfall nicht sofort zum Stillstand führt.", "correct": true },
+            { "id": "w2", "text": "Je nach RAID-Level gibt es unterschiedliche Ziele (Spiegelung, Parität, Performance).", "correct": true },
+            { "id": "w3", "text": "RAID ersetzt Backups vollständig.", "correct": false },
+            { "id": "w4", "text": "RAID betrifft nur Dateisysteme, nicht die Speicherebene.", "correct": false }
+          ]
+        },
+        {
+          "id": "filesystem",
+          "label": "Dateisystem (z. B. NTFS/ext4)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateisystem regelt Struktur/Metadaten/Rechte, nicht automatisch Hardware-Redundanz.", "correct": true },
+            { "id": "w2", "text": "Kann Features wie Journaling bieten, aber schützt nicht vor Plattenausfall allein.", "correct": true },
+            { "id": "w3", "text": "Macht aus einer einzelnen Festplatte automatisch ein redundantes System.", "correct": false },
+            { "id": "w4", "text": "Ist primär ein Netzwerkstandard (wie Ethernet).", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Ausfallsicherheit gegen Plattenausfall: RAID. Dateisystem ist wichtig, aber keine Speichermirroring-Lösung."
+    },
+    {
+      "id": "c03",
+      "profile": "Du planst eine Netzwerkstrecke zwischen zwei Etagen/Serverräumen. Es geht um hohe Bandbreite, geringe Störanfälligkeit und längere Strecken.",
+      "tags": ["LWL", "Ethernet", "Bandbreite", "Infrastruktur"],
+      "options": [
+        {
+          "id": "lwl",
+          "label": "LWL (Glasfaser)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Hohe Bandbreite und geeignet für längere Strecken als typische Kupferverkabelung.", "correct": true },
+            { "id": "w2", "text": "Unempfindlicher gegen elektromagnetische Störungen als Kupfer.", "correct": true },
+            { "id": "w3", "text": "Ist ein WLAN-Standard für Funknetze.", "correct": false },
+            { "id": "w4", "text": "Hat per Definition immer geringere Bandbreite als Kupfer.", "correct": false }
+          ]
+        },
+        {
+          "id": "wlan_standard",
+          "label": "WLAN-Standard (z. B. Wi-Fi 6/6E/7)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Relevant für Funknetze, nicht für stabile Gebäude-Backbones zwischen Räumen.", "correct": true },
+            { "id": "w2", "text": "Bandbreite hängt stark von Umgebung, Störungen und Anzahl Clients ab.", "correct": true },
+            { "id": "w3", "text": "Ist die Standardlösung für Serverraum-Uplinks, weil sie zuverlässiger als Kabel ist.", "correct": false },
+            { "id": "w4", "text": "Passt eher für Endgeräte-Zugang, nicht für core/backbone Verbindungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für Backbone/Uplinks und längere Strecken: LWL. WLAN-Standards sind für Funkzugang, nicht als stabiles Etagen-Backbone."
+    },
+    {
+      "id": "c04",
+      "profile": "Ein Kunde sagt: „Wir wollen schnelles WLAN.“ Du musst die Leistungsfähigkeit realistisch einordnen und erklären, warum „Standard“ allein nicht reicht.",
+      "tags": ["WLAN-Standards", "Kenngrößen", "Praxis"],
+      "options": [
+        {
+          "id": "wlan_kennzahlen",
+          "label": "WLAN-Standards + Praxisfaktoren (Band, Kanalbreite, Clients, Störungen)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Der Standard (z. B. Wi-Fi 6/6E/7) ist nur ein Teil – Umgebung und Auslastung sind entscheidend.", "correct": true },
+            { "id": "w2", "text": "Mehr Clients teilen sich Airtime; reale Datenrate sinkt mit Auslastung.", "correct": true },
+            { "id": "w3", "text": "WLAN liefert immer exakt die theoretische Maximalrate aus dem Datenblatt.", "correct": false },
+            { "id": "w4", "text": "Kanalplanung und AP-Positionierung beeinflussen Durchsatz und Stabilität stark.", "correct": true }
+          ]
+        },
+        {
+          "id": "ethernet_standard",
+          "label": "Ethernet-Standard (z. B. 1G/10G)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ethernet ist kabelgebunden und liefert planbarere Performance als WLAN.", "correct": true },
+            { "id": "w2", "text": "Erklärt nicht direkt „schnelles WLAN“, sondern ist Alternative/Backbone.", "correct": true },
+            { "id": "w3", "text": "Ethernet-Standard bestimmt automatisch die WLAN-Datenrate der Clients.", "correct": false },
+            { "id": "w4", "text": "Kann relevant sein, weil AP-Uplink (PoE/Switch) sonst WLAN ausbremst.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "WLAN-Performance: Standard + reale Faktoren (Störungen, Airtime, Kanalplanung). Ethernet ist planbarer und oft Backbone/Uplink-Thema."
+    },
+    {
+      "id": "c05",
+      "profile": "Du willst den Energieverbrauch eines Geräts für einen Tag abschätzen. Das Netzteil liefert 230 V, das Gerät zieht im Schnitt 0,4 A.",
+      "tags": ["Energiegrößen", "Strom", "Spannung", "Leistung", "P=U*I"],
+      "options": [
+        {
+          "id": "leistung_pui",
+          "label": "Leistung berechnen mit P = U × I",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mit Spannung (U) und Strom (I) kannst du elektrische Leistung (P) bestimmen.", "correct": true },
+            { "id": "w2", "text": "Ergebnis ist in Watt (W).", "correct": true },
+            { "id": "w3", "text": "Die Formel lautet P = U ÷ I.", "correct": false },
+            { "id": "w4", "text": "Ohne U oder I ist keine Leistungsberechnung möglich.", "correct": true }
+          ]
+        },
+        {
+          "id": "energie_wp_t",
+          "label": "Energie berechnen mit W = P × t",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Damit berechnest du Energie/Arbeit über Zeit (z. B. Wh/kWh).", "correct": true },
+            { "id": "w2", "text": "Du brauchst erst P, dann kannst du mit der Laufzeit t den Verbrauch bestimmen.", "correct": true },
+            { "id": "w3", "text": "W ist hier Watt, nicht Energie.", "correct": false },
+            { "id": "w4", "text": "Diese Formel ersetzt P=U×I vollständig und macht U/I unnötig.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Erst Leistung: P = U×I (W). Danach Energie/Verbrauch: W = P×t (z. B. Wh/kWh) über die Laufzeit."
+    },
+    {
+      "id": "c06",
+      "profile": "Zwei Netzteile liefern beide 500 W. Netzteil A hat 90% Wirkungsgrad, Netzteil B hat 80%. Du willst begründen, welches energieeffizienter ist und warum das Wärme beeinflusst.",
+      "tags": ["Wirkungsgrad", "Energieeffizienz", "Netzteil", "Wärme"],
+      "options": [
+        {
+          "id": "wirkungsgrad",
+          "label": "Wirkungsgrad (η) als Effizienzmaß",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Höherer Wirkungsgrad bedeutet: weniger Verlustleistung bei gleicher Ausgangsleistung.", "correct": true },
+            { "id": "w2", "text": "Weniger Verlustleistung heißt: weniger Abwärme im Netzteil/PC.", "correct": true },
+            { "id": "w3", "text": "80% Wirkungsgrad ist immer besser als 90%, weil weniger Strom fließt.", "correct": false },
+            { "id": "w4", "text": "Effizienz beeinflusst Stromkosten, Kühlung und langfristige Belastung.", "correct": true }
+          ]
+        },
+        {
+          "id": "zertifikat_egal",
+          "label": "Zertifikate/Kennzeichnungen sind egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zertifikate/Kennzeichnungen können Orientierung geben (z. B. Effizienzklassen, Sicherheitsprüfungen).", "correct": true },
+            { "id": "w2", "text": "Sie sind immer nur Marketing und enthalten nie technische Anforderungen.", "correct": false },
+            { "id": "w3", "text": "Gerade bei Netzteilen sind geprüfte Effizienz/Sicherheit im Betrieb relevant.", "correct": true },
+            { "id": "w4", "text": "Kennzeichnungen ersetzen keine Auswahl nach realem Bedarf, helfen aber beim Vergleich.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wirkungsgrad: 90% ist effizienter als 80% → weniger Verlustleistung/Abwärme bei gleicher Ausgangsleistung. Kennzeichnungen helfen beim Vergleich, ersetzen aber keine Bedarfsprüfung."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Leistungsübergabe & Einweisungen – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils den passenden Begriff zur Leistungsübergabe mit der richtigen Kurzbeschreibung und einem typischen Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Begriff/Dokument",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle ein Element aus Abnahme oder Dokumentationsarten.",
+    "column2": "Wähle die passende Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "abnahmeprotokoll",
+      "name": "Abnahmeprotokoll",
+      "description": "Dokumentiert die formale Abnahme einer Leistung: was abgenommen wird, Ergebnis, ggf. Mängel, Freigabe und Unterschriften.",
+      "example": "Nach Rollout wird die Leistung offiziell abgenommen; offene Punkte werden als Restarbeiten im Protokoll festgehalten."
+    },
+    {
+      "id": "gegenstand_der_abnahme",
+      "name": "Gegenstand der Abnahme",
+      "description": "Klare Beschreibung, welche Leistung/Komponente konkret geprüft und abgenommen wird (Scope der Abnahme).",
+      "example": "Abnahmegegenstand: „Firewall-Cluster inkl. VPN, Webfilter, Logging und Failover-Verkabelung“."
+    },
+    {
+      "id": "beteiligte_personen",
+      "name": "Beteiligte Personen",
+      "description": "Nennung der an der Abnahme beteiligten Rollen/Personen (Auftraggeber, Auftragnehmer, ggf. Zeugen/IT-Sicherheit).",
+      "example": "Kunde (IT-Leitung), Dienstleister (Projektleiter), Admin (Betrieb), Security (ISB) nehmen gemeinsam ab."
+    },
+    {
+      "id": "ort_datum_uhrzeit",
+      "name": "Ort, Datum und Uhrzeit",
+      "description": "Dokumentiert, wann und wo die Abnahme stattgefunden hat; wichtig für Nachvollziehbarkeit und Fristen.",
+      "example": "Abnahme am 2026-02-01 um 10:30 Uhr im Besprechungsraum 2 (oder per Videokonferenz)."
+    },
+    {
+      "id": "abnahmekriterien",
+      "name": "Abnahmekriterien",
+      "description": "Konkrete Prüfpunkte, die erfüllt sein müssen, damit die Leistung als abgenommen gilt (Soll-Kriterien).",
+      "example": "Kriterien: VPN-Verbindung stabil, Failover-Test erfolgreich, Logging aktiv, Admin-Zugänge dokumentiert."
+    },
+    {
+      "id": "maengel_restpunkte",
+      "name": "Mängel/Restpunkte",
+      "description": "Festhalten von Abweichungen und offenen Punkten inkl. Priorität, Verantwortlichkeit und Termin zur Nachbesserung.",
+      "example": "Restpunkt: „Doku der VLANs ergänzen“ bis Freitag; Verantwortlich: Dienstleister."
+    },
+    {
+      "id": "benutzerdokumentation",
+      "name": "Benutzerdokumentation",
+      "description": "Anleitung für Endanwender: Bedienung, typische Workflows, Fehlermeldungen, Kontaktwege.",
+      "example": "Kurzanleitung: „VPN verbinden“, „Passwort ändern“, „Drucker hinzufügen“ inkl. Screenshots."
+    },
+    {
+      "id": "schnittstellendokumentation",
+      "name": "Schnittstellendokumentation",
+      "description": "Beschreibung von APIs/Integrationen: Endpunkte, Datenformate, Auth, Fehlercodes, Limits, Beispiele.",
+      "example": "REST-API-Doku: /tickets, Token-Auth, JSON-Schema, Beispielrequests und Antwortcodes."
+    },
+    {
+      "id": "programmdokumentation",
+      "name": "Programmdokumentation",
+      "description": "Technische Doku für Entwickler/Betrieb: Architektur, Module, Konfiguration, Build/Deploy, Wartung.",
+      "example": "Readme mit Build-Schritten, Konfig-Parametern, Logging, Release-Prozess und Komponentenübersicht."
+    },
+    {
+      "id": "netzwerkdokumentation",
+      "name": "Netzwerkdokumentation",
+      "description": "Dokumentiert Netzaufbau: IP-Plan, VLANs, Routing, Firewall-Regeln, WLAN-SSIDs, VPNs, Geräte/Ports.",
+      "example": "Netzplan mit VLAN 10/20, DHCP-Scopes, Firewall-Regeln und Switchport-Belegung für den neuen Standort."
+    },
+    {
+      "id": "testprotokolle",
+      "name": "Testprotokolle",
+      "description": "Nachweis über durchgeführte Tests: Testfälle, Ergebnisse, Abweichungen, Datum, Tester; Grundlage für Abnahme.",
+      "example": "Failover-Test: erfolgreich; Restore-Test: erfolgreich; VPN-Durchsatztest: 180 Mbit/s; alles protokolliert."
+    },
+    {
+      "id": "einweisung",
+      "name": "Einweisung/Übergabe",
+      "description": "Praktische Einführung für Nutzer oder Betriebsteam: Funktionen zeigen, Bedienung üben, Verantwortlichkeiten klären.",
+      "example": "Der Betrieb erhält eine 60-min Einweisung ins Firewall-Management inkl. typischer Änderungen und Notfallablauf."
+    }
+  ]
+}

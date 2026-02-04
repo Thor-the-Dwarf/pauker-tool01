@@ -1,0 +1,198 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Bedarfsgerechte Softwareauswahl",
+  "topic": "Anwendungssoftware, Betriebssysteme, IDE, Standard/Individual/Branchensoftware, Open Source vs. proprietär, Anpassbarkeit/Schnittstellen/Kompatibilität",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "softwareauswahl-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Begriffe richtig einordnen",
+      "subtitle": "Ordne die Begriffe den passenden Kategorien der Softwareauswahl zu.",
+      "hintDefault": "Tipp: Produktart (OS/App/IDE), Beschaffungsart (Standard/Individual/Branche), Lizenzmodell (Open Source/Proprietär), Bewertungskriterien (Anpassung/Schnittstellen/Kompatibilität).",
+      "sortColumns": [
+        { "zone": "produktart", "label": "Softwareprodukt-Typ", "hint": "(OS, Anwendung, IDE)" },
+        { "zone": "beschaffung", "label": "Standard/Individual/Branche", "hint": "(von der Stange vs. maßgeschneidert)" },
+        { "zone": "lizenz", "label": "Lizenzmodell", "hint": "(Open Source vs. proprietär)" },
+        { "zone": "kriterien", "label": "Auswahlkriterien", "hint": "(Anpassbarkeit, Schnittstellen, Kompatibilität)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Betriebssystem (OS)", "correctZone": "produktart" },
+        { "id": "s2", "text": "Anwendungssoftware", "correctZone": "produktart" },
+        { "id": "s3", "text": "IDE (Integrierte Entwicklungsumgebung)", "correctZone": "produktart" },
+        { "id": "s4", "text": "Standardsoftware", "correctZone": "beschaffung" },
+        { "id": "s5", "text": "Individualsoftware", "correctZone": "beschaffung" },
+        { "id": "s6", "text": "Branchensoftware", "correctZone": "beschaffung" },
+        { "id": "s7", "text": "Open Source", "correctZone": "lizenz" },
+        { "id": "s8", "text": "Proprietäre Software", "correctZone": "lizenz" },
+        { "id": "s9", "text": "Anpassbarkeit (Customizing)", "correctZone": "kriterien" },
+        { "id": "s10", "text": "Schnittstellen (APIs, Import/Export)", "correctZone": "kriterien" },
+        { "id": "s11", "text": "Kompatibilität (OS/Hardware/Dateiformate)", "correctZone": "kriterien" }
+      ]
+    },
+    {
+      "id": "softwareauswahl-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Softwareauswahl",
+      "subtitle": "Teste dein Wissen zu Typen, Lizenz und Auswahlkriterien.",
+      "hintDefault": "Alle Antworten müssen korrekt sein.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Kombination passt am besten zu einer IDE?",
+          "options": [
+            { "value": "a", "text": "Code-Editor + Build/Run + Debugger" },
+            { "value": "b", "text": "Router + Switch + Access Point" },
+            { "value": "c", "text": "CPU + RAM + Netzteil" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist ein typischer Vorteil von Standardsoftware?",
+          "options": [
+            { "value": "a", "text": "Immer exakt auf den Betrieb zugeschnitten" },
+            { "value": "b", "text": "Meist schneller verfügbar und erprobt" },
+            { "value": "c", "text": "Ohne Updates, daher stabiler" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was beschreibt „proprietäre Software“ am treffendsten?",
+          "options": [
+            { "value": "a", "text": "Quellcode frei nutzbar und änderbar" },
+            { "value": "b", "text": "Nutzung durch Lizenzbedingungen eingeschränkt, Quellcode meist geschlossen" },
+            { "value": "c", "text": "Software läuft nur im Browser" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welches Kriterium prüft, ob das Produkt mit vorhandenen Systemen zusammenspielt?",
+          "options": [
+            { "value": "a", "text": "Kompatibilität" },
+            { "value": "b", "text": "Meilenstein" },
+            { "value": "c", "text": "Kritischer Weg" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "softwareauswahl-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Von Bedarf zur Entscheidung",
+      "subtitle": "Bringe die Schritte einer bedarfsgerechten Softwareauswahl in die richtige Reihenfolge.",
+      "hintDefault": "Hinweis: Erst Bedarf/Umfeld, dann Optionen, dann Kriterien prüfen, dann Entscheidung.",
+      "rows": [
+        {
+          "key": "bedarf",
+          "label": "Bedarf klären (Ziele, Nutzer, Prozesse, Must-Haves)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "typ",
+          "label": "Softwaretyp festlegen (OS/Anwendung/IDE)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "bauart",
+          "label": "Bauart wählen (Standardsoftware vs. Individualsoftware vs. Branchensoftware)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "lizenz",
+          "label": "Lizenzmodell prüfen (Open Source vs. proprietär, Nutzungsrechte/Compliance)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "kriterien",
+          "label": "Kriterien checken (Anpassbarkeit, Schnittstellen, Kompatibilität)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "test",
+          "label": "Pilot/Test durchführen (Proof of Concept, Testfälle, Feedback)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "entscheidung",
+          "label": "Entscheidung dokumentieren (Begründung, Rollout-Plan, Betrieb/Support)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

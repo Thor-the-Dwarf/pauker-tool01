@@ -1,0 +1,114 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Dateiformate (AP1) – Text • Binär • Encoding • CSV • JSON • XML • Schema – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Kombiniere jeweils einen Begriff, die passende Kurzbeschreibung und ein typisches Praxisbeispiel aus AP1-Aufgaben (Schnittstellen, Import/Export, Datenqualität, Fehlersuche).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle ein Dateiformat oder Konzept.",
+    "column2": "Wähle die passende Erklärung.",
+    "column3": "Ordne ein realistisches Beispiel aus der Prüfung/Praxis zu."
+  },
+  "sets": [
+    {
+      "id": "textformat",
+      "name": "Textformat",
+      "description": "Menschenlesbar, zeilen-/zeichenbasiert; ideal für Schnittstellen, Logs und einfache Bearbeitung.",
+      "example": "Konfigurationsdatei als JSON oder Logfile als TXT, damit man Fehler schnell findet."
+    },
+    {
+      "id": "binaerformat",
+      "name": "Binärformat",
+      "description": "Nicht direkt lesbar, kompakt und oft komplex strukturiert; wird typischerweise von Programmen verarbeitet.",
+      "example": "Ein Bild (JPG/PNG) oder Video (MP4) ist klein und effizient, aber nicht sinnvoll per Texteditor editierbar."
+    },
+    {
+      "id": "txt",
+      "name": "TXT",
+      "description": "Unstrukturiertes Textformat ohne feste Felder; gut für einfache Notizen/Logs.",
+      "example": "Fehlermeldungen/Protokolle in einer .txt sammeln und durchsuchen."
+    },
+    {
+      "id": "csv",
+      "name": "CSV",
+      "description": "Tabellarisches Textformat: Werte pro Zeile, getrennt durch ein Trennzeichen; simpel, aber fehleranfällig ohne klare Regeln.",
+      "example": "Azubi-Import: Mitarbeiterliste wird als CSV geliefert und in eine Datenbank eingelesen."
+    },
+    {
+      "id": "csv_trennzeichen",
+      "name": "CSV: Trennzeichen",
+      "description": "Separator zwischen Spalten (z. B. Komma oder Semikolon); muss auf beiden Seiten gleich sein.",
+      "example": "Excel exportiert mit Semikolon, Import erwartet Komma → Spalten landen falsch, alles in einer Spalte."
+    },
+    {
+      "id": "csv_quoting",
+      "name": "CSV: Quoting (Anführungszeichen)",
+      "description": "Schützt Felder, die selbst Trennzeichen/Zeilenumbrüche enthalten; sonst zerfällt die Struktur.",
+      "example": "Adresse enthält Komma („Musterstraße 1, EG“) → ohne Quotes wird das als zusätzliche Spalte interpretiert."
+    },
+    {
+      "id": "json",
+      "name": "JSON",
+      "description": "Strukturiertes Textformat mit Objekten/Arrays; gut für APIs/Schnittstellen; Schema optional, aber sinnvoll.",
+      "example": "Web-Frontend lädt Daten als JSON von einer REST-API und rendert eine Tabelle."
+    },
+    {
+      "id": "xml",
+      "name": "XML",
+      "description": "Markup-basiertes Textformat mit Tags/Hierarchien; gut für strukturierte Dokumente und Validierung über Schema.",
+      "example": "Austauschformat in älteren/Enterprise-Systemen: Bestelldaten als XML übertragen."
+    },
+    {
+      "id": "pdf",
+      "name": "PDF",
+      "description": "Binärformat für Layout/Rendering von Dokumenten; nicht primär für strukturierte Datenverarbeitung gedacht.",
+      "example": "Rechnung als PDF ist gut zum Anzeigen/Drucken, aber schlecht zum automatischen Import von Feldern."
+    },
+    {
+      "id": "office_zip",
+      "name": "DOCX/XLSX (Office-Formate)",
+      "description": "Binär aus Sicht der Praxis, intern oft ZIP-Container mit XML-Strukturen; komplex, aber standardisiert.",
+      "example": "Automatischer Report-Export als XLSX; zum maschinellen Import nimmt man lieber CSV/JSON."
+    },
+    {
+      "id": "encoding_utf8",
+      "name": "Encoding: UTF-8",
+      "description": "Zeichenkodierung: legt fest, wie Bytes zu Zeichen werden; UTF-8 ist Standard für Umlaute/Sonderzeichen.",
+      "example": "CSV zeigt „MÃ¼ller“ statt „Müller“ → Datei wurde als UTF-8 gespeichert, aber als Latin-1 gelesen (oder umgekehrt)."
+    },
+    {
+      "id": "bom",
+      "name": "BOM (Byte Order Mark)",
+      "description": "Optionaler Präfix bei UTF-8/UTF-16; kann Parser/Import stören, wenn unerwartet.",
+      "example": "Erste Spalte heißt plötzlich „﻿id“ (mit unsichtbarem Zeichen) → BOM am Dateianfang."
+    },
+    {
+      "id": "schema_validierung",
+      "name": "Schema / Validierung",
+      "description": "Regeln für Struktur und Datentypen; verhindert „falsche“ Daten und macht Fehler früh sichtbar.",
+      "example": "API nimmt nur JSON an, bei dem „id“ eine Zahl ist und „email“ Pflichtfeld ist; sonst 400-Fehler."
+    },
+    {
+      "id": "json_schema",
+      "name": "JSON Schema",
+      "description": "Formale Spezifikation, die JSON-Struktur/Datentypen/Pflichtfelder prüfbar macht.",
+      "example": "CI-Pipeline validiert JSON-Config gegen Schema, bevor ein Deployment startet."
+    },
+    {
+      "id": "xml_schema_xsd",
+      "name": "XML Schema (XSD)",
+      "description": "Schema-Definition für XML: legt fest, welche Tags/Attribute erlaubt sind und in welcher Struktur.",
+      "example": "Lieferant sendet XML; XSD-Validierung findet fehlende Pflicht-Tags sofort."
+    },
+    {
+      "id": "struktur_vs_inhalt",
+      "name": "Struktur vs Inhalt",
+      "description": "Format definiert Aufbau (Felder/Hierarchie), Inhalt sind die Daten selbst; Fehler können in beidem liegen.",
+      "example": "JSON ist syntaktisch korrekt, aber Feldname ist falsch („mail“ statt „email“) → Struktur passt nicht zum erwarteten Schema."
+    }
+  ]
+}

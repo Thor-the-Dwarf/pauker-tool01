@@ -1,0 +1,60 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Informationen aufbereiten und präsentieren – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne jeden Begriff der passenden Kurzbeschreibung und einem typischen Praxisbeispiel zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Begriff.",
+    "column2": "Wähle die richtige Definition.",
+    "column3": "Ordne ein realistisches Beispiel zu."
+  },
+  "sets": [
+    {
+      "id": "technische_texte",
+      "name": "Technische Texte",
+      "description": "Sachliche Texte mit Fachbegriffen, Daten und klaren Anforderungen (z. B. Spezifikation, Doku, Handbuch).",
+      "example": "Du schreibst eine Installationsanleitung mit Voraussetzungen, Schrittfolge, Screenshots, Fehlermeldungen und Troubleshooting."
+    },
+    {
+      "id": "nicht_technische_texte",
+      "name": "Nicht-technische Texte",
+      "description": "Texte für Entscheider oder Anwender ohne tiefe Technik; Fokus auf Nutzen, Auswirkungen, Kosten und Risiken.",
+      "example": "Du erstellst eine Management-Zusammenfassung: Was ändert sich, warum, welche Kosten, welche Risiken, welches Ergebnis."
+    },
+    {
+      "id": "digitale_suchabfragen",
+      "name": "Digitale Suchabfragen",
+      "description": "Gezieltes Suchen nach Informationen mit klaren Begriffen, Filtern und Suchstrategien.",
+      "example": "Statt „VPN Problem“ suchst du nach „Windows 11 VPN L2TP Fehler 809“ und findest schneller passende Treffer."
+    },
+    {
+      "id": "suchoperatoren",
+      "name": "Einsatz von Suchoperatoren",
+      "description": "Operatoren, um Suchtreffer einzugrenzen (z. B. site:, filetype:, \"...\", -, OR).",
+      "example": "Du suchst nach einer offiziellen Anleitung: site:microsoft.com \"BitLocker\" filetype:pdf -forum."
+    },
+    {
+      "id": "englische_texte_auswerten",
+      "name": "Auswertung von englischen Texten",
+      "description": "Verstehen und Zusammenfassen englischer Fachtexte, z. B. Release Notes, Docs, Tickets oder RFCs.",
+      "example": "Du liest englische Release Notes, filterst Breaking Changes heraus und schreibst eine kurze deutsche Risiko-/Update-Notiz fürs Team."
+    },
+    {
+      "id": "qualitaetsmerkmale_praesentationen",
+      "name": "Qualitätsmerkmale von Präsentationen",
+      "description": "Klarer roter Faden, zielgruppengerechte Sprache, gute Visuals, lesbare Folien, belastbare Quellen, passende Menge.",
+      "example": "Für Azubis nutzt du einfache Grafiken und Beispiele; für Entscheider nutzt du 1 Folie Problem, 1 Lösung, 1 Kosten/Nutzen, 1 Risiko."
+    },
+    {
+      "id": "medienkompetenz",
+      "name": "Medienkompetenz",
+      "description": "Bewerten und verantwortungsvoll nutzen von Quellen, Medien und Tools (Bias, Fake, Urheberrecht, Datenschutz).",
+      "example": "Du prüfst Quelle/Autor/Datum, nutzt keine urheberrechtlich geschützten Grafiken ohne Lizenz und anonymisierst personenbezogene Daten in Screenshots."
+    }
+  ]
+}

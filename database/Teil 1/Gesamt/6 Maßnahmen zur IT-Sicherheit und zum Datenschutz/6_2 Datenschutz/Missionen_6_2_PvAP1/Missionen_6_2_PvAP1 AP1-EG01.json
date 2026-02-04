@@ -1,0 +1,145 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Datenschutz (DSGVO/BDSG)",
+  "topic": "Datenschutzgesetze (DSGVO, BDSG), personenbezogene Daten, Rechte der Betroffenen",
+  "estimated_minutes": 30,
+  "sections": [
+    {
+      "id": "datenschutz-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Begriffe im Datenschutz zuordnen",
+      "subtitle": "Ordne jede Karte der passenden Kategorie zu.",
+      "hintDefault": "Tipp: Gesetz = Regelwerk. Personenbezogen = bezieht sich auf identifizierbare Person. Rechte = was Betroffene verlangen dürfen.",
+      "sortColumns": [
+        { "zone": "gesetze", "label": "Datenschutzgesetze", "hint": "(DSGVO, BDSG)" },
+        { "zone": "personenbezogen", "label": "Personenbezogene Daten", "hint": "(identifizierbare Person)" },
+        { "zone": "rechte", "label": "Rechte der Betroffenen", "hint": "(Auskunft, Löschung, …)" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "DSGVO: EU-weites Regelwerk für Verarbeitung personenbezogener Daten.", "correctZone": "gesetze" },
+        { "id": "s2", "text": "BDSG: deutsches Datenschutzgesetz, ergänzt/konkretisiert die DSGVO national.", "correctZone": "gesetze" },
+        { "id": "s3", "text": "Name + Adresse: klassische personenbezogene Daten.", "correctZone": "personenbezogen" },
+        { "id": "s4", "text": "E-Mail-Adresse kann personenbezogen sein, wenn sie einer Person zugeordnet werden kann.", "correctZone": "personenbezogen" },
+        { "id": "s5", "text": "IP-Adresse kann personenbezogen sein, je nach Kontext/Zuordenbarkeit.", "correctZone": "personenbezogen" },
+        { "id": "s6", "text": "Recht auf Auskunft: Welche Daten werden verarbeitet und wofür?", "correctZone": "rechte" },
+        { "id": "s7", "text": "Recht auf Berichtigung: falsche Daten müssen korrigiert werden.", "correctZone": "rechte" },
+        { "id": "s8", "text": "Recht auf Löschung („Vergessenwerden“) unter bestimmten Voraussetzungen.", "correctZone": "rechte" },
+        { "id": "s9", "text": "Widerspruchsrecht: Verarbeitung in bestimmten Fällen stoppen lassen (z. B. Direktwerbung).", "correctZone": "rechte" }
+      ]
+    },
+    {
+      "id": "quiz-datenschutz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kurz-Quiz Datenschutz",
+      "subtitle": "Nur eine Antwort pro Frage ist korrekt.",
+      "hintDefault": "Tipp: DSGVO = EU. BDSG = DE. Personenbezogen = identifizierbar. Rechte = Auskunft/Berichtigung/Löschung etc.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage trifft am besten zu?",
+          "options": [
+            { "value": "a", "text": "DSGVO gilt nur in Deutschland." },
+            { "value": "b", "text": "BDSG ist ein EU-weites Gesetz." },
+            { "value": "c", "text": "DSGVO ist EU-weit, BDSG ergänzt national in Deutschland." }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "q2",
+          "text": "2. Wann sind Daten „personenbezogen“?",
+          "options": [
+            { "value": "a", "text": "Wenn sie sich auf eine identifizierte oder identifizierbare Person beziehen." },
+            { "value": "b", "text": "Nur wenn sie auf Papier gedruckt sind." },
+            { "value": "c", "text": "Nur wenn sie ein Passwort enthalten." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welches ist ein typisches Recht der Betroffenen?",
+          "options": [
+            { "value": "a", "text": "Recht auf kostenlose Hardware" },
+            { "value": "b", "text": "Recht auf Auskunft über gespeicherte Daten" },
+            { "value": "c", "text": "Recht auf Umgehung von Sicherheitsmaßnahmen" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "betroffenenanfrage-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: Betroffenenanfrage richtig abarbeiten",
+      "subtitle": "Bringe die Schritte in eine sinnvolle Reihenfolge, wenn eine Person ihre Datenschutzrechte geltend macht.",
+      "hintDefault": "Hinweis: Erst Identität klären, dann Daten finden, dann prüfen, dann umsetzen, dann dokumentieren.",
+      "rows": [
+        {
+          "key": "ident",
+          "label": "Identität/Anfrage klären (wer fragt was an?)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "finden",
+          "label": "Datenquellen prüfen (Systeme, Logs, Backups, Drittdienstleister)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "pruefen",
+          "label": "Rechtsgrundlage/Fristen/Schutz prüfen (z. B. Aufbewahrungspflichten, Drittrechte)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "umsetzen",
+          "label": "Recht umsetzen (Auskunft/Berichtigung/Löschung/Widerspruch) und Rückmeldung geben",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "doku",
+          "label": "Dokumentieren (Nachweis, Entscheidungen, Kommunikation, erledigt markieren)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

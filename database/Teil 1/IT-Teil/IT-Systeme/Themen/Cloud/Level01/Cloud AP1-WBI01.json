@@ -1,0 +1,296 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Cloud: Vorteile, Risiken & Shared Responsibility (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "benefit_scaling",
+      "name": "Vorteil: Skalierung",
+      "attributes": {
+        "is_benefit": true,
+        "is_risk": false,
+        "is_shared_responsibility": false,
+        "benefit_scaling": true,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "benefit_fast_provisioning",
+      "name": "Vorteil: schnelle Bereitstellung",
+      "attributes": {
+        "is_benefit": true,
+        "is_risk": false,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": true,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "benefit_opex_not_capex",
+      "name": "Vorteil: OPEX statt CAPEX",
+      "attributes": {
+        "is_benefit": true,
+        "is_risk": false,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": true,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "benefit_availability_options",
+      "name": "Vorteil: Verfügbarkeit-Optionen",
+      "attributes": {
+        "is_benefit": true,
+        "is_risk": false,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": true,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "risk_vendor_lock_in",
+      "name": "Risiko: Vendor Lock-in",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": true,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": true,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "risk_cost_explosion",
+      "name": "Risiko: Kostenexplosion",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": true,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": true,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "risk_data_location_compliance",
+      "name": "Risiko: Datenstandort & Compliance",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": true,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": true,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "risk_misconfiguration",
+      "name": "Risiko: Fehlkonfiguration",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": true,
+        "is_shared_responsibility": false,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": true,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility Model",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": false,
+        "is_shared_responsibility": true,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": true,
+        "provider_secures_cloud": true,
+        "customer_secures_config_data_access": true
+      }
+    },
+    {
+      "id": "provider_responsibility",
+      "name": "Provider-Verantwortung: „Cloud“ absichern",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": false,
+        "is_shared_responsibility": true,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": true,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": false,
+        "risk_data_location_compliance": false,
+        "risk_misconfiguration": false,
+        "provider_secures_cloud": true,
+        "customer_secures_config_data_access": false
+      }
+    },
+    {
+      "id": "customer_responsibility",
+      "name": "Kunden-Verantwortung: Konfiguration + Daten + Zugriffe absichern",
+      "attributes": {
+        "is_benefit": false,
+        "is_risk": false,
+        "is_shared_responsibility": true,
+        "benefit_scaling": false,
+        "benefit_fast_provisioning": false,
+        "benefit_opex_not_capex": false,
+        "benefit_availability_options": false,
+        "risk_vendor_lock_in": false,
+        "risk_cost_explosion": true,
+        "risk_data_location_compliance": true,
+        "risk_misconfiguration": true,
+        "provider_secures_cloud": false,
+        "customer_secures_config_data_access": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Bin ich ein Vorteil der Cloud?",
+      "attributeKey": "is_benefit"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Bin ich ein Risiko/Nachteil der Cloud?",
+      "attributeKey": "is_risk"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um das Shared-Responsibility-Modell (wer macht was)?",
+      "attributeKey": "is_shared_responsibility"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Skalierung (hoch/runter, Ressourcen flexibel)?",
+      "attributeKey": "benefit_scaling"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es um schnelle Bereitstellung (Provisioning/Deployment)?",
+      "attributeKey": "benefit_fast_provisioning"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Geht es darum, dass Kosten eher laufend sind (OPEX) statt Investition (CAPEX)?",
+      "attributeKey": "benefit_opex_not_capex"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um Verfügbarkeit-Optionen (Redundanz, Zonen/Regionen, SLA-Optionen)?",
+      "attributeKey": "benefit_availability_options"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es um Vendor Lock-in (schwerer Wechsel des Anbieters/Services)?",
+      "attributeKey": "risk_vendor_lock_in"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Geht es um Kostenexplosion (unkontrollierte Nutzung, Abrechnung nach Verbrauch)?",
+      "attributeKey": "risk_cost_explosion"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Geht es um Datenstandort/Compliance (Regeln, Vorgaben, Audits)?",
+      "attributeKey": "risk_data_location_compliance"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Geht es um Fehlkonfiguration (offene Buckets, falsche Security Groups, falsche Rechte)?",
+      "attributeKey": "risk_misconfiguration"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Sichert der Provider die „Cloud“ selbst (Rechenzentrum, Hardware, Basis-Plattform)?",
+      "attributeKey": "provider_secures_cloud"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Sichert der Kunde Konfiguration, Daten und Zugriffe (IAM, Rechte, Verschlüsselung, Backups)?",
+      "attributeKey": "customer_secures_config_data_access"
+    }
+  ]
+}

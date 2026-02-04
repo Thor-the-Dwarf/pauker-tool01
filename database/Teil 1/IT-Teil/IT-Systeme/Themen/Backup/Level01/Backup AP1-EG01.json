@@ -1,0 +1,130 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Backup: Grundprinzipien (AP1)",
+  "topic": "Ziel (Restore) • 3-2-1-Regel • Voll/inkrementell/differenziell",
+  "estimated_minutes": 15,
+  "sections": [
+    {
+      "id": "backup-ziel-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Warum macht man Backups?",
+      "subtitle": "Ordne Szenarien dem Backup-Ziel zu.",
+      "hintDefault": "Backup ist für Wiederherstellung nach: Fehler, Malware, Löschen, Hardware-Defekt.",
+      "sortColumns": [
+        { "zone": "fehler", "label": "Fehler/Defekt", "hint": "(Hardware, Software, Bedienfehler)" },
+        { "zone": "malware", "label": "Malware", "hint": "(z. B. Verschlüsselung)" },
+        { "zone": "loeschen", "label": "Löschen", "hint": "(versehentlich/absichtlich)" }
+      ],
+      "sortCards": [
+        { "id": "bz1", "text": "Festplatte/SSD fällt aus, System startet nicht mehr", "correctZone": "fehler" },
+        { "id": "bz2", "text": "Nach Update ist eine Anwendung/Datenbank beschädigt", "correctZone": "fehler" },
+        { "id": "bz3", "text": "Ransomware verschlüsselt Dateien auf dem Server", "correctZone": "malware" },
+        { "id": "bz4", "text": "Malware löscht oder manipuliert Dateien", "correctZone": "malware" },
+        { "id": "bz5", "text": "Mitarbeiter löscht einen Ordner aus Versehen", "correctZone": "loeschen" },
+        { "id": "bz6", "text": "Ein Projektverzeichnis wurde zu früh entfernt", "correctZone": "loeschen" }
+      ]
+    },
+    {
+      "id": "321-regel-capital",
+      "type": "capital",
+      "title": "Rätsel 2: 3-2-1-Regel korrekt zusammensetzen",
+      "subtitle": "Setze die Zahlen an die richtige Stelle.",
+      "hintDefault": "3 Kopien, 2 Medien, 1 extern/offsite.",
+      "rows": [
+        {
+          "key": "copies",
+          "label": "Kopien insgesamt",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "media",
+          "label": "Unterschiedliche Medien/Storage-Typen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "offsite",
+          "label": "Kopie extern (offsite/anderser Standort)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backup-arten-sort",
+      "type": "sort",
+      "title": "Rätsel 3: Backup-Arten unterscheiden",
+      "subtitle": "Ordne die Beschreibungen zu: Voll, inkrementell, differentiell.",
+      "hintDefault": "Voll = alles. Inkrementell = seit letztem Backup. Differenziell = seit letztem Vollbackup.",
+      "sortColumns": [
+        { "zone": "voll", "label": "Vollbackup", "hint": "(alles sichern)" },
+        { "zone": "ink", "label": "Inkrementell", "hint": "(seit letztem Backup)" },
+        { "zone": "diff", "label": "Differenziell", "hint": "(seit letztem Vollbackup)" }
+      ],
+      "sortCards": [
+        { "id": "ba1", "text": "Sichert immer den kompletten Datenbestand", "correctZone": "voll" },
+        { "id": "ba2", "text": "Sichert nur Änderungen seit dem letzten Backup (egal welcher Typ)", "correctZone": "ink" },
+        { "id": "ba3", "text": "Sichert nur Änderungen seit dem letzten Vollbackup", "correctZone": "diff" },
+        { "id": "ba4", "text": "Für Restore braucht man typischerweise: letztes Vollbackup + alle Folgebakups", "correctZone": "ink" },
+        { "id": "ba5", "text": "Für Restore braucht man typischerweise: letztes Vollbackup + letztes Differenzial", "correctZone": "diff" },
+        { "id": "ba6", "text": "Dauert meist am längsten und braucht am meisten Speicherplatz", "correctZone": "voll" }
+      ]
+    },
+    {
+      "id": "finale-quiz",
+      "type": "quiz",
+      "title": "Finale: Backup-Klassiker (AP1)",
+      "subtitle": "Wenn das sitzt, verlierst du keine Punkte.",
+      "hintDefault": "Backup = Wiederherstellung. 3-2-1 sitzt. Differenziell vs inkrementell sauber trennen.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Was ist das Hauptziel eines Backups?",
+          "options": [
+            { "value": "a", "text": "Daten schneller zu machen." },
+            { "value": "b", "text": "Nach Fehler/Malware/Löschen/Defekt wiederherstellen zu können." },
+            { "value": "c", "text": "Monitore zu kalibrieren." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Was bedeutet die 3-2-1-Regel korrekt?",
+          "options": [
+            { "value": "a", "text": "3 Medien, 2 Kopien, 1 Passwort." },
+            { "value": "b", "text": "3 Kopien, 2 unterschiedliche Medien, 1 Kopie extern/offsite." },
+            { "value": "c", "text": "3 Server, 2 Switches, 1 Router." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f3",
+          "text": "3. Was ist der Kernunterschied: inkrementell vs differentiell?",
+          "options": [
+            { "value": "a", "text": "Inkrementell = seit letztem Backup, differentiell = seit letztem Vollbackup." },
+            { "value": "b", "text": "Inkrementell = alles, differentiell = nur Metadaten." },
+            { "value": "c", "text": "Beides ist identisch." }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

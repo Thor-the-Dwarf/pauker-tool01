@@ -1,0 +1,107 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Bedarfsgerechte Auswahl von Hardware (4.2)",
+  "introText": "Klick auf „Start“, um das Quick-Quiz zur Hardwareauswahl zu starten.",
+  "sublineText": "Wähle den passenden Begriff zur Aussage.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Desktop-PC",
+    "Notebook",
+    "Tablet",
+    "Smartphone",
+    "Stationärer Arbeitsplatz",
+    "Mobiler Arbeitsplatz",
+    "Terminal/Thin Client",
+    "LAN",
+    "WAN",
+    "LTE",
+    "5G",
+    "Barrierefreiheit",
+    "Zweiter Monitor",
+    "Lautsprecher/Mikrofon",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Geräteklasse: fest am Arbeitsplatz, meist beste Preis/Leistung, leicht erweiterbar (RAM/SSD), wenig mobil.",
+      "correct": "Desktop-PC"
+    },
+    {
+      "text": "Geräteklasse: mobiler Rechner mit integriertem Bildschirm/Tastatur; Kompromiss aus Leistung und Mobilität.",
+      "correct": "Notebook"
+    },
+    {
+      "text": "Geräteklasse: Touch-Gerät zwischen Smartphone und Notebook; gut für Konsum/Notizen, weniger für schwere Entwicklung.",
+      "correct": "Tablet"
+    },
+    {
+      "text": "Geräteklasse: sehr mobil, Telefonie + Apps; gut für Kommunikation/2FA, begrenzt für produktive Office-Arbeit.",
+      "correct": "Smartphone"
+    },
+    {
+      "text": "Arbeitsplatzform: Gerät steht dauerhaft im Büro; stabile Peripherie (Monitor, Dock, LAN) ist typisch.",
+      "correct": "Stationärer Arbeitsplatz"
+    },
+    {
+      "text": "Arbeitsplatzform: Nutzung unterwegs/zu Hause; Fokus auf Akku, Gewicht, WLAN/LTE/5G, VPN und Mobilfunkempfang.",
+      "correct": "Mobiler Arbeitsplatz"
+    },
+    {
+      "text": "Client-Konzept: wenig lokale Rechenleistung; Apps laufen zentral (Server/VDI), Gerät ist primär Ein-/Ausgabe.",
+      "correct": "Terminal/Thin Client"
+    },
+    {
+      "text": "Netztyp: lokales Netzwerk im Gebäude/Standort (typisch: Ethernet/WLAN), kurze Wege, niedrige Latenz.",
+      "correct": "LAN"
+    },
+    {
+      "text": "Netztyp: verbindet Standorte über große Entfernungen (z. B. MPLS, Internet-VPN), meist höhere Latenz.",
+      "correct": "WAN"
+    },
+    {
+      "text": "Mobilfunkstandard: weit verbreitet, gute Abdeckung; typisch für mobiles Arbeiten mit moderaten Datenraten.",
+      "correct": "LTE"
+    },
+    {
+      "text": "Mobilfunkstandard: neuere Generation mit höherer Bandbreite und geringerer Latenz, je nach Ausbau.",
+      "correct": "5G"
+    },
+    {
+      "text": "Ziel: Arbeitsplatz so gestalten, dass Menschen mit Einschränkungen effektiv arbeiten können.",
+      "correct": "Barrierefreiheit"
+    },
+    {
+      "text": "Maßnahme: Mehr Bildschirmfläche für bessere Lesbarkeit/Übersicht; hilft z. B. bei Sehschwäche und Multitasking.",
+      "correct": "Zweiter Monitor"
+    },
+    {
+      "text": "Maßnahme: Audio-Ein-/Ausgabe bereitstellen, z. B. für Screenreader, Videokonferenzen oder Sprachsteuerung.",
+      "correct": "Lautsprecher/Mikrofon"
+    },
+    {
+      "text": "Wenn unterwegs stabile Verbindung nötig ist und WLAN unsicher/fehlend, sind diese Standards relevant.",
+      "correct": "alle"
+    },
+    {
+      "text": "Wenn Leistung/Erweiterbarkeit priorisiert wird und Mobilität egal ist, passt diese Geräteklasse am ehesten.",
+      "correct": "Desktop-PC"
+    },
+    {
+      "text": "Wenn maximal mobil, schnell griffbereit und für 2FA/Kommunikation gedacht, passt diese Geräteklasse am ehesten.",
+      "correct": "Smartphone"
+    },
+    {
+      "text": "Wenn zentrale Verwaltung/hohe Sicherheit im Vordergrund steht und Endgeräte schlank sein sollen, passt dieses Konzept.",
+      "correct": "Terminal/Thin Client"
+    },
+    {
+      "text": "Wenn du innerhalb eines Gebäudes Geräte verbindest (Drucker, PCs, Switches), geht es primär um dieses Netz.",
+      "correct": "LAN"
+    },
+    {
+      "text": "Wenn du Filiale und Zentrale über Distanz koppelst, geht es primär um dieses Netz.",
+      "correct": "WAN"
+    }
+  ]
+}

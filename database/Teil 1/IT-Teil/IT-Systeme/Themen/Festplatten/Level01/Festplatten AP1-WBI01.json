@@ -1,0 +1,189 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Speicher (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "hdd",
+      "name": "HDD (Festplatte)",
+      "attributes": {
+        "is_physical_drive": true,
+        "has_mechanics": true,
+        "uses_flash_nand": false,
+        "uses_sata": true,
+        "uses_pcie_nvme": false,
+        "good_for_archive_backup": true,
+        "is_about_iops": false,
+        "is_metric_term": false,
+        "is_about_write_endurance": false,
+        "combines_multiple_drives": false,
+        "improves_availability": false,
+        "can_improve_performance": false
+      }
+    },
+    {
+      "id": "ssd_sata",
+      "name": "SSD (SATA)",
+      "attributes": {
+        "is_physical_drive": true,
+        "has_mechanics": false,
+        "uses_flash_nand": true,
+        "uses_sata": true,
+        "uses_pcie_nvme": false,
+        "good_for_archive_backup": false,
+        "is_about_iops": false,
+        "is_metric_term": false,
+        "is_about_write_endurance": false,
+        "combines_multiple_drives": false,
+        "improves_availability": false,
+        "can_improve_performance": false
+      }
+    },
+    {
+      "id": "ssd_nvme",
+      "name": "SSD (NVMe)",
+      "attributes": {
+        "is_physical_drive": true,
+        "has_mechanics": false,
+        "uses_flash_nand": true,
+        "uses_sata": false,
+        "uses_pcie_nvme": true,
+        "good_for_archive_backup": false,
+        "is_about_iops": false,
+        "is_metric_term": false,
+        "is_about_write_endurance": false,
+        "combines_multiple_drives": false,
+        "improves_availability": false,
+        "can_improve_performance": false
+      }
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "attributes": {
+        "is_physical_drive": false,
+        "has_mechanics": false,
+        "uses_flash_nand": false,
+        "uses_sata": false,
+        "uses_pcie_nvme": false,
+        "good_for_archive_backup": false,
+        "is_about_iops": true,
+        "is_metric_term": true,
+        "is_about_write_endurance": false,
+        "combines_multiple_drives": false,
+        "improves_availability": false,
+        "can_improve_performance": false
+      }
+    },
+    {
+      "id": "tbw",
+      "name": "TBW (Schreibhaltbarkeit)",
+      "attributes": {
+        "is_physical_drive": false,
+        "has_mechanics": false,
+        "uses_flash_nand": false,
+        "uses_sata": false,
+        "uses_pcie_nvme": false,
+        "good_for_archive_backup": false,
+        "is_about_iops": false,
+        "is_metric_term": true,
+        "is_about_write_endurance": true,
+        "combines_multiple_drives": false,
+        "improves_availability": false,
+        "can_improve_performance": false
+      }
+    },
+    {
+      "id": "raid",
+      "name": "RAID",
+      "attributes": {
+        "is_physical_drive": false,
+        "has_mechanics": false,
+        "uses_flash_nand": false,
+        "uses_sata": false,
+        "uses_pcie_nvme": false,
+        "good_for_archive_backup": false,
+        "is_about_iops": false,
+        "is_metric_term": false,
+        "is_about_write_endurance": false,
+        "combines_multiple_drives": true,
+        "improves_availability": true,
+        "can_improve_performance": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Ist es ein physisches Speichermedium bzw. ein Laufwerk?",
+      "attributeKey": "is_physical_drive"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Hat es bewegliche/mechanische Teile?",
+      "attributeKey": "has_mechanics"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Nutzt es Flash-Speicher (NAND) statt Magnetplatten?",
+      "attributeKey": "uses_flash_nand"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Nutzen typische Geräte davon SATA als Schnittstelle/Protokoll?",
+      "attributeKey": "uses_sata"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Nutzen typische Geräte davon PCIe/NVMe als Schnittstelle/Protokoll?",
+      "attributeKey": "uses_pcie_nvme"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist es besonders attraktiv für Archiv/Backup-Ziele (günstig pro GB, viel Kapazität)?",
+      "attributeKey": "good_for_archive_backup"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es dabei direkt um sehr viele kleine Zugriffe pro Sekunde (Random I/O)?",
+      "attributeKey": "is_about_iops"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist es ein Messwert/Begriff zur Bewertung von Speicher-Performance oder -Eigenschaften?",
+      "attributeKey": "is_metric_term"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Geht es um Schreibhaltbarkeit/Lebensdauer (wie viel insgesamt geschrieben werden darf)?",
+      "attributeKey": "is_about_write_endurance"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist es ein Konzept zum Zusammenschalten mehrerer Laufwerke?",
+      "attributeKey": "combines_multiple_drives"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Zielt es (typischerweise) auf höhere Verfügbarkeit/Redundanz ab?",
+      "attributeKey": "improves_availability"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Kann es je nach Variante auch die Performance erhöhen?",
+      "attributeKey": "can_improve_performance"
+    }
+  ]
+}

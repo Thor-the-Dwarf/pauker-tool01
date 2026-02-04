@@ -1,0 +1,171 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Backup: Grundprinzipien (AP1)-Edition",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "backup_goal_restore",
+      "name": "Backup-Ziel: Wiederherstellen",
+      "attributes": {
+        "is_backup_goal": true,
+        "is_321_rule": false,
+        "is_backup_type": false,
+        "covers_error_recovery": true,
+        "covers_malware_recovery": true,
+        "covers_deletion_recovery": true,
+        "covers_hardware_defect_recovery": true,
+        "is_full_backup": false,
+        "is_incremental_backup": false,
+        "is_differential_backup": false,
+        "needs_previous_backup_chain": false,
+        "grows_over_time_until_next_full": false
+      }
+    },
+    {
+      "id": "rule_321",
+      "name": "3-2-1-Regel",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_321_rule": true,
+        "is_backup_type": false,
+        "covers_error_recovery": false,
+        "covers_malware_recovery": false,
+        "covers_deletion_recovery": false,
+        "covers_hardware_defect_recovery": false,
+        "is_full_backup": false,
+        "is_incremental_backup": false,
+        "is_differential_backup": false,
+        "needs_previous_backup_chain": false,
+        "grows_over_time_until_next_full": false
+      }
+    },
+    {
+      "id": "full_backup",
+      "name": "Vollbackup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_321_rule": false,
+        "is_backup_type": true,
+        "covers_error_recovery": false,
+        "covers_malware_recovery": false,
+        "covers_deletion_recovery": false,
+        "covers_hardware_defect_recovery": false,
+        "is_full_backup": true,
+        "is_incremental_backup": false,
+        "is_differential_backup": false,
+        "needs_previous_backup_chain": false,
+        "grows_over_time_until_next_full": false
+      }
+    },
+    {
+      "id": "incremental_backup",
+      "name": "Inkrementelles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_321_rule": false,
+        "is_backup_type": true,
+        "covers_error_recovery": false,
+        "covers_malware_recovery": false,
+        "covers_deletion_recovery": false,
+        "covers_hardware_defect_recovery": false,
+        "is_full_backup": false,
+        "is_incremental_backup": true,
+        "is_differential_backup": false,
+        "needs_previous_backup_chain": true,
+        "grows_over_time_until_next_full": false
+      }
+    },
+    {
+      "id": "differential_backup",
+      "name": "Differentielles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_321_rule": false,
+        "is_backup_type": true,
+        "covers_error_recovery": false,
+        "covers_malware_recovery": false,
+        "covers_deletion_recovery": false,
+        "covers_hardware_defect_recovery": false,
+        "is_full_backup": false,
+        "is_incremental_backup": false,
+        "is_differential_backup": true,
+        "needs_previous_backup_chain": false,
+        "grows_over_time_until_next_full": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es um das Ziel eines Backups: Wiederherstellen nach Problemen?",
+      "attributeKey": "is_backup_goal"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um die 3-2-1-Regel (3 Kopien, 2 Medien, 1 extern/offsite)?",
+      "attributeKey": "is_321_rule"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um eine Backup-Art (Voll/inkrementell/differentiell)?",
+      "attributeKey": "is_backup_type"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Hilft es beim Wiederherstellen nach Bedienfehlern oder Systemfehlern?",
+      "attributeKey": "covers_error_recovery"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Hilft es beim Wiederherstellen nach Malware/Ransomware (Stand von vorher)?",
+      "attributeKey": "covers_malware_recovery"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Hilft es beim Wiederherstellen nach versehentlichem Löschen?",
+      "attributeKey": "covers_deletion_recovery"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Hilft es beim Wiederherstellen nach Hardware-Defekt (z. B. kaputte Platte)?",
+      "attributeKey": "covers_hardware_defect_recovery"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist es ein Vollbackup (alle Daten jedes Mal)?",
+      "attributeKey": "is_full_backup"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist es inkrementell (nur Änderungen seit dem letzten Backup)?",
+      "attributeKey": "is_incremental_backup"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Ist es differentiell (Änderungen seit dem letzten Vollbackup)?",
+      "attributeKey": "is_differential_backup"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Braucht man zur Wiederherstellung die ganze Kette (Vollbackup + alle Inkremente)?",
+      "attributeKey": "needs_previous_backup_chain"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Wird das Backup-Paket größer, je länger kein neues Vollbackup gemacht wird?",
+      "attributeKey": "grows_over_time_until_next_full"
+    }
+  ]
+}
