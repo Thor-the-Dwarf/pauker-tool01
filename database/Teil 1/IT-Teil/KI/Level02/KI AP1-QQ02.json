@@ -1,0 +1,349 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – KI Überblick (EU-KI-VO, Prompting, Prüfungswissen) (AP1)",
+  "introText": "Starte das Quiz und ordne jede Aussage dem passenden Begriff zu.",
+  "sublineText": "Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Klassische Software (deterministisch)",
+    "KI / Machine Learning (probabilistisch)",
+    "Generative KI",
+    "Klassifikation",
+    "Regression",
+    "Deep Learning",
+    "LLM (Large Language Model)",
+    "Diffusion (Bildgenerierung)",
+    "Halluzination",
+    "Bias",
+    "Datenschutz",
+    "Urheberrecht",
+    "Prompt-Injection",
+    "Modell",
+    "Training",
+    "Inferenz",
+    "Prompt",
+    "Kontextfenster",
+    "EU-KI-Verordnung (AI Act)",
+    "Anbieter (Provider)",
+    "Betreiber/Deployer",
+    "Risikobasierter Ansatz",
+    "Verbotene KI",
+    "Hochrisiko-KI",
+    "Begrenztes Risiko",
+    "Minimales Risiko",
+    "Transparenzpflicht",
+    "Human Oversight",
+    "Dokumentation (KI-Inventar)",
+    "Protokollierung/Logging",
+    "KI-Kompetenz (AI Literacy)",
+    "Policy/Guidelines im Betrieb",
+    "Prompt-Formel: Rolle",
+    "Prompt-Formel: Ziel",
+    "Prompt-Formel: Kontext",
+    "Prompt-Formel: Constraints",
+    "Prompt-Formel: Format",
+    "Prompting: Few-Shot",
+    "Prompting: Schrittweise Aufgaben",
+    "Prompting: Annahmen markieren lassen",
+    "Prompting: Varianten",
+    "Prompting: Rollenwechsel",
+    "Prompting: Sicherheitsgeländer",
+    "4-Stufen-Kontrolle: Faktencheck",
+    "4-Stufen-Kontrolle: Plausibilität",
+    "4-Stufen-Kontrolle: Datenschutz-Check",
+    "4-Stufen-Kontrolle: Freigabe",
+    "Offene Frage (Bonus)",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Arbeitet nach festen Regeln (if/else); gleiche Eingabe führt typischerweise zur gleichen Ausgabe.",
+      "correct": "Klassische Software (deterministisch)"
+    },
+    {
+      "text": "Lernt Muster aus Daten und liefert Ergebnisse als Wahrscheinlichkeiten statt Gewissheiten.",
+      "correct": "KI / Machine Learning (probabilistisch)"
+    },
+    {
+      "text": "Erzeugt neue Inhalte (Text, Bilder, Code) basierend auf Trainingsmustern und einem Prompt.",
+      "correct": "Generative KI"
+    },
+    {
+      "text": "Prüfungsfalle: „KI versteht wirklich, was sie sagt“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Merksatz: KI kann sehr überzeugend wirken, ohne automatisch richtig zu sein.",
+      "correct": "KI-Kompetenz (AI Literacy)"
+    },
+    {
+      "text": "Spam/kein Spam ist ein typisches Beispiel: Zuordnung zu Klassen anhand gelernter Beispiele.",
+      "correct": "Klassifikation"
+    },
+    {
+      "text": "Preisprognosen sind ein typisches Beispiel: Vorhersage eines Zahlenwerts.",
+      "correct": "Regression"
+    },
+    {
+      "text": "Viele neuronale Schichten; stark bei Bild- und Sprachverarbeitung.",
+      "correct": "Deep Learning"
+    },
+    {
+      "text": "Erzeugt Text/Code/Antworten; Quellen werden nicht automatisch korrekt zitiert.",
+      "correct": "LLM (Large Language Model)"
+    },
+    {
+      "text": "Typischer Ansatz für Bildgenerierung: aus Rauschen schrittweise ein Bild erzeugen.",
+      "correct": "Diffusion (Bildgenerierung)"
+    },
+    {
+      "text": "Prüfungsfalle: „Generativ = Suchmaschine“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Kontrast-Beispiel: Ticket-Priorisierung ist oft klassisches ML, Support-Chat ist oft generativ.",
+      "correct": "alle"
+    },
+    {
+      "text": "Chancen: Dokumente zusammenfassen, Entwürfe erstellen, Klassifikation und Übersetzungen beschleunigen Arbeit.",
+      "correct": "alle"
+    },
+    {
+      "text": "Chancen: Code-Vorschläge, automatische Doku, Testfälle generieren, Wissensassistenz im Team.",
+      "correct": "alle"
+    },
+    {
+      "text": "Chancen: Muster in Logdaten finden, Anomalien erkennen, Forecasts unterstützen Entscheidungen.",
+      "correct": "alle"
+    },
+    {
+      "text": "Merksatz: KI ist ein Praktikant mit Turbo – du bleibst verantwortlich.",
+      "correct": "KI-Kompetenz (AI Literacy)"
+    },
+    {
+      "text": "Risiko: plausibel klingend, aber falsch; manchmal werden sogar Quellen erfunden.",
+      "correct": "Halluzination"
+    },
+    {
+      "text": "Risiko: Verzerrte Ergebnisse durch einseitige Trainingsdaten (diskriminierende Effekte möglich).",
+      "correct": "Bias"
+    },
+    {
+      "text": "Risiko: Prompts können personenbezogene Daten/Geheimnisse enthalten – dürfen nicht raus.",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Risiko: Generierte Inhalte können geschützte Werke berühren (Training/Output).",
+      "correct": "Urheberrecht"
+    },
+    {
+      "text": "Risiko: Prompt-Injection kann Tools/Agenten manipulieren und Datenabfluss oder falsche Aktionen auslösen.",
+      "correct": "Prompt-Injection"
+    },
+    {
+      "text": "Prüfungsfalle: „Wenn’s professionell klingt, stimmt’s“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Mini-Regel: Fakten bei wichtigen Entscheidungen mit zweiter Quelle oder Test verifizieren.",
+      "correct": "4-Stufen-Kontrolle: Faktencheck"
+    },
+    {
+      "text": "Die „gelernte Maschine“ (Parameter) als Ergebnis des Trainings.",
+      "correct": "Modell"
+    },
+    {
+      "text": "Prozess, bei dem ein Modell aus Daten Muster lernt.",
+      "correct": "Training"
+    },
+    {
+      "text": "Nutzungsphase: Modell erzeugt Antwort auf Basis eines Prompts.",
+      "correct": "Inferenz"
+    },
+    {
+      "text": "Eingabe/Anweisung an das Modell, die das Verhalten steuert (nicht automatisch die Wahrheit).",
+      "correct": "Prompt"
+    },
+    {
+      "text": "Begrenzt, wie viel Text das Modell pro Anfrage gleichzeitig berücksichtigen kann.",
+      "correct": "Kontextfenster"
+    },
+    {
+      "text": "Prüfungsfalle: „KI merkt sich alles dauerhaft und immer“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Ziel: sichere, transparente, menschenrechtskonforme KI in der EU.",
+      "correct": "EU-KI-Verordnung (AI Act)"
+    },
+    {
+      "text": "Rolle: baut/vertreibt KI-Systeme – hat je nach System Pflichten (z. B. Doku, Konformität).",
+      "correct": "Anbieter (Provider)"
+    },
+    {
+      "text": "Rolle: setzt KI im Betrieb ein – kann Pflichten haben (z. B. kontrollieren, schulen, korrekt betreiben).",
+      "correct": "Betreiber/Deployer"
+    },
+    {
+      "text": "Grundlogik: je höher das Risiko, desto strenger die Anforderungen.",
+      "correct": "Risikobasierter Ansatz"
+    },
+    {
+      "text": "Prüfungsfalle: „Gilt nur für große Tech-Firmen“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Risikoklasse: Systeme wie Social Scoring oder manipulative Systeme (Beispiele) – verboten.",
+      "correct": "Verbotene KI"
+    },
+    {
+      "text": "Risikoklasse: z. B. Bewerber-Screening oder Kreditvergabe (Beispiele) – strenge Anforderungen.",
+      "correct": "Hochrisiko-KI"
+    },
+    {
+      "text": "Risikoklasse: Transparenzpflichten, z. B. Hinweis auf KI-Interaktion/KI-Inhalte.",
+      "correct": "Begrenztes Risiko"
+    },
+    {
+      "text": "Risikoklasse: wenige bis keine Zusatzpflichten (z. B. Spam-Filter, Textvorschläge).",
+      "correct": "Minimales Risiko"
+    },
+    {
+      "text": "Prüfungsfalle: „Alles ist Hochrisiko“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Merksatz: Einordnung hängt stark vom Einsatzkontext ab (Screening ≠ Zusammenfassung).",
+      "correct": "Risikobasierter Ansatz"
+    },
+    {
+      "text": "Betriebspflicht im Alltag: erfassen/dokumentieren, welche KI-Systeme wo eingesetzt werden.",
+      "correct": "Dokumentation (KI-Inventar)"
+    },
+    {
+      "text": "Betriebspflicht: Mitarbeitende/Nutzer informieren, wenn KI im Spiel ist (je nach Kontext/Regel).",
+      "correct": "Transparenzpflicht"
+    },
+    {
+      "text": "Kernforderung: Menschliche Aufsicht – wichtige Entscheidungen dürfen nicht blind automatisiert werden.",
+      "correct": "Human Oversight"
+    },
+    {
+      "text": "Prüfungsfalle: „Wir nutzen nur ein Tool, also haben wir keine Verantwortung“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Merksatz: KI ohne Prozess ist Haftungs- und Qualitätsfalle.",
+      "correct": "Policy/Guidelines im Betrieb"
+    },
+    {
+      "text": "KI-Kompetenz heißt: Grenzen/Risiken verstehen und KI sinnvoll & sicher einsetzen.",
+      "correct": "KI-Kompetenz (AI Literacy)"
+    },
+    {
+      "text": "Praxisregel: Keine Kundendaten, Passwörter oder Secrets in öffentliche Prompts.",
+      "correct": "Datenschutz"
+    },
+    {
+      "text": "Besser als Einmal-Schulung: kurze, regelmäßige Wiederholungen mit Praxisbeispielen.",
+      "correct": "KI-Kompetenz (AI Literacy)"
+    },
+    {
+      "text": "Interne Richtlinien/Policies geben vor, was erlaubt ist und wie geprüft/freigegeben wird.",
+      "correct": "Policy/Guidelines im Betrieb"
+    },
+    {
+      "text": "Prompt-Baustein: „Du bist …“ (z. B. Ausbilder, Admin, Prüfer).",
+      "correct": "Prompt-Formel: Rolle"
+    },
+    {
+      "text": "Prompt-Baustein: „Erstelle …“ (klar und messbar).",
+      "correct": "Prompt-Formel: Ziel"
+    },
+    {
+      "text": "Prompt-Baustein: Zielgruppe, Umfang, Rahmenbedingungen.",
+      "correct": "Prompt-Formel: Kontext"
+    },
+    {
+      "text": "Prompt-Baustein: Stil, Länge, Regeln, No-Go’s.",
+      "correct": "Prompt-Formel: Constraints"
+    },
+    {
+      "text": "Prompt-Baustein: Ausgabeform festlegen (Tabelle, Liste, JSON, Checkliste).",
+      "correct": "Prompt-Formel: Format"
+    },
+    {
+      "text": "Merksatz: Gute Prompts sind wie technische Spezifikationen – strukturiert und eindeutig.",
+      "correct": "Prompt"
+    },
+    {
+      "text": "Technik: Beispiele für gewünschtes Format zeigen, damit Output konsistenter wird.",
+      "correct": "Prompting: Few-Shot"
+    },
+    {
+      "text": "Technik: Erst Struktur, dann Details – komplexe Aufgaben in Schritte teilen.",
+      "correct": "Prompting: Schrittweise Aufgaben"
+    },
+    {
+      "text": "Technik: Unsicherheiten/Annahmen markieren lassen, damit du Schwachstellen siehst.",
+      "correct": "Prompting: Annahmen markieren lassen"
+    },
+    {
+      "text": "Technik: 3 Varianten mit Vor-/Nachteilen erzeugen, um Qualität durch Vergleich zu erhöhen.",
+      "correct": "Prompting: Varianten"
+    },
+    {
+      "text": "Technik: „Antworte als Prüfer …“ – Perspektive ändern, um andere Blickwinkel zu bekommen.",
+      "correct": "Prompting: Rollenwechsel"
+    },
+    {
+      "text": "Technik: „Wenn Infos fehlen: stelle Fragen statt zu raten“ – reduziert Halluzinationen.",
+      "correct": "Prompting: Sicherheitsgeländer"
+    },
+    {
+      "text": "Prüfungsfalle: „Chain-of-thought erzwingt Wahrheit“.",
+      "correct": "keine"
+    },
+    {
+      "text": "Kontrollstufe: zweite Quelle, interne Doku oder Sandbox-Test.",
+      "correct": "4-Stufen-Kontrolle: Faktencheck"
+    },
+    {
+      "text": "Kontrollstufe: Zahlen, Namen, Normen logisch prüfen (passt das zusammen?).",
+      "correct": "4-Stufen-Kontrolle: Plausibilität"
+    },
+    {
+      "text": "Kontrollstufe: keine sensiblen Daten in Prompts; Datenschutz prüfen.",
+      "correct": "4-Stufen-Kontrolle: Datenschutz-Check"
+    },
+    {
+      "text": "Kontrollstufe: Mensch entscheidet bei kritischen Themen (HR, Recht, Finanzen).",
+      "correct": "4-Stufen-Kontrolle: Freigabe"
+    },
+    {
+      "text": "Prüfungsfalle: KI-Output ungeprüft automatisiert „durchreichen“ skaliert Fehler und schiebt Verantwortung weg.",
+      "correct": "keine"
+    },
+    {
+      "text": "BONUS 1: Klassische Software vs. KI – erkläre den Unterschied an einem Praxisbeispiel.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 2: Nenne die 5 KI-Risiken und je eine Gegenmaßnahme im Betrieb.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 3: EU-KI-VO Risikoklassen – erkläre die vier Klassen + je ein Praxisbeispiel.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "BONUS 4: Erstelle einen vollständigen Prompt (Rolle/Ziel/Kontext/Constraints/Format) für „AP1-Lernkarte Netzwerke“.",
+      "correct": "Offene Frage (Bonus)"
+    },
+    {
+      "text": "Zusammenfassung: Chancen nutzen, Risiken kennen, EU-KI-VO (risikobasiert) beachten, AI Literacy aufbauen, Ergebnisse prüfen/testen/freigeben.",
+      "correct": "alle"
+    }
+  ]
+}

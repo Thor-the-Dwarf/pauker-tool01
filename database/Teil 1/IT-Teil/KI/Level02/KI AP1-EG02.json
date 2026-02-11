@@ -1,0 +1,980 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – KI (AP1)",
+  "topic": "EU-KI-Verordnung • KI-Prompting • Prüfungswissen kompakt",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "ki-was-ist-was-quiz",
+      "type": "quiz",
+      "title": "Rätsel 1: Was ist KI – und was nicht?",
+      "subtitle": "Deterministisch vs probabilistisch sauber trennen.",
+      "hintDefault": "KI klingt oft sicher, ist aber nicht automatisch richtig. Sie berechnet Wahrscheinlichkeiten und kann überzeugend wirken, ohne zu „verstehen“.",
+      "questions": [
+        {
+          "id": "k1",
+          "text": "1. Was passt am besten zu klassischer Software?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Feste Regeln (if/else), gleiche Eingabe → gleiche Ausgabe."
+            },
+            {
+              "value": "b",
+              "text": "Lernt Muster aus Daten und produziert Wahrscheinlichkeiten."
+            },
+            {
+              "value": "c",
+              "text": "Erzeugt immer neue Inhalte ohne Regeln."
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "k2",
+          "text": "2. Was beschreibt Machine Learning am treffendsten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Ein Programm mit sehr vielen if/else."
+            },
+            {
+              "value": "b",
+              "text": "Lernt Muster aus Beispieldaten und arbeitet probabilistisch."
+            },
+            {
+              "value": "c",
+              "text": "Ist identisch mit einer Suchmaschine."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "k3",
+          "text": "3. Welche Aussage ist als Prüfungs-Realität am sichersten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Wenn eine KI überzeugend klingt, stimmt es meistens."
+            },
+            {
+              "value": "b",
+              "text": "KI „versteht“ wie ein Mensch und irrt selten."
+            },
+            {
+              "value": "c",
+              "text": "KI kann überzeugend falsch sein; Fakten müssen geprüft werden."
+            }
+          ],
+          "correct": "c"
+        }
+      ]
+    },
+    {
+      "id": "ki-arten-sort",
+      "type": "sort",
+      "title": "Rätsel 2: KI-Arten im Überblick",
+      "subtitle": "Ordne Beispiele den richtigen Kategorien zu.",
+      "hintDefault": "Generativ ist keine Suchmaschine: es erzeugt Inhalte. Klassisches ML ist oft Klassifikation/Regression. Deep Learning ist stark bei Bild/Sprache.",
+      "sortColumns": [
+        {
+          "zone": "ml",
+          "label": "Machine Learning",
+          "hint": "(Klassifikation/Regression)"
+        },
+        {
+          "zone": "dl",
+          "label": "Deep Learning",
+          "hint": "(viele Schichten, Bild/Sprache)"
+        },
+        {
+          "zone": "gen",
+          "label": "Generativ",
+          "hint": "(Text/Bilder/Code erzeugen)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "a1",
+          "text": "Spam-Erkennung: Spam vs kein Spam",
+          "correctZone": "ml"
+        },
+        {
+          "id": "a2",
+          "text": "Preisprognose aus historischen Daten",
+          "correctZone": "ml"
+        },
+        {
+          "id": "a3",
+          "text": "Bildklassifikation mit neuronalen Netzen",
+          "correctZone": "dl"
+        },
+        {
+          "id": "a4",
+          "text": "Spracherkennung/Transkription mit vielen Schichten",
+          "correctZone": "dl"
+        },
+        {
+          "id": "a5",
+          "text": "Chatbot erzeugt Antworten und Formulierungen",
+          "correctZone": "gen"
+        },
+        {
+          "id": "a6",
+          "text": "Bildgenerator erzeugt neue Bilder aus Beschreibung",
+          "correctZone": "gen"
+        }
+      ]
+    },
+    {
+      "id": "chancen-im-betrieb-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: Chancen im Betrieb",
+      "subtitle": "Wo bringt KI echten Nutzen?",
+      "hintDefault": "Denk in drei Clustern: Automatisierung, Unterstützung, Analyse. Und: Output prüfen (Fachlichkeit, Datenschutz, Rechte, Compliance).",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "1. Welche Aufgabe passt am besten zu „Automatisierung“?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Dokumente zusammenfassen und Übersetzungen erstellen."
+            },
+            {
+              "value": "b",
+              "text": "Netzwerkkabel crimpen."
+            },
+            {
+              "value": "c",
+              "text": "Monitore reinigen."
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "c2",
+          "text": "2. Welche Aufgabe passt am besten zu „Unterstützung“?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Anomalien in Logs erkennen und Trends ableiten."
+            },
+            {
+              "value": "b",
+              "text": "Code-Vorschläge, Doku-Entwürfe, Testfälle generieren."
+            },
+            {
+              "value": "c",
+              "text": "Stromversorgung im Serverraum reparieren."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "c3",
+          "text": "3. Welche Aussage ist die richtige Grundhaltung im Betrieb?",
+          "options": [
+            {
+              "value": "a",
+              "text": "KI-Ausgaben kann man ungeprüft in Produktion übernehmen."
+            },
+            {
+              "value": "b",
+              "text": "KI ist wie ein Praktikant mit Turbo: hilfreich, aber du bleibst verantwortlich."
+            },
+            {
+              "value": "c",
+              "text": "KI ersetzt automatisch jede Fachprüfung."
+            }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "risiken-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Die 5 klassischen KI-Risiken",
+      "subtitle": "Ordne Risiko-Begriffe den passenden Kurzbeschreibungen zu.",
+      "hintDefault": "Wenn’s professionell klingt, ist es nicht automatisch richtig. Mini-Regel: Fakten mit zweiter Quelle prüfen, bevor du entscheidest.",
+      "sortColumns": [
+        {
+          "zone": "halluzination",
+          "label": "Halluzination",
+          "hint": "(plausibel, aber falsch)"
+        },
+        {
+          "zone": "bias",
+          "label": "Bias",
+          "hint": "(Verzerrung/Diskriminierung)"
+        },
+        {
+          "zone": "datenschutz",
+          "label": "Datenschutz",
+          "hint": "(personenbezogen/Geheimnisse)"
+        },
+        {
+          "zone": "urheberrecht",
+          "label": "Urheberrecht",
+          "hint": "(geschützte Inhalte)"
+        },
+        {
+          "zone": "sicherheit",
+          "label": "Sicherheit",
+          "hint": "(Injection/Leak/Automatisierung)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "r1",
+          "text": "Erfindet Fakten/Quellen oder behauptet Dinge, die nicht stimmen",
+          "correctZone": "halluzination"
+        },
+        {
+          "id": "r2",
+          "text": "Ergebnisse sind unfair, weil Trainingsdaten einseitig waren",
+          "correctZone": "bias"
+        },
+        {
+          "id": "r3",
+          "text": "Prompt enthält Kundendaten, Passwörter oder interne Secrets",
+          "correctZone": "datenschutz"
+        },
+        {
+          "id": "r4",
+          "text": "Output kann geschützte Formulierungen/Werke berühren",
+          "correctZone": "urheberrecht"
+        },
+        {
+          "id": "r5",
+          "text": "Prompt-Injection oder Datenabfluss über Tool/Workflow",
+          "correctZone": "sicherheit"
+        }
+      ]
+    },
+    {
+      "id": "begriffe-sort",
+      "type": "sort",
+      "title": "Rätsel 5: Wichtige KI-Begriffe für die Prüfung",
+      "subtitle": "Begriffe sauber zuordnen.",
+      "hintDefault": "Der Prompt steuert Verhalten, nicht die Wahrheit. Und: Das System „merkt“ sich oft nicht alles dauerhaft.",
+      "sortColumns": [
+        {
+          "zone": "modell",
+          "label": "Modell",
+          "hint": "(gelernte Parameter)"
+        },
+        {
+          "zone": "training",
+          "label": "Training",
+          "hint": "(lernt aus Daten)"
+        },
+        {
+          "zone": "inferenz",
+          "label": "Inferenz",
+          "hint": "(Nutzungsphase)"
+        },
+        {
+          "zone": "prompt",
+          "label": "Prompt",
+          "hint": "(Eingabe/Anweisung)"
+        },
+        {
+          "zone": "kontext",
+          "label": "Kontextfenster",
+          "hint": "(Limit je Anfrage)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "b1",
+          "text": "Die „gelernte Maschine“ als Ergebnis des Lernens",
+          "correctZone": "modell"
+        },
+        {
+          "id": "b2",
+          "text": "Prozess, bei dem Muster aus Daten gelernt werden",
+          "correctZone": "training"
+        },
+        {
+          "id": "b3",
+          "text": "Phase, in der das Modell Antworten erzeugt",
+          "correctZone": "inferenz"
+        },
+        {
+          "id": "b4",
+          "text": "Eingabe, die Verhalten/Antwortform steuert",
+          "correctZone": "prompt"
+        },
+        {
+          "id": "b5",
+          "text": "Wie viel Text pro Anfrage berücksichtigt werden kann",
+          "correctZone": "kontext"
+        }
+      ]
+    },
+    {
+      "id": "eu-ai-act-idee-rollen-quiz",
+      "type": "quiz",
+      "title": "Rätsel 6: EU-KI-Verordnung – Idee & Rollen",
+      "subtitle": "Risikobasiert statt „one size fits all“.",
+      "hintDefault": "Grundlogik: höheres Risiko → strengere Anforderungen. Pflichten hängen von der Rolle ab (Anbieter/Hersteller vs Betreiber/Nutzer).",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "1. Was ist die zentrale Grundidee der EU-KI-Verordnung?",
+          "options": [
+            {
+              "value": "a",
+              "text": "KI generell verbieten."
+            },
+            {
+              "value": "b",
+              "text": "Risikobasierte Regeln: je riskanter der Einsatz, desto strengere Anforderungen."
+            },
+            {
+              "value": "c",
+              "text": "Nur Suchmaschinen regeln."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e2",
+          "text": "2. Welche Aussage ist als Prüfungslogik am saubersten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Gilt nur für große Tech-Firmen."
+            },
+            {
+              "value": "b",
+              "text": "Kann auch kleinere Betriebe betreffen, je nach Einsatz und Rolle."
+            },
+            {
+              "value": "c",
+              "text": "Gilt nur für Hardware-Hersteller."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e3",
+          "text": "3. Wer hat typischerweise Betreiberpflichten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Wer KI im Betrieb einsetzt (betreibt/nutzt) und dafür Prozesse/Regeln braucht."
+            },
+            {
+              "value": "b",
+              "text": "Nur wer KI programmiert."
+            },
+            {
+              "value": "c",
+              "text": "Niemand, Verantwortung liegt immer beim Tool."
+            }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "risikoklassen-sort",
+      "type": "sort",
+      "title": "Rätsel 7: EU-KI-VO – vier Risikoklassen",
+      "subtitle": "Einordnung hängt vom Einsatzkontext ab.",
+      "hintDefault": "Nicht alles ist Hochrisiko. Transparenzpflichten bei begrenztem Risiko. Verbote bei inakzeptablem Risiko.",
+      "sortColumns": [
+        {
+          "zone": "verboten",
+          "label": "Verboten",
+          "hint": "(inakzeptables Risiko)"
+        },
+        {
+          "zone": "hoch",
+          "label": "Hochrisiko",
+          "hint": "(strenge Anforderungen)"
+        },
+        {
+          "zone": "begrenzt",
+          "label": "Begrenztes Risiko",
+          "hint": "(Transparenzpflichten)"
+        },
+        {
+          "zone": "minimal",
+          "label": "Minimales Risiko",
+          "hint": "(wenig Zusatzpflichten)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "rk1",
+          "text": "Social Scoring / manipulative Systeme (Beispiel-Cluster)",
+          "correctZone": "verboten"
+        },
+        {
+          "id": "rk2",
+          "text": "Bewerber-Screening / Kreditvergabe / medizinische Diagnostik (Beispiel-Cluster)",
+          "correctZone": "hoch"
+        },
+        {
+          "id": "rk3",
+          "text": "Hinweis, dass Nutzer mit KI interagieren oder KI-Inhalte erhalten",
+          "correctZone": "begrenzt"
+        },
+        {
+          "id": "rk4",
+          "text": "Spam-Filter oder einfache Textvorschläge (typisch)",
+          "correctZone": "minimal"
+        }
+      ]
+    },
+    {
+      "id": "betriebspflichten-quiz",
+      "type": "quiz",
+      "title": "Rätsel 8: Was bedeutet das im Betrieb?",
+      "subtitle": "KI ohne Prozess = Qualitäts- und Haftungsfalle.",
+      "hintDefault": "Fundament: Dokumentation, Information, Kontrolle, Schulung. Kern: Human Oversight (menschliche Aufsicht).",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "1. Was ist ein sinnvoller „Alltag“-Start im Unternehmen?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Ignorieren, bis ein Audit kommt."
+            },
+            {
+              "value": "b",
+              "text": "Inventar: Wo wird welche KI eingesetzt? Zuständigkeiten festlegen."
+            },
+            {
+              "value": "c",
+              "text": "Alle Mitarbeitenden sofort Adminrechte geben, damit es schneller geht."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "p2",
+          "text": "2. Was bedeutet „Human Oversight“ am ehesten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "KI entscheidet allein, der Mensch schaut nur zu."
+            },
+            {
+              "value": "b",
+              "text": "Menschliche Aufsicht: Prüfen, eingreifen können, Verantwortung tragen."
+            },
+            {
+              "value": "c",
+              "text": "Nur Monitoring ohne Reaktionsplan."
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "p3",
+          "text": "3. Welche Aussage ist als Prüfungsfalle bekannt?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Wenn wir nur ein Tool nutzen, haben wir keine Verantwortung."
+            },
+            {
+              "value": "b",
+              "text": "Dokumentation und Kontrolle sind im Alltag hilfreich."
+            },
+            {
+              "value": "c",
+              "text": "Schulung baut Kompetenz auf."
+            }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "ai-literacy-sort",
+      "type": "sort",
+      "title": "Rätsel 9: AI Literacy im Unternehmen",
+      "subtitle": "Was gehört zur KI-Kompetenz?",
+      "hintDefault": "Besser kurz und regelmäßig üben als einmal „PowerPoint-Schulung“. Fokus: Grenzen, Datenschutz, Bias/Halluzination, Policies.",
+      "sortColumns": [
+        {
+          "zone": "grenzen",
+          "label": "Grenzen/Risiken",
+          "hint": "(Bias/Halluzination)"
+        },
+        {
+          "zone": "datenschutz",
+          "label": "Datenschutz",
+          "hint": "(was darf rein?)"
+        },
+        {
+          "zone": "prozess",
+          "label": "Prozess/Regeln",
+          "hint": "(Policies/Freigaben)"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "l1",
+          "text": "Verzerrungen erkennen und bei Fakten vorsichtig sein",
+          "correctZone": "grenzen"
+        },
+        {
+          "id": "l2",
+          "text": "Nie Kundendaten/Secrets in öffentliche Tools prompten",
+          "correctZone": "datenschutz"
+        },
+        {
+          "id": "l3",
+          "text": "Interne Richtlinien kennen und einhalten",
+          "correctZone": "prozess"
+        },
+        {
+          "id": "l4",
+          "text": "Regelmäßige kurze Wiederholungen mit Praxisbeispielen",
+          "correctZone": "prozess"
+        }
+      ]
+    },
+    {
+      "id": "prompt-formel-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 10: 5-Baustein-Formel für gute Prompts",
+      "subtitle": "Bringe die Bausteine in die richtige Reihenfolge.",
+      "hintDefault": "Gute Prompts sind wie technische Spezifikationen: klar, strukturiert, eindeutig. Reihenfolge: Rolle → Ziel → Kontext → Constraints → Format.",
+      "rows": [
+        {
+          "key": "rolle",
+          "label": "Rolle (Du bist ...)",
+          "correct": "1",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "key": "ziel",
+          "label": "Ziel (Erstelle ...)",
+          "correct": "2",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "key": "kontext",
+          "label": "Kontext (Zielgruppe, Umfang, Rahmen)",
+          "correct": "3",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "key": "constraints",
+          "label": "Constraints (Stil, Länge, Regeln, No-Go’s)",
+          "correct": "4",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "key": "format",
+          "label": "Format (Tabelle, Liste, JSON, Checkliste)",
+          "correct": "5",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompting-techniken-quiz",
+      "type": "quiz",
+      "title": "Rätsel 11: Prompting-Techniken, die zählen",
+      "subtitle": "Qualität durch Struktur statt Glück.",
+      "hintDefault": "„Begründung“ ist nicht automatisch Wahrheit. Besser: Beispiele, Teilaufgaben, Annahmen markieren, Varianten vergleichen, testen.",
+      "questions": [
+        {
+          "id": "tq1",
+          "text": "1. Welche Technik sorgt oft für konsistenteres Ausgabeformat?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Few-Shot: ein Beispiel für das gewünschte Format geben."
+            },
+            {
+              "value": "b",
+              "text": "Alles möglichst vage lassen."
+            },
+            {
+              "value": "c",
+              "text": "Nur ein Wort prompten."
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "tq2",
+          "text": "2. Was hilft bei komplexen Aufgaben am meisten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Erst Struktur, dann Details (in Schritte aufteilen)."
+            },
+            {
+              "value": "b",
+              "text": "Alles in einem Satz ohne Kontext."
+            },
+            {
+              "value": "c",
+              "text": "Keine Zwischenprüfung erlauben."
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "tq3",
+          "text": "3. Welche Formulierung ist ein gutes „Sicherheitsgeländer“?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Wenn Informationen fehlen: stelle Rückfragen statt zu raten."
+            },
+            {
+              "value": "b",
+              "text": "Rate immer, sonst dauert es zu lange."
+            },
+            {
+              "value": "c",
+              "text": "Ignoriere fehlende Angaben."
+            }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "4-stufen-kontrolle-capital",
+      "type": "capital",
+      "title": "Rätsel 12: KI-Ergebnisse sicher nutzen (4-Stufen-Kontrolle)",
+      "subtitle": "Fehler skalieren sonst brutal.",
+      "hintDefault": "Reihenfolge: Faktencheck → Plausibilität → Datenschutz → Freigabe. Nichts ungeprüft durchreichen.",
+      "rows": [
+        {
+          "key": "faktencheck",
+          "label": "Faktencheck (zweite Quelle / Doku / Test)",
+          "correct": "1",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "key": "plausibilitaet",
+          "label": "Plausibilität (Zahlen, Namen, Normen logisch prüfen)",
+          "correct": "2",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "key": "datenschutz",
+          "label": "Datenschutz (keine Kundendaten/Passwörter/Secrets)",
+          "correct": "3",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "key": "freigabe",
+          "label": "Freigabe (Mensch entscheidet bei wichtigen Themen)",
+          "correct": "4",
+          "options": [
+            {
+              "value": "",
+              "text": "– bitte wählen –"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finale-szenarien-quiz",
+      "type": "quiz",
+      "title": "Finale: Prüfungs-Szenarien",
+      "subtitle": "Erkennen → begründen → nächster Schritt.",
+      "hintDefault": "Merke: Prompt steuert Verhalten, nicht Wahrheit. Risiken im Kopf behalten: Halluzination, Bias, Datenschutz, Urheberrecht, Sicherheit. Im Zweifel: prüfen/testen/freigeben.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Ein KI-Tool nennt konkrete Paragraphen und Quellen, die es so nicht gibt. Welches Risiko ist das am ehesten?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Halluzination"
+            },
+            {
+              "value": "b",
+              "text": "Dual-Channel"
+            },
+            {
+              "value": "c",
+              "text": "Subnetting"
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f2",
+          "text": "2. Ein Prompt enthält Kundenlisten und interne Passwörter. Was ist hier das zentrale Problem?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Datenschutz/Secrets im Prompt"
+            },
+            {
+              "value": "b",
+              "text": "Zu wenig Format-Vorgaben"
+            },
+            {
+              "value": "c",
+              "text": "Zu viele Beispiele"
+            }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Ein KI-System wird fürs Bewerber-Screening genutzt. Welche Einordnung ist typischerweise naheliegend?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Minimales Risiko"
+            },
+            {
+              "value": "b",
+              "text": "Hochrisiko (kontextabhängig, oft strenger geregelt)"
+            },
+            {
+              "value": "c",
+              "text": "Verboten in jedem Fall"
+            }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f4",
+          "text": "4. Welche Prompt-Struktur ist am besten geeignet, um eine saubere Ausgabe zu bekommen?",
+          "options": [
+            {
+              "value": "a",
+              "text": "Rolle + Ziel + Kontext + Constraints + Format"
+            },
+            {
+              "value": "b",
+              "text": "Nur ein Stichwort, ohne Kontext"
+            },
+            {
+              "value": "c",
+              "text": "Viele Emojis statt Anforderungen"
+            }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

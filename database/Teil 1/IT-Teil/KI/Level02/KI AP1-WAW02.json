@@ -1,0 +1,1316 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – KI (AP1): AI Act, Prompting, Risiken, sicher nutzen",
+  "description": "Schritt 1: passendes KI-Konzept/Regel/Technik bestimmen (What) · Schritt 2: passende Merkmale und Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "In der Aufgabe sollst du erklären, warum „klassische Software“ anders ist als KI. Es geht um Regeln vs. Lernen und um deterministisch vs. probabilistisch.",
+      "tags": [
+        "Grundlagen",
+        "Klassische Software",
+        "KI/ML"
+      ],
+      "options": [
+        {
+          "id": "klassisch_vs_ki",
+          "label": "Klassische Software vs. KI (Machine Learning)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Klassische Software folgt festen Regeln (if/else) und ist bei gleicher Eingabe meist deterministisch.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "KI/ML lernt Muster aus Daten und arbeitet probabilistisch (Wahrscheinlichkeiten).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "KI „versteht“ Inhalte wie ein Mensch und ist daher automatisch zuverlässig.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "KI kann überzeugend wirken, ohne richtig zu sein (Fehler/Halluzinationen möglich).",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "nur_regeln",
+          "label": "KI ist nur sehr viel if/else (Regelwerk)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Das beschreibt eher klassische Software: fest kodierte Regeln.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "ML basiert auf gelernten Parametern aus Trainingsdaten, nicht auf Hand-regeln.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Gleiche Eingabe liefert bei KI immer exakt gleiche Ausgabe.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "„Klingt sicher“ ist kein Wahrheitsbeweis.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "ki_ist_suchmaschine",
+          "label": "KI ist eine Suchmaschine und findet immer die Quelle",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Generative KI erzeugt Inhalte; sie sucht nicht automatisch wie eine Suchmaschine.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Quellen werden nicht automatisch zitiert oder geprüft.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "KI-Ausgabe ist immer belegbar und verifizierbar durch eingeblendete Quellen.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Fakten brauchen Prüfung mit zweiter Quelle/Test.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Klassisch = Regeln + deterministisch. KI/ML = lernt Muster + probabilistisch. Klingt sicher ≠ stimmt sicher."
+    },
+    {
+      "id": "v02",
+      "profile": "Du sollst einordnen, was „Generative KI“ ist. Es geht um: neue Inhalte erzeugen (Text/Bild/Code) und warum das nicht automatisch korrekt ist.",
+      "tags": [
+        "Generative KI",
+        "LLM",
+        "Diffusion"
+      ],
+      "options": [
+        {
+          "id": "genai",
+          "label": "Generative KI (Text/Bild/Code erzeugen)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Erzeugt neue Inhalte basierend auf Trainingsmustern + Prompt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Kann überzeugend sein, ohne zu „verstehen“ oder korrekt zu sein.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Zitiert Quellen automatisch und garantiert Wahrheit.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "LLMs erzeugen Text/Code, Diffusionsmodelle erzeugen Bilder.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "search_engine",
+          "label": "Suchmaschine (findet Originalquellen)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Suchmaschinen suchen und verlinken Quellen, sie „erzeugen“ nicht primär Antworten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Generative KI ist kein reines Nachschlagewerk und kann Inhalte erfinden.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Wenn etwas plausibel klingt, ist es zuverlässig.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Für Fakten gilt: prüfen, testen, gegenlesen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "deterministisch",
+          "label": "Deterministische Software (immer gleiche Ausgabe)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Das passt zu klassischer Software, nicht zu probabilistischen Modellen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Generative KI produziert Inhalte auf Basis von Wahrscheinlichkeiten.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Prompt steuert das Verhalten, nicht die Wahrheit.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Generative KI ist identisch zu if/else-Logik.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Generative KI erzeugt neue Inhalte (Text/Bild/Code). Das ist nicht automatisch korrekt und nicht automatisch belegt."
+    },
+    {
+      "id": "v03",
+      "profile": "Du sollst KI-Arten unterscheiden. Beispiel: Ticket-Priorisierung vs Support-Chatbot vs Bilderzeugung.",
+      "tags": [
+        "ML",
+        "Deep Learning",
+        "Generativ"
+      ],
+      "options": [
+        {
+          "id": "ml",
+          "label": "Machine Learning (Klassifikation/Regression)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Klassifikation: z. B. Spam/kein Spam; Regression: z. B. Preisprognose.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Lernt aus Beispieldaten statt fest verdrahteten Regeln.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Erzeugt automatisch kreative Texte und Bilder als Hauptzweck.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Ticket-Priorisierung passt typischerweise gut zu klassischem ML (Klassifikation).",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "deep_learning",
+          "label": "Deep Learning (viele neuronale Schichten)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Stark bei Bild- und Sprachverarbeitung.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ist eine Untergruppe von ML (häufig komplexer, datenhungriger).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Deep Learning bedeutet: immer deterministisch und regelbasiert.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Support-Chatbot kann Deep-Learning/LLM-Technik nutzen, ist aber nicht „nur“ Klassifikation.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "generativ",
+          "label": "Generative Modelle (LLM/Diffusion)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "LLMs erzeugen Text/Code, Diffusion erzeugt Bilder.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Generativ = Suchmaschine, weil es Informationen findet.",
+              "correct": false
+            },
+            {
+              "id": "w3",
+              "text": "Quellen werden nicht automatisch zitiert.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Support-Chatbot ist oft generativ, Ticket-Priorisierung eher klassisches ML.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "ML = Klassifikation/Regression. Deep Learning = viele Schichten (stark bei Bild/Sprache). Generativ = Inhalte erzeugen (LLM/Diffusion)."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein KI-Tool liefert eine sehr überzeugende Erklärung inkl. „Quelle“, die es in Wirklichkeit nicht gibt. Du sollst den Risiko-Begriff nennen.",
+      "tags": [
+        "Risiken",
+        "Halluzination",
+        "Faktencheck"
+      ],
+      "options": [
+        {
+          "id": "halluzination",
+          "label": "Halluzination (plausibel klingend, aber falsch)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "KI kann Inhalte/Quellen erfinden und dabei extrem überzeugend wirken.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Professioneller Ton ist kein Wahrheitsbeweis.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Gegenmaßnahme: Fakten mit zweiter Quelle oder Test in Sandbox prüfen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Halluzinationen passieren nur bei Bildern, nie bei Text.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "bias",
+          "label": "Bias (Verzerrung/Diskriminierung)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Bias betrifft verzerrte Ergebnisse durch einseitige Trainingsdaten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Erfundene Quellen sind eher Halluzination als Bias.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Bias heißt: das Modell zitiert immer korrekt.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Bias erkennt man durch Tests/Monitoring und sensible Use-Cases besonders kritisch prüfen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "datenschutz",
+          "label": "Datenschutz-Risiko (personenbezogene Daten im Prompt)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Datenschutz ist kritisch, aber hier geht’s um erfundene Fakten/Quellen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Prompts dürfen keine Kundendaten/Secrets enthalten.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Datenschutz ist nur relevant, wenn das Tool offline läuft.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Sicherheits- und Compliance-Regeln gelten trotzdem.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Wenn KI überzeugend falsche Fakten/Quellen liefert: Halluzination. Gegenmittel: Faktencheck/Test, nicht Ton glauben."
+    },
+    {
+      "id": "v05",
+      "profile": "Du sollst die „5 klassischen KI-Risiken“ benennen und zuordnen: Was gehört dazu, was nicht?",
+      "tags": [
+        "Risiken",
+        "Bias",
+        "Datenschutz",
+        "Urheberrecht",
+        "Sicherheit"
+      ],
+      "options": [
+        {
+          "id": "risiken_set",
+          "label": "Halluzination · Bias · Datenschutz · Urheberrecht · Sicherheit",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Halluzination: plausibel klingend, aber falsch (Quellen erfunden möglich).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Bias: Verzerrungen/Benachteiligungen durch Trainingsdaten.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Datenschutz/Urheberrecht/Sicherheit sind reale Risiken im Betrieb (Prompts, Inhalte, Prompt-Injection).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn KI professionell klingt, ist Bias ausgeschlossen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_technik",
+          "label": "Nur technische Risiken (Server down, Kabel kaputt)",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "KI-Risiken sind oft fachlich/rechtlich/organisatorisch, nicht nur Technik.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Datenschutz und Urheberrecht sind explizit wichtige Punkte.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Prompt-Injection ist ein Sicherheitsrisiko, kein Kabelproblem.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Bias existiert nur in privaten Projekten, nicht im Betrieb.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "alles_ist_ok",
+          "label": "Kein echtes Risiko, weil KI „weiß“ was sie tut",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "KI berechnet Wahrscheinlichkeiten und kann überzeugend falsch liegen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Kontrolle skaliert man Fehler (Automatisierung ohne Check).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Datenschutz/Compliance bleiben Verantwortung des Betriebs.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Halluzinationen sind ausgeschlossen, wenn der Prompt lang genug ist.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Die 5 Klassiker: Halluzination, Bias, Datenschutz, Urheberrecht, Sicherheit (z. B. Prompt-Injection/Datenabfluss)."
+    },
+    {
+      "id": "v06",
+      "profile": "Du sollst die Begriffe Modell/Training/Inferenz/Prompt/Kontextfenster korrekt erklären – besonders „Inferenz“ wird oft verwechselt.",
+      "tags": [
+        "Begriffe",
+        "Modell",
+        "Training",
+        "Inferenz",
+        "Kontextfenster"
+      ],
+      "options": [
+        {
+          "id": "begriffe",
+          "label": "Modell/Training/Inferenz/Prompt/Kontextfenster sauber unterscheiden",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Modell = gelernte Parameter/„gelernte Maschine“ als Ergebnis des Trainings.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Training = Lernprozess aus Daten; Inferenz = Nutzungsphase (Antwort generieren).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Prompt = Eingabe/Anweisung; Kontextfenster = wie viel Text pro Anfrage berücksichtigt werden kann.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Kontextfenster bedeutet: KI merkt sich dauerhaft alles über dich.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "inferenz_training",
+          "label": "Inferenz bedeutet: Modell wird weiter trainiert während du chattest",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Inferenz ist die Nutzungsphase: das Modell erzeugt Antworten aus dem Prompt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Training ist getrennt davon: Musterlernen aus Daten.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Prompt steuert Verhalten, nicht Wahrheit.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Inferenz ist gleichbedeutend mit „KI versteht jetzt wirklich“.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "kontext_gedaechtnis",
+          "label": "Kontextfenster = unbegrenztes Gedächtnis",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Kontextfenster ist ein Limit pro Anfrage (wie viel Text gleichzeitig berücksichtigt wird).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Außerhalb des Kontextes ist Information oft nicht mehr „präsent“.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Prüfungsfalle: „KI merkt sich alles“ stimmt so nicht.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Kontextfenster ist nur für Bilder relevant.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Training ≠ Inferenz. Prompt ≠ Wahrheit. Kontextfenster ist ein Limit pro Anfrage, kein unbegrenztes Gedächtnis."
+    },
+    {
+      "id": "v07",
+      "profile": "Du sollst die EU-KI-Verordnung (AI Act) in einem Satz einordnen: Idee, Rollen, Grundlogik.",
+      "tags": [
+        "EU-KI-VO",
+        "AI Act",
+        "Rollen",
+        "Risikobasiert"
+      ],
+      "options": [
+        {
+          "id": "ai_act_idee",
+          "label": "AI Act: sichere/transparente KI, Rollen (Anbieter/Betreiber), risikobasierte Regeln",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ziel: sichere, transparente, menschenrechtskonforme KI in der EU.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Rollen zählen: Anbieter/Hersteller vs Betreiber/Nutzer („Deployer“) – Pflichten je nach Rolle.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Grundlogik: höheres Risiko → strengere Anforderungen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Gilt nur für große Tech-Firmen, kleine Betriebe sind ausgenommen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "ai_act_nur_behoerden",
+          "label": "AI Act betrifft nur Behörden und staatliche Systeme",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Auch Unternehmen können betroffen sein – besonders als Betreiber/Deployer.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Pflichten hängen vom Einsatzkontext und der Rolle ab.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Risikoklassen sind ein Kernpunkt, nicht die Unternehmensgröße.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn man nur „ein Tool“ nutzt, hat man nie Verantwortung.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "ai_act_verbietet_alles",
+          "label": "AI Act verbietet generell KI im Betrieb",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Es gibt mehrere Risikoklassen: nicht alles ist verboten oder Hochrisiko.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Viele Anwendungen fallen in begrenztes/minimales Risiko.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Wichtig sind Transparenz, Kontrolle, Dokumentation, Human Oversight (je nach Risiko).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Risikobasiert bedeutet: gleiche Anforderungen für alles.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "AI Act: risikobasierte KI-Regulierung mit Rollenlogik (Anbieter vs Betreiber). Je höher das Risiko, desto strenger die Pflichten."
+    },
+    {
+      "id": "v08",
+      "profile": "Du sollst die vier Risikoklassen der EU-KI-VO korrekt einordnen und die Prüfungsfalle vermeiden: „Alles ist Hochrisiko“.",
+      "tags": [
+        "EU-KI-VO",
+        "Risikoklassen",
+        "Kontext"
+      ],
+      "options": [
+        {
+          "id": "risk_classes",
+          "label": "Verboten · Hochrisiko · Begrenztes Risiko · Minimales Risiko",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Verboten: Unacceptable Risk (z. B. manipulative Systeme/Social Scoring) – verboten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hochrisiko: strenge Anforderungen (Kontext entscheidend, z. B. Screening).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Begrenztes Risiko: Transparenzpflichten (Hinweise auf KI-Interaktion/KI-Inhalte).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Alles ist Hochrisiko, egal wofür man es nutzt.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_zwei_klassen",
+          "label": "Nur zwei Klassen: erlaubt oder verboten",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Die Logik ist abgestuft: mehrere Risikoklassen mit unterschiedlichen Pflichten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Kontext ist entscheidend: z. B. Screening ≠ Textzusammenfassung.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Begrenztes Risiko hat oft Transparenzpflichten statt Totalverbot.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Minimales Risiko bedeutet: immer vollständige Dokumentationspflicht wie Hochrisiko.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "hochrisiko_alltag",
+          "label": "Textvorschläge und Spamfilter sind Hochrisiko",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Minimales Risiko hat wenige bis keine Zusatzpflichten (z. B. Spam-Filter, Textvorschläge).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hochrisiko hängt stark am Einsatzkontext (z. B. Bewerber-Screening, Kreditvergabe, Diagnostik).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "„Alles Hochrisiko“ ist eine typische Prüfungsfalle.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Risikoklasse ist immer gleich, egal wofür man es nutzt.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Vier Klassen: verboten, hoch, begrenzt (Transparenz), minimal. Einordnung hängt am Einsatzkontext."
+    },
+    {
+      "id": "v09",
+      "profile": "Ein Betrieb nutzt KI-Tools im Alltag. Du sollst erklären, was das praktisch bedeutet: Dokumentation, Kontrolle, Schulung, Human Oversight.",
+      "tags": [
+        "Betrieb",
+        "Pflichten",
+        "Human Oversight",
+        "Prozesse"
+      ],
+      "options": [
+        {
+          "id": "betriebspflichten",
+          "label": "KI-Einsatz braucht Prozess: dokumentieren, informieren, kontrollieren, schulen (+ Human Oversight)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Dokumentieren: Welche KI-Systeme werden wo eingesetzt?",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Informieren/Kontrollieren/Schulen: Mitarbeitende und Nutzung absichern.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Human Oversight: Menschliche Aufsicht/Entscheidung – besonders bei kritischen Themen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn man nur ein Tool nutzt, gibt es keine Betreiber-Verantwortung.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "kein_prozess_noetig",
+          "label": "KI-Tools sind wie Taschenrechner: keine Regeln nötig",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "KI kann halluzinieren, biased sein, Daten abfließen lassen → Prozess nötig.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Kontrolle skaliert man Fehler (Automatisierung ohne Check).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Schulung (AI Literacy) reduziert Fehlbedienung und Risiken.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Dokumentation ist sinnlos, weil KI immer korrekt ist.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_it_sicherheitsfrage",
+          "label": "Das ist nur ein IT-Security-Thema, kein Organisations-Thema",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Neben Technik zählen auch Richtlinien, Rollen, Schulungen, Freigaben.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Compliance/Datenschutz/Urheberrecht sind organisatorisch + rechtlich.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Human Oversight ist ein Prozesspunkt, nicht nur Technik.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn Technik stimmt, braucht man keine Freigaben.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "KI im Betrieb heißt: Prozess aufbauen (Doku/Info/Kontrolle/Schulung) + Human Oversight. Nicht „Tool rein und fertig“."
+    },
+    {
+      "id": "v10",
+      "profile": "AI Literacy: Ein Mitarbeiter will Kundendaten und Passwörter in ein öffentliches KI-Tool kopieren, „weil’s schneller geht“. Du sollst das korrekt bewerten.",
+      "tags": [
+        "AI Literacy",
+        "Datenschutz",
+        "Policies"
+      ],
+      "options": [
+        {
+          "id": "nicht_in_prompt",
+          "label": "Nicht erlaubt: Keine personenbezogenen Daten/Secrets in Prompts (Policies beachten)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Datenschutz: Prompts können sensible Daten enthalten – dürfen nicht raus.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Secrets (Passwörter/API-Keys) gehören niemals in Prompts.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "AI Literacy heißt: Grenzen/Risiken verstehen und sicher nutzen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn es schneller ist, ist es automatisch compliant.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "einmal_ok",
+          "label": "Einmal ist okay, solange man danach die Ausgabe löscht",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Das Risiko liegt schon im Eingeben/Übermitteln sensibler Daten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Policies/Compliance gelten immer, nicht nur bei Wiederholung.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Sicher ist: anonymisieren/abstrahieren oder interne Freigabe-Tools nutzen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Datenschutz betrifft nur HR, nicht IT.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "ki_weiss_es_sowieso",
+          "label": "Unkritisch: KI kennt die Daten sowieso schon",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Das ist kein Argument und ändert nichts an Datenschutzpflichten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Prompts können Datenabfluss verursachen.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "AI Literacy bedeutet: Risiko erkennen, nicht wegreden.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Prompts sind automatisch verschlüsselt und damit unproblematisch.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "AI Literacy-Grundregel: Keine Kundendaten/Secrets in Prompts. Richtlinien beachten, anonymisieren oder sichere interne Lösungen nutzen."
+    },
+    {
+      "id": "v11",
+      "profile": "Du sollst einen Prompt so formulieren, dass er reproduzierbar gute Ergebnisse liefert. Welche Struktur ist die richtige (5-Baustein-Formel)?",
+      "tags": [
+        "Prompting",
+        "Prompt-Formel",
+        "Struktur"
+      ],
+      "options": [
+        {
+          "id": "prompt_5",
+          "label": "Rolle · Ziel · Kontext · Constraints · Format",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Rolle setzt Perspektive (z. B. Ausbilder/Prüfer/Admin).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ziel muss klar und messbar sein (nicht vage).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Constraints (Stil, Länge, No-Go’s) und Format (Tabelle/JSON) erhöhen Konsistenz.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Je kürzer und vager, desto besser die Antwortqualität.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_rolle",
+          "label": "Nur Rolle reicht (‚Du bist Prüfer‘), Rest ist egal",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ohne klares Ziel und Kontext wird die Antwort beliebig.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Format/Constraints kommt oft unbrauchbarer Output.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Strukturierte Prompts funktionieren wie Spezifikationen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Vage Prompts liefern meist präzise Antworten.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_format",
+          "label": "Nur Format (‚Gib mir JSON‘) – Inhalt und Regeln egal",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Format hilft, aber ohne Ziel/Kontext fehlen Anforderungen.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Constraints verhindern typische Probleme (zu lang, falscher Ton, No-Go’s verletzt).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Rolle/Ziel/Kontext steuern Inhalt, nicht nur die Verpackung.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn Format stimmt, sind Fakten automatisch korrekt.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Gute Prompts folgen der 5er-Formel: Rolle, Ziel, Kontext, Constraints, Format. Das erhöht Qualität und Reproduzierbarkeit."
+    },
+    {
+      "id": "v12",
+      "profile": "Du willst weniger Halluzinationen und stabilere Antworten. Welche Prompting-Techniken sind wirklich sinnvoll (statt „Chain-of-thought erzwingt Wahrheit“)?",
+      "tags": [
+        "Prompting",
+        "Techniken",
+        "Qualität"
+      ],
+      "options": [
+        {
+          "id": "techniken",
+          "label": "Few-Shot · Schrittweise Aufgaben · Unsicherheiten markieren · Varianten · Rollenwechsel · Sicherheitsgeländer",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Beispiele (Few-Shot) stabilisieren Ausgabeformat und Konsistenz.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Aufteilen: erst Struktur, dann Details reduziert Chaos bei komplexen Aufgaben.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Sicherheitsgeländer (bei fehlenden Infos nachfragen statt raten) senkt Halluzinationen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "„Chain-of-thought“ erzwingt Wahrheit, daher kann man Faktenprüfung sparen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_cot",
+          "label": "Immer Chain-of-thought anfordern, dann stimmt es automatisch",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Begründungen helfen, aber ersetzen keine Verifikation.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Besser: Begründung + Risiken + Checkliste + Test/zweite Quelle.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Varianten + Vor-/Nachteile erhöhen Qualität durch Vergleich.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Few-Shot ist nutzlos und verschlechtert immer die Ausgabe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_kurz",
+          "label": "Je kürzer der Prompt, desto sicherer die Antwort",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Vage Prompts führen zu vagen Antworten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Kontext/Constraints/Format sind Qualitätshebel.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Schrittweise Vorgehen verhindert, dass das Modell „rät“.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Fehlende Infos sollte das Modell immer erfinden, um schnell zu sein.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Sinnvolle Techniken: Few-Shot, Schrittweise, Unsicherheiten markieren, Varianten, Rollenwechsel, Sicherheitsgeländer. Wahrheit braucht trotzdem Prüfung."
+    },
+    {
+      "id": "v13",
+      "profile": "Du sollst erklären, wie man KI-Ergebnisse sicher nutzt: Welche 4-Stufen-Kontrolle ist korrekt und warum?",
+      "tags": [
+        "Sicher nutzen",
+        "Kontrolle",
+        "Faktencheck",
+        "Freigabe"
+      ],
+      "options": [
+        {
+          "id": "4_stufen",
+          "label": "Faktencheck · Plausibilität · Datenschutz · Freigabe (Mensch entscheidet bei Wichtigem)",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Faktencheck: zweite Quelle, interne Doku oder Sandbox-Test.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Plausibilität: Zahlen, Namen, Normen logisch prüfen.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Datenschutz: keine Kundendaten/Passwörter/Secrets in Prompts.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Freigabe ist unnötig, wenn die KI-Ausgabe gut formuliert ist.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "auto_durchreichen",
+          "label": "Automatisch durchreichen: KI spart Zeit, Kontrolle verlangsamt",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Automatisiert durchreichen skaliert Fehler und verschiebt Verantwortung.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Prüfung steigt Risiko für falsche Entscheidungen/Compliance-Probleme.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Wichtige Themen (HR/Recht/Finanzen) brauchen menschliche Entscheidung.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Datenschutz ist egal, wenn man den Prompt freundlich formuliert.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_datenschutz",
+          "label": "Nur Datenschutz prüfen, alles andere ist zweitrangig",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Falsche Fakten sind ebenfalls riskant (Qualität/Haftung/Fehlentscheidungen).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Plausibilitätscheck verhindert grobe Logik-/Zahlenfehler.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Freigabe ist nötig, wenn Auswirkungen groß sind.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Halluzinationen existieren nur, wenn Datenschutz verletzt wird.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "4-Stufen-Kontrolle: Faktencheck, Plausibilität, Datenschutz, Freigabe. Ohne Kontrolle skaliert man Fehler."
+    },
+    {
+      "id": "v14",
+      "profile": "AP1-Transfer: Du sollst einen vollständigen Prompt erstellen, der eine „AP1-Lernkarte Netzwerke“ erzeugt. Welche Prompt-Variante ist am besten aufgebaut?",
+      "tags": [
+        "Prompt-Engineering",
+        "AP1",
+        "Praxis"
+      ],
+      "options": [
+        {
+          "id": "voll_prompt",
+          "label": "Vollständig (Rolle+Ziel+Kontext+Constraints+Format) für „AP1-Lernkarte Netzwerke“",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Enthält Rolle (z. B. Ausbilder/Prüfer) und klares Ziel („Erstelle Lernkarte“).",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Gibt Kontext (AP1-Niveau, Themen: OSI, DHCP, DNS, IPv4/IPv6, Fehlersuche).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Enthält Constraints (kurz, prüfungsfit, keine sensiblen Daten, keine unbelegten Behauptungen) und Format (Stichpunkte + Mini-Quiz).",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Lässt alles offen, damit KI „kreativer“ ist – das erhöht Prüfungssicherheit.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "vage_prompt",
+          "label": "Vage („Mach was zu Netzwerken“) ohne Format/Regeln",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Vage Prompts führen oft zu vagen/unbrauchbaren Antworten.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Format ist Output schwer vergleichbar und schlecht wiederverwendbar.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Ohne Constraints steigt Risiko: zu lang, falscher Fokus, Halluzinationen.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Vage ist besser, weil KI dann weniger Fehler macht.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "nur_rolle_ziel",
+          "label": "Nur Rolle + Ziel, aber ohne Kontext/Constraints/Format",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ohne Kontext fehlen Themen-Schwerpunkte (z. B. DHCP/DNS/OSI) – Ergebnis driftet.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Ohne Constraints kann die Antwort zu lang/zu oberflächlich werden.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Ohne Format fehlt Struktur für Lernkarten/Prüfungsvorbereitung.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Format ist überflüssig, weil KI immer automatisch passend strukturiert.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Der beste Prompt ist vollständig: Rolle, Ziel, Kontext, Constraints, Format. Genau das macht die Antwort prüfungsfit und wiederverwendbar."
+    }
+  ]
+}
