@@ -8,8 +8,8 @@ const path = require('path');
  */
 
 const DATABASE_ROOT = path.join(__dirname, '../database');
-// Wir schreiben direkt in das Frontend Verzeichnis, damit die Web-App den neuen Index hat
-const OUTPUT_FILE = path.join(__dirname, '../../Frontend_AP1/app_index.js');
+// Schreiben in das aktuelle Verzeichnis (Backend_AP1), wo index.html liegt
+const OUTPUT_FILE = path.join(__dirname, '../app_index.js');
 
 function scanDir(dirPath, relativeRoot = 'database') {
     const items = fs.readdirSync(dirPath, { withFileTypes: true });
