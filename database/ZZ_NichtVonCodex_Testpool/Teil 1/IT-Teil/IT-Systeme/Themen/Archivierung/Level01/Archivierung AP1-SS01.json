@@ -1,0 +1,325 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Backup vs Archiv (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "use_case_diagramm",
+      "title": "Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "use_case_text",
+      "title": "Use-Case-Text",
+      "subtitle": ""
+    },
+    {
+      "id": "klassendiagramm",
+      "title": "Klassendiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "aktivitatsdiagramm",
+      "title": "Aktivitätsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "sequenzdiagramm",
+      "title": "Sequenzdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "zustandsdiagramm",
+      "title": "Zustandsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "erd_erm",
+      "title": "ERD/ERM",
+      "subtitle": ""
+    },
+    {
+      "id": "kardinalitat",
+      "title": "Kardinalität",
+      "subtitle": ""
+    },
+    {
+      "id": "m_n_zwischentabelle",
+      "title": "M:N-Zwischentabelle",
+      "subtitle": ""
+    },
+    {
+      "id": "1nf",
+      "title": "1NF",
+      "subtitle": ""
+    },
+    {
+      "id": "2nf",
+      "title": "2NF",
+      "subtitle": ""
+    },
+    {
+      "id": "3nf",
+      "title": "3NF",
+      "subtitle": ""
+    },
+    {
+      "id": "pseudocode",
+      "title": "Pseudocode",
+      "subtitle": ""
+    },
+    {
+      "id": "pap_flowchart",
+      "title": "PAP (Flowchart)",
+      "subtitle": ""
+    },
+    {
+      "id": "struktogramm",
+      "title": "Struktogramm",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_sequenz",
+      "title": "Kontrollstruktur: Sequenz",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_auswahl",
+      "title": "Kontrollstruktur: Auswahl",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_schleife",
+      "title": "Kontrollstruktur: Schleife",
+      "subtitle": ""
+    },
+    {
+      "id": "datentyp",
+      "title": "Datentyp",
+      "subtitle": ""
+    },
+    {
+      "id": "liste_array",
+      "title": "Liste/Array",
+      "subtitle": ""
+    },
+    {
+      "id": "dictionary_map",
+      "title": "Dictionary/Map",
+      "subtitle": ""
+    },
+    {
+      "id": "ide",
+      "title": "IDE",
+      "subtitle": ""
+    },
+    {
+      "id": "debugger",
+      "title": "Debugger",
+      "subtitle": ""
+    },
+    {
+      "id": "versionskontrolle_git",
+      "title": "Versionskontrolle (Git)",
+      "subtitle": ""
+    },
+    {
+      "id": "unit_test",
+      "title": "Unit Test",
+      "subtitle": ""
+    },
+    {
+      "id": "integration_test",
+      "title": "Integration Test",
+      "subtitle": ""
+    },
+    {
+      "id": "system_test",
+      "title": "System Test",
+      "subtitle": ""
+    },
+    {
+      "id": "logging",
+      "title": "Logging",
+      "subtitle": ""
+    },
+    {
+      "id": "sql_select",
+      "title": "SQL SELECT",
+      "subtitle": ""
+    },
+    {
+      "id": "where",
+      "title": "WHERE",
+      "subtitle": ""
+    },
+    {
+      "id": "order_by",
+      "title": "ORDER BY",
+      "subtitle": ""
+    },
+    {
+      "id": "like",
+      "title": "LIKE",
+      "subtitle": ""
+    },
+    {
+      "id": "in",
+      "title": "IN",
+      "subtitle": ""
+    },
+    {
+      "id": "between",
+      "title": "BETWEEN",
+      "subtitle": ""
+    },
+    {
+      "id": "group_by",
+      "title": "GROUP BY",
+      "subtitle": ""
+    },
+    {
+      "id": "having",
+      "title": "HAVING",
+      "subtitle": ""
+    },
+    {
+      "id": "join",
+      "title": "JOIN",
+      "subtitle": ""
+    },
+    {
+      "id": "ddl",
+      "title": "DDL",
+      "subtitle": ""
+    },
+    {
+      "id": "dml",
+      "title": "DML",
+      "subtitle": ""
+    },
+    {
+      "id": "dql",
+      "title": "DQL",
+      "subtitle": ""
+    },
+    {
+      "id": "transaktion",
+      "title": "Transaktion",
+      "subtitle": ""
+    },
+    {
+      "id": "acid",
+      "title": "ACID",
+      "subtitle": ""
+    },
+    {
+      "id": "kartesisches_produkt",
+      "title": "kartesisches Produkt",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Backup dient der kurzfristigen Wiederherstellung nach Fehler, Malware, Löschen oder Desaster.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Backup ist typischerweise überschreibbar und rotiert (z. B. tägliche Stände), weil es auf Restore-Zeitpunkte optimiert ist.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Archiv dient der langfristigen Aufbewahrung (z. B. Belege/Compliance) und ist nicht primär für schnelle System-Restores gedacht.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Archivdaten sollen nachträglich nicht (oder nur nachvollziehbar) veränderbar sein – je nach Anforderung WORM/Immutability.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: „Ich hab ein Backup, also bin ich compliant“ – nein, Aufbewahrungsfristen und Unveränderbarkeit sind Archiv-Themen.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Archiv braucht meist Suchbarkeit (Index/Metadaten), damit man einzelne Dokumente schnell finden und nachweisen kann.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Archiv kann Retention-Regeln haben (Aufbewahren bis Datum X) und danach geregelte Löschung – abhängig von Vorgaben.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Backup-Restore zielt oft auf „System wieder lauffähig“ oder „Datenstand von gestern“ – nicht auf Beleg-Nachweis über Jahre.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Archiv zielt oft auf „Nachweisbarkeit“: Wer hat was wann abgelegt, unverändert, auffindbar, revisionssicher (wenn gefordert).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Prüfungsfalle: Wenn Archivdaten beliebig überschrieben werden können, ist das häufig kein echtes Archiv im Compliance-Sinn.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "„Archiv = kurzfristige Wiederherstellung nach Ransomware, Hauptziel ist schnelles Restore.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "„Backup = langfristige, unveränderliche Aufbewahrung von Belegen über viele Jahre.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Backup und Archiv sind unterschiedliche Zwecke: Restore nach Zwischenfällen vs. langfristige, ggf. unveränderliche Aufbewahrung mit Suchbarkeit.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

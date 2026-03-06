@@ -1,0 +1,229 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Konsolenbefehle (4.6)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Befehl zur Aussage.",
+  "columns": [
+    {
+      "id": "dir",
+      "title": "dir",
+      "subtitle": ""
+    },
+    {
+      "id": "ls",
+      "title": "ls",
+      "subtitle": ""
+    },
+    {
+      "id": "mkdir",
+      "title": "mkdir",
+      "subtitle": ""
+    },
+    {
+      "id": "del",
+      "title": "del",
+      "subtitle": ""
+    },
+    {
+      "id": "cp",
+      "title": "cp",
+      "subtitle": ""
+    },
+    {
+      "id": "copy",
+      "title": "copy",
+      "subtitle": ""
+    },
+    {
+      "id": "ipconfig",
+      "title": "ipconfig",
+      "subtitle": ""
+    },
+    {
+      "id": "ifconfig",
+      "title": "ifconfig",
+      "subtitle": ""
+    },
+    {
+      "id": "iproute2",
+      "title": "iproute2",
+      "subtitle": ""
+    },
+    {
+      "id": "alias",
+      "title": "alias",
+      "subtitle": ""
+    },
+    {
+      "id": "arp",
+      "title": "arp",
+      "subtitle": ""
+    },
+    {
+      "id": "chmod",
+      "title": "chmod",
+      "subtitle": ""
+    },
+    {
+      "id": "ping",
+      "title": "ping",
+      "subtitle": ""
+    },
+    {
+      "id": "traceroute",
+      "title": "traceroute",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Windows: Zeigt den Inhalt eines Verzeichnisses an.",
+      "correctForms": [
+        "dir"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Linux/macOS: Listet Dateien und Ordner im aktuellen Verzeichnis.",
+      "correctForms": [
+        "ls"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Erstellt einen neuen Ordner (z. B. 'mkdir logs').",
+      "correctForms": [
+        "mkdir"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Windows: Löscht eine Datei (z. B. 'del test.txt').",
+      "correctForms": [
+        "del"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Linux/macOS: Kopiert Dateien/Ordner (z. B. 'cp a.txt b.txt' oder 'cp -r src dst').",
+      "correctForms": [
+        "cp"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Windows: Kopiert Dateien (z. B. 'copy a.txt b.txt').",
+      "correctForms": [
+        "copy"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Windows: Zeigt IP-Konfiguration (IP, Gateway, DNS) an.",
+      "correctForms": [
+        "ipconfig"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Linux/macOS (klassisch): Zeigt Netzwerkinterfaces und IPs an.",
+      "correctForms": [
+        "ifconfig"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Linux (modern): Befehls-Suite wie 'ip addr', 'ip route', 'ip link' zur Netzwerkkonfiguration.",
+      "correctForms": [
+        "iproute2"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Legt eine Abkürzung für einen Befehl fest (z. B. 'alias ll=\"ls -la\"').",
+      "correctForms": [
+        "alias"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Zeigt/verwaltet ARP-Tabellen (Zuordnung IP ↔ MAC) im lokalen Netz.",
+      "correctForms": [
+        "arp"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Ändert Dateirechte unter Linux/macOS (z. B. 'chmod 644 file.txt').",
+      "correctForms": [
+        "chmod"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Testet Erreichbarkeit über ICMP und misst grob die Laufzeit (Round Trip Time).",
+      "correctForms": [
+        "ping"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Zeigt den Weg (Hops) zu einem Ziel im Netzwerk an (Routing-Pfad).",
+      "correctForms": [
+        "traceroute"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Windows: Befehl zum Löschen von Dateien ist dieser.",
+      "correctForms": [
+        "del"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Linux/macOS: Standardbefehl zum Listen von Dateien ist dieser.",
+      "correctForms": [
+        "ls"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Windows: Standardbefehl zum Anzeigen der Netzwerkkonfiguration ist dieser.",
+      "correctForms": [
+        "ipconfig"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Linux: Wenn 'ifconfig' fehlt, ist das moderne Werkzeug dafür meist dieses Paket/Toolset.",
+      "correctForms": [
+        "iproute2"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du prüfen willst, ob DNS/HTTP nicht das Problem sind, sondern überhaupt Netzwerk da ist, nutzt du oft zuerst diesen Befehl.",
+      "correctForms": [
+        "ping"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du herausfinden willst, an welchem Hop/Router die Verbindung hängen bleibt, nutzt du diesen Befehl.",
+      "correctForms": [
+        "traceroute"
+      ]
+    }
+  ]
+}

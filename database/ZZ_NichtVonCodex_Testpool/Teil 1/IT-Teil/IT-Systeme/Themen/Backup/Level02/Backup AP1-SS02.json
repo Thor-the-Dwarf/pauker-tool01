@@ -1,0 +1,442 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Backup (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Achte besonders auf RTO/RPO, Restore-Ketten und 3-2-1-1-0.",
+  "columns": [
+    {
+      "id": "backup_ziel",
+      "title": "Backup-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_regel",
+      "title": "3-2-1-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_1_0_regel",
+      "title": "3-2-1-1-0-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "vollbackup",
+      "title": "Vollbackup",
+      "subtitle": ""
+    },
+    {
+      "id": "inkrementelles_backup",
+      "title": "Inkrementelles Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "differenzielles_backup",
+      "title": "Differenzielles Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "snapshot",
+      "title": "Snapshot",
+      "subtitle": ""
+    },
+    {
+      "id": "synthetic_full",
+      "title": "Synthetic Full",
+      "subtitle": ""
+    },
+    {
+      "id": "immutable_backup",
+      "title": "Immutable Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "air_gap",
+      "title": "Air Gap",
+      "subtitle": ""
+    },
+    {
+      "id": "offsite_kopie",
+      "title": "Offsite-Kopie",
+      "subtitle": ""
+    },
+    {
+      "id": "restore_kette",
+      "title": "Restore-Kette",
+      "subtitle": ""
+    },
+    {
+      "id": "restore_test",
+      "title": "Restore-Test",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_verifikation",
+      "title": "Backup-Verifikation",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_retention",
+      "title": "Backup-Retention",
+      "subtitle": ""
+    },
+    {
+      "id": "gfs_rotation",
+      "title": "GFS-Rotation",
+      "subtitle": ""
+    },
+    {
+      "id": "deduplizierung",
+      "title": "Deduplizierung",
+      "subtitle": ""
+    },
+    {
+      "id": "komprimierung",
+      "title": "Komprimierung",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_verschlusselung",
+      "title": "Backup-Verschlüsselung",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_zugriffsschutz",
+      "title": "Backup-Zugriffsschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "restore_runbook",
+      "title": "Restore-Runbook",
+      "subtitle": ""
+    },
+    {
+      "id": "disaster_recovery_drill",
+      "title": "Disaster-Recovery-Drill",
+      "subtitle": ""
+    },
+    {
+      "id": "point_in_time_recovery",
+      "title": "Point-in-Time-Recovery",
+      "subtitle": ""
+    },
+    {
+      "id": "konsistenzprufung_nach_restore",
+      "title": "Konsistenzprüfung nach Restore",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_monitoring",
+      "title": "Backup-Monitoring",
+      "subtitle": ""
+    },
+    {
+      "id": "storage_tiering",
+      "title": "Storage-Tiering",
+      "subtitle": ""
+    },
+    {
+      "id": "single_point_of_failure_vermeiden",
+      "title": "Single Point of Failure vermeiden",
+      "subtitle": ""
+    },
+    {
+      "id": "hybrid_backup_strategie",
+      "title": "Hybrid-Backup-Strategie",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Wiederherstellung nach Fehler, Ausfall oder Angriff ist der Kern.",
+      "correctForms": [
+        "backup_ziel"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Maximale tolerierbare Zeit bis Service wieder läuft.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Maximal tolerierbarer Datenverlust in Zeit.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "3 Kopien, 2 Medientypen, 1 extern.",
+      "correctForms": [
+        "3_2_1_regel"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Erweitert die klassische Regel um immutable/offline Kopie und validierte fehlerfreie Restores.",
+      "correctForms": [
+        "3_2_1_1_0_regel"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Sichert den kompletten Datenbestand in einem Lauf.",
+      "correctForms": [
+        "vollbackup"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Sichert nur Änderungen seit dem letzten Backup-Lauf.",
+      "correctForms": [
+        "inkrementelles_backup"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Sichert Änderungen seit dem letzten Vollbackup.",
+      "correctForms": [
+        "differenzielles_backup"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Punkt-in-Zeit-Abbild vor riskanter Änderung.",
+      "correctForms": [
+        "snapshot"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Vollbackup wird logisch aus Voll + Inkrementen zusammengesetzt.",
+      "correctForms": [
+        "synthetic_full"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Schützt Sicherungen vor nachträglichem Überschreiben/Löschen für definierte Dauer.",
+      "correctForms": [
+        "immutable_backup"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Physisch/logisch isolierte Sicherung außerhalb direkter Angriffsreichweite.",
+      "correctForms": [
+        "air_gap"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Kopie an getrenntem Standort gegen Standortausfall.",
+      "correctForms": [
+        "offsite_kopie"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Benötigte Reihenfolge aus Voll- und Folgesicherungen für erfolgreichen Restore.",
+      "correctForms": [
+        "restore_kette"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Praktischer Beweis, dass Wiederherstellung wirklich funktioniert.",
+      "correctForms": [
+        "restore_test"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Technische Prüfung von Lesbarkeit/Integrität der Sicherungsdaten.",
+      "correctForms": [
+        "backup_verifikation"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Regelwerk, wie lange Sicherungsstände aufbewahrt werden.",
+      "correctForms": [
+        "backup_retention"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Tägliche, wöchentliche und monatliche Rotationslogik.",
+      "correctForms": [
+        "gfs_rotation"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Entfernt redundante Blöcke und spart Speicherplatz.",
+      "correctForms": [
+        "deduplizierung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Reduziert Datenvolumen durch Verdichtung.",
+      "correctForms": [
+        "komprimierung"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Schützt Sicherungsdaten gegen unbefugtes Lesen.",
+      "correctForms": [
+        "backup_verschlusselung"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Begrenzt Rechte für Backup-/Restore-Aktionen auf berechtigte Rollen.",
+      "correctForms": [
+        "backup_zugriffsschutz"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Dokumentierte Schrittfolge für Wiederanlauf im Notfall.",
+      "correctForms": [
+        "restore_runbook"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Geplante Notfallübung des Wiederanlaufprozesses.",
+      "correctForms": [
+        "disaster_recovery_drill"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Rückkehr auf exakten Zeitpunkt vor Fehltransaktion.",
+      "correctForms": [
+        "point_in_time_recovery"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Prüft fachliche Plausibilität und Datenkorrektheit nach Restore.",
+      "correctForms": [
+        "konsistenzprufung_nach_restore"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Alarmiert bei fehlgeschlagenen Jobs oder ausbleibenden Sicherungen.",
+      "correctForms": [
+        "backup_monitoring"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Verteilt Sicherungsdaten auf unterschiedliche Kosten-/Performanceklassen.",
+      "correctForms": [
+        "storage_tiering"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Verhindert, dass ein einzelnes defektes Backup-Element alles lahmlegt.",
+      "correctForms": [
+        "single_point_of_failure_vermeiden"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Kombiniert z. B. lokales Schnellrestore mit externer resilienter Kopie.",
+      "correctForms": [
+        "hybrid_backup_strategie"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Diese Größe bestimmt, wie oft gesichert werden sollte, um Datenverlust zu begrenzen.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Diese Größe bestimmt, wie schnell Infrastruktur und Anwendungen zurück sein müssen.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Bei dieser Backup-Art wächst das Sicherungsvolumen typischerweise bis zum nächsten Vollbackup.",
+      "correctForms": [
+        "differenzielles_backup"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Bei dieser Backup-Art ist die Wiederherstellungskette häufig am längsten.",
+      "correctForms": [
+        "inkrementelles_backup"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Kann Ransomware-Risiko reduzieren, weil Sicherungen nicht nachträglich manipulierbar sind.",
+      "correctForms": [
+        "immutable_backup"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Ohne diese Maßnahme bleibt die Wirksamkeit eines Backups oft nur Annahme.",
+      "correctForms": [
+        "restore_test"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Schützt primär gegen Standortverlust statt nur gegen Datenkorruption.",
+      "correctForms": [
+        "offsite_kopie"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Snapshots, Voll/inkr/diff und Offsite-Kopien können zusammen Teil einer Gesamtstrategie sein.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "'Ein erfolgreicher Backup-Job ersetzt alle Restore-Tests dauerhaft.'",
+      "correctForms": [
+        "keine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Mathematik für die AP1 (Level 2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Fokus: Einheiten, Prozentlogik, Subnetting, RAID, Medienmathe, Verfügbarkeit und USV.",
+  "columns": [
+    {
+      "id": "si_system_dezimal",
+      "title": "SI-System (dezimal)",
+      "subtitle": ""
+    },
+    {
+      "id": "iec_system_binar",
+      "title": "IEC-System (binär)",
+      "subtitle": ""
+    },
+    {
+      "id": "bit",
+      "title": "bit",
+      "subtitle": ""
+    },
+    {
+      "id": "byte",
+      "title": "Byte",
+      "subtitle": ""
+    },
+    {
+      "id": "datenrate_bit_s",
+      "title": "Datenrate (bit/s)",
+      "subtitle": ""
+    },
+    {
+      "id": "datenrate_byte_s",
+      "title": "Datenrate (Byte/s)",
+      "subtitle": ""
+    },
+    {
+      "id": "brutto_rate",
+      "title": "Brutto-Rate",
+      "subtitle": ""
+    },
+    {
+      "id": "netto_rate",
+      "title": "Netto-Rate",
+      "subtitle": ""
+    },
+    {
+      "id": "transferzeit",
+      "title": "Transferzeit",
+      "subtitle": ""
+    },
+    {
+      "id": "prozentwert_w",
+      "title": "Prozentwert W",
+      "subtitle": ""
+    },
+    {
+      "id": "grundwert_g",
+      "title": "Grundwert G",
+      "subtitle": ""
+    },
+    {
+      "id": "prozentsatz_p",
+      "title": "Prozentsatz p",
+      "subtitle": ""
+    },
+    {
+      "id": "prozentpunkte",
+      "title": "Prozentpunkte",
+      "subtitle": ""
+    },
+    {
+      "id": "kettenprozent",
+      "title": "Kettenprozent",
+      "subtitle": ""
+    },
+    {
+      "id": "plausibilitatscheck",
+      "title": "Plausibilitätscheck",
+      "subtitle": ""
+    },
+    {
+      "id": "rundungsregel",
+      "title": "Rundungsregel",
+      "subtitle": ""
+    },
+    {
+      "id": "hosts_pro_subnetz",
+      "title": "Hosts pro Subnetz",
+      "subtitle": ""
+    },
+    {
+      "id": "blockgrosse",
+      "title": "Blockgröße",
+      "subtitle": ""
+    },
+    {
+      "id": "netzadresse",
+      "title": "Netzadresse",
+      "subtitle": ""
+    },
+    {
+      "id": "broadcast_adresse",
+      "title": "Broadcast-Adresse",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_0",
+      "title": "RAID 0",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_1",
+      "title": "RAID 1",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_5",
+      "title": "RAID 5",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_6",
+      "title": "RAID 6",
+      "subtitle": ""
+    },
+    {
+      "id": "gemischte_raid_grossen",
+      "title": "Gemischte RAID-Größen",
+      "subtitle": ""
+    },
+    {
+      "id": "pixelanzahl",
+      "title": "Pixelanzahl",
+      "subtitle": ""
+    },
+    {
+      "id": "skalierung_2d",
+      "title": "Skalierung (2D)",
+      "subtitle": ""
+    },
+    {
+      "id": "farbtiefe",
+      "title": "Farbtiefe",
+      "subtitle": ""
+    },
+    {
+      "id": "bildgrosse_unkomprimiert",
+      "title": "Bildgröße (unkomprimiert)",
+      "subtitle": ""
+    },
+    {
+      "id": "audiogrosse_unkomprimiert",
+      "title": "Audiogröße (unkomprimiert)",
+      "subtitle": ""
+    },
+    {
+      "id": "base64_overhead",
+      "title": "Base64-Overhead",
+      "subtitle": ""
+    },
+    {
+      "id": "verfugbarkeit",
+      "title": "Verfügbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "ausfallzeit",
+      "title": "Ausfallzeit",
+      "subtitle": ""
+    },
+    {
+      "id": "reaktionszeit",
+      "title": "Reaktionszeit",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "energie_wh",
+      "title": "Energie (Wh)",
+      "subtitle": ""
+    },
+    {
+      "id": "laufzeit_usv",
+      "title": "Laufzeit (USV)",
+      "subtitle": ""
+    },
+    {
+      "id": "wirkungsgrad",
+      "title": "Wirkungsgrad",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "1 GB entspricht 10^9 Byte.",
+      "correctForms": [
+        "si_system_dezimal"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "1 GiB entspricht 1024^3 Byte.",
+      "correctForms": [
+        "iec_system_binar"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Netzwerkangaben wie 100 Mbit/s beziehen sich typischerweise auf diese Einheit.",
+      "correctForms": [
+        "datenrate_bit_s"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Dateitransferraten im OS werden häufig in MB/s dargestellt.",
+      "correctForms": [
+        "datenrate_byte_s"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "500 MB über 100 Mbit/s korrekt rechnen: zuerst Einheiten angleichen, dann Zeit = Datenmenge / Rate.",
+      "correctForms": [
+        "transferzeit"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Nach Protokollverlusten bleibt diese Rate als wirklich nutzbarer Durchsatz übrig.",
+      "correctForms": [
+        "netto_rate"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nominalwert des Links ohne Abzug durch Overhead.",
+      "correctForms": [
+        "brutto_rate"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "1 Byte = 8 dieser Einheit.",
+      "correctForms": [
+        "bit"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Diese Einheit entspricht 8 bit und wird für Dateigrößen genutzt.",
+      "correctForms": [
+        "byte"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Formel: W = (p/100) · G",
+      "correctForms": [
+        "prozentwert_w"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Formel: G = W · (100/p)",
+      "correctForms": [
+        "grundwert_g"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Formel: p = (W/G) · 100",
+      "correctForms": [
+        "prozentsatz_p"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Von 10% auf 12% entspricht +2 dieser Größe.",
+      "correctForms": [
+        "prozentpunkte"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "+20% und danach -20% ergeben insgesamt -4%.",
+      "correctForms": [
+        "kettenprozent"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Regel: erst am Ende runden, um Fehlerfortpflanzung zu vermeiden.",
+      "correctForms": [
+        "rundungsregel"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Regel: Ergebnis auf Größenordnung und Einheit prüfen, bevor man es übernimmt.",
+      "correctForms": [
+        "plausibilitatscheck"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Formel klassisch: 2^(32-Prefix) - 2",
+      "correctForms": [
+        "hosts_pro_subnetz"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Bei /27 ist die Schrittweite im letzten Oktett 32.",
+      "correctForms": [
+        "blockgrosse"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Identifiziert das Subnetz und wird typischerweise nicht als Host vergeben.",
+      "correctForms": [
+        "netzadresse"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Letzte Adresse im Subnetz, Rundruf an alle Hosts.",
+      "correctForms": [
+        "broadcast_adresse"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Kapazität n·Plattengröße, aber ohne Redundanz.",
+      "correctForms": [
+        "raid_0"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Spiegelung mit typischer Halbierung der Nutzkapazität.",
+      "correctForms": [
+        "raid_1"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Kapazität (n-1)·Größe bei verteilter Parität.",
+      "correctForms": [
+        "raid_5"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Kapazität (n-2)·Größe bei doppelter Parität.",
+      "correctForms": [
+        "raid_6"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "In einem Verbund mit 2TB,2TB,2TB,1TB bestimmt 1TB die nutzbare Basis.",
+      "correctForms": [
+        "gemischte_raid_grossen"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Formel: Breite · Höhe",
+      "correctForms": [
+        "pixelanzahl"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Doppelte Breite und doppelte Höhe führen zu vierfacher Pixelzahl.",
+      "correctForms": [
+        "skalierung_2d"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "24 bit bei RGB bedeutet meist 8 bit pro Kanal.",
+      "correctForms": [
+        "farbtiefe"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Pixel · Farbtiefe / 8 liefert diese Größe.",
+      "correctForms": [
+        "bildgrosse_unkomprimiert"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "SampleRate · BitTiefe · Kanäle · Dauer / 8 liefert diese Größe.",
+      "correctForms": [
+        "audiogrosse_unkomprimiert"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Textkodierung, die Daten typischerweise um ~33% vergrößert.",
+      "correctForms": [
+        "base64_overhead"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Ausfallzeit = Zeitraum · (1 - ...)",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Zeitraum · (1 - Verfügbarkeit) berechnet diese Größe.",
+      "correctForms": [
+        "ausfallzeit"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Start der Bearbeitung laut SLA.",
+      "correctForms": [
+        "reaktionszeit"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Zeit bis zur Wiederherstellung des Dienstes.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Wh = W · h",
+      "correctForms": [
+        "energie_wh"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "h = Wh / W",
+      "correctForms": [
+        "laufzeit_usv"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Erklärt, warum reale USV-Laufzeit oft unter dem Theoriewert liegt.",
+      "correctForms": [
+        "wirkungsgrad"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Welche zwei Größen gehören zur Formel für unkomprimierte Audiogröße neben Dauer und Kanälen: SampleRate und BitTiefe?",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Welche Aussage ist korrekt: Base64 komprimiert Daten und verschlüsselt sie gleichzeitig.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "/23 entspricht klassisch 510 Hosts.",
+      "correctForms": [
+        "hosts_pro_subnetz"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "100 Mbit/s sind theoretisch 100 MB/s.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_043",
+      "text": "Bei Transferrechnungen sollten SI/IEC und bit/Byte sauber auseinandergehalten werden.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_044",
+      "text": "Bei 30 Tagen und 99,9% Verfügbarkeit ist Ausfallzeit unter einer Stunde.",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    }
+  ]
+}

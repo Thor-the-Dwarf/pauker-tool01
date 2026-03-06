@@ -1,0 +1,224 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – IT-Systeme konzeptionieren",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "bedarfsanalyse",
+      "title": "Bedarfsanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "lastenheft",
+      "title": "Lastenheft",
+      "subtitle": ""
+    },
+    {
+      "id": "pflichtenheft",
+      "title": "Pflichtenheft",
+      "subtitle": ""
+    },
+    {
+      "id": "installation",
+      "title": "Installation",
+      "subtitle": ""
+    },
+    {
+      "id": "konfiguration",
+      "title": "Konfiguration",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "bios",
+      "title": "BIOS",
+      "subtitle": ""
+    },
+    {
+      "id": "uefi",
+      "title": "UEFI",
+      "subtitle": ""
+    },
+    {
+      "id": "partitionierung",
+      "title": "Partitionierung",
+      "subtitle": ""
+    },
+    {
+      "id": "formatierung",
+      "title": "Formatierung",
+      "subtitle": ""
+    },
+    {
+      "id": "netzwerkanbindung",
+      "title": "Netzwerkanbindung",
+      "subtitle": ""
+    },
+    {
+      "id": "ip_konfiguration",
+      "title": "IP-Konfiguration",
+      "subtitle": ""
+    },
+    {
+      "id": "remotedesktop",
+      "title": "Remotedesktop",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Ermitteln, was gebraucht wird: Ziele, Rahmenbedingungen, Nutzergruppen, Muss/Soll/Kann und aktuelle Probleme.",
+      "correctForms": [
+        "bedarfsanalyse"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Dokumentiert aus Kundensicht, WAS erreicht werden soll (Anforderungen), ohne die technische Umsetzung festzulegen.",
+      "correctForms": [
+        "lastenheft"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Dokumentiert aus Auftragnehmersicht, WIE die Anforderungen umgesetzt werden (Lösung, Technik, Schritte, Tests).",
+      "correctForms": [
+        "pflichtenheft"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Vorgang, bei dem ein System/OS aufgesetzt wird (z. B. von ISO/USB booten und auf Datenträger einrichten).",
+      "correctForms": [
+        "installation"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Einstellungen anpassen, damit alles passt (z. B. Netzwerk, Benutzer, Sicherheit, Dienste, Updates).",
+      "correctForms": [
+        "konfiguration"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Grundsoftware, die Hardware verwaltet und Programme ausführt (z. B. Windows/Linux).",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Legacy-Firmware zur Hardwareinitialisierung und Boot-Konfiguration; heute oft durch UEFI ersetzt/ergänzt.",
+      "correctForms": [
+        "bios"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Moderne Firmware mit z. B. Secure Boot und typischerweise GPT-Unterstützung.",
+      "correctForms": [
+        "uefi"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Aufteilen eines Datenträgers in logische Bereiche (z. B. EFI-Partition, Systempartition, Datenpartition).",
+      "correctForms": [
+        "partitionierung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Einrichten eines Dateisystems auf einer Partition (z. B. NTFS, ext4), damit Dateien gespeichert werden können.",
+      "correctForms": [
+        "formatierung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Herstellen der Verbindung ins Netzwerk (Kabel/WLAN, Switch/Router/AP, Authentifizierung).",
+      "correctForms": [
+        "netzwerkanbindung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Festlegen von IP-Adresse, Subnetzmaske, Gateway und DNS (statisch oder per DHCP).",
+      "correctForms": [
+        "ip_konfiguration"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Fernzugriff auf einen Rechner, um ihn zu bedienen (z. B. RDP), oft mit Authentifizierung und Berechtigungen.",
+      "correctForms": [
+        "remotedesktop"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: „Der Kunde braucht 30 Notebooks, VPN, Drucker, zentrale Benutzerverwaltung und 99,5% Verfügbarkeit“ gehört hier rein.",
+      "correctForms": [
+        "lastenheft"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: „Windows 11 Pro, UEFI+Secure Boot aktiv, GPT, BitLocker, DHCP, DNS, RDP nur per VPN, Testplan“ gehört hier rein.",
+      "correctForms": [
+        "pflichtenheft"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn du nach dem Aufsetzen eines Systems Benutzer, Updates, Firewall-Regeln und Dienste einstellst, ist das vor allem das.",
+      "correctForms": [
+        "konfiguration"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Vor dem OS-Setup wird oft entschieden: Boot-Reihenfolge, UEFI/Legacy, Secure Boot, TPM – das passiert hier.",
+      "correctForms": [
+        "uefi"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "„C: für System, D: für Daten“ ist eine typische Entscheidung in diesem Schritt.",
+      "correctForms": [
+        "partitionierung"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "„NTFS auf der Systempartition“ ist eine typische Entscheidung in diesem Schritt.",
+      "correctForms": [
+        "formatierung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "„IP 192.168.10.20, Maske /24, Gateway .1, DNS .53“ ist ein typisches Ergebnis davon.",
+      "correctForms": [
+        "ip_konfiguration"
+      ]
+    }
+  ]
+}

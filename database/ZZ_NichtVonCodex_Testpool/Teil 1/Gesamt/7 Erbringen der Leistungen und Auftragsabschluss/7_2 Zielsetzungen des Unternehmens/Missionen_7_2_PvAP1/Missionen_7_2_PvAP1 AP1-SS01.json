@@ -1,0 +1,174 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Zielsetzungen des Unternehmens",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle die passende Zielart zur Aussage.",
+  "columns": [
+    {
+      "id": "okologisches_ziel",
+      "title": "ökologisches Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "okonomisches_ziel",
+      "title": "ökonomisches Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "soziales_ziel",
+      "title": "soziales Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Reduktion von CO₂-Emissionen durch weniger Dienstreisen und mehr Videokonferenzen.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Senkung des Stromverbrauchs im Rechenzentrum durch effizientere Hardware und Virtualisierung.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Einführung eines Recycling- und Rücknahmekonzepts für Altgeräte und Toner.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Erhöhung der Gewinnmarge von 12% auf 18% durch bessere Kalkulation und geringere Kosten.",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Steigerung des Umsatzes durch neue Serviceverträge und planbare wiederkehrende Einnahmen.",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Optimierung der Auslastung, um gleiche Leistung mit weniger Ressourcenstunden zu erbringen.",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Verbesserung der Mitarbeiterzufriedenheit durch flexible Arbeitszeiten und klare Einarbeitung.",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Reduzierung der Fluktuation durch Weiterbildung, Entwicklungspfade und faire Führung.",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Erhöhung der Arbeitssicherheit und Gesundheitsprävention (Ergonomie, Pausenregeln, Unterweisungen).",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Einführung von Homeoffice-Regeln, um Familie und Beruf besser vereinbar zu machen.",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Umstellung auf Ökostrom für Standorte, um den ökologischen Fußabdruck zu senken.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Ziel: „Mindestens 20% Marge pro Projekt“ ist ein Beispiel für diese Zielart.",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Ziel: „Gleichberechtigte Teilhabe und respektvolle Unternehmenskultur“ ist ein Beispiel für diese Zielart.",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Ziel: „Weniger Abfall, weniger Ressourcenverbrauch“ ist ein Beispiel für diese Zielart.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Kombination aus messbaren Kennzahlen (z. B. Marge), Umweltmaßnahmen und Mitarbeiter-Themen kann in einem Unternehmen gleichzeitig verfolgt werden.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Erhöhung der Kundenzufriedenheit durch besseren Support kann je nach Sichtweise wirtschaftliche UND soziale Effekte haben.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn ein Unternehmen bewusst auf billige, aber umweltschädliche Entsorgung verzichtet, hat das primär diesen Ziel-Fokus.",
+      "correctForms": [
+        "okologisches_ziel"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn ein Unternehmen Löhne drückt, um kurzfristig die Marge zu erhöhen, ist das primär diese Zielart (auch wenn es soziale Nebenwirkungen hat).",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn ein Unternehmen Ausbildungsplätze schafft und Mentoring etabliert, ist das primär diese Zielart.",
+      "correctForms": [
+        "soziales_ziel"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn ein Unternehmen Projekte nur annimmt, wenn sie sich rechnen, ist das primär diese Zielart.",
+      "correctForms": [
+        "okonomisches_ziel"
+      ]
+    }
+  ]
+}

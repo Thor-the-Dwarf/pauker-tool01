@@ -1,0 +1,214 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Leistungsübergabe & Einweisungen",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "abnahmeprotokoll",
+      "title": "Abnahmeprotokoll",
+      "subtitle": ""
+    },
+    {
+      "id": "gegenstand_der_abnahme",
+      "title": "Gegenstand der Abnahme",
+      "subtitle": ""
+    },
+    {
+      "id": "beteiligte_personen",
+      "title": "beteiligte Personen",
+      "subtitle": ""
+    },
+    {
+      "id": "ort",
+      "title": "Ort",
+      "subtitle": ""
+    },
+    {
+      "id": "datum_und_uhrzeit",
+      "title": "Datum und Uhrzeit",
+      "subtitle": ""
+    },
+    {
+      "id": "benutzerdokumentation",
+      "title": "Benutzerdokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "schnittstellendokumentation",
+      "title": "Schnittstellendokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "programmdokumentation",
+      "title": "Programmdokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "netzwerkdokumentation",
+      "title": "Netzwerkdokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "testprotokoll",
+      "title": "Testprotokoll",
+      "subtitle": ""
+    },
+    {
+      "id": "einweisung",
+      "title": "Einweisung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Dokument, das die formale Bestätigung enthält, dass eine Leistung geprüft und akzeptiert wurde (ggf. mit Mängeln).",
+      "correctForms": [
+        "abnahmeprotokoll"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Beschreibt genau, was abgenommen wird, z. B. „Firewall-Cluster inkl. VPN und Regeln“ oder „Ticketsystem v2.3“.",
+      "correctForms": [
+        "gegenstand_der_abnahme"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Namen/Rollen der Personen, die geprüft, übergeben und unterschrieben haben (Kunde, Dienstleister, ggf. Zeugen).",
+      "correctForms": [
+        "beteiligte_personen"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Wo die Abnahme stattfindet, z. B. Standort, Raum, online (Webinar) oder per Remote-Session.",
+      "correctForms": [
+        "ort"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Zeitpunkt der Abnahme; wichtig für Fristen, Gewährleistung, Übergang von Risiko/Verantwortung je Vertrag.",
+      "correctForms": [
+        "datum_und_uhrzeit"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Erklärt Bedienung aus Nutzersicht: Funktionen, Workflows, typische Fehler, FAQ, Screenshots.",
+      "correctForms": [
+        "benutzerdokumentation"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beschreibt Schnittstellen: Endpunkte, Formate, Auth, Fehlercodes, Beispiel-Requests/Responses, Versionen.",
+      "correctForms": [
+        "schnittstellendokumentation"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Beschreibt den Code/Build: Architektur, Module, Klassen, Konfiguration, Deployment, Abhängigkeiten.",
+      "correctForms": [
+        "programmdokumentation"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beschreibt Netzwerkaufbau: IP-Plan, VLANs, Ports, Firewall-Regeln, Routing, DNS, VPN, Topologie.",
+      "correctForms": [
+        "netzwerkdokumentation"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Nachweis über durchgeführte Tests: Testfälle, Ergebnisse, Abweichungen, Reproduktionsschritte, Freigabe.",
+      "correctForms": [
+        "testprotokoll"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Praktische Einführung/Schulung, damit Anwender/Administratoren das System bedienen und betreiben können.",
+      "correctForms": [
+        "einweisung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn später Streit entsteht, WAS genau geliefert wurde, hilft vor allem dieses Dokument.",
+      "correctForms": [
+        "abnahmeprotokoll"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "„Name, Rolle, Firma, Unterschrift“ gehören inhaltlich in diesen Abschnitt der Abnahmeunterlagen.",
+      "correctForms": [
+        "beteiligte_personen"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„Remote-Abnahme per Teams“ oder „Raum 2.14, Standort Berlin“ gehört in diesen Abschnitt.",
+      "correctForms": [
+        "ort"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„2026-02-01, 10:30 Uhr“ gehört in diesen Abschnitt.",
+      "correctForms": [
+        "datum_und_uhrzeit"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„Wie setze ich mein Passwort zurück?“ gehört typischerweise in diese Dokumentationsart.",
+      "correctForms": [
+        "benutzerdokumentation"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„/api/tickets, JSON-Format, OAuth2, Rate Limits“ gehört typischerweise in diese Dokumentationsart.",
+      "correctForms": [
+        "schnittstellendokumentation"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "„Module, Klassen, Build-Pipeline, Konfig-Dateien“ gehört typischerweise in diese Dokumentationsart.",
+      "correctForms": [
+        "programmdokumentation"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "„VLAN 20, Subnetz 192.168.20.0/24, Gateway .1, Firewall-Regeln“ gehört typischerweise in diese Dokumentationsart.",
+      "correctForms": [
+        "netzwerkdokumentation"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "„Testfall: VPN-Verbindung; Ergebnis: erfolgreich; Screenshot/Log“ gehört typischerweise in diese Dokumentationsart.",
+      "correctForms": [
+        "testprotokoll"
+      ]
+    }
+  ]
+}

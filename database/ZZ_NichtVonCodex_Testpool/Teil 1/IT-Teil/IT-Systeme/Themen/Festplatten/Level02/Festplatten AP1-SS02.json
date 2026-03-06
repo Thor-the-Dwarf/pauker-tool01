@@ -1,0 +1,435 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Festplatten (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Medienwahl, Kennzahlen, RAID, Endurance und Betrieb.",
+  "columns": [
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_sata",
+      "title": "SSD (SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD (NVMe)",
+      "subtitle": ""
+    },
+    {
+      "id": "iops",
+      "title": "IOPS",
+      "subtitle": ""
+    },
+    {
+      "id": "latenz",
+      "title": "Latenz",
+      "subtitle": ""
+    },
+    {
+      "id": "datendurchsatz",
+      "title": "Datendurchsatz",
+      "subtitle": ""
+    },
+    {
+      "id": "tbw",
+      "title": "TBW",
+      "subtitle": ""
+    },
+    {
+      "id": "dwpd",
+      "title": "DWPD",
+      "subtitle": ""
+    },
+    {
+      "id": "wear_leveling",
+      "title": "Wear Leveling",
+      "subtitle": ""
+    },
+    {
+      "id": "trim",
+      "title": "TRIM",
+      "subtitle": ""
+    },
+    {
+      "id": "smart",
+      "title": "SMART",
+      "subtitle": ""
+    },
+    {
+      "id": "thermal_throttling",
+      "title": "Thermal Throttling",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_0",
+      "title": "RAID 0",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_1",
+      "title": "RAID 1",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_5",
+      "title": "RAID 5",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_10",
+      "title": "RAID 10",
+      "subtitle": ""
+    },
+    {
+      "id": "raid_rebuild",
+      "title": "RAID-Rebuild",
+      "subtitle": ""
+    },
+    {
+      "id": "hot_spare",
+      "title": "Hot Spare",
+      "subtitle": ""
+    },
+    {
+      "id": "write_cache",
+      "title": "Write Cache",
+      "subtitle": ""
+    },
+    {
+      "id": "queue_depth",
+      "title": "Queue Depth",
+      "subtitle": ""
+    },
+    {
+      "id": "partition_alignment",
+      "title": "Partition Alignment",
+      "subtitle": ""
+    },
+    {
+      "id": "dateisystem_overhead",
+      "title": "Dateisystem-Overhead",
+      "subtitle": ""
+    },
+    {
+      "id": "snapshot",
+      "title": "Snapshot",
+      "subtitle": ""
+    },
+    {
+      "id": "backup",
+      "title": "Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "data_scrubbing",
+      "title": "Data Scrubbing",
+      "subtitle": ""
+    },
+    {
+      "id": "nvme_namespace",
+      "title": "NVMe Namespace",
+      "subtitle": ""
+    },
+    {
+      "id": "tlc_vs_qlc",
+      "title": "TLC vs QLC",
+      "subtitle": ""
+    },
+    {
+      "id": "storage_tiering",
+      "title": "Storage Tiering",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Mechanisches Laufwerk mit sehr gutem Preis pro TB.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Sinnvoller Upgrade-Kandidat fuer aeltere Systeme mit SATA-Anschluss.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "PCIe-basierter Flashspeicher mit sehr hoher Parallelitaet.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Kennzahl fuer viele kleine Ein-/Ausgabeoperationen pro Sekunde.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Messgroesse fuer Reaktionszeit einzelner Speicherzugriffe.",
+      "correctForms": [
+        "latenz"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Wichtiger Wert bei grossen sequentiellen Dateiuebertragungen.",
+      "correctForms": [
+        "datendurchsatz"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beschreibt die gesamte zulaessige Schreibmenge einer SSD ueber Lebensdauer.",
+      "correctForms": [
+        "tbw"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Endurance-Metrik als Anzahl voller Laufwerksbeschreibungen pro Tag.",
+      "correctForms": [
+        "dwpd"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Verteilt Schreiblast auf Flashzellen fuer gleichmaessigere Abnutzung.",
+      "correctForms": [
+        "wear_leveling"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Hilft SSD-Controllern, geloeschte Bloecke effizient wiederzuverwenden.",
+      "correctForms": [
+        "trim"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Liefert Laufwerksgesundheitswerte fuer praeventive Wartung.",
+      "correctForms": [
+        "smart"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Leistungsdrosselung eines Laufwerks bei zu hoher Temperatur.",
+      "correctForms": [
+        "thermal_throttling"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Striping ohne Redundanz, schnell aber ausfallsensitiv.",
+      "correctForms": [
+        "raid_0"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Spiegelung mit hoher Verfuegbarkeit bei Ausfall eines Laufwerks.",
+      "correctForms": [
+        "raid_1"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Paritaetsbasiertes RAID mit Toleranz fuer einen Laufwerksausfall.",
+      "correctForms": [
+        "raid_5"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Kombiniert Mirroring und Striping fuer Performance plus Redundanz.",
+      "correctForms": [
+        "raid_10"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wiederherstellung der Redundanz nach Laufwerksersatz.",
+      "correctForms": [
+        "raid_rebuild"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Reserveplatte, die bei Defekt automatisch den Verbund uebernimmt.",
+      "correctForms": [
+        "hot_spare"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Kann Schreibleistung erhoehen, erfordert aber abgesicherte Stromausfallstrategie.",
+      "correctForms": [
+        "write_cache"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Anzahl gleichzeitig wartender I/O-Kommandos am Speicher.",
+      "correctForms": [
+        "queue_depth"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Falsche Ausrichtung kann unnötige Zusatz-I/O erzeugen.",
+      "correctForms": [
+        "partition_alignment"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Viele kleine Dateien koennen durch Metadaten den Speicherpfad belasten.",
+      "correctForms": [
+        "dateisystem_overhead"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Zeitpunktabbild innerhalb desselben Storage-Systems fuer schnellen Rollback.",
+      "correctForms": [
+        "snapshot"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Getrennte Datensicherung gegen Loeschen, Malware oder Totalschaden.",
+      "correctForms": [
+        "backup"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Maximal tolerierbarer Datenverlust als Zeitspanne.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Maximal tolerierbare Wiederanlaufzeit eines Dienstes.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Regelmaessige Integritaetspruefung von Daten und Paritaet.",
+      "correctForms": [
+        "data_scrubbing"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Logische Unterteilung eines NVMe-Geraets in getrennte Bereiche.",
+      "correctForms": [
+        "nvme_namespace"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Trade-off zwischen Kosten pro GB und Schreibhaltbarkeit bei NAND-Typen.",
+      "correctForms": [
+        "tlc_vs_qlc"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Verteilt heisse und kalte Daten auf unterschiedliche Medienklassen.",
+      "correctForms": [
+        "storage_tiering"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "RAID ersetzt ein Backup vollstaendig in allen Ausfallszenarien.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Bei Write-intensiven Lasten sind Endurance, Temperatur und Monitoring relevant.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Hoher sequenzieller Durchsatz bedeutet immer automatisch niedrige Latenz.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "SMART, Backup-Tests und Rebuild-Runbook gehoeren zur Betriebsreife.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Fuer viele kleine DB-Zugriffe sind IOPS und Latenz oft wichtiger als reine MB/s.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Thermal Throttling kann NVMe-Leistung unter Dauerlast reduzieren.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "RAID 0 bietet die hoechste Datensicherheit.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Snapshots koennen sinnvoll sein, ersetzen aber keine externe Datensicherung.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

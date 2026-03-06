@@ -1,0 +1,209 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Machbarkeit von Projekten (1.2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "machbarkeitsanalyse",
+      "title": "Machbarkeitsanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "stakeholderanalyse",
+      "title": "Stakeholderanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "risikoanalyse",
+      "title": "Risikoanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "stammdaten",
+      "title": "Stammdaten",
+      "subtitle": ""
+    },
+    {
+      "id": "bewegungsdaten",
+      "title": "Bewegungsdaten",
+      "subtitle": ""
+    },
+    {
+      "id": "datenschutz",
+      "title": "Datenschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "datensicherheit",
+      "title": "Datensicherheit",
+      "subtitle": ""
+    },
+    {
+      "id": "umsatz",
+      "title": "Umsatz",
+      "subtitle": ""
+    },
+    {
+      "id": "gewinn",
+      "title": "Gewinn",
+      "subtitle": ""
+    },
+    {
+      "id": "deckungsbeitrag",
+      "title": "Deckungsbeitrag",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Prüft, ob ein Vorhaben technisch, wirtschaftlich, organisatorisch und rechtlich realistisch umsetzbar ist.",
+      "correctForms": [
+        "machbarkeitsanalyse"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Identifiziert betroffene Personen/ Gruppen, bewertet deren Einfluss, Erwartungen und mögliche Konflikte.",
+      "correctForms": [
+        "stakeholderanalyse"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Ermittelt Unsicherheiten, bewertet Eintrittswahrscheinlichkeit und Schaden und leitet Gegenmaßnahmen ab.",
+      "correctForms": [
+        "risikoanalyse"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Daten, die relativ stabil sind und Objekte beschreiben, z. B. Kundennummer, Artikelstamm, Adresse.",
+      "correctForms": [
+        "stammdaten"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Daten, die Ereignisse/Transaktionen abbilden, z. B. Bestellung, Zahlung, Lagerbewegung, Zeitbuchung.",
+      "correctForms": [
+        "bewegungsdaten"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Regelt, ob und wie personenbezogene Daten verarbeitet werden dürfen (Zweck, Rechtsgrundlage, Betroffenenrechte).",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Schützt Daten und Systeme vor unbefugtem Zugriff, Manipulation und Ausfall (z. B. Rechte, Backup, Verschlüsselung).",
+      "correctForms": [
+        "datensicherheit"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Einnahmen aus Verkäufen/Leistungen in einem Zeitraum, ohne Abzug von Kosten.",
+      "correctForms": [
+        "umsatz"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Ergebnis nach Abzug aller Kosten vom Umsatz (vereinfacht: Umsatz minus Gesamtkosten).",
+      "correctForms": [
+        "gewinn"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Differenz aus Umsatz und variablen Kosten; Beitrag zur Deckung fixer Kosten und danach zum Gewinn.",
+      "correctForms": [
+        "deckungsbeitrag"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Muss bei Projekten mit personenbezogenen Daten immer geprüft und dokumentiert werden (z. B. TOMs, Rollen/Rechte).",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Dient dazu, die wichtigsten Betroffenen zu priorisieren und Kommunikations-/Einbindungsmaßnahmen zu planen.",
+      "correctForms": [
+        "stakeholderanalyse"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Hilft, Budgetpuffer und Zeitreserven zu begründen, weil Risiken quantifiziert und bewertet werden.",
+      "correctForms": [
+        "risikoanalyse"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: 'Rechnung 2026-01-31 erstellt' gehört typischerweise in diese Datenart.",
+      "correctForms": [
+        "bewegungsdaten"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: 'Kunde: Max Mustermann, Kundennr. 4711' gehört typischerweise in diese Datenart.",
+      "correctForms": [
+        "stammdaten"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn ein Projekt wirtschaftlich nicht tragfähig ist, fällt es typischerweise spätestens hier durch.",
+      "correctForms": [
+        "machbarkeitsanalyse"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Kennzahl, die besonders für Produkt-/Projektentscheidungen im Controlling genutzt wird, weil sie fixe Kosten ausklammert.",
+      "correctForms": [
+        "deckungsbeitrag"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Zielt auf Vertraulichkeit, Integrität und Verfügbarkeit der Daten ab.",
+      "correctForms": [
+        "datensicherheit"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Zielt auf rechtmäßige Verarbeitung personenbezogener Daten und Schutz der Betroffenenrechte ab.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Kann ergeben, dass ein Projekt zwar technisch möglich ist, aber wegen Kosten/Nutzen oder Risiken nicht sinnvoll ist.",
+      "correctForms": [
+        "machbarkeitsanalyse"
+      ]
+    }
+  ]
+}

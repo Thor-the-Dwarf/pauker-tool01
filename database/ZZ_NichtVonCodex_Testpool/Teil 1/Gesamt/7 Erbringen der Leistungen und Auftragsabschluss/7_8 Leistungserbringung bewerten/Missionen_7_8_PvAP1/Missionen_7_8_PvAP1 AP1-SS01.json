@@ -1,0 +1,179 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Leistungserbringung bewerten",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "bestatigung_erbrachter_leistungen",
+      "title": "Bestätigung erbrachter Leistungen",
+      "subtitle": ""
+    },
+    {
+      "id": "soll_ist_vergleich",
+      "title": "Soll-Ist-Vergleich",
+      "subtitle": ""
+    },
+    {
+      "id": "abweichungsanalyse",
+      "title": "Abweichungsanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "lessons_learned",
+      "title": "Lessons Learned",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Formale oder dokumentierte Rückmeldung, dass die vereinbarte Leistung geliefert wurde (z. B. Abnahme, Unterschrift, Ticket geschlossen).",
+      "correctForms": [
+        "bestatigung_erbrachter_leistungen"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Gegenüberstellung: Was war geplant/vereinbart und was wurde tatsächlich erreicht (Zeit, Kosten, Umfang, Qualität).",
+      "correctForms": [
+        "soll_ist_vergleich"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Untersuchung, warum Soll und Ist auseinanderlaufen (Ursachen, Auswirkungen, Verantwortlichkeiten, Maßnahmen).",
+      "correctForms": [
+        "abweichungsanalyse"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Dokumentierte Erkenntnisse, was gut lief und was verbessert werden muss, damit es beim nächsten Mal besser wird.",
+      "correctForms": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "„Der Kunde bestätigt im Abnahmeprotokoll, dass die Firewall wie vereinbart läuft“ ist ein Beispiel für …",
+      "correctForms": [
+        "bestatigung_erbrachter_leistungen"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "„Geplant: 40 Stunden, tatsächlich: 52 Stunden“ ist ein typisches Beispiel für …",
+      "correctForms": [
+        "soll_ist_vergleich"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "„Warum waren es 12 Stunden mehr? Fehlende Anforderungen, falsche Schätzung, Nacharbeit“ ist typisch für …",
+      "correctForms": [
+        "abweichungsanalyse"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "„Nächstes Mal: Anforderungen früher fixieren, Testcases früher schreiben, Change Requests klarer dokumentieren“ ist typisch für …",
+      "correctForms": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "„Soll: 99,5% Verfügbarkeit laut SLA, Ist: 98,9%“ gehört in erster Linie hierhin.",
+      "correctForms": [
+        "soll_ist_vergleich"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "„Mehr Ausfälle, weil Wartungsfenster ungeplant waren und Monitoring fehlte“ gehört in erster Linie hierhin.",
+      "correctForms": [
+        "abweichungsanalyse"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "„Wir dokumentieren eine Checkliste für Übergaben, weil genau dort Fehler passiert sind“ gehört in erster Linie hierhin.",
+      "correctForms": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "„Ticketbericht und Leistungsnachweis werden dem Kunden übergeben und bestätigt“ gehört in erster Linie hierhin.",
+      "correctForms": [
+        "bestatigung_erbrachter_leistungen"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Kann als Grundlage dienen, um Abweichungen überhaupt erst sichtbar zu machen.",
+      "correctForms": [
+        "soll_ist_vergleich"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Kann dazu führen, dass Prozesse angepasst werden, um Wiederholungsfehler zu vermeiden.",
+      "correctForms": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Ergebnis ist oft eine Liste aus Ursachen und konkreten Gegenmaßnahmen (kurzfristig und langfristig).",
+      "correctForms": [
+        "abweichungsanalyse"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn der Kunde die Leistung nicht bestätigt, ist das ein Risiko für Zahlung/Abschluss.",
+      "correctForms": [
+        "bestatigung_erbrachter_leistungen"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„Geplant: Feature-Set A, geliefert: Feature-Set B“ ist ein typisches Beispiel für …",
+      "correctForms": [
+        "soll_ist_vergleich"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "„Feature B kam rein, weil der Scope nicht sauber abgesichert war“ ist typisch für …",
+      "correctForms": [
+        "abweichungsanalyse"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "„Beim nächsten Projekt: Scope-Freeze und Change-Prozess ab Meilenstein X“ ist typisch für …",
+      "correctForms": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Diese vier Punkte können im echten Projektabschluss alle gemeinsam vorkommen.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

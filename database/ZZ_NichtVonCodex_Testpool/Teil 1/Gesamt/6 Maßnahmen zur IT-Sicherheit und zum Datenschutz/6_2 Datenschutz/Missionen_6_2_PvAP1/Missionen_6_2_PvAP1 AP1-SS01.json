@@ -1,0 +1,219 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Datenschutz (6.2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "dsgvo",
+      "title": "DSGVO",
+      "subtitle": ""
+    },
+    {
+      "id": "bdsg",
+      "title": "BDSG",
+      "subtitle": ""
+    },
+    {
+      "id": "personenbezogene_daten",
+      "title": "Personenbezogene Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "besondere_kategorien_personenbezogener_daten",
+      "title": "Besondere Kategorien personenbezogener Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "auskunftsrecht",
+      "title": "Auskunftsrecht",
+      "subtitle": ""
+    },
+    {
+      "id": "recht_auf_berichtigung",
+      "title": "Recht auf Berichtigung",
+      "subtitle": ""
+    },
+    {
+      "id": "recht_auf_loschung",
+      "title": "Recht auf Löschung",
+      "subtitle": ""
+    },
+    {
+      "id": "recht_auf_einschrankung",
+      "title": "Recht auf Einschränkung",
+      "subtitle": ""
+    },
+    {
+      "id": "recht_auf_datenubertragbarkeit",
+      "title": "Recht auf Datenübertragbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "widerspruchsrecht",
+      "title": "Widerspruchsrecht",
+      "subtitle": ""
+    },
+    {
+      "id": "widerruf_einwilligung",
+      "title": "Widerruf Einwilligung",
+      "subtitle": ""
+    },
+    {
+      "id": "beschwerderecht",
+      "title": "Beschwerderecht",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "EU-weit geltendes Datenschutzrecht, das die Verarbeitung personenbezogener Daten regelt.",
+      "correctForms": [
+        "dsgvo"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Nationales deutsches Datenschutzgesetz, das die DSGVO ergänzt (z. B. spezielle Regelungen in Deutschland).",
+      "correctForms": [
+        "bdsg"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Beispiel: Name + E-Mail-Adresse + Personalnummer sind in der Regel solche Daten.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Beispiel: IP-Adresse oder Geräte-ID kann darunter fallen, wenn eine Person dadurch identifizierbar ist.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Datenarten wie Gesundheitsdaten oder biometrische Daten zählen typischerweise dazu und sind besonders geschützt.",
+      "correctForms": [
+        "besondere_kategorien_personenbezogener_daten"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Recht, zu erfahren, ob und welche personenbezogenen Daten über dich verarbeitet werden (inkl. Zwecke/Empfänger).",
+      "correctForms": [
+        "auskunftsrecht"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Recht, falsche oder unvollständige personenbezogene Daten korrigieren zu lassen.",
+      "correctForms": [
+        "recht_auf_berichtigung"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Recht, dass Daten gelöscht werden, wenn es keinen zulässigen Grund für die weitere Verarbeitung gibt.",
+      "correctForms": [
+        "recht_auf_loschung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Recht, die Verarbeitung vorübergehend „einzufrieren“ (z. B. während einer Prüfung/bei Streit über Richtigkeit).",
+      "correctForms": [
+        "recht_auf_einschrankung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Recht, bereitgestellte Daten in einem strukturierten, gängigen, maschinenlesbaren Format zu erhalten.",
+      "correctForms": [
+        "recht_auf_datenubertragbarkeit"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Recht, einer Verarbeitung aus bestimmten Gründen zu widersprechen (z. B. bei Direktwerbung).",
+      "correctForms": [
+        "widerspruchsrecht"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn du eine Einwilligung gegeben hast, kannst du sie jederzeit für die Zukunft zurücknehmen.",
+      "correctForms": [
+        "widerruf_einwilligung"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du einen Verstoß vermutest.",
+      "correctForms": [
+        "beschwerderecht"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn eine Firma dir Werbemails schickt, kannst du dich darauf besonders direkt berufen.",
+      "correctForms": [
+        "widerspruchsrecht"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn deine Adresse falsch gespeichert ist und Lieferungen scheitern, ist das das passende Recht.",
+      "correctForms": [
+        "recht_auf_berichtigung"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn du wissen willst, welche Daten ein Anbieter über dich gespeichert hat, ist das das passende Recht.",
+      "correctForms": [
+        "auskunftsrecht"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn du zu einem anderen Anbieter wechseln willst und deine Daten „mitnehmen“ möchtest, ist das das passende Recht.",
+      "correctForms": [
+        "recht_auf_datenubertragbarkeit"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Die Betroffenenrechte sind ein zentraler Teil der DSGVO und müssen organisatorisch im Unternehmen erfüllbar sein.",
+      "correctForms": [
+        "dsgvo"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Diese Begriffe hängen zusammen: Gesetze (EU/DE), Definitionen (personenbezogen) und Rechte (Auskunft, Löschung, etc.).",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Marketingaktivitäten (2.5)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "nutzwertanalyse",
+      "title": "Nutzwertanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "direkter_vertrieb",
+      "title": "Direkter Vertrieb",
+      "subtitle": ""
+    },
+    {
+      "id": "indirekter_vertrieb",
+      "title": "Indirekter Vertrieb",
+      "subtitle": ""
+    },
+    {
+      "id": "starken_und_schwachenanalyse",
+      "title": "Stärken- und Schwächenanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Bewertungsmethode: Kriterien festlegen, gewichten, Optionen punkten und am Ende die beste Option wählen.",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Typisch: Entscheidung zwischen mehreren Tools/Angeboten wird mit Punkten und Gewichtung nachvollziehbar gemacht.",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Vertrieb ohne Zwischenhändler: Hersteller verkauft direkt an den Endkunden (z. B. eigener Webshop, eigenes Sales-Team).",
+      "correctForms": [
+        "direkter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Vertrieb über Zwischenhändler/Partner: z. B. Reseller, Systemhäuser, Marktplätze oder Distributoren.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Vorteil: Volle Kontrolle über Preis, Kundenkontakt, Kundenbeziehung und Feedback-Kanal.",
+      "correctForms": [
+        "direkter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Vorteil: Schnellere Reichweite/Marktzugang durch bestehende Partnernetzwerke.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nachteil: Höherer Aufwand für eigene Akquise, Betreuung, Support und Prozesse.",
+      "correctForms": [
+        "direkter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Nachteil: Weniger Kontrolle über Kundenerlebnis und oft geringere Marge wegen Partneranteil.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Analyse, die interne Faktoren bewertet: Was können wir gut, wo sind wir schwach (z. B. Skills, Prozesse, Marke)?",
+      "correctForms": [
+        "starken_und_schwachenanalyse"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Ergebnis ist oft eine kurze Liste mit Maßnahmen: Stärken ausbauen, Schwächen reduzieren/absichern.",
+      "correctForms": [
+        "starken_und_schwachenanalyse"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Kriterium in dieser Methode könnte sein: 'Time-to-Market', 'Supportqualität', 'Skalierbarkeit' (mit Gewicht).",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn ein Hersteller über Amazon/Reseller verkauft und der Kunde nicht direkt betreut wird, ist das primär diese Form.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn ein Anbieter direkt Angebote schreibt, verhandelt und Vertragsabschluss selbst macht, ist das primär diese Form.",
+      "correctForms": [
+        "direkter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Nicht extern (Chancen/Risiken), sondern intern (Kompetenzen/Defizite) – genau darum geht es hier.",
+      "correctForms": [
+        "starken_und_schwachenanalyse"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Hilft besonders, wenn mehrere Optionen 'irgendwie gut' sind und du eine begründete Entscheidung brauchst.",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Passt besonders, wenn du ein komplexes Produkt hast und Partner die Implementierung/Integration beim Kunden übernehmen.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Passt besonders, wenn du erklärungsbedürftige Leistungen verkaufst und den direkten Draht zum Entscheider brauchst.",
+      "correctForms": [
+        "direkter_vertrieb"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Beispiel: 'Unser Team hat starke Cloud-Erfahrung, aber wenig Doku-Disziplin' gehört in diese Analyse.",
+      "correctForms": [
+        "starken_und_schwachenanalyse"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Kann genutzt werden, um zwischen zwei Kampagnen-Varianten oder zwei Zielgruppen-Strategien zu wählen.",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Kann zeigen, dass ein Partnervertrieb zwar Reichweite bringt, aber du dafür Marge und Kontrolle abgibst.",
+      "correctForms": [
+        "indirekter_vertrieb"
+      ]
+    }
+  ]
+}

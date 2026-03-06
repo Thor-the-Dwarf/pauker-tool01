@@ -1,0 +1,332 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – KI Überblick (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "klassische_software",
+      "title": "Klassische Software",
+      "subtitle": ""
+    },
+    {
+      "id": "machine_learning",
+      "title": "Machine Learning",
+      "subtitle": ""
+    },
+    {
+      "id": "deep_learning",
+      "title": "Deep Learning",
+      "subtitle": ""
+    },
+    {
+      "id": "generative_ki",
+      "title": "Generative KI",
+      "subtitle": ""
+    },
+    {
+      "id": "halluzination",
+      "title": "Halluzination",
+      "subtitle": ""
+    },
+    {
+      "id": "bias",
+      "title": "Bias",
+      "subtitle": ""
+    },
+    {
+      "id": "datenschutz",
+      "title": "Datenschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "sicherheit",
+      "title": "Sicherheit",
+      "subtitle": ""
+    },
+    {
+      "id": "modell",
+      "title": "Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "training",
+      "title": "Training",
+      "subtitle": ""
+    },
+    {
+      "id": "inferenz",
+      "title": "Inferenz",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt",
+      "title": "Prompt",
+      "subtitle": ""
+    },
+    {
+      "id": "kontextfenster",
+      "title": "Kontextfenster",
+      "subtitle": ""
+    },
+    {
+      "id": "verbotene_ki_unacceptable_risk",
+      "title": "Verbotene KI (Unacceptable Risk)",
+      "subtitle": ""
+    },
+    {
+      "id": "hochrisiko_ki_high_risk",
+      "title": "Hochrisiko-KI (High Risk)",
+      "subtitle": ""
+    },
+    {
+      "id": "begrenztes_risiko_limited_risk",
+      "title": "Begrenztes Risiko (Limited Risk)",
+      "subtitle": ""
+    },
+    {
+      "id": "minimales_risiko_minimal_risk",
+      "title": "Minimales Risiko (Minimal Risk)",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Arbeitet nach festen Regeln (if/else) – gleiche Eingabe führt immer zur gleichen Ausgabe.",
+      "correctForms": [
+        "klassische_software"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Deterministisch und vorhersagbar: Ergebnisse hängen nicht von Wahrscheinlichkeiten ab.",
+      "correctForms": [
+        "klassische_software"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Lernt Muster aus Daten und trifft Vorhersagen probabilistisch statt „100% sicher“.",
+      "correctForms": [
+        "machine_learning"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Klassischer Anwendungsfall: Spam oder kein Spam anhand von Beispieldaten entscheiden.",
+      "correctForms": [
+        "machine_learning"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Klassischer Anwendungsfall: Preis- oder Absatzprognosen als Zahlenwert vorhersagen.",
+      "correctForms": [
+        "machine_learning"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Viele neuronale Schichten – besonders stark bei Bild- und Sprachverarbeitung.",
+      "correctForms": [
+        "deep_learning"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Komplexe Mustererkennung durch tiefe Netzwerke, oft Grundlage moderner Sprach-/Bildsysteme.",
+      "correctForms": [
+        "deep_learning"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Erzeugt neue Inhalte (Text, Bilder, Code) basierend auf Trainingsmustern und einem Prompt.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Erzeugt Antworten und Code wie ein Textgenerator – zitiert aber nicht automatisch Quellen.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Generiert Bilder aus Beschreibungen, statt nur vorhandene Bilder zu „finden“.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Prüfungsfalle: „Generativ = Suchmaschine“ – falsch, denn hier werden Inhalte erzeugt.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Erfindet plausible, aber komplett falsche Aussagen oder nicht existierende Quellen.",
+      "correctForms": [
+        "halluzination"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Prüfungsfalle: „Wenn’s professionell klingt, stimmt’s“ – das Risiko dahinter ist …",
+      "correctForms": [
+        "halluzination"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Verzerrte Ergebnisse durch einseitige Trainingsdaten; reproduziert/verstärkt Vorurteile.",
+      "correctForms": [
+        "bias"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Diskriminierende Entscheidungen, weil Datenlage oder Beispiele im Training schief waren.",
+      "correctForms": [
+        "bias"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Risiko: In Prompts landen personenbezogene Daten oder Betriebsgeheimnisse.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Mini-Regel: Keine Kundendaten, Passwörter oder Secrets in öffentliche Tools eingeben.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Prompt-Injection, ungewollter Datenabfluss und fehlerhafte Automatisierung ohne Kontrolle.",
+      "correctForms": [
+        "sicherheit"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Schutzthema rund um Angriffe auf Prompts, Missbrauch von Tools und „automatisierte Fehler skalieren“.",
+      "correctForms": [
+        "sicherheit"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Die „gelernte Maschine“ mit Parametern – Ergebnis des Lernprozesses.",
+      "correctForms": [
+        "modell"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Der Prozess, bei dem das System aus großen Datenmengen lernt und Muster erkennt.",
+      "correctForms": [
+        "training"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Nutzungsphase: Das trainierte System erzeugt eine Antwort basierend auf einer Eingabe.",
+      "correctForms": [
+        "inferenz"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Die Eingabe/Anweisung, die dem System gegeben wird, um eine Aufgabe zu erfüllen.",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Rolle/Ziel/Kontext/Constraints/Format – das ist die Prüfungs-Formel für …",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Begrenzt, wie viel Text das System gleichzeitig berücksichtigen kann.",
+      "correctForms": [
+        "kontextfenster"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Prüfungsfalle: „KI merkt sich alles“ – meist gilt das nur innerhalb dieser Grenze.",
+      "correctForms": [
+        "kontextfenster"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Unzulässige Praktiken wie Social Scoring oder manipulative KI-Systeme.",
+      "correctForms": [
+        "verbotene_ki_unacceptable_risk"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Kritische Anwendungen wie Bewerber-Screening, Kreditvergabe oder medizinische Diagnostik.",
+      "correctForms": [
+        "hochrisiko_ki_high_risk"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Transparenzpflicht: Nutzer müssen wissen, dass sie mit KI interagieren oder KI-Inhalte vorliegen.",
+      "correctForms": [
+        "begrenztes_risiko_limited_risk"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Wenige bis keine speziellen Zusatzpflichten, z. B. einfache Spam-Filter oder Textvorschläge.",
+      "correctForms": [
+        "minimales_risiko_minimal_risk"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Erfordert zusätzlich Risiko- und Qualitätsmanagement, saubere Daten, umfassendes Logging und menschliche Aufsicht.",
+      "correctForms": [
+        "hochrisiko_ki_high_risk"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Prompting-Technik: Beispiele vorgeben („So soll die Ausgabe aussehen“) für konsistentes Format.",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Prompting-Technik: Erst Struktur, dann Details – komplexe Aufgaben in Schritte zerlegen.",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Prompting-Technik: Wenn Infos fehlen, Fragen auflisten statt zu raten (gegen Halluzinationen).",
+      "correctForms": [
+        "prompt"
+      ]
+    }
+  ]
+}

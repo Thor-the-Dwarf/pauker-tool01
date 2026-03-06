@@ -1,0 +1,837 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "IT-Systeme (AP1) — Hardware • Software • Dateiformate • Cloud • USV • Backup",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "it_system",
+      "title": "IT-System",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "paging_swap",
+      "title": "Paging/Swap",
+      "subtitle": ""
+    },
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_sata",
+      "title": "SSD (SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD (NVMe)",
+      "subtitle": ""
+    },
+    {
+      "id": "iops",
+      "title": "IOPS",
+      "subtitle": ""
+    },
+    {
+      "id": "tbw",
+      "title": "TBW",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "mainboard_chipsatz",
+      "title": "Mainboard/Chipsatz",
+      "subtitle": ""
+    },
+    {
+      "id": "pcie",
+      "title": "PCIe",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2",
+      "title": "M.2",
+      "subtitle": ""
+    },
+    {
+      "id": "firmware_bios_uefi",
+      "title": "Firmware (BIOS/UEFI)",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "treiber",
+      "title": "Treiber",
+      "subtitle": ""
+    },
+    {
+      "id": "middleware_runtime",
+      "title": "Middleware/Runtime",
+      "subtitle": ""
+    },
+    {
+      "id": "systemsoftware",
+      "title": "Systemsoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "anwendungssoftware",
+      "title": "Anwendungssoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "virtualisierung_vm",
+      "title": "Virtualisierung (VM)",
+      "subtitle": ""
+    },
+    {
+      "id": "container",
+      "title": "Container",
+      "subtitle": ""
+    },
+    {
+      "id": "textformat",
+      "title": "Textformat",
+      "subtitle": ""
+    },
+    {
+      "id": "binarformat",
+      "title": "Binärformat",
+      "subtitle": ""
+    },
+    {
+      "id": "encoding_utf_8",
+      "title": "Encoding (UTF-8)",
+      "subtitle": ""
+    },
+    {
+      "id": "csv",
+      "title": "CSV",
+      "subtitle": ""
+    },
+    {
+      "id": "json",
+      "title": "JSON",
+      "subtitle": ""
+    },
+    {
+      "id": "xml",
+      "title": "XML",
+      "subtitle": ""
+    },
+    {
+      "id": "trennzeichen_csv",
+      "title": "Trennzeichen (CSV)",
+      "subtitle": ""
+    },
+    {
+      "id": "schema_validierung",
+      "title": "Schema/Validierung",
+      "subtitle": ""
+    },
+    {
+      "id": "pdf",
+      "title": "PDF",
+      "subtitle": ""
+    },
+    {
+      "id": "docx",
+      "title": "DOCX",
+      "subtitle": ""
+    },
+    {
+      "id": "jpg",
+      "title": "JPG",
+      "subtitle": ""
+    },
+    {
+      "id": "png",
+      "title": "PNG",
+      "subtitle": ""
+    },
+    {
+      "id": "zip",
+      "title": "ZIP",
+      "subtitle": ""
+    },
+    {
+      "id": "tar_gz",
+      "title": "TAR.GZ",
+      "subtitle": ""
+    },
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "shared_responsibility",
+      "title": "Shared Responsibility",
+      "subtitle": ""
+    },
+    {
+      "id": "vendor_lock_in",
+      "title": "Vendor Lock-in",
+      "subtitle": ""
+    },
+    {
+      "id": "usv",
+      "title": "USV",
+      "subtitle": ""
+    },
+    {
+      "id": "usv_typ_offline",
+      "title": "USV-Typ: Offline",
+      "subtitle": ""
+    },
+    {
+      "id": "usv_typ_line_interactive",
+      "title": "USV-Typ: Line-Interactive",
+      "subtitle": ""
+    },
+    {
+      "id": "usv_typ_online",
+      "title": "USV-Typ: Online",
+      "subtitle": ""
+    },
+    {
+      "id": "usv_dimensionierung",
+      "title": "USV-Dimensionierung",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_regel",
+      "title": "3-2-1-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "vollbackup",
+      "title": "Vollbackup",
+      "subtitle": ""
+    },
+    {
+      "id": "inkrementelles_backup",
+      "title": "Inkrementelles Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "differenzielles_backup",
+      "title": "Differenzielles Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "restore_test",
+      "title": "Restore-Test",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "archiv",
+      "title": "Archiv",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Besteht aus Hardware + Software + Daten + Betrieb/Prozessen (z. B. Backup, Sicherheit).",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prüfungsziel: Komponenten kennen, Auswahl begründen und typische Risiken nennen (nicht nur Specs aufsagen).",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Prüfungsfalle: Nur „Specs aufzählen“ reicht nicht – Use-Case, Kompatibilität und Betrieb (Backup/USV) gehören dazu.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Merksatz: „Funktioniert“ ist erst wahr, wenn Betrieb und Wiederherstellung geklärt sind.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Leistung grob über Kerne/Threads, Takt und Cache; Workload entscheidet, was zählt.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Prüfungsfalle: „GHz = schnell“ ist zu kurz gedacht; Architektur/Cache/Workload sind oft wichtiger.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Single-Core ist häufig wichtig für UI/Office; Multi-Core eher für VMs/Render/Parallel-Workloads.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wenn zu knapp, wird ausgelagert und das System wird zäh – obwohl die CPU noch Luft hat.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Auslagerung auf Massenspeicher, wenn RAM fehlt; massiv langsamer als echter RAM.",
+      "correctForms": [
+        "paging_swap"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Prüfungsfalle: „RAM ist wie Festplatte“ ist falsch – RAM ist flüchtig und viel schneller.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Server-Option: Speicher mit Fehlerkorrektur für höhere Zuverlässigkeit (wenn Plattform unterstützt).",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Günstig pro GB, gut für Archiv/Backup-Targets, aber langsam wegen Mechanik.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "SSD über SATA: deutlich schneller als HDD, aber durch SATA begrenzt.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "SSD über NVMe: sehr hohe IOPS und sehr hoher Datendurchsatz.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Kennzahl für viele kleine Zugriffe (Random I/O) pro Sekunde.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wichtig für Datenbank/VM-Host: viele kleine Zugriffe → diese Kennzahl ist oft entscheidender als nur MB/s.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Schreibhaltbarkeit einer SSD: wie viel insgesamt geschrieben werden darf (Verschleiß).",
+      "correctForms": [
+        "tbw"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Mehrere Laufwerke im Verbund für Verfügbarkeit und/oder Performance (je nach Level).",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Prüfungsfalle: RAID ist kein Backup – Fehler/Löschen/Ransomware wird auch „mitgespiegelt“.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Schnittstellen/Features hängen u. a. von Sockel, RAM-Typ, Ports und Erweiterbarkeit ab.",
+      "correctForms": [
+        "mainboard_chipsatz"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Erweiterungsstandard für Slots/Lanes (z. B. GPU, NIC, Storage-Controller).",
+      "correctForms": [
+        "pcie"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Slot-Formfaktor für SSDs; Prüfungsfalle: kann SATA oder NVMe/PCIe-Protokoll sein, je nach Board.",
+      "correctForms": [
+        "m_2"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Prüfungsfalle: „Passt mechanisch = passt technisch“ ist falsch (Keying/Protokoll/Lanes).",
+      "correctForms": [
+        "m_2"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Startet beim Einschalten zuerst und initialisiert die Hardware, bevor das OS geladen wird.",
+      "correctForms": [
+        "firmware_bios_uefi"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Verwaltet Ressourcen (Prozesse, Speicher, Dateien) und stellt Systemdienste bereit.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Übersetzt OS-Anfragen in konkrete Hardware-Kommandos (z. B. Grafik/WLAN/Storage).",
+      "correctForms": [
+        "treiber"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Schicht zwischen App und OS, die eine Laufzeitumgebung bereitstellt (z. B. JVM, .NET).",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Prüfungsfalle: „Programm startet nicht = Hardware kaputt“ stimmt oft nicht; häufig Rechte/Abhängigkeiten/Treiber/Updates.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Merksatz: Erst Schicht lokalisieren: Firmware → OS → App.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "OS, Treiber, Dienste und Tools wie Backup-Agent/Monitoring zählen hierhin.",
+      "correctForms": [
+        "systemsoftware"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Office, Browser, ERP/CRM, IDE: Software für den Nutzwert, nicht für den Systembetrieb.",
+      "correctForms": [
+        "anwendungssoftware"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Prüfungsfalle: „Open Source = kostenlos“ ist falsch; Betrieb/Support/Einführung kann trotzdem Kosten verursachen.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "VM: eigenes Betriebssystem pro Instanz, starke Isolation, mehr Overhead.",
+      "correctForms": [
+        "virtualisierung_vm"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Container: teilen den Kernel, sind leichter/schneller, aber anderes Sicherheits-/Update-Modell.",
+      "correctForms": [
+        "container"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Prüfungsfalle: „Container sind Mini-VMs“ ist falsch – andere Isolation und anderes Patch-Modell.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Menschenlesbar im Editor; gut für Schnittstellen/Logs/Debugging.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Beispiele: TXT, CSV, JSON, XML.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Kompakt, oft komplex; ohne passende Software/Parser schwer direkt zu lesen.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Beispiele: DOCX, XLSX, PDF, JPG/PNG, MP4.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Legt fest, wie Zeichen codiert sind; wichtig, damit Umlaute nicht „kaputt“ sind.",
+      "correctForms": [
+        "encoding_utf_8"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "Tabellarisches Textformat für einfachen Austausch/Import/Export.",
+      "correctForms": [
+        "csv"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "Prüfungsfalle: CSV ist nicht „einheitlich standardisiert“; Delimiter/Quotes/Zeilenumbrüche sind Stolpersteine.",
+      "correctForms": [
+        "csv"
+      ]
+    },
+    {
+      "id": "card_043",
+      "text": "Wichtig bei CSV: definiert, womit Spalten getrennt werden (z. B. ; oder ,).",
+      "correctForms": [
+        "trennzeichen_csv"
+      ]
+    },
+    {
+      "id": "card_044",
+      "text": "Strukturiertes Textformat, häufig für APIs/Schnittstellen.",
+      "correctForms": [
+        "json"
+      ]
+    },
+    {
+      "id": "card_045",
+      "text": "Strukturiertes Textformat, häufig in Enterprise/Legacy-Umgebungen.",
+      "correctForms": [
+        "xml"
+      ]
+    },
+    {
+      "id": "card_046",
+      "text": "Regeln/Struktur prüfen lassen (Pflichtfelder, Datentypen), damit Schnittstellen robust sind.",
+      "correctForms": [
+        "schema_validierung"
+      ]
+    },
+    {
+      "id": "card_047",
+      "text": "Dokumentformat: Layout ist fix, gut zum Verteilen/Archivieren – aber nicht automatisch „fälschungssicher“.",
+      "correctForms": [
+        "pdf"
+      ]
+    },
+    {
+      "id": "card_048",
+      "text": "Dokumentformat: typischerweise gut bearbeitbar (Office-Welt).",
+      "correctForms": [
+        "docx"
+      ]
+    },
+    {
+      "id": "card_049",
+      "text": "Bildformat: gut für Fotos, meist mit Verlust-Kompression.",
+      "correctForms": [
+        "jpg"
+      ]
+    },
+    {
+      "id": "card_050",
+      "text": "Bildformat: gut für Grafiken und Transparenz.",
+      "correctForms": [
+        "png"
+      ]
+    },
+    {
+      "id": "card_051",
+      "text": "Archivformat zum Packen/Komprimieren, sehr verbreitet plattformübergreifend.",
+      "correctForms": [
+        "zip"
+      ]
+    },
+    {
+      "id": "card_052",
+      "text": "Archivformat in der Linux-Welt (Tar-Archiv + Gzip-Kompression).",
+      "correctForms": [
+        "tar_gz"
+      ]
+    },
+    {
+      "id": "card_053",
+      "text": "Cloud-Modell: Infrastruktur mieten (VMs/Storage/Netz); Kunde verwaltet OS und Anwendungen.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_054",
+      "text": "Cloud-Modell: Plattform mieten (Runtime/DB); weniger Betrieb, weniger Kontrolle.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_055",
+      "text": "Cloud-Modell: fertige Anwendung; schnell startklar, geringste Kontrolle.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_056",
+      "text": "Prüfungsfalle: „Cloud = automatisch sicher“ ist falsch; Fehlkonfiguration ist ein Klassiker.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_057",
+      "text": "Geteilte Verantwortung: Provider sichert die Cloud-Basis, Kunde sichert Konfiguration, Zugriffe und Daten.",
+      "correctForms": [
+        "shared_responsibility"
+      ]
+    },
+    {
+      "id": "card_058",
+      "text": "Risiko: Anbieterwechsel wird schwer/teuer durch Abhängigkeiten von Services, APIs oder Datenformaten.",
+      "correctForms": [
+        "vendor_lock_in"
+      ]
+    },
+    {
+      "id": "card_059",
+      "text": "USV überbrückt kurzzeitig Stromausfall und schützt vor Spannungsschwankungen.",
+      "correctForms": [
+        "usv"
+      ]
+    },
+    {
+      "id": "card_060",
+      "text": "Ziel: kontrolliertes Herunterfahren, Schutz von Hardware/Daten, Betriebsstabilität.",
+      "correctForms": [
+        "usv"
+      ]
+    },
+    {
+      "id": "card_061",
+      "text": "Einfachster Typ: Normalbetrieb aus Netz, bei Ausfall Umschalten auf Batterie.",
+      "correctForms": [
+        "usv_typ_offline"
+      ]
+    },
+    {
+      "id": "card_062",
+      "text": "Typ: gleicht Schwankungen im Normalbetrieb aus und schont die Batterie.",
+      "correctForms": [
+        "usv_typ_line_interactive"
+      ]
+    },
+    {
+      "id": "card_063",
+      "text": "Typ mit höchstem Schutzlevel: permanent geregelte/umgewandelte Versorgung (sehr saubere Ausgangsspannung).",
+      "correctForms": [
+        "usv_typ_online"
+      ]
+    },
+    {
+      "id": "card_064",
+      "text": "Prüfungsfalle: „USV läuft stundenlang“ ist meistens falsch – primär Minuten, damit Shutdown klappt.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_065",
+      "text": "Dimensionierung: Verbraucher bestimmen (W), Ziel-Laufzeit (z. B. 5–15 Minuten) festlegen und Shutdown automatisieren.",
+      "correctForms": [
+        "usv_dimensionierung"
+      ]
+    },
+    {
+      "id": "card_066",
+      "text": "Prüfungsfalle: Nur Server an USV, aber Switch nicht → Server lebt, Netzwerk tot.",
+      "correctForms": [
+        "usv_dimensionierung"
+      ]
+    },
+    {
+      "id": "card_067",
+      "text": "Akkus altern: Wartung, Tests und Wechsel einplanen.",
+      "correctForms": [
+        "usv_dimensionierung"
+      ]
+    },
+    {
+      "id": "card_068",
+      "text": "Backup-Ziel: Wiederherstellen nach Fehler, Malware, Löschen oder Hardware-Defekt.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_069",
+      "text": "3 Kopien, 2 unterschiedliche Medien, 1 Kopie extern/offsite.",
+      "correctForms": [
+        "3_2_1_regel"
+      ]
+    },
+    {
+      "id": "card_070",
+      "text": "Backup-Typ: komplette Sicherung aller ausgewählten Daten.",
+      "correctForms": [
+        "vollbackup"
+      ]
+    },
+    {
+      "id": "card_071",
+      "text": "Backup-Typ: sichert nur Änderungen seit dem letzten Backup (egal ob voll oder inkrementell).",
+      "correctForms": [
+        "inkrementelles_backup"
+      ]
+    },
+    {
+      "id": "card_072",
+      "text": "Backup-Typ: sichert Änderungen seit dem letzten Vollbackup.",
+      "correctForms": [
+        "differenzielles_backup"
+      ]
+    },
+    {
+      "id": "card_073",
+      "text": "Prüfungsfalle: Backup ohne Wiederherstellungstest ist Wunschdenken.",
+      "correctForms": [
+        "restore_test"
+      ]
+    },
+    {
+      "id": "card_074",
+      "text": "Merksatz: „Restore ist der Beweis, nicht das Backup-Log.“",
+      "correctForms": [
+        "restore_test"
+      ]
+    },
+    {
+      "id": "card_075",
+      "text": "Maximal akzeptabler Datenverlust als Zeitspanne (z. B. 1 Stunde Daten dürfen fehlen).",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_076",
+      "text": "Maximal akzeptable Wiederanlaufzeit (wie schnell muss das System wieder laufen?).",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_077",
+      "text": "Prüfungsfalle: „Wir sichern täglich“ passt nicht, wenn RPO 1 Stunde gefordert ist.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_078",
+      "text": "Langfristige, unveränderliche Aufbewahrung (Compliance/Belege) ist nicht dasselbe wie Backup.",
+      "correctForms": [
+        "archiv"
+      ]
+    },
+    {
+      "id": "card_079",
+      "text": "Prüfungsfalle: „Wir haben Backup, also Archiv erledigt“ ist falsch – andere Ziele und Anforderungen.",
+      "correctForms": [
+        "archiv"
+      ]
+    }
+  ]
+}

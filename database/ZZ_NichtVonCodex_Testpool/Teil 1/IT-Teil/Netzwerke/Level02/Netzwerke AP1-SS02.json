@@ -1,0 +1,864 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Netzwerke (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "netzwerk_ziel",
+      "title": "Netzwerk-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "frame",
+      "title": "Frame",
+      "subtitle": ""
+    },
+    {
+      "id": "paket",
+      "title": "Paket",
+      "subtitle": ""
+    },
+    {
+      "id": "mac_adresse",
+      "title": "MAC-Adresse",
+      "subtitle": ""
+    },
+    {
+      "id": "ip_adresse",
+      "title": "IP-Adresse",
+      "subtitle": ""
+    },
+    {
+      "id": "port",
+      "title": "Port",
+      "subtitle": ""
+    },
+    {
+      "id": "protokoll",
+      "title": "Protokoll",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_1_bitubertragung",
+      "title": "OSI Layer 1 (Bitübertragung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_2_sicherung",
+      "title": "OSI Layer 2 (Sicherung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_3_vermittlung",
+      "title": "OSI Layer 3 (Vermittlung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_4_transport",
+      "title": "OSI Layer 4 (Transport)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_5_sitzung",
+      "title": "OSI Layer 5 (Sitzung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_6_darstellung",
+      "title": "OSI Layer 6 (Darstellung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_7_anwendung",
+      "title": "OSI Layer 7 (Anwendung)",
+      "subtitle": ""
+    },
+    {
+      "id": "tcp_ip_link",
+      "title": "TCP/IP: Link",
+      "subtitle": ""
+    },
+    {
+      "id": "tcp_ip_internet",
+      "title": "TCP/IP: Internet",
+      "subtitle": ""
+    },
+    {
+      "id": "tcp_ip_transport",
+      "title": "TCP/IP: Transport",
+      "subtitle": ""
+    },
+    {
+      "id": "tcp_ip_application",
+      "title": "TCP/IP: Application",
+      "subtitle": ""
+    },
+    {
+      "id": "switch_layer_2",
+      "title": "Switch (Layer 2)",
+      "subtitle": ""
+    },
+    {
+      "id": "router_default_gateway_layer_3",
+      "title": "Router / Default Gateway (Layer 3)",
+      "subtitle": ""
+    },
+    {
+      "id": "vlan",
+      "title": "VLAN",
+      "subtitle": ""
+    },
+    {
+      "id": "arp_ipv4",
+      "title": "ARP (IPv4)",
+      "subtitle": ""
+    },
+    {
+      "id": "gebaudeverkabelung_struktur",
+      "title": "Gebäudeverkabelung (Struktur)",
+      "subtitle": ""
+    },
+    {
+      "id": "patchpanel",
+      "title": "Patchpanel",
+      "subtitle": ""
+    },
+    {
+      "id": "netzwerkdose",
+      "title": "Netzwerkdose",
+      "subtitle": ""
+    },
+    {
+      "id": "patchkabel",
+      "title": "Patchkabel",
+      "subtitle": ""
+    },
+    {
+      "id": "gebaudekabel_installationskabel",
+      "title": "Gebäudekabel (Installationskabel)",
+      "subtitle": ""
+    },
+    {
+      "id": "kupfer_twisted_pair",
+      "title": "Kupfer (Twisted Pair)",
+      "subtitle": ""
+    },
+    {
+      "id": "glasfaser_lwl",
+      "title": "Glasfaser (LWL)",
+      "subtitle": ""
+    },
+    {
+      "id": "poe",
+      "title": "PoE",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_shared_medium_airtime",
+      "title": "WLAN: Shared Medium/Airtime",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_2_4_ghz",
+      "title": "WLAN: 2,4 GHz",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_5_ghz",
+      "title": "WLAN: 5 GHz",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_wpa2_wpa3",
+      "title": "WLAN: WPA2/WPA3",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_802_1x_radius_enterprise",
+      "title": "WLAN: 802.1X/RADIUS (Enterprise)",
+      "subtitle": ""
+    },
+    {
+      "id": "gaste_wlan_segmentierung",
+      "title": "Gäste-WLAN Segmentierung",
+      "subtitle": ""
+    },
+    {
+      "id": "dhcp",
+      "title": "DHCP",
+      "subtitle": ""
+    },
+    {
+      "id": "dhcp_dora",
+      "title": "DHCP: DORA",
+      "subtitle": ""
+    },
+    {
+      "id": "dhcp_apipa_169_254_x_x",
+      "title": "DHCP: APIPA 169.254.x.x",
+      "subtitle": ""
+    },
+    {
+      "id": "dns",
+      "title": "DNS",
+      "subtitle": ""
+    },
+    {
+      "id": "dns_records_a_aaaa_cname_mx_txt",
+      "title": "DNS: Records (A/AAAA/CNAME/MX/TXT)",
+      "subtitle": ""
+    },
+    {
+      "id": "dns_ttl_cache",
+      "title": "DNS: TTL/Cache",
+      "subtitle": ""
+    },
+    {
+      "id": "ipv4_private_netze",
+      "title": "IPv4: Private Netze",
+      "subtitle": ""
+    },
+    {
+      "id": "subnetzmaske_cidr",
+      "title": "Subnetzmaske/CIDR",
+      "subtitle": ""
+    },
+    {
+      "id": "subnetting_netzwerkadresse_broadcast",
+      "title": "Subnetting / Netzwerkadresse/Broadcast",
+      "subtitle": ""
+    },
+    {
+      "id": "nat",
+      "title": "NAT",
+      "subtitle": ""
+    },
+    {
+      "id": "ipv6",
+      "title": "IPv6",
+      "subtitle": ""
+    },
+    {
+      "id": "ipv6_link_local_fe80_10",
+      "title": "IPv6: Link-Local fe80::/10",
+      "subtitle": ""
+    },
+    {
+      "id": "ipv6_slaac_router_advertisement",
+      "title": "IPv6: SLAAC / Router Advertisement",
+      "subtitle": ""
+    },
+    {
+      "id": "ipv6_neighbor_discovery",
+      "title": "IPv6: Neighbor Discovery",
+      "subtitle": ""
+    },
+    {
+      "id": "fehlersuche_osi_checkliste",
+      "title": "Fehlersuche: OSI-Checkliste",
+      "subtitle": ""
+    },
+    {
+      "id": "tool_ipconfig_ifconfig",
+      "title": "Tool: ipconfig/ifconfig",
+      "subtitle": ""
+    },
+    {
+      "id": "tool_ping",
+      "title": "Tool: ping",
+      "subtitle": ""
+    },
+    {
+      "id": "tool_tracert_traceroute",
+      "title": "Tool: tracert/traceroute",
+      "subtitle": ""
+    },
+    {
+      "id": "tool_nslookup_dig",
+      "title": "Tool: nslookup/dig",
+      "subtitle": ""
+    },
+    {
+      "id": "tool_arp_a_neighbor",
+      "title": "Tool: arp -a / neighbor",
+      "subtitle": ""
+    },
+    {
+      "id": "offene_frage_bonus",
+      "title": "Offene Frage (Bonus)",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Ziel eines Netzwerks: Geräte verbinden, Daten austauschen, Dienste bereitstellen (Internet, Files, Druck, VoIP).",
+      "correctForms": [
+        "netzwerk_ziel"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "„Netzwerk geht nicht“ ist keine Ursache: erst eingrenzen (Kabel? IP? DNS? Gateway?).",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Layer-2-Dateneinheit im LAN, wird vom Switch anhand MAC weitergeleitet.",
+      "correctForms": [
+        "frame"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Layer-3-Dateneinheit, wird zwischen Netzen geroutet und trägt IP-Infos.",
+      "correctForms": [
+        "paket"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Hardwareadresse im lokalen Netz (LAN), gehört zur Sicherungsschicht.",
+      "correctForms": [
+        "mac_adresse"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Logische, routingfähige Adresse, gehört zur Vermittlungsschicht.",
+      "correctForms": [
+        "ip_adresse"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nummer, die einen Dienst/Prozess auf einem Host adressiert (z. B. 443).",
+      "correctForms": [
+        "port"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Regelwerk für Kommunikation (z. B. TCP, UDP, HTTP, DNS).",
+      "correctForms": [
+        "protokoll"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "OSI Layer 1: Signal/Bitübertragung über Kabel oder Funk.",
+      "correctForms": [
+        "osi_layer_1_bitubertragung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "OSI Layer 2: MAC, Switch, VLAN, Frames.",
+      "correctForms": [
+        "osi_layer_2_sicherung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "OSI Layer 3: IP, Routing, Router.",
+      "correctForms": [
+        "osi_layer_3_vermittlung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "OSI Layer 4: TCP/UDP und Ports.",
+      "correctForms": [
+        "osi_layer_4_transport"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "OSI Layer 5: Sitzungen/Session-Management (Denkmodell).",
+      "correctForms": [
+        "osi_layer_5_sitzung"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "OSI Layer 6: Darstellung/Format/Verschlüsselung (Denkmodell).",
+      "correctForms": [
+        "osi_layer_6_darstellung"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "OSI Layer 7: Anwendungsprotokolle wie HTTP, DNS, SMTP.",
+      "correctForms": [
+        "osi_layer_7_anwendung"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Prüfungsfalle: OSI ist ein Denkmodell, nicht 1:1 die Realität – aber stark fürs Troubleshooting.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "TCP/IP-Schicht „Link“ entspricht grob OSI 1–2.",
+      "correctForms": [
+        "tcp_ip_link"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "TCP/IP-Schicht „Internet“ entspricht grob OSI 3 (IP/Routing).",
+      "correctForms": [
+        "tcp_ip_internet"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "TCP/IP-Schicht „Transport“ entspricht grob OSI 4 (TCP/UDP/Ports).",
+      "correctForms": [
+        "tcp_ip_transport"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "TCP/IP-Schicht „Application“ fasst grob OSI 5–7 zusammen.",
+      "correctForms": [
+        "tcp_ip_application"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Merksatz: OSI = Lernen/Diagnose, TCP/IP = Alltag/Tools.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Leitet Frames nach MAC und baut dabei eine MAC-Tabelle (Learning).",
+      "correctForms": [
+        "switch_layer_2"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Verbindet Netze und routet nach IP; im Client als Default Gateway eingetragen.",
+      "correctForms": [
+        "router_default_gateway_layer_3"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Logische Trennung im selben Switch: trennt Broadcast-Domänen.",
+      "correctForms": [
+        "vlan"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Prüfungsfalle: „Switch verteilt Internet“ – Internet braucht Routing über ein Gateway.",
+      "correctForms": [
+        "router_default_gateway_layer_3"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "IPv4: Ermittelt im lokalen Netz die MAC zu einer IP (z. B. Gateway-MAC).",
+      "correctForms": [
+        "arp_ipv4"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Prüfungsfalle: MAC ist normalerweise nicht „im Internet sichtbar“ – geroutet wird per IP.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Strukturierte Verkabelung: Campus/Backbone • Vertikal • Horizontal (Etage→Dose).",
+      "correctForms": [
+        "gebaudeverkabelung_struktur"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Passive Komponente im Serverschrank zum Auflegen/Verteilen fester Leitungen.",
+      "correctForms": [
+        "patchpanel"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Passive Endkomponente an der Wand/Arbeitsplatz, Anschluss fürs Patchkabel.",
+      "correctForms": [
+        "netzwerkdose"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Flexibles Kabel: Dose↔PC oder Switch↔Patchpanel.",
+      "correctForms": [
+        "patchkabel"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Fest verlegt (starr) im Gebäude, nicht zum ständigen Umstecken gedacht.",
+      "correctForms": [
+        "gebaudekabel_installationskabel"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Günstig, einfach, typisch am Arbeitsplatz (Twisted Pair).",
+      "correctForms": [
+        "kupfer_twisted_pair"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Für große Distanzen/Backbone, hohe Bandbreite, EMV-robust.",
+      "correctForms": [
+        "glasfaser_lwl"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Strom über Netzwerkkabel für AP/VoIP/Kamera.",
+      "correctForms": [
+        "poe"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "WLAN ist ein Shared Medium: alle teilen sich Airtime, Planung ist entscheidend.",
+      "correctForms": [
+        "wlan_shared_medium_airtime"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "2,4 GHz: weiter/mehr Reichweite, oft stärker gestört und langsamer in dichten Umgebungen.",
+      "correctForms": [
+        "wlan_2_4_ghz"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "5 GHz: meist schneller, kürzere Reichweite, oft weniger überfüllt als 2,4 GHz.",
+      "correctForms": [
+        "wlan_5_ghz"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Prüfungsfalle: „WLAN langsam = Internet langsam“ – oft ist es Funk (Signal/Channel/Airtime), nicht Leitung.",
+      "correctForms": [
+        "wlan_shared_medium_airtime"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Aktueller Standard für WLAN-Verschlüsselung: WPA2/WPA3 (WEP ist unsicher/alt).",
+      "correctForms": [
+        "wlan_wpa2_wpa3"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "PSK vs Enterprise: 802.1X/RADIUS ist typische Enterprise-Auth (je nach Umfeld).",
+      "correctForms": [
+        "wlan_802_1x_radius_enterprise"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "Gäste-WLAN: getrennt vom internen Netz (z. B. VLAN/Segment), kein Zugriff auf intern.",
+      "correctForms": [
+        "gaste_wlan_segmentierung"
+      ]
+    },
+    {
+      "id": "card_043",
+      "text": "Prüfungsfalle: „Versteckte SSID = sicher“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_044",
+      "text": "Vergibt automatisch IP, Maske, Gateway, DNS-Server (und mehr).",
+      "correctForms": [
+        "dhcp"
+      ]
+    },
+    {
+      "id": "card_045",
+      "text": "DHCP-Ablauf: Discover → Offer → Request → Acknowledge.",
+      "correctForms": [
+        "dhcp_dora"
+      ]
+    },
+    {
+      "id": "card_046",
+      "text": "169.254.x.x (APIPA) deutet oft darauf hin: Client erreicht kein DHCP.",
+      "correctForms": [
+        "dhcp_apipa_169_254_x_x"
+      ]
+    },
+    {
+      "id": "card_047",
+      "text": "Prüfungsfalle: Statische IPs innerhalb des DHCP-Pools führen gerne zu Konflikten.",
+      "correctForms": [
+        "dhcp"
+      ]
+    },
+    {
+      "id": "card_048",
+      "text": "Telefonbuch: Löst Namen zu IP (A/AAAA), häufigster „Internet geht nicht“-Klassiker.",
+      "correctForms": [
+        "dns"
+      ]
+    },
+    {
+      "id": "card_049",
+      "text": "A/AAAA/CNAME/MX/TXT sind typische DNS-Records.",
+      "correctForms": [
+        "dns_records_a_aaaa_cname_mx_txt"
+      ]
+    },
+    {
+      "id": "card_050",
+      "text": "Caching mit TTL beschleunigt, kann Änderungen aber verzögern.",
+      "correctForms": [
+        "dns_ttl_cache"
+      ]
+    },
+    {
+      "id": "card_051",
+      "text": "Prüfungsfalle: IP-Ping geht, Name nicht → sehr oft DNS.",
+      "correctForms": [
+        "dns"
+      ]
+    },
+    {
+      "id": "card_052",
+      "text": "Ablauf: Client fragt Resolver → Resolver fragt ggf. rekursiv bis autoritativ → Ergebnis wird gecacht.",
+      "correctForms": [
+        "dns"
+      ]
+    },
+    {
+      "id": "card_053",
+      "text": "Falscher DNS-Server per DHCP kann komplette Namensauflösung killen.",
+      "correctForms": [
+        "dhcp"
+      ]
+    },
+    {
+      "id": "card_054",
+      "text": "Private IPv4-Bereiche: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.",
+      "correctForms": [
+        "ipv4_private_netze"
+      ]
+    },
+    {
+      "id": "card_055",
+      "text": "Subnetzmaske/CIDR trennt Netz- und Host-Anteil (z. B. /24 = 255.255.255.0).",
+      "correctForms": [
+        "subnetzmaske_cidr"
+      ]
+    },
+    {
+      "id": "card_056",
+      "text": "Gateway falsch: lokal kann gehen, Internet nicht.",
+      "correctForms": [
+        "router_default_gateway_layer_3"
+      ]
+    },
+    {
+      "id": "card_057",
+      "text": "/24 hat 256 Adressen; nutzbar typischerweise 254 Hosts (1–254).",
+      "correctForms": [
+        "subnetting_netzwerkadresse_broadcast"
+      ]
+    },
+    {
+      "id": "card_058",
+      "text": "Netzwerkadresse = Host-Bits 0, Broadcast = Host-Bits 1 (IPv4).",
+      "correctForms": [
+        "subnetting_netzwerkadresse_broadcast"
+      ]
+    },
+    {
+      "id": "card_059",
+      "text": "Prüfungsfalle: 192.168.1.10/24 und 192.168.2.10/24 sind nicht im selben Netz.",
+      "correctForms": [
+        "subnetting_netzwerkadresse_broadcast"
+      ]
+    },
+    {
+      "id": "card_060",
+      "text": "Übersetzt private IPv4-Adressen zu einer öffentlichen (typisch am Router).",
+      "correctForms": [
+        "nat"
+      ]
+    },
+    {
+      "id": "card_061",
+      "text": "Prüfungsfalle: NAT ist kein Sicherheitskonzept per se – Firewall/Regeln machen Sicherheit.",
+      "correctForms": [
+        "nat"
+      ]
+    },
+    {
+      "id": "card_062",
+      "text": "Portfreigaben erhöhen Angriffsfläche: nur wenn nötig, mit Regeln/Monitoring.",
+      "correctForms": [
+        "nat"
+      ]
+    },
+    {
+      "id": "card_063",
+      "text": "IPv6 hat 128 Bit, hexadezimal, z. B. 2001:db8::1.",
+      "correctForms": [
+        "ipv6"
+      ]
+    },
+    {
+      "id": "card_064",
+      "text": "Link-local IPv6: fe80::/10, immer vorhanden, gilt nur lokal.",
+      "correctForms": [
+        "ipv6_link_local_fe80_10"
+      ]
+    },
+    {
+      "id": "card_065",
+      "text": "SLAAC: Adressen per Router Advertisements (RA) automatisch im LAN.",
+      "correctForms": [
+        "ipv6_slaac_router_advertisement"
+      ]
+    },
+    {
+      "id": "card_066",
+      "text": "IPv6 ersetzt ARP durch Neighbor Discovery.",
+      "correctForms": [
+        "ipv6_neighbor_discovery"
+      ]
+    },
+    {
+      "id": "card_067",
+      "text": "Fehlersuche nicht springen: Physik → Adresse → Route → Name → Dienst.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_068",
+      "text": "Layer 1 prüfen: Kabel/Port/LED, WLAN-Signal.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_069",
+      "text": "Layer 2 prüfen: Switch-Port/VLAN, MAC/ARP/Neighbor.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_070",
+      "text": "Layer 3 prüfen: IP/Maske/Gateway/Route.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_071",
+      "text": "Layer 7 prüfen: DNS/HTTP/Anwendung.",
+      "correctForms": [
+        "fehlersuche_osi_checkliste"
+      ]
+    },
+    {
+      "id": "card_072",
+      "text": "Zeigt IP, Maske, Gateway, DNS (Client-Konfiguration).",
+      "correctForms": [
+        "tool_ipconfig_ifconfig"
+      ]
+    },
+    {
+      "id": "card_073",
+      "text": "Erreichbarkeit testen (ICMP): erst Gateway, dann extern.",
+      "correctForms": [
+        "tool_ping"
+      ]
+    },
+    {
+      "id": "card_074",
+      "text": "Zeigt den Routing-Pfad Hop für Hop.",
+      "correctForms": [
+        "tool_tracert_traceroute"
+      ]
+    },
+    {
+      "id": "card_075",
+      "text": "DNS-Auflösung testen und sehen, welcher Resolver antwortet.",
+      "correctForms": [
+        "tool_nslookup_dig"
+      ]
+    },
+    {
+      "id": "card_076",
+      "text": "MAC-/Neighbor-Tabelle ansehen (IPv4 ARP / IPv6 Neighbor).",
+      "correctForms": [
+        "tool_arp_a_neighbor"
+      ]
+    },
+    {
+      "id": "card_077",
+      "text": "BONUS 1: Erkläre OSI Layer 2 vs Layer 3 mit Switch/Router-Beispiel.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_078",
+      "text": "BONUS 2: DHCP: Beschreibe DORA und nenne 3 typische DHCP-Probleme.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_079",
+      "text": "BONUS 3: DNS: Woran erkennst du, dass „nur DNS“ kaputt ist? Welche Tests machst du?",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_080",
+      "text": "BONUS 4: IPv4 Subnetz: Warum können 192.168.1.10/24 und 192.168.2.10/24 nicht direkt miteinander sprechen?",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    }
+  ]
+}

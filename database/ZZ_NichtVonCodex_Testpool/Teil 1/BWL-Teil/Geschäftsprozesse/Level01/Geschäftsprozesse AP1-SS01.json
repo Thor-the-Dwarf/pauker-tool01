@@ -1,0 +1,441 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Geschäftsprozesse (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "geschaftsprozess",
+      "title": "Geschäftsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "arbeitsprozess",
+      "title": "Arbeitsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess",
+      "title": "Prozess",
+      "subtitle": ""
+    },
+    {
+      "id": "projekt",
+      "title": "Projekt",
+      "subtitle": ""
+    },
+    {
+      "id": "kernprozess",
+      "title": "Kernprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "unterstutzungsprozess",
+      "title": "Unterstützungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "fuhrungsprozess",
+      "title": "Führungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "input",
+      "title": "Input",
+      "subtitle": ""
+    },
+    {
+      "id": "output",
+      "title": "Output",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess_owner",
+      "title": "Prozess-Owner",
+      "subtitle": ""
+    },
+    {
+      "id": "kpi",
+      "title": "KPI",
+      "subtitle": ""
+    },
+    {
+      "id": "flussdiagramm",
+      "title": "Flussdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "bpmn",
+      "title": "BPMN",
+      "subtitle": ""
+    },
+    {
+      "id": "swimlanes",
+      "title": "Swimlanes",
+      "subtitle": ""
+    },
+    {
+      "id": "schnittstelle",
+      "title": "Schnittstelle",
+      "subtitle": ""
+    },
+    {
+      "id": "medienbruch",
+      "title": "Medienbruch",
+      "subtitle": ""
+    },
+    {
+      "id": "stakeholder",
+      "title": "Stakeholder",
+      "subtitle": ""
+    },
+    {
+      "id": "prozessziel",
+      "title": "Prozessziel",
+      "subtitle": ""
+    },
+    {
+      "id": "anforderung",
+      "title": "Anforderung",
+      "subtitle": ""
+    },
+    {
+      "id": "akzeptanzkriterium",
+      "title": "Akzeptanzkriterium",
+      "subtitle": ""
+    },
+    {
+      "id": "kaufvertrag",
+      "title": "Kaufvertrag",
+      "subtitle": ""
+    },
+    {
+      "id": "werkvertrag",
+      "title": "Werkvertrag",
+      "subtitle": ""
+    },
+    {
+      "id": "dienstvertrag",
+      "title": "Dienstvertrag",
+      "subtitle": ""
+    },
+    {
+      "id": "abnahme",
+      "title": "Abnahme",
+      "subtitle": ""
+    },
+    {
+      "id": "mangel",
+      "title": "Mangel",
+      "subtitle": ""
+    },
+    {
+      "id": "lieferverzug",
+      "title": "Lieferverzug",
+      "subtitle": ""
+    },
+    {
+      "id": "zahlungsverzug",
+      "title": "Zahlungsverzug",
+      "subtitle": ""
+    },
+    {
+      "id": "schlechtleistung",
+      "title": "Schlechtleistung",
+      "subtitle": ""
+    },
+    {
+      "id": "sla",
+      "title": "SLA",
+      "subtitle": ""
+    },
+    {
+      "id": "tco",
+      "title": "TCO",
+      "subtitle": ""
+    },
+    {
+      "id": "roi",
+      "title": "ROI",
+      "subtitle": ""
+    },
+    {
+      "id": "amortisation",
+      "title": "Amortisation",
+      "subtitle": ""
+    },
+    {
+      "id": "nutzwertanalyse",
+      "title": "Nutzwertanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "make_or_buy",
+      "title": "Make-or-Buy",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Gesamtprozess aus Kundensicht: Anforderung stellen, Genehmigung einholen, Gerät erhalten, produktiv arbeiten – Fokus auf Wert, Kunde, Geld und Verantwortung.",
+      "correctForms": [
+        "geschaftsprozess"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Konkrete Arbeitsschritte im IT-Team: Image erstellen, Software installieren, Übergabeprotokoll erstellen, Einweisung durchführen.",
+      "correctForms": [
+        "arbeitsprozess"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Wiederholt sich regelmäßig und lässt sich als Input → Aktivität → Output beschreiben.",
+      "correctForms": [
+        "prozess"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Einmalig, zeitlich begrenzt und nicht als Routine gedacht (z. B. eine einmalige Einführung eines neuen Systems).",
+      "correctForms": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Erzeugt direkt Kundennutzen; hier entsteht Umsatz bzw. direkter Leistungswert (z. B. Servicebereitstellung, Support-Leistung).",
+      "correctForms": [
+        "kernprozess"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Ermöglicht den Kernprozess, erzeugt aber nicht direkt Umsatz (z. B. Einkauf, IT-Betrieb, Personalverwaltung).",
+      "correctForms": [
+        "unterstutzungsprozess"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Steuert, entscheidet und gibt die Richtung vor (z. B. Strategie, Controlling, Qualitätsmanagement).",
+      "correctForms": [
+        "fuhrungsprozess"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Startauslöser/Trigger eines Ablaufs, z. B. „Störung gemeldet“ oder „Auftrag eingegangen“. ",
+      "correctForms": [
+        "input"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Messbares Ergebnis am Ende, z. B. „Dienst wieder verfügbar“ oder „Rechnung gestellt“. ",
+      "correctForms": [
+        "output"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Rolle, die für Qualität, Optimierung und Einhaltung eines Prozesses verantwortlich ist.",
+      "correctForms": [
+        "prozess_owner"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Kennzahl zur Messung, z. B. Durchlaufzeit, Fehlerquote oder Verfügbarkeit in Prozent.",
+      "correctForms": [
+        "kpi"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Prüfungsfalle: Nur „Ticket-Schließ-Geschwindigkeit“ messen kann dazu führen, dass Tickets vorschnell geschlossen werden, ohne echte Lösung.",
+      "correctForms": [
+        "kpi"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Einfache Prozessdarstellung mit klarem Start und Ende, gut für überschaubare Abläufe.",
+      "correctForms": [
+        "flussdiagramm"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Standard-Notation für Business-Prozesse mit Ereignissen, Aufgaben und Entscheidungspunkten (Gateways).",
+      "correctForms": [
+        "bpmn"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Darstellung, die Zuständigkeiten mehrerer Rollen/Abteilungen parallel sichtbar macht.",
+      "correctForms": [
+        "swimlanes"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Übergabe zwischen Rollen oder Systemen (z. B. 1st Level → 2nd Level); typischer Hotspot für Fehler und Verzögerungen.",
+      "correctForms": [
+        "schnittstelle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wechsel zwischen Tools/Medien (z. B. Tool → E-Mail → Excel → manuelles Eintragen) mit erhöhtem Fehlerrisiko.",
+      "correctForms": [
+        "medienbruch"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Beteiligte mit Einfluss/Interesse am Ergebnis, intern oder extern (z. B. Fachabteilung, Geschäftsführung, Lieferant, Behörde).",
+      "correctForms": [
+        "stakeholder"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Antwort auf: „Was soll am Ende besser sein?“ – konkret über Zeit, Qualität, Kosten oder Risiko.",
+      "correctForms": [
+        "prozessziel"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Beschreibt, was ein System können muss oder wie gut es sein soll (z. B. Funktionalität, Sicherheit, Verfügbarkeit).",
+      "correctForms": [
+        "anforderung"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Messbar formuliert: „Gilt als erledigt, wenn …“ (z. B. Passwort-Reset in unter fünf Minuten inkl. Protokollierung).",
+      "correctForms": [
+        "akzeptanzkriterium"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Sache/Produkt gegen Geld; typisch bei Hardware oder fertigen Software-Paketen, Eigentum geht über.",
+      "correctForms": [
+        "kaufvertrag"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Erfolg ist geschuldet; Abnahme ist zentral (z. B. fertige Website, lauffähiges Feature).",
+      "correctForms": [
+        "werkvertrag"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Tätigkeit ist geschuldet; Bezahlung nach Zeit/Aufwand, nicht nach Ergebnis (z. B. Beratung, Support nach Aufwand).",
+      "correctForms": [
+        "dienstvertrag"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Kunde bestätigt „Leistung entspricht Vereinbarung“; bei Werkverträgen entscheidend und Startpunkt für Gewährleistungslogik.",
+      "correctForms": [
+        "abnahme"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Abweichung vom Vereinbarten oder Üblichen; kann funktional oder qualitativ sein.",
+      "correctForms": [
+        "mangel"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Vereinbarter Termin wurde gerissen; Ursachen können fehlende Mitwirkung, falsche Planung oder Scope-Änderungen sein.",
+      "correctForms": [
+        "lieferverzug"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Rechnung wird nicht fristgerecht bezahlt; Mahnung und Verzugszinsen sind möglich.",
+      "correctForms": [
+        "zahlungsverzug"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Geliefert, aber mangelhaft (z. B. Performance bricht ein, Funktionen fehlen, Sicherheitslücken).",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Definiert messbare Servicequalität wie Verfügbarkeit, Reaktionszeit und Wiederherstellungszeit inkl. Messung/Reporting sowie Eskalationsregeln.",
+      "correctForms": [
+        "sla"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Prüfungsfalle: „Rund-um-die-Uhr-Support“ ohne konkrete Reaktionszeiten ist kein echtes Qualitätsversprechen.",
+      "correctForms": [
+        "sla"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Gesamtkosten über die Lebensdauer: Anschaffung plus Betrieb, Schulung, Wartung, Support und Lizenzen.",
+      "correctForms": [
+        "tco"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Nutzen oder Gewinn im Verhältnis zur Investition – sinnvoll nur mit klar definiertem Zeitraum.",
+      "correctForms": [
+        "roi"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Zeitpunkt, ab dem sich eine Investition „zurückgezahlt“ hat (Break-even).",
+      "correctForms": [
+        "amortisation"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Entscheidungsmethode mit Kriterien definieren, gewichten, bewerten und Gesamtpunktzahl berechnen (nicht nur Euro zählen).",
+      "correctForms": [
+        "nutzwertanalyse"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Entscheidung: selbst entwickeln oder kaufen/outsourcen; Faktoren sind Zeit, Kosten, Risiko, Kompetenzen, SLA- und Vertragsbedingungen.",
+      "correctForms": [
+        "make_or_buy"
+      ]
+    }
+  ]
+}

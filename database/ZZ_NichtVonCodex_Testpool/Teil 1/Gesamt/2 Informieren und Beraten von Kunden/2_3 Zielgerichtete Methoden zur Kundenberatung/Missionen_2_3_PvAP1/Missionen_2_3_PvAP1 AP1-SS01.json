@@ -1,0 +1,199 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Zielgerichtete Methoden zur Kundenberatung",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "medieneinsatz_prasentation_webinar",
+      "title": "Medieneinsatz (Präsentation/Webinar)",
+      "subtitle": ""
+    },
+    {
+      "id": "online_schulung",
+      "title": "Online-Schulung",
+      "subtitle": ""
+    },
+    {
+      "id": "homepage",
+      "title": "Homepage",
+      "subtitle": ""
+    },
+    {
+      "id": "sender_empfanger_modell",
+      "title": "Sender-Empfänger-Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "eisbergmodell",
+      "title": "Eisbergmodell",
+      "subtitle": ""
+    },
+    {
+      "id": "4_ohren_modell",
+      "title": "4-Ohren-Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "cross_selling",
+      "title": "Cross-Selling",
+      "subtitle": ""
+    },
+    {
+      "id": "upselling",
+      "title": "Upselling",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Kundenberatung per Video-Call mit Screen-Sharing, Folien oder Demo, statt vor Ort im Meetingraum.",
+      "correctForms": [
+        "medieneinsatz_prasentation_webinar"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Geplantes Training für Nutzer, um Funktionen sicher anzuwenden (z. B. Tool-Einführung mit Übungen).",
+      "correctForms": [
+        "online_schulung"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Öffentliche Informations- und Kontaktplattform eines Unternehmens, oft mit Leistungen, Referenzen und FAQ.",
+      "correctForms": [
+        "homepage"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Kommunikationsmodell: Es gibt einen Sender, eine Nachricht, einen Kanal und einen Empfänger – Störungen können die Nachricht verändern.",
+      "correctForms": [
+        "sender_empfanger_modell"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Kommunikationsmodell: Der sichtbare Teil sind Fakten, darunter liegen Beziehung, Gefühle, Werte und Motive.",
+      "correctForms": [
+        "eisbergmodell"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Kommunikationsmodell: Eine Aussage kann auf Sache, Beziehung, Appell und Selbstoffenbarung gehört werden.",
+      "correctForms": [
+        "4_ohren_modell"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Zusatzverkauf passender Ergänzungen zum Hauptprodukt, z. B. Notebook + Dockingstation + Tasche.",
+      "correctForms": [
+        "cross_selling"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Verkauf einer höherwertigen Variante, z. B. Basic-Tarif → Pro-Tarif mit mehr Features.",
+      "correctForms": [
+        "upselling"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beispiel: „Ich schicke Ihnen im Webinar live die Demo und wir klären Fragen direkt im Chat.“",
+      "correctForms": [
+        "medieneinsatz_prasentation_webinar"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: „Hier ist ein kurzes Lernmodul mit Quiz, damit alle Mitarbeitenden das neue Ticketsystem sicher nutzen.“",
+      "correctForms": [
+        "online_schulung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beispiel: „Kontaktformular, Leistungsübersicht und Referenzen“ sind typische Bestandteile davon.",
+      "correctForms": [
+        "homepage"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Erklärt, warum eine Botschaft trotz klarer Worte falsch ankommt (z. B. Lärm, Vorwissen, Erwartungen).",
+      "correctForms": [
+        "sender_empfanger_modell"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Erklärt, warum im Gespräch oft die Beziehungsebene wichtiger ist als der reine Sachinhalt.",
+      "correctForms": [
+        "eisbergmodell"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Hilft, Missverständnisse zu erkennen, wenn jemand eine sachliche Aussage als Angriff oder Appell interpretiert.",
+      "correctForms": [
+        "4_ohren_modell"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: Kunde kauft Drucker – du empfiehlst passende Toner und Wartungsvertrag.",
+      "correctForms": [
+        "cross_selling"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Beispiel: Kunde will 100 Mbit/s – du empfiehlst 250 Mbit/s wegen Homeoffice/Videokonferenzen.",
+      "correctForms": [
+        "upselling"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Typischer Nutzen: Beratung skalierbar machen, weil mehrere Teilnehmende gleichzeitig informiert werden können.",
+      "correctForms": [
+        "medieneinsatz_prasentation_webinar"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Typischer Nutzen: Reduziert Supportaufwand, weil Nutzer typische Bedienfehler vermeiden.",
+      "correctForms": [
+        "online_schulung"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Typischer Nutzen: Kunden können sich vor dem Erstkontakt selbst informieren und Angebote vergleichen.",
+      "correctForms": [
+        "homepage"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Ziel: Im Gespräch nicht nur „was gesagt wurde“, sondern auch „wie es gemeint/gehört wurde“ sauber trennen.",
+      "correctForms": [
+        "4_ohren_modell"
+      ]
+    }
+  ]
+}

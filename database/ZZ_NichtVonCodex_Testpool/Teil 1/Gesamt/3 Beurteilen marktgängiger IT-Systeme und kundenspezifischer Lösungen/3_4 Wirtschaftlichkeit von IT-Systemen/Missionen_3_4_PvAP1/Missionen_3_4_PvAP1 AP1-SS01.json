@@ -1,0 +1,229 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Wirtschaftlichkeit von IT-Systemen (3.4)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "anschaffungskosten",
+      "title": "Anschaffungskosten",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebskosten",
+      "title": "Betriebskosten",
+      "subtitle": ""
+    },
+    {
+      "id": "fixe_kosten",
+      "title": "Fixe Kosten",
+      "subtitle": ""
+    },
+    {
+      "id": "variable_kosten",
+      "title": "Variable Kosten",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenzkosten",
+      "title": "Lizenzkosten",
+      "subtitle": ""
+    },
+    {
+      "id": "finanzierungskosten",
+      "title": "Finanzierungskosten",
+      "subtitle": ""
+    },
+    {
+      "id": "leasing",
+      "title": "Leasing",
+      "subtitle": ""
+    },
+    {
+      "id": "kauf",
+      "title": "Kauf",
+      "subtitle": ""
+    },
+    {
+      "id": "miete",
+      "title": "Miete",
+      "subtitle": ""
+    },
+    {
+      "id": "pay_per_use",
+      "title": "Pay-per-use",
+      "subtitle": ""
+    },
+    {
+      "id": "auslastungsfahigkeit",
+      "title": "Auslastungsfähigkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "anpassungsfahigkeit",
+      "title": "Anpassungsfähigkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "quantitativer_angebotsvergleich",
+      "title": "Quantitativer Angebotsvergleich",
+      "subtitle": ""
+    },
+    {
+      "id": "qualitativer_angebotsvergleich",
+      "title": "Qualitativer Angebotsvergleich",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Einmalige oder initiale Kosten für Beschaffung/Implementierung (z. B. Hardware, Setup, Rollout).",
+      "correctForms": [
+        "anschaffungskosten"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Laufende Kosten im Betrieb (z. B. Strom, Wartung, Support, Personalaufwand, Rechenzentrum).",
+      "correctForms": [
+        "betriebskosten"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Kosten, die unabhängig von der Nutzung anfallen (z. B. Grundgebühr, Miete, Festgehälter).",
+      "correctForms": [
+        "fixe_kosten"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Kosten, die mit Nutzung/Menge steigen oder fallen (z. B. pro User, pro Transaktion, Verbrauch).",
+      "correctForms": [
+        "variable_kosten"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Kosten für Nutzungsrechte an Software (z. B. pro Gerät, pro User, Abo, Subscription).",
+      "correctForms": [
+        "lizenzkosten"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Kosten durch Kapitalbeschaffung oder Zahlungsaufschub (z. B. Zinsen, Gebühren, Kreditkosten).",
+      "correctForms": [
+        "finanzierungskosten"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nutzung gegen regelmäßige Raten; Eigentum bleibt meist beim Anbieter, oft mit Laufzeit und Restwert.",
+      "correctForms": [
+        "leasing"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Einmal zahlen und Eigentum erwerben; Risiko für Wartung/Abschreibung liegt stärker beim Käufer.",
+      "correctForms": [
+        "kauf"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Zeitlich begrenzte Nutzung gegen regelmäßige Zahlung; keine Eigentumsübertragung.",
+      "correctForms": [
+        "miete"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Abrechnung nach tatsächlicher Nutzung (z. B. pro Stunde, pro GB, pro Request).",
+      "correctForms": [
+        "pay_per_use"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Bewertet, wie gut ein System Lastspitzen abfangen und Ressourcen effizient nutzen kann.",
+      "correctForms": [
+        "auslastungsfahigkeit"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Bewertet, wie gut ein System an neue Anforderungen angepasst werden kann (z. B. Skalierung, Module, Schnittstellen).",
+      "correctForms": [
+        "anpassungsfahigkeit"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Vergleich anhand messbarer Zahlen: Gesamtkosten, TCO, Kosten pro User/Monat, Vertragslaufzeit, Zinsen.",
+      "correctForms": [
+        "quantitativer_angebotsvergleich"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Vergleich anhand nicht nur Zahlen: Supportqualität, Usability, Risiken, Flexibilität, Anbieterstabilität.",
+      "correctForms": [
+        "qualitativer_angebotsvergleich"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: '15 € pro Benutzer und Monat' ist typischerweise dieser Kostenblock.",
+      "correctForms": [
+        "lizenzkosten"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Beispiel: 'Stromkosten für Server + Admin-Zeit für Patches' gehört typischerweise hierhin.",
+      "correctForms": [
+        "betriebskosten"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Beispiel: 'Grundgebühr 500 € monatlich, egal wie viele Tickets anfallen' ist das.",
+      "correctForms": [
+        "fixe_kosten"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Beispiel: '0,02 € pro API-Call' ist das.",
+      "correctForms": [
+        "variable_kosten"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du Kauf vs. Leasing vs. Miete vs. nutzungsbasierte Abrechnung gegenüberstellst, ist das ein.",
+      "correctForms": [
+        "quantitativer_angebotsvergleich"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du Anbieter A trotz höherem Preis nimmst, weil er bessere SLA, schnelleren Support und geringeres Risiko bietet, ist das primär ein.",
+      "correctForms": [
+        "qualitativer_angebotsvergleich"
+      ]
+    }
+  ]
+}

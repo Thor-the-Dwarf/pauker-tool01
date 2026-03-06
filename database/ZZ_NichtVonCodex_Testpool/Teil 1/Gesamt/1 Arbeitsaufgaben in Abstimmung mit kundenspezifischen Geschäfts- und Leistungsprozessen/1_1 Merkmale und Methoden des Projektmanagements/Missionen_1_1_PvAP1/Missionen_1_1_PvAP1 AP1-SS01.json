@@ -1,0 +1,214 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Projektmanagement: Merkmale & Methoden",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "projektstrukturplan_psp",
+      "title": "Projektstrukturplan (PSP)",
+      "subtitle": ""
+    },
+    {
+      "id": "netzplan",
+      "title": "Netzplan",
+      "subtitle": ""
+    },
+    {
+      "id": "gantt_diagramm",
+      "title": "Gantt-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "kritischer_weg",
+      "title": "kritischer Weg",
+      "subtitle": ""
+    },
+    {
+      "id": "puffer",
+      "title": "Puffer",
+      "subtitle": ""
+    },
+    {
+      "id": "meilenstein",
+      "title": "Meilenstein",
+      "subtitle": ""
+    },
+    {
+      "id": "terminierung",
+      "title": "Terminierung",
+      "subtitle": ""
+    },
+    {
+      "id": "projektphasen",
+      "title": "Projektphasen",
+      "subtitle": ""
+    },
+    {
+      "id": "vorgehensmodell",
+      "title": "Vorgehensmodell",
+      "subtitle": ""
+    },
+    {
+      "id": "teambildung_entwicklung",
+      "title": "Teambildung/-entwicklung",
+      "subtitle": ""
+    },
+    {
+      "id": "reflexionsmethode",
+      "title": "Reflexionsmethode",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Hier wird das Projekt in Teilaufgaben und Arbeitspakete zerlegt, um Umfang und Struktur sichtbar zu machen.",
+      "correctForms": [
+        "projektstrukturplan_psp"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Zeigt Vorgänge mit Abhängigkeiten und macht Reihenfolge sowie logische Verknüpfungen sichtbar.",
+      "correctForms": [
+        "netzplan"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Stellt Aufgaben als Balken über einer Zeitachse dar und zeigt Start, Dauer und Ende.",
+      "correctForms": [
+        "gantt_diagramm"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Die längste Kette abhängiger Vorgänge, die die minimale Projektdauer bestimmt.",
+      "correctForms": [
+        "kritischer_weg"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Zeitreserve, die Verzögerungen abfangen kann, ohne den Endtermin sofort zu verschieben.",
+      "correctForms": [
+        "puffer"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Markiert einen wichtigen Zwischenstand oder ein Ergebnis, oft als Termin- oder Ergebnisprüfung.",
+      "correctForms": [
+        "meilenstein"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Festlegen von Start- und Endterminen (und ggf. Reihenfolgen) für Aufgaben/Vorgänge.",
+      "correctForms": [
+        "terminierung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Typische grobe Gliederung eines Projekts in Abschnitte wie Initialisierung, Planung, Durchführung und Abschluss.",
+      "correctForms": [
+        "projektphasen"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beschreibt, wie ein Projekt grundsätzlich abgearbeitet wird (z. B. sequenziell oder iterativ).",
+      "correctForms": [
+        "vorgehensmodell"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Maßnahmen, um aus Einzelpersonen ein leistungsfähiges Team zu machen (Rollen, Regeln, Zusammenarbeit).",
+      "correctForms": [
+        "teambildung_entwicklung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Methode, um Vorgehen und Ergebnis nach einer Phase/Iteration auszuwerten und Verbesserungen abzuleiten.",
+      "correctForms": [
+        "reflexionsmethode"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Kann genutzt werden, um Abhängigkeiten so darzustellen, dass der kritische Weg erkennbar wird.",
+      "correctForms": [
+        "netzplan"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Ist besonders geeignet, um Meilensteine als feste Termine in einem Zeitplan sichtbar zu machen.",
+      "correctForms": [
+        "gantt_diagramm"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Wenn diese Zeitreserve aufgebraucht ist, wird eine Verzögerung schnell terminwirksam.",
+      "correctForms": [
+        "puffer"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Die Terminübersicht, in der Aufgaben über Zeit eingeplant werden, ohne zwingend die Logik der Abhängigkeiten zu erklären.",
+      "correctForms": [
+        "gantt_diagramm"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Hilft, Verantwortlichkeiten sauber abzugrenzen, indem Arbeitspakete eindeutig beschrieben sind.",
+      "correctForms": [
+        "projektstrukturplan_psp"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Beinhaltet oft feste Prüf- oder Abnahmepunkte, an denen entschieden wird, ob es weitergeht.",
+      "correctForms": [
+        "projektphasen"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Kann durch regelmäßige Retrospektiven oder Lessons Learned umgesetzt werden.",
+      "correctForms": [
+        "reflexionsmethode"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wird häufig durch gemeinsame Kick-offs, Regeln der Zusammenarbeit und Rollenklärung unterstützt.",
+      "correctForms": [
+        "teambildung_entwicklung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wasserfall, Scrum oder V-Modell sind Beispiele dafür.",
+      "correctForms": [
+        "vorgehensmodell"
+      ]
+    }
+  ]
+}

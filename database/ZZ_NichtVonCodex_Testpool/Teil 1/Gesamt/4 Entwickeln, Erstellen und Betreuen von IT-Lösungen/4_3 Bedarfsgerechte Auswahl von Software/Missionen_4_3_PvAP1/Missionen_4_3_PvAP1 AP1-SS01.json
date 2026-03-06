@@ -1,0 +1,214 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Bedarfsgerechte Auswahl von Software",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "anwendungssoftware",
+      "title": "Anwendungssoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "ide",
+      "title": "IDE",
+      "subtitle": ""
+    },
+    {
+      "id": "standardsoftware",
+      "title": "Standardsoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "individualsoftware",
+      "title": "Individualsoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "branchensoftware",
+      "title": "Branchensoftware",
+      "subtitle": ""
+    },
+    {
+      "id": "open_source",
+      "title": "Open Source",
+      "subtitle": ""
+    },
+    {
+      "id": "proprietare_software",
+      "title": "proprietäre Software",
+      "subtitle": ""
+    },
+    {
+      "id": "anpassbarkeit",
+      "title": "Anpassbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "schnittstelle",
+      "title": "Schnittstelle",
+      "subtitle": ""
+    },
+    {
+      "id": "kompatibilitat",
+      "title": "Kompatibilität",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Software, die konkrete Aufgaben für Nutzer erledigt (z. B. Office, Browser, ERP, Mail-Client).",
+      "correctForms": [
+        "anwendungssoftware"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Grundsoftware, die Hardware verwaltet und Programme ausführt (z. B. Windows, Linux, macOS).",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Tool zum Entwickeln mit Editor, Build/Run, Debugger, Autocomplete und Projektverwaltung in einer Umgebung.",
+      "correctForms": [
+        "ide"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Fertiges Produkt „von der Stange“, das viele typische Anforderungen abdeckt und schnell einsetzbar ist.",
+      "correctForms": [
+        "standardsoftware"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Für einen konkreten Kunden/Use Case speziell entwickelt, wenn Standardlösung nicht reicht.",
+      "correctForms": [
+        "individualsoftware"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Software, die auf einen bestimmten Bereich zugeschnitten ist (z. B. Arztpraxis, Handwerk, Hotel).",
+      "correctForms": [
+        "branchensoftware"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Lizenzmodell mit einsehbarem Quellcode; Nutzung/Änderung/Weitergabe nach Lizenzbedingungen möglich.",
+      "correctForms": [
+        "open_source"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Software, deren Quellcode nicht offen liegt; Nutzung über Lizenz/Vertrag, oft mit Einschränkungen.",
+      "correctForms": [
+        "proprietare_software"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Wie gut sich eine Software an Prozesse anpassen lässt (Konfiguration, Plugins, Customizing).",
+      "correctForms": [
+        "anpassbarkeit"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Definierter Anschluss zur Daten- oder Funktionskopplung (z. B. REST-API, CSV-Export, LDAP).",
+      "correctForms": [
+        "schnittstelle"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Ob Software mit vorhandener Umgebung zusammenarbeitet (OS-Version, Datenformate, Hardware, Browser).",
+      "correctForms": [
+        "kompatibilitat"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Beispiel: „Wir brauchen Textverarbeitung, Tabellen und Präsentationen“ zielt primär auf diese Kategorie.",
+      "correctForms": [
+        "anwendungssoftware"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Beispiel: „Wir müssen entscheiden zwischen Windows 11 und Linux, wegen Treibern und Domänenanbindung“.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: „Mit Debugger und Refactoring arbeiten, damit die Entwicklung schneller und weniger fehleranfällig wird“.",
+      "correctForms": [
+        "ide"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: „SAP/DATEV für bestimmte Abläufe“ passt am ehesten in diese Kategorie.",
+      "correctForms": [
+        "branchensoftware"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Typisch: schneller Start, geringere Entwicklungskosten, bewährte Prozesse – aber nicht immer perfekt passend.",
+      "correctForms": [
+        "standardsoftware"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Typisch: perfekt passend für Spezialprozesse – aber teurer und mit mehr Pflege-/Wartungsaufwand.",
+      "correctForms": [
+        "individualsoftware"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn du prüfen musst, ob das System Daten exportieren kann, um es an andere Tools anzubinden, schaust du auf das.",
+      "correctForms": [
+        "schnittstelle"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du prüfen musst, ob ein Programm mit vorhandenen Dateiformaten, Browsern oder OS-Versionen funktioniert, ist das.",
+      "correctForms": [
+        "kompatibilitat"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du prüfen musst, ob ein Tool per Einstellungen/Plugins an eure Abläufe angepasst werden kann, ist das.",
+      "correctForms": [
+        "anpassbarkeit"
+      ]
+    }
+  ]
+}

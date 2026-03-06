@@ -1,0 +1,763 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – KI Überblick (EU-KI-VO, Prompting, Prüfungswissen) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "klassische_software_deterministisch",
+      "title": "Klassische Software (deterministisch)",
+      "subtitle": ""
+    },
+    {
+      "id": "ki_machine_learning_probabilistisch",
+      "title": "KI / Machine Learning (probabilistisch)",
+      "subtitle": ""
+    },
+    {
+      "id": "generative_ki",
+      "title": "Generative KI",
+      "subtitle": ""
+    },
+    {
+      "id": "klassifikation",
+      "title": "Klassifikation",
+      "subtitle": ""
+    },
+    {
+      "id": "regression",
+      "title": "Regression",
+      "subtitle": ""
+    },
+    {
+      "id": "deep_learning",
+      "title": "Deep Learning",
+      "subtitle": ""
+    },
+    {
+      "id": "llm_large_language_model",
+      "title": "LLM (Large Language Model)",
+      "subtitle": ""
+    },
+    {
+      "id": "diffusion_bildgenerierung",
+      "title": "Diffusion (Bildgenerierung)",
+      "subtitle": ""
+    },
+    {
+      "id": "halluzination",
+      "title": "Halluzination",
+      "subtitle": ""
+    },
+    {
+      "id": "bias",
+      "title": "Bias",
+      "subtitle": ""
+    },
+    {
+      "id": "datenschutz",
+      "title": "Datenschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "urheberrecht",
+      "title": "Urheberrecht",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_injection",
+      "title": "Prompt-Injection",
+      "subtitle": ""
+    },
+    {
+      "id": "modell",
+      "title": "Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "training",
+      "title": "Training",
+      "subtitle": ""
+    },
+    {
+      "id": "inferenz",
+      "title": "Inferenz",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt",
+      "title": "Prompt",
+      "subtitle": ""
+    },
+    {
+      "id": "kontextfenster",
+      "title": "Kontextfenster",
+      "subtitle": ""
+    },
+    {
+      "id": "eu_ki_verordnung_ai_act",
+      "title": "EU-KI-Verordnung (AI Act)",
+      "subtitle": ""
+    },
+    {
+      "id": "anbieter_provider",
+      "title": "Anbieter (Provider)",
+      "subtitle": ""
+    },
+    {
+      "id": "betreiber_deployer",
+      "title": "Betreiber/Deployer",
+      "subtitle": ""
+    },
+    {
+      "id": "risikobasierter_ansatz",
+      "title": "Risikobasierter Ansatz",
+      "subtitle": ""
+    },
+    {
+      "id": "verbotene_ki",
+      "title": "Verbotene KI",
+      "subtitle": ""
+    },
+    {
+      "id": "hochrisiko_ki",
+      "title": "Hochrisiko-KI",
+      "subtitle": ""
+    },
+    {
+      "id": "begrenztes_risiko",
+      "title": "Begrenztes Risiko",
+      "subtitle": ""
+    },
+    {
+      "id": "minimales_risiko",
+      "title": "Minimales Risiko",
+      "subtitle": ""
+    },
+    {
+      "id": "transparenzpflicht",
+      "title": "Transparenzpflicht",
+      "subtitle": ""
+    },
+    {
+      "id": "human_oversight",
+      "title": "Human Oversight",
+      "subtitle": ""
+    },
+    {
+      "id": "dokumentation_ki_inventar",
+      "title": "Dokumentation (KI-Inventar)",
+      "subtitle": ""
+    },
+    {
+      "id": "protokollierung_logging",
+      "title": "Protokollierung/Logging",
+      "subtitle": ""
+    },
+    {
+      "id": "ki_kompetenz_ai_literacy",
+      "title": "KI-Kompetenz (AI Literacy)",
+      "subtitle": ""
+    },
+    {
+      "id": "policy_guidelines_im_betrieb",
+      "title": "Policy/Guidelines im Betrieb",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_formel_rolle",
+      "title": "Prompt-Formel: Rolle",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_formel_ziel",
+      "title": "Prompt-Formel: Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_formel_kontext",
+      "title": "Prompt-Formel: Kontext",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_formel_constraints",
+      "title": "Prompt-Formel: Constraints",
+      "subtitle": ""
+    },
+    {
+      "id": "prompt_formel_format",
+      "title": "Prompt-Formel: Format",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_few_shot",
+      "title": "Prompting: Few-Shot",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_schrittweise_aufgaben",
+      "title": "Prompting: Schrittweise Aufgaben",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_annahmen_markieren_lassen",
+      "title": "Prompting: Annahmen markieren lassen",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_varianten",
+      "title": "Prompting: Varianten",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_rollenwechsel",
+      "title": "Prompting: Rollenwechsel",
+      "subtitle": ""
+    },
+    {
+      "id": "prompting_sicherheitsgelander",
+      "title": "Prompting: Sicherheitsgeländer",
+      "subtitle": ""
+    },
+    {
+      "id": "4_stufen_kontrolle_faktencheck",
+      "title": "4-Stufen-Kontrolle: Faktencheck",
+      "subtitle": ""
+    },
+    {
+      "id": "4_stufen_kontrolle_plausibilitat",
+      "title": "4-Stufen-Kontrolle: Plausibilität",
+      "subtitle": ""
+    },
+    {
+      "id": "4_stufen_kontrolle_datenschutz_check",
+      "title": "4-Stufen-Kontrolle: Datenschutz-Check",
+      "subtitle": ""
+    },
+    {
+      "id": "4_stufen_kontrolle_freigabe",
+      "title": "4-Stufen-Kontrolle: Freigabe",
+      "subtitle": ""
+    },
+    {
+      "id": "offene_frage_bonus",
+      "title": "Offene Frage (Bonus)",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Arbeitet nach festen Regeln (if/else); gleiche Eingabe führt typischerweise zur gleichen Ausgabe.",
+      "correctForms": [
+        "klassische_software_deterministisch"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Lernt Muster aus Daten und liefert Ergebnisse als Wahrscheinlichkeiten statt Gewissheiten.",
+      "correctForms": [
+        "ki_machine_learning_probabilistisch"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Erzeugt neue Inhalte (Text, Bilder, Code) basierend auf Trainingsmustern und einem Prompt.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Prüfungsfalle: „KI versteht wirklich, was sie sagt“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Merksatz: KI kann sehr überzeugend wirken, ohne automatisch richtig zu sein.",
+      "correctForms": [
+        "ki_kompetenz_ai_literacy"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Spam/kein Spam ist ein typisches Beispiel: Zuordnung zu Klassen anhand gelernter Beispiele.",
+      "correctForms": [
+        "klassifikation"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Preisprognosen sind ein typisches Beispiel: Vorhersage eines Zahlenwerts.",
+      "correctForms": [
+        "regression"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Viele neuronale Schichten; stark bei Bild- und Sprachverarbeitung.",
+      "correctForms": [
+        "deep_learning"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Erzeugt Text/Code/Antworten; Quellen werden nicht automatisch korrekt zitiert.",
+      "correctForms": [
+        "llm_large_language_model"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typischer Ansatz für Bildgenerierung: aus Rauschen schrittweise ein Bild erzeugen.",
+      "correctForms": [
+        "diffusion_bildgenerierung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Prüfungsfalle: „Generativ = Suchmaschine“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Kontrast-Beispiel: Ticket-Priorisierung ist oft klassisches ML, Support-Chat ist oft generativ.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Chancen: Dokumente zusammenfassen, Entwürfe erstellen, Klassifikation und Übersetzungen beschleunigen Arbeit.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Chancen: Code-Vorschläge, automatische Doku, Testfälle generieren, Wissensassistenz im Team.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Chancen: Muster in Logdaten finden, Anomalien erkennen, Forecasts unterstützen Entscheidungen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Merksatz: KI ist ein Praktikant mit Turbo – du bleibst verantwortlich.",
+      "correctForms": [
+        "ki_kompetenz_ai_literacy"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Risiko: plausibel klingend, aber falsch; manchmal werden sogar Quellen erfunden.",
+      "correctForms": [
+        "halluzination"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Risiko: Verzerrte Ergebnisse durch einseitige Trainingsdaten (diskriminierende Effekte möglich).",
+      "correctForms": [
+        "bias"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Risiko: Prompts können personenbezogene Daten/Geheimnisse enthalten – dürfen nicht raus.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Risiko: Generierte Inhalte können geschützte Werke berühren (Training/Output).",
+      "correctForms": [
+        "urheberrecht"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Risiko: Prompt-Injection kann Tools/Agenten manipulieren und Datenabfluss oder falsche Aktionen auslösen.",
+      "correctForms": [
+        "prompt_injection"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Prüfungsfalle: „Wenn’s professionell klingt, stimmt’s“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Mini-Regel: Fakten bei wichtigen Entscheidungen mit zweiter Quelle oder Test verifizieren.",
+      "correctForms": [
+        "4_stufen_kontrolle_faktencheck"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Die „gelernte Maschine“ (Parameter) als Ergebnis des Trainings.",
+      "correctForms": [
+        "modell"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Prozess, bei dem ein Modell aus Daten Muster lernt.",
+      "correctForms": [
+        "training"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Nutzungsphase: Modell erzeugt Antwort auf Basis eines Prompts.",
+      "correctForms": [
+        "inferenz"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Eingabe/Anweisung an das Modell, die das Verhalten steuert (nicht automatisch die Wahrheit).",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Begrenzt, wie viel Text das Modell pro Anfrage gleichzeitig berücksichtigen kann.",
+      "correctForms": [
+        "kontextfenster"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Prüfungsfalle: „KI merkt sich alles dauerhaft und immer“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Ziel: sichere, transparente, menschenrechtskonforme KI in der EU.",
+      "correctForms": [
+        "eu_ki_verordnung_ai_act"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Rolle: baut/vertreibt KI-Systeme – hat je nach System Pflichten (z. B. Doku, Konformität).",
+      "correctForms": [
+        "anbieter_provider"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Rolle: setzt KI im Betrieb ein – kann Pflichten haben (z. B. kontrollieren, schulen, korrekt betreiben).",
+      "correctForms": [
+        "betreiber_deployer"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Grundlogik: je höher das Risiko, desto strenger die Anforderungen.",
+      "correctForms": [
+        "risikobasierter_ansatz"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Prüfungsfalle: „Gilt nur für große Tech-Firmen“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Risikoklasse: Systeme wie Social Scoring oder manipulative Systeme (Beispiele) – verboten.",
+      "correctForms": [
+        "verbotene_ki"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Risikoklasse: z. B. Bewerber-Screening oder Kreditvergabe (Beispiele) – strenge Anforderungen.",
+      "correctForms": [
+        "hochrisiko_ki"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Risikoklasse: Transparenzpflichten, z. B. Hinweis auf KI-Interaktion/KI-Inhalte.",
+      "correctForms": [
+        "begrenztes_risiko"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Risikoklasse: wenige bis keine Zusatzpflichten (z. B. Spam-Filter, Textvorschläge).",
+      "correctForms": [
+        "minimales_risiko"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Prüfungsfalle: „Alles ist Hochrisiko“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Merksatz: Einordnung hängt stark vom Einsatzkontext ab (Screening ≠ Zusammenfassung).",
+      "correctForms": [
+        "risikobasierter_ansatz"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "Betriebspflicht im Alltag: erfassen/dokumentieren, welche KI-Systeme wo eingesetzt werden.",
+      "correctForms": [
+        "dokumentation_ki_inventar"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "Betriebspflicht: Mitarbeitende/Nutzer informieren, wenn KI im Spiel ist (je nach Kontext/Regel).",
+      "correctForms": [
+        "transparenzpflicht"
+      ]
+    },
+    {
+      "id": "card_043",
+      "text": "Kernforderung: Menschliche Aufsicht – wichtige Entscheidungen dürfen nicht blind automatisiert werden.",
+      "correctForms": [
+        "human_oversight"
+      ]
+    },
+    {
+      "id": "card_044",
+      "text": "Prüfungsfalle: „Wir nutzen nur ein Tool, also haben wir keine Verantwortung“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_045",
+      "text": "Merksatz: KI ohne Prozess ist Haftungs- und Qualitätsfalle.",
+      "correctForms": [
+        "policy_guidelines_im_betrieb"
+      ]
+    },
+    {
+      "id": "card_046",
+      "text": "KI-Kompetenz heißt: Grenzen/Risiken verstehen und KI sinnvoll & sicher einsetzen.",
+      "correctForms": [
+        "ki_kompetenz_ai_literacy"
+      ]
+    },
+    {
+      "id": "card_047",
+      "text": "Praxisregel: Keine Kundendaten, Passwörter oder Secrets in öffentliche Prompts.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_048",
+      "text": "Besser als Einmal-Schulung: kurze, regelmäßige Wiederholungen mit Praxisbeispielen.",
+      "correctForms": [
+        "ki_kompetenz_ai_literacy"
+      ]
+    },
+    {
+      "id": "card_049",
+      "text": "Interne Richtlinien/Policies geben vor, was erlaubt ist und wie geprüft/freigegeben wird.",
+      "correctForms": [
+        "policy_guidelines_im_betrieb"
+      ]
+    },
+    {
+      "id": "card_050",
+      "text": "Prompt-Baustein: „Du bist …“ (z. B. Ausbilder, Admin, Prüfer).",
+      "correctForms": [
+        "prompt_formel_rolle"
+      ]
+    },
+    {
+      "id": "card_051",
+      "text": "Prompt-Baustein: „Erstelle …“ (klar und messbar).",
+      "correctForms": [
+        "prompt_formel_ziel"
+      ]
+    },
+    {
+      "id": "card_052",
+      "text": "Prompt-Baustein: Zielgruppe, Umfang, Rahmenbedingungen.",
+      "correctForms": [
+        "prompt_formel_kontext"
+      ]
+    },
+    {
+      "id": "card_053",
+      "text": "Prompt-Baustein: Stil, Länge, Regeln, No-Go’s.",
+      "correctForms": [
+        "prompt_formel_constraints"
+      ]
+    },
+    {
+      "id": "card_054",
+      "text": "Prompt-Baustein: Ausgabeform festlegen (Tabelle, Liste, JSON, Checkliste).",
+      "correctForms": [
+        "prompt_formel_format"
+      ]
+    },
+    {
+      "id": "card_055",
+      "text": "Merksatz: Gute Prompts sind wie technische Spezifikationen – strukturiert und eindeutig.",
+      "correctForms": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "card_056",
+      "text": "Technik: Beispiele für gewünschtes Format zeigen, damit Output konsistenter wird.",
+      "correctForms": [
+        "prompting_few_shot"
+      ]
+    },
+    {
+      "id": "card_057",
+      "text": "Technik: Erst Struktur, dann Details – komplexe Aufgaben in Schritte teilen.",
+      "correctForms": [
+        "prompting_schrittweise_aufgaben"
+      ]
+    },
+    {
+      "id": "card_058",
+      "text": "Technik: Unsicherheiten/Annahmen markieren lassen, damit du Schwachstellen siehst.",
+      "correctForms": [
+        "prompting_annahmen_markieren_lassen"
+      ]
+    },
+    {
+      "id": "card_059",
+      "text": "Technik: 3 Varianten mit Vor-/Nachteilen erzeugen, um Qualität durch Vergleich zu erhöhen.",
+      "correctForms": [
+        "prompting_varianten"
+      ]
+    },
+    {
+      "id": "card_060",
+      "text": "Technik: „Antworte als Prüfer …“ – Perspektive ändern, um andere Blickwinkel zu bekommen.",
+      "correctForms": [
+        "prompting_rollenwechsel"
+      ]
+    },
+    {
+      "id": "card_061",
+      "text": "Technik: „Wenn Infos fehlen: stelle Fragen statt zu raten“ – reduziert Halluzinationen.",
+      "correctForms": [
+        "prompting_sicherheitsgelander"
+      ]
+    },
+    {
+      "id": "card_062",
+      "text": "Prüfungsfalle: „Chain-of-thought erzwingt Wahrheit“.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_063",
+      "text": "Kontrollstufe: zweite Quelle, interne Doku oder Sandbox-Test.",
+      "correctForms": [
+        "4_stufen_kontrolle_faktencheck"
+      ]
+    },
+    {
+      "id": "card_064",
+      "text": "Kontrollstufe: Zahlen, Namen, Normen logisch prüfen (passt das zusammen?).",
+      "correctForms": [
+        "4_stufen_kontrolle_plausibilitat"
+      ]
+    },
+    {
+      "id": "card_065",
+      "text": "Kontrollstufe: keine sensiblen Daten in Prompts; Datenschutz prüfen.",
+      "correctForms": [
+        "4_stufen_kontrolle_datenschutz_check"
+      ]
+    },
+    {
+      "id": "card_066",
+      "text": "Kontrollstufe: Mensch entscheidet bei kritischen Themen (HR, Recht, Finanzen).",
+      "correctForms": [
+        "4_stufen_kontrolle_freigabe"
+      ]
+    },
+    {
+      "id": "card_067",
+      "text": "Prüfungsfalle: KI-Output ungeprüft automatisiert „durchreichen“ skaliert Fehler und schiebt Verantwortung weg.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_068",
+      "text": "BONUS 1: Klassische Software vs. KI – erkläre den Unterschied an einem Praxisbeispiel.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_069",
+      "text": "BONUS 2: Nenne die 5 KI-Risiken und je eine Gegenmaßnahme im Betrieb.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_070",
+      "text": "BONUS 3: EU-KI-VO Risikoklassen – erkläre die vier Klassen + je ein Praxisbeispiel.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_071",
+      "text": "BONUS 4: Erstelle einen vollständigen Prompt (Rolle/Ziel/Kontext/Constraints/Format) für „AP1-Lernkarte Netzwerke“.",
+      "correctForms": [
+        "offene_frage_bonus"
+      ]
+    },
+    {
+      "id": "card_072",
+      "text": "Zusammenfassung: Chancen nutzen, Risiken kennen, EU-KI-VO (risikobasiert) beachten, AI Literacy aufbauen, Ergebnisse prüfen/testen/freigeben.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

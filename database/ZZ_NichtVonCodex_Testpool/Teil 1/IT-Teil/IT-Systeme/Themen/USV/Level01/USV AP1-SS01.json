@@ -1,0 +1,180 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – USV (Unterbrechungsfreie Stromversorgung) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "zweck_uberbrucken_schutz",
+      "title": "Zweck: Überbrücken & Schutz",
+      "subtitle": ""
+    },
+    {
+      "id": "ziel_kontrolliertes_herunterfahren",
+      "title": "Ziel: Kontrolliertes Herunterfahren",
+      "subtitle": ""
+    },
+    {
+      "id": "ziel_schutz_von_hardware_daten",
+      "title": "Ziel: Schutz von Hardware/Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "ziel_betriebsstabilitat",
+      "title": "Ziel: Betriebsstabilität",
+      "subtitle": ""
+    },
+    {
+      "id": "typ_offline",
+      "title": "Typ: Offline",
+      "subtitle": ""
+    },
+    {
+      "id": "typ_line_interactive",
+      "title": "Typ: Line-Interactive",
+      "subtitle": ""
+    },
+    {
+      "id": "typ_online",
+      "title": "Typ: Online",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Überbrückt einen kurzen Stromausfall und schützt zusätzlich vor Spannungsschwankungen.",
+      "correctForms": [
+        "zweck_uberbrucken_schutz"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Ziel: Bei Stromausfall bleibt genug Zeit, um Server/PC sauber herunterzufahren statt „hart“ auszugehen.",
+      "correctForms": [
+        "ziel_kontrolliertes_herunterfahren"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Reduziert Risiko von Datenverlust und Dateisystem-/Datenbank-Schäden durch plötzliches Ausschalten.",
+      "correctForms": [
+        "ziel_schutz_von_hardware_daten"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Hält kritische Systeme stabil, auch wenn Netzspannung kurz einbricht oder schwankt.",
+      "correctForms": [
+        "ziel_betriebsstabilitat"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: Eine USV ist kein Dauerersatz für ein Stromnetz – sie überbrückt nur begrenzte Zeit.",
+      "correctForms": [
+        "zweck_uberbrucken_schutz"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Einfachster Typ: Normalbetrieb direkt aus dem Netz; bei Ausfall schaltet sie auf Batterie um.",
+      "correctForms": [
+        "typ_offline"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Mittlerer Schutz: Kann Spannungsschwankungen im Normalbetrieb ausgleichen und nutzt Batterie seltener.",
+      "correctForms": [
+        "typ_line_interactive"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Höchster Schutz: Versorgung läuft permanent über Umwandlung/Regelung, dadurch sehr saubere Ausgangsspannung.",
+      "correctForms": [
+        "typ_online"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Je höher das Schutzlevel, desto eher geeignet für empfindliche/mission-kritische Systeme (z. B. Server, Storage).",
+      "correctForms": [
+        "typ_online"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typischer Nutzen im Betrieb: Zeit gewinnen, damit Dienste sauber stoppen und Transaktionen ordentlich abgeschlossen werden.",
+      "correctForms": [
+        "ziel_kontrolliertes_herunterfahren"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Typischer Nutzen: Schützt Hardware vor Schäden durch Spannungsspitzen und verhindert Korruption auf Datenträgern.",
+      "correctForms": [
+        "ziel_schutz_von_hardware_daten"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "„USV sorgt nur für Überspannungsschutz, aber nicht für Überbrückung bei Stromausfall.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "„Offline/Line-Interactive/Online sind grobe USV-Typen, die sich im Schutzlevel unterscheiden.“",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„Online-USV ist immer der einfachste und billigste Typ.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn bei kurzen Spannungseinbrüchen Systeme neu starten, kann eine USV die Betriebsstabilität erhöhen.",
+      "correctForms": [
+        "ziel_betriebsstabilitat"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "USV ist besonders sinnvoll für Systeme, die nicht abrupt ausgehen dürfen (z. B. Server, NAS, Router, Switch).",
+      "correctForms": [
+        "zweck_uberbrucken_schutz"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Prüfungswissen: Ziele sind kontrolliertes Herunterfahren, Schutz von Hardware/Daten und Betriebsstabilität.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Eine USV kann helfen, ungeplante Ausfälle und Folgeprobleme (Reboots, Datenverlust, Hardware-Stress) zu reduzieren.",
+      "correctForms": [
+        "ziel_betriebsstabilitat"
+      ]
+    }
+  ]
+}

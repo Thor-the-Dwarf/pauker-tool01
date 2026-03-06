@@ -1,0 +1,214 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Schutzbedarfsanalyse (BSI IT-Grundschutz)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "schutzbedarfsanalyse",
+      "title": "Schutzbedarfsanalyse",
+      "subtitle": ""
+    },
+    {
+      "id": "vertraulichkeit",
+      "title": "Vertraulichkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "integritat",
+      "title": "Integrität",
+      "subtitle": ""
+    },
+    {
+      "id": "verfugbarkeit",
+      "title": "Verfügbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "normal",
+      "title": "normal",
+      "subtitle": ""
+    },
+    {
+      "id": "hoch",
+      "title": "hoch",
+      "subtitle": ""
+    },
+    {
+      "id": "sehr_hoch",
+      "title": "sehr hoch",
+      "subtitle": ""
+    },
+    {
+      "id": "anwendung",
+      "title": "Anwendung",
+      "subtitle": ""
+    },
+    {
+      "id": "it_system",
+      "title": "IT-System",
+      "subtitle": ""
+    },
+    {
+      "id": "raum",
+      "title": "Raum",
+      "subtitle": ""
+    },
+    {
+      "id": "kommunikationsverbindung",
+      "title": "Kommunikationsverbindung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Systematisches Bewerten, wie kritisch ein Objekt ist, bezogen auf Vertraulichkeit, Integrität und Verfügbarkeit.",
+      "correctForms": [
+        "schutzbedarfsanalyse"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Schutzziel: Daten dürfen nur von Berechtigten eingesehen werden (z. B. Kundendaten, Gehaltslisten).",
+      "correctForms": [
+        "vertraulichkeit"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Schutzziel: Daten/Systeme müssen korrekt und unverändert sein; Manipulationen müssen verhindert/erkannt werden.",
+      "correctForms": [
+        "integritat"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Schutzziel: Systeme und Daten müssen nutzbar/erreichbar sein (z. B. für Betrieb, Produktion, Support).",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Schutzbedarfskategorie: übliche Anforderungen; Schäden wären begrenzt und beherrschbar.",
+      "correctForms": [
+        "normal"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Schutzbedarfskategorie: erheblicher Schaden möglich (z. B. spürbare finanzielle/organisatorische Auswirkungen).",
+      "correctForms": [
+        "hoch"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Schutzbedarfskategorie: existenzbedrohende oder sehr schwerwiegende Schäden möglich (z. B. massive Rechts-/Imagefolgen).",
+      "correctForms": [
+        "sehr_hoch"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Objekt der Schutzbedarfsanalyse: Software/Service, der Fachaufgaben abbildet (z. B. ERP, Ticketsystem, CRM).",
+      "correctForms": [
+        "anwendung"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Objekt der Schutzbedarfsanalyse: konkreter Server/Client/VM oder Storage, auf dem Dienste laufen und Daten liegen.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Objekt der Schutzbedarfsanalyse: physischer Bereich, in dem Systeme/Daten geschützt werden müssen (z. B. Serverraum, Büro).",
+      "correctForms": [
+        "raum"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Objekt der Schutzbedarfsanalyse: Datenübertragung zwischen Systemen (z. B. VPN, Standortverbindung, WLAN, WAN-Link).",
+      "correctForms": [
+        "kommunikationsverbindung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn ein Systemausfall den Betrieb nur kurz stört und Workarounds existieren, ist der Bedarf oft eher diese Kategorie.",
+      "correctForms": [
+        "normal"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn Manipulation von Daten zu falschen Rechnungen oder falschen Entscheidungen führt, betrifft das vor allem dieses Schutzziel.",
+      "correctForms": [
+        "integritat"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Wenn das Offenlegen von Kundendaten zu DSGVO-Folgen führt, betrifft das vor allem dieses Schutzziel.",
+      "correctForms": [
+        "vertraulichkeit"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn ein Ticketsystem bei Ausfall den Support lahmlegt, betrifft das vor allem dieses Schutzziel.",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Ein Fachverfahren (z. B. Lohnabrechnung) wird in dieser Objektkategorie bewertet.",
+      "correctForms": [
+        "anwendung"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Ein Domain-Controller oder Fileserver wird in dieser Objektkategorie bewertet.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Ein abschließbarer Serverraum mit Zutrittskontrolle wird in dieser Objektkategorie bewertet.",
+      "correctForms": [
+        "raum"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Eine VPN-Strecke zwischen Homeoffice und Firma wird in dieser Objektkategorie bewertet.",
+      "correctForms": [
+        "kommunikationsverbindung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Ziel: Aus den Schutzbedarfskategorien werden passende Maßnahmen abgeleitet (z. B. stärkere Zugangskontrollen, Backup, Verschlüsselung).",
+      "correctForms": [
+        "schutzbedarfsanalyse"
+      ]
+    }
+  ]
+}

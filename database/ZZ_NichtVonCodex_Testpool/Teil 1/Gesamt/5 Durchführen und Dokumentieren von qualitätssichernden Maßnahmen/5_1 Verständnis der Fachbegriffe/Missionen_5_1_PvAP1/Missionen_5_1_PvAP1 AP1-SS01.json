@@ -1,0 +1,184 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Verständnis der Fachbegriffe (5.1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "qualitatsbegriff_iso_9000",
+      "title": "Qualitätsbegriff (ISO 9000)",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebliches_qm_system",
+      "title": "Betriebliches QM-System",
+      "subtitle": ""
+    },
+    {
+      "id": "qs_normen",
+      "title": "QS-Normen",
+      "subtitle": ""
+    },
+    {
+      "id": "audit",
+      "title": "Audit",
+      "subtitle": ""
+    },
+    {
+      "id": "zertifizierung",
+      "title": "Zertifizierung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Qualität bedeutet: Grad, in dem ein Satz inhärenter Merkmale Anforderungen erfüllt.",
+      "correctForms": [
+        "qualitatsbegriff_iso_9000"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Umfasst Prozesse, Verantwortlichkeiten und Dokumentation, um Qualität geplant zu steuern und kontinuierlich zu verbessern.",
+      "correctForms": [
+        "betriebliches_qm_system"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Standards/Regelwerke, die Anforderungen an Qualität und Qualitätssicherung festlegen (z. B. Vorgehen, Nachweise, Dokumente).",
+      "correctForms": [
+        "qs_normen"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Systematische, unabhängige Prüfung, ob Anforderungen/Prozesse eingehalten werden und wirksam sind.",
+      "correctForms": [
+        "audit"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Formale Bestätigung durch eine unabhängige Stelle, dass ein System/Prozess eine Norm erfüllt (z. B. ISO 9001).",
+      "correctForms": [
+        "zertifizierung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Typisch: legt fest, wie dokumentiert, geprüft und verbessert wird – nicht nur 'Endkontrolle'.",
+      "correctForms": [
+        "betriebliches_qm_system"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Typisch: liefert Kriterien, an denen man sich orientiert, um Qualität nachweisbar sicherzustellen.",
+      "correctForms": [
+        "qs_normen"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Typisch: Interview, Dokumentensichtung, Stichproben; Ergebnis sind Feststellungen und ggf. Abweichungen.",
+      "correctForms": [
+        "audit"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Typisch: endet mit Zertifikat und Gültigkeitsdauer; meist mit Überwachungsaudits verbunden.",
+      "correctForms": [
+        "zertifizierung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Frage: 'Erfüllt unser Prozess die Anforderungen und funktioniert er wirklich?' – das ist genau der Zweck davon.",
+      "correctForms": [
+        "audit"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Frage: 'Was heißt Qualität überhaupt, wenn wir es sauber definieren?' – das beantwortet dieser Begriff.",
+      "correctForms": [
+        "qualitatsbegriff_iso_9000"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn ein Kunde ISO-Nachweise verlangt, sind diese Regelwerke die Grundlage dafür.",
+      "correctForms": [
+        "qs_normen"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn ein Unternehmen festlegt, wie Reklamationen, Reviews, Tests und KVP organisiert werden, ist das dieses.",
+      "correctForms": [
+        "betriebliches_qm_system"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Wenn eine externe Stelle bestätigt, dass das QM-System normkonform ist, ist das diese Aktivität.",
+      "correctForms": [
+        "zertifizierung"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Ziel ist nicht primär Schuldige zu finden, sondern Wirksamkeit und Konformität zu bewerten.",
+      "correctForms": [
+        "audit"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Kann sich auf ein System, einen Prozess oder ein Produkt beziehen, je nachdem, was gegen welche Norm geprüft wird.",
+      "correctForms": [
+        "audit"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Qualität hängt nicht nur von 'gut/böse' ab, sondern davon, ob Anforderungen (z. B. Kundenanforderungen) erfüllt werden.",
+      "correctForms": [
+        "qualitatsbegriff_iso_9000"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Ohne definierte Prozesse und Verantwortlichkeiten ist eine erfolgreiche Zertifizierung praktisch unmöglich.",
+      "correctForms": [
+        "betriebliches_qm_system"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Überwachungsaudits prüfen regelmäßig, ob Voraussetzungen für dieses weiterhin erfüllt sind.",
+      "correctForms": [
+        "zertifizierung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Alle Begriffe gehören zusammen: Definition, System, Normen, Prüfung, Bestätigung – das ist ein typischer QM-Zusammenhang.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

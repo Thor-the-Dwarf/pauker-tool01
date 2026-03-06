@@ -1,0 +1,214 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Grundlagen Datenbanken (ER & SELECT)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "er_modell",
+      "title": "ER-Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "entitat",
+      "title": "Entität",
+      "subtitle": ""
+    },
+    {
+      "id": "attribut",
+      "title": "Attribut",
+      "subtitle": ""
+    },
+    {
+      "id": "beziehung",
+      "title": "Beziehung",
+      "subtitle": ""
+    },
+    {
+      "id": "primarschlussel",
+      "title": "Primärschlüssel",
+      "subtitle": ""
+    },
+    {
+      "id": "fremdschlussel",
+      "title": "Fremdschlüssel",
+      "subtitle": ""
+    },
+    {
+      "id": "kardinalitat",
+      "title": "Kardinalität",
+      "subtitle": ""
+    },
+    {
+      "id": "tabelle",
+      "title": "Tabelle",
+      "subtitle": ""
+    },
+    {
+      "id": "select",
+      "title": "SELECT",
+      "subtitle": ""
+    },
+    {
+      "id": "where",
+      "title": "WHERE",
+      "subtitle": ""
+    },
+    {
+      "id": "order_by",
+      "title": "ORDER BY",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Grafisches Modell zur Beschreibung von Datenobjekten und deren Beziehungen (z. B. Kunde – bestellt – Bestellung).",
+      "correctForms": [
+        "er_modell"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Objekt/„Ding“ der realen Welt, das gespeichert werden soll, z. B. Kunde, Produkt, Bestellung.",
+      "correctForms": [
+        "entitat"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Eigenschaft einer Entität, z. B. Kundenname, Produktpreis, Bestelldatum.",
+      "correctForms": [
+        "attribut"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Verknüpfung zwischen Entitäten, z. B. Kunde „hat“ Bestellung oder Bestellung „enthält“ Produkt.",
+      "correctForms": [
+        "beziehung"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Eindeutiges Merkmal/Schlüssel, das einen Datensatz eindeutig identifiziert, z. B. kunden_id.",
+      "correctForms": [
+        "primarschlussel"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Schlüssel, der auf den Primärschlüssel einer anderen Tabelle zeigt, um Datensätze zu verknüpfen.",
+      "correctForms": [
+        "fremdschlussel"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beschreibt Mengenverhältnisse in Beziehungen, z. B. 1:1, 1:n oder n:m.",
+      "correctForms": [
+        "kardinalitat"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Relationale Darstellung einer Entität als Zeilen (Datensätze) und Spalten (Attribute).",
+      "correctForms": [
+        "tabelle"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "SQL-Befehl zum Auslesen von Daten aus einer Tabelle.",
+      "correctForms": [
+        "select"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "SQL-Teil, der Datensätze anhand einer Bedingung filtert, z. B. alter > 18.",
+      "correctForms": [
+        "where"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "SQL-Teil, der die Ausgabe sortiert, z. B. nach name aufsteigend oder datum absteigend.",
+      "correctForms": [
+        "order_by"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn du in einem Modell „Kunde“ mit den Eigenschaften Name und E-Mail beschreibst, ist „Kunde“ eine …",
+      "correctForms": [
+        "entitat"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn eine Kunden-ID in der Bestellung gespeichert wird, um den Kunden zu referenzieren, ist das ein …",
+      "correctForms": [
+        "fremdschlussel"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„Ein Kunde kann viele Bestellungen haben“ ist ein Beispiel für diese Eigenschaft einer Beziehung.",
+      "correctForms": [
+        "kardinalitat"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„Gib alle Spalten aller Datensätze aus einer Tabelle aus“ ist die Standardform von …",
+      "correctForms": [
+        "select"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„Zeige nur Datensätze, bei denen abteilung = 'IT'“ ist eine typische Aufgabe für …",
+      "correctForms": [
+        "where"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„Sortiere die Ausgabe nach einstellungsdatum absteigend“ ist eine typische Aufgabe für …",
+      "correctForms": [
+        "order_by"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Ein eindeutiger Schlüssel verhindert, dass zwei Datensätze dieselbe ID haben.",
+      "correctForms": [
+        "primarschlussel"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Im ER-Modell wird diese Verbindung zwischen Entitäten typischerweise als Linie/Verknüpfung dargestellt.",
+      "correctForms": [
+        "beziehung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Ein ER-Modell dient oft als Vorstufe, um daraus Tabellen und Schlüssel abzuleiten.",
+      "correctForms": [
+        "er_modell"
+      ]
+    }
+  ]
+}

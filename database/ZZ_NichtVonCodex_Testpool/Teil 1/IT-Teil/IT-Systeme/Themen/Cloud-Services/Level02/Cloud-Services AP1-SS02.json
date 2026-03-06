@@ -1,0 +1,452 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Cloud-Services (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Modellwahl, Verantwortungen, Security, FinOps und Resilienz sauber trennen.",
+  "columns": [
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "shared_responsibility",
+      "title": "Shared Responsibility",
+      "subtitle": ""
+    },
+    {
+      "id": "providerverantwortung",
+      "title": "Providerverantwortung",
+      "subtitle": ""
+    },
+    {
+      "id": "kundenverantwortung",
+      "title": "Kundenverantwortung",
+      "subtitle": ""
+    },
+    {
+      "id": "managed_database",
+      "title": "Managed Database",
+      "subtitle": ""
+    },
+    {
+      "id": "serverless_function",
+      "title": "Serverless Function",
+      "subtitle": ""
+    },
+    {
+      "id": "least_privilege",
+      "title": "Least Privilege",
+      "subtitle": ""
+    },
+    {
+      "id": "mfa",
+      "title": "MFA",
+      "subtitle": ""
+    },
+    {
+      "id": "policy_as_code",
+      "title": "Policy as Code",
+      "subtitle": ""
+    },
+    {
+      "id": "fehlkonfiguration",
+      "title": "Fehlkonfiguration",
+      "subtitle": ""
+    },
+    {
+      "id": "finops",
+      "title": "FinOps",
+      "subtitle": ""
+    },
+    {
+      "id": "kosten_tagging",
+      "title": "Kosten-Tagging",
+      "subtitle": ""
+    },
+    {
+      "id": "budget_alarm",
+      "title": "Budget-Alarm",
+      "subtitle": ""
+    },
+    {
+      "id": "rightsizing",
+      "title": "Rightsizing",
+      "subtitle": ""
+    },
+    {
+      "id": "auto_scaling",
+      "title": "Auto-Scaling",
+      "subtitle": ""
+    },
+    {
+      "id": "data_residency",
+      "title": "Data Residency",
+      "subtitle": ""
+    },
+    {
+      "id": "avv_toms",
+      "title": "AVV/TOMs",
+      "subtitle": ""
+    },
+    {
+      "id": "verschluesselung_kms",
+      "title": "Verschluesselung/KMS",
+      "subtitle": ""
+    },
+    {
+      "id": "audit_logging",
+      "title": "Audit-Logging",
+      "subtitle": ""
+    },
+    {
+      "id": "siem",
+      "title": "SIEM",
+      "subtitle": ""
+    },
+    {
+      "id": "vendor_lock_in",
+      "title": "Vendor Lock-in",
+      "subtitle": ""
+    },
+    {
+      "id": "portabilitaetsstrategie",
+      "title": "Portabilitaetsstrategie",
+      "subtitle": ""
+    },
+    {
+      "id": "exit_strategie",
+      "title": "Exit-Strategie",
+      "subtitle": ""
+    },
+    {
+      "id": "multi_az",
+      "title": "Multi-AZ",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_restore_test",
+      "title": "Backup-Restore-Test",
+      "subtitle": ""
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "subtitle": ""
+    },
+    {
+      "id": "hohe_kontrolltiefe",
+      "title": "hohe Kontrolltiefe",
+      "subtitle": ""
+    },
+    {
+      "id": "geringe_kontrolltiefe",
+      "title": "geringe Kontrolltiefe",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Virtuelle Infrastruktur mieten und Betriebssystem selbst patchen.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Anwendungscode deployen, waehrend die Plattformlaufzeit gemanagt wird.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Fertige Fachanwendung direkt im Browser nutzen.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Grundprinzip: Anbieter schuetzt die Cloud-Basis, Kunde schuetzt Nutzung und Konfiguration.",
+      "correctForms": [
+        "shared_responsibility"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Physische Datacenter-Sicherheit und Host-Infrastruktur absichern.",
+      "correctForms": [
+        "providerverantwortung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Rollenmodell, Freigaben und Datenklassifizierung korrekt pflegen.",
+      "correctForms": [
+        "kundenverantwortung"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Datenbankdienst als Plattformkomponente mit weniger Eigenbetrieb.",
+      "correctForms": [
+        "managed_database"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Code nur ereignisbasiert ausfuehren, ohne Server dauerhaft zu verwalten.",
+      "correctForms": [
+        "serverless_function"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Rechte nur minimal und zweckgebunden vergeben.",
+      "correctForms": [
+        "least_privilege"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Privilegierter Login erfordert zweiten Faktor neben Passwort.",
+      "correctForms": [
+        "mfa"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Deployment blockieren, wenn Sicherheitsregeln verletzt werden.",
+      "correctForms": [
+        "policy_as_code"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Offener Datenbankport und zu breite IAM-Rollen als Incident-Ursache.",
+      "correctForms": [
+        "fehlkonfiguration"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Kontinuierliche Steuerung von Cloud-Kosten mit klaren Verantwortlichkeiten.",
+      "correctForms": [
+        "finops"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Ressourcen muessen Team und Kostenstelle eindeutig zuordenbar sein.",
+      "correctForms": [
+        "kosten_tagging"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Warnung bei Budgetabweichung mit Eskalation vor Monatsende.",
+      "correctForms": [
+        "budget_alarm"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Instanzgroessen an realen Lastprofilen ausrichten.",
+      "correctForms": [
+        "rightsizing"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Ressourcen bei Lastspitzen automatisch erweitern und spaeter wieder reduzieren.",
+      "correctForms": [
+        "auto_scaling"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Daten nur in explizit erlaubten Regionen speichern.",
+      "correctForms": [
+        "data_residency"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Vertragliche und organisatorische Datenschutzmassnahmen dokumentieren.",
+      "correctForms": [
+        "avv_toms"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Daten im Ruhezustand und bei Transport verschluesseln, Schluessel sauber verwalten.",
+      "correctForms": [
+        "verschluesselung_kms"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Protokolliert nachvollziehbar, wer Sicherheitskonfigurationen geaendert hat.",
+      "correctForms": [
+        "audit_logging"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Korrelierte Sicherheitsereignisse zentral auswerten und alarmieren.",
+      "correctForms": [
+        "siem"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Starke Abhaengigkeit von proprietaeren APIs erschwert spaetere Migration.",
+      "correctForms": [
+        "vendor_lock_in"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Architektur mit offenen Standards fuer moeglichen Anbieterwechsel planen.",
+      "correctForms": [
+        "portabilitaetsstrategie"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Definierter Ausstiegspfad mit Datenexport, Rollen und Testmigration.",
+      "correctForms": [
+        "exit_strategie"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Dienste ueber mehrere Verfuegbarkeitszonen verteilen.",
+      "correctForms": [
+        "multi_az"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Maximal zulaessige Wiederanlaufzeit im Notfall.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Maximal tolerierbarer Datenverlust bis zur letzten gueltigen Sicherung.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Backup ist erst belastbar, wenn Restore regelmaessig geuebt wird.",
+      "correctForms": [
+        "backup_restore_test"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Metriken, Logs und Traces kombiniert zur Betriebsanalyse nutzen.",
+      "correctForms": [
+        "observability"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Typisch fuer IaaS: viel Einfluss auf OS, Netzwerk und Middleware.",
+      "correctForms": [
+        "hohe_kontrolltiefe"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Typisch fuer SaaS: schneller Start, aber wenig Einfluss auf technische Tiefe.",
+      "correctForms": [
+        "geringe_kontrolltiefe"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Managed Service bedeutet automatisch compliance-konforme Nutzung ohne Kundenpflichten.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Fehlende Governance kann gleichzeitig Sicherheits-, Kosten- und Compliance-Probleme erzeugen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "PaaS ist immer ungeeignet, sobald auch nur eine Custom-App existiert.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Bei SaaS sind IAM und Rollenmodell weiterhin relevant.",
+      "correctForms": [
+        "kundenverantwortung"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Risikoreduktion durch standardisierte APIs und formatierte Exportpfade.",
+      "correctForms": [
+        "portabilitaetsstrategie"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Sicherheitsmassnahmen wie Least Privilege, MFA und Logging sind kombinierbar und sinnvoll.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Cloud-Kosten sinken ohne Monitoring und ohne Verantwortlichkeiten automatisch dauerhaft.",
+      "correctForms": [
+        "keine"
+      ]
+    }
+  ]
+}

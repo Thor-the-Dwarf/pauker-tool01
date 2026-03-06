@@ -1,0 +1,229 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Bedarfsgerechte Auswahl von Hardware (4.2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "desktop_pc",
+      "title": "Desktop-PC",
+      "subtitle": ""
+    },
+    {
+      "id": "notebook",
+      "title": "Notebook",
+      "subtitle": ""
+    },
+    {
+      "id": "tablet",
+      "title": "Tablet",
+      "subtitle": ""
+    },
+    {
+      "id": "smartphone",
+      "title": "Smartphone",
+      "subtitle": ""
+    },
+    {
+      "id": "stationarer_arbeitsplatz",
+      "title": "Stationärer Arbeitsplatz",
+      "subtitle": ""
+    },
+    {
+      "id": "mobiler_arbeitsplatz",
+      "title": "Mobiler Arbeitsplatz",
+      "subtitle": ""
+    },
+    {
+      "id": "terminal_thin_client",
+      "title": "Terminal/Thin Client",
+      "subtitle": ""
+    },
+    {
+      "id": "lan",
+      "title": "LAN",
+      "subtitle": ""
+    },
+    {
+      "id": "wan",
+      "title": "WAN",
+      "subtitle": ""
+    },
+    {
+      "id": "lte",
+      "title": "LTE",
+      "subtitle": ""
+    },
+    {
+      "id": "5g",
+      "title": "5G",
+      "subtitle": ""
+    },
+    {
+      "id": "barrierefreiheit",
+      "title": "Barrierefreiheit",
+      "subtitle": ""
+    },
+    {
+      "id": "zweiter_monitor",
+      "title": "Zweiter Monitor",
+      "subtitle": ""
+    },
+    {
+      "id": "lautsprecher_mikrofon",
+      "title": "Lautsprecher/Mikrofon",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Geräteklasse: fest am Arbeitsplatz, meist beste Preis/Leistung, leicht erweiterbar (RAM/SSD), wenig mobil.",
+      "correctForms": [
+        "desktop_pc"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Geräteklasse: mobiler Rechner mit integriertem Bildschirm/Tastatur; Kompromiss aus Leistung und Mobilität.",
+      "correctForms": [
+        "notebook"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Geräteklasse: Touch-Gerät zwischen Smartphone und Notebook; gut für Konsum/Notizen, weniger für schwere Entwicklung.",
+      "correctForms": [
+        "tablet"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Geräteklasse: sehr mobil, Telefonie + Apps; gut für Kommunikation/2FA, begrenzt für produktive Office-Arbeit.",
+      "correctForms": [
+        "smartphone"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Arbeitsplatzform: Gerät steht dauerhaft im Büro; stabile Peripherie (Monitor, Dock, LAN) ist typisch.",
+      "correctForms": [
+        "stationarer_arbeitsplatz"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Arbeitsplatzform: Nutzung unterwegs/zu Hause; Fokus auf Akku, Gewicht, WLAN/LTE/5G, VPN und Mobilfunkempfang.",
+      "correctForms": [
+        "mobiler_arbeitsplatz"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Client-Konzept: wenig lokale Rechenleistung; Apps laufen zentral (Server/VDI), Gerät ist primär Ein-/Ausgabe.",
+      "correctForms": [
+        "terminal_thin_client"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Netztyp: lokales Netzwerk im Gebäude/Standort (typisch: Ethernet/WLAN), kurze Wege, niedrige Latenz.",
+      "correctForms": [
+        "lan"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Netztyp: verbindet Standorte über große Entfernungen (z. B. MPLS, Internet-VPN), meist höhere Latenz.",
+      "correctForms": [
+        "wan"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Mobilfunkstandard: weit verbreitet, gute Abdeckung; typisch für mobiles Arbeiten mit moderaten Datenraten.",
+      "correctForms": [
+        "lte"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Mobilfunkstandard: neuere Generation mit höherer Bandbreite und geringerer Latenz, je nach Ausbau.",
+      "correctForms": [
+        "5g"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Ziel: Arbeitsplatz so gestalten, dass Menschen mit Einschränkungen effektiv arbeiten können.",
+      "correctForms": [
+        "barrierefreiheit"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Maßnahme: Mehr Bildschirmfläche für bessere Lesbarkeit/Übersicht; hilft z. B. bei Sehschwäche und Multitasking.",
+      "correctForms": [
+        "zweiter_monitor"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Maßnahme: Audio-Ein-/Ausgabe bereitstellen, z. B. für Screenreader, Videokonferenzen oder Sprachsteuerung.",
+      "correctForms": [
+        "lautsprecher_mikrofon"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn unterwegs stabile Verbindung nötig ist und WLAN unsicher/fehlend, sind diese Standards relevant.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn Leistung/Erweiterbarkeit priorisiert wird und Mobilität egal ist, passt diese Geräteklasse am ehesten.",
+      "correctForms": [
+        "desktop_pc"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn maximal mobil, schnell griffbereit und für 2FA/Kommunikation gedacht, passt diese Geräteklasse am ehesten.",
+      "correctForms": [
+        "smartphone"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn zentrale Verwaltung/hohe Sicherheit im Vordergrund steht und Endgeräte schlank sein sollen, passt dieses Konzept.",
+      "correctForms": [
+        "terminal_thin_client"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du innerhalb eines Gebäudes Geräte verbindest (Drucker, PCs, Switches), geht es primär um dieses Netz.",
+      "correctForms": [
+        "lan"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du Filiale und Zentrale über Distanz koppelst, geht es primär um dieses Netz.",
+      "correctForms": [
+        "wan"
+      ]
+    }
+  ]
+}

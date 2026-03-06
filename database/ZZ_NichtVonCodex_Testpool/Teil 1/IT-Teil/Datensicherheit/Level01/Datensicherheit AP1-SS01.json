@@ -1,0 +1,403 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Datensicherheit (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "datensicherheit",
+      "title": "Datensicherheit",
+      "subtitle": ""
+    },
+    {
+      "id": "datenschutz",
+      "title": "Datenschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "vertraulichkeit",
+      "title": "Vertraulichkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "integritat",
+      "title": "Integrität",
+      "subtitle": ""
+    },
+    {
+      "id": "verfugbarkeit",
+      "title": "Verfügbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "authentizitat",
+      "title": "Authentizität",
+      "subtitle": ""
+    },
+    {
+      "id": "nachvollziehbarkeit_logging",
+      "title": "Nachvollziehbarkeit (Logging)",
+      "subtitle": ""
+    },
+    {
+      "id": "bsi_it_grundschutz",
+      "title": "BSI / IT-Grundschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "schutzbedarfsanalyse_c_i_a_getrennt",
+      "title": "Schutzbedarfsanalyse (C/I/A getrennt)",
+      "subtitle": ""
+    },
+    {
+      "id": "mensch_gefahrdung",
+      "title": "Mensch (Gefährdung)",
+      "subtitle": ""
+    },
+    {
+      "id": "technik_gefahrdung",
+      "title": "Technik (Gefährdung)",
+      "subtitle": ""
+    },
+    {
+      "id": "organisation_gefahrdung",
+      "title": "Organisation (Gefährdung)",
+      "subtitle": ""
+    },
+    {
+      "id": "umgebung_physik_gefahrdung",
+      "title": "Umgebung & Physik (Gefährdung)",
+      "subtitle": ""
+    },
+    {
+      "id": "defense_in_depth",
+      "title": "Defense in Depth",
+      "subtitle": ""
+    },
+    {
+      "id": "toms_art_32_dsgvo",
+      "title": "TOMs (Art. 32 DSGVO)",
+      "subtitle": ""
+    },
+    {
+      "id": "authentisierung_mfa",
+      "title": "Authentisierung & MFA",
+      "subtitle": ""
+    },
+    {
+      "id": "autorisierung_least_privilege",
+      "title": "Autorisierung (Least Privilege)",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_restore_3_2_1",
+      "title": "Backup & Restore (3-2-1)",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo_rto",
+      "title": "RPO / RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "incident_response",
+      "title": "Incident Response",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Schützt Informationen und Systeme vor Schäden; Ziel ist ein verlässliches Schutzniveau (mehr als nur „Passwort setzen“).",
+      "correctForms": [
+        "datensicherheit"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Fragt eher „Wie schütze ich’s zuverlässig?“ statt „Darf ich das?“",
+      "correctForms": [
+        "datensicherheit"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Fokussiert personenbezogene Daten und rechtliche Anforderungen.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Fragt typischerweise: „Darf ich das?“ (Erlaubnis/Rechtsgrundlage).",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Nur berechtigte Personen dürfen Informationen lesen oder kennen.",
+      "correctForms": [
+        "vertraulichkeit"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Schutz vor unbefugtem Zugriff durch Verschlüsselung und Zugriffskontrollen (Ziel, nicht Technikname).",
+      "correctForms": [
+        "vertraulichkeit"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Daten sind korrekt und nicht manipuliert; Systeme funktionieren wie vorgesehen.",
+      "correctForms": [
+        "integritat"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Prüfungsfalle: Das ist NICHT „Verschlüsselung“, sondern „unverändert und korrekt“.",
+      "correctForms": [
+        "integritat"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Zugriff auf Informationen und Systeme ist rechtzeitig möglich; Services laufen stabil.",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Schutzmaßnahmen sind z. B. Redundanz, Notfallkonzepte und getestete Wiederherstellung.",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Echtheit von Daten/Identitäten: Ist der Absender wirklich der, der er vorgibt zu sein?",
+      "correctForms": [
+        "authentizitat"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wichtig für Audits und Nachweise: Wer hat was wann getan?",
+      "correctForms": [
+        "nachvollziehbarkeit_logging"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Logging und Protokollierung ermöglichen die Rekonstruktion von Vorgängen und Sicherheitsvorfällen.",
+      "correctForms": [
+        "nachvollziehbarkeit_logging"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Zentrale Cyber-Sicherheitsbehörde des Bundes, entwickelt Standards, Methoden und Best Practices.",
+      "correctForms": [
+        "bsi_it_grundschutz"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Baustein-orientiertes Vorgehen mit praxiserprobten Maßnahmen gegen typische Bedrohungen.",
+      "correctForms": [
+        "bsi_it_grundschutz"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Prüfungsfalle: Nicht „ein Schutzbedarf für alles“ – pro Asset getrennt bewerten.",
+      "correctForms": [
+        "schutzbedarfsanalyse_c_i_a_getrennt"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Schutzbedarf wird getrennt für Vertraulichkeit, Integrität und Verfügbarkeit bestimmt.",
+      "correctForms": [
+        "schutzbedarfsanalyse_c_i_a_getrennt"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Gesamtschutzbedarf ergibt sich typischerweise aus dem höchsten Einzelwert der Grundwerte.",
+      "correctForms": [
+        "schutzbedarfsanalyse_c_i_a_getrennt"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Social Engineering, Phishing, Fake-Calls, Tailgating und Bedienfehler gehören hierhin.",
+      "correctForms": [
+        "mensch_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Stop – Check – Confirm: Ungewöhnliche Anfrage erst prüfen und per zweitem Kanal bestätigen.",
+      "correctForms": [
+        "mensch_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Schwachstellen, Malware, Ransomware, Fehlkonfigurationen und veraltete Software.",
+      "correctForms": [
+        "technik_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Zeitnah Updates einspielen (Patch-Management) ist eine der wichtigsten Gegenmaßnahmen gegen Exploits.",
+      "correctForms": [
+        "technik_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Fehlende Prozesse, unklare Verantwortlichkeiten, Schatten-IT und mangelndes Rechtemanagement.",
+      "correctForms": [
+        "organisation_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Onboarding/Offboarding und regelmäßige Rechte-Reviews fehlen oder sind chaotisch.",
+      "correctForms": [
+        "organisation_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Stromausfall, Brand, Wasser, Klimaprobleme, Diebstahl und unbefugter physischer Zugang.",
+      "correctForms": [
+        "umgebung_physik_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Zutrittskontrolle, USV und Serverraum-Konzept sind typische Maßnahmen in diesem Bereich.",
+      "correctForms": [
+        "umgebung_physik_gefahrdung"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Mehrschichtiger Schutz: Wenn eine Barriere fällt, greift die nächste.",
+      "correctForms": [
+        "defense_in_depth"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Prüfungswissen: Einzelmaßnahmen sind kein Konzept – erst die Kombination schafft Sicherheit.",
+      "correctForms": [
+        "defense_in_depth"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Geeignete technische und organisatorische Maßnahmen zur Sicherheit der Verarbeitung (risikoangemessen).",
+      "correctForms": [
+        "toms_art_32_dsgvo"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Verschlüsselung, Zugriffskontrollen, Backup/Restore und regelmäßige Wirksamkeitsprüfung gehören dazu.",
+      "correctForms": [
+        "toms_art_32_dsgvo"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "„Wer bist du?“ – Identität nachweisen (z. B. Login mit zweitem Faktor).",
+      "correctForms": [
+        "authentisierung_mfa"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "MFA überall, wo’s kritisch ist: Admin-Zugänge, Cloud-Services, E-Mail und VPN.",
+      "correctForms": [
+        "authentisierung_mfa"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "„Was darfst du?“ – Berechtigungen prüfen und nach Rollen vergeben.",
+      "correctForms": [
+        "autorisierung_least_privilege"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Least Privilege und Need-to-know: so wenig Rechte wie möglich, so viel wie nötig.",
+      "correctForms": [
+        "autorisierung_least_privilege"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "3 Kopien der Daten, 2 verschiedene Medien, 1 Kopie extern/offsite.",
+      "correctForms": [
+        "backup_restore_3_2_1"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Prüfungsfalle: „Backup läuft durch“ bedeutet nicht „Restore klappt“ – Restore-Tests sind Pflicht.",
+      "correctForms": [
+        "backup_restore_3_2_1"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Maximal akzeptabler Datenverlust als Zeitspanne: Wie alt dürfen wiederhergestellte Daten sein?",
+      "correctForms": [
+        "rpo_rto"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Maximal akzeptable Ausfallzeit: Wie schnell muss das System wieder laufen?",
+      "correctForms": [
+        "rpo_rto"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Ohne Auswertung sind Logs nutzlos: Alerts definieren, korrelieren, reagieren.",
+      "correctForms": [
+        "nachvollziehbarkeit_logging"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
+      "correctForms": [
+        "incident_response"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "Im Notfall denkst du nicht besser – du folgst dem Plan (Runbook, Rollen, Eskalation).",
+      "correctForms": [
+        "incident_response"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "Prüfungsfalle: Geteilte Accounts zerstören Nachvollziehbarkeit und sauberes Offboarding.",
+      "correctForms": [
+        "nachvollziehbarkeit_logging"
+      ]
+    }
+  ]
+}

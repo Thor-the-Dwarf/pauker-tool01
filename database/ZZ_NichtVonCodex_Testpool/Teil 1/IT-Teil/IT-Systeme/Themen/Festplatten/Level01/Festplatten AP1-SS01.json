@@ -1,0 +1,175 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Speicher: SSD/HDD (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_sata",
+      "title": "SSD (SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD (NVMe)",
+      "subtitle": ""
+    },
+    {
+      "id": "iops",
+      "title": "IOPS",
+      "subtitle": ""
+    },
+    {
+      "id": "tbw",
+      "title": "TBW",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Mechanischer Massenspeicher mit drehenden Scheiben; typische Schwäche: Zugriffszeit durch Bewegung.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Preis pro GB meist am günstigsten; geeignet für Archivdaten und Backup-Targets, wenn Tempo zweitrangig ist.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Solid State Drive über SATA; deutlich schneller als HDD, aber durch SATA-Bandbreite begrenzt.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Hoher Datendurchsatz und sehr viele parallele, kleine Zugriffe; typisch für moderne System-/Gaming-/VM-Workloads.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: Wenn extrem viele kleine Random-Reads/Random-Writes gefordert sind, ist der Durchsatz in MB/s allein nicht das wichtigste Maß.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Kennzahl für „wie viele Ein-/Ausgabe-Operationen pro Sekunde“ möglich sind (viele kleine Zugriffe).",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Angabe zur Schreibhaltbarkeit: wie viel insgesamt geschrieben werden darf, bevor Verschleiß kritisch wird.",
+      "correctForms": [
+        "tbw"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wichtig beim Kauf einer SSD für viele Schreibvorgänge (z. B. Logs, Datenbank, VM-Host): diese Kennzahl prüfen.",
+      "correctForms": [
+        "tbw"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Zusammenschalten mehrerer Laufwerke zu einem Verbund, um Verfügbarkeit und/oder Performance zu erhöhen.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Kann je nach Level vor einem Plattenausfall schützen (z. B. Spiegelung) – ersetzt aber kein Backup.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Szenario: Betriebssystem-Start soll spürbar schneller werden, viele kleine Zugriffe; hier ist die Mechanik der Bremser.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Szenario: Du willst maximale Performance für viele kleine Zugriffe und sehr hohen Durchsatz auf einem einzelnen Laufwerk.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Szenario: Du brauchst nur „solide schnell“ und maximale Kompatibilität in älteren PCs/Laptops mit SATA-Anschluss.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„Für Backup-Targets ist das Preis/GB oft wichtiger als Spitzen-IOPS.“",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„TBW beschreibt die Geschwindigkeit einer SSD in MB/s.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„IOPS ist relevant, wenn viele kleine Dateien/DB-Zugriffe/VM-I/O stattfinden.“",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„RAID verbessert immer gleichzeitig Verfügbarkeit UND Performance, egal welches RAID-Level.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "„HDD, SSD (SATA) und SSD (NVMe) sind Speicherlösungen, die je nach Einsatzzweck sinnvoll sein können.“",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

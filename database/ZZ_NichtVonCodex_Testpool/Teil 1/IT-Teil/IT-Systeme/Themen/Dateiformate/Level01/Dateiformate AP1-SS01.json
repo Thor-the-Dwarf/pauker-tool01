@@ -1,0 +1,170 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Dateiformate: Basics (Text vs. Binär) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "textformat",
+      "title": "Textformat",
+      "subtitle": ""
+    },
+    {
+      "id": "binarformat",
+      "title": "Binärformat",
+      "subtitle": ""
+    },
+    {
+      "id": "encoding_utf_8",
+      "title": "Encoding (UTF-8)",
+      "subtitle": ""
+    },
+    {
+      "id": "trennzeichen_csv",
+      "title": "Trennzeichen (CSV)",
+      "subtitle": ""
+    },
+    {
+      "id": "schema_validierung",
+      "title": "Schema/Validierung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Menschenlesbar im Editor; gut für Schnittstellen, Logs und einfache Weiterverarbeitung.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Beispiele: TXT, CSV, JSON, XML.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Kompakt und oft komplex aufgebaut; ohne passenden Parser/Programm schwer direkt zu lesen.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Beispiele: DOCX, XLSX, PDF, JPG/PNG, MP4.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: Sieht im Editor „kaputt“ aus, weil Bytes nicht als Text gedacht sind.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Legt fest, wie Zeichen in Bytes codiert sind; wichtig, damit Umlaute/Sonderzeichen nicht zu „Müll“ werden.",
+      "correctForms": [
+        "encoding_utf_8"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Wenn das falsch ist, entstehen Effekte wie „Ã¼“ statt „ü“.",
+      "correctForms": [
+        "encoding_utf_8"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wichtig bei tabellarischen Textdaten: definiert, woran Spalten getrennt werden (z. B. ; oder ,).",
+      "correctForms": [
+        "trennzeichen_csv"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Prüfungsfalle: Falsches Trennzeichen führt dazu, dass alle Werte in einer einzigen Spalte landen.",
+      "correctForms": [
+        "trennzeichen_csv"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Regeln/Struktur prüfen lassen, damit Daten wirklich dem erwarteten Aufbau entsprechen (z. B. Pflichtfelder, Datentypen).",
+      "correctForms": [
+        "schema_validierung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Relevant, wenn Schnittstellen stabil sein sollen: Änderungen müssen kontrolliert passieren (z. B. Versionierung).",
+      "correctForms": [
+        "schema_validierung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "„JSON und XML sind typischerweise menschenlesbar und werden oft für APIs/Schnittstellen genutzt.“",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "„PDF ist immer ein reines Textformat, weil man Text markieren kann.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„CSV ist standardisiert auf genau ein Trennzeichen, weltweit immer gleich.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„UTF-8 ist ein Dateiformat wie CSV.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„Encoding, Trennzeichen und Schema/Validierung sind typische Qualitäts-Checks für robuste Datenaustausche.“",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn zwei Systeme Daten austauschen, ist es oft sinnvoll, ein Textformat zu wählen, um Debugging/Integration zu erleichtern.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn Größe/Performance im Vordergrund stehen (z. B. Bilder, Video), sind kompakte Byte-Strukturen üblich.",
+      "correctForms": [
+        "binarformat"
+      ]
+    }
+  ]
+}

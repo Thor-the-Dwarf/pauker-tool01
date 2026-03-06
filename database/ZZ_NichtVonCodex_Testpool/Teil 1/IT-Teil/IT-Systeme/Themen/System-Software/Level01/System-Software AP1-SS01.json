@@ -1,0 +1,175 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Software-Schichten (vom Metall bis zur App) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "hardware",
+      "title": "Hardware",
+      "subtitle": ""
+    },
+    {
+      "id": "firmware_bios_uefi",
+      "title": "Firmware (BIOS/UEFI)",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "treiber",
+      "title": "Treiber",
+      "subtitle": ""
+    },
+    {
+      "id": "middleware_runtime",
+      "title": "Middleware/Runtime",
+      "subtitle": ""
+    },
+    {
+      "id": "anwendung",
+      "title": "Anwendung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Das physische Zeug: CPU, RAM, Mainboard, SSD/HDD, Netzwerkkarte.",
+      "correctForms": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Startet beim Einschalten zuerst und initialisiert die Hardware, bevor ein Bootloader/OS geladen wird.",
+      "correctForms": [
+        "firmware_bios_uefi"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Prüfungsfalle: Läuft vor dem Betriebssystem und ist nicht „ein Programm im Windows-Ordner“.",
+      "correctForms": [
+        "firmware_bios_uefi"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Verwaltet Ressourcen wie Prozesse, Speicher und Dateien und stellt Systemdienste bereit.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Beispiele: Windows oder Linux – stellt die Basis bereit, auf der Programme laufen.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Übersetzt OS-Anfragen in konkrete Hardware-Kommandos (z. B. für Grafikkarte, WLAN, Drucker).",
+      "correctForms": [
+        "treiber"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Ohne das kann das OS eine neue/ungewöhnliche Hardware oft nur eingeschränkt nutzen (z. B. nur Basis-Auflösung).",
+      "correctForms": [
+        "treiber"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Schicht zwischen App und OS, die eine Laufzeitumgebung oder Plattform bereitstellt (z. B. JVM, .NET).",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Ermöglicht, dass derselbe Programmcode auf verschiedenen Betriebssystemen laufen kann, solange die Runtime vorhanden ist.",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Läuft „auf“ dem Betriebssystem und liefert den Nutzwert für Anwender (z. B. Browser, ERP, Spiel).",
+      "correctForms": [
+        "anwendung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Prüfungsfalle: Eine Anwendung verwaltet nicht den gesamten Arbeitsspeicher des Rechners – das ist OS-Job.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Typische Kette: Einschalten → Hardware-Init → OS laden → Benutzer startet Programme.",
+      "correctForms": [
+        "firmware_bios_uefi"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn die Runtime fehlt, kann eine App (z. B. Java/.NET) trotz installiertem OS nicht starten.",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "„Treiber sind Teil des Betriebssystems bzw. hängen eng daran, damit Hardware nutzbar wird.“",
+      "correctForms": [
+        "treiber"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„BIOS/UEFI ist eine typische Middleware, die zwischen App und OS läuft.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„Anwendungen laufen direkt auf der Hardware ohne Betriebssystem.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„Firmware, Betriebssystem, Treiber, Middleware/Runtime und Anwendungen sind alles Ebenen, die zusammen einen nutzbaren Rechner ergeben.“",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Beispiel: Browser, Textverarbeitung, IDE – das sind Programme für den Nutzer, nicht für Hardware-Init.",
+      "correctForms": [
+        "anwendung"
+      ]
+    }
+  ]
+}

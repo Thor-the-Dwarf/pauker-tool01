@@ -1,0 +1,184 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Urheberrechtsgesetz & Lizenzmodelle (4.4)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "eula",
+      "title": "EULA",
+      "subtitle": ""
+    },
+    {
+      "id": "oem",
+      "title": "OEM",
+      "subtitle": ""
+    },
+    {
+      "id": "gnu_gpl",
+      "title": "GNU (GPL)",
+      "subtitle": ""
+    },
+    {
+      "id": "urheberrechtsgesetz",
+      "title": "Urheberrechtsgesetz",
+      "subtitle": ""
+    },
+    {
+      "id": "pay_by_use",
+      "title": "Pay by Use",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Gesetzlicher Rahmen, der festlegt, wer ein Werk nutzen darf, welche Rechte bestehen und was ohne Erlaubnis verboten ist.",
+      "correctForms": [
+        "urheberrechtsgesetz"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Lizenzvertrag, den du beim Installieren/Starten akzeptierst; regelt Nutzung, Weitergabe, Updates, Haftung, Einschränkungen.",
+      "correctForms": [
+        "eula"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Lizenz, die oft an Hardware gebunden ist (z. B. vorinstalliertes Betriebssystem) und typischerweise nicht frei übertragbar ist.",
+      "correctForms": [
+        "oem"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Open-Source-Lizenzfamilie mit Copyleft: Weitergabe/Änderungen müssen unter denselben Bedingungen möglich bleiben.",
+      "correctForms": [
+        "gnu_gpl"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Abrechnungsmodell: du zahlst nach Nutzung (z. B. pro Stunde, pro User-Session, pro Transaktion, pro API-Call).",
+      "correctForms": [
+        "pay_by_use"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Typisch: du darfst Software nutzen, aber nicht besitzen; es gibt Regeln zu Installation, Anzahl Geräte/Users und Reverse Engineering.",
+      "correctForms": [
+        "eula"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Typisch: Lizenz ist im Kaufpreis eines Geräts enthalten und wird beim Gerätewechsel oft zum Problem.",
+      "correctForms": [
+        "oem"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Typisch: Wenn du den Code weiterverbreitest (auch verändert), musst du die Lizenzbedingungen mitgeben.",
+      "correctForms": [
+        "gnu_gpl"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beispiel: '0,005 € pro Request' passt am ehesten zu diesem Modell.",
+      "correctForms": [
+        "pay_by_use"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: 'Darf nur auf 1 Gerät installiert werden, keine Weitergabe, keine Modifikation' ist typisch für diese Lizenzform.",
+      "correctForms": [
+        "eula"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beispiel: 'Windows war beim Laptop dabei und ist an dieses Gerät gekoppelt' ist typisch für diese Lizenzform.",
+      "correctForms": [
+        "oem"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Beispiel: 'Quellcode muss bei Weitergabe verfügbar sein und unter derselben Lizenz bleiben' passt dazu.",
+      "correctForms": [
+        "gnu_gpl"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Verboten ist z. B. das unautorisierte Kopieren/Veröffentlichen eines geschützten Werks – geregelt durch dieses.",
+      "correctForms": [
+        "urheberrechtsgesetz"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Kann wirtschaftlich attraktiv sein, wenn Nutzung stark schwankt und du keine festen Lizenzpakete binden willst.",
+      "correctForms": [
+        "pay_by_use"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Kann rechtliche Konsequenzen haben, wenn du Lizenzbedingungen ignorierst oder geschützte Inhalte ohne Recht nutzt.",
+      "correctForms": [
+        "urheberrechtsgesetz"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Ist besonders wichtig zu prüfen, bevor du Software in einem Projekt verteilst, weitergibst oder in Produkte integrierst.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn eine Lizenz die Nutzung an ein Gerät bindet, ist das am ehesten diese Kategorie.",
+      "correctForms": [
+        "oem"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn eine Lizenz als 'Klick-weg-Vertrag' beim Installieren auftaucht, ist das am ehesten diese Kategorie.",
+      "correctForms": [
+        "eula"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn ein Modell bei hoher Nutzung teuer werden kann, weil jede Nutzungseinheit kostet, ist das am ehesten dieses.",
+      "correctForms": [
+        "pay_by_use"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du in einem Projekt Open-Source-Komponenten einsetzt, musst du genau diese Lizenzbedingungen sauber prüfen.",
+      "correctForms": [
+        "gnu_gpl"
+      ]
+    }
+  ]
+}

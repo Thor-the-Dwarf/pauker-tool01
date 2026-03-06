@@ -1,0 +1,435 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Hardware (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Bottlenecks, Kompatibilitaet, Stabilitaet und Betriebsreife.",
+  "columns": [
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ipc_vs_takt",
+      "title": "IPC vs Takt",
+      "subtitle": ""
+    },
+    {
+      "id": "smt_hyper_threading",
+      "title": "SMT/Hyper-Threading",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu_cache",
+      "title": "CPU-Cache",
+      "subtitle": ""
+    },
+    {
+      "id": "thermal_throttling",
+      "title": "Thermal Throttling",
+      "subtitle": ""
+    },
+    {
+      "id": "ram_kapazitaet",
+      "title": "RAM-Kapazitaet",
+      "subtitle": ""
+    },
+    {
+      "id": "dual_channel",
+      "title": "Dual-Channel",
+      "subtitle": ""
+    },
+    {
+      "id": "ecc_ram",
+      "title": "ECC-RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "xmp_expo",
+      "title": "XMP/EXPO",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd",
+      "title": "SSD",
+      "subtitle": ""
+    },
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "nvme_vs_sata",
+      "title": "NVMe vs SATA",
+      "subtitle": ""
+    },
+    {
+      "id": "mainboard_chipsatz",
+      "title": "Mainboard/Chipsatz",
+      "subtitle": ""
+    },
+    {
+      "id": "pcie_lanes",
+      "title": "PCIe-Lanes",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_slot",
+      "title": "M.2-Slot",
+      "subtitle": ""
+    },
+    {
+      "id": "bios_uefi",
+      "title": "BIOS/UEFI",
+      "subtitle": ""
+    },
+    {
+      "id": "netzteil_psu",
+      "title": "Netzteil (PSU)",
+      "subtitle": ""
+    },
+    {
+      "id": "80_plus_effizienz",
+      "title": "80-Plus-Effizienz",
+      "subtitle": ""
+    },
+    {
+      "id": "vrm",
+      "title": "VRM",
+      "subtitle": ""
+    },
+    {
+      "id": "kuehlkonzept",
+      "title": "Kuehlkonzept",
+      "subtitle": ""
+    },
+    {
+      "id": "bottleneck_analyse",
+      "title": "Bottleneck-Analyse",
+      "subtitle": ""
+    },
+    {
+      "id": "profiling_messung",
+      "title": "Profiling/Messung",
+      "subtitle": ""
+    },
+    {
+      "id": "nic",
+      "title": "NIC",
+      "subtitle": ""
+    },
+    {
+      "id": "switch",
+      "title": "Switch",
+      "subtitle": ""
+    },
+    {
+      "id": "router",
+      "title": "Router",
+      "subtitle": ""
+    },
+    {
+      "id": "treiber_firmware_stand",
+      "title": "Treiber/Firmware-Stand",
+      "subtitle": ""
+    },
+    {
+      "id": "formfaktor",
+      "title": "Formfaktor",
+      "subtitle": ""
+    },
+    {
+      "id": "qvl_kompatibilitaet",
+      "title": "QVL-Kompatibilitaet",
+      "subtitle": ""
+    },
+    {
+      "id": "stabilitaetstest",
+      "title": "Stabilitaetstest",
+      "subtitle": ""
+    },
+    {
+      "id": "hardware_dokumentation",
+      "title": "Hardware-Dokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Fuehrt Programmbefehle aus und ist zentrales Rechenwerk des Systems.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Erklaert, warum ein moderner Chip mit weniger GHz trotzdem schneller sein kann.",
+      "correctForms": [
+        "ipc_vs_takt"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Erhoeht logische Parallelitaet pro Kern bei geeigneten Workloads.",
+      "correctForms": [
+        "smt_hyper_threading"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Schneller Zwischenspeicher nahe der CPU fuer haeufig benoetigte Daten.",
+      "correctForms": [
+        "cpu_cache"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "CPU senkt Takt bei Ueberhitzung oder Powergrenze.",
+      "correctForms": [
+        "thermal_throttling"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Zu geringe Auslegung fuehrt oft zu Auslagerung und Systemzaehigkeit.",
+      "correctForms": [
+        "ram_kapazitaet"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Erhoeht Speicherbandbreite durch parallele Kanalnutzung.",
+      "correctForms": [
+        "dual_channel"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Erkennt und korrigiert bestimmte Speicherbitfehler.",
+      "correctForms": [
+        "ecc_ram"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Aktiviert RAM-Profilwerte jenseits konservativer Basistakte.",
+      "correctForms": [
+        "xmp_expo"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typisch deutlich bessere Reaktionszeit als mechanischer Massenspeicher.",
+      "correctForms": [
+        "ssd"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Guenstig pro GB, aber mit mechanisch bedingter hoeherer Zugriffszeit.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Abgrenzung fuer Speicheranbindungen mit stark unterschiedlicher I/O-Parallelitaet.",
+      "correctForms": [
+        "nvme_vs_sata"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Bestimmt Sockel, RAM-Standard, Ports, Slots und Plattformfeatures.",
+      "correctForms": [
+        "mainboard_chipsatz"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Bandbreitenressource, die zwischen GPU, NVMe und Karten geteilt werden kann.",
+      "correctForms": [
+        "pcie_lanes"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Formfaktor-Schnittstelle, deren konkrete Protokollunterstuetzung geprueft werden muss.",
+      "correctForms": [
+        "m_2_slot"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Firmwareebene fuer Hardwareinitialisierung und Plattformkonfiguration.",
+      "correctForms": [
+        "bios_uefi"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Versorgt Komponenten stabil mit Strom und ausreichender Leistungsreserve.",
+      "correctForms": [
+        "netzteil_psu"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Kennzeichnet den Wirkungsgrad von Netzteilen in Lastbereichen.",
+      "correctForms": [
+        "80_plus_effizienz"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Spannungswandlungssektion auf dem Board, wichtig fuer Laststabilitaet der CPU.",
+      "correctForms": [
+        "vrm"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Airflow, Kuehlerauslegung und Waermeabfuhr als Gesamtstrategie.",
+      "correctForms": [
+        "kuehlkonzept"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Systematische Engpassidentifikation statt pauschalem Teiletausch.",
+      "correctForms": [
+        "bottleneck_analyse"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Messverfahren, um reale Lastprofile und Ursachen sichtbar zu machen.",
+      "correctForms": [
+        "profiling_messung"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Endgeraet-Netzwerkschnittstelle fuer LAN oder WLAN.",
+      "correctForms": [
+        "nic"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Verteilt Frames innerhalb eines LAN-Segments.",
+      "correctForms": [
+        "switch"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Routet Daten zwischen unterschiedlichen Netzen.",
+      "correctForms": [
+        "router"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Aktualitaet kann Leistung, Kompatibilitaet und Stabilitaet direkt beeinflussen.",
+      "correctForms": [
+        "treiber_firmware_stand"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Mechanischer Standard fuer Gehaeuse- und Board-Passung.",
+      "correctForms": [
+        "formfaktor"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Herstellerliste gepruefter Speicherkits fuer ein Plattformsetup.",
+      "correctForms": [
+        "qvl_kompatibilitaet"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Belastungspruefung vor produktivem Einsatz zur Fehlerfrueherkennung.",
+      "correctForms": [
+        "stabilitaetstest"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Ermoeglicht schnelle Nachvollziehbarkeit bei Incident und Wartung.",
+      "correctForms": [
+        "hardware_dokumentation"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Nur CPU-Takt reicht fuer belastbare Hardwareplanung aus.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Kompatibilitaet umfasst elektrische, mechanische und firmwareseitige Aspekte.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Mehr RAM ersetzt grundsaetzlich jeden CPU-Engpass.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Messung, Test und Dokumentation sind gemeinsam wichtige Betriebsbausteine.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "M.2 ist ausschliesslich ein Garantiebegriff fuer NVMe-Geschwindigkeit.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Stabile Systeme erfordern passende PSU-Reserve und funktionierendes Kuehlkonzept.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Treiber, BIOS und Hardwarewahl koennen zusammen Performance beeinflussen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Switching und Routing sind identisch und austauschbar ohne Unterschied.",
+      "correctForms": [
+        "keine"
+      ]
+    }
+  ]
+}

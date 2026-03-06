@@ -1,0 +1,451 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – IT-Systeme (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "it_system_gesamtbild",
+      "title": "IT-System (Gesamtbild)",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD NVMe",
+      "subtitle": ""
+    },
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "pcie_lanes",
+      "title": "PCIe-Lanes",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_nvme_sata",
+      "title": "M.2 (NVMe/SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "bios_uefi_firmware",
+      "title": "BIOS/UEFI (Firmware)",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "middleware_runtime",
+      "title": "Middleware/Runtime",
+      "subtitle": ""
+    },
+    {
+      "id": "virtuelle_maschine_vm",
+      "title": "Virtuelle Maschine (VM)",
+      "subtitle": ""
+    },
+    {
+      "id": "container",
+      "title": "Container",
+      "subtitle": ""
+    },
+    {
+      "id": "textformat",
+      "title": "Textformat",
+      "subtitle": ""
+    },
+    {
+      "id": "binarformat",
+      "title": "Binärformat",
+      "subtitle": ""
+    },
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "shared_responsibility_model",
+      "title": "Shared Responsibility Model",
+      "subtitle": ""
+    },
+    {
+      "id": "usv",
+      "title": "USV",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_regel",
+      "title": "3-2-1-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "archiv",
+      "title": "Archiv",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Besteht aus Zusammenspiel von Prozessen, Daten, Software und Hardware – nicht nur aus Komponentenliste.",
+      "correctForms": [
+        "it_system_gesamtbild"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "„Funktioniert“ ist erst wahr, wenn Betrieb UND Wiederherstellung geklärt sind.",
+      "correctForms": [
+        "it_system_gesamtbild"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Kerne/Threads, Takt und Cache bestimmen die Rechenleistung je nach Workload.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Single-Core ist oft wichtiger für Office/UI; Multi-Core eher für VMs/Rendering/DB-Workloads.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: „GHz = schnell“ – Architektur/Single-Core-Leistung/Cache sind oft wichtiger.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Flüchtiger Arbeitsbereich für aktive Prozesse; zu wenig davon führt zu Paging/Swap und Trägheit.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Dual-Channel, Typ, Takt und Latenz beeinflussen Leistung – nicht nur die Größe.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Server-Option für Fehlerkorrektur im Arbeitsspeicher.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Sehr hohe IOPS und Datendurchsatz – besonders gut für Datenbanken und VM-Hosts.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Mechanisch, günstig pro GB, aber langsamer – gut für Archiv/Backup-Targets.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Schützt vor Hardware-Defekt, aber nicht vor Löschen, Malware oder Fehlkonfiguration.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Prüfungsfalle: „Wir haben das, also brauchen wir kein Backup“ – stimmt hier besonders nicht.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Bestimmen Bandbreite für GPU, Netzwerkkarten oder Storage-Controller.",
+      "correctForms": [
+        "pcie_lanes"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Prüfungsfalle: „Passt mechanisch = passt technisch“ – Keying/Protokoll/Lanes prüfen.",
+      "correctForms": [
+        "pcie_lanes"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Nicht jeder Steckplatz unterstützt automatisch beide Protokolle – vor Kauf prüfen.",
+      "correctForms": [
+        "m_2_nvme_sata"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Slot vorhanden, aber SSD wird nicht erkannt: häufiges Thema ist Protokoll-Unterstützung.",
+      "correctForms": [
+        "m_2_nvme_sata"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Initialisiert Hardware beim Start und startet den Boot-Prozess.",
+      "correctForms": [
+        "bios_uefi_firmware"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Fehlersuche beginnt oft hier, bevor OS oder App verdächtigt werden.",
+      "correctForms": [
+        "bios_uefi_firmware"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Verwaltet Ressourcen und Treiber (z. B. Windows/Linux).",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Systemsoftware läuft „unter“ den Anwendungen und ist kritisch für Stabilität/Sicherheit.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "JVM, .NET oder Bibliotheken – Schicht zwischen OS und Anwendung.",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Wenn eine App „komisch“ läuft: hier können Laufzeitumgebung oder Bibliotheken der Grund sein.",
+      "correctForms": [
+        "middleware_runtime"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Eigenes Betriebssystem pro Instanz; starke Isolation, aber höherer Overhead.",
+      "correctForms": [
+        "virtuelle_maschine_vm"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Geeignet, wenn du unterschiedliche OS-Versionen parallel betreiben willst.",
+      "correctForms": [
+        "virtuelle_maschine_vm"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Teilt sich den Kernel mit dem Host; leichtgewichtig und schnell, anderes Update-/Security-Modell.",
+      "correctForms": [
+        "container"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Prüfungsfalle: „Mini-VM“ – falsch, weil Kernel geteilt wird.",
+      "correctForms": [
+        "container"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Menschenlesbar, gut für Schnittstellen/Konfiguration; Encoding (UTF-8) ist wichtig.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "CSV: Trennzeichen/Quotes/Zeilenumbrüche sind typische Import-Fehlerquellen.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Kompakt/komplex strukturiert, oft komprimiert; ohne Tool schwer direkt editierbar.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "JPG/PNG/MP4/PDF gehören typischerweise in diese Kategorie.",
+      "correctForms": [
+        "binarformat"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "VMs, Storage und Netzwerk mieten; Kunde verwaltet OS und Anwendungen.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Runtime/DB vorkonfiguriert: weniger Betriebsaufwand, aber auch weniger Kontrolle.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Fertige Anwendung nutzen: geringster Betriebsaufwand, geringste Kontrolle.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Faustregel: Je mehr „as a Service“, desto weniger Betriebsaufwand – aber auch weniger Einfluss.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Provider sichert Infrastruktur, Kunde sichert Konfiguration, Daten, Zugriffe und Backup.",
+      "correctForms": [
+        "shared_responsibility_model"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Offener Storage-Bucket ist typischerweise kein Provider-Fehler, sondern Kundenseite.",
+      "correctForms": [
+        "shared_responsibility_model"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Überbrückt kurze Stromausfälle und schützt vor Spannungsschwankungen – kauft Zeit fürs Shutdown.",
+      "correctForms": [
+        "usv"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Prüfungsfalle: Server an USV, aber Switch nicht – Server lebt, Netzwerk ist tot.",
+      "correctForms": [
+        "usv"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "3 Kopien, 2 Medien, 1 Kopie extern/außer Haus – Standard für solide Datensicherung.",
+      "correctForms": [
+        "3_2_1_regel"
+      ]
+    },
+    {
+      "id": "card_040",
+      "text": "Backup ohne Restore-Test ist Wunschdenken – der Restore ist der Beweis.",
+      "correctForms": [
+        "3_2_1_regel"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "Maximal akzeptabler Datenverlust als Zeitspanne seit letztem gültigen Backup.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_042",
+      "text": "„Wir sichern täglich“ passt nicht, wenn maximal 1 Stunde Datenverlust erlaubt ist.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_043",
+      "text": "Maximal akzeptable Wiederanlaufzeit: wie schnell muss das System wieder laufen?",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_044",
+      "text": "Sichert kurzfristige Wiederherstellung nach Fehler/Malware/Löschen – rotierend/überschreibbar.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_045",
+      "text": "Langfristige, unveränderliche Aufbewahrung für Compliance/Nachweise (WORM/Unveränderbarkeit).",
+      "correctForms": [
+        "archiv"
+      ]
+    },
+    {
+      "id": "card_046",
+      "text": "Prüfungsfalle: „Backup = Archiv“ – unterschiedliche Ziele und Anforderungen.",
+      "correctForms": [
+        "archiv"
+      ]
+    }
+  ]
+}

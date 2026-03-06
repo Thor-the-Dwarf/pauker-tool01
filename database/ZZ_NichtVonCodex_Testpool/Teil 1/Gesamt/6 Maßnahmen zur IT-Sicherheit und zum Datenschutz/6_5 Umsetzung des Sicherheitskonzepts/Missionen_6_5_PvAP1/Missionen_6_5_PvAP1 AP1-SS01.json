@@ -1,0 +1,249 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Umsetzung des Sicherheitskonzepts",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "sicherheitsbewusstsein",
+      "title": "Sicherheitsbewusstsein",
+      "subtitle": ""
+    },
+    {
+      "id": "it_sicherheitsmanagement",
+      "title": "IT-Sicherheitsmanagement",
+      "subtitle": ""
+    },
+    {
+      "id": "security_by_design",
+      "title": "Security by Design",
+      "subtitle": ""
+    },
+    {
+      "id": "security_by_default",
+      "title": "Security by Default",
+      "subtitle": ""
+    },
+    {
+      "id": "zugangskontrolle",
+      "title": "Zugangskontrolle",
+      "subtitle": ""
+    },
+    {
+      "id": "zugriffskontrolle",
+      "title": "Zugriffskontrolle",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_datensicherung",
+      "title": "Backup/Datensicherung",
+      "subtitle": ""
+    },
+    {
+      "id": "verfugbarkeitssicherung",
+      "title": "Verfügbarkeitssicherung",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "san",
+      "title": "SAN",
+      "subtitle": ""
+    },
+    {
+      "id": "symmetrische_verschlusselung",
+      "title": "symmetrische Verschlüsselung",
+      "subtitle": ""
+    },
+    {
+      "id": "asymmetrische_verschlusselung",
+      "title": "asymmetrische Verschlüsselung",
+      "subtitle": ""
+    },
+    {
+      "id": "ca_zertifikat",
+      "title": "CA/Zertifikat",
+      "subtitle": ""
+    },
+    {
+      "id": "digitale_signatur",
+      "title": "digitale Signatur",
+      "subtitle": ""
+    },
+    {
+      "id": "https_tls",
+      "title": "HTTPS/TLS",
+      "subtitle": ""
+    },
+    {
+      "id": "authentifizierung",
+      "title": "Authentifizierung",
+      "subtitle": ""
+    },
+    {
+      "id": "ssh",
+      "title": "SSH",
+      "subtitle": ""
+    },
+    {
+      "id": "telnet",
+      "title": "Telnet",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Mitarbeitende erkennen Phishing, melden Vorfälle und halten Regeln ein, weil sie wissen, warum das wichtig ist.",
+      "correctForms": [
+        "sicherheitsbewusstsein"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Gesamtheit aus Regeln, Rollen, Prozessen und Maßnahmen, um Sicherheit geplant, überprüfbar und dauerhaft zu betreiben.",
+      "correctForms": [
+        "it_sicherheitsmanagement"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Sicherheit wird von Anfang an in Architektur, Code und Prozesse eingebaut – nicht erst nachträglich „drangeklebt“.",
+      "correctForms": [
+        "security_by_design"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Sichere Standard-Einstellungen sind von Beginn an aktiv, statt dass Nutzer alles erst „hartdrehen“ müssen.",
+      "correctForms": [
+        "security_by_default"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Regelt, wer überhaupt physisch oder logisch „rein“ darf, z. B. Türchip, VPN-Zugang, Login am System.",
+      "correctForms": [
+        "zugangskontrolle"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Regelt, was ein berechtigter Nutzer dann darf, z. B. Lesen/Schreiben/Löschen, Rollen, Gruppenrechte.",
+      "correctForms": [
+        "zugriffskontrolle"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Verfahren, um Daten wiederherstellen zu können (z. B. Voll-/Inkrementell, Versionierung, Restore-Test).",
+      "correctForms": [
+        "backup_datensicherung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Maßnahmen, damit Services trotz Fehlern/Ausfällen weiterlaufen oder schnell wieder laufen (Redundanz, Failover).",
+      "correctForms": [
+        "verfugbarkeitssicherung"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Datenträger-Verbund für Ausfallsicherheit und/oder Performance; ersetzt kein Backup.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Zentrales Storage im Netzwerk für Server (Block-Storage), oft hochverfügbar und performant.",
+      "correctForms": [
+        "san"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Verschlüsselung: gleicher Schlüssel zum Ver- und Entschlüsseln; schnell, geeignet für große Datenmengen.",
+      "correctForms": [
+        "symmetrische_verschlusselung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Verschlüsselung: Schlüsselpaar (öffentlich/privat), geeignet für Schlüsselaustausch und Signaturen.",
+      "correctForms": [
+        "asymmetrische_verschlusselung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Instanz/Artefakt, das Identitäten bestätigt und Vertrauen für TLS ermöglicht (z. B. Zertifikatskette).",
+      "correctForms": [
+        "ca_zertifikat"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beweist Integrität und Herkunft einer Nachricht/Datei; Empfänger kann prüfen, ob sie verändert wurde.",
+      "correctForms": [
+        "digitale_signatur"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Verschlüsselte Verbindung im Web; schützt Datenübertragung und nutzt Zertifikate zur Server-Identität.",
+      "correctForms": [
+        "https_tls"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Nachweis, dass jemand wirklich der ist, der er vorgibt zu sein (Passwort, Token, Zertifikat, MFA).",
+      "correctForms": [
+        "authentifizierung"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Sicheres Remote-Login/Remote-Shell-Protokoll mit Verschlüsselung; ersetzt unsichere Klartext-Protokolle.",
+      "correctForms": [
+        "ssh"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Altes Remote-Login-Protokoll, das Daten im Klartext überträgt und daher im Betrieb praktisch tabu ist.",
+      "correctForms": [
+        "telnet"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Beispiel: Standardmäßig ist MFA aktiv und Admin-Interfaces sind nicht aus dem Internet erreichbar.",
+      "correctForms": [
+        "security_by_default"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Beispiel: Du planst Rechte nach dem Prinzip „Least Privilege“ und setzt Rollen sauber um.",
+      "correctForms": [
+        "zugriffskontrolle"
+      ]
+    }
+  ]
+}

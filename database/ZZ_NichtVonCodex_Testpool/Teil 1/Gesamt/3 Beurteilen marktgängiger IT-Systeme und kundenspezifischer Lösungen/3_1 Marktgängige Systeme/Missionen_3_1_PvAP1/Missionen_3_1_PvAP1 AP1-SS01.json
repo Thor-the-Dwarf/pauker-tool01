@@ -1,0 +1,229 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Marktgängige Systeme (Hardware/Software/Cloud)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "motherboard",
+      "title": "Motherboard",
+      "subtitle": ""
+    },
+    {
+      "id": "ram_speicher",
+      "title": "RAM (Speicher)",
+      "subtitle": ""
+    },
+    {
+      "id": "netzteil_psu",
+      "title": "Netzteil (PSU)",
+      "subtitle": ""
+    },
+    {
+      "id": "grafikkarte_gpu",
+      "title": "Grafikkarte (GPU)",
+      "subtitle": ""
+    },
+    {
+      "id": "peripheriegerat",
+      "title": "Peripheriegerät",
+      "subtitle": ""
+    },
+    {
+      "id": "netzwerkkomponente",
+      "title": "Netzwerkkomponente",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan",
+      "title": "WLAN",
+      "subtitle": ""
+    },
+    {
+      "id": "anwendung",
+      "title": "Anwendung",
+      "subtitle": ""
+    },
+    {
+      "id": "betriebssystem",
+      "title": "Betriebssystem",
+      "subtitle": ""
+    },
+    {
+      "id": "virtualisierung",
+      "title": "Virtualisierung",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "„Gehirn“ des Computers: führt Befehle aus und verarbeitet Daten.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Zentrale Platine, die alle Komponenten verbindet (CPU-Sockel, RAM-Slots, PCIe, Chipsatz).",
+      "correctForms": [
+        "motherboard"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Flüchtiger Arbeitsspeicher für aktuell laufende Programme und Daten; bei Stromausfall ist der Inhalt weg.",
+      "correctForms": [
+        "ram_speicher"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Wandelt Netzstrom in stabile Gleichspannungen (z. B. 12V/5V/3,3V) und versorgt alle Komponenten.",
+      "correctForms": [
+        "netzteil_psu"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Spezialisiert auf Grafikberechnung/Parallelverarbeitung; wichtig für 3D, Video, KI-Workloads.",
+      "correctForms": [
+        "grafikkarte_gpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Externes Gerät zur Ein-/Ausgabe oder Bedienung, z. B. Tastatur, Maus, Monitor, Drucker.",
+      "correctForms": [
+        "peripheriegerat"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Baut Netzwerkverbindungen auf/weiter, z. B. Switch, Router, Firewall, Access Point.",
+      "correctForms": [
+        "netzwerkkomponente"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Drahtloses Netzwerk nach IEEE-802.11-Standards, mit SSID und Verschlüsselung.",
+      "correctForms": [
+        "wlan"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Software, die eine konkrete Aufgabe für Nutzer erfüllt, z. B. Browser, Office, ERP, Mail-Client.",
+      "correctForms": [
+        "anwendung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Grundsoftware, die Hardware verwaltet und Programme ausführt, z. B. Windows, Linux, macOS.",
+      "correctForms": [
+        "betriebssystem"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Mehrere virtuelle Maschinen/Umgebungen auf einem physischen Host betreiben, isoliert und flexibel.",
+      "correctForms": [
+        "virtualisierung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Cloudmodell: Fertige Software wird genutzt, der Anbieter betreibt alles (z. B. Webmail/CRM).",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Cloudmodell: Virtuelle Server, Storage und Netz werden bereitgestellt; du installierst/verwaltst OS und Anwendungen selbst.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Cloudmodell: Laufzeitumgebung/Plattform (z. B. Datenbank, App-Runtime) – du deployest Code, weniger Betriebslast als IaaS.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: „Ich brauche mehr Rechenleistung und RAM, also buche ich einen größeren virtuellen Server.“",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Beispiel: „Ich nutze ein Online-Office im Browser, ohne Installation und ohne Serverbetrieb.“",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Beispiel: „Ich deploye meine Web-App auf eine Plattform, die Skalierung und Datenbank anbietet.“",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn mehrere Betriebssysteme parallel auf einem Rechner laufen sollen, ist das die typische Basistechnik.",
+      "correctForms": [
+        "virtualisierung"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Typischer Engpass bei vielen Browser-Tabs oder großen Projekten in der IDE: dieser Baustein ist dann oft zu klein.",
+      "correctForms": [
+        "ram_speicher"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Gerät, das häufig für stabile Netzwerkverbindungen per Kabel sorgt und viele Endgeräte sternförmig verbindet.",
+      "correctForms": [
+        "netzwerkkomponente"
+      ]
+    }
+  ]
+}

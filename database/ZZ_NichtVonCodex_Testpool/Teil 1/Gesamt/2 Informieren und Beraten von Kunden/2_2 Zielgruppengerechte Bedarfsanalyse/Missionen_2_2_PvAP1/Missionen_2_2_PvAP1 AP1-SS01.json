@@ -1,0 +1,199 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Zielgruppengerechte Bedarfsanalyse",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "fragetechnik",
+      "title": "Fragetechnik",
+      "subtitle": ""
+    },
+    {
+      "id": "aktives_zuhoren",
+      "title": "aktives Zuhören",
+      "subtitle": ""
+    },
+    {
+      "id": "bedarfs_adressatengerechte_prasentation",
+      "title": "bedarfs-/adressatengerechte Präsentation",
+      "subtitle": ""
+    },
+    {
+      "id": "datenerhebung",
+      "title": "Datenerhebung",
+      "subtitle": ""
+    },
+    {
+      "id": "kundenbefragung",
+      "title": "Kundenbefragung",
+      "subtitle": ""
+    },
+    {
+      "id": "auswertung_von_daten",
+      "title": "Auswertung von Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "anforderung",
+      "title": "Anforderung",
+      "subtitle": ""
+    },
+    {
+      "id": "zielgruppe",
+      "title": "Zielgruppe",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Gezieltes Stellen von offenen und geschlossenen Fragen, um Informationen systematisch zu gewinnen.",
+      "correctForms": [
+        "fragetechnik"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Paraphrasieren, Nachfragen, Zusammenfassen und Signalisieren von Verständnis, um Missverständnisse zu vermeiden.",
+      "correctForms": [
+        "aktives_zuhoren"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Inhalte so darstellen, dass sie zu Vorwissen, Rolle und Interesse der Empfänger passen (z. B. Management vs. Admins).",
+      "correctForms": [
+        "bedarfs_adressatengerechte_prasentation"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Sammeln von Informationen aus einer Quelle, z. B. Interviews, Beobachtung, Messwerte oder Fragebögen.",
+      "correctForms": [
+        "datenerhebung"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Standardisierte oder halbstandardisierte Fragen an Kunden, um Bedürfnisse, Zufriedenheit oder Nutzung zu erfassen.",
+      "correctForms": [
+        "kundenbefragung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Daten prüfen, strukturieren und interpretieren, um daraus Aussagen oder Entscheidungen abzuleiten.",
+      "correctForms": [
+        "auswertung_von_daten"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Konkrete Erwartung oder Bedingung, die erfüllt sein muss, z. B. „Notebook muss Docking unterstützen“.",
+      "correctForms": [
+        "anforderung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Gruppe mit ähnlichen Bedürfnissen oder Rahmenbedingungen, z. B. „Außendienst“, „Buchhaltung“ oder „Azubis“.",
+      "correctForms": [
+        "zielgruppe"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beispiel: „Welche Aufgaben erledigen Sie täglich am Arbeitsplatz?“ ist vor allem diese Kategorie.",
+      "correctForms": [
+        "fragetechnik"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: „Habe ich richtig verstanden, dass Sie zwei Monitore brauchen, weil Sie parallel mit ERP und Mail arbeiten?“",
+      "correctForms": [
+        "aktives_zuhoren"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beispiel: Für Entscheider werden Kosten/Nutzen und Risiken betont, für Admins eher Technik/Kompatibilität.",
+      "correctForms": [
+        "bedarfs_adressatengerechte_prasentation"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Beispiel: Ein Online-Fragebogen mit Skalenfragen zu Homeoffice-Ausstattung gehört dazu.",
+      "correctForms": [
+        "kundenbefragung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Beispiel: Messung von WLAN-Abdeckung oder Auslesen von Ticket-Statistiken ist eine Form davon.",
+      "correctForms": [
+        "datenerhebung"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: Aus Ergebnissen wird abgeleitet: „Büroarbeitsplätze brauchen 27 Zoll, höhenverstellbare Tische, Headsets“.",
+      "correctForms": [
+        "auswertung_von_daten"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„Muss“, „Soll“, „Kann“ in Aussagen hilft, diese sauber zu formulieren.",
+      "correctForms": [
+        "anforderung"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn man bei gleicher Lösung unterschiedliche Schwerpunkte setzt, passiert das wegen dieser Eigenschaft.",
+      "correctForms": [
+        "zielgruppe"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Typischer Fehler: Nutzer redet über Probleme, du springst sofort in die Lösung, ohne Rückfragen zu stellen.",
+      "correctForms": [
+        "aktives_zuhoren"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Typischer Fehler: Du präsentierst technischen Detailkram an Fachfremde und verlierst sie nach 30 Sekunden.",
+      "correctForms": [
+        "bedarfs_adressatengerechte_prasentation"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Ziel: Aus vielen Aussagen und Daten am Ende eine klare Liste an Muss-/Soll-Kriterien machen.",
+      "correctForms": [
+        "auswertung_von_daten"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "„Wie viele Stunden pro Tag arbeiten Sie im Homeoffice?“ liefert Daten über Rahmenbedingungen der Zielgruppe.",
+      "correctForms": [
+        "datenerhebung"
+      ]
+    }
+  ]
+}

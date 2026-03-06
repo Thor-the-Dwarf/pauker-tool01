@@ -1,0 +1,232 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Programmiersprachen & Grundlagen",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "compiler",
+      "title": "Compiler",
+      "subtitle": ""
+    },
+    {
+      "id": "linker",
+      "title": "Linker",
+      "subtitle": ""
+    },
+    {
+      "id": "interpreter",
+      "title": "Interpreter",
+      "subtitle": ""
+    },
+    {
+      "id": "prozedural",
+      "title": "prozedural",
+      "subtitle": ""
+    },
+    {
+      "id": "objektorientiert",
+      "title": "objektorientiert",
+      "subtitle": ""
+    },
+    {
+      "id": "variable",
+      "title": "Variable",
+      "subtitle": ""
+    },
+    {
+      "id": "datentyp",
+      "title": "Datentyp",
+      "subtitle": ""
+    },
+    {
+      "id": "datenstruktur",
+      "title": "Datenstruktur",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur",
+      "title": "Kontrollstruktur",
+      "subtitle": ""
+    },
+    {
+      "id": "klasse",
+      "title": "Klasse",
+      "subtitle": ""
+    },
+    {
+      "id": "vererbung",
+      "title": "Vererbung",
+      "subtitle": ""
+    },
+    {
+      "id": "methode",
+      "title": "Methode",
+      "subtitle": ""
+    },
+    {
+      "id": "bibliothek",
+      "title": "Bibliothek",
+      "subtitle": ""
+    },
+    {
+      "id": "framework",
+      "title": "Framework",
+      "subtitle": ""
+    },
+    {
+      "id": "skriptsprache",
+      "title": "Skriptsprache",
+      "subtitle": ""
+    },
+    {
+      "id": "debugging",
+      "title": "Debugging",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Übersetzt Quellcode vollständig in Maschinencode/Bytecode, bevor das Programm ausgeführt wird.",
+      "correctForms": [
+        "compiler"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Verbindet übersetzte Programmteile und Bibliotheken zu einer lauffähigen Datei (z. B. Executable).",
+      "correctForms": [
+        "linker"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Führt Code zur Laufzeit direkt aus (oft Zeile für Zeile oder Bytecode), ohne vorher ein vollständiges Binary zu erzeugen.",
+      "correctForms": [
+        "interpreter"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Programmierstil, bei dem Funktionen/Prozeduren und der Ablauf im Vordergrund stehen (Schritt für Schritt).",
+      "correctForms": [
+        "prozedural"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Programmierstil, bei dem Objekte mit Zustand (Attribute) und Verhalten (Methoden) im Vordergrund stehen.",
+      "correctForms": [
+        "objektorientiert"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Benannter Speicherbereich, dessen Inhalt sich während der Programmlaufzeit ändern kann.",
+      "correctForms": [
+        "variable"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Legt fest, welche Art von Wert gespeichert wird (z. B. int, string, boolean) und welche Operationen erlaubt sind.",
+      "correctForms": [
+        "datentyp"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Organisiert mehrere Werte in einer Struktur, z. B. Array/Liste, Stack, Map/Dictionary.",
+      "correctForms": [
+        "datenstruktur"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Steuert den Ablauf, z. B. if/else, switch oder for/while-Schleife.",
+      "correctForms": [
+        "kontrollstruktur"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Bauplan für Objekte mit Attributen und Methoden; aus ihr werden Instanzen erzeugt.",
+      "correctForms": [
+        "klasse"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Mechanismus, bei dem eine Klasse Eigenschaften/Methoden einer anderen übernimmt und erweitern/überschreiben kann.",
+      "correctForms": [
+        "vererbung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Funktion, die zu einer Klasse/einem Objekt gehört und dessen Verhalten beschreibt.",
+      "correctForms": [
+        "methode"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Sammlung wiederverwendbarer Funktionen/Module, die du in eigenen Code einbindest (du bestimmst den Ablauf).",
+      "correctForms": [
+        "bibliothek"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Gibt Struktur und Ablauf vor; du füllst „Hooks/Controller/Komponenten“ aus (Inversion of Control).",
+      "correctForms": [
+        "framework"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Sprache, die oft interpretierend genutzt wird und sich gut für Automatisierung/Glue-Code eignet (z. B. Bash, Python, JavaScript).",
+      "correctForms": [
+        "skriptsprache"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Systematisches Finden und Beheben von Fehlern, z. B. Breakpoints setzen, Variablen inspizieren, Step-by-Step ausführen.",
+      "correctForms": [
+        "debugging"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn das Programm kompiliert ist, aber externe Funktionen „nicht gefunden“ werden, fehlt häufig dieser Schritt/Teil.",
+      "correctForms": [
+        "linker"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "„for-Schleife“ und „if-Verzweigung“ sind Beispiele für diese Kategorie.",
+      "correctForms": [
+        "kontrollstruktur"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du eine Instanz erzeugst und dann obj.doSomething() aufrufst, ist doSomething() eine …",
+      "correctForms": [
+        "methode"
+      ]
+    }
+  ]
+}

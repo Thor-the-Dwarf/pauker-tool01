@@ -1,0 +1,204 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Geschäfts- & Leistungsprozesse (Support/Tickets)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "kundenkommunikation",
+      "title": "Kundenkommunikation",
+      "subtitle": ""
+    },
+    {
+      "id": "fehlermanagement",
+      "title": "Fehlermanagement",
+      "subtitle": ""
+    },
+    {
+      "id": "storungsmanagement",
+      "title": "Störungsmanagement",
+      "subtitle": ""
+    },
+    {
+      "id": "supportanfrage",
+      "title": "Supportanfrage",
+      "subtitle": ""
+    },
+    {
+      "id": "bearbeitungsstatus",
+      "title": "Bearbeitungsstatus",
+      "subtitle": ""
+    },
+    {
+      "id": "ticketsystem",
+      "title": "Ticketsystem",
+      "subtitle": ""
+    },
+    {
+      "id": "sla",
+      "title": "SLA",
+      "subtitle": ""
+    },
+    {
+      "id": "eskalation",
+      "title": "Eskalation",
+      "subtitle": ""
+    },
+    {
+      "id": "prioritat",
+      "title": "Priorität",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Gezielter Austausch mit dem Kunden zu Anliegen, Erwartungen, Rückfragen und Lösungsstand.",
+      "correctForms": [
+        "kundenkommunikation"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prozess zum Finden, Analysieren, Beheben und Nachverfolgen von Fehlern in Software/Systemen.",
+      "correctForms": [
+        "fehlermanagement"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Behandlung von ungeplanten Unterbrechungen oder Serviceverschlechterungen mit dem Ziel, den Betrieb schnell wiederherzustellen.",
+      "correctForms": [
+        "storungsmanagement"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Ein gemeldetes Anliegen wie „Bitte Passwort zurücksetzen“ oder „Wie richte ich VPN ein?“.",
+      "correctForms": [
+        "supportanfrage"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Zustand eines Tickets, z. B. „neu“, „in Bearbeitung“, „wartet auf Kunde“, „gelöst“, „geschlossen“.",
+      "correctForms": [
+        "bearbeitungsstatus"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Werkzeug/Plattform, in der Anfragen erfasst, zugewiesen, dokumentiert und nach Status verfolgt werden.",
+      "correctForms": [
+        "ticketsystem"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Legt vertraglich fest, wie schnell reagiert und gelöst werden muss (z. B. Reaktions- und Lösungszeit).",
+      "correctForms": [
+        "sla"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Weitergabe an eine höhere Supportstufe oder Verantwortliche, wenn Zeit/Kompetenz/Risiko es erfordert.",
+      "correctForms": [
+        "eskalation"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Einstufung der Dringlichkeit/Auswirkung, z. B. „kritisch“ bei Systemausfall oder „niedrig“ bei Komfortproblem.",
+      "correctForms": [
+        "prioritat"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typisches Beispiel: Der Kunde meldet „E-Mail geht nicht“, es wird ein Ticket angelegt und die Wiederherstellung hat Vorrang.",
+      "correctForms": [
+        "storungsmanagement"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Typisches Beispiel: Ein Bug wird reproduziert, dokumentiert, gefixt und per Ticket/Issue bis zum Release verfolgt.",
+      "correctForms": [
+        "fehlermanagement"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Sollte immer dokumentieren: was wurde gemeldet, was wurde getan, wann, von wem, und welches Ergebnis.",
+      "correctForms": [
+        "ticketsystem"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Der Status „wartet auf Kunde“ gehört dazu und verhindert, dass das Team im Blindflug arbeitet.",
+      "correctForms": [
+        "bearbeitungsstatus"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Eine freundliche Rückfrage mit klaren Next Steps („Bitte Screenshot/Fehlermeldung senden“) ist ein Beispiel dafür.",
+      "correctForms": [
+        "kundenkommunikation"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn die vereinbarte Reaktionszeit überschritten wird, ist das ein Problem in Bezug auf diese Vorgabe.",
+      "correctForms": [
+        "sla"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "„Server down, mehrere Abteilungen betroffen, Produktion steht“ sollte in der Regel sehr hoch eingestuft werden.",
+      "correctForms": [
+        "prioritat"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "„Ich brauche eine Anleitung“ oder „Bitte Software installieren“ ist typischerweise diese Art von Ticketinhalt.",
+      "correctForms": [
+        "supportanfrage"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Sinnvoller Ablauf: Ticket anlegen → Priorität setzen → Bearbeiter zuweisen → Status pflegen → Lösung dokumentieren.",
+      "correctForms": [
+        "ticketsystem"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Kann notwendig werden, wenn ein Ticket festhängt und Auswirkungen groß sind oder Fristen drohen.",
+      "correctForms": [
+        "eskalation"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "„Gelöst“ und „geschlossen“ sind nicht automatisch dasselbe, sondern hängen oft von Kundenbestätigung/Prüfung ab.",
+      "correctForms": [
+        "bearbeitungsstatus"
+      ]
+    }
+  ]
+}

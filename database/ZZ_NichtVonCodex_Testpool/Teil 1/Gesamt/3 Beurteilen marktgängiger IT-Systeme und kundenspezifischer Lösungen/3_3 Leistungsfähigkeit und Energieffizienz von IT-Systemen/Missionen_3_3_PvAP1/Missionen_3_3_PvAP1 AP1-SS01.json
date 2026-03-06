@@ -1,0 +1,254 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Leistungsfähigkeit & Energieeffizienz von IT-Systemen",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "kenngrosse_leistungsdaten",
+      "title": "Kenngröße/Leistungsdaten",
+      "subtitle": ""
+    },
+    {
+      "id": "funktionsumfang",
+      "title": "Funktionsumfang",
+      "subtitle": ""
+    },
+    {
+      "id": "bios",
+      "title": "BIOS",
+      "subtitle": ""
+    },
+    {
+      "id": "uefi",
+      "title": "UEFI",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "datenspeicher_ssd_hdd",
+      "title": "Datenspeicher (SSD/HDD)",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "dateisystem",
+      "title": "Dateisystem",
+      "subtitle": ""
+    },
+    {
+      "id": "lwl_glasfaser",
+      "title": "LWL (Glasfaser)",
+      "subtitle": ""
+    },
+    {
+      "id": "ethernet_standard",
+      "title": "Ethernet-Standard",
+      "subtitle": ""
+    },
+    {
+      "id": "wlan_standard",
+      "title": "WLAN-Standard",
+      "subtitle": ""
+    },
+    {
+      "id": "norm_vorschrift_zertifikat",
+      "title": "Norm/Vorschrift/Zertifikat",
+      "subtitle": ""
+    },
+    {
+      "id": "kennzeichnung_label",
+      "title": "Kennzeichnung/Label",
+      "subtitle": ""
+    },
+    {
+      "id": "spannung_u",
+      "title": "Spannung (U)",
+      "subtitle": ""
+    },
+    {
+      "id": "strom_i",
+      "title": "Strom (I)",
+      "subtitle": ""
+    },
+    {
+      "id": "leistung_p",
+      "title": "Leistung (P)",
+      "subtitle": ""
+    },
+    {
+      "id": "energie_wh_kwh",
+      "title": "Energie (Wh/kWh)",
+      "subtitle": ""
+    },
+    {
+      "id": "wirkungsgrad",
+      "title": "Wirkungsgrad (η)",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Beispiele: Taktfrequenz, Anzahl Kerne/Threads, IOPS, Durchsatz, Latenz – damit vergleichst du Systeme objektiv.",
+      "correctForms": [
+        "kenngrosse_leistungsdaten"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Beispiele: Secure Boot, Boot-Reihenfolge, Virtualisierungs-Support, RAID-Optionen – das beschreibt, was ein System kann.",
+      "correctForms": [
+        "funktionsumfang"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Klassische Firmware („Legacy“), oft mit CSM/Legacy-Boot und eher einfachen Konfigurationsmöglichkeiten.",
+      "correctForms": [
+        "bios"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Moderne Firmware mit Features wie Secure Boot und typischerweise GPT-Boot-Unterstützung.",
+      "correctForms": [
+        "uefi"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Komponente, die Befehle ausführt und Rechenoperationen erledigt; Performance hängt u. a. von Architektur, Kernen und Cache ab.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Flüchtiger Arbeitsspeicher für laufende Prozesse; Inhalt geht ohne Strom verloren.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nicht-flüchtiger Speicher für Daten/Programme (z. B. SSD/HDD); beeinflusst Boot- und Ladezeiten stark.",
+      "correctForms": [
+        "datenspeicher_ssd_hdd"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Verbund mehrerer Datenträger für Ausfallsicherheit und/oder Performance; ersetzt kein Backup.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Regelt, wie Dateien/Ordner auf einem Datenträger organisiert werden (z. B. NTFS, ext4) inklusive Rechte und Metadaten.",
+      "correctForms": [
+        "dateisystem"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Übertragung per Licht, sehr hohe Bandbreite und lange Strecken; unempfindlich gegen elektromagnetische Störungen.",
+      "correctForms": [
+        "lwl_glasfaser"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Netzwerkstandard für kabelgebundene Verbindungen (IEEE 802.3), z. B. 1 Gbit/s oder 10 Gbit/s.",
+      "correctForms": [
+        "ethernet_standard"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Funkstandard (IEEE 802.11), z. B. Wi-Fi 5/6/6E/7; beeinflusst Reichweite und Durchsatz.",
+      "correctForms": [
+        "wlan_standard"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Gibt verbindliche Anforderungen/Regeln oder geprüfte Standards vor, an denen Produkte/Prozesse ausgerichtet werden.",
+      "correctForms": [
+        "norm_vorschrift_zertifikat"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Symbol/Label auf Produkten, das Konformität, Entsorgung oder Effizienz-Klasse sichtbar macht (z. B. CE, Energie-Label).",
+      "correctForms": [
+        "kennzeichnung_label"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Elektrische Größe in Volt: beschreibt die Potentialdifferenz, die „Druck“ im Stromkreis erzeugt.",
+      "correctForms": [
+        "spannung_u"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Elektrische Größe in Ampere: beschreibt den Fluss elektrischer Ladung pro Zeit.",
+      "correctForms": [
+        "strom_i"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Elektrische Größe in Watt: Berechnung über P = U * I.",
+      "correctForms": [
+        "leistung_p"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Energieverbrauch über Zeit: E = P * t, typisch in Wh oder kWh.",
+      "correctForms": [
+        "energie_wh_kwh"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Verhältnis von Nutzleistung zu aufgenommenen Ressourcen: je höher, desto weniger Verluste (z. B. weniger Abwärme beim Netzteil).",
+      "correctForms": [
+        "wirkungsgrad"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du den Stromverbrauch eines Geräts über eine Woche berechnen willst, brauchst du Leistung und diese Größe (Zeit eingerechnet).",
+      "correctForms": [
+        "energie_wh_kwh"
+      ]
+    }
+  ]
+}

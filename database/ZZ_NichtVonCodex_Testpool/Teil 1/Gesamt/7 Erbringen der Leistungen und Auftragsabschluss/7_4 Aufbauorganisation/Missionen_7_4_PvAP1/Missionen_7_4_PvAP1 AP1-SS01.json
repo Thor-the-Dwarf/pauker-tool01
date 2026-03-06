@@ -1,0 +1,189 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Aufbauorganisation",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "einliniensystem",
+      "title": "Einliniensystem",
+      "subtitle": ""
+    },
+    {
+      "id": "mehrliniensystem",
+      "title": "Mehrliniensystem",
+      "subtitle": ""
+    },
+    {
+      "id": "matrixorganisation",
+      "title": "Matrixorganisation",
+      "subtitle": ""
+    },
+    {
+      "id": "handlungsspielraum",
+      "title": "Handlungsspielraum",
+      "subtitle": ""
+    },
+    {
+      "id": "entscheidungsspielraum",
+      "title": "Entscheidungsspielraum",
+      "subtitle": ""
+    },
+    {
+      "id": "vollmacht",
+      "title": "Vollmacht",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Jede Person hat genau eine direkte Führungskraft; klare Zuständigkeiten und eindeutige Weisungswege.",
+      "correctForms": [
+        "einliniensystem"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Mitarbeitende können von mehreren Stellen fachlich angewiesen werden; kurze Wege, aber Konfliktpotenzial.",
+      "correctForms": [
+        "mehrliniensystem"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Doppelunterstellung: z. B. fachlich im Projekt, disziplinarisch in der Linie; typisches „zwei Chefs“-Setup.",
+      "correctForms": [
+        "matrixorganisation"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Rahmen, in dem man selbst handeln darf, ohne jedes Detail abzustimmen (z. B. Lösungsvorschläge erarbeiten).",
+      "correctForms": [
+        "handlungsspielraum"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Rahmen, in dem man Entscheidungen selbst treffen darf (z. B. Priorisierung, Auswahl einer Option).",
+      "correctForms": [
+        "entscheidungsspielraum"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Formale Befugnis, im Namen des Unternehmens rechtsverbindlich zu handeln (z. B. Bestellungen freigeben).",
+      "correctForms": [
+        "vollmacht"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "„Ich darf nur über meinen Teamleiter Aufgaben erhalten“ ist ein typisches Merkmal hiervon.",
+      "correctForms": [
+        "einliniensystem"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "„Der Admin bekommt Anweisungen vom IT-Leiter und zusätzlich vom Datenschutzbeauftragten“ passt am ehesten hierzu.",
+      "correctForms": [
+        "mehrliniensystem"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "„Projektleiter entscheidet fachlich, Abteilungsleiter entscheidet über Urlaub/Personal“ passt am ehesten hierzu.",
+      "correctForms": [
+        "matrixorganisation"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "„Du darfst bis 500 € selbst bestellen“ ist primär ein Beispiel für …",
+      "correctForms": [
+        "vollmacht"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "„Du darfst eigenständig Lösungsschritte planen, musst aber vor Umsetzung freigeben lassen“ beschreibt vor allem …",
+      "correctForms": [
+        "handlungsspielraum"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "„Du darfst den Ticketstatus ändern und Prioritäten setzen“ beschreibt vor allem …",
+      "correctForms": [
+        "entscheidungsspielraum"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Vorteil: sehr klare Verantwortlichkeiten; Nachteil: Entscheidungen können langsamer werden.",
+      "correctForms": [
+        "einliniensystem"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Vorteil: schnelle fachliche Entscheidungen; Nachteil: widersprüchliche Weisungen sind möglich.",
+      "correctForms": [
+        "mehrliniensystem"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Vorteil: Expertise aus mehreren Bereichen; Nachteil: Abstimmungsaufwand und Konflikte bei Zielkonflikten.",
+      "correctForms": [
+        "matrixorganisation"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn Rollen unklar sind, kann es passieren, dass niemand Entscheidungen trifft, obwohl alle handeln könnten – das betrifft meist …",
+      "correctForms": [
+        "entscheidungsspielraum"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn jemand zwar entscheiden soll, aber rechtlich nicht unterschreiben darf, fehlt oft genau das.",
+      "correctForms": [
+        "vollmacht"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Handlungs- und Entscheidungsspielräume können je nach Organisation und Rolle gleichzeitig existieren.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "„Wer darf was?“ sauber festlegen reduziert Reibung in Projekten und Betrieb.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "„Ich darf die Lösung umsetzen, aber nicht freigeben“ trennt typischerweise Handlungsspielraum von dieser Sache.",
+      "correctForms": [
+        "vollmacht"
+      ]
+    }
+  ]
+}

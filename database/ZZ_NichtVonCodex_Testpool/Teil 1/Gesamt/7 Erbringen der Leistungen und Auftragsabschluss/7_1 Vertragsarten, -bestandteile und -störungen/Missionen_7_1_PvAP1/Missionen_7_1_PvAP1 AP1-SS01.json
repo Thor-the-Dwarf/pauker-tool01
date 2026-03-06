@@ -1,0 +1,184 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Abstimmung der Vorgaben zur Leistungserbringung (7.3)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "kontinuierliche_vorgabenprufung",
+      "title": "Kontinuierliche Vorgabenprüfung",
+      "subtitle": ""
+    },
+    {
+      "id": "stilllegung_altsystem",
+      "title": "Stilllegung Altsystem",
+      "subtitle": ""
+    },
+    {
+      "id": "inbetriebnahme_neusystem",
+      "title": "Inbetriebnahme Neusystem",
+      "subtitle": ""
+    },
+    {
+      "id": "archivdaten_aufbewahrung",
+      "title": "Archivdaten-Aufbewahrung",
+      "subtitle": ""
+    },
+    {
+      "id": "leistungsdokumentation",
+      "title": "Leistungsdokumentation",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Regelmäßiges Abgleichen von Soll (Vertrag/SLA/Pflichtenheft) mit Ist (tatsächlich geliefert), inkl. Nachsteuerung bei Abweichungen.",
+      "correctForms": [
+        "kontinuierliche_vorgabenprufung"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prüfen, ob vereinbarte Leistungsumfänge, Qualitätskriterien, Termine und Abnahmeregeln eingehalten werden.",
+      "correctForms": [
+        "kontinuierliche_vorgabenprufung"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Geplantes Abschalten/Deaktivieren eines alten Systems inkl. Daten-/Schnittstellen-Abhängigkeiten und Rückfallplan.",
+      "correctForms": [
+        "stilllegung_altsystem"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Produktivsetzung des neuen Systems inkl. Cutover, Tests, Freigabe und ggf. Parallelbetrieb.",
+      "correctForms": [
+        "inbetriebnahme_neusystem"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Sicherstellen, dass historische Daten revisionssicher, auffindbar und fristgerecht gespeichert werden (Aufbewahrungsfristen).",
+      "correctForms": [
+        "archivdaten_aufbewahrung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Nachweis, was geliefert wurde: Protokolle, Abnahme, Tickets, Change-Logs, Konfig-Doku, Testnachweise.",
+      "correctForms": [
+        "leistungsdokumentation"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Wenn Scope creep droht, ist das dein Gegenmittel: ständig prüfen, was wirklich vereinbart ist.",
+      "correctForms": [
+        "kontinuierliche_vorgabenprufung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wenn ein System ersetzt wird, muss geklärt werden, wann das alte endgültig aus dem Betrieb geht – das ist dieser Schritt.",
+      "correctForms": [
+        "stilllegung_altsystem"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Wenn ein System ersetzt wird, muss geklärt werden, wann das neue offiziell produktiv ist – das ist dieser Schritt.",
+      "correctForms": [
+        "inbetriebnahme_neusystem"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Wenn Fachbereiche später alte Belege/Protokolle brauchen, dürfen Daten nicht einfach gelöscht werden – das ist dieses Thema.",
+      "correctForms": [
+        "archivdaten_aufbewahrung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Wenn der Kunde eine Abnahme verlangt, brauchst du nachvollziehbare Nachweise – das ist dieses Thema.",
+      "correctForms": [
+        "leistungsdokumentation"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Typisch: Checklisten zu Vertragsanforderungen, regelmäßige Reviews, Eskalation bei Abweichungen.",
+      "correctForms": [
+        "kontinuierliche_vorgabenprufung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Typisch: Cutover-Plan, Go-Live-Freigabe, Monitoring nach Go-Live, Hypercare-Phase.",
+      "correctForms": [
+        "inbetriebnahme_neusystem"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Typisch: Datenmigration abgeschlossen, Schnittstellen umgehängt, Nutzer umgestellt, altes System deaktiviert.",
+      "correctForms": [
+        "stilllegung_altsystem"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Typisch: Archivkonzept, Zugriffskonzept, Speicherort, Löschkonzept nach Ablauf der Fristen.",
+      "correctForms": [
+        "archivdaten_aufbewahrung"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Typisch: Änderungsprotokolle, Konfig-Snapshots, Übergabe-/Einweisungsprotokoll, Betriebsdoku.",
+      "correctForms": [
+        "leistungsdokumentation"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn ein Projekt abgeschlossen ist, brauchst du als Beleg gegenüber Kunde/Revision genau das.",
+      "correctForms": [
+        "leistungsdokumentation"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Beim Systemwechsel sind diese beiden Punkte zusammen kritisch: Abschalten alt und Start neu.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Alle vier Punkte gehören zusammen: Vertragssoll prüfen, Systeme umstellen, Daten aufbewahren, Leistung nachweisen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn nach Monaten Streit entsteht, ob etwas geliefert wurde, rettet dich vor allem diese Sache.",
+      "correctForms": [
+        "leistungsdokumentation"
+      ]
+    }
+  ]
+}

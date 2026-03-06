@@ -1,0 +1,189 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Kriterien der Softwarequalität (5.3)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle das passende Qualitätsmerkmal zur Aussage.",
+  "columns": [
+    {
+      "id": "funktionalitat",
+      "title": "Funktionalität",
+      "subtitle": ""
+    },
+    {
+      "id": "zuverlassigkeit",
+      "title": "Zuverlässigkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "benutzbarkeit",
+      "title": "Benutzbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "effizienz",
+      "title": "Effizienz",
+      "subtitle": ""
+    },
+    {
+      "id": "anderbarkeit",
+      "title": "Änderbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "ubertragbarkeit",
+      "title": "Übertragbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Die Software liefert die geforderten Funktionen korrekt und vollständig (Use Cases werden erfüllt).",
+      "correctForms": [
+        "funktionalitat"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Die Software läuft stabil, fällt selten aus und verhält sich vorhersehbar – auch bei Fehlern oder Last.",
+      "correctForms": [
+        "zuverlassigkeit"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Nutzer können die Software leicht verstehen und bedienen; klare UI, gute Fehlermeldungen, geringe Einarbeitung.",
+      "correctForms": [
+        "benutzbarkeit"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Die Software nutzt Ressourcen sinnvoll: schnelle Antwortzeiten, geringe CPU/RAM-Last, gute Skalierung.",
+      "correctForms": [
+        "effizienz"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Die Software lässt sich leicht anpassen: gut strukturierter Code, klare Module, wenig Seiteneffekte, gute Tests.",
+      "correctForms": [
+        "anderbarkeit"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Die Software kann leicht in andere Umgebungen übertragen werden: anderes OS, andere DB, Container, Cloud.",
+      "correctForms": [
+        "ubertragbarkeit"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beispiel: 'Login funktioniert, Rollenrechte passen, Export erzeugt korrektes PDF' zielt primär darauf.",
+      "correctForms": [
+        "funktionalitat"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Beispiel: 'Nach 72h Dauerbetrieb kein Memory Leak, keine Abstürze' zielt primär darauf.",
+      "correctForms": [
+        "zuverlassigkeit"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beispiel: 'Ein neuer Nutzer kann in 5 Minuten einen Auftrag anlegen' zielt primär darauf.",
+      "correctForms": [
+        "benutzbarkeit"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: 'Antwortzeit unter 200 ms bei 1.000 Requests/min' zielt primär darauf.",
+      "correctForms": [
+        "effizienz"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beispiel: 'Neue Zahlungsart hinzufügen ohne 20 Stellen anzufassen' zielt primär darauf.",
+      "correctForms": [
+        "anderbarkeit"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Beispiel: 'Läuft auf Windows und Linux, DB kann von MySQL auf PostgreSQL wechseln' zielt primär darauf.",
+      "correctForms": [
+        "ubertragbarkeit"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Wenn Features fehlen oder falsch sind, ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "funktionalitat"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Wenn die App bei Last random Fehler wirft oder abstürzt, ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "zuverlassigkeit"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Wenn Nutzer dauernd falsche Buttons drücken oder Workflows nicht finden, ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "benutzbarkeit"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wenn die App unnötig viel CPU zieht oder sehr langsam ist, ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "effizienz"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn kleine Änderungen hohe Risiken verursachen, weil alles gekoppelt ist, ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "anderbarkeit"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn die Software stark an eine Umgebung gebunden ist (z. B. hardcodierte Pfade/OS-Calls), ist zuerst dieses Qualitätsmerkmal verletzt.",
+      "correctForms": [
+        "ubertragbarkeit"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Ein ausgewogenes System braucht alle Kriterien: korrekt, stabil, bedienbar, schnell, wartbar, portierbar.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn die App schnell ist, aber falsche Ergebnisse liefert, ist dieses Qualitätsmerkmal dennoch verletzt.",
+      "correctForms": [
+        "funktionalitat"
+      ]
+    }
+  ]
+}

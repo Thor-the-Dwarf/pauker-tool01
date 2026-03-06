@@ -1,0 +1,97 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Veränderungsprozesse (7.5)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "veranderungsschritte_identifizieren",
+      "title": "Veränderungsschritte identifizieren",
+      "subtitle": ""
+    },
+    {
+      "id": "veranderungsschritte_darstellen",
+      "title": "Veränderungsschritte darstellen",
+      "subtitle": ""
+    },
+    {
+      "id": "mitarbeiterqualifizierung",
+      "title": "Mitarbeiterqualifizierung",
+      "subtitle": ""
+    },
+    {
+      "id": "blended_learning",
+      "title": "Blended-Learning",
+      "subtitle": ""
+    },
+    {
+      "id": "multiplikatoren",
+      "title": "Multiplikatoren",
+      "subtitle": ""
+    },
+    {
+      "id": "promoter",
+      "title": "Promoter",
+      "subtitle": ""
+    },
+    {
+      "id": "bremser",
+      "title": "Bremser",
+      "subtitle": ""
+    },
+    {
+      "id": "skeptiker",
+      "title": "Skeptiker",
+      "subtitle": ""
+    },
+    {
+      "id": "widerstandler",
+      "title": "Widerständler",
+      "subtitle": ""
+    },
+    {
+      "id": "ursachen_von_widerstanden",
+      "title": "Ursachen von Widerständen",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Ermitteln, was sich konkret ändern muss (Prozesse, Rollen, Tools, Daten, Schnittstellen) – inklusive Abhängigkeiten.",
+      "correctForms": [
+        "veranderungsschritte_identifizieren"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Schritte so visualisieren/kommunizieren, dass alle den Plan verstehen (z. B. Roadmap, Meilensteine, Ablaufplan).",
+      "correctForms": [
+        "veranderungsschritte_darstellen"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Maßnahmen, damit Mitarbeitende neue Prozesse/Tools sicher anwenden können (Schulung, Übung, Support).",
+      "correctForms": [
+        "mitarbeiterqualifizierung"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Kombination aus Präsenz/Live-Formaten und digitalen Selbstlernanteilen (z. B. Videos, Quiz, Übungen).",
+      "correctForms": [
+        "blended_learning"
+      ]
+    }
+  ]
+}

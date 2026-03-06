@@ -1,0 +1,194 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – BSI IT-Grundschutz Sicherheitskonzept (6.4)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "grundschutz_baustein",
+      "title": "Grundschutz-Baustein",
+      "subtitle": ""
+    },
+    {
+      "id": "grundschutzkatalog",
+      "title": "Grundschutzkatalog",
+      "subtitle": ""
+    },
+    {
+      "id": "schutzbedarf_normal",
+      "title": "Schutzbedarf: normal",
+      "subtitle": ""
+    },
+    {
+      "id": "schutzbedarf_hoch",
+      "title": "Schutzbedarf: hoch",
+      "subtitle": ""
+    },
+    {
+      "id": "schutzbedarf_sehr_hoch",
+      "title": "Schutzbedarf: sehr hoch",
+      "subtitle": ""
+    },
+    {
+      "id": "isms",
+      "title": "ISMS",
+      "subtitle": ""
+    },
+    {
+      "id": "it_sicherheitsbeauftragter",
+      "title": "IT-Sicherheitsbeauftragter",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Modul mit Maßnahmenempfehlungen für einen konkreten Bereich (z. B. Server, Client, Netz, Anwendungen).",
+      "correctForms": [
+        "grundschutz_baustein"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Sammlung/Struktur aller Bausteine und Maßnahmen, die als Basis für Grundschutz-Umsetzung dienen.",
+      "correctForms": [
+        "grundschutzkatalog"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Schutzbedarfskategorie: Standardanforderungen reichen aus; Schäden wären begrenzt und beherrschbar.",
+      "correctForms": [
+        "schutzbedarf_normal"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Schutzbedarfskategorie: erhebliche Schäden möglich (z. B. spürbare finanzielle/operative Auswirkungen).",
+      "correctForms": [
+        "schutzbedarf_hoch"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Schutzbedarfskategorie: existenzbedrohende Schäden möglich (z. B. massive Ausfälle, sehr große Schäden).",
+      "correctForms": [
+        "schutzbedarf_sehr_hoch"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Managementsystem, das Rollen, Prozesse, Richtlinien und Kontrollen definiert, um Informationssicherheit dauerhaft zu steuern.",
+      "correctForms": [
+        "isms"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Rolle im Unternehmen, die Informationssicherheit koordiniert (z. B. Richtlinien, Awareness, Maßnahmen-Tracking, Audits begleiten).",
+      "correctForms": [
+        "it_sicherheitsbeauftragter"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wenn du für einen Bereich passende Maßnahmen auswählst und daraus ein Set an Controls ableitest, nutzt du typischerweise das.",
+      "correctForms": [
+        "grundschutz_baustein"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Wenn du wissen willst, welche Bausteine es überhaupt gibt und wie sie strukturiert sind, ist das die Quelle.",
+      "correctForms": [
+        "grundschutzkatalog"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Wenn Ausfall/Manipulation nur geringe Auswirkungen hätte und Ersatzprozesse einfach möglich sind, passt diese Einstufung.",
+      "correctForms": [
+        "schutzbedarf_normal"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Wenn ein Vorfall zu schwerem Reputationsschaden, großen Vertragsstrafen oder längerem Stillstand führen kann, passt diese Einstufung.",
+      "correctForms": [
+        "schutzbedarf_hoch"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn ein Vorfall z. B. die Existenz des Unternehmens gefährden könnte oder kritische Infrastruktur betroffen wäre, passt diese Einstufung.",
+      "correctForms": [
+        "schutzbedarf_sehr_hoch"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Beispiel: Richtlinie, Risiko-/Schutzbedarfsprozess, Verantwortlichkeiten, kontinuierliche Verbesserung – das gehört dazu.",
+      "correctForms": [
+        "isms"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: Sicherheitsleitlinie einführen, Maßnahmen umsetzen, prüfen, verbessern (PDCA) – das ist typisch dafür.",
+      "correctForms": [
+        "isms"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: Koordiniert Sicherheitsmaßnahmen, berichtet an Management, ist Ansprechpartner für Audits – das ist diese Rolle.",
+      "correctForms": [
+        "it_sicherheitsbeauftragter"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Schutzbedarfs-Kategorien sind immer eine Abstufung der möglichen Schäden – die drei Stufen sind genau diese.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "In einem Grundschutz-Projekt brauchst du typischerweise Bausteine, Katalog, Schutzbedarf, ISMS-Prozesse und eine verantwortliche Rolle.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn eine Organisation Informationssicherheit nicht als Einmalprojekt, sondern als Dauerbetrieb betreibt, ist das der Kern davon.",
+      "correctForms": [
+        "isms"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn du für 'Server' oder 'Netzwerk' konkrete Maßnahmenlisten brauchst, suchst du primär hier.",
+      "correctForms": [
+        "grundschutz_baustein"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Die operative Koordination der Sicherheitsarbeit im Unternehmen liegt typischerweise bei dieser Rolle.",
+      "correctForms": [
+        "it_sicherheitsbeauftragter"
+      ]
+    }
+  ]
+}

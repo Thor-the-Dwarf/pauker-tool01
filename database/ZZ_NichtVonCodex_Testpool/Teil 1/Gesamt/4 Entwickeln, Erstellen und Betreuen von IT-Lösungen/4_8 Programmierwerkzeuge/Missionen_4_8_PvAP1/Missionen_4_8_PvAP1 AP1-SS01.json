@@ -1,0 +1,199 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Programmierwerkzeuge (4.8)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "struktogramm",
+      "title": "Struktogramm",
+      "subtitle": ""
+    },
+    {
+      "id": "pap_programmablaufplan",
+      "title": "PAP (Programmablaufplan)",
+      "subtitle": ""
+    },
+    {
+      "id": "pseudocode",
+      "title": "Pseudocode",
+      "subtitle": ""
+    },
+    {
+      "id": "uml_use_case_diagramm",
+      "title": "UML Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "uml_klassendiagramm",
+      "title": "UML Klassendiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "bildschirmausgabemasken_entwurf",
+      "title": "Bildschirmausgabemasken-Entwurf",
+      "subtitle": ""
+    },
+    {
+      "id": "softwareergonomie",
+      "title": "Softwareergonomie",
+      "subtitle": ""
+    },
+    {
+      "id": "barrierefreiheit",
+      "title": "Barrierefreiheit",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Darstellung von Programm-Logik in verschachtelten Blöcken (Anweisungen/If/While) ohne Pfeile; gut für strukturierte Programmierung.",
+      "correctForms": [
+        "struktogramm"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Flussdiagramm mit Start/Ende, Entscheidung, Verarbeitung und Pfeilen zur Ablaufsteuerung.",
+      "correctForms": [
+        "pap_programmablaufplan"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Quasi-Code in Klartext: beschreibt Logik verständlich, ohne an eine konkrete Programmiersprache gebunden zu sein.",
+      "correctForms": [
+        "pseudocode"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "UML-Diagramm, das Akteure und deren Interaktionen mit dem System zeigt (Wer macht was?).",
+      "correctForms": [
+        "uml_use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "UML-Diagramm, das Klassen, Attribute, Methoden und Beziehungen (z. B. Vererbung, Assoziation) zeigt.",
+      "correctForms": [
+        "uml_klassendiagramm"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Aktivität: Felder, Buttons, Validierung, Navigation und Layout einer Maske planen, bevor implementiert wird.",
+      "correctForms": [
+        "bildschirmausgabemasken_entwurf"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Ziel: Bedienbarkeit verbessern (klare Struktur, konsistente UI, wenig Klicks, verständliche Labels).",
+      "correctForms": [
+        "softwareergonomie"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Ziel: Nutzung auch mit Einschränkungen ermöglichen (z. B. Tastaturbedienung, Screenreader, Kontrast, Fokus).",
+      "correctForms": [
+        "barrierefreiheit"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Typisch: geeignet, um Azubis Kontrollstrukturen (If/Else, Schleifen) schnell sichtbar zu machen.",
+      "correctForms": [
+        "struktogramm"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typisch: geeignet, um einen Ablauf mit mehreren Entscheidungen und Schleifen als Pfeilfluss darzustellen.",
+      "correctForms": [
+        "pap_programmablaufplan"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Typisch: geeignet, um eine Lösungsidee schnell zu skizzieren, bevor Syntax-Fragen überhaupt wichtig werden.",
+      "correctForms": [
+        "pseudocode"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Typisch: zeigt, dass z. B. 'Kunde' einen 'Bestellung aufgeben'-Fall auslöst und das System darauf reagiert.",
+      "correctForms": [
+        "uml_use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Typisch: zeigt, dass 'Bestellung' Attribute wie id, datum hat und Methoden wie berechneSumme().",
+      "correctForms": [
+        "uml_klassendiagramm"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: 'Tab-Reihenfolge logisch, Buttons klar benannt, Fehlermeldungen nah am Feld' ist primär das.",
+      "correctForms": [
+        "softwareergonomie"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: 'Alles ohne Maus bedienbar, Fokus sichtbar, ARIA/Labels vorhanden' ist primär das.",
+      "correctForms": [
+        "barrierefreiheit"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Beispiel: 'Maske für Login/Registrierung zuerst als Wireframe definieren' ist primär diese Aktivität.",
+      "correctForms": [
+        "bildschirmausgabemasken_entwurf"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Dient dazu, Anforderungen aus Sicht der Nutzerrollen zu klären, bevor Klassen/DB-Tabellen entworfen werden.",
+      "correctForms": [
+        "uml_use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Dient dazu, Struktur des Codes/Objektmodells zu planen, bevor implementiert wird.",
+      "correctForms": [
+        "uml_klassendiagramm"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Hilft, Missverständnisse zu vermeiden, weil du Abläufe/Struktur sichtbar machst, ohne schon Code zu schreiben.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Wenn du eine GUI planst, musst du Nutzbarkeit und Zugang für alle mitdenken – das sind diese beiden Themen.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

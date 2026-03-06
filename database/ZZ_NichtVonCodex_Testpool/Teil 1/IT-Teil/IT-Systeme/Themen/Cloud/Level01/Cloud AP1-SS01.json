@@ -1,0 +1,346 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Cloud: Vorteile, Risiken, Shared Responsibility (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "use_case_diagramm",
+      "title": "Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "use_case_text",
+      "title": "Use-Case-Text",
+      "subtitle": ""
+    },
+    {
+      "id": "klassendiagramm",
+      "title": "Klassendiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "aktivitatsdiagramm",
+      "title": "Aktivitätsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "sequenzdiagramm",
+      "title": "Sequenzdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "zustandsdiagramm",
+      "title": "Zustandsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "erd_erm",
+      "title": "ERD/ERM",
+      "subtitle": ""
+    },
+    {
+      "id": "kardinalitat",
+      "title": "Kardinalität",
+      "subtitle": ""
+    },
+    {
+      "id": "m_n_zwischentabelle",
+      "title": "M:N-Zwischentabelle",
+      "subtitle": ""
+    },
+    {
+      "id": "1nf",
+      "title": "1NF",
+      "subtitle": ""
+    },
+    {
+      "id": "2nf",
+      "title": "2NF",
+      "subtitle": ""
+    },
+    {
+      "id": "3nf",
+      "title": "3NF",
+      "subtitle": ""
+    },
+    {
+      "id": "pseudocode",
+      "title": "Pseudocode",
+      "subtitle": ""
+    },
+    {
+      "id": "pap_flowchart",
+      "title": "PAP (Flowchart)",
+      "subtitle": ""
+    },
+    {
+      "id": "struktogramm",
+      "title": "Struktogramm",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_sequenz",
+      "title": "Kontrollstruktur: Sequenz",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_auswahl",
+      "title": "Kontrollstruktur: Auswahl",
+      "subtitle": ""
+    },
+    {
+      "id": "kontrollstruktur_schleife",
+      "title": "Kontrollstruktur: Schleife",
+      "subtitle": ""
+    },
+    {
+      "id": "datentyp",
+      "title": "Datentyp",
+      "subtitle": ""
+    },
+    {
+      "id": "liste_array",
+      "title": "Liste/Array",
+      "subtitle": ""
+    },
+    {
+      "id": "dictionary_map",
+      "title": "Dictionary/Map",
+      "subtitle": ""
+    },
+    {
+      "id": "ide",
+      "title": "IDE",
+      "subtitle": ""
+    },
+    {
+      "id": "debugger",
+      "title": "Debugger",
+      "subtitle": ""
+    },
+    {
+      "id": "versionskontrolle_git",
+      "title": "Versionskontrolle (Git)",
+      "subtitle": ""
+    },
+    {
+      "id": "unit_test",
+      "title": "Unit Test",
+      "subtitle": ""
+    },
+    {
+      "id": "integration_test",
+      "title": "Integration Test",
+      "subtitle": ""
+    },
+    {
+      "id": "system_test",
+      "title": "System Test",
+      "subtitle": ""
+    },
+    {
+      "id": "logging",
+      "title": "Logging",
+      "subtitle": ""
+    },
+    {
+      "id": "sql_select",
+      "title": "SQL SELECT",
+      "subtitle": ""
+    },
+    {
+      "id": "where",
+      "title": "WHERE",
+      "subtitle": ""
+    },
+    {
+      "id": "order_by",
+      "title": "ORDER BY",
+      "subtitle": ""
+    },
+    {
+      "id": "like",
+      "title": "LIKE",
+      "subtitle": ""
+    },
+    {
+      "id": "in",
+      "title": "IN",
+      "subtitle": ""
+    },
+    {
+      "id": "between",
+      "title": "BETWEEN",
+      "subtitle": ""
+    },
+    {
+      "id": "group_by",
+      "title": "GROUP BY",
+      "subtitle": ""
+    },
+    {
+      "id": "having",
+      "title": "HAVING",
+      "subtitle": ""
+    },
+    {
+      "id": "join",
+      "title": "JOIN",
+      "subtitle": ""
+    },
+    {
+      "id": "ddl",
+      "title": "DDL",
+      "subtitle": ""
+    },
+    {
+      "id": "dml",
+      "title": "DML",
+      "subtitle": ""
+    },
+    {
+      "id": "dql",
+      "title": "DQL",
+      "subtitle": ""
+    },
+    {
+      "id": "transaktion",
+      "title": "Transaktion",
+      "subtitle": ""
+    },
+    {
+      "id": "acid",
+      "title": "ACID",
+      "subtitle": ""
+    },
+    {
+      "id": "kartesisches_produkt",
+      "title": "kartesisches Produkt",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Vorteil: Ressourcen lassen sich schnell hoch- und runter skalieren, ohne neue Hardware zu kaufen.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Vorteil: Schnelle Bereitstellung – neue Systeme/Services können in Minuten statt Tagen/Wochen stehen.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Vorteil: OPEX statt CAPEX – laufende Betriebskosten statt hoher Einmalinvestitionen für Hardware.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Vorteil: Verfügbarkeit kann über Zonen/Regionen-Optionen erhöht werden (wenn korrekt geplant und gebucht).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Risiko: Vendor Lock-in – Wechsel wird teuer/aufwendig durch proprietäre Dienste, APIs oder Datenformate.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Risiko: Kostenexplosion durch falsches Sizing, Dauerbetrieb, Datenverkehr, fehlende Limits oder „vergessene“ Ressourcen.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Risiko: Datenstandort/Compliance – rechtliche Vorgaben (z. B. Aufbewahrung, DSGVO, Branchenregeln) müssen erfüllt sein.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Risiko: Fehlkonfiguration ist ein Klassiker (z. B. öffentliche Buckets, zu breite Rollen/Rechte, offene Ports).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Prüfungsfalle: Cloud ist nicht automatisch sicher – Sicherheit hängt stark von Konfiguration, Rechten und Prozessen ab.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Shared Responsibility: Provider sichert die „Cloud“ (z. B. Rechenzentrum, Host-Infrastruktur, Basisschichten).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Shared Responsibility: Kunde sichert Konfiguration, Daten und Zugriffe (z. B. IAM/Rollen, Passwörter, MFA, Policies).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Prüfungsfalle: „Der Provider macht Backups automatisch“ stimmt nur, wenn der Service/Plan das vorsieht und du es aktiv konfigurierst.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Prüfungsfalle: Ein öffentlich erreichbarer Dienst ist nicht automatisch ein Fehler – aber er braucht Absicherung (Auth, Firewall, Logging, Updates).",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Kostenkontrolle in der Cloud heißt typischerweise: Budgets/Alarme, Tags, Limits/Quotas, Abschaltregeln und Monitoring.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "„Shared Responsibility bedeutet: Der Provider ist für alles verantwortlich, inklusive deiner Nutzerrechte und Daten.“",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Cloud-Vorteile, -Risiken und Shared Responsibility gehören zusammen: schnell & skalierbar, aber nur sicher und bezahlbar mit sauberer Konfiguration und Governance.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

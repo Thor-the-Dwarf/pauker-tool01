@@ -1,0 +1,209 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Informationen aufbereiten und präsentieren (2.4)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "technischer_text",
+      "title": "Technischer Text",
+      "subtitle": ""
+    },
+    {
+      "id": "nicht_technischer_text",
+      "title": "Nicht-technischer Text",
+      "subtitle": ""
+    },
+    {
+      "id": "suchoperatoren",
+      "title": "Suchoperatoren",
+      "subtitle": ""
+    },
+    {
+      "id": "anfuhrungszeichen",
+      "title": "Anführungszeichen (\" \")",
+      "subtitle": ""
+    },
+    {
+      "id": "minus",
+      "title": "Minus (-)",
+      "subtitle": ""
+    },
+    {
+      "id": "site",
+      "title": "site:",
+      "subtitle": ""
+    },
+    {
+      "id": "filetype",
+      "title": "filetype:",
+      "subtitle": ""
+    },
+    {
+      "id": "englische_texte_auswerten",
+      "title": "Englische Texte auswerten",
+      "subtitle": ""
+    },
+    {
+      "id": "qualitatsmerkmale_prasentation",
+      "title": "Qualitätsmerkmale Präsentation",
+      "subtitle": ""
+    },
+    {
+      "id": "medienkompetenz",
+      "title": "Medienkompetenz",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Zielgruppe sind Fachleute; nutzt präzise Begriffe, Spezifikationen, Daten und oft Abkürzungen.",
+      "correctForms": [
+        "technischer_text"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Zielgruppe sind Nicht-Fachleute; erklärt Begriffe, vermeidet Jargon und fokussiert Nutzen/Handlung.",
+      "correctForms": [
+        "nicht_technischer_text"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Typisch: Schritt-für-Schritt-Anleitung, Schnittstellenbeschreibung, Konfiguration, Fehlercodes.",
+      "correctForms": [
+        "technischer_text"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Typisch: Management-Zusammenfassung, Nutzenargumentation, Einordnung ohne Detailschlacht.",
+      "correctForms": [
+        "nicht_technischer_text"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Technik, um digitale Suchanfragen gezielt einzugrenzen und irrelevante Treffer zu reduzieren.",
+      "correctForms": [
+        "suchoperatoren"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Sucht nach einer exakten Wortgruppe in genau dieser Reihenfolge.",
+      "correctForms": [
+        "anfuhrungszeichen"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Schließt Ergebnisse aus, die einen bestimmten Begriff enthalten.",
+      "correctForms": [
+        "minus"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Begrenzt Suchergebnisse auf eine bestimmte Domain oder Website.",
+      "correctForms": [
+        "site"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Begrenzt Suchergebnisse auf einen Dateityp (z. B. PDF, PPT, DOCX).",
+      "correctForms": [
+        "filetype"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: Suche nur auf heise.de nach dem Begriff „Firewall“.",
+      "correctForms": [
+        "site"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beispiel: Suche nur nach PDF-Dokumenten zu „IT-Grundschutz“.",
+      "correctForms": [
+        "filetype"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Beispiel: Finde nur Treffer, die exakt die Phrase „least privilege“ enthalten.",
+      "correctForms": [
+        "anfuhrungszeichen"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Beispiel: Suche nach „VPN“ aber ohne Ergebnisse mit „Cisco“.",
+      "correctForms": [
+        "minus"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Vorgehen: zuerst Überschriften/Abstract scannen, Keywords markieren, dann gezielt Details lesen.",
+      "correctForms": [
+        "englische_texte_auswerten"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Achte auf false friends, Kontext und Fachbegriffe; nicht Wort-für-Wort übersetzen.",
+      "correctForms": [
+        "englische_texte_auswerten"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Ergebnis ist eine kurze, korrekte Zusammenfassung des Inhalts (Kernaussage + wichtigste Details).",
+      "correctForms": [
+        "englische_texte_auswerten"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Gute Präsentation: klare Struktur, rote Linie, pro Folie eine Kernaussage, saubere Visual-Hierarchie.",
+      "correctForms": [
+        "qualitatsmerkmale_prasentation"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Gute Präsentation: gut lesbare Schriftgrößen, ausreichender Kontrast, wenig Text, passende Grafiken.",
+      "correctForms": [
+        "qualitatsmerkmale_prasentation"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Bewertung von Quellen: Autor, Datum, Interessenlage, Belege, Qualität der Domain, Cross-Check.",
+      "correctForms": [
+        "medienkompetenz"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Umfasst auch: Urheberrecht beachten (Bilder/Diagramme), korrekt zitieren, keine Daten leichtfertig teilen.",
+      "correctForms": [
+        "medienkompetenz"
+      ]
+    }
+  ]
+}

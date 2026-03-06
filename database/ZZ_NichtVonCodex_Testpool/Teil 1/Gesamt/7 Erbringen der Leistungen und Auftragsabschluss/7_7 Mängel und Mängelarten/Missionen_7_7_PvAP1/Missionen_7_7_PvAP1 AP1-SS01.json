@@ -1,0 +1,174 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Mängel und Mängelarten (7.7)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle die passende Mängelart zur Aussage.",
+  "columns": [
+    {
+      "id": "schlechtleistung",
+      "title": "Schlechtleistung",
+      "subtitle": ""
+    },
+    {
+      "id": "falschlieferung",
+      "title": "Falschlieferung",
+      "subtitle": ""
+    },
+    {
+      "id": "minderlieferung",
+      "title": "Minderlieferung",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Die Lieferung ist unvollständig: Es fehlen Teile der vereinbarten Hardware/Leistung.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Es wurde etwas anderes geliefert als vereinbart (z. B. falsche Version, falsches Produkt, falsches Paket).",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Die Leistung ist mangelhaft: vereinbarte Qualität/Funktion wird nicht erreicht (z. B. Feature fehlt, Fehler im System).",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Beispiel: Statt 'Windows Pro' wurde 'Windows Home' ausgeliefert.",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Beispiel: Es wurden 8 Laptops bestellt, aber nur 6 geliefert.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Beispiel: Die Software stürzt ab und erfüllt den vereinbarten Use Case nicht.",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beispiel: Das gelieferte Lizenzpaket passt nicht zur vereinbarten Anzahl Nutzer/Edition.",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Beispiel: Im Paket fehlt das Netzteil oder das passende Kabel, obwohl es vereinbart war.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Beispiel: Schnittstelle X funktioniert nicht, obwohl sie zugesichert/vertraglich vereinbart war.",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Wenn ein Kunde sagt 'es ist da, aber es kann nicht, was es soll', ist das primär diese Mängelart.",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Wenn ein Kunde sagt 'das ist das falsche Produkt/der falsche Vertrag/die falsche Edition', ist das primär diese Mängelart.",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Wenn ein Kunde sagt 'es fehlt etwas, die Menge stimmt nicht', ist das primär diese Mängelart.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Beispiel: Statt 32 GB RAM wurden 16 GB geliefert, obwohl 32 GB bestellt waren.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Beispiel: Es wurde eine Datenbank-Community-Edition geliefert, vereinbart war Enterprise.",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Beispiel: Die Anwendung ist extrem langsam und dadurch im Betrieb nicht sinnvoll nutzbar.",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Alle drei Mängelarten sind typische Abweichungen vom Vertrag: falsch, zu wenig oder qualitativ schlecht.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wenn die vereinbarte Funktionalität fehlt, ist das genau diese Mängelart.",
+      "correctForms": [
+        "schlechtleistung"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Wenn statt des bestellten Softwarepakets ein anderes ausgeliefert wird, ist das genau diese Mängelart.",
+      "correctForms": [
+        "falschlieferung"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Wenn nur Teile der Hardware geliefert werden, ist das genau diese Mängelart.",
+      "correctForms": [
+        "minderlieferung"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Für die Reklamation ist es hilfreich, die Mängelart sauber zu benennen – das gilt für alle hier genannten.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}
