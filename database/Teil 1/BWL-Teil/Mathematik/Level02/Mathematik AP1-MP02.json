@@ -1,0 +1,210 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Mathematik für die AP1 – Level 2 Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne vertiefte AP1-Rechenkonzepte korrekt zu (Einheiten, Netz, Storage, Medien, Prozent, Zeit, Verfügbarkeit).",
+  "columnTitles": {
+    "column1": "Begriff / Formel",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den präzisen Rechenbegriff.",
+    "column2": "Achte auf Unterschiede wie bit/Byte, SI/IEC, Prozent/Prozentpunkte.",
+    "column3": "Nutze typische AP1-Szenarien als Plausibilitätsanker."
+  },
+  "sets": [
+    {
+      "id": "si_iec",
+      "name": "SI vs IEC",
+      "description": "SI nutzt 1000er-Schritte, IEC 1024er-Schritte.",
+      "example": "500 GB Herstellerangabe erscheinen im OS als ca. 465 GiB."
+    },
+    {
+      "id": "bit_byte",
+      "name": "bit vs Byte",
+      "description": "1 Byte = 8 bit; Datenrate und Dateigröße sauber trennen.",
+      "example": "100 Mbit/s entsprechen theoretisch 12,5 MB/s."
+    },
+    {
+      "id": "netto_brutto",
+      "name": "Brutto- vs Netto-Datenrate",
+      "description": "Netto ist meist geringer durch Protokoll-/Steueranteile.",
+      "example": "1 Gbit/s Link liefert in Praxis keine 125 MB/s Nutzdaten konstant."
+    },
+    {
+      "id": "transferzeit",
+      "name": "Transferzeit",
+      "description": "Zeit = Datenmenge / Netto-Rate (nach Einheitenangleichung).",
+      "example": "1200 MB über 200 Mbit/s mit 80% Netto dauern ca. 75 s."
+    },
+    {
+      "id": "prozentwert",
+      "name": "Prozentwert W",
+      "description": "W = (p/100) · G",
+      "example": "18% von 250 GB entsprechen 45 GB."
+    },
+    {
+      "id": "grundwert",
+      "name": "Grundwert G",
+      "description": "G = W · (100/p)",
+      "example": "45 GB sind 18% von 250 GB."
+    },
+    {
+      "id": "prozentsatz",
+      "name": "Prozentsatz p",
+      "description": "p = (W/G) · 100",
+      "example": "45 von 250 sind 18%."
+    },
+    {
+      "id": "kettenprozent",
+      "name": "Kettenprozent",
+      "description": "Mehrere Änderungen nacheinander als Faktoren multiplizieren.",
+      "example": "+20% und danach -20% ergeben insgesamt -4%."
+    },
+    {
+      "id": "prozentpunkte",
+      "name": "Prozentpunkte",
+      "description": "Absolute Differenz zwischen Prozentwerten, nicht relative Änderung.",
+      "example": "Von 10% auf 12% entspricht +2 Prozentpunkten."
+    },
+    {
+      "id": "plausi",
+      "name": "Plausibilitätscheck",
+      "description": "Ergebnis auf Größenordnung und Einheit prüfen.",
+      "example": "500 MB in 2 Sekunden bei 50 Mbit/s ist offensichtlich unplausibel."
+    },
+    {
+      "id": "runden",
+      "name": "Runden am Ende",
+      "description": "Zwischenschritte möglichst exakt halten, erst final runden.",
+      "example": "Bei SLA-Ausfallzeit erst mit Minuten rechnen, dann auf sinnvolle Einheit runden."
+    },
+    {
+      "id": "subnetz_hosts",
+      "name": "Hosts pro Subnetz",
+      "description": "Hosts = 2^(32-Prefix) - 2 (klassisch).",
+      "example": "/27 liefert 30 Hosts, /23 liefert 510 Hosts."
+    },
+    {
+      "id": "subnetz_block",
+      "name": "Blockgröße im Oktett",
+      "description": "Blockgröße = 256 - Maskenwert im relevanten Oktett.",
+      "example": "Bei /27 ist die Blockgröße 32 (0,32,64,96,...)."
+    },
+    {
+      "id": "netzadresse",
+      "name": "Netzadresse",
+      "description": "Identifiziert das Subnetz, nicht den Host.",
+      "example": "192.168.10.64/27 ist Netzadresse für den Block 64-95."
+    },
+    {
+      "id": "broadcast",
+      "name": "Broadcast-Adresse",
+      "description": "Letzte Adresse im Subnetz, Rundruf an alle Hosts.",
+      "example": "Bei 192.168.10.64/27 ist Broadcast 192.168.10.95."
+    },
+    {
+      "id": "raid0",
+      "name": "RAID 0",
+      "description": "Kapazität n·Größe, keine Redundanz.",
+      "example": "4x2 TB ergeben 8 TB, aber kein Schutz bei Ausfall."
+    },
+    {
+      "id": "raid1",
+      "name": "RAID 1",
+      "description": "Spiegelung, typischerweise halbe Nutzkapazität.",
+      "example": "4x2 TB ergeben meist 4 TB nutzbar."
+    },
+    {
+      "id": "raid5",
+      "name": "RAID 5",
+      "description": "Kapazität (n-1)·kleinste Platte, verteilte Parität.",
+      "example": "2,2,2,1 TB ergeben 3 TB nutzbar."
+    },
+    {
+      "id": "raid6",
+      "name": "RAID 6",
+      "description": "Kapazität (n-2)·kleinste Platte, doppelte Parität.",
+      "example": "6x4 TB ergeben 16 TB nutzbar."
+    },
+    {
+      "id": "raid_mixed",
+      "name": "Gemischte Plattengrößen",
+      "description": "Nutzkapazität orientiert sich regelmäßig an der kleinsten Platte je Slot.",
+      "example": "Ein 1-TB-Laufwerk reduziert nutzbare RAID5-Basis aller Platten."
+    },
+    {
+      "id": "pixelanzahl",
+      "name": "Pixelanzahl",
+      "description": "Pixel = Breite · Höhe.",
+      "example": "2560x1440 entsprechen 3.686.400 Pixeln."
+    },
+    {
+      "id": "skalierung",
+      "name": "2D-Skalierung",
+      "description": "Doppelte Breite und Höhe ergeben vierfache Pixelzahl.",
+      "example": "Full-HD zu 4K steigert Pixelanzahl um den Faktor 4."
+    },
+    {
+      "id": "bildgroesse",
+      "name": "Unkomprimierte Bildgröße",
+      "description": "Größe = Pixel · Farbtiefe / 8.",
+      "example": "2 Mio Pixel bei 24 bit ergeben ca. 6 MB roh."
+    },
+    {
+      "id": "audio",
+      "name": "Unkomprimierte Audiogröße",
+      "description": "SampleRate · BitTiefe · Kanäle · Dauer / 8.",
+      "example": "44,1 kHz, 16 bit, Stereo, 3 min ergeben ungefähr 30 MB."
+    },
+    {
+      "id": "base64",
+      "name": "Base64-Overhead",
+      "description": "Kodierung zu Text erhöht Datenmenge typischerweise um etwa ein Drittel.",
+      "example": "Bild als Base64 in JSON wird deutlich größer statt kleiner."
+    },
+    {
+      "id": "verfuegbarkeit",
+      "name": "Verfügbarkeit",
+      "description": "Anteil verfügbarer Zeit am Gesamtzeitraum.",
+      "example": "99,9% pro Monat entspricht nur begrenzter erlaubter Ausfallzeit."
+    },
+    {
+      "id": "ausfallzeit",
+      "name": "Ausfallzeit",
+      "description": "Ausfallzeit = Zeitraum · (1 - Verfügbarkeit).",
+      "example": "Bei 30 Tagen und 99,9% sind rund 43,2 Minuten Ausfall zulässig."
+    },
+    {
+      "id": "reaktion_rto",
+      "name": "Reaktionszeit vs RTO",
+      "description": "Reaktion = Start der Bearbeitung, RTO = Wiederherstellung des Dienstes.",
+      "example": "SLA fordert Reaktion < 15 min und RTO < 4 h als getrennte Ziele."
+    },
+    {
+      "id": "energie_wh",
+      "name": "Energie (Wh)",
+      "description": "Wh = W · h als gespeicherte oder verbrauchte Energiemenge.",
+      "example": "200 W Last über 2 h benötigen 400 Wh."
+    },
+    {
+      "id": "laufzeit_usv",
+      "name": "USV-Laufzeit",
+      "description": "h = Wh / W, praktisch durch Wirkungsgrad reduziert.",
+      "example": "1000 Wh bei 250 W sind theoretisch 4 h, real meist weniger."
+    },
+    {
+      "id": "wirkungsgrad",
+      "name": "Wirkungsgrad",
+      "description": "Nutzleistung ist kleiner als zugeführte Leistung durch Verluste.",
+      "example": "USV mit 90% Wirkungsgrad liefert weniger nutzbare Energie als nominell gespeichert."
+    },
+    {
+      "id": "ueberschlag",
+      "name": "Überschlag",
+      "description": "Schnellabschätzung zur Plausibilisierung vor Detailrechnung.",
+      "example": "Wenn Ergebnis Sekunden statt erwarteter Stunden liefert, stimmt meist die Einheit nicht."
+    }
+  ]
+}

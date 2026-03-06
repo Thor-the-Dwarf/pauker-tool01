@@ -1,0 +1,438 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Mathematik für die AP1 (Level 2)",
+  "topic": "SI/IEC, Kettenprozent, Transfer mit Overhead, Subnetting, RAID, Medienmathe, SLA, USV",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "einheiten-grenzfaelle-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Einheiten ohne Denkfehler",
+      "subtitle": "Ordne korrekt: SI, IEC oder Datenrate.",
+      "hintDefault": "SI = 1000er, IEC = 1024er, Datenrate meist bit/s. Faktor-8 nicht vergessen.",
+      "sortColumns": [
+        { "zone": "si", "label": "SI (dezimal)", "hint": "kB/MB/GB" },
+        { "zone": "iec", "label": "IEC (binär)", "hint": "KiB/MiB/GiB" },
+        { "zone": "rate", "label": "Datenrate", "hint": "bit/s oder Byte/s" }
+      ],
+      "sortCards": [
+        { "id": "u1", "text": "1 GB = 10^9 Byte", "correctZone": "si" },
+        { "id": "u2", "text": "1 GiB = 1024^3 Byte", "correctZone": "iec" },
+        { "id": "u3", "text": "100 Mbit/s = 12,5 MB/s (theoretisch)", "correctZone": "rate" },
+        { "id": "u4", "text": "Herstellerkapazität wirkt im OS meist kleiner", "correctZone": "iec" },
+        { "id": "u5", "text": "1 TB = 1000 GB", "correctZone": "si" },
+        { "id": "u6", "text": "Brutto-Linkrate bei Ethernet/WLAN", "correctZone": "rate" },
+        { "id": "u7", "text": "1 MiB = 1.048.576 Byte", "correctZone": "iec" },
+        { "id": "u8", "text": "10 Gbit/s Backbone-Angabe", "correctZone": "rate" }
+      ]
+    },
+    {
+      "id": "kettenprozent-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: Kettenprozent & Rückwärtsrechnen",
+      "subtitle": "Mehrstufige Prozentaufgaben sauber lösen.",
+      "hintDefault": "Nacheinander mit Faktoren rechnen: +10% => *1,10 ; -20% => *0,80.",
+      "questions": [
+        {
+          "id": "kp1",
+          "text": "1. Ein Wert steigt um 20% und fällt danach um 20%. Gesamteffekt?",
+          "options": [
+            { "value": "a", "text": "0%" },
+            { "value": "b", "text": "-4%" },
+            { "value": "c", "text": "+4%" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "kp2",
+          "text": "2. Preis nach 15% Rabatt beträgt 850 €. Wie hoch war der Grundwert?",
+          "options": [
+            { "value": "a", "text": "1.000 €" },
+            { "value": "b", "text": "977,50 €" },
+            { "value": "c", "text": "1.150 €" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "kp3",
+          "text": "3. Ausfallquote von 2% auf 2,6%: relative Änderung?",
+          "options": [
+            { "value": "a", "text": "+0,6%" },
+            { "value": "b", "text": "+30%" },
+            { "value": "c", "text": "+0,6 Prozent" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "kp4",
+          "text": "4. Speicher wächst von 320 GiB auf 400 GiB. Prozentuale Zunahme?",
+          "options": [
+            { "value": "a", "text": "20%" },
+            { "value": "b", "text": "25%" },
+            { "value": "c", "text": "80 GiB" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "transfer-overhead-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: Transferzeit mit Netto-Raten",
+      "subtitle": "Brutto/Netto unterscheiden und korrekt umrechnen.",
+      "hintDefault": "Zeit = Datenmenge / Netto-Rate. Netto kann z. B. 85% der Bruttorate sein.",
+      "questions": [
+        {
+          "id": "to1",
+          "text": "1. 1.200 MB über 200 Mbit/s, Nettofaktor 80%. Theoretische Dauer?",
+          "options": [
+            { "value": "a", "text": "48 s" },
+            { "value": "b", "text": "60 s" },
+            { "value": "c", "text": "75 s" }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "to2",
+          "text": "2. Warum ist 1 Gbit/s nicht gleich 1 GB/s?",
+          "options": [
+            { "value": "a", "text": "Wegen 1000 vs 1024" },
+            { "value": "b", "text": "Weil bit und Byte Faktor 8 unterscheiden" },
+            { "value": "c", "text": "Weil Gbit immer Netto ist" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "to3",
+          "text": "3. 4 GiB Datei, Netto 50 MiB/s: Dauer?",
+          "options": [
+            { "value": "a", "text": "ca. 82 s" },
+            { "value": "b", "text": "ca. 64 s" },
+            { "value": "c", "text": "ca. 40 s" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "to4",
+          "text": "4. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Overhead betrifft nur WLAN, nicht Ethernet." },
+            { "value": "b", "text": "Netto ist oft kleiner als Brutto durch Protokoll- und Steueranteile." },
+            { "value": "c", "text": "Wenn Einheiten stimmen, ist Overhead irrelevant." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "subnetz-rollen-sort",
+      "type": "sort",
+      "title": "Rätsel 4: Subnetz-Rollen korrekt einordnen",
+      "subtitle": "Unterscheide Netzadresse, Broadcast, Hostbereich und Präfixregel.",
+      "hintDefault": "Hosts klassisch: 2^(Host-Bits)-2. Netz = erste, Broadcast = letzte Adresse im Subnetz.",
+      "sortColumns": [
+        { "zone": "netz", "label": "Netzadresse", "hint": "identifiziert das Netz" },
+        { "zone": "broadcast", "label": "Broadcast", "hint": "letzte Adresse" },
+        { "zone": "hosts", "label": "Hostbereich", "hint": "verwendbare Hosts" },
+        { "zone": "regel", "label": "Präfix-/Rechenregel", "hint": "Formel/Bitlogik" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Erste Adresse des Subnetzes", "correctZone": "netz" },
+        { "id": "s2", "text": "Letzte Adresse des Subnetzes", "correctZone": "broadcast" },
+        { "id": "s3", "text": "Zwischen Netz und Broadcast liegen die nutzbaren Clients", "correctZone": "hosts" },
+        { "id": "s4", "text": "Hosts = 2^(32-Prefix)-2 (klassisch)", "correctZone": "regel" },
+        { "id": "s5", "text": "/27 bedeutet 5 Host-Bits", "correctZone": "regel" },
+        { "id": "s6", "text": "Adresse wird normalerweise nicht Endgerät zugewiesen", "correctZone": "netz" },
+        { "id": "s7", "text": "Wird als Rundruf an alle Hosts genutzt", "correctZone": "broadcast" },
+        { "id": "s8", "text": "Typischer DHCP-Adresspool liegt hier", "correctZone": "hosts" }
+      ]
+    },
+    {
+      "id": "subnetz-quiz-vertiefung",
+      "type": "quiz",
+      "title": "Rätsel 5: Subnetting-Vertiefung",
+      "subtitle": "Rechne Präfix, Blockgröße und Hosts sicher.",
+      "hintDefault": "Blockgröße bei /27 im letzten Oktett = 32. Hosts je /27 = 30.",
+      "questions": [
+        {
+          "id": "sq1",
+          "text": "1. Wie viele klassische Hosts liefert /27?",
+          "options": [
+            { "value": "a", "text": "32" },
+            { "value": "b", "text": "30" },
+            { "value": "c", "text": "62" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sq2",
+          "text": "2. Welche Maske gehört zu /23?",
+          "options": [
+            { "value": "a", "text": "255.255.255.0" },
+            { "value": "b", "text": "255.255.254.0" },
+            { "value": "c", "text": "255.255.252.0" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sq3",
+          "text": "3. /23 hat klassisch wie viele Hosts?",
+          "options": [
+            { "value": "a", "text": "510" },
+            { "value": "b", "text": "512" },
+            { "value": "c", "text": "254" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "sq4",
+          "text": "4. 192.168.10.65/27 liegt in welchem Subnetz?",
+          "options": [
+            { "value": "a", "text": "192.168.10.32/27" },
+            { "value": "b", "text": "192.168.10.64/27" },
+            { "value": "c", "text": "192.168.10.96/27" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "raid-vertiefung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 6: RAID unter realen Randbedingungen",
+      "subtitle": "Kapazität, Redundanz und kleinste Platte korrekt berücksichtigen.",
+      "hintDefault": "Gemischte Größen: nutzbare Basis ist meist die kleinste Platte pro Slot.",
+      "questions": [
+        {
+          "id": "rq1",
+          "text": "1. RAID5 mit 4 Platten: 2 TB, 2 TB, 2 TB, 1 TB. Nutzbar?",
+          "options": [
+            { "value": "a", "text": "3 TB" },
+            { "value": "b", "text": "6 TB" },
+            { "value": "c", "text": "5 TB" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rq2",
+          "text": "2. RAID6 mit 6x4 TB liefert nutzbar?",
+          "options": [
+            { "value": "a", "text": "16 TB" },
+            { "value": "b", "text": "20 TB" },
+            { "value": "c", "text": "24 TB" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "rq3",
+          "text": "3. Welche Aussage ist richtig?",
+          "options": [
+            { "value": "a", "text": "RAID0 erhöht Redundanz und Kapazität." },
+            { "value": "b", "text": "RAID1 halbiert typischerweise die Nutzkapazität zugunsten Spiegelung." },
+            { "value": "c", "text": "RAID5 funktioniert erst ab 5 Platten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "rq4",
+          "text": "4. Welche Kombination beschreibt RAID5 am besten?",
+          "options": [
+            { "value": "a", "text": "Striping ohne Parität" },
+            { "value": "b", "text": "Spiegelung aller Platten" },
+            { "value": "c", "text": "Striping mit verteilter Parität" }
+          ],
+          "correct": "c"
+        }
+      ]
+    },
+    {
+      "id": "medienformeln-capital",
+      "type": "capital",
+      "title": "Rätsel 7: Formel-Matching Medienmathe",
+      "subtitle": "Ordne jeder Fragestellung die passende Formelklasse zu.",
+      "hintDefault": "Pixel, Audio, Base64, Verfügbarkeit und Energie nicht verwechseln.",
+      "rows": [
+        {
+          "key": "mf1",
+          "label": "Breite × Höhe berechnen",
+          "correct": "pixel",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "pixel", "text": "Pixelanzahl" },
+            { "value": "audio", "text": "Audiodatenrate/-größe" },
+            { "value": "avail", "text": "Verfügbarkeit/Ausfallzeit" },
+            { "value": "energy", "text": "Energie/Laufzeit" },
+            { "value": "base64", "text": "Base64-Overhead" }
+          ]
+        },
+        {
+          "key": "mf2",
+          "label": "SampleRate × BitTiefe × Kanäle × Dauer / 8",
+          "correct": "audio",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "pixel", "text": "Pixelanzahl" },
+            { "value": "audio", "text": "Audiodatenrate/-größe" },
+            { "value": "avail", "text": "Verfügbarkeit/Ausfallzeit" },
+            { "value": "energy", "text": "Energie/Laufzeit" },
+            { "value": "base64", "text": "Base64-Overhead" }
+          ]
+        },
+        {
+          "key": "mf3",
+          "label": "Zeitraum × (1 − Verfügbarkeit)",
+          "correct": "avail",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "pixel", "text": "Pixelanzahl" },
+            { "value": "audio", "text": "Audiodatenrate/-größe" },
+            { "value": "avail", "text": "Verfügbarkeit/Ausfallzeit" },
+            { "value": "energy", "text": "Energie/Laufzeit" },
+            { "value": "base64", "text": "Base64-Overhead" }
+          ]
+        },
+        {
+          "key": "mf4",
+          "label": "Wh = W × h bzw. h = Wh/W",
+          "correct": "energy",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "pixel", "text": "Pixelanzahl" },
+            { "value": "audio", "text": "Audiodatenrate/-größe" },
+            { "value": "avail", "text": "Verfügbarkeit/Ausfallzeit" },
+            { "value": "energy", "text": "Energie/Laufzeit" },
+            { "value": "base64", "text": "Base64-Overhead" }
+          ]
+        },
+        {
+          "key": "mf5",
+          "label": "Textkodierung mit typischer Vergrößerung um etwa 33%",
+          "correct": "base64",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "pixel", "text": "Pixelanzahl" },
+            { "value": "audio", "text": "Audiodatenrate/-größe" },
+            { "value": "avail", "text": "Verfügbarkeit/Ausfallzeit" },
+            { "value": "energy", "text": "Energie/Laufzeit" },
+            { "value": "base64", "text": "Base64-Overhead" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finale-workflow-capital",
+      "type": "capital",
+      "title": "Finale: Rechenworkflow unter Prüfungsdruck",
+      "subtitle": "Ordne den sicheren AP1-Rechenablauf.",
+      "hintDefault": "Kontext -> Einheit -> Formel -> Rechnen -> Runden -> Plausibilität -> Ergebnistext.",
+      "rows": [
+        {
+          "key": "fw1",
+          "label": "Fragestellung fachlich einordnen (was ist gesucht?)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw2",
+          "label": "Einheiten harmonisieren (bit/Byte, SI/IEC, s/min/h)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw3",
+          "label": "Passende Formel auswählen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw4",
+          "label": "Mit vollen Werten rechnen (nicht früh runden)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw5",
+          "label": "Erst am Ende sinnvoll runden",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw6",
+          "label": "Plausibilität/Überschlag gegenprüfen",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "fw7",
+          "label": "Ergebnis mit Einheit und Aussage notieren",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    }
+  ]
+}

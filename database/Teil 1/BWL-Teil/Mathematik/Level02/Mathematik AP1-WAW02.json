@@ -1,0 +1,499 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Mathematik für die AP1 (Level 2)",
+  "description": "Schritt 1: korrektes Rechenkonzept wählen. Schritt 2: tragende Gründe markieren.",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Eine SSD ist mit 1 TB beworben, im Betriebssystem werden rund 931 GiB angezeigt. Ein Azubi meldet einen Defekt.",
+      "tags": ["SI/IEC", "Einheiten", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "si_iec",
+          "label": "SI/IEC-Umrechnung als Hauptursache",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Hersteller rechnen meist dezimal (TB), Betriebssysteme oft binär (TiB/GiB).", "correct": true },
+            { "id": "w2", "text": "1 TB ist kleiner als 1 TiB, deshalb wirkt die Anzeige niedriger.", "correct": true },
+            { "id": "w3", "text": "Ohne Defekt darf es keine Abweichung geben.", "correct": false },
+            { "id": "w4", "text": "Dateisystem-Overhead existiert, ist aber nicht die Hauptursache dieses typischen Sprungs.", "correct": true }
+          ]
+        },
+        {
+          "id": "dateisystem",
+          "label": "Nur Dateisystem-Overhead",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Overhead ist real, erklärt aber den Standardunterschied nicht alleine.", "correct": true },
+            { "id": "w2", "text": "SI/IEC ist in AP1-Aufgaben oft die Kernursache.", "correct": true },
+            { "id": "w3", "text": "Overhead ersetzt jede Einheitenumrechnung.", "correct": false },
+            { "id": "w4", "text": "Die Kombination beider Effekte ist möglich, aber Einheitenfehler dominiert.", "correct": true }
+          ]
+        },
+        {
+          "id": "kompression",
+          "label": "Kompression reduziert physische Kapazität",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompression betrifft Datenrepräsentation, nicht die Nennkapazität des Datenträgers.", "correct": true },
+            { "id": "w2", "text": "Das Anzeigeproblem entsteht vor allem durch Präfixsysteme.", "correct": true },
+            { "id": "w3", "text": "Kompression und IEC sind dasselbe Konzept.", "correct": false },
+            { "id": "w4", "text": "Fachlich ist hier keine Sicherheitsfunktion beteiligt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Typischer SI/IEC-Unterschied, kein Defekt."
+    },
+    {
+      "id": "v02",
+      "profile": "Bei 250 Mbit/s rechnet jemand mit 250 MB/s und plant dadurch viel zu kurze Backupzeiten.",
+      "tags": ["bit/Byte", "Transfer", "Faktor 8"],
+      "options": [
+        {
+          "id": "bit_byte",
+          "label": "Faktor-8-Fehler (bit vs Byte)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "1 Byte = 8 bit, daher muss umgerechnet werden.", "correct": true },
+            { "id": "w2", "text": "250 Mbit/s sind theoretisch 31,25 MB/s, nicht 250 MB/s.", "correct": true },
+            { "id": "w3", "text": "Mbit/s und MB/s sind austauschbar.", "correct": false },
+            { "id": "w4", "text": "Der Fehler verändert die Größenordnung massiv.", "correct": true }
+          ]
+        },
+        {
+          "id": "si_iec",
+          "label": "Hauptproblem ist 1000 vs 1024",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "1000/1024 erzeugt kleinere Abweichungen als Faktor-8.", "correct": true },
+            { "id": "w2", "text": "Der Kernfehler liegt in der Grundgröße bit vs Byte.", "correct": true },
+            { "id": "w3", "text": "SI/IEC löst den Faktor-8-Fehler automatisch.", "correct": false },
+            { "id": "w4", "text": "Beide Themen sind relevant, aber nicht gleich stark in der Wirkung.", "correct": true }
+          ]
+        },
+        {
+          "id": "rundung",
+          "label": "Fehler nur durch Rundung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Rundung kann Abweichung erhöhen, aber nicht Faktor 8 erklären.", "correct": true },
+            { "id": "w2", "text": "Einheitenfehler schlägt viel früher zu.", "correct": true },
+            { "id": "w3", "text": "Runden am Ende ist grundsätzlich falsch.", "correct": false },
+            { "id": "w4", "text": "Saubere Einheiten und spätes Runden sind kombinierte Best Practice.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kernfehler ist die Verwechslung von bit/s und Byte/s (Faktor 8)."
+    },
+    {
+      "id": "v03",
+      "profile": "Eine 2 GiB-Datei wird über eine 400 Mbit/s-Leitung übertragen. Die Nettoleistung liegt bei 75%.",
+      "tags": ["Transferzeit", "Netto", "Einheiten"],
+      "options": [
+        {
+          "id": "zeit_mit_netto",
+          "label": "Transferzeit mit Netto-Rate rechnen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zuerst Datenmenge in bit oder Rate in Byte/s angleichen.", "correct": true },
+            { "id": "w2", "text": "Netto-Rate = Brutto-Rate × 0,75.", "correct": true },
+            { "id": "w3", "text": "Overhead darf ignoriert werden, wenn Leitung schnell genug ist.", "correct": false },
+            { "id": "w4", "text": "Die Formel Zeit = Menge / Rate bleibt gültig.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_brutto",
+          "label": "Nur Bruttorate verwenden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Brutto überschätzt den realen Durchsatz.", "correct": true },
+            { "id": "w2", "text": "Gerade bei Protokolloverhead entstehen sonst systematisch zu kurze Zeiten.", "correct": true },
+            { "id": "w3", "text": "Brutto und Netto sind in Prüfungen immer identisch.", "correct": false },
+            { "id": "w4", "text": "Aufgaben mit Prozentangabe wollen explizit Netto-Rechnung.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_si_iec",
+          "label": "Nur SI/IEC-Thema ohne Overhead",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SI/IEC ist relevant, aber hier ist Nettofaktor explizit gegeben.", "correct": true },
+            { "id": "w2", "text": "Overhead beeinflusst die Rate direkt.", "correct": true },
+            { "id": "w3", "text": "Eine Prozentangabe zur Nettoleistung ist mathematisch bedeutungslos.", "correct": false },
+            { "id": "w4", "text": "Mehrere Effekte (Einheit + Netto) können gleichzeitig wirken.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mit Netto-Rate rechnen: Einheiten angleichen und den 75%-Faktor berücksichtigen."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein KPI steigt von 4% auf 5%. Im Bericht steht „+1%“.",
+      "tags": ["Prozentpunkte", "Relative Änderung"],
+      "options": [
+        {
+          "id": "prozentpunkte",
+          "label": "Präzise: +1 Prozentpunkt (relativ +25%)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Absolute Differenz in Prozentwerten wird in Prozentpunkten angegeben.", "correct": true },
+            { "id": "w2", "text": "Relative Änderung ergibt sich aus 1/4 = 25%.", "correct": true },
+            { "id": "w3", "text": "+1% und +1 Prozentpunkt sind immer identisch.", "correct": false },
+            { "id": "w4", "text": "Falsche Benennung führt in AP1-Aufgaben oft zu Punktverlust.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_prozent",
+          "label": "+1% ist vollständig korrekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sprachlich und mathematisch ist die Angabe unpräzise.", "correct": true },
+            { "id": "w2", "text": "Je nach Kontext kann +1% relativ etwas anderes bedeuten.", "correct": true },
+            { "id": "w3", "text": "In der Fachsprache gibt es keine Prozentpunkte.", "correct": false },
+            { "id": "w4", "text": "Die Trennung absolut/relativ verbessert Interpretierbarkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "kettenprozent",
+          "label": "Das ist eine Kettenprozent-Aufgabe",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kettenprozent betrifft mehrfache aufeinanderfolgende Änderungen.", "correct": true },
+            { "id": "w2", "text": "Hier wird nur ein direkter Vorher-Nachher-Vergleich betrachtet.", "correct": true },
+            { "id": "w3", "text": "Kettenprozent ist bei jedem Prozentvergleich zwingend.", "correct": false },
+            { "id": "w4", "text": "Das Hauptthema ist Prozentpunkt vs relative Änderung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist +1 Prozentpunkt, relativ +25%."
+    },
+    {
+      "id": "v05",
+      "profile": "Gegeben ist die Adresse 10.1.5.97/27. Gesucht ist das korrekte Subnetz.",
+      "tags": ["Subnetting", "Blockgröße", "Netzadresse"],
+      "options": [
+        {
+          "id": "block27",
+          "label": "Blockgröße 32 anwenden -> Netz 10.1.5.96/27",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bei /27 ist die Blockgröße im letzten Oktett 32.", "correct": true },
+            { "id": "w2", "text": "Gültige Startwerte sind 0,32,64,96,128,...", "correct": true },
+            { "id": "w3", "text": "97 ist automatisch Netzadresse.", "correct": false },
+            { "id": "w4", "text": "97 liegt im Bereich 96-127.", "correct": true }
+          ]
+        },
+        {
+          "id": "netz97",
+          "label": "Netz ist 10.1.5.97/27",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Netzadresse muss auf Blockgrenze liegen.", "correct": true },
+            { "id": "w2", "text": "97 ist innerhalb des Hostbereichs.", "correct": true },
+            { "id": "w3", "text": "Bei /27 kann jede Adresse Netzadresse sein.", "correct": false },
+            { "id": "w4", "text": "Maskenlogik entscheidet über Netz-/Hostrolle.", "correct": true }
+          ]
+        },
+        {
+          "id": "netz64",
+          "label": "Netz ist 10.1.5.64/27",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "64-95 ist der vorherige Block.", "correct": true },
+            { "id": "w2", "text": "97 liegt außerhalb dieses Bereichs.", "correct": true },
+            { "id": "w3", "text": "Alle /27-Blöcke haben denselben Hostbereich.", "correct": false },
+            { "id": "w4", "text": "Die richtige Zuordnung folgt aus dem nächstkleineren Blockstart.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtiges Netz ist 10.1.5.96/27."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein RAID5-Verbund nutzt 4 Disks: 2 TB, 2 TB, 2 TB, 1 TB. Ein Team erwartet 6 TB nutzbar.",
+      "tags": ["RAID", "Kapazität", "Mischgrößen"],
+      "options": [
+        {
+          "id": "kleinste_platte",
+          "label": "Kleinste Platte limitiert: 3 TB nutzbar",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bei Mischgrößen wird effektiv mit der kleinsten Platte gerechnet.", "correct": true },
+            { "id": "w2", "text": "RAID5-Kapazität = (n-1)·kleinste Größe -> 3·1 TB = 3 TB.", "correct": true },
+            { "id": "w3", "text": "Parität ignoriert Plattengrößen komplett.", "correct": false },
+            { "id": "w4", "text": "Unbalancierte Größen können erheblichen Kapazitätsverlust erzeugen.", "correct": true }
+          ]
+        },
+        {
+          "id": "sechs_tb",
+          "label": "6 TB, weil drei Platten à 2 TB Daten tragen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dieses Ergebnis gilt nur bei vier gleich großen 2-TB-Platten.", "correct": true },
+            { "id": "w2", "text": "Die 1-TB-Disk begrenzt nutzbare Größe pro Slot.", "correct": true },
+            { "id": "w3", "text": "RAID5 nutzt automatisch die größte Platte als Referenz.", "correct": false },
+            { "id": "w4", "text": "Mischgrößen sollten für Planung möglichst vermieden werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "raid1",
+          "label": "Es ist wie RAID1 zu rechnen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID1 basiert auf Spiegelung, RAID5 auf verteilter Parität.", "correct": true },
+            { "id": "w2", "text": "Formel und Fehlertoleranz unterscheiden sich deutlich.", "correct": true },
+            { "id": "w3", "text": "RAID1 und RAID5 liefern immer dieselbe Kapazität.", "correct": false },
+            { "id": "w4", "text": "Die richtige Auswahl hängt von Performance-, Kapazitäts- und Ausfallschutzanforderungen ab.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig sind 3 TB nutzbar, weil die kleinste Platte limitiert."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Bild wird von 1920x1080 auf 3840x2160 skaliert. Jemand behauptet: 'Doppelte Auflösung = doppelte Dateigröße'.",
+      "tags": ["Pixel", "Skalierung", "Medienmathe"],
+      "options": [
+        {
+          "id": "vierfache_pixel",
+          "label": "Vierfache Pixelzahl durch 2D-Skalierung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Breite und Höhe verdoppeln heißt Fläche/Pixelsumme mal vier.", "correct": true },
+            { "id": "w2", "text": "Unkomprimierte Datenmenge steigt bei gleicher Farbtiefe näherungsweise proportional zur Pixelzahl.", "correct": true },
+            { "id": "w3", "text": "Doppelte Breite und Höhe ergeben nur doppelte Pixelzahl.", "correct": false },
+            { "id": "w4", "text": "Kompression kann Enddateigröße beeinflussen, ändert aber die Pixelrechnung nicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "doppelt",
+          "label": "Nur doppelte Datenmenge",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "In 2D steigt die Fläche quadratisch mit dem linearen Faktor.", "correct": true },
+            { "id": "w2", "text": "Der lineare Skalierungsfaktor 2 erzeugt Faktor 4 bei Pixeln.", "correct": true },
+            { "id": "w3", "text": "Pixelzahl hängt nur von Breite ab.", "correct": false },
+            { "id": "w4", "text": "Die Aussage 'nur doppelt' ignoriert die zweite Dimension.", "correct": true }
+          ]
+        },
+        {
+          "id": "farbtiefe_haupt",
+          "label": "Hauptsache Farbtiefe, Pixelzahl egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Farbtiefe ist ein Faktor, aber Pixelzahl bleibt ebenso zentral.", "correct": true },
+            { "id": "w2", "text": "Unkomprimierte Größe ist Pixel × Farbtiefe / 8.", "correct": true },
+            { "id": "w3", "text": "Farbtiefe ersetzt die Auflösungsrechnung komplett.", "correct": false },
+            { "id": "w4", "text": "Beide Größen bestimmen gemeinsam die Datenmenge.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "2D-Skalierung mit Faktor 2 in beiden Achsen ergibt vierfache Pixelzahl."
+    },
+    {
+      "id": "v08",
+      "profile": "Ein SLA fordert 99,95% Verfügbarkeit pro 30 Tage. Das Team schätzt 'etwa 3,6 Stunden Ausfall' als zulässig.",
+      "tags": ["SLA", "Verfügbarkeit", "Ausfallzeit"],
+      "options": [
+        {
+          "id": "ausfall_rechnen",
+          "label": "Ausfallzeit-Rechnung ist deutlich kleiner",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ausfallzeit = Zeitraum × (1 - Verfügbarkeit).", "correct": true },
+            { "id": "w2", "text": "30 Tage = 43.200 min; 0,05% davon sind 21,6 min.", "correct": true },
+            { "id": "w3", "text": "99,95% entspricht mehreren Stunden erlaubtem Ausfall pro Monat.", "correct": false },
+            { "id": "w4", "text": "'Vier Neunen' vs 'drei Neunen' unterscheiden sich massiv in erlaubter Downtime.", "correct": true }
+          ]
+        },
+        {
+          "id": "stunden_passt",
+          "label": "3,6 Stunden sind plausibel",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "3,6 Stunden wären eher in der Größenordnung deutlich schlechterer Verfügbarkeit.", "correct": true },
+            { "id": "w2", "text": "Die Rechnung mit Minuten zeigt einen viel kleineren Wert.", "correct": true },
+            { "id": "w3", "text": "Je höher die Verfügbarkeit, desto höher die erlaubte Ausfallzeit.", "correct": false },
+            { "id": "w4", "text": "Einheitenfehler (Stunden statt Minuten) sind hier häufig.", "correct": true }
+          ]
+        },
+        {
+          "id": "reaktion",
+          "label": "Das ist nur eine Reaktionszeit-Frage",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Reaktionszeit und Verfügbarkeit messen unterschiedliche SLA-Aspekte.", "correct": true },
+            { "id": "w2", "text": "Hier geht es explizit um Downtime über einen Zeitraum.", "correct": true },
+            { "id": "w3", "text": "Downtime lässt sich aus Reaktionszeit direkt ableiten.", "correct": false },
+            { "id": "w4", "text": "Mehrere SLA-Kennzahlen sollten getrennt interpretiert werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei 99,95% in 30 Tagen sind nur 21,6 Minuten Ausfall zulässig."
+    },
+    {
+      "id": "v09",
+      "profile": "In einem SLA steht: 'Response < 15 min, RTO < 4 h'. Ein Azubi sagt: 'Das ist doppelt gemoppelt, beides ist dieselbe Kennzahl'.",
+      "tags": ["SLA", "Reaktionszeit", "RTO"],
+      "options": [
+        {
+          "id": "response_vs_rto",
+          "label": "Reaktionszeit und RTO sind unterschiedliche Ziele",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Reaktionszeit beschreibt den Start der Bearbeitung.", "correct": true },
+            { "id": "w2", "text": "RTO beschreibt die vollständige Wiederherstellung.", "correct": true },
+            { "id": "w3", "text": "Beide Werte messen exakt denselben Zeitpunkt.", "correct": false },
+            { "id": "w4", "text": "Trennung verhindert falsche SLA-Interpretationen.", "correct": true }
+          ]
+        },
+        {
+          "id": "gleich",
+          "label": "Beides ist identisch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Die Kennzahlen haben unterschiedliche Bedeutung und Steuerwirkung.", "correct": true },
+            { "id": "w2", "text": "Schnell reagieren heißt nicht automatisch schnell wiederherstellen.", "correct": true },
+            { "id": "w3", "text": "Wenn Response eingehalten wird, ist RTO automatisch erfüllt.", "correct": false },
+            { "id": "w4", "text": "Beide Ziele können unabhängig voneinander verletzt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_verf",
+          "label": "Nur Verfügbarkeit zählt, Zeiten sind nebensächlich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verfügbarkeit ist zentral, aber nicht die einzige SLA-Kennzahl.", "correct": true },
+            { "id": "w2", "text": "Response und RTO beeinflussen Kundenerlebnis stark.", "correct": true },
+            { "id": "w3", "text": "Zeitziele sind mathematisch nicht prüfbar.", "correct": false },
+            { "id": "w4", "text": "SLA-Steuerung nutzt meist mehrere Kennzahlen parallel.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Response und RTO sind verschieden: Start der Bearbeitung vs Wiederherstellung."
+    },
+    {
+      "id": "v10",
+      "profile": "Eine USV hat 1200 Wh nutzbare Energie. Die Last beträgt 300 W, der Gesamtwirkungsgrad wird mit 0,9 angesetzt.",
+      "tags": ["USV", "Energie", "Wirkungsgrad"],
+      "options": [
+        {
+          "id": "laufzeit_mit_wirkungsgrad",
+          "label": "Laufzeit unter Berücksichtigung des Wirkungsgrads",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Theoretisch h = Wh/W -> 1200/300 = 4 h.", "correct": true },
+            { "id": "w2", "text": "Mit 90% Wirkungsgrad bleiben effektiv etwa 3,6 h.", "correct": true },
+            { "id": "w3", "text": "Wirkungsgrad erhöht die Laufzeit über den Theoriewert.", "correct": false },
+            { "id": "w4", "text": "Praxiswerte liegen oft unter Idealrechnung durch weitere Verluste/Alterung.", "correct": true }
+          ]
+        },
+        {
+          "id": "vier_stunden_fix",
+          "label": "Immer exakt 4 Stunden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "4 h ist nur der Idealwert ohne Verluste.", "correct": true },
+            { "id": "w2", "text": "Wirkungsgrad verändert nutzbare Energie.", "correct": true },
+            { "id": "w3", "text": "USV-Berechnungen ignorieren Wirkungsgrad grundsätzlich.", "correct": false },
+            { "id": "w4", "text": "Auch Lastschwankungen können die Laufzeit beeinflussen.", "correct": true }
+          ]
+        },
+        {
+          "id": "leistung_egal",
+          "label": "Nur Wh zählen, W ist egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Laufzeit hängt direkt vom Lastwert in Watt ab.", "correct": true },
+            { "id": "w2", "text": "Bei doppelter Last halbiert sich die Laufzeit näherungsweise.", "correct": true },
+            { "id": "w3", "text": "Watt beeinflusst nur den Kaufpreis, nicht die Laufzeit.", "correct": false },
+            { "id": "w4", "text": "Formel h = Wh/W zeigt die Abhängigkeit eindeutig.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mit Wirkungsgrad liegt die erwartete Laufzeit eher bei ca. 3,6 h statt 4 h."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Team möchte Binärdaten in JSON transportieren und entscheidet sich für Base64. Es wird behauptet: 'Das spart Platz und verschlüsselt automatisch'.",
+      "tags": ["Base64", "Encoding", "Sicherheit"],
+      "options": [
+        {
+          "id": "base64_korrekt",
+          "label": "Base64 ist Encoding mit Overhead, keine Verschlüsselung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Base64 wandelt Binärdaten in Textdarstellung um.", "correct": true },
+            { "id": "w2", "text": "Typischerweise wächst die Datenmenge um etwa ein Drittel.", "correct": true },
+            { "id": "w3", "text": "Base64 verschlüsselt Inhalte kryptographisch.", "correct": false },
+            { "id": "w4", "text": "Für Schutz braucht man echte Verschlüsselung, nicht nur Kodierung.", "correct": true }
+          ]
+        },
+        {
+          "id": "base64_kompression",
+          "label": "Base64 ist primär Kompression",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompression reduziert Daten, Base64 erhöht sie meist.", "correct": true },
+            { "id": "w2", "text": "Base64 adressiert Textkompatibilität, nicht Speicherersparnis.", "correct": true },
+            { "id": "w3", "text": "Base64 ist verlustfreie Kompression mit eingebauter Verschlüsselung.", "correct": false },
+            { "id": "w4", "text": "Bei APIs kann Base64 aus Transportgründen dennoch sinnvoll sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "base64_sicherheit",
+          "label": "Base64 genügt als Sicherheitsmaßnahme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kodierte Daten lassen sich ohne Schlüssel zurückwandeln.", "correct": true },
+            { "id": "w2", "text": "Vertraulichkeit erfordert kryptografische Verfahren.", "correct": true },
+            { "id": "w3", "text": "Sicherheitsstandards erkennen Base64 als Verschlüsselung an.", "correct": false },
+            { "id": "w4", "text": "Base64 kann Teil eines sicheren Workflows sein, ersetzt aber keine Krypto.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Base64 ist Textkodierung mit Overhead, keine Kompression und keine Verschlüsselung."
+    },
+    {
+      "id": "v12",
+      "profile": "Eine Rechnung liefert für 800 MB Download bei 50 Mbit/s eine Dauer von 16 Sekunden. Die Aufgabenstellung enthält keinen Overheadfaktor.",
+      "tags": ["Transferzeit", "Plausibilität", "Einheiten"],
+      "options": [
+        {
+          "id": "plausi_fehler",
+          "label": "Plausibilitätscheck zeigt Einheitenfehler",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "800 MB entsprechen 6400 Mbit.", "correct": true },
+            { "id": "w2", "text": "6400/50 ergibt 128 Sekunden theoretisch, nicht 16.", "correct": true },
+            { "id": "w3", "text": "16 Sekunden sind korrekt, wenn man MB direkt durch Mbit/s teilt.", "correct": false },
+            { "id": "w4", "text": "Einheitenangleichung ist vor jeder Zeitrechnung zwingend.", "correct": true }
+          ]
+        },
+        {
+          "id": "korrekt_16",
+          "label": "16 Sekunden sind korrekt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Ergebnis unterschätzt Dauer um Faktor 8.", "correct": true },
+            { "id": "w2", "text": "Bit/Byte-Verwechslung ist klassische AP1-Falle.", "correct": true },
+            { "id": "w3", "text": "Faktor 8 gilt nur für SI/IEC, nicht für bit/Byte.", "correct": false },
+            { "id": "w4", "text": "Selbst ohne Overhead muss die Idealdauer deutlich höher liegen.", "correct": true }
+          ]
+        },
+        {
+          "id": "overhead_schuld",
+          "label": "Der Fehler kommt allein vom fehlenden Overhead",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Overhead erklärt Abweichungen, aber nicht den Faktor-8-Kernfehler.", "correct": true },
+            { "id": "w2", "text": "Ohne Overhead bleibt die Idealrechnung trotzdem eindeutig.", "correct": true },
+            { "id": "w3", "text": "Overhead kann den Einheitenfehler vollständig kompensieren.", "correct": false },
+            { "id": "w4", "text": "Zuerst Einheit korrekt, danach eventuelle Nettofaktoren anwenden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Mit korrekter Einheit ergibt sich theoretisch 128 Sekunden."
+    }
+  ]
+}
