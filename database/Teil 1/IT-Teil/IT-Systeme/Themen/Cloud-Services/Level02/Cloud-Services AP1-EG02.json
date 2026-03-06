@@ -1,0 +1,324 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Cloud-Services (AP1) Level 2",
+  "topic": "IaaS/PaaS/SaaS, Verantwortungsmatrix, Kosten, Security und Portabilitaet",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "service-model-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 1: Komplexe Modellzuordnung",
+      "subtitle": "Ordne jedes Szenario dem passendsten Servicemodell zu.",
+      "hintDefault": "IaaS bei tiefer Systemkontrolle, PaaS bei Codefokus, SaaS bei fertiger Fachanwendung.",
+      "sortColumns": [
+        { "zone": "iaas", "label": "IaaS", "hint": "OS/Netz selber verwalten" },
+        { "zone": "paas", "label": "PaaS", "hint": "Code deployen, Plattform gemanagt" },
+        { "zone": "saas", "label": "SaaS", "hint": "Fertiges Produkt nutzen" }
+      ],
+      "sortCards": [
+        { "id": "m1", "text": "Legacy-App braucht Root-Zugriff und eigenes Patchfenster", "correctZone": "iaas" },
+        { "id": "m2", "text": "Team liefert nur API-Code, Runtime und Skalierung sind gemanagt", "correctZone": "paas" },
+        { "id": "m3", "text": "CRM wird direkt per Browser genutzt", "correctZone": "saas" },
+        { "id": "m4", "text": "Eigene Firewallregeln und Kernelparameter muessen gesetzt werden", "correctZone": "iaas" },
+        { "id": "m5", "text": "Webservice laeuft auf gemanagter App-Plattform ohne OS-Admin", "correctZone": "paas" },
+        { "id": "m6", "text": "Fachbereich braucht sofort nutzbares Ticketsystem", "correctZone": "saas" },
+        { "id": "m7", "text": "Spezialsoftware verlangt proprietaeren Treiber im Gast-OS", "correctZone": "iaas" },
+        { "id": "m8", "text": "Anwendungsdeploy ueber CI/CD auf standardisierter Laufzeit", "correctZone": "paas" },
+        { "id": "m9", "text": "Mitarbeiter buchen Standard-Office-Loesung als Abonnement", "correctZone": "saas" }
+      ]
+    },
+    {
+      "id": "responsibility-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 2: Shared Responsibility",
+      "subtitle": "Klaere Verantwortungen ohne Pruefungsfalle.",
+      "hintDefault": "Auch bei SaaS bleiben Kundenpflichten bei Identitaeten, Freigaben und Datenklassifizierung.",
+      "questions": [
+        {
+          "id": "sr1",
+          "text": "1. Welche Aussage ist fachlich korrekt?",
+          "options": [
+            { "value": "a", "text": "In SaaS uebernimmt der Anbieter automatisch Rollenpflege und Freigaben der Fachabteilung." },
+            { "value": "b", "text": "In SaaS verantwortet der Kunde weiterhin Benutzerrechte, Datenfreigaben und Compliance-Prozesse." },
+            { "value": "c", "text": "In IaaS liegt OS-Hardening komplett beim Anbieter." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sr2",
+          "text": "2. Was gehoert typischerweise zum Kundenanteil bei PaaS?",
+          "options": [
+            { "value": "a", "text": "Physische Sicherheit im Rechenzentrum" },
+            { "value": "b", "text": "App-Konfiguration, Secrets-Management und IAM-Rollen" },
+            { "value": "c", "text": "Austausch defekter Host-Hardware" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sr3",
+          "text": "3. Welche Pruefungsfalle ist richtig aufgeloest?",
+          "options": [
+            { "value": "a", "text": "Managed Service bedeutet immer automatisch compliance-konforme Nutzung." },
+            { "value": "b", "text": "Managed Service reduziert Betriebslast, ersetzt aber nicht Governance und Kontrollpflichten." },
+            { "value": "c", "text": "Shared Responsibility gilt nur fuer IaaS, nicht fuer SaaS." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "control-effort-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 3: Kontrolle vs Betriebsaufwand",
+      "subtitle": "Ordne Aussagen nach typischer Kontrolltiefe.",
+      "hintDefault": "Hohe Kontrolle bedeutet meist auch mehr Eigenbetrieb.",
+      "sortColumns": [
+        { "zone": "high", "label": "Hohe Kontrolltiefe", "hint": "mehr Eigenbetrieb" },
+        { "zone": "medium", "label": "Mittlere Kontrolltiefe", "hint": "Plattformtrade-off" },
+        { "zone": "low", "label": "Geringe Kontrolltiefe", "hint": "fertiger Dienst" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Eigene OS-Patches und Middleware-Setup", "correctZone": "high" },
+        { "id": "c2", "text": "Runtime-Versionen innerhalb vorgegebener Plattformregeln", "correctZone": "medium" },
+        { "id": "c3", "text": "Feature-Konfiguration statt Serveradministration", "correctZone": "low" },
+        { "id": "c4", "text": "Eigene Netzsegmentierung pro VM", "correctZone": "high" },
+        { "id": "c5", "text": "Codefokus mit gemanagtem Deployment", "correctZone": "medium" },
+        { "id": "c6", "text": "Updatezeitpunkt der Anwendung weitgehend anbietergesteuert", "correctZone": "low" }
+      ]
+    },
+    {
+      "id": "decision-capital-l2",
+      "type": "capital",
+      "title": "Raetsel 4: AP1-Entscheidungsablauf",
+      "subtitle": "Bringe die Schritte fuer eine belastbare Service-Modell-Entscheidung in Ordnung.",
+      "hintDefault": "Erst Anforderungen und Risiken, dann Modellwahl und Betriebsdesign.",
+      "rows": [
+        {
+          "key": "req",
+          "label": "Fachliche, technische und regulatorische Anforderungen aufnehmen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "risk",
+          "label": "Risiken bewerten (Lock-in, Kosten, Security, Compliance)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "IaaS/PaaS/SaaS-Optionen vergleichen und Zielmodell waehlen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "controls",
+          "label": "IAM-, Logging-, Kosten- und Compliance-Kontrollen definieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilotbetrieb mit Last-, Restore- und Sicherheits-Tests",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "go_live",
+          "label": "Rollout mit Monitoring, Budgets und Review-Zyklus",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lockin-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 5: Lock-in realistisch bewerten",
+      "subtitle": "Worin liegt das Risiko und wie reduziert man es?",
+      "hintDefault": "Lock-in ist vor allem Architektur- und Datenportabilitaetsthema.",
+      "questions": [
+        {
+          "id": "l1",
+          "text": "1. Was reduziert Lock-in-Risiko am wirksamsten?",
+          "options": [
+            { "value": "a", "text": "Ausschliesslich proprietaere Spezial-APIs nutzen" },
+            { "value": "b", "text": "Offene Schnittstellen, Containerisierung und klarer Datenexportpfad" },
+            { "value": "c", "text": "Kostenalarme deaktivieren" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "l2",
+          "text": "2. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Lock-in ist nur ein theoretisches Problem ohne Migrationskosten." },
+            { "value": "b", "text": "Lock-in kann Wechselkosten, Projektlaufzeit und Betriebsrisiko deutlich erhoehen." },
+            { "value": "c", "text": "Lock-in betrifft nur SaaS, nicht IaaS/PaaS." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "l3",
+          "text": "3. Was gehoert in eine Exit-Strategie?",
+          "options": [
+            { "value": "a", "text": "Nur die Vertragslaufzeit" },
+            { "value": "b", "text": "Datenexportformat, Verantwortlichkeiten, Testmigration und Downtime-Plan" },
+            { "value": "c", "text": "Nur eine Liste bevorzugter Anbieter" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "risk-control-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 6: Risiko zu Gegenmassnahme",
+      "subtitle": "Ordne jede Massnahme dem primaeren Risiko zu.",
+      "hintDefault": "Kosten -> FinOps, Security -> IAM/Policies, Compliance -> Residency/AVV, Portabilitaet -> Exit-Design.",
+      "sortColumns": [
+        { "zone": "cost", "label": "Kostenrisiko", "hint": "Transparenz und Limits" },
+        { "zone": "security", "label": "Security-Risiko", "hint": "Least Privilege und Guardrails" },
+        { "zone": "compliance", "label": "Compliance-Risiko", "hint": "Data Residency und Nachweise" },
+        { "zone": "portability", "label": "Lock-in-Risiko", "hint": "Architektur und Exit" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "Budgets mit Alarmstufen und Owner-Tagging", "correctZone": "cost" },
+        { "id": "r2", "text": "MFA-Pflicht und rollenbasiertes Least Privilege", "correctZone": "security" },
+        { "id": "r3", "text": "Vertragliche AVV/TOMs und Regionenbindung", "correctZone": "compliance" },
+        { "id": "r4", "text": "Standardisierte APIs und regelmaessig getesteter Datenexport", "correctZone": "portability" },
+        { "id": "r5", "text": "Auto-Shutdown fuer ungenutzte Testressourcen", "correctZone": "cost" },
+        { "id": "r6", "text": "Policy as Code blockiert oeffentliche Storage-Freigaben", "correctZone": "security" },
+        { "id": "r7", "text": "Auditfaehige Loesch- und Aufbewahrungsprozesse", "correctZone": "compliance" },
+        { "id": "r8", "text": "Dokumentierter Umzugsplan auf alternative Plattform", "correctZone": "portability" }
+      ]
+    },
+    {
+      "id": "security-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 7: Security-Fallen",
+      "subtitle": "Trenne echte Sicherheitskontrollen von Fehlschluessen.",
+      "hintDefault": "Der haeufigste Fehler ist nicht die Cloud an sich, sondern falsche Konfiguration.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Managed Service macht Sicherheitskonfiguration ueberfluessig." },
+            { "value": "b", "text": "Fehlkonfigurationen wie offene Buckets oder zu breite Rollen sind haeufige Incident-Ursachen." },
+            { "value": "c", "text": "IAM ist nur in On-Prem relevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Welche Massnahme ist fuer privilegierte Konten zentral?",
+          "options": [
+            { "value": "a", "text": "MFA und getrennte Admin-Rollen" },
+            { "value": "b", "text": "Nur laengere Passwoerter ohne weitere Kontrollen" },
+            { "value": "c", "text": "Abschalten aller Audit-Logs" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s3",
+          "text": "3. Welche Kombination ist AP1-reif?",
+          "options": [
+            { "value": "a", "text": "Least Privilege, Logging, regelmaessige Rechte-Reviews, IaC-Policies" },
+            { "value": "b", "text": "Nur Firewall-Regeln, sonst keine Governance" },
+            { "value": "c", "text": "Nur Backup ohne Zugriffskontrolle" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "final-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: AP1-Gesamtentscheidung",
+      "subtitle": "Waehle die fachlich robusteste Gesamtbewertung.",
+      "hintDefault": "Service-Modell-Entscheidungen sind immer Trade-offs aus Kontrolle, Aufwand, Risiko und Wirtschaftlichkeit.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Aussage ist insgesamt korrekt?",
+          "options": [
+            { "value": "a", "text": "SaaS ist immer die beste Wahl, egal welche Anforderungen vorliegen." },
+            { "value": "b", "text": "Das passende Modell ergibt sich aus Kontrollbedarf, Compliance, Betriebsfaehigkeit und Kostenzielen." },
+            { "value": "c", "text": "IaaS ist veraltet und sollte grundsaetzlich vermieden werden." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Welche Kombination minimiert Betriebslast bei akzeptabler Anpassbarkeit haeufig?",
+          "options": [
+            { "value": "a", "text": "PaaS mit klaren Governance-Kontrollen" },
+            { "value": "b", "text": "IaaS ohne Automatisierung" },
+            { "value": "c", "text": "SaaS ohne Rollen- und Freigabekonzept" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Was ist fuer eine AP1-taugliche Begruendung unverzichtbar?",
+          "options": [
+            { "value": "a", "text": "Nur ein einzelner Vorteil" },
+            { "value": "b", "text": "Abwaegung von Verantwortung, Sicherheit, Kosten und Portabilitaet" },
+            { "value": "c", "text": "Nur Anbieterpraeferenz" }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

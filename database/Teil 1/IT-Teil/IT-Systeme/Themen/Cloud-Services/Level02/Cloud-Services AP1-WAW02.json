@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Cloud-Services (AP1) Level 2",
+  "description": "Anspruchsvolle AP1-Faelle zur Auswahl von IaaS/PaaS/SaaS inklusive Verantwortung, Security, Kosten und Portabilitaet.",
+  "cases": [
+    {
+      "id": "cs01",
+      "profile": "Eine Fachanwendung benoetigt eigene Kernel-Module, feste OS-Version und feinsteuerbare Netzwerkregeln. Das Team muss den Betriebsstack komplett selbst administrieren.",
+      "tags": ["IaaS", "Kontrolle", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "IaaS waehlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IaaS liefert die notwendige Kontrolltiefe auf OS- und Netzebene.", "correct": true },
+            { "id": "w2", "text": "Patching und Hardening bleiben in diesem Modell beim Kunden.", "correct": true },
+            { "id": "w3", "text": "SaaS ist passend, weil dort Kernelmodule frei installiert werden koennen.", "correct": false },
+            { "id": "w4", "text": "Hohe Kontrolle bedeutet gleichzeitig hohen Eigenbetriebsaufwand.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "PaaS erzwingen wegen schnellerer Bereitstellung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PaaS beschleunigt Deployment, bietet aber meist keine Kernel- und OS-Freiheit.", "correct": true },
+            { "id": "w2", "text": "Spezielle Systemanforderungen koennen PaaS ausschliessen.", "correct": true },
+            { "id": "w3", "text": "PaaS garantiert immer Root-Zugriff auf die Plattformhosts.", "correct": false },
+            { "id": "w4", "text": "Modellwahl folgt Anforderungen, nicht nur Bereitstellungsgeschwindigkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "SaaS nutzen und Anwendung intern nachbauen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SaaS ist fertige Software, nicht eigene Kernel-nahe Spezialumgebung.", "correct": true },
+            { "id": "w2", "text": "Die geforderte Systemkontrolle ist mit SaaS typischerweise nicht erreichbar.", "correct": true },
+            { "id": "w3", "text": "SaaS ermoeglicht generell maximale technische Tiefenkonfiguration.", "correct": false },
+            { "id": "w4", "text": "Die Option verfehlt den Kern der Anforderung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "IaaS ist korrekt, weil die Aufgabe tiefe technische Kontrolle ueber OS, Netzwerk und Betrieb verlangt."
+    },
+    {
+      "id": "cs02",
+      "profile": "Ein Vertriebsteam will in zwei Wochen ein CRM produktiv nutzen, ohne eigenes Deploymentteam aufzubauen. Anpassungen sollen primar ueber Konfiguration erfolgen.",
+      "tags": ["SaaS", "Time-to-Value", "Fachanwendung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "SaaS priorisieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "SaaS ermoeglicht schnellen Start mit geringem Betriebsaufwand.", "correct": true },
+            { "id": "w2", "text": "Konfiguration auf Fachseite passt zum Zielbild ohne Eigenbetrieb.", "correct": true },
+            { "id": "w3", "text": "SaaS ist unpassend, weil dort kein Benutzer- und Rollenmanagement moeglich ist.", "correct": false },
+            { "id": "w4", "text": "Nachteile bleiben: geringere technische Kontrolle und Anbieterabhaengigkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "IaaS aufbauen und CRM selbst betreiben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "IaaS ist machbar, aber fuer Ziel \"schnell ohne Betriebsteam\" meist ineffizient.", "correct": true },
+            { "id": "w2", "text": "Eigenbetrieb erhoeht Aufwand bei Updates, Sicherheit und Verfuegbarkeit.", "correct": true },
+            { "id": "w3", "text": "IaaS reduziert den Betriebsaufwand gegenueber SaaS automatisch auf null.", "correct": false },
+            { "id": "w4", "text": "Die Option widerspricht den knappen Ressourcen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "PaaS mit kompletter Eigenentwicklung starten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PaaS passt fuer eigene App-Entwicklung, nicht zwingend fuer sofort nutzbare Standardfunktion.", "correct": true },
+            { "id": "w2", "text": "Eigenentwicklung verlaengert Time-to-Value deutlich.", "correct": true },
+            { "id": "w3", "text": "PaaS liefert automatisch fertiges CRM ohne Entwicklungsaufwand.", "correct": false },
+            { "id": "w4", "text": "Hier ist eine fertige Loesung sinnvoller als Neubau.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "SaaS ist die beste Wahl fuer schnellen Nutzen mit minimalem Eigenbetrieb."
+    },
+    {
+      "id": "cs03",
+      "profile": "Ein Dev-Team entwickelt eine API-Plattform und will sich auf Code konzentrieren. Betriebssystempflege und Runtime-Updates sollen weitgehend entfallen.",
+      "tags": ["PaaS", "DevOps", "Betriebsentlastung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "PaaS einsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "PaaS reduziert Betriebsanteile und beschleunigt Deployments.", "correct": true },
+            { "id": "w2", "text": "Das Team kann sich auf Anwendungscode und Fachlogik fokussieren.", "correct": true },
+            { "id": "w3", "text": "PaaS verlangt typischerweise mehr OS-Administration als IaaS.", "correct": false },
+            { "id": "w4", "text": "Trade-off bleibt: weniger Tiefenkontrolle als bei IaaS.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "IaaS waehlen, um Betrieb komplett zu vermeiden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "IaaS entlastet nicht von OS- und Plattformbetrieb.", "correct": true },
+            { "id": "w2", "text": "Das steht im Widerspruch zur Zielsetzung \"Code statt Betrieb\".", "correct": true },
+            { "id": "w3", "text": "IaaS ist per Definition das Modell mit dem geringsten Betriebsaufwand.", "correct": false },
+            { "id": "w4", "text": "IaaS ist sinnvoll, wenn hohe Kontrolle wichtiger als Entlastung ist.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "SaaS nehmen und API selbst schreiben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SaaS adressiert fertige Anwendungen, nicht primar eigenes App-Hosting.", "correct": true },
+            { "id": "w2", "text": "Fuer eigene Entwicklungsplattform ist PaaS typischerweise passender.", "correct": true },
+            { "id": "w3", "text": "SaaS bietet immer frei konfigurierbare Runtime fuer Eigencode.", "correct": false },
+            { "id": "w4", "text": "Die Option mischt Nutzungsmodell und Entwicklungsanforderung unpassend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "PaaS passt am besten, weil es Entwicklung beschleunigt und den Plattformbetrieb reduziert."
+    },
+    {
+      "id": "cs04",
+      "profile": "Im SaaS-System wurden zu breite Rollen vergeben; dadurch konnten unautorisierte Datenexporte erfolgen. Das Team diskutiert die Ursache.",
+      "tags": ["SaaS", "IAM", "Shared Responsibility"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Kundenverantwortung bei Rollen und Freigaben anerkennen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Auch in SaaS bleibt Zugriffssteuerung beim Kunden.", "correct": true },
+            { "id": "w2", "text": "Least Privilege und Rechte-Review sind kundenseitige Pflichtaufgaben.", "correct": true },
+            { "id": "w3", "text": "In SaaS sind Berechtigungsfehler immer ausschliesslich Anbieterfehler.", "correct": false },
+            { "id": "w4", "text": "Der Vorfall ist ein klassischer Shared-Responsibility-Pruefpunkt.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Provider verantwortlich machen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Diese Sicht ignoriert kundenseitige Governance-Aufgaben.", "correct": true },
+            { "id": "w2", "text": "Rollenpflege und fachliche Freigaben liegen in der Regel beim Kunden.", "correct": true },
+            { "id": "w3", "text": "SaaS entfernt jede Verantwortung des Kunden fuer Datenzugriffe.", "correct": false },
+            { "id": "w4", "text": "Eine einseitige Schuldzuweisung verhindert wirksame Verbesserung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Incident als reines FinOps-Problem behandeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Der Kern ist Sicherheits- und Berechtigungsgovernance, nicht primaer Kostensteuerung.", "correct": true },
+            { "id": "w2", "text": "FinOps kann zusaetzlich helfen, ersetzt aber IAM-Kontrollen nicht.", "correct": true },
+            { "id": "w3", "text": "Kosten-Tagging behebt Berechtigungseskalation vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Vorfallanalyse muss Ursachenpraevention in Security adressieren.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kernursache liegt in der Kundenverantwortung fuer Rollen- und Freigabekonzept innerhalb des SaaS-Systems."
+    },
+    {
+      "id": "cs05",
+      "profile": "Ein PaaS-Projekt verursacht stark schwankende Kosten. Ursache sind unkontrollierte Skalierungsregeln und fehlende Team-Zuordnung der Ressourcen.",
+      "tags": ["PaaS", "FinOps", "Kostenkontrolle"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "FinOps-Set einfuehren (Tagging, Budgets, Rightsizing)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Tagging schafft Verantwortung und Kosten-Transparenz pro Team.", "correct": true },
+            { "id": "w2", "text": "Budget-Alarme und Skalierungsgrenzen verhindern Ueberraschungen.", "correct": true },
+            { "id": "w3", "text": "Kosten steuern sich im PaaS-Betrieb automatisch ohne Governance.", "correct": false },
+            { "id": "w4", "text": "Rightsizing auf Basis Messdaten reduziert dauerhafte Ueberdimensionierung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur groesseres Monatsbudget freigeben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Budget loest keine Ursachenprobleme.", "correct": true },
+            { "id": "w2", "text": "Ohne Sichtbarkeit bleiben Ineffizienzen bestehen.", "correct": true },
+            { "id": "w3", "text": "Budgeterhoehung ersetzt strukturiertes FinOps-Management.", "correct": false },
+            { "id": "w4", "text": "Nachhaltige Steuerung braucht Prozesse, nicht nur Budgetpuffer.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Kostenwarnungen deaktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Warnungen werden Ausreisser spaeter erkannt.", "correct": true },
+            { "id": "w2", "text": "Frueherkennung ist zentral fuer cloudtypische Verbrauchsmodelle.", "correct": true },
+            { "id": "w3", "text": "Warnungen stoeren nur und haben keinen Steuerungsnutzen.", "correct": false },
+            { "id": "w4", "text": "Diese Option erhoeht statt senkt das Kostenrisiko.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist ein systematisches FinOps-Vorgehen mit Tagging, Budgets, Limits und Rightsizing."
+    },
+    {
+      "id": "cs06",
+      "profile": "Eine Anwendung nutzt stark proprietaere Plattformdienste. Management fragt nach Auswirkungen auf einen moeglichen Providerwechsel in drei Jahren.",
+      "tags": ["Vendor Lock-in", "Portabilitaet", "Strategie"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Portabilitaetsstrategie und Exit-Plan aufsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Proprietaere Dienste koennen Migrationsaufwand und Kosten deutlich steigern.", "correct": true },
+            { "id": "w2", "text": "Offene Schnittstellen und Datenexportpfade reduzieren Bindungsrisiken.", "correct": true },
+            { "id": "w3", "text": "Lock-in verschwindet automatisch, sobald der Vertrag verlaengert wird.", "correct": false },
+            { "id": "w4", "text": "Exit-Tests sollten regelmaessig geprobt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Thema ignorieren, weil Funktionen aktuell gut laufen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kurzfristiger Nutzen ersetzt keine langfristige Risikovorsorge.", "correct": true },
+            { "id": "w2", "text": "Strategische Abhaengigkeit bleibt ohne Gegenmassnahmen bestehen.", "correct": true },
+            { "id": "w3", "text": "Lock-in wirkt sich nie auf Kosten oder Projektdauer aus.", "correct": false },
+            { "id": "w4", "text": "Risikomanagement sollte frueh beginnen, nicht erst beim Wechselzwang.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur SIEM ausbauen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SIEM adressiert Security-Monitoring, nicht primaer Portabilitaet.", "correct": true },
+            { "id": "w2", "text": "Lock-in ist hauptsaechlich Architektur- und Datenstrategie-Thema.", "correct": true },
+            { "id": "w3", "text": "Mit SIEM sind proprietaere API-Abhaengigkeiten sofort geloest.", "correct": false },
+            { "id": "w4", "text": "Sicherheits- und Migrationsrisiken sind getrennt zu steuern.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Korrekt ist eine aktive Portabilitaetsstrategie mit Exit-Plan statt Verdrangung des Lock-in-Risikos."
+    },
+    {
+      "id": "cs07",
+      "profile": "Personenbezogene Daten eines europaweit taetigen Unternehmens sollen in einem Managed-Service verarbeitet werden. Interne Revision fordert regionenscharfe Nachweise und Vertragskontrollen.",
+      "tags": ["Compliance", "Data Residency", "AVV/TOMs"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Data Residency und AVV/TOMs verbindlich umsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regionale Datenhaltung ist zentral fuer regulatorische Vorgaben.", "correct": true },
+            { "id": "w2", "text": "Vertragliche und organisatorische Nachweise sind auditrelevant.", "correct": true },
+            { "id": "w3", "text": "Compliance ist bei Managed Services automatisch garantiert.", "correct": false },
+            { "id": "w4", "text": "Technik und Dokumentation muessen zusammenpassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Verschluesselung aktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschluesselung ist wichtig, ersetzt aber keine Residency- und Vertragskontrollen.", "correct": true },
+            { "id": "w2", "text": "Auditierbarkeit bleibt ohne AVV/TOMs lueckenhaft.", "correct": true },
+            { "id": "w3", "text": "Mit KMS sind geografische Speichergrenzen bedeutungslos.", "correct": false },
+            { "id": "w4", "text": "Compliance ist ein Zusammenspiel mehrerer Kontrollarten.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur auf Anbieterbroschuere vertrauen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Marketingangaben ersetzen keine belastbaren Vertrags- und Techniknachweise.", "correct": true },
+            { "id": "w2", "text": "Revision benoetigt pruefbare Evidenz statt allgemeiner Aussagen.", "correct": true },
+            { "id": "w3", "text": "Broschueren gelten als ausreichender Auditbeleg.", "correct": false },
+            { "id": "w4", "text": "Governance verlangt dokumentierte Kontrollen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist die verbindliche Kombination aus Data Residency, AVV/TOMs und auditierbarer Umsetzung."
+    },
+    {
+      "id": "cs08",
+      "profile": "Ein kundenkritischer Service darf bei Ausfall einer Zone nicht unterbrechen. Das Team sucht die geeignete Architekturmassnahme.",
+      "tags": ["Resilienz", "Multi-AZ", "HA"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Multi-AZ mit Health-Checks und automatischem Failover",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Redundanz ueber Zonen reduziert Ausfallwahrscheinlichkeit einzelner Standorte.", "correct": true },
+            { "id": "w2", "text": "Automatisches Failover beschleunigt Stabilisierung im Stoerfall.", "correct": true },
+            { "id": "w3", "text": "Ein einzelner Server in einer Zone ist gleichwertig zu Multi-AZ.", "correct": false },
+            { "id": "w4", "text": "Hochverfuegbarkeit braucht Architektur plus Betriebsprozess.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur taegliches Backup nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup ist fuer Wiederherstellung wichtig, nicht fuer unterbrechungsarmen Laufbetrieb.", "correct": true },
+            { "id": "w2", "text": "Backup allein verhindert keine Live-Unterbrechung bei Zonenausfall.", "correct": true },
+            { "id": "w3", "text": "Backup und Hochverfuegbarkeit sind funktional identisch.", "correct": false },
+            { "id": "w4", "text": "HA und DR sollten getrennt und kombiniert geplant werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur groessere Einzelinstanz buchen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vertikale Skalierung eliminiert keinen Standort-Single-Point-of-Failure.", "correct": true },
+            { "id": "w2", "text": "Ohne Redundanz bleibt Ausfallrisiko hoch.", "correct": true },
+            { "id": "w3", "text": "Mehr CPU ersetzt zonenuebergreifende Resilienz immer vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Leistungs- und Verfuegbarkeitsmassnahmen sind unterschiedlich.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Multi-AZ mit automatischem Failover ist fuer unterbrechungsarmen Betrieb bei Zonenausfall die richtige Kernmassnahme."
+    },
+    {
+      "id": "cs09",
+      "profile": "Ein Service hat Zielwerte RTO 20 Minuten und RPO 2 Minuten. Das Team muss einen belastbaren Wiederanlaufansatz definieren.",
+      "tags": ["DR", "RTO/RPO", "Backup"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Multi-Region-DR plus engmaschige Replikation und Restore-Uebungen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Strenge RTO/RPO-Werte erfordern vorbereitete Ausweicharchitektur.", "correct": true },
+            { "id": "w2", "text": "Regelmaessige Tests pruefen, ob Ziele in der Praxis eingehalten werden.", "correct": true },
+            { "id": "w3", "text": "Monatliches Offline-Backup reicht fuer ein RPO von 2 Minuten aus.", "correct": false },
+            { "id": "w4", "text": "Runbooks und Verantwortlichkeiten muessen eindeutig festgelegt sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Vertragsklausel fuer hohe Verfuegbarkeit nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Vertrag allein ersetzt keine technische DR-Umsetzung.", "correct": true },
+            { "id": "w2", "text": "Operationalisierte Failover-Prozesse bleiben erforderlich.", "correct": true },
+            { "id": "w3", "text": "RTO/RPO werden ohne Architektur automatisch erreicht.", "correct": false },
+            { "id": "w4", "text": "Serviceziele muessen messtechnisch und organisatorisch hinterlegt sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "DR-Ziele streichen, um Kosten zu sparen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schutzziele sind aus Business-/Risikoperspektive nicht beliebig entfernbar.", "correct": true },
+            { "id": "w2", "text": "Unklares Schutzniveau erhoeht Ausfall- und Haftungsrisiken.", "correct": true },
+            { "id": "w3", "text": "RTO/RPO sind nur theoretische Kennzahlen ohne Relevanz.", "correct": false },
+            { "id": "w4", "text": "Kostenoptimierung muss innerhalb definierter Schutzziele erfolgen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fuer harte RTO/RPO-Ziele braucht es geuebte Multi-Region-DR mit schneller Replikation und regelmaessigen Restore-Tests."
+    },
+    {
+      "id": "cs10",
+      "profile": "Ein Unternehmen betreibt Standarddienste, eigene Kernentwicklung und wenige legacy-nahe Spezialsysteme gleichzeitig. Gefragt ist eine wirtschaftliche, fachlich saubere Zielarchitektur.",
+      "tags": ["Strategie", "Modellmix", "AP1-Entscheidung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Modellmix einsetzen: SaaS fuer Standard, PaaS fuer Eigenentwicklung, IaaS fuer Spezialfaelle",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein differenzierter Modellmix bildet unterschiedliche Anforderungen realistisch ab.", "correct": true },
+            { "id": "w2", "text": "So lassen sich Aufwand, Kontrolle und Kosten pro Workload optimieren.", "correct": true },
+            { "id": "w3", "text": "Ein einziges Modell ist immer fuer alle Workloads optimal.", "correct": false },
+            { "id": "w4", "text": "AP1-reif ist die begruendete Abwaegung statt Dogma.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur IaaS fuer alle Systeme nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "IaaS kann zwar alles abbilden, ist aber fuer Standarddienste oft ineffizient.", "correct": true },
+            { "id": "w2", "text": "Betriebsaufwand waechst unnoetig, wenn SaaS/PaaS-Optionen ignoriert werden.", "correct": true },
+            { "id": "w3", "text": "IaaS liefert in jedem Fall die niedrigsten Betriebskosten.", "correct": false },
+            { "id": "w4", "text": "Monolithische Modellwahl verpasst Optimierungspotenziale.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur SaaS fuer alle Systeme erzwingen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Legacy- und individuelle Kernsysteme lassen sich nicht immer sinnvoll als SaaS abdecken.", "correct": true },
+            { "id": "w2", "text": "Technische und regulatorische Sonderanforderungen koennen hoehere Kontrolle benoetigen.", "correct": true },
+            { "id": "w3", "text": "SaaS deckt automatisch jede Spezialanforderung mit voller Tiefenkonfiguration ab.", "correct": false },
+            { "id": "w4", "text": "Einseitige Vorgaben sind meist weniger wirtschaftlich und weniger passgenau.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ein begruendeter Modellmix ist fachlich am robustesten: SaaS fuer Standard, PaaS fuer Eigenentwicklung, IaaS fuer Spezialkontrolle."
+    }
+  ]
+}

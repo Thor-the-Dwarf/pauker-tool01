@@ -1,0 +1,192 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Cloud-Services (AP1) Level 2 – Modelle, Verantwortung und Governance",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Cloud-Begriff, praezise Bedeutung und typisches AP1-Praxisbeispiel korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Praezise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den fachlich passenden Terminus.",
+    "column2": "Achte auf die Verantwortungstrennung.",
+    "column3": "Waehle den realistischen Einsatzfall."
+  },
+  "sets": [
+    {
+      "id": "iaas",
+      "name": "IaaS",
+      "description": "Infrastruktur als Dienst: VMs, Storage, Netzwerk; Kunde verwaltet OS und Anwendungen selbst.",
+      "example": "Legacy-App auf Cloud-VM mit eigenem Patchmanagement betreiben."
+    },
+    {
+      "id": "paas",
+      "name": "PaaS",
+      "description": "Plattform als Dienst: Anbieter liefert Laufzeit, Deployment und oft Managed Services.",
+      "example": "REST-API deployen, ohne Linux-Server selbst administrieren zu muessen."
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "description": "Fertige Software als Dienst; Infrastruktur und Plattformbetrieb liegen beim Anbieter.",
+      "example": "Helpdesk-System direkt per Browser nutzen und nur Rollen konfigurieren."
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility",
+      "description": "Anbieter sichert die Cloud-Basis, Kunde sichert Konfiguration, Zugriffe und Datennutzung.",
+      "example": "Provider betreibt Rechenzentrum, Kunde pflegt IAM-Rollen und Datenfreigaben."
+    },
+    {
+      "id": "provider_scope",
+      "name": "Providerverantwortung",
+      "description": "Umfasst physische Sicherheit, Host-Infrastruktur und Basisplattform gemanagter Dienste.",
+      "example": "Defekte Host-Hardware wird durch den Cloud-Anbieter ersetzt."
+    },
+    {
+      "id": "customer_scope",
+      "name": "Kundenverantwortung",
+      "description": "Umfasst IAM, Datenklassifizierung, Konfiguration, Freigaben und betriebliche Richtlinien.",
+      "example": "Zu breite Admin-Rolle im Mandanten fuehrt zum Sicherheitsrisiko beim Kunden."
+    },
+    {
+      "id": "managed_database",
+      "name": "Managed Database",
+      "description": "Datenbankdienst mit reduziertem Betriebsaufwand bei eingeschraenkter Systemkontrolle.",
+      "example": "Produktionsdatenbank als Dienst mit automatischen Backups nutzen."
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless Function",
+      "description": "Ereignisgetriebene Codeausfuehrung ohne direkte Serververwaltung durch den Kunden.",
+      "example": "Datei-Upload loest automatisch Validierungsfunktion aus."
+    },
+    {
+      "id": "least_privilege",
+      "name": "Least Privilege",
+      "description": "Berechtigungen nur minimal und zweckgebunden vergeben.",
+      "example": "Servicekonto darf nur auf ein konkretes Storage-Bucket lesen."
+    },
+    {
+      "id": "mfa",
+      "name": "MFA",
+      "description": "Mehrfaktor-Authentifizierung reduziert Missbrauch kompromittierter Passwoerter.",
+      "example": "Admin-Portal nur mit Passwort plus Authenticator-App erlauben."
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "description": "Sicherheits- und Compliance-Regeln maschinenpruefbar in Deployments verankern.",
+      "example": "Pipeline blockiert Terraform-Plan mit oeffentlichem Storage-Zugriff."
+    },
+    {
+      "id": "misconfiguration",
+      "name": "Fehlkonfiguration",
+      "description": "Falsche Rollen-, Netzwerk- oder Storage-Einstellungen erzeugen Cloud-Sicherheitsvorfaelle.",
+      "example": "Datenbank-Port versehentlich fuer das Internet freigegeben."
+    },
+    {
+      "id": "finops",
+      "name": "FinOps",
+      "description": "Kontinuierliche Kostensteuerung mit klaren Rollen, Transparenz und Optimierungszyklen.",
+      "example": "Monatliches Rightsizing-Review pro Team anhand realer Lastdaten."
+    },
+    {
+      "id": "tagging",
+      "name": "Kosten-Tagging",
+      "description": "Ressourcen werden Teams, Projekten und Kostenstellen eindeutig zugeordnet.",
+      "example": "Ressourcen ohne Owner-Tag duerfen nicht produktiv ausgerollt werden."
+    },
+    {
+      "id": "budget_alerts",
+      "name": "Budget-Alerts",
+      "description": "Fruehwarnsystem bei Ueberschreitungsrisiken fuer Cloud-Ausgaben.",
+      "example": "Alarm bei 80 Prozent, Eskalation bei 95 Prozent Budgetverbrauch."
+    },
+    {
+      "id": "rightsizing",
+      "name": "Rightsizing",
+      "description": "Instanzen werden anhand gemessener Last passend dimensioniert.",
+      "example": "Ueberdimensionierte Compute-Instanz in kleinere Klasse migrieren."
+    },
+    {
+      "id": "autoscaling",
+      "name": "Auto-Scaling",
+      "description": "Ressourcen werden automatisch nach Lastkriterien erweitert oder reduziert.",
+      "example": "Web-Frontends skalieren bei Lastspitzen automatisch horizontal."
+    },
+    {
+      "id": "data_residency",
+      "name": "Data Residency",
+      "description": "Datenstandort wird an regulatorische oder vertragliche Vorgaben gebunden.",
+      "example": "Personenbezogene Daten nur in freigegebener Region speichern."
+    },
+    {
+      "id": "avv_toms",
+      "name": "AVV/TOMs",
+      "description": "Vertragliche und organisatorische Datenschutzmassnahmen werden dokumentiert und eingehalten.",
+      "example": "Auftragsverarbeitung und technische Massnahmen fuer Audits nachweisbar halten."
+    },
+    {
+      "id": "encryption_kms",
+      "name": "Verschluesselung/KMS",
+      "description": "Daten in Ruhe und Uebertragung schuetzen, Schluessel kontrolliert verwalten.",
+      "example": "Storage verschluesseln und Schluesselrotation ueber KMS erzwingen."
+    },
+    {
+      "id": "audit_logging",
+      "name": "Audit-Logging",
+      "description": "Sicherheitsrelevante Aktionen manipulationsarm und nachvollziehbar protokollieren.",
+      "example": "Jede Rollenveraenderung mit Benutzer, Zeit und Quelle dokumentieren."
+    },
+    {
+      "id": "siem",
+      "name": "SIEM-Integration",
+      "description": "Security-Events zentral korrelieren, um Angriffe frueh zu erkennen.",
+      "example": "Anomaliealarm bei Admin-Logins aus mehreren Regionen in kurzer Zeit."
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "description": "Starke Bindung an proprietaere Dienste erschwert Anbieterwechsel.",
+      "example": "Migration wird teuer, weil Kernprozesse auf proprietaerer API basieren."
+    },
+    {
+      "id": "portability",
+      "name": "Portabilitaetsstrategie",
+      "description": "Architektur wird so gestaltet, dass ein Plattformwechsel technisch moeglich bleibt.",
+      "example": "Container plus standardisierte APIs statt tiefer proprietaerer Kopplung."
+    },
+    {
+      "id": "exit_strategy",
+      "name": "Exit-Strategie",
+      "description": "Geplanter Ausstiegspfad mit Datenexport, Verantwortlichkeiten und Testmigration.",
+      "example": "Jaehrlicher Exit-Test prueft Wiederaufbau auf alternativer Zielplattform."
+    },
+    {
+      "id": "multi_az",
+      "name": "Multi-AZ",
+      "description": "Verteilung ueber mehrere Verfuegbarkeitszonen fuer hohe Betriebsstabilitaet.",
+      "example": "App und Datenbank laufen redundant in zwei Availability Zones."
+    },
+    {
+      "id": "rto_rpo",
+      "name": "RTO/RPO",
+      "description": "Definiert Wiederanlaufzeit und tolerierbaren Datenverlust fuer Notfaelle.",
+      "example": "Serviceziel: RTO 30 Minuten, RPO 5 Minuten."
+    },
+    {
+      "id": "backup_restore_test",
+      "name": "Backup-Restore-Test",
+      "description": "Sicherung gilt erst nach erfolgreicher Wiederherstellungsprobe als belastbar.",
+      "example": "Quartalsweiser Restore-Test unter produktionsnahen Bedingungen."
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "description": "Metriken, Logs und Traces liefern zusammen operativen Systemblick.",
+      "example": "Trace zeigt Latenzengpass zwischen API-Gateway und Datenbankdienst."
+    }
+  ]
+}

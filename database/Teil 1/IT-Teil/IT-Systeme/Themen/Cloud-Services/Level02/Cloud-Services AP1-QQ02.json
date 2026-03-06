@@ -1,0 +1,201 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Cloud-Services (AP1) Level 2",
+  "introText": "Ordne jede Aussage dem treffendsten Cloud-Service-Begriff zu.",
+  "sublineText": "Level 2: Modellwahl, Verantwortungen, Security, FinOps und Resilienz sauber trennen.",
+  "timePerQuestionSeconds": 24,
+  "answerLabels": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "Shared Responsibility",
+    "Providerverantwortung",
+    "Kundenverantwortung",
+    "Managed Database",
+    "Serverless Function",
+    "Least Privilege",
+    "MFA",
+    "Policy as Code",
+    "Fehlkonfiguration",
+    "FinOps",
+    "Kosten-Tagging",
+    "Budget-Alarm",
+    "Rightsizing",
+    "Auto-Scaling",
+    "Data Residency",
+    "AVV/TOMs",
+    "Verschluesselung/KMS",
+    "Audit-Logging",
+    "SIEM",
+    "Vendor Lock-in",
+    "Portabilitaetsstrategie",
+    "Exit-Strategie",
+    "Multi-AZ",
+    "RTO",
+    "RPO",
+    "Backup-Restore-Test",
+    "Observability",
+    "hohe Kontrolltiefe",
+    "geringe Kontrolltiefe",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Virtuelle Infrastruktur mieten und Betriebssystem selbst patchen.",
+      "correct": "IaaS"
+    },
+    {
+      "text": "Anwendungscode deployen, waehrend die Plattformlaufzeit gemanagt wird.",
+      "correct": "PaaS"
+    },
+    {
+      "text": "Fertige Fachanwendung direkt im Browser nutzen.",
+      "correct": "SaaS"
+    },
+    {
+      "text": "Grundprinzip: Anbieter schuetzt die Cloud-Basis, Kunde schuetzt Nutzung und Konfiguration.",
+      "correct": "Shared Responsibility"
+    },
+    {
+      "text": "Physische Datacenter-Sicherheit und Host-Infrastruktur absichern.",
+      "correct": "Providerverantwortung"
+    },
+    {
+      "text": "Rollenmodell, Freigaben und Datenklassifizierung korrekt pflegen.",
+      "correct": "Kundenverantwortung"
+    },
+    {
+      "text": "Datenbankdienst als Plattformkomponente mit weniger Eigenbetrieb.",
+      "correct": "Managed Database"
+    },
+    {
+      "text": "Code nur ereignisbasiert ausfuehren, ohne Server dauerhaft zu verwalten.",
+      "correct": "Serverless Function"
+    },
+    {
+      "text": "Rechte nur minimal und zweckgebunden vergeben.",
+      "correct": "Least Privilege"
+    },
+    {
+      "text": "Privilegierter Login erfordert zweiten Faktor neben Passwort.",
+      "correct": "MFA"
+    },
+    {
+      "text": "Deployment blockieren, wenn Sicherheitsregeln verletzt werden.",
+      "correct": "Policy as Code"
+    },
+    {
+      "text": "Offener Datenbankport und zu breite IAM-Rollen als Incident-Ursache.",
+      "correct": "Fehlkonfiguration"
+    },
+    {
+      "text": "Kontinuierliche Steuerung von Cloud-Kosten mit klaren Verantwortlichkeiten.",
+      "correct": "FinOps"
+    },
+    {
+      "text": "Ressourcen muessen Team und Kostenstelle eindeutig zuordenbar sein.",
+      "correct": "Kosten-Tagging"
+    },
+    {
+      "text": "Warnung bei Budgetabweichung mit Eskalation vor Monatsende.",
+      "correct": "Budget-Alarm"
+    },
+    {
+      "text": "Instanzgroessen an realen Lastprofilen ausrichten.",
+      "correct": "Rightsizing"
+    },
+    {
+      "text": "Ressourcen bei Lastspitzen automatisch erweitern und spaeter wieder reduzieren.",
+      "correct": "Auto-Scaling"
+    },
+    {
+      "text": "Daten nur in explizit erlaubten Regionen speichern.",
+      "correct": "Data Residency"
+    },
+    {
+      "text": "Vertragliche und organisatorische Datenschutzmassnahmen dokumentieren.",
+      "correct": "AVV/TOMs"
+    },
+    {
+      "text": "Daten im Ruhezustand und bei Transport verschluesseln, Schluessel sauber verwalten.",
+      "correct": "Verschluesselung/KMS"
+    },
+    {
+      "text": "Protokolliert nachvollziehbar, wer Sicherheitskonfigurationen geaendert hat.",
+      "correct": "Audit-Logging"
+    },
+    {
+      "text": "Korrelierte Sicherheitsereignisse zentral auswerten und alarmieren.",
+      "correct": "SIEM"
+    },
+    {
+      "text": "Starke Abhaengigkeit von proprietaeren APIs erschwert spaetere Migration.",
+      "correct": "Vendor Lock-in"
+    },
+    {
+      "text": "Architektur mit offenen Standards fuer moeglichen Anbieterwechsel planen.",
+      "correct": "Portabilitaetsstrategie"
+    },
+    {
+      "text": "Definierter Ausstiegspfad mit Datenexport, Rollen und Testmigration.",
+      "correct": "Exit-Strategie"
+    },
+    {
+      "text": "Dienste ueber mehrere Verfuegbarkeitszonen verteilen.",
+      "correct": "Multi-AZ"
+    },
+    {
+      "text": "Maximal zulaessige Wiederanlaufzeit im Notfall.",
+      "correct": "RTO"
+    },
+    {
+      "text": "Maximal tolerierbarer Datenverlust bis zur letzten gueltigen Sicherung.",
+      "correct": "RPO"
+    },
+    {
+      "text": "Backup ist erst belastbar, wenn Restore regelmaessig geuebt wird.",
+      "correct": "Backup-Restore-Test"
+    },
+    {
+      "text": "Metriken, Logs und Traces kombiniert zur Betriebsanalyse nutzen.",
+      "correct": "Observability"
+    },
+    {
+      "text": "Typisch fuer IaaS: viel Einfluss auf OS, Netzwerk und Middleware.",
+      "correct": "hohe Kontrolltiefe"
+    },
+    {
+      "text": "Typisch fuer SaaS: schneller Start, aber wenig Einfluss auf technische Tiefe.",
+      "correct": "geringe Kontrolltiefe"
+    },
+    {
+      "text": "Managed Service bedeutet automatisch compliance-konforme Nutzung ohne Kundenpflichten.",
+      "correct": "keine"
+    },
+    {
+      "text": "Fehlende Governance kann gleichzeitig Sicherheits-, Kosten- und Compliance-Probleme erzeugen.",
+      "correct": "alle"
+    },
+    {
+      "text": "PaaS ist immer ungeeignet, sobald auch nur eine Custom-App existiert.",
+      "correct": "keine"
+    },
+    {
+      "text": "Bei SaaS sind IAM und Rollenmodell weiterhin relevant.",
+      "correct": "Kundenverantwortung"
+    },
+    {
+      "text": "Risikoreduktion durch standardisierte APIs und formatierte Exportpfade.",
+      "correct": "Portabilitaetsstrategie"
+    },
+    {
+      "text": "Sicherheitsmassnahmen wie Least Privilege, MFA und Logging sind kombinierbar und sinnvoll.",
+      "correct": "alle"
+    },
+    {
+      "text": "Cloud-Kosten sinken ohne Monitoring und ohne Verantwortlichkeiten automatisch dauerhaft.",
+      "correct": "keine"
+    }
+  ]
+}

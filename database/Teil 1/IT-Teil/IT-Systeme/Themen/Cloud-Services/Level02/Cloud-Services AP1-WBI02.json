@@ -1,0 +1,723 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Cloud-Services (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+  "leadershipStyles": [
+    {
+      "id": "iaas",
+      "name": "IaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": true,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "paas",
+      "name": "PaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "managed_database",
+      "name": "Managed Database",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless Function",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": true,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": true,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "provider_scope",
+      "name": "Providerverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": true,
+        "customer_scope": false,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "customer_scope",
+      "name": "Kundenverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": true,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "finops",
+      "name": "FinOps",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": true,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": true,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": true,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "multi_az",
+      "name": "Multi-AZ",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "data_residency",
+      "name": "Data Residency",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": true,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "exit_strategy",
+      "name": "Exit-Strategie",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": true,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Bin ich ein Cloud-Service-Modell (IaaS/PaaS/SaaS)?",
+      "attributeKey": "is_service_model"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Bin ich ein gemanagter Dienst mit reduziertem Betriebsanteil?",
+      "attributeKey": "is_managed_service"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Geht es um die Aufteilung von Verantwortlichkeiten?",
+      "attributeKey": "is_responsibility_topic"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Steht Sicherheitsgovernance im Mittelpunkt?",
+      "attributeKey": "is_security_topic"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Steht Kostensteuerung als Kernthema im Vordergrund?",
+      "attributeKey": "is_cost_topic"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist Compliance der Hauptfokus?",
+      "attributeKey": "is_compliance_topic"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Bin ich ein Verfuegbarkeits-/Resilienzthema?",
+      "attributeKey": "is_resilience_topic"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Liegt mein Schwerpunkt primaer beim Anbieter?",
+      "attributeKey": "provider_scope"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Liegt mein Schwerpunkt primaer beim Kunden?",
+      "attributeKey": "customer_scope"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Brauche ich typischerweise hohe technische Kontrolltiefe?",
+      "attributeKey": "needs_high_control"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Biete ich typischerweise geringen Betriebsaufwand fuer den Kunden?",
+      "attributeKey": "offers_low_operation_effort"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Adressiere ich Portabilitaet und Wechselrisiko?",
+      "attributeKey": "focuses_portability"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Setze ich auf automatisierte Richtlinien in Deployments?",
+      "attributeKey": "uses_policy_automation"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ziele ich primaer auf hohe Verfuegbarkeit im Betrieb?",
+      "attributeKey": "targets_availability"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Steuere ich den Datenstandort nach Vorgaben?",
+      "attributeKey": "targets_data_location"
+    },
+    {
+      "id": "q16",
+      "hotkey": "16",
+      "text": "Spiele ich eine direkte Rolle bei Identitaets- und Zugriffssteuerung?",
+      "attributeKey": "focuses_identity_and_access"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "iaas",
+      "name": "IaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": true,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "paas",
+      "name": "PaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "managed_database",
+      "name": "Managed Database",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless Function",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": true,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": true,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": true,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": true,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "provider_scope",
+      "name": "Providerverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": true,
+        "customer_scope": false,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "customer_scope",
+      "name": "Kundenverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": true,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": true,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "finops",
+      "name": "FinOps",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": true,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": true,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": true,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": true,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": true
+      }
+    },
+    {
+      "id": "multi_az",
+      "name": "Multi-AZ",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": true,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "data_residency",
+      "name": "Data Residency",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": true,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": false,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": true,
+        "focuses_identity_and_access": false
+      }
+    },
+    {
+      "id": "exit_strategy",
+      "name": "Exit-Strategie",
+      "attributes": {
+        "is_service_model": false,
+        "is_managed_service": false,
+        "is_responsibility_topic": false,
+        "is_security_topic": false,
+        "is_cost_topic": false,
+        "is_compliance_topic": false,
+        "is_resilience_topic": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "needs_high_control": false,
+        "offers_low_operation_effort": false,
+        "focuses_portability": true,
+        "uses_policy_automation": false,
+        "targets_availability": false,
+        "targets_data_location": false,
+        "focuses_identity_and_access": false
+      }
+    }
+  ]
+}
