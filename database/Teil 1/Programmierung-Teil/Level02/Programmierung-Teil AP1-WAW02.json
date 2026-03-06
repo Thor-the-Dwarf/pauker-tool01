@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Programmierung (AP1) Level 2",
+  "description": "Schritt 1: Wähle den fachlich passenden Ansatz (What). Schritt 2: Begründe präzise mit den richtigen Aussagen (Why).",
+  "cases": [
+    {
+      "id": "p01",
+      "profile": "Du sollst darstellen, welche fachlichen Funktionen ein Portal aus Sicht von Rollen bereitstellen muss. Implementierungsdetails sind explizit nicht gefragt.",
+      "tags": ["UML", "Anforderungen", "Use Case"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Use-Case-Diagramm",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Fokus liegt auf fachlichen Fähigkeiten aus Sicht von Actor-Rollen.", "correct": true },
+            { "id": "w2", "text": "Die technische Reihenfolge von API-Aufrufen ist hier Hauptinhalt.", "correct": false },
+            { "id": "w3", "text": "Systemgrenze hilft, interne und externe Beteiligte sauber abzugrenzen.", "correct": true },
+            { "id": "w4", "text": "Use Cases ersetzen vollständig ein Datenmodell mit PK/FK.", "correct": false }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Sequenzdiagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Nachrichten zeitlich zwischen Komponenten/Lifelines.", "correct": true },
+            { "id": "w2", "text": "Ist primär für Rollen und Systemfähigkeiten gedacht.", "correct": false },
+            { "id": "w3", "text": "Eignet sich gut für UI -> Service -> DB-Flüsse.", "correct": true },
+            { "id": "w4", "text": "Ersetzt die fachliche Anforderungserhebung vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "ERD/ERM",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beschreibt Entitäten, Schlüssel und Beziehungen.", "correct": true },
+            { "id": "w2", "text": "Fokus liegt auf Datenstruktur, nicht auf Rollenzielen.", "correct": true },
+            { "id": "w3", "text": "Zeigt If/Else-Logik im Prozessablauf.", "correct": false },
+            { "id": "w4", "text": "Ist das Standarddiagramm für include/extend im Use Case.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Use-Case-Diagramm: Für 'Was soll das System können?' ist die fachliche Actor-Sicht entscheidend, nicht technische Ablaufdetails."
+    },
+    {
+      "id": "p02",
+      "profile": "Du sollst den konkreten Ablauf einer Entscheidungskette modellieren (Prüfung der Eingaben, Verzweigung, Wiederholversuch, Abbruch).",
+      "tags": ["UML", "Ablauf", "Logik"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Aktivitätsdiagramm",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bildet Prozesslogik mit Aktionen, Guards und Verzweigungen ab.", "correct": true },
+            { "id": "w2", "text": "Eignet sich für Schleifen und alternative Pfade.", "correct": true },
+            { "id": "w3", "text": "Ist auf reine Datenbankschlüsselmodellierung spezialisiert.", "correct": false },
+            { "id": "w4", "text": "Beschreibt primär Systemfähigkeiten statt Prozessschritte.", "correct": false }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Use-Case-Diagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Rollen und fachliche Funktionen.", "correct": true },
+            { "id": "w2", "text": "Ist ideal für detaillierte If/Else- und Schleifenlogik.", "correct": false },
+            { "id": "w3", "text": "Systemgrenze ist zentrales Element.", "correct": true },
+            { "id": "w4", "text": "Kann Daten-Constraints wie 1NF-3NF ausdrücken.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Klassendiagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Klassenstruktur mit Attributen/Methoden.", "correct": true },
+            { "id": "w2", "text": "Ist für zeitlichen Nachrichtenfluss gedacht.", "correct": false },
+            { "id": "w3", "text": "Unterstützt Beziehungen und Kardinalitäten.", "correct": true },
+            { "id": "w4", "text": "Ist das bevorzugte Werkzeug für Schleifen in Prozessabläufen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Aktivitätsdiagramm: Für detailierte Ablauf- und Entscheidungslogik ist es das passende Modell."
+    },
+    {
+      "id": "p03",
+      "profile": "Eine Abfrage soll pro Kunde die Anzahl Bestellungen berechnen und nur Kunden mit mehr als 5 Bestellungen zeigen.",
+      "tags": ["SQL", "Aggregation", "HAVING"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "GROUP BY mit HAVING",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "GROUP BY bildet Kundengruppen, COUNT aggregiert pro Gruppe.", "correct": true },
+            { "id": "w2", "text": "HAVING filtert die Gruppen nach dem Aggregatergebnis.", "correct": true },
+            { "id": "w3", "text": "WHERE ist für COUNT(*) > 5 nach Gruppierung zwingend ausreichend.", "correct": false },
+            { "id": "w4", "text": "Ohne GROUP BY ist die gewünschte gruppenbezogene Aussage nicht korrekt darstellbar.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur WHERE mit COUNT",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "WHERE arbeitet vor Aggregation auf Einzelzeilen.", "correct": true },
+            { "id": "w2", "text": "Kann Gruppenfilter nach COUNT ohne HAVING immer korrekt ersetzen.", "correct": false },
+            { "id": "w3", "text": "Ist für Zeilenfilter wie status='offen' geeignet.", "correct": true },
+            { "id": "w4", "text": "Löst gruppierte Summen per Definition vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "ORDER BY ohne Aggregation",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sortiert Ergebnisse, berechnet aber keine Gruppensummen.", "correct": true },
+            { "id": "w2", "text": "Kann GROUP BY-Funktionalität vollständig ersetzen.", "correct": false },
+            { "id": "w3", "text": "Hilfreich, um Ergebnisse nach COUNT absteigend anzuzeigen.", "correct": true },
+            { "id": "w4", "text": "Erzeugt automatisch nur Kunden >5 Bestellungen.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "GROUP BY + HAVING: Du brauchst gruppierte Zählung und anschließenden Gruppenfilter."
+    },
+    {
+      "id": "p04",
+      "profile": "Zwischen den Tabellen 'kurs' und 'teilnehmer' besteht eine M:N-Beziehung. Die Aufgabe verlangt ein relational korrektes Schema.",
+      "tags": ["ERM", "Normalisierung", "M:N"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Zwischentabelle anlegen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "M:N wird über zwei Fremdschlüssel in einer eigenen Tabelle aufgelöst.", "correct": true },
+            { "id": "w2", "text": "Zusatzattribute der Beziehung (z. B. anmeldedatum) lassen sich dort sauber speichern.", "correct": true },
+            { "id": "w3", "text": "Eine kommaseparierte ID-Liste in einer Spalte ist gleichwertig.", "correct": false },
+            { "id": "w4", "text": "Die Lösung unterstützt referenzielle Integrität.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "ID-Liste in Textspalte",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verletzt 1NF durch Mehrfachwerte in einer Zelle.", "correct": true },
+            { "id": "w2", "text": "Erleichtert Joins und Integritätsprüfungen.", "correct": false },
+            { "id": "w3", "text": "Erschwert konsistente Updates und Filterung.", "correct": true },
+            { "id": "w4", "text": "Ist relationales Best Practice.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Datensätze duplizieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Erhöht Redundanz und Anomalierisiko.", "correct": true },
+            { "id": "w2", "text": "Verbessert automatisch die Normalisierung.", "correct": false },
+            { "id": "w3", "text": "Kann zu widersprüchlichen Daten führen.", "correct": true },
+            { "id": "w4", "text": "Ersetzt Fremdschlüssel fachlich sauber.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Zwischentabelle: Das ist die relationale Standardlösung für M:N inkl. Erweiterbarkeit und Integrität."
+    },
+    {
+      "id": "p05",
+      "profile": "Ein Objekt 'Ticket' durchläuft klar definierte Lebensphasen mit Triggern (z. B. 'zuweisen', 'abschließen').",
+      "tags": ["UML", "Zustand", "Lebenszyklus"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Zustandsdiagramm",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Stellt Zustände und Übergänge mit Ereignissen dar.", "correct": true },
+            { "id": "w2", "text": "Fokussiert auf Objektlebenszyklus statt Nachrichtenfluss zwischen Komponenten.", "correct": true },
+            { "id": "w3", "text": "Ist primär für SQL-Klauselreihenfolgen gedacht.", "correct": false },
+            { "id": "w4", "text": "Hilft, erlaubte und verbotene Statuswechsel sichtbar zu machen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Sequenzdiagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Visualisiert Aufrufreihenfolgen zwischen Lifelines.", "correct": true },
+            { "id": "w2", "text": "Ist Standard für Statusautomat-Definitionen.", "correct": false },
+            { "id": "w3", "text": "Kann technische Interaktionen gut zeigen.", "correct": true },
+            { "id": "w4", "text": "Ersetzt Zustandsübergänge fachlich vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Use-Case-Diagramm",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeigt Rollen und fachliche Funktionen.", "correct": true },
+            { "id": "w2", "text": "Beschreibt standardmäßig Trigger und Zustandsübergänge eines Objekts.", "correct": false },
+            { "id": "w3", "text": "Ist für Anforderungsübersichten geeignet.", "correct": true },
+            { "id": "w4", "text": "Ersetzt Aktivitäts- und Zustandsdiagramme vollständig.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Zustandsdiagramm: Für objektbezogene Lebensphasen und Übergangsevents ist es am präzisesten."
+    },
+    {
+      "id": "p06",
+      "profile": "Eine Buchung besteht aus mehreren SQL-Statements. Falls ein Schritt fehlschlägt, dürfen keine Teiländerungen sichtbar bleiben.",
+      "tags": ["SQL", "Transaktion", "ACID"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Transaktion mit COMMIT/ROLLBACK",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Atomicity stellt sicher: alles oder nichts.", "correct": true },
+            { "id": "w2", "text": "ROLLBACK kann inkonsistente Zwischenzustände zurücknehmen.", "correct": true },
+            { "id": "w3", "text": "Transaktionen sind nur bei SELECT relevant.", "correct": false },
+            { "id": "w4", "text": "ACID-Prinzipien adressieren genau diese Anforderungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Einzelstatements ohne Transaktion",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Teilzustände hinterlassen, wenn ein späterer Schritt scheitert.", "correct": true },
+            { "id": "w2", "text": "Ist bei mehrstufigen Änderungen immer sicher genug.", "correct": false },
+            { "id": "w3", "text": "Erhöht das Risiko fachlicher Inkonsistenzen.", "correct": true },
+            { "id": "w4", "text": "Erfüllt Atomicity automatisch ohne weitere Maßnahmen.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Logging ergänzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Logging verbessert Nachvollziehbarkeit.", "correct": true },
+            { "id": "w2", "text": "Logs ersetzen keine Transaktionssicherung.", "correct": true },
+            { "id": "w3", "text": "Logs verhindern automatisch fehlerhafte Teilupdates.", "correct": false },
+            { "id": "w4", "text": "Ist für Audits nützlich, aber nicht für ACID-Eigenschaften ausreichend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Transaktion mit COMMIT/ROLLBACK: Nur so vermeidest du unvollständige, inkonsistente Zwischenstände robust."
+    },
+    {
+      "id": "p07",
+      "profile": "Im Review ist eine 200-Zeilen-Methode aufgefallen, die Validierung, Berechnung, Persistenz und Logging gleichzeitig erledigt.",
+      "tags": ["Codequalität", "Wartbarkeit", "SRP"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Nach Verantwortlichkeiten trennen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Single Responsibility reduziert Seiteneffekte und erleichtert Tests.", "correct": true },
+            { "id": "w2", "text": "Kleinere, fokussierte Einheiten verbessern Lesbarkeit und Fehlersuche.", "correct": true },
+            { "id": "w3", "text": "Monolithische Methoden sind für Wartung immer überlegen.", "correct": false },
+            { "id": "w4", "text": "Gezielte Trennung vereinfacht Unit-Tests pro Funktionsteil.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Alles in globale Hilfsfunktionen auslagern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Globaler Zustand erhöht Kopplung und Fehlerrisiko.", "correct": true },
+            { "id": "w2", "text": "Ersetzt automatisch sauberes Design.", "correct": false },
+            { "id": "w3", "text": "Kann Seiteneffekte schwer nachvollziehbar machen.", "correct": true },
+            { "id": "w4", "text": "Ist grundsätzlich besser testbar als gekapselte Komponenten.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Kommentare ergänzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kommentare helfen, lösen aber kein strukturelles Designproblem.", "correct": true },
+            { "id": "w2", "text": "Kann technische Schulden unverändert lassen.", "correct": true },
+            { "id": "w3", "text": "Macht Refactoring überflüssig.", "correct": false },
+            { "id": "w4", "text": "Gute Struktur plus gezielte Kommentare ist robuster als nur Kommentare.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Nach Verantwortlichkeiten trennen: Das erhöht Wartbarkeit, Testbarkeit und reduziert Fehlerrisiko."
+    },
+    {
+      "id": "p08",
+      "profile": "Eine Schnittstelle soll validieren, dass 'alter' zwischen 18 und 65 liegt. Du sollst ein effizientes Testset begründen.",
+      "tags": ["Test", "Grenzwert", "Äquivalenz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Grenzwertanalyse + Äquivalenzklassen kombinieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Grenzwerte (17,18,65,66) decken Kantenrisiken auf.", "correct": true },
+            { "id": "w2", "text": "Äquivalenzklassen liefern repräsentative Werte im gültigen/ungültigen Bereich.", "correct": true },
+            { "id": "w3", "text": "Nur ein einziger Testfall reicht bei Bereichslogik immer aus.", "correct": false },
+            { "id": "w4", "text": "Die Kombination reduziert Aufwand gegenüber Vollkombinatorik bei guter Aussagekraft.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Happy-Path testen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Deckt Rand- und Fehlerfälle nicht zuverlässig ab.", "correct": true },
+            { "id": "w2", "text": "Ist für robustes Testdesign in AP1 meist unzureichend.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Grenzwert- und Negativtests vollständig.", "correct": false },
+            { "id": "w4", "text": "Kann als Basistest sinnvoll sein, aber nicht als alleinige Strategie.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur zufällige Fuzz-Werte",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Bugs finden, bietet aber ohne Zielsetzung geringe Nachvollziehbarkeit.", "correct": true },
+            { "id": "w2", "text": "Erschließt zwingend alle wichtigen Grenzwerte deterministisch.", "correct": false },
+            { "id": "w3", "text": "Sollte gezielte deterministische Tests ergänzen, nicht ersetzen.", "correct": true },
+            { "id": "w4", "text": "Ist in AP1-Aufgaben meist allein nicht ausreichend begründbar.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Grenzwertanalyse + Äquivalenzklassen: Diese Kombination ist effizient und fachlich gut begründbar."
+    },
+    {
+      "id": "p09",
+      "profile": "Die Anwendung ist langsam. Du sollst erklären, warum ein zusätzlicher Index auf (customer_id, created_at) helfen kann.",
+      "tags": ["SQL", "Performance", "Index"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Geeigneten Index ergänzen und Abfrageplan prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Indexe können Filter- und Sortierpfade beschleunigen.", "correct": true },
+            { "id": "w2", "text": "Abfragepläne zeigen, ob der Index tatsächlich genutzt wird.", "correct": true },
+            { "id": "w3", "text": "Mehr Indizes sind immer ohne Nebenwirkungen.", "correct": false },
+            { "id": "w4", "text": "Schreiboperationen können durch zu viele Indizes langsamer werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Server-Hardware erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Symptome dämpfen, behebt aber oft nicht die Query-Ursache.", "correct": true },
+            { "id": "w2", "text": "Macht Abfrageanalyse und Modellprüfung überflüssig.", "correct": false },
+            { "id": "w3", "text": "Skalierung ohne SQL-Optimierung kann ineffizient teuer werden.", "correct": true },
+            { "id": "w4", "text": "Ist immer die erste und beste Maßnahme.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "ORDER BY entfernen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann fachliche Anforderungen verletzen, wenn Sortierung benötigt wird.", "correct": true },
+            { "id": "w2", "text": "Ist keine allgemeingültige Performance-Lösung.", "correct": true },
+            { "id": "w3", "text": "Ersetzt gezielte Indizierung vollständig.", "correct": false },
+            { "id": "w4", "text": "Muss gegen fachliche Korrektheit abgewogen werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Index + Abfrageplan: So verbesserst du zielgerichtet die Query-Leistung statt blind Symptome zu kaschieren."
+    },
+    {
+      "id": "p10",
+      "profile": "Für eine REST-API treten regelmäßig 400/409-Fehler auf. Du sollst strukturiert erklären, wie man die Schnittstelle stabilisiert.",
+      "tags": ["API", "Qualität", "Vertrag"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Schnittstellenvertrag präzisieren und Validierung angleichen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Klare Request/Response-Schemata reduzieren Interpretationsspielräume.", "correct": true },
+            { "id": "w2", "text": "Definierte Fehlercodes verbessern Testbarkeit und Diagnose.", "correct": true },
+            { "id": "w3", "text": "Vertragliche Definitionen sind bei APIs verzichtbar.", "correct": false },
+            { "id": "w4", "text": "Konsistenz zwischen Doku, Validierung und Implementierung ist entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Client-Code lockern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann temporär helfen, löst aber nicht die serverseitige Vertragsunklarheit.", "correct": true },
+            { "id": "w2", "text": "Ersetzt API-Vertragsarbeit vollständig.", "correct": false },
+            { "id": "w3", "text": "Erhöht Risiko inkonsistenter Fehlerbehandlung.", "correct": true },
+            { "id": "w4", "text": "Ist als alleinige Maßnahme oft nicht robust.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Fehlercode immer 200 zurückgeben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschleiert Fehler und erschwert Monitoring/Tests.", "correct": true },
+            { "id": "w2", "text": "Verbessert semantische Korrektheit der API.", "correct": false },
+            { "id": "w3", "text": "Widerspricht sauberer HTTP-Fehlerkommunikation.", "correct": true },
+            { "id": "w4", "text": "Ist Best Practice für stabile APIs.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Schnittstellenvertrag + konsistente Validierung: Das ist die robuste Grundlage für reproduzierbare API-Qualität."
+    }
+  ]
+}

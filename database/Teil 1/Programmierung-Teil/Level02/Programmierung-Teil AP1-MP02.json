@@ -1,0 +1,234 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Programmierung (AP1) Level 2 – Modellierung, SQL, Qualität – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Kombiniere Fachbegriff, präzise Kernaussage und prüfungsrelevantes Szenario.",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Fachlich präzise Aussage",
+    "column3": "Prüfungsnahes Szenario"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Fachbegriff.",
+    "column2": "Ordne die inhaltlich exakte Definition zu.",
+    "column3": "Wähle das dazu passende Anwendungsbeispiel."
+  },
+  "sets": [
+    {
+      "id": "usecase_include_extend",
+      "name": "Use Case: include vs extend",
+      "description": "<<include>> bindet Pflichtverhalten wiederverwendbar ein, <<extend>> ergänzt optional/situativ.",
+      "example": "'Login prüfen' als include, '2FA' als extend bei aktivierter Richtlinie."
+    },
+    {
+      "id": "system_boundary",
+      "name": "Systemgrenze",
+      "description": "Markiert, was Bestandteil des Systems ist und was als extern gilt.",
+      "example": "Identity-Provider außerhalb, Kundenportal innerhalb der Grenze."
+    },
+    {
+      "id": "actor_role",
+      "name": "Actor als Rolle",
+      "description": "Actor ist eine Rolle mit Ziel, nicht eine konkrete Person.",
+      "example": "'Sachbearbeiter' statt 'Max Mustermann'."
+    },
+    {
+      "id": "activity_guard",
+      "name": "Aktivitätsdiagramm mit Guard",
+      "description": "Entscheidungskanten benötigen eindeutig benannte Bedingungen.",
+      "example": "[Berechtigung ok] -> Freigabe, [sonst] -> Ablehnung."
+    },
+    {
+      "id": "sequence_lifeline",
+      "name": "Sequenzdiagramm",
+      "description": "Zeigt Nachrichten zeitlich entlang von Lifelines zwischen Komponenten.",
+      "example": "UI ruft Service, Service ruft Repository, Repository ruft DB."
+    },
+    {
+      "id": "state_machine",
+      "name": "Zustandsdiagramm",
+      "description": "Beschreibt Lebensphasen eines Objekts inkl. Übergangsereignissen.",
+      "example": "Ticket: Neu -> Zugeteilt -> In Bearbeitung -> Erledigt."
+    },
+    {
+      "id": "class_responsibility",
+      "name": "Klassendiagramm & Verantwortung",
+      "description": "Klassen kapseln Daten/Verhalten; Verantwortungen sollen klar verteilt sein.",
+      "example": "InvoiceCalculator statt Mischklasse mit UI-, DB- und Fachlogik."
+    },
+    {
+      "id": "association_vs_composition",
+      "name": "Assoziation vs Komposition",
+      "description": "Komposition bedeutet starke Lebenszyklusabhängigkeit der Teile.",
+      "example": "Bestellung enthält Positionen; Position ohne Bestellung nicht sinnvoll."
+    },
+    {
+      "id": "erd_primary_foreign",
+      "name": "PK/FK im ERD",
+      "description": "Primärschlüssel identifiziert Datensätze, Fremdschlüssel sichern Beziehungen.",
+      "example": "order.customer_id referenziert customer.id."
+    },
+    {
+      "id": "mn_bridge_table",
+      "name": "M:N über Zwischentabelle",
+      "description": "Many-to-Many wird relational durch eine Junction Table aufgelöst.",
+      "example": "student_course(student_id, course_id, enrolled_at)."
+    },
+    {
+      "id": "nf1_atomicity",
+      "name": "1NF",
+      "description": "Jede Zelle enthält genau einen atomaren Wert.",
+      "example": "Nicht 'rot;blau;grün' in einer Spalte speichern."
+    },
+    {
+      "id": "nf2_full_dependency",
+      "name": "2NF",
+      "description": "Nicht-Schlüsselattribute hängen vollständig vom gesamten Schlüssel ab.",
+      "example": "Bei (order_id, product_id) darf product_name nicht nur von product_id abhängen."
+    },
+    {
+      "id": "nf3_transitive",
+      "name": "3NF",
+      "description": "Keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen.",
+      "example": "PLZ und Ort trennen, wenn Ort von PLZ abhängt."
+    },
+    {
+      "id": "dml_vs_ddl",
+      "name": "DDL/DML/DQL",
+      "description": "DDL strukturiert Schema, DML verändert Daten, DQL fragt Daten ab.",
+      "example": "CREATE TABLE (DDL), UPDATE (DML), SELECT (DQL)."
+    },
+    {
+      "id": "where_vs_having",
+      "name": "WHERE vs HAVING",
+      "description": "WHERE filtert vor Aggregation, HAVING filtert aggregierte Gruppen.",
+      "example": "Nur Gruppen mit COUNT(*) > 5 per HAVING anzeigen."
+    },
+    {
+      "id": "join_cartesian",
+      "name": "JOIN-Falle",
+      "description": "Fehlende Join-Bedingung erzeugt kartesisches Produkt.",
+      "example": "100 Kunden x 500 Bestellungen = 50.000 Kombinationszeilen."
+    },
+    {
+      "id": "outer_join_use",
+      "name": "LEFT JOIN Nutzen",
+      "description": "Behält linke Tabelle vollständig, auch ohne Treffer rechts.",
+      "example": "Alle Kunden anzeigen, auch wenn sie noch keine Bestellung haben."
+    },
+    {
+      "id": "transaction_atomicity",
+      "name": "Transaktion (Atomicity)",
+      "description": "Mehrere Änderungen werden als unteilbare Einheit behandelt.",
+      "example": "Buchung + Journal-Eintrag gemeinsam committen oder komplett rollbacken."
+    },
+    {
+      "id": "transaction_isolation",
+      "name": "Isolation",
+      "description": "Parallele Transaktionen sollen sich kontrolliert beeinflussen.",
+      "example": "Dirty Reads vermeiden durch geeignetes Isolationsniveau."
+    },
+    {
+      "id": "optimistic_locking",
+      "name": "Optimistisches Locking",
+      "description": "Versionierung erkennt konkurrierende Änderungen ohne harte Sperren.",
+      "example": "UPDATE nur wenn version = erwarteter_wert."
+    },
+    {
+      "id": "pseudocode_goal",
+      "name": "Pseudocode",
+      "description": "Beschreibt Algorithmus klar und sprachneutral.",
+      "example": "IF token_expired THEN abort ELSE continue."
+    },
+    {
+      "id": "pap_symbols",
+      "name": "PAP-Symbolik",
+      "description": "Nutzt standardisierte Formen für Prozess, Entscheidung und Ein/Ausgabe.",
+      "example": "Raute für Bedingung 'Recht vorhanden?'."
+    },
+    {
+      "id": "structogram_blocks",
+      "name": "Struktogramm",
+      "description": "Blockbasierte Kontrollstrukturen ohne Pfeildiagramm.",
+      "example": "Verschachteltes IF innerhalb einer WHILE-Schleife."
+    },
+    {
+      "id": "boundary_value",
+      "name": "Grenzwertanalyse",
+      "description": "Testfälle um minimale/maximale Kanten erhöhen Fehlerrate-Aufdeckung.",
+      "example": "Länge 7, 8, 9 bei Mindestlänge 8 testen."
+    },
+    {
+      "id": "equivalence_class",
+      "name": "Äquivalenzklassen",
+      "description": "Wählt repräsentative Werte je Eingabeklasse statt Vollkombinatorik.",
+      "example": "Alter: <18, 18-65, >65 als Klassen."
+    },
+    {
+      "id": "negative_test",
+      "name": "Negativtest",
+      "description": "Prüft bewusst fehlerhafte oder unerwartete Eingaben.",
+      "example": "Leerer Pflichtwert, ungültiges Datum, SQL-Metazeichen."
+    },
+    {
+      "id": "unit_test",
+      "name": "Unit-Test",
+      "description": "Testet isolierte Funktionalität mit klaren Erwartungen.",
+      "example": "Rabattberechnung für feste Eingaben deterministisch prüfen."
+    },
+    {
+      "id": "integration_test",
+      "name": "Integrationstest",
+      "description": "Prüft Zusammenspiel mehrerer Bausteine inklusive Schnittstellen.",
+      "example": "API-Endpunkt schreibt korrekt in DB und liefert DTO zurück."
+    },
+    {
+      "id": "logging_policy",
+      "name": "Logging-Policy",
+      "description": "Logs müssen nützlich, strukturiert und datenschutzkonform sein.",
+      "example": "Fehlercode + Korrelations-ID statt Passwort/Token im Klartext."
+    },
+    {
+      "id": "clean_code_names",
+      "name": "Sprechende Namen",
+      "description": "Aussagekräftige Bezeichner reduzieren Fehlinterpretationen.",
+      "example": "calculateInvoiceTotal statt calc1."
+    },
+    {
+      "id": "single_responsibility",
+      "name": "Single Responsibility",
+      "description": "Ein Modul sollte einen klaren Änderungsgrund haben.",
+      "example": "Validator getrennt vom Datenzugriff implementieren."
+    },
+    {
+      "id": "error_handling",
+      "name": "Fehlerbehandlung",
+      "description": "Fehler kontrolliert behandeln statt still verschlucken.",
+      "example": "Domainfehler in API-Response mapen und sauber loggen."
+    },
+    {
+      "id": "input_validation",
+      "name": "Eingabevalidierung",
+      "description": "Daten früh prüfen verhindert Folgefehler und Sicherheitsrisiken.",
+      "example": "Serverseitig Länge, Format und Pflichtfelder validieren."
+    },
+    {
+      "id": "index_strategy",
+      "name": "Index-Strategie",
+      "description": "Gezielte Indizes beschleunigen Abfragen, zu viele schaden Schreiblast.",
+      "example": "Index auf (customer_id, created_at) für häufige Filter."
+    },
+    {
+      "id": "query_plan_awareness",
+      "name": "Abfrageplan-Bewusstsein",
+      "description": "SQL-Performance braucht Verständnis von Scans, Joins und Filterreihenfolge.",
+      "example": "Volltabellenscan erkennen und durch Index/Rewrite verbessern."
+    },
+    {
+      "id": "api_contract",
+      "name": "Schnittstellenvertrag",
+      "description": "Request/Response-Struktur und Fehlerfälle konsistent dokumentieren.",
+      "example": "OpenAPI-Schema mit Statuscodes 200/400/409 definieren."
+    }
+  ]
+}

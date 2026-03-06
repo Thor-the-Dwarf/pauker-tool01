@@ -1,0 +1,391 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Programmierung (AP1) Level 2",
+  "topic": "UML-Präzision, ERM/Normalisierung, SQL-Logik, Testdesign, Transaktionen",
+  "estimated_minutes": 60,
+  "sections": [
+    {
+      "id": "diagrammwahl-l2-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Modellierungsauftrag exakt zuordnen",
+      "subtitle": "Ordne jede Aufgabenstellung dem wirklich passenden Artefakt zu.",
+      "hintDefault": "Prüfungstipp: Was? = Use Case, Wie? = Aktivität/Sequenz, Daten = Klasse/ERD.",
+      "sortColumns": [
+        { "zone": "anforderung", "label": "Anforderungsmodell", "hint": "Use-Case-Sicht" },
+        { "zone": "ablauf", "label": "Ablauf/Interaktion", "hint": "Aktivität/Sequenz" },
+        { "zone": "daten", "label": "Daten-/Strukturmodell", "hint": "Klasse/ERD" }
+      ],
+      "sortCards": [
+        { "id": "d1", "text": "Systemgrenze mit Actor 'Mitarbeiter' und Use Case 'Kunde anlegen'", "correctZone": "anforderung" },
+        { "id": "d2", "text": "Ja/Nein-Verzweigung 'Kreditlimit überschritten?' im Prozessfluss", "correctZone": "ablauf" },
+        { "id": "d3", "text": "Kunde 1..* Auftrag, Auftrag 1..* Auftragsposition", "correctZone": "daten" },
+        { "id": "d4", "text": "Zeitliche Reihenfolge UI -> Service -> Repository -> DB", "correctZone": "ablauf" },
+        { "id": "d5", "text": "Entität Rechnung mit PK/FK und Attributen", "correctZone": "daten" },
+        { "id": "d6", "text": "Rolle 'Admin' darf Benutzer sperren", "correctZone": "anforderung" },
+        { "id": "d7", "text": "Objektzustände: offen -> geprüft -> freigegeben", "correctZone": "ablauf" },
+        { "id": "d8", "text": "Komposition zwischen Bestellung und Position", "correctZone": "daten" }
+      ]
+    },
+    {
+      "id": "uml-feinheiten-quiz",
+      "type": "quiz",
+      "title": "Rätsel 2: UML-Feinheiten",
+      "subtitle": "Kleine Unterschiede mit großer Wirkung in der Bewertung.",
+      "hintDefault": "Verwechsle nicht Zustands-, Aktivitäts- und Sequenzdiagramm.",
+      "questions": [
+        {
+          "id": "u1",
+          "text": "1. Welche Aussage zu <<include>> und <<extend>> ist korrekt?",
+          "options": [
+            { "value": "a", "text": "<<include>> steht für optionales Zusatzverhalten, <<extend>> für Pflichtanteile." },
+            { "value": "b", "text": "<<include>> bindet wiederverwendetes Pflichtverhalten ein, <<extend>> ergänzt optional/situativ." },
+            { "value": "c", "text": "Beides ist nur im Klassendiagramm zulässig." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "u2",
+          "text": "2. Wofür ist ein Zustandsdiagramm gegenüber einem Aktivitätsdiagramm besonders geeignet?",
+          "options": [
+            { "value": "a", "text": "Für Lebenszyklen einzelner Objekte mit Zustandsübergängen." },
+            { "value": "b", "text": "Für Actor-System-Beziehungen auf Anforderungsebene." },
+            { "value": "c", "text": "Für SQL-Joinreihenfolgen." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "u3",
+          "text": "3. Welche Kardinalität beschreibt 'mindestens ein, beliebig viele'?",
+          "options": [
+            { "value": "a", "text": "0..*" },
+            { "value": "b", "text": "1..*" },
+            { "value": "c", "text": "0..1" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "u4",
+          "text": "4. Welche Aussage ist eine typische Prüfungsfalle?",
+          "options": [
+            { "value": "a", "text": "Ein Use Case beschreibt den fachlichen Nutzen, nicht die Codeimplementierung." },
+            { "value": "b", "text": "Ein Sequenzdiagramm zeigt Nachrichten zwischen Lifelines über die Zeit." },
+            { "value": "c", "text": "Ein Use-Case-Diagramm muss Schleifen und If/Else-Bedingungen detailliert darstellen." }
+          ],
+          "correct": "c"
+        }
+      ]
+    },
+    {
+      "id": "normalisierung-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 3: Normalformen unter Druck",
+      "subtitle": "Ordne typische Datenprobleme der richtigen Ursache zu.",
+      "hintDefault": "1NF = atomar, 2NF = volle Schlüsselabhängigkeit, 3NF = keine transitiven Abhängigkeiten.",
+      "sortColumns": [
+        { "zone": "nf1", "label": "1NF-Problem", "hint": "Mehrfachwerte" },
+        { "zone": "nf2", "label": "2NF-Problem", "hint": "Teilschlüssel" },
+        { "zone": "nf3", "label": "3NF-Problem", "hint": "transitiv" },
+        { "zone": "modell", "label": "Modellierungsprinzip", "hint": "saubere Lösung" }
+      ],
+      "sortCards": [
+        { "id": "n1", "text": "Spalte 'skills' enthält 'SQL,Python,Java'", "correctZone": "nf1" },
+        { "id": "n2", "text": "In (bestell_id, artikel_id, artikel_name) hängt artikel_name nur von artikel_id ab", "correctZone": "nf2" },
+        { "id": "n3", "text": "Kundentabelle enthält PLZ und Ort, wobei Ort von PLZ abhängt", "correctZone": "nf3" },
+        { "id": "n4", "text": "M:N zwischen Ticket und Tag wird durch Zwischentabelle aufgelöst", "correctZone": "modell" },
+        { "id": "n5", "text": "Mehrere Telefonwerte in einem Feld durch Semikolon getrennt", "correctZone": "nf1" },
+        { "id": "n6", "text": "Attribut 'lieferantenname' hängt nur vom Teil des zusammengesetzten Schlüssels ab", "correctZone": "nf2" },
+        { "id": "n7", "text": "Regionname wird aus Landcode abgeleitet, aber in jeder Zeile mitgeführt", "correctZone": "nf3" },
+        { "id": "n8", "text": "Referenzielle Integrität über PK/FK statt Freitextfelder", "correctZone": "modell" }
+      ]
+    },
+    {
+      "id": "sql-klauseln-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 4: SQL-Klauseln logisch ordnen",
+      "subtitle": "Bringe die Bausteine in die typische Abfrage-Reihenfolge.",
+      "hintDefault": "FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY -> LIMIT.",
+      "rows": [
+        {
+          "key": "from",
+          "label": "FROM / JOIN",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "where",
+          "label": "WHERE",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "group",
+          "label": "GROUP BY",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "having",
+          "label": "HAVING",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "order",
+          "label": "ORDER BY",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "limit",
+          "label": "LIMIT / TOP",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql-vertiefung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 5: SQL-Vertiefung",
+      "subtitle": "Achte auf Filterzeitpunkt, Join-Bedingung und Transaktionslogik.",
+      "hintDefault": "WHERE filtert Zeilen vor Gruppierung, HAVING filtert Gruppen nach Aggregation.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Welche Aussage zu WHERE und HAVING ist korrekt?",
+          "options": [
+            { "value": "a", "text": "HAVING ersetzt WHERE immer vollständig." },
+            { "value": "b", "text": "WHERE filtert Einzelzeilen, HAVING filtert aggregierte Gruppen." },
+            { "value": "c", "text": "WHERE darf nur mit GROUP BY verwendet werden." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Was passiert typischerweise bei einem JOIN ohne ON-Bedingung?",
+          "options": [
+            { "value": "a", "text": "Automatische Fremdschlüssel-Erkennung verhindert Fehler." },
+            { "value": "b", "text": "Es entsteht ein kartesisches Produkt." },
+            { "value": "c", "text": "Die Datenbank lehnt die Abfrage immer ab." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s3",
+          "text": "3. Welche Formulierung ist für atomare Transaktionen korrekt?",
+          "options": [
+            { "value": "a", "text": "Entweder alle Teiloperationen werden dauerhaft, oder keine." },
+            { "value": "b", "text": "Nur SELECT-Abfragen dürfen transaktional sein." },
+            { "value": "c", "text": "ROLLBACK betrifft nur die letzte SQL-Zeile." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s4",
+          "text": "4. Welche Lösung ist AP1-konform für M:N-Beziehungen?",
+          "options": [
+            { "value": "a", "text": "ID-Liste als CSV in einem Textfeld" },
+            { "value": "b", "text": "Zwischentabelle mit zwei Fremdschlüsseln" },
+            { "value": "c", "text": "Keine Beziehung, nur gleiche Namen in beiden Tabellen" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "testdesign-sort",
+      "type": "sort",
+      "title": "Rätsel 6: Testfallstrategie einordnen",
+      "subtitle": "Ordne Testideen den geeigneten Qualitätsansätzen zu.",
+      "hintDefault": "Äquivalenzklassen + Grenzwerte + Negativfälle + Integrationspfade ergeben robuste Tests.",
+      "sortColumns": [
+        { "zone": "aeq", "label": "Äquivalenzklasse", "hint": "repräsentative Bereiche" },
+        { "zone": "grenze", "label": "Grenzwertanalyse", "hint": "Kanten prüfen" },
+        { "zone": "negativ", "label": "Negativ-/Fehlerfall", "hint": "unerwartete Eingaben" },
+        { "zone": "integration", "label": "Integration", "hint": "Schnittstellenfluss" }
+      ],
+      "sortCards": [
+        { "id": "t1", "text": "Passwortlänge 8, 12, 20 als repräsentative Gruppen", "correctZone": "aeq" },
+        { "id": "t2", "text": "Grenzen 7/8/9 Zeichen explizit testen", "correctZone": "grenze" },
+        { "id": "t3", "text": "SQL-Injection-String als Eingabe prüfen", "correctZone": "negativ" },
+        { "id": "t4", "text": "API -> Service -> Repository -> DB End-to-End prüfen", "correctZone": "integration" },
+        { "id": "t5", "text": "Datumsbereich in gültig/ungültig aufteilen", "correctZone": "aeq" },
+        { "id": "t6", "text": "Null, leer, Sonderzeichen bei Pflichtfeldern", "correctZone": "negativ" },
+        { "id": "t7", "text": "Wert knapp unter/auf/über Maximalgrenze", "correctZone": "grenze" },
+        { "id": "t8", "text": "Verhalten bei Timeout zwischen Microservices", "correctZone": "integration" }
+      ]
+    },
+    {
+      "id": "transaktion-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 7: Transaktionsablauf sauber strukturieren",
+      "subtitle": "Ordne den sicheren Ablauf bei mehrstufigen Änderungen.",
+      "hintDefault": "BEGIN -> Prüfen -> Schreiben -> Validieren -> COMMIT/ROLLBACK.",
+      "rows": [
+        {
+          "key": "begin",
+          "label": "Transaktion starten",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "check",
+          "label": "Vorbedingungen prüfen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "write",
+          "label": "Änderungen schreiben",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "validate",
+          "label": "Ergebnis prüfen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "finish",
+          "label": "COMMIT oder ROLLBACK",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code-quality-quiz",
+      "type": "quiz",
+      "title": "Rätsel 8: Codequalität und Wartbarkeit",
+      "subtitle": "Entscheide, was in AP1-Antworten als gute Begründung zählt.",
+      "hintDefault": "Achte auf Lesbarkeit, Verantwortlichkeiten, Fehlerbehandlung und Reproduzierbarkeit.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welcher Punkt verbessert Wartbarkeit am direktesten?",
+          "options": [
+            { "value": "a", "text": "Aussagekräftige Bezeichner, kleine Funktionen, klare Verantwortlichkeiten" },
+            { "value": "b", "text": "Möglichst viele globale Variablen" },
+            { "value": "c", "text": "Lange Methoden, damit weniger Dateien entstehen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welche Teststrategie reduziert das Risiko bei Refactoring am besten?",
+          "options": [
+            { "value": "a", "text": "Nur manuell kurz anklicken" },
+            { "value": "b", "text": "Automatisierte Unit- und Integrationstests mit reproduzierbaren Daten" },
+            { "value": "c", "text": "Nur Produktionslogs nach Fehlern auswerten" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was ist bei Logging im Prüfungskontext korrekt?",
+          "options": [
+            { "value": "a", "text": "Sensitive Daten (Passwörter, Tokens) im Klartext loggen" },
+            { "value": "b", "text": "Relevante Ereignisse strukturiert loggen, sensible Inhalte vermeiden" },
+            { "value": "c", "text": "Fehler niemals loggen, um Performance zu sparen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Aussage zu Fehlerbehandlung ist belastbar?",
+          "options": [
+            { "value": "a", "text": "Catch-Blöcke dürfen leer bleiben, Hauptsache kein Absturz" },
+            { "value": "b", "text": "Fehler sollten differenziert behandelt und nachvollziehbar gemacht werden" },
+            { "value": "c", "text": "Rollback ist bei mehrstufigen Datenänderungen optional" }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

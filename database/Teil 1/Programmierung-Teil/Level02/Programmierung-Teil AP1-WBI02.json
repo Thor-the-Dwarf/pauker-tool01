@@ -1,0 +1,1131 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Programmierung (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "use_case_diagramm",
+      "name": "Use-Case-Diagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "use_case_text",
+      "name": "Use-Case-Text",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "klassendiagramm",
+      "name": "Klassendiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": true,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "aktivitaetsdiagramm",
+      "name": "Aktivitätsdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sequenzdiagramm",
+      "name": "Sequenzdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "zustandsdiagramm",
+      "name": "Zustandsdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": true,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "erd_erm",
+      "name": "ERD/ERM (Datenmodell)",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "pseudocode",
+      "name": "Pseudocode",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "pap_flowchart",
+      "name": "PAP (Flowchart)",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": true,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "struktogramm",
+      "name": "Struktogramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": true,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_select_where",
+      "name": "SQL SELECT/WHERE",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_join",
+      "name": "SQL JOIN",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_group_having",
+      "name": "SQL GROUP BY/HAVING",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "left_join",
+      "name": "LEFT JOIN",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "transaktion",
+      "name": "Transaktion",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "acid",
+      "name": "ACID-Prinzipien",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "optimistisches_locking",
+      "name": "Optimistisches Locking",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "indexstrategie",
+      "name": "Indexstrategie",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "abfrageplan",
+      "name": "SQL-Abfrageplan",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "unit_test",
+      "name": "Unit-Test",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": true,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "integration_test",
+      "name": "Integrationstest",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "input_validierung",
+      "name": "Input-Validierung",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "api_vertrag",
+      "name": "Schnittstellenvertrag (API)",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "grenzwertanalyse",
+      "name": "Grenzwertanalyse",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": true,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Ist es primär eine visuelle Diagrammform?",
+      "attributeKey": "is_visual_diagram"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Beantwortet es vor allem die Frage, was fachlich gefordert ist?",
+      "attributeKey": "answers_what_requirements"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Modelliert es Klassen mit Attributen/Methoden und Beziehungen?",
+      "attributeKey": "models_classes_structure"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um Ablauf- bzw. Workflowlogik mit Verzweigungen?",
+      "attributeKey": "models_workflow_logic"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Zeigt es Nachrichten/Interaktionen in zeitlicher Reihenfolge?",
+      "attributeKey": "shows_message_sequence"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Beschreibt es Zustände und Zustandsübergänge?",
+      "attributeKey": "shows_states_transitions"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Hat es einen klaren Bezug zu Datenmodellen/Schemafragen?",
+      "attributeKey": "models_database_schema"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird es vor allem textuell als Regel-/Logikbeschreibung ausgedrückt?",
+      "attributeKey": "describes_algorithm_textually"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Nutzt es explizit klassische Flowchart-Symbole?",
+      "attributeKey": "uses_flowchart_symbols"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Arbeitet es blockstrukturiert statt pfeilbasiert?",
+      "attributeKey": "uses_block_structure"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Betrifft es typische SQL-Basics wie SELECT/WHERE?",
+      "attributeKey": "sql_basic_select_where"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Geht es um Tabellenverknüpfungen (JOIN)?",
+      "attributeKey": "sql_joins_tables"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Spielt Gruppierung/Aggregation (GROUP BY/HAVING) eine Kernrolle?",
+      "attributeKey": "sql_group_by_aggregation"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Liegt der Schwerpunkt auf Konsistenz-, Integritäts- oder Robustheitsregeln?",
+      "attributeKey": "focuses_on_db_consistency_rules"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Würde man es typischerweise bei ACID-/Transaktionsdiskussionen nennen?",
+      "attributeKey": "focuses_on_db_consistency_rules"
+    },
+    {
+      "id": "q16",
+      "hotkey": "16",
+      "text": "Ist es für AP1 eher ein Werkzeug zur Strukturierung als reiner Code?",
+      "attributeKey": "is_visual_diagram"
+    },
+    {
+      "id": "q17",
+      "hotkey": "17",
+      "text": "Hilft es direkt bei Auswahl der korrekten SQL-Filterstrategie?",
+      "attributeKey": "sql_basic_select_where"
+    },
+    {
+      "id": "q18",
+      "hotkey": "18",
+      "text": "Ist es relevant, wenn Race Conditions oder Konfliktupdates betrachtet werden?",
+      "attributeKey": "focuses_on_db_consistency_rules"
+    },
+    {
+      "id": "q19",
+      "hotkey": "19",
+      "text": "Hat es primär etwas mit Datenbanktabellen und deren Verhalten zu tun?",
+      "attributeKey": "models_database_schema"
+    },
+    {
+      "id": "q20",
+      "hotkey": "20",
+      "text": "Wird es typischerweise in Testdesign- oder Qualitätssicherungsantworten verwendet?",
+      "attributeKey": "describes_algorithm_textually"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "use_case_diagramm",
+      "name": "Use-Case-Diagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "use_case_text",
+      "name": "Use-Case-Text",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "klassendiagramm",
+      "name": "Klassendiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": true,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "aktivitaetsdiagramm",
+      "name": "Aktivitätsdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sequenzdiagramm",
+      "name": "Sequenzdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "zustandsdiagramm",
+      "name": "Zustandsdiagramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": true,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "erd_erm",
+      "name": "ERD/ERM (Datenmodell)",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "pseudocode",
+      "name": "Pseudocode",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "pap_flowchart",
+      "name": "PAP (Flowchart)",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": true,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "struktogramm",
+      "name": "Struktogramm",
+      "attributes": {
+        "is_visual_diagram": true,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": true,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_select_where",
+      "name": "SQL SELECT/WHERE",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_join",
+      "name": "SQL JOIN",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "sql_group_having",
+      "name": "SQL GROUP BY/HAVING",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "left_join",
+      "name": "LEFT JOIN",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "transaktion",
+      "name": "Transaktion",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "acid",
+      "name": "ACID-Prinzipien",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "optimistisches_locking",
+      "name": "Optimistisches Locking",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "indexstrategie",
+      "name": "Indexstrategie",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": false,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "abfrageplan",
+      "name": "SQL-Abfrageplan",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": true,
+        "sql_joins_tables": true,
+        "sql_group_by_aggregation": true,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "unit_test",
+      "name": "Unit-Test",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": true,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    },
+    {
+      "id": "integration_test",
+      "name": "Integrationstest",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": true,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "input_validierung",
+      "name": "Input-Validierung",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "api_vertrag",
+      "name": "Schnittstellenvertrag (API)",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": true,
+        "models_classes_structure": false,
+        "models_workflow_logic": false,
+        "shows_message_sequence": true,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": false,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": true
+      }
+    },
+    {
+      "id": "grenzwertanalyse",
+      "name": "Grenzwertanalyse",
+      "attributes": {
+        "is_visual_diagram": false,
+        "answers_what_requirements": false,
+        "models_classes_structure": false,
+        "models_workflow_logic": true,
+        "shows_message_sequence": false,
+        "shows_states_transitions": false,
+        "models_database_schema": false,
+        "describes_algorithm_textually": true,
+        "uses_flowchart_symbols": true,
+        "uses_block_structure": false,
+        "sql_basic_select_where": false,
+        "sql_joins_tables": false,
+        "sql_group_by_aggregation": false,
+        "focuses_on_db_consistency_rules": false
+      }
+    }
+  ]
+}
