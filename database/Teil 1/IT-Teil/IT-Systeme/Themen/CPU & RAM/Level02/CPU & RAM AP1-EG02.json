@@ -1,0 +1,293 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – CPU & RAM (AP1) Level 2",
+  "topic": "Workload-Analyse, Bottleneck-Diagnose, RAM-Parameter, ECC, Plattform-Kompatibilität",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "workload-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Workload korrekt klassifizieren",
+      "subtitle": "Ordne jede Situation nach dominantem Leistungsfaktor.",
+      "hintDefault": "Nicht nur CPU-Kerne betrachten: oft entscheiden RAM-Druck und I/O-Muster.",
+      "sortColumns": [
+        { "zone": "single", "label": "Single-Core dominiert", "hint": "kurze serielle Last" },
+        { "zone": "multi", "label": "Multi-Core dominiert", "hint": "parallelisierbar" },
+        { "zone": "memory", "label": "RAM/Bandbreite dominiert", "hint": "Speicherengpass" }
+      ],
+      "sortCards": [
+        { "id": "w1", "text": "ERP-Maske reagiert träge trotz niedriger Gesamt-CPU-Last", "correctZone": "single" },
+        { "id": "w2", "text": "Paralleles Video-Encoding auf mehreren Streams", "correctZone": "multi" },
+        { "id": "w3", "text": "Viele VMs verursachen hohe Pagefault-Rate", "correctZone": "memory" },
+        { "id": "w4", "text": "Großer Build nutzt alle Threads konstant >90%", "correctZone": "multi" },
+        { "id": "w5", "text": "Browser mit 80 Tabs und IDE: ständiges Nachladen", "correctZone": "memory" },
+        { "id": "w6", "text": "Single-Thread-Skript blockiert kompletten Batch", "correctZone": "single" },
+        { "id": "w7", "text": "iGPU-Gaming profitiert stark von schnellerem Dual-Channel-RAM", "correctZone": "memory" },
+        { "id": "w8", "text": "Kurze UI-Aktionen fühlen sich trotz vieler Kerne verzögert an", "correctZone": "single" }
+      ]
+    },
+    {
+      "id": "diagnose-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: Bottleneck-Diagnose",
+      "subtitle": "Wähle die fachlich sauberste Interpretation der Messwerte.",
+      "hintDefault": "CPU-Auslastung allein ist unzuverlässig. Immer RAM, Pagefaults und I/O mitbewerten.",
+      "questions": [
+        {
+          "id": "d1",
+          "text": "1. CPU gesamt 35%, RAM 98%, Pagefile-Aktivität hoch. Wahrscheinlichste Ursache?",
+          "options": [
+            { "value": "a", "text": "Zu wenige CPU-Kerne" },
+            { "value": "b", "text": "RAM-Druck mit Paging/Swap" },
+            { "value": "c", "text": "Defekter CPU-Cache" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "d2",
+          "text": "2. Ein Thread läuft dauerhaft 100%, alle anderen niedrig. Beste Maßnahme zuerst?",
+          "options": [
+            { "value": "a", "text": "Mehr RAM einbauen" },
+            { "value": "b", "text": "Single-Core/Codepfad optimieren oder parallelisieren" },
+            { "value": "c", "text": "Swap-Datei vergrößern" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "d3",
+          "text": "3. Welcher Satz ist AP1-sauber?",
+          "options": [
+            { "value": "a", "text": "Mehr Kerne sind immer wichtiger als RAM-Kapazität." },
+            { "value": "b", "text": "Der richtige Flaschenhals hängt vom Workload und Messbild ab." },
+            { "value": "c", "text": "RAM-Latenz ist nur Marketing und nie relevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "d4",
+          "text": "4. Warum kann ein PC trotz NVMe bei RAM-Mangel stark bremsen?",
+          "options": [
+            { "value": "a", "text": "Weil NVMe langsamer als HDD ist" },
+            { "value": "b", "text": "Weil auch NVMe-Latenzen im Vergleich zu RAM sehr hoch sind" },
+            { "value": "c", "text": "Weil Windows bei NVMe keine Auslagerung erlaubt" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "ram-formel-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: RAM-Timing wirklich verstehen",
+      "subtitle": "Bewerte Takt/CL nicht isoliert.",
+      "hintDefault": "Effektive CAS-Latenz in ns grob: CL / (Datenrate/2) * 1000.",
+      "questions": [
+        {
+          "id": "r1",
+          "text": "1. Was ist die korrekte AP1-Aussage?",
+          "options": [
+            { "value": "a", "text": "Niedrigeres CL ist immer schneller, egal bei welchem Takt." },
+            { "value": "b", "text": "CL muss gemeinsam mit Takt betrachtet werden, um echte Latenz zu bewerten." },
+            { "value": "c", "text": "RAM-Takt hat nur bei Servern Einfluss." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "r2",
+          "text": "2. Welche Konfiguration ist für Speicherbandbreite typischerweise besser?",
+          "options": [
+            { "value": "a", "text": "1x16 GB Single-Channel" },
+            { "value": "b", "text": "2x8 GB Dual-Channel" },
+            { "value": "c", "text": "Beides ist immer identisch" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "r3",
+          "text": "3. Was bringt RAM-OC ohne Stabilitätstest?",
+          "options": [
+            { "value": "a", "text": "Sicher immer mehr Leistung ohne Risiko" },
+            { "value": "b", "text": "Kann instabil sein; Validierung mit Memtests ist Pflicht" },
+            { "value": "c", "text": "Hat nur Einfluss auf SSD-Leistung" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "upgrade-reihenfolge-capital",
+      "type": "capital",
+      "title": "Rätsel 4: Upgrade-Entscheidung systematisch",
+      "subtitle": "Ordne den sauberen Diagnoseprozess.",
+      "hintDefault": "Erst messen, dann Engpass identifizieren, dann passend investieren.",
+      "rows": [
+        {
+          "key": "measure",
+          "label": "Messbild erfassen (CPU/RAM/I/O)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "identify",
+          "label": "Bottleneck festlegen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "plan",
+          "label": "Kompatibles Upgrade planen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "validate",
+          "label": "Stabilität/Leistung nach Umbau verifizieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "document",
+          "label": "Ergebnis dokumentieren",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plattform-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 5: Plattform- und RAM-Kompatibilität",
+      "subtitle": "Ordne Aussagen zu Kompatibilität, Performance-Tuning oder Zuverlässigkeit.",
+      "hintDefault": "Kompatibilität zuerst, dann Performance. ECC ist primär Zuverlässigkeit.",
+      "sortColumns": [
+        { "zone": "compat", "label": "Kompatibilität", "hint": "passt zusammen?" },
+        { "zone": "perf", "label": "Performance-Tuning", "hint": "mehr Durchsatz/Latenz" },
+        { "zone": "reliability", "label": "Zuverlässigkeit", "hint": "Fehlerrobustheit" }
+      ],
+      "sortCards": [
+        { "id": "p1", "text": "DDR5-Modul auf DDR4-Board", "correctZone": "compat" },
+        { "id": "p2", "text": "XMP/EXPO-Profil aktivieren", "correctZone": "perf" },
+        { "id": "p3", "text": "ECC-Unterstützung in CPU und Mainboard prüfen", "correctZone": "reliability" },
+        { "id": "p4", "text": "QVL-Liste des Mainboards abgleichen", "correctZone": "compat" },
+        { "id": "p5", "text": "Dual-Channel korrekt bestücken", "correctZone": "perf" },
+        { "id": "p6", "text": "Memory-Scrubbing gegen stille Bitfehler", "correctZone": "reliability" },
+        { "id": "p7", "text": "Maximal unterstützte RAM-Kapazität pro Slot beachten", "correctZone": "compat" },
+        { "id": "p8", "text": "RAM-Stresstest (Memtest) nach Profilaktivierung", "correctZone": "reliability" }
+      ]
+    },
+    {
+      "id": "ecc-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 6: ECC und Betriebssicherheit",
+      "subtitle": "Server-nahe Prüfungsfragen präzise beantworten.",
+      "hintDefault": "ECC erhöht Integrität und Stabilität, nicht primär rohe Geschwindigkeit.",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "1. Welche Aussage zu ECC ist korrekt?",
+          "options": [
+            { "value": "a", "text": "ECC ist primär für maximale Gaming-FPS gedacht." },
+            { "value": "b", "text": "ECC reduziert Risiko stiller Speicherfehler in kritischen Systemen." },
+            { "value": "c", "text": "ECC funktioniert unabhängig von Plattform-Support." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e2",
+          "text": "2. Warum ist ECC bei Datenbanken/Hypervisoren relevant?",
+          "options": [
+            { "value": "a", "text": "Weil es RAM-Kapazität verdoppelt" },
+            { "value": "b", "text": "Weil Speicherfehler sonst zu Korruption/Instabilität führen können" },
+            { "value": "c", "text": "Weil ECC den SSD-Controller ersetzt" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "e3",
+          "text": "3. Was ist ein häufiger Denkfehler?",
+          "options": [
+            { "value": "a", "text": "ECC und Kompatibilitätsprüfung gehören zusammen" },
+            { "value": "b", "text": "ECC-Module einstecken reicht immer, Plattform ist egal" },
+            { "value": "c", "text": "ECC ist eher Zuverlässigkeits- als Performance-Thema" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "finale-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: AP1-Fallanalyse",
+      "subtitle": "Triff die technisch sauberste Gesamtentscheidung.",
+      "hintDefault": "Erst Engpassdiagnose, dann passend aufrüsten. Keine Einheitsantwort.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Entwickler-PC: CPU 25%, RAM 99%, starke Auslagerung. Beste Erstmaßnahme?",
+          "options": [
+            { "value": "a", "text": "CPU mit mehr Kernen kaufen" },
+            { "value": "b", "text": "RAM-Kapazität erhöhen und Belastungsprofil prüfen" },
+            { "value": "c", "text": "Nur RAM-Takt erhöhen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Render-Node: alle Kerne konstant voll, RAM moderat, kaum Paging. Wahrscheinlichster Upgrade-Hebel?",
+          "options": [
+            { "value": "a", "text": "Mehr Kerne/Threads bzw. höherer Multi-Core-Durchsatz" },
+            { "value": "b", "text": "Nur ECC aktivieren" },
+            { "value": "c", "text": "Swap-Datei vergrößern" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Welche Aussage ist fachlich sauber?",
+          "options": [
+            { "value": "a", "text": "Mehr Kerne lösen jeden Leistungsengpass." },
+            { "value": "b", "text": "Kapazität, Takt/Latenz und Workload müssen gemeinsam bewertet werden." },
+            { "value": "c", "text": "Kompatibilität ist nachrangig, Hauptsache hoher Takt." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

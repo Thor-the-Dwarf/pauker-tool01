@@ -1,0 +1,192 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "CPU & RAM (AP1) Level 2 – Diagnose, Upgrade, Stabilität – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Leistungsfaktor, präzise Kernaussage und passendes Praxisszenario.",
+  "columnTitles": {
+    "column1": "Fachbegriff",
+    "column2": "Kernaussage",
+    "column3": "Praxisfall"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Leistungsbegriff.",
+    "column2": "Ordne die fachlich korrekte Erklärung zu.",
+    "column3": "Wähle das typische Einsatz- oder Fehlerszenario."
+  },
+  "sets": [
+    {
+      "id": "single_core",
+      "name": "Single-Core-Leistung",
+      "description": "Entscheidend bei seriellen, interaktiven Aufgaben mit geringer Parallelität.",
+      "example": "ERP-Formulare reagieren besser mit starker Einzelkernleistung."
+    },
+    {
+      "id": "multi_core",
+      "name": "Multi-Core-Leistung",
+      "description": "Skaliert bei parallelisierbaren Workloads über viele Kerne/Threads.",
+      "example": "Build-Pipeline, Rendering und VMs profitieren von mehr Cores."
+    },
+    {
+      "id": "amdahl",
+      "name": "Amdahl-Prinzip",
+      "description": "Der serielle Anteil begrenzt den maximalen Gewinn durch Parallelisierung.",
+      "example": "Trotz 16 Kernen bleibt ein Single-Thread-Teil der Flaschenhals."
+    },
+    {
+      "id": "thread_contention",
+      "name": "Thread-Contention",
+      "description": "Parallelität kann durch Sperren/Konkurrenz auf geteilte Ressourcen begrenzt werden.",
+      "example": "Viele Threads warten auf denselben Lock im Shared-State-Modul."
+    },
+    {
+      "id": "cpu_cache",
+      "name": "CPU-Cache-Wirkung",
+      "description": "Lokale Zwischenspeicher senken teure RAM-Zugriffe und verbessern Latenz.",
+      "example": "Compilerdurchlauf beschleunigt sich durch bessere Cache-Lokalität."
+    },
+    {
+      "id": "thermal_throttling",
+      "name": "Thermal Throttling",
+      "description": "Bei Temperatur- oder Power-Limits reduziert CPU den Takt unter Last.",
+      "example": "Nach 10 Minuten Render sinkt Frequenz und damit Durchsatz."
+    },
+    {
+      "id": "ram_capacity",
+      "name": "RAM-Kapazität",
+      "description": "Bestimmt, wie viele aktive Daten ohne Auslagerung im schnellen Speicher bleiben.",
+      "example": "32 GB verhindern ständiges Swap bei IDE + Browser + VM."
+    },
+    {
+      "id": "paging_swap",
+      "name": "Paging/Swap",
+      "description": "Bei RAM-Mangel werden Seiten auf Massenspeicher ausgelagert.",
+      "example": "Alt-Tab-Hänger trotz niedriger CPU wegen Pagefile-Aktivität."
+    },
+    {
+      "id": "pagefaults",
+      "name": "Pagefault-Indikator",
+      "description": "Hohe Fehlseitenrate weist auf Speicherdruck und Nachladebedarf hin.",
+      "example": "Monitoring zeigt Peaks bei großen Datensätzen im Browser."
+    },
+    {
+      "id": "ram_bandwidth",
+      "name": "RAM-Bandbreite",
+      "description": "Datenrate zwischen Speichercontroller und RAM, wichtig für speicherintensive Last.",
+      "example": "iGPU gewinnt stark mit höherer Speicherbandbreite."
+    },
+    {
+      "id": "ram_latency",
+      "name": "RAM-Latenz",
+      "description": "Zeit bis Datenzugriff bedient wird; mit Takt gemeinsam zu bewerten.",
+      "example": "CL allein reicht nicht, effektive ns-Latenz zählt."
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "description": "Parallele Speicherkanäle erhöhen theoretische Bandbreite.",
+      "example": "2x8 GB ist für iGPU oft deutlich besser als 1x16 GB."
+    },
+    {
+      "id": "xmp_expo",
+      "name": "XMP/EXPO-Profil",
+      "description": "Aktiviert RAM-Profile für spezifizierten Takt/Timings.",
+      "example": "RAM läuft erst nach Profilaktivierung mit Zielgeschwindigkeit."
+    },
+    {
+      "id": "qvl_compatibility",
+      "name": "QVL/Kompatibilität",
+      "description": "Prüft, ob RAM-Module mit Board/CPU stabil im Zielprofil laufen.",
+      "example": "Kit aus QVL gewählt, um Trainingsprobleme zu vermeiden."
+    },
+    {
+      "id": "ecc",
+      "name": "ECC-RAM",
+      "description": "Erkennt/korrigiert Speicherfehler zur Erhöhung der Zuverlässigkeit.",
+      "example": "Hypervisor-Host nutzt ECC zur Reduktion stiller Datenfehler."
+    },
+    {
+      "id": "ecc_platform",
+      "name": "ECC-Plattformsupport",
+      "description": "ECC-Funktion benötigt Unterstützung durch CPU, Mainboard und Firmware.",
+      "example": "ECC-Module ohne Support laufen ggf. nur non-ECC oder gar nicht stabil."
+    },
+    {
+      "id": "memtest",
+      "name": "Memtest/Stabilitätsprüfung",
+      "description": "Validiert RAM-Stabilität nach Umbau oder Profiländerung.",
+      "example": "Nach XMP-Aktivierung mehrere Testzyklen ohne Fehler fahren."
+    },
+    {
+      "id": "bottleneck_analysis",
+      "name": "Bottleneck-Analyse",
+      "description": "Bewertet CPU, RAM und I/O gemeinsam statt isolierter Einzelwerte.",
+      "example": "CPU 30%, RAM 99%, hoher Disk-I/O -> Speicherengpass statt CPU-Problem."
+    },
+    {
+      "id": "upgrade_order",
+      "name": "Upgrade-Reihenfolge",
+      "description": "Erst Messung und Engpassbestimmung, dann zielgerichtetes Upgrade.",
+      "example": "Nicht blind CPU tauschen, wenn RAM-Auslagerung dominiert."
+    },
+    {
+      "id": "ipc_vs_ghz",
+      "name": "IPC vs GHz",
+      "description": "Takt allein erklärt Leistung nicht; Architektur und Instruktionen pro Takt zählen mit.",
+      "example": "Neuere CPU mit weniger GHz kann schneller sein als ältere mit mehr GHz."
+    },
+    {
+      "id": "smt",
+      "name": "SMT/Hyper-Threading",
+      "description": "Erhöht Auslastung pro Kern, ersetzt aber keine zusätzlichen physischen Kerne.",
+      "example": "8C/16T ist nicht gleichwertig zu 16 echten Kernen in jeder Last."
+    },
+    {
+      "id": "numa_awareness",
+      "name": "NUMA-Bewusstsein",
+      "description": "Speicherlokalität kann auf Multi-Socket/Server-Systemen stark auf Leistung wirken.",
+      "example": "VM erhält RAM auf lokalem NUMA-Knoten für geringere Zugriffszeiten."
+    },
+    {
+      "id": "vm_memory_overcommit",
+      "name": "Memory Overcommit",
+      "description": "Zu aggressive RAM-Überbuchung kann zu Ballooning/Swap und Performanceeinbruch führen.",
+      "example": "Mehrere VMs konkurrieren, Host beginnt massiv auszulagern."
+    },
+    {
+      "id": "latency_sensitive_apps",
+      "name": "Latenzsensitive Last",
+      "description": "Anwendungen mit kurzen Antwortzeiten reagieren stark auf Speicherlatenz und Single-Core-Spitzen.",
+      "example": "Trading- oder Echtzeitkomponente profitiert von niedriger Latenz."
+    },
+    {
+      "id": "throughput_apps",
+      "name": "Durchsatzorientierte Last",
+      "description": "Batch-/Renderjobs priorisieren Gesamtarbeit pro Zeit statt minimale Antwortlatenz.",
+      "example": "Nightly Renderfarm skaliert mit Kernzahl und RAM-Bandbreite."
+    },
+    {
+      "id": "power_limits",
+      "name": "Power-Limit-Einfluss",
+      "description": "Leistungsaufnahmegrenzen beeinflussen Sustained-Performance erheblich.",
+      "example": "Im Dauerbetrieb sinkt Takt wegen PL1/PL2-Limits."
+    },
+    {
+      "id": "profiling",
+      "name": "Profiling statt Raten",
+      "description": "Messbasierte Analyse verhindert Fehlentscheidungen bei Hardware-Upgrades.",
+      "example": "Profiler zeigt Hotspot im Single-Thread-Parser statt RAM-Bottleneck."
+    },
+    {
+      "id": "capacity_planning",
+      "name": "Kapazitätsplanung",
+      "description": "Reserve für Lastspitzen verhindert Leistungseinbruch und Instabilität.",
+      "example": "RAM so dimensionieren, dass Peak-Last ohne Swap fahrbar bleibt."
+    },
+    {
+      "id": "stability_vs_peak",
+      "name": "Stabilität vor Peak-Werten",
+      "description": "Dauerstabile Konfiguration ist im Betrieb oft wichtiger als kurze Benchmark-Spitzen.",
+      "example": "Leicht niedriger Takt, dafür fehlerfreier 24/7-Betrieb."
+    }
+  ]
+}

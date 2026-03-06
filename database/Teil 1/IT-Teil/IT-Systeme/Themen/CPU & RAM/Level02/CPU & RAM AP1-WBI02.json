@@ -1,0 +1,689 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – CPU & RAM (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "single_core_performance",
+      "name": "Single-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "multi_core_performance",
+      "name": "Multi-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ram_capacity",
+      "name": "RAM-Kapazität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "ram_bandwidth",
+      "name": "RAM-Bandbreite",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "ram_latency",
+      "name": "RAM-Latenz",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "xmp_expo",
+      "name": "XMP/EXPO-Profil",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ram_compatibility",
+      "name": "RAM-Kompatibilität/QVL",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ecc_ram",
+      "name": "ECC-RAM",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "paging_swap",
+      "name": "Paging/Swap",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "thermal_throttling",
+      "name": "Thermal Throttling",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": true,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "numa_locality",
+      "name": "NUMA-Lokalität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "memory_overcommit",
+      "name": "Memory Overcommit",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "bottleneck_analysis",
+      "name": "Bottleneck-Analyse",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Liegt der Schwerpunkt auf Leistung eines einzelnen Kerns?",
+      "attributeKey": "focus_cpu_single_core"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Liegt der Schwerpunkt auf paralleler Kern-/Thread-Auslastung?",
+      "attributeKey": "focus_cpu_multi_core"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Passt es typischerweise zu UI/Office-Reaktionsproblemen?",
+      "attributeKey": "typical_for_ui_office"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Passt es typischerweise zu stark parallelisierbaren Jobs?",
+      "attributeKey": "typical_for_parallel_jobs"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Deutet es auf RAM-Druck als zentrales Problem hin?",
+      "attributeKey": "indicates_ram_pressure"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist es primär ein Thema der Speicherbandbreite?",
+      "attributeKey": "is_memory_bandwidth_topic"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ist es primär ein Thema der Speicherlatenz?",
+      "attributeKey": "is_memory_latency_topic"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Spielt Kompatibilität/Plattformabgleich eine zentrale Rolle?",
+      "attributeKey": "is_compatibility_topic"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Steht Zuverlässigkeit/Stabilität klar im Vordergrund?",
+      "attributeKey": "is_reliability_topic"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Erfordert es explizite Unterstützung durch Plattform/Topologie?",
+      "attributeKey": "requires_platform_support"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wird es typischerweise besser mit mehr CPU-Kernen?",
+      "attributeKey": "benefits_from_more_cores"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Wird es typischerweise besser mit mehr RAM-Kapazität?",
+      "attributeKey": "benefits_from_more_ram"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Sollte es nach Änderung unbedingt stabilitätstechnisch getestet werden?",
+      "attributeKey": "needs_stability_validation"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Hängt es eng mit Auslagerung/Paging zusammen?",
+      "attributeKey": "related_to_swap_paging"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Hat es häufig Relevanz im Virtualisierungs-/Serverkontext?",
+      "attributeKey": "related_to_virtualization_server"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "single_core_performance",
+      "name": "Single-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "multi_core_performance",
+      "name": "Multi-Core-Leistung",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ram_capacity",
+      "name": "RAM-Kapazität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "ram_bandwidth",
+      "name": "RAM-Bandbreite",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "ram_latency",
+      "name": "RAM-Latenz",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "xmp_expo",
+      "name": "XMP/EXPO-Profil",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ram_compatibility",
+      "name": "RAM-Kompatibilität/QVL",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "ecc_ram",
+      "name": "ECC-RAM",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "paging_swap",
+      "name": "Paging/Swap",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": false,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": false,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": false,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "thermal_throttling",
+      "name": "Thermal Throttling",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": true,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": false
+      }
+    },
+    {
+      "id": "numa_locality",
+      "name": "NUMA-Lokalität",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": false,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": false,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": false,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": false,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "memory_overcommit",
+      "name": "Memory Overcommit",
+      "attributes": {
+        "focus_cpu_single_core": false,
+        "focus_cpu_multi_core": false,
+        "typical_for_ui_office": false,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": false,
+        "is_memory_latency_topic": false,
+        "is_compatibility_topic": false,
+        "is_reliability_topic": true,
+        "requires_platform_support": true,
+        "benefits_from_more_cores": false,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    },
+    {
+      "id": "bottleneck_analysis",
+      "name": "Bottleneck-Analyse",
+      "attributes": {
+        "focus_cpu_single_core": true,
+        "focus_cpu_multi_core": true,
+        "typical_for_ui_office": true,
+        "typical_for_parallel_jobs": true,
+        "indicates_ram_pressure": true,
+        "is_memory_bandwidth_topic": true,
+        "is_memory_latency_topic": true,
+        "is_compatibility_topic": true,
+        "is_reliability_topic": true,
+        "requires_platform_support": false,
+        "benefits_from_more_cores": true,
+        "benefits_from_more_ram": true,
+        "needs_stability_validation": true,
+        "related_to_swap_paging": true,
+        "related_to_virtualization_server": true
+      }
+    }
+  ]
+}
