@@ -1,0 +1,515 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Backup (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "backup_goal_restore",
+      "name": "Backup-Ziel: Wiederherstellung",
+      "attributes": {
+        "is_backup_goal": true,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rule_321",
+      "name": "3-2-1-Regel",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rule_32110",
+      "name": "3-2-1-1-0-Regel",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "full_backup",
+      "name": "Vollbackup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "incremental_backup",
+      "name": "Inkrementelles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": false,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": true,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "differential_backup",
+      "name": "Differenzielles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "immutable_backup",
+      "name": "Immutable Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "air_gap",
+      "name": "Air Gap",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "dedup_tiering",
+      "name": "Deduplizierung + Tiering",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": false
+      }
+    },
+    {
+      "id": "point_in_time_recovery",
+      "name": "Point-in-Time-Recovery",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": true,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "hybrid_strategy",
+      "name": "Hybrid-Backup-Strategie",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Beschreibt es das grundsätzliche Ziel von Backups?",
+      "attributeKey": "is_backup_goal"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Ist es eine strategische Regel oder ein Rahmenprinzip?",
+      "attributeKey": "is_strategy_rule"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist es eine konkrete Backup-Art (voll/inkrementell/differenziell)?",
+      "attributeKey": "is_backup_type"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Hat es direkten Einfluss auf schnelle Wiederanlaufziele (RTO)?",
+      "attributeKey": "focuses_rto"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Hat es direkten Einfluss auf Datenverlustziele (RPO)?",
+      "attributeKey": "focuses_rpo"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Erhöht es speziell Resilienz gegen Ransomware-Kompromittierung?",
+      "attributeKey": "improves_ransomware_resilience"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Benötigt es Offsite- oder Isolationsgedanken als Kernbestandteil?",
+      "attributeKey": "requires_offsite_or_isolation"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Unterstützt es schnellen Restore unmittelbar?",
+      "attributeKey": "supports_fast_restore"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Ist die Restore-Kette potenziell komplex/anfällig?",
+      "attributeKey": "restore_chain_complexity_high"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Sind regelmäßige Restore-Tests besonders relevant?",
+      "attributeKey": "requires_regular_restore_tests"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Geht es stark um Speichereffizienz/Kostenoptimierung?",
+      "attributeKey": "optimizes_storage_efficiency"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist es klar Teil von Disaster-Recovery-Überlegungen?",
+      "attributeKey": "part_of_disaster_recovery"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "backup_goal_restore",
+      "name": "Backup-Ziel: Wiederherstellung",
+      "attributes": {
+        "is_backup_goal": true,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rule_321",
+      "name": "3-2-1-Regel",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rule_32110",
+      "name": "3-2-1-1-0-Regel",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "full_backup",
+      "name": "Vollbackup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "incremental_backup",
+      "name": "Inkrementelles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": false,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": true,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "differential_backup",
+      "name": "Differenzielles Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": true,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "immutable_backup",
+      "name": "Immutable Backup",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "air_gap",
+      "name": "Air Gap",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "dedup_tiering",
+      "name": "Deduplizierung + Tiering",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": false,
+        "focuses_rpo": false,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": false,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": false,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": false
+      }
+    },
+    {
+      "id": "point_in_time_recovery",
+      "name": "Point-in-Time-Recovery",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": false,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": false,
+        "requires_offsite_or_isolation": false,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": true,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": false,
+        "part_of_disaster_recovery": true
+      }
+    },
+    {
+      "id": "hybrid_strategy",
+      "name": "Hybrid-Backup-Strategie",
+      "attributes": {
+        "is_backup_goal": false,
+        "is_strategy_rule": true,
+        "is_backup_type": false,
+        "focuses_rto": true,
+        "focuses_rpo": true,
+        "improves_ransomware_resilience": true,
+        "requires_offsite_or_isolation": true,
+        "supports_fast_restore": true,
+        "restore_chain_complexity_high": false,
+        "requires_regular_restore_tests": true,
+        "optimizes_storage_efficiency": true,
+        "part_of_disaster_recovery": true
+      }
+    }
+  ]
+}

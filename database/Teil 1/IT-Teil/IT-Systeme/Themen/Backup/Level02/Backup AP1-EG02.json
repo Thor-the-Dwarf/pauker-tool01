@@ -1,0 +1,314 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Backup (AP1) Level 2",
+  "topic": "RTO/RPO, 3-2-1-1-0, Backup-Arten, Restore-Ketten, Verifikation",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "zielbild-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Backup-Zielbild präzisieren",
+      "subtitle": "Ordne Aussagen dem passenden Schwerpunkt zu.",
+      "hintDefault": "RTO = Wiederanlaufzeit, RPO = Datenverlustfenster, Backup-Arten = technische Umsetzung.",
+      "sortColumns": [
+        { "zone": "rto", "label": "RTO-Fokus", "hint": "wie schnell wieder online" },
+        { "zone": "rpo", "label": "RPO-Fokus", "hint": "wie viel Datenverlust zulässig" },
+        { "zone": "technik", "label": "Backup-Technik", "hint": "Voll/Inkr./Diff." }
+      ],
+      "sortCards": [
+        { "id": "z1", "text": "Service nach Ausfall in maximal 2 Stunden verfügbar", "correctZone": "rto" },
+        { "id": "z2", "text": "Maximal 15 Minuten Transaktionen dürfen verloren gehen", "correctZone": "rpo" },
+        { "id": "z3", "text": "Nur Änderungen seit letzter Sicherung speichern", "correctZone": "technik" },
+        { "id": "z4", "text": "Kritische Anwendung muss vor Geschäftsbeginn wieder laufen", "correctZone": "rto" },
+        { "id": "z5", "text": "Datenstand darf nie älter als eine Stunde sein", "correctZone": "rpo" },
+        { "id": "z6", "text": "Restore benötigt letztes Vollbackup plus alle Inkremente", "correctZone": "technik" },
+        { "id": "z7", "text": "Notfalllaufbuch priorisiert Wiederanlaufreihenfolge", "correctZone": "rto" },
+        { "id": "z8", "text": "Snapshot-Frequenz beeinflusst potenziellen Datenverlust", "correctZone": "rpo" }
+      ]
+    },
+    {
+      "id": "regel-capital-32110",
+      "type": "capital",
+      "title": "Rätsel 2: 3-2-1-1-0-Regel zusammensetzen",
+      "subtitle": "Ordne die Zahlen den richtigen Aussagen zu.",
+      "hintDefault": "3 Kopien, 2 Medientypen, 1 Offsite, 1 Immutable/Air-Gap, 0 ungeprüfte Fehler.",
+      "rows": [
+        {
+          "key": "copies",
+          "label": "Gesamtkopien",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "0", "text": "0" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "media",
+          "label": "Unterschiedliche Medientypen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "0", "text": "0" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "offsite",
+          "label": "Offsite-Kopie",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "0", "text": "0" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "immutable",
+          "label": "Immutable/Air-Gap-Kopie",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "0", "text": "0" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        },
+        {
+          "key": "errors",
+          "label": "Unverifizierte Restore-Fehler",
+          "correct": "0",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "0", "text": "0" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backuparten-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 3: Restore-Ketten verstehen",
+      "subtitle": "Ordne Aussagen zu Voll, Inkrementell und Differenziell.",
+      "hintDefault": "Differenziell wächst bis zum nächsten Vollbackup, inkrementell benötigt die längere Kette.",
+      "sortColumns": [
+        { "zone": "voll", "label": "Vollbackup", "hint": "alles jedes Mal" },
+        { "zone": "ink", "label": "Inkrementell", "hint": "seit letztem Backup" },
+        { "zone": "diff", "label": "Differenziell", "hint": "seit letztem Vollbackup" }
+      ],
+      "sortCards": [
+        { "id": "b1", "text": "Sichert kompletten Datenbestand", "correctZone": "voll" },
+        { "id": "b2", "text": "Braucht für Restore meist längste Kette", "correctZone": "ink" },
+        { "id": "b3", "text": "Sicherungsmenge wächst bis neues Vollbackup", "correctZone": "diff" },
+        { "id": "b4", "text": "Hoher Sicherungsaufwand pro Lauf", "correctZone": "voll" },
+        { "id": "b5", "text": "Kleinste tägliche Backupmengen bei stabiler Änderungsrate", "correctZone": "ink" },
+        { "id": "b6", "text": "Restore mit letztem Voll + letztem Diff-Stand", "correctZone": "diff" },
+        { "id": "b7", "text": "Einfachster Restore-Pfad mit nur einer Sicherung", "correctZone": "voll" },
+        { "id": "b8", "text": "Empfindlich gegen fehlendes Zwischenbackup in der Kette", "correctZone": "ink" }
+      ]
+    },
+    {
+      "id": "strategie-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 4: Strategieentscheidungen",
+      "subtitle": "Bewerte praxisnahe Szenarien mit Blick auf Risiko.",
+      "hintDefault": "Nicht nur sichern, sondern Wiederherstellung regelmäßig verifizieren.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Welche Aussage ist belastbar?",
+          "options": [
+            { "value": "a", "text": "Ein Backup gilt als sicher, wenn der Job 'erfolgreich' meldet." },
+            { "value": "b", "text": "Ohne Restore-Test bleibt unklar, ob Daten wirklich nutzbar wiederherstellbar sind." },
+            { "value": "c", "text": "RTO ist identisch mit RPO." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Welche Maßnahme erhöht Schutz gegen Ransomware besonders?",
+          "options": [
+            { "value": "a", "text": "Nur tägliche lokale Vollsicherung im selben Netz" },
+            { "value": "b", "text": "Zusätzliche immutable/offline Kopie außerhalb primärer Domäne" },
+            { "value": "c", "text": "Backup-Namen verbergen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s3",
+          "text": "3. Welches Ziel beeinflusst Backup-Frequenz am direktesten?",
+          "options": [
+            { "value": "a", "text": "RTO" },
+            { "value": "b", "text": "RPO" },
+            { "value": "c", "text": "Dateiformat" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s4",
+          "text": "4. Was ist ein typischer Fehler bei inkrementellen Strategien?",
+          "options": [
+            { "value": "a", "text": "Restore-Ketten nicht regelmäßig auf Vollständigkeit prüfen" },
+            { "value": "b", "text": "Vollbackups überhaupt zu planen" },
+            { "value": "c", "text": "RTO und RPO zu definieren" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "incident-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 5: Incident-Maßnahmen",
+      "subtitle": "Ordne dem primären Zweck zu: Prävention, Sicherung, Wiederherstellung.",
+      "hintDefault": "Gute Strategien kombinieren präventive, sichernde und wiederherstellende Maßnahmen.",
+      "sortColumns": [
+        { "zone": "praevent", "label": "Prävention", "hint": "vor dem Vorfall" },
+        { "zone": "sicherung", "label": "Sicherung", "hint": "Backup-Erstellung" },
+        { "zone": "restore", "label": "Wiederherstellung", "hint": "nach dem Vorfall" }
+      ],
+      "sortCards": [
+        { "id": "i1", "text": "Härtung des Backup-Systems gegen Domänenkompromittierung", "correctZone": "praevent" },
+        { "id": "i2", "text": "Tägliches inkrementelles Backup fahren", "correctZone": "sicherung" },
+        { "id": "i3", "text": "Datenbank auf letzten sauberen Stand zurückspielen", "correctZone": "restore" },
+        { "id": "i4", "text": "Backup-Speicher mit MFA und Netzwerksegmentierung schützen", "correctZone": "praevent" },
+        { "id": "i5", "text": "Wöchentliches Vollbackup erstellen", "correctZone": "sicherung" },
+        { "id": "i6", "text": "Nach Restore Anwendungskonsistenz prüfen", "correctZone": "restore" }
+      ]
+    },
+    {
+      "id": "restore-ablauf-capital",
+      "type": "capital",
+      "title": "Rätsel 6: Restore-Ablauf korrekt",
+      "subtitle": "Ordne den professionellen Wiederherstellungsprozess.",
+      "hintDefault": "Bewerten -> isolieren -> wiederherstellen -> validieren -> freigeben.",
+      "rows": [
+        {
+          "key": "assess",
+          "label": "Schadensbild und Zielstand bestimmen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "contain",
+          "label": "Betroffene Systeme isolieren",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "restore",
+          "label": "Wiederherstellen aus validierter Sicherung",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "validate",
+          "label": "Technisch und fachlich verifizieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "release",
+          "label": "Betrieb freigeben und Lessons Learned dokumentieren",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finale-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: Prüfungsfallen vermeiden",
+      "subtitle": "Entscheide die kritischsten Aussagen richtig.",
+      "hintDefault": "Ein Backup ohne verifizierten Restore ist nur eine Annahme.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Aussage ist fachlich falsch?",
+          "options": [
+            { "value": "a", "text": "RPO beeinflusst, wie häufig gesichert werden muss." },
+            { "value": "b", "text": "RTO beschreibt die erlaubte Ausfallzeit bis zur Wiederaufnahme." },
+            { "value": "c", "text": "Wenn Backups erstellt werden, sind Restore-Tests optional." }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "f2",
+          "text": "2. Warum ist eine offsite oder immutable Kopie wichtig?",
+          "options": [
+            { "value": "a", "text": "Damit Backups schneller komprimiert werden" },
+            { "value": "b", "text": "Damit ein Angreifer/Standortausfall nicht alle Kopien gleichzeitig kompromittiert" },
+            { "value": "c", "text": "Nur um Dateinamen zu standardisieren" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f3",
+          "text": "3. Was ist bei inkrementellem Restore kritisch?",
+          "options": [
+            { "value": "a", "text": "Nur letzte Sicherung reicht immer" },
+            { "value": "b", "text": "Die vollständige Kette aus Vollbackup und allen nötigen Inkrementen muss intakt sein" },
+            { "value": "c", "text": "Inkremente benötigen nie Integritätsprüfung" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f4",
+          "text": "4. Welche Kombination ist am robustesten?",
+          "options": [
+            { "value": "a", "text": "Nur lokale Vollbackups ohne Tests" },
+            { "value": "b", "text": "Mehrstufige Backup-Strategie inkl. Offsite/Immutable und regelmäßiger Restore-Verifikation" },
+            { "value": "c", "text": "Nur Snapshots auf demselben Storage" }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

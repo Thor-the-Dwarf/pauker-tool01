@@ -1,0 +1,198 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Backup (AP1) Level 2 – Strategie, Risiko, Wiederherstellung – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Begriff, präzise Definition und ein realistisches Incident-/Betriebsszenario.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Definition",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den korrekten Fachbegriff.",
+    "column2": "Ordne die exakte Kernaussage zu.",
+    "column3": "Wähle ein passendes Einsatzszenario."
+  },
+  "sets": [
+    {
+      "id": "backup_goal",
+      "name": "Backup-Ziel",
+      "description": "Daten und Systeme nach Vorfällen zuverlässig wiederherstellen können.",
+      "example": "Nach Fehlbedienung den Zustand von gestern wiederherstellen."
+    },
+    {
+      "id": "rto",
+      "name": "RTO",
+      "description": "Maximale Zeit bis ein Service wieder bereitsteht.",
+      "example": "Ticket-System muss in <= 1 Stunde wieder nutzbar sein."
+    },
+    {
+      "id": "rpo",
+      "name": "RPO",
+      "description": "Maximal erlaubtes Datenverlustfenster.",
+      "example": "Datenstand darf höchstens 30 Minuten alt sein."
+    },
+    {
+      "id": "rule_321",
+      "name": "3-2-1-Regel",
+      "description": "3 Kopien, 2 Medientypen, 1 Kopie extern/offsite.",
+      "example": "Produktivdaten + NAS + Cloud-Kopie an anderem Standort."
+    },
+    {
+      "id": "rule_32110",
+      "name": "3-2-1-1-0-Regel",
+      "description": "Ergänzt um immutable/offline Kopie und verifizierte fehlerfreie Restores.",
+      "example": "Zusätzliche immutable Cloud-Kopie + regelmäßige Restore-Validierung."
+    },
+    {
+      "id": "full_backup",
+      "name": "Vollbackup",
+      "description": "Sichert den gesamten Datenbestand vollständig.",
+      "example": "Wöchentliches Komplettbackup aller VM-Volumes."
+    },
+    {
+      "id": "incremental_backup",
+      "name": "Inkrementelles Backup",
+      "description": "Sichert nur Änderungen seit dem letzten Backup-Lauf.",
+      "example": "Tägliche kleine Sicherungen zwischen zwei Vollbackups."
+    },
+    {
+      "id": "differential_backup",
+      "name": "Differenzielles Backup",
+      "description": "Sichert Änderungen seit dem letzten Vollbackup.",
+      "example": "Mittwochsicherung enthält alle Änderungen seit Sonntagsvollbackup."
+    },
+    {
+      "id": "snapshot",
+      "name": "Snapshot",
+      "description": "Punkt-in-Zeit-Abbild eines Systems/Volumes.",
+      "example": "Vor Patchday Snapshot der Produktionsdatenbank erzeugen."
+    },
+    {
+      "id": "synthetic_full",
+      "name": "Synthetic Full",
+      "description": "Virtuelles Vollbackup aus vorhandenem Vollbackup und Inkrementen.",
+      "example": "Neues Voll ohne erneutes Lesen aller Quelldaten erzeugen."
+    },
+    {
+      "id": "immutable_backup",
+      "name": "Immutable Backup",
+      "description": "Sicherungen sind für definierten Zeitraum unveränderbar.",
+      "example": "Backup-Objekte mit Retention Lock gegen Überschreiben schützen."
+    },
+    {
+      "id": "air_gap",
+      "name": "Air Gap",
+      "description": "Physisch/logisch getrennte Sicherung außerhalb direkter Netzreichweite.",
+      "example": "Offline-Tape oder isoliertes Backup-Repository."
+    },
+    {
+      "id": "offsite",
+      "name": "Offsite-Kopie",
+      "description": "Kopie an getrenntem Standort gegen Standortausfälle.",
+      "example": "Zweites Rechenzentrum oder Cloud-Region als Ziel."
+    },
+    {
+      "id": "restore_chain",
+      "name": "Restore-Kette",
+      "description": "Notwendige Backup-Reihenfolge für konsistente Wiederherstellung.",
+      "example": "Vollbackup plus alle erforderlichen Inkremente seitdem."
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "description": "Praktischer Test, ob Wiederherstellung technisch/fachlich gelingt.",
+      "example": "Monatlicher Drill mit echten Wiederanlaufschritten."
+    },
+    {
+      "id": "verification",
+      "name": "Backup-Verifikation",
+      "description": "Prüft Integrität und Lesbarkeit der Sicherungsdaten.",
+      "example": "Hash-Check und Medienprüfung nach Backup-Lauf."
+    },
+    {
+      "id": "retention",
+      "name": "Backup-Retention",
+      "description": "Regelt, wie lange Sicherungen aufbewahrt werden.",
+      "example": "Tagesstände 30 Tage, Monatsstände 12 Monate."
+    },
+    {
+      "id": "grandfather_father_son",
+      "name": "GFS-Rotation",
+      "description": "Klassische Rotationslogik für tägliche, wöchentliche, monatliche Stände.",
+      "example": "Daily/Weekly/Monthly-Bänder mit zyklischer Nutzung."
+    },
+    {
+      "id": "dedup",
+      "name": "Deduplizierung",
+      "description": "Eliminiert redundante Datenblöcke in Backups.",
+      "example": "Viele identische Office-Dateien nur einmal physisch gespeichert."
+    },
+    {
+      "id": "compression",
+      "name": "Komprimierung",
+      "description": "Verringert Backup-Volumen durch datenabhängige Verdichtung.",
+      "example": "Logdateien benötigen nach Komprimierung deutlich weniger Platz."
+    },
+    {
+      "id": "encryption",
+      "name": "Backup-Verschlüsselung",
+      "description": "Schützt Sicherungen gegen unbefugtes Auslesen.",
+      "example": "Verschlüsselte Offsite-Kopie in der Cloud."
+    },
+    {
+      "id": "access_control",
+      "name": "Backup-Zugriffsschutz",
+      "description": "Begrenzt administrative Rechte auf notwendige Rollen.",
+      "example": "Restore-Rechte nur für Notfallteam mit MFA."
+    },
+    {
+      "id": "runbook",
+      "name": "Restore-Runbook",
+      "description": "Schritt-für-Schritt-Anleitung für den Wiederanlauf.",
+      "example": "Dokumentierter Ablauf inkl. Reihenfolge von DB, App, Frontend."
+    },
+    {
+      "id": "drill",
+      "name": "Disaster-Recovery-Drill",
+      "description": "Geplante Übung des Notfallwiederanlaufs unter realistischen Bedingungen.",
+      "example": "Simulierter Ausfall des primären Rechenzentrums."
+    },
+    {
+      "id": "point_in_time_recovery",
+      "name": "Point-in-Time-Recovery",
+      "description": "Wiederherstellung auf einen exakten Zeitpunkt mittels Logs/Backups.",
+      "example": "DB auf Stand 10:42 vor Fehltransaktion zurücksetzen."
+    },
+    {
+      "id": "consistency_check",
+      "name": "Konsistenzprüfung nach Restore",
+      "description": "Technische und fachliche Plausibilitätsprüfung nach Wiederherstellung.",
+      "example": "Anzahl Buchungen und Salden nach Restore validieren."
+    },
+    {
+      "id": "monitoring",
+      "name": "Backup-Monitoring",
+      "description": "Überwacht Jobs, Laufzeiten, Fehlerraten und Kapazitätsgrenzen.",
+      "example": "Alarm bei ausbleibender nächtlicher Sicherung."
+    },
+    {
+      "id": "tiering",
+      "name": "Storage-Tiering",
+      "description": "Verteilt Sicherungen je Zugriffsmuster auf passende Speicherklassen.",
+      "example": "Aktuelle Stände auf schnellem Storage, ältere auf günstigem Objektspeicher."
+    },
+    {
+      "id": "single_point_failure",
+      "name": "Single Point of Failure vermeiden",
+      "description": "Backup-Komponenten dürfen nicht selbst zum Ausfallrisiko werden.",
+      "example": "Repository-Replikation statt einziges Backup-NAS."
+    },
+    {
+      "id": "hybrid_strategy",
+      "name": "Hybrid-Backup-Strategie",
+      "description": "Kombiniert lokale und externe Ziele für Geschwindigkeit und Resilienz.",
+      "example": "Lokales Schnellrestore plus immutable Offsite-Kopie."
+    }
+  ]
+}

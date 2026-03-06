@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Backup (AP1) Level 2",
+  "description": "Schritt 1: passende Backup-Entscheidung (What). Schritt 2: richtige Begründungen (Why).",
+  "cases": [
+    {
+      "id": "b01",
+      "profile": "Der Fachbereich verlangt: Datenverlust darf höchstens 30 Minuten betragen.",
+      "tags": ["RPO", "Planung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "RPO als Leitgröße für Sicherungsfrequenz",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RPO begrenzt den akzeptablen Datenverlust in Zeit.", "correct": true },
+            { "id": "w2", "text": "Je kleiner RPO, desto häufiger müssen Sicherungspunkte entstehen.", "correct": true },
+            { "id": "w3", "text": "RTO bestimmt direkt den maximalen Datenverlust.", "correct": false },
+            { "id": "w4", "text": "Sicherungsstrategie muss auf RPO-Anforderung abgestimmt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur RTO betrachten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RTO beschreibt Wiederanlaufzeit, nicht Datenverlustfenster.", "correct": true },
+            { "id": "w2", "text": "Reicht für Datenverlustanforderungen allein nicht aus.", "correct": true },
+            { "id": "w3", "text": "Deckt RPO vollständig ab.", "correct": false },
+            { "id": "w4", "text": "Kann ergänzend relevant sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Vollbackup monatlich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monatliche Intervalle sind bei 30-Minuten-RPO typischerweise unzureichend.", "correct": true },
+            { "id": "w2", "text": "Widerspricht dem geforderten Datenverlustlimit.", "correct": true },
+            { "id": "w3", "text": "Ist die präziseste Umsetzung für niedriges RPO.", "correct": false },
+            { "id": "w4", "text": "Kann allenfalls Teil einer kombinierten Strategie sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "RPO als Leitgröße: Frequenz und Verfahren müssen am maximal tolerierbaren Datenverlust ausgerichtet sein."
+    },
+    {
+      "id": "b02",
+      "profile": "Nach einem Angriff wurden auch Netzwerk-Backups verschlüsselt. Zukünftig soll das Risiko sinken.",
+      "tags": ["Ransomware", "Resilienz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Immutable/air-gapped Zusatzkopie einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Isolierte oder unveränderbare Kopien sind schwerer mitzukompromittieren.", "correct": true },
+            { "id": "w2", "text": "Erweitert die klassische 3-2-1-Idee um Angriffsschutz.", "correct": true },
+            { "id": "w3", "text": "Ersetzt sämtliche Restore-Tests.", "correct": false },
+            { "id": "w4", "text": "Reduziert Single-Point-of-Failure-Risiken in der Sicherungskette.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur lokales Vollbackup erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr lokale Backups helfen, wenn sie nicht mitverschlüsselt werden.", "correct": true },
+            { "id": "w2", "text": "Ohne Trennung/Immutability bleibt gleiches Angriffsfeld bestehen.", "correct": true },
+            { "id": "w3", "text": "Bietet automatisch Air-Gap-Schutz.", "correct": false },
+            { "id": "w4", "text": "Ist als alleinige Maßnahme oft nicht ausreichend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Backup-Protokolle ausblenden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verdeckt Probleme statt sie zu beheben.", "correct": true },
+            { "id": "w2", "text": "Verschlechtert Monitoring und Reaktion.", "correct": true },
+            { "id": "w3", "text": "Erhöht nachweisbar die Wiederherstellbarkeit.", "correct": false },
+            { "id": "w4", "text": "Steht gegen gutes Sicherheits- und Betriebsmanagement.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Immutable/Air-Gap-Kopie: So verhinderst du, dass ein Angriff alle Sicherungsstände gleichzeitig zerstört."
+    },
+    {
+      "id": "b03",
+      "profile": "Das Team diskutiert, ob inkrementelle oder differenzielle Sicherung für schnelleren Restore besser ist.",
+      "tags": ["Backup-Typen", "Restore-Zeit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Differenziell bevorzugen, wenn Restore-Pfad kurz sein soll",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Typisch: Restore aus letztem Vollbackup + letztem Differenzial.", "correct": true },
+            { "id": "w2", "text": "Kette ist oft kürzer als bei rein inkrementellen Strategien.", "correct": true },
+            { "id": "w3", "text": "Differenzielle Sicherungen sind immer kleiner als inkrementelle.", "correct": false },
+            { "id": "w4", "text": "Abwägung hängt auch von Sicherungsfenster und Speicherbudget ab.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Inkrementell ist immer schneller beim Restore",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Inkrementelle Restores benötigen oft mehrere Zwischenstände.", "correct": true },
+            { "id": "w2", "text": "Ein fehlendes Inkrement kann die Kette unterbrechen.", "correct": true },
+            { "id": "w3", "text": "Restore-Komplexität ist bei inkrementell immer minimal.", "correct": false },
+            { "id": "w4", "text": "Inkrementell kann beim Backup-Fenster Vorteile haben.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Vollbackup täglich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einfacher Restore, aber hohe Datenmengen und längere Sicherungsfenster.", "correct": true },
+            { "id": "w2", "text": "Nicht immer wirtschaftlich für große Datenbestände.", "correct": true },
+            { "id": "w3", "text": "Ist in jedem Umfeld die eindeutig beste Lösung.", "correct": false },
+            { "id": "w4", "text": "Kann Bestandteil eines Mischmodells sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Differenziell kann Restore beschleunigen, weil die Kette meist kürzer ist."
+    },
+    {
+      "id": "b04",
+      "profile": "Die Compliance fordert: 'Kein Backup darf ungetestet bleiben'.",
+      "tags": ["Qualität", "Verifikation"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Regelmäßige Restore-Tests und Verifikation etablieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Nur erfolgreiche Jobs zu sehen beweist keine echte Wiederherstellbarkeit.", "correct": true },
+            { "id": "w2", "text": "Restore-Tests decken Medien-, Prozess- und Konsistenzprobleme auf.", "correct": true },
+            { "id": "w3", "text": "3-2-1 macht Tests überflüssig.", "correct": false },
+            { "id": "w4", "text": "Dokumentierte Drill-Ergebnisse verbessern Audit- und Betriebsreife.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Monitoring des Backup-Jobs",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monitoring ist wichtig, ersetzt aber keine praktische Wiederherstellungsprüfung.", "correct": true },
+            { "id": "w2", "text": "Kann Fehler früh erkennen.", "correct": true },
+            { "id": "w3", "text": "Belegt automatisch die fachliche Nutzbarkeit der Daten nach Restore.", "correct": false },
+            { "id": "w4", "text": "Sollte mit Test-Restores kombiniert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Backup-Laufzeit verkürzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Betriebsfenster verbessern, löst aber Testanforderung nicht.", "correct": true },
+            { "id": "w2", "text": "Ist ohne Verifikation kein Qualitätsnachweis.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Restore-Drills vollständig.", "correct": false },
+            { "id": "w4", "text": "Kann ergänzende Optimierung sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Restore-Tests + Verifikation: Nur damit ist Wiederherstellbarkeit nachweisbar."
+    },
+    {
+      "id": "b05",
+      "profile": "Ein Unternehmen möchte Kosten reduzieren, ohne RTO/RPO-Ziele zu verfehlen.",
+      "tags": ["Wirtschaftlichkeit", "Strategie"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Tiering + Deduplizierung + risikoorientierte Retention",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Deduplizierung senkt Volumen, Tiering optimiert Speicherkosten.", "correct": true },
+            { "id": "w2", "text": "Retention nach Kritikalität verhindert unnötige Datenhaltung.", "correct": true },
+            { "id": "w3", "text": "RTO/RPO dürfen bei Kostenoptimierung ignoriert werden.", "correct": false },
+            { "id": "w4", "text": "Optimierung muss mit Restore-Tests abgesichert bleiben.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Backups nur noch monatlich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann RPO-Ziele massiv verletzen.", "correct": true },
+            { "id": "w2", "text": "Reduziert Kosten, erhöht aber Ausfallrisiko.", "correct": true },
+            { "id": "w3", "text": "Ist unabhängig von RPO immer zulässig.", "correct": false },
+            { "id": "w4", "text": "Braucht zumindest risikobasierte Begründung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Komprimierung aktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hilft Speicherkosten, löst aber nicht alle Strategiefragen.", "correct": true },
+            { "id": "w2", "text": "Ersetzt Tiering, Retention-Design und Testregime vollständig.", "correct": false },
+            { "id": "w3", "text": "Kann sinnvoller Teil einer Gesamtoptimierung sein.", "correct": true },
+            { "id": "w4", "text": "Hat keinen Einfluss auf Verifikationserfordernisse.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Tiering + Deduplizierung + passende Retention: Kosten senken ohne Zielwerte blind zu opfern."
+    },
+    {
+      "id": "b06",
+      "profile": "Im Krisenfall war unklar, in welcher Reihenfolge Systeme wiederhergestellt werden müssen.",
+      "tags": ["Notfall", "Prozess"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Restore-Runbook und Abhängigkeiten definieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Runbooks reduzieren Zeitverlust und Fehlentscheidungen im Incident.", "correct": true },
+            { "id": "w2", "text": "Systemabhängigkeiten (DB vor App) müssen explizit dokumentiert sein.", "correct": true },
+            { "id": "w3", "text": "Ad-hoc-Entscheidungen ohne Dokumentation sind gleichwertig robust.", "correct": false },
+            { "id": "w4", "text": "Übungen gegen Runbook prüfen Praxistauglichkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur mehr Personal einplanen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Personal ohne Prozessklarheit löst Reihenfolgeproblem nicht zuverlässig.", "correct": true },
+            { "id": "w2", "text": "Kann unterstützen, ersetzt aber keine klare Wiederanlaufsteuerung.", "correct": true },
+            { "id": "w3", "text": "Macht Runbooks überflüssig.", "correct": false },
+            { "id": "w4", "text": "Erhöht ohne Struktur sogar Koordinationsrisiko.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Vollbackups erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Restore vereinfachen, löst aber Prozessreihenfolge nicht allein.", "correct": true },
+            { "id": "w2", "text": "Abhängigkeiten müssen weiterhin geplant sein.", "correct": true },
+            { "id": "w3", "text": "Ersetzt jede Notfalldokumentation.", "correct": false },
+            { "id": "w4", "text": "Kann Teil einer Gesamtverbesserung sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Runbook mit Abhängigkeiten: Das ist der zentrale Hebel für reproduzierbaren Wiederanlauf."
+    },
+    {
+      "id": "b07",
+      "profile": "Der Backup-Server selbst ist ein einzelner Ausfallpunkt.",
+      "tags": ["Architektur", "Resilienz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "SPOF auflösen durch Replikation/Redundanz",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein einzelnes Repository kann gesamte Recovery-Fähigkeit gefährden.", "correct": true },
+            { "id": "w2", "text": "Redundanz verringert Ausfallwahrscheinlichkeit des Sicherungssystems.", "correct": true },
+            { "id": "w3", "text": "SPOF ist bei Backups unkritisch.", "correct": false },
+            { "id": "w4", "text": "Überwachung und Testrestores bleiben weiterhin notwendig.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Speicherplatz erweitern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Kapazität beseitigt keinen Architektur-SPOF.", "correct": true },
+            { "id": "w2", "text": "Kann Engpässe lösen, aber nicht die Verfügbarkeitslücke.", "correct": true },
+            { "id": "w3", "text": "Reicht als Gegenmaßnahme gegen SPOF.", "correct": false },
+            { "id": "w4", "text": "Muss mit Redundanzkonzept kombiniert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Backup-Logs kürzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hat keinen direkten Bezug zur Single-Point-Problematik.", "correct": true },
+            { "id": "w2", "text": "Kann Diagnosequalität verschlechtern.", "correct": true },
+            { "id": "w3", "text": "Löst Verfügbarkeitsrisiko des Backup-Systems.", "correct": false },
+            { "id": "w4", "text": "Ist als Hauptmaßnahme ungeeignet.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "SPOF auflösen: Backup-Infrastruktur muss selbst resilient sein, sonst fällt Recovery im Ernstfall aus."
+    },
+    {
+      "id": "b08",
+      "profile": "Das System muss auf einen konkreten Zeitpunkt kurz vor einer Fehltransaktion zurückgesetzt werden.",
+      "tags": ["Datenbank", "Restore"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Point-in-Time-Recovery nutzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "PITR erlaubt Wiederherstellung auf exakten Zielzeitpunkt.", "correct": true },
+            { "id": "w2", "text": "Kombiniert meist Sicherung mit Transaktionslogs.", "correct": true },
+            { "id": "w3", "text": "Jedes Vollbackup bietet automatisch beliebige Zeitpunktwiederherstellung.", "correct": false },
+            { "id": "w4", "text": "Nach Restore ist Konsistenzprüfung weiterhin erforderlich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur letztes Vollbackup einspielen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann zu grobem Datenverlust gegenüber Zielzeitpunkt führen.", "correct": true },
+            { "id": "w2", "text": "Ist ohne Logs oft nicht ausreichend präzise.", "correct": true },
+            { "id": "w3", "text": "Erfüllt PITR-Anforderung automatisch exakt.", "correct": false },
+            { "id": "w4", "text": "Kann als Basisbestandteil dienen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Snapshot vom Vortag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann schnell sein, aber zeitlich zu grob für präzise Zielsekunde.", "correct": true },
+            { "id": "w2", "text": "Löst exakte Zeitpunktwiederherstellung nur, wenn passend frequentiert.", "correct": true },
+            { "id": "w3", "text": "Ist grundsätzlich identisch mit PITR.", "correct": false },
+            { "id": "w4", "text": "Kann Teil eines größeren Recovery-Modells sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "PITR: Für präzise Zeitpunktwiederherstellung ist dieses Verfahren fachlich passend."
+    },
+    {
+      "id": "b09",
+      "profile": "Ein Team schlägt vor, wegen Zeitdruck nur noch Logs auszuwerten statt Notfallübungen durchzuführen.",
+      "tags": ["Governance", "Risiko"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Drills beibehalten und durch Monitoring ergänzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Monitoring erkennt Störungen, ersetzt aber keine praktische Wiederherstellungsübung.", "correct": true },
+            { "id": "w2", "text": "Drills prüfen Menschen, Prozesse und Technik gemeinsam.", "correct": true },
+            { "id": "w3", "text": "Ohne Übungen bleibt Notfallfähigkeit ausreichend belegt.", "correct": false },
+            { "id": "w4", "text": "Kombination erhöht Betriebsreife.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Logs ansehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Logs zeigen Ereignisse, aber nicht automatisch erfolgreiche End-to-End-Wiederherstellung.", "correct": true },
+            { "id": "w2", "text": "Vernachlässigt Prozess- und Kommunikationsaspekte im Incident.", "correct": true },
+            { "id": "w3", "text": "Ist gleichwertig zu DR-Drills.", "correct": false },
+            { "id": "w4", "text": "Erhöht das Risiko im Ernstfall.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur mehr Vollbackups",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Backups ohne Übungen beweisen Wiederanlauf nicht.", "correct": true },
+            { "id": "w2", "text": "Kann Speicher-/Fensterprobleme verschärfen.", "correct": true },
+            { "id": "w3", "text": "Macht Notfalltests überflüssig.", "correct": false },
+            { "id": "w4", "text": "Kann Teilstrategie sein, ersetzt aber keine Drill-Praxis.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Drills + Monitoring: Nur zusammen liefern sie belastbare Notfallfähigkeit."
+    },
+    {
+      "id": "b10",
+      "profile": "Die Geschäftsleitung erwartet geringe Ausfallzeit und gleichzeitig robuste Sicherheit gegen Standort- und Angriffsrisiken.",
+      "tags": ["Gesamtstrategie", "Resilienz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Hybrid-Backup-Strategie",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Lokale Kopien ermöglichen schnelle Restores für gutes RTO.", "correct": true },
+            { "id": "w2", "text": "Offsite/immutable Kopien erhöhen Resilienz bei Standort- und Cybervorfällen.", "correct": true },
+            { "id": "w3", "text": "Ein einziges lokales Repository deckt alle Risiken gleich gut ab.", "correct": false },
+            { "id": "w4", "text": "Strategie muss durch Tests und Monitoring laufend überprüft werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur lokales Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann RTO verbessern, aber Standort- und Ransomware-Risiko bleibt höher.", "correct": true },
+            { "id": "w2", "text": "Ersetzt Offsite-/immutable Schutz vollständig.", "correct": false },
+            { "id": "w3", "text": "Ist als alleinige Maßnahme oft zu riskant.", "correct": true },
+            { "id": "w4", "text": "Braucht zusätzliche Resilienzbausteine.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Cloud-Kopie ohne lokalen Restore-Pfad",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Resilienz erhöhen, aber Restore-Latenzen können RTO gefährden.", "correct": true },
+            { "id": "w2", "text": "Ist automatisch immer optimal für jede Anwendung.", "correct": false },
+            { "id": "w3", "text": "Braucht Abgleich mit Servicekritikalität.", "correct": true },
+            { "id": "w4", "text": "Sollte in ein ausgewogenes Mehrzielkonzept eingebettet werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Hybrid-Strategie: Schnelle lokale Wiederherstellung plus externe Resilienz erfüllt beide Zielrichtungen."
+    }
+  ]
+}
