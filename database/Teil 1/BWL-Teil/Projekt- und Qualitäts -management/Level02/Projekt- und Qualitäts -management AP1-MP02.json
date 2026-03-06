@@ -1,0 +1,246 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Projekt- und Qualitaetsmanagement (AP1) - Level 2 Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne vertiefte AP1-Begriffe aus Projektsteuerung, Risiko, Vorgehensmodellen und Qualitaetsmanagement korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff / Methode",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den treffendsten Fachbegriff.",
+    "column2": "Achte auf Abgrenzungen und typische Pruefungsfallen.",
+    "column3": "Ordne den realistischen IT-Projektfall zu."
+  },
+  "sets": [
+    {
+      "id": "business_case",
+      "name": "Business Case",
+      "description": "Begruendung des Vorhabens mit Nutzen, Kosten, Risiken und Alternativen.",
+      "example": "Vor Toolwechsel wird dargelegt, wie viel Aufwand und Stoehrisiko pro Jahr eingespart wird."
+    },
+    {
+      "id": "projektauftrag",
+      "name": "Projektauftrag",
+      "description": "Offizielle Startfreigabe mit Ziel, Rahmen, Rollen und Verantwortungen.",
+      "example": "Auftraggeber, Budgetobergrenze und Zieltermin werden verbindlich dokumentiert."
+    },
+    {
+      "id": "smart",
+      "name": "SMART-Ziel",
+      "description": "Ziel muss spezifisch, messbar, akzeptiert, realistisch und terminiert sein.",
+      "example": "Reopen-Rate sinkt bis 30.09. von 12% auf 7%, gemessen im Monatsreport."
+    },
+    {
+      "id": "scope_baseline",
+      "name": "Scope-Baseline",
+      "description": "Verbindlicher Leistungsumfang inkl. In-Scope und Out-of-Scope.",
+      "example": "Reporting und Schulung sind enthalten, Mobile-App-Erweiterung ist ausgeschlossen."
+    },
+    {
+      "id": "change_request",
+      "name": "Change Request",
+      "description": "Formale Aenderungsanfrage mit Auswirkungsanalyse auf Zeit, Kosten, Risiko und Qualitaet.",
+      "example": "Neue Compliance-Forderung wird bewertet und erst danach in den Umfang aufgenommen."
+    },
+    {
+      "id": "scope_creep",
+      "name": "Scope Creep",
+      "description": "Schleichende Umfangserweiterung ohne formale Freigabe.",
+      "example": "Mehrere kleine Zusatzwuensche summieren sich zu Terminverzug und Budgetsprung."
+    },
+    {
+      "id": "stakeholder_matrix",
+      "name": "Stakeholder-Matrix",
+      "description": "Strukturiert Einfluss, Betroffenheit und Kommunikationsbedarf je Stakeholder.",
+      "example": "Betriebsrat: hoher Einfluss, hohe Betroffenheit, fruehe Einbindung erforderlich."
+    },
+    {
+      "id": "kommunikationsplan",
+      "name": "Kommunikationsplan",
+      "description": "Regelt wer wann welche Information ueber welchen Kanal erhaelt.",
+      "example": "Management monatlich Ampelbericht, Fachbereich 14-taegig Funktionsdemo."
+    },
+    {
+      "id": "psp",
+      "name": "Projektstrukturplan (PSP)",
+      "description": "Hierarchische Zerlegung in plan- und steuerbare Arbeitspakete.",
+      "example": "Arbeitspakete fuer Analyse, Umsetzung, Test, Schulung und Go-Live werden eindeutig zugeordnet."
+    },
+    {
+      "id": "arbeitspaket",
+      "name": "Arbeitspaket",
+      "description": "Kleinste steuerbare Einheit mit Output, Aufwand, Verantwortlichem und Terminrahmen.",
+      "example": "API-Logging implementieren und Testprotokoll bereitstellen."
+    },
+    {
+      "id": "meilenstein",
+      "name": "Meilenstein",
+      "description": "Zeitpunkt ohne Dauer zur Kontrolle von Fortschritt und Freigaben.",
+      "example": "Systemtest freigegeben ist Voraussetzung fuer Rollout-Freigabe."
+    },
+    {
+      "id": "abhaengigkeit",
+      "name": "Abhaengigkeit",
+      "description": "Logische Verknuepfung zwischen Tasks (z. B. Ende-Start).",
+      "example": "Schulung startet erst nach finaler Freigabe des Workflows."
+    },
+    {
+      "id": "kritischer_pfad",
+      "name": "Kritischer Pfad",
+      "description": "Laengste Kette abhaengiger Vorgaenge, die die Mindestdauer bestimmt.",
+      "example": "Verzoegert sich ein Task auf dem kritischen Pfad, verschiebt sich der Gesamttermin direkt."
+    },
+    {
+      "id": "drei_punkt",
+      "name": "Drei-Punkt-Schaetzung",
+      "description": "Schaetzt optimistisch, realistisch und pessimistisch fuer realistischere Planwerte.",
+      "example": "Migration wird mit 2/4/7 Tagen bewertet statt nur mit einer Wunschzahl."
+    },
+    {
+      "id": "risiko",
+      "name": "Risiko",
+      "description": "Unsicheres Ereignis mit potenziell negativer Auswirkung.",
+      "example": "Lieferverzug von Hardware gefaehrdet den Rollout-Termin."
+    },
+    {
+      "id": "risikobewertung",
+      "name": "Risikobewertung",
+      "description": "Bewertung nach Eintrittswahrscheinlichkeit und Schadensausmass.",
+      "example": "Ausfall des Identity-Servers wird als mittelwahrscheinlich aber hochkritisch bewertet."
+    },
+    {
+      "id": "risiko_vermeiden",
+      "name": "Risikostrategie Vermeiden",
+      "description": "Risikoursache wird entfernt oder kritischer Ansatz wird nicht verfolgt.",
+      "example": "Unsicheres Fremdsystem wird aus Scope gestrichen und durch stabile Alternative ersetzt."
+    },
+    {
+      "id": "risiko_reduzieren",
+      "name": "Risikostrategie Reduzieren",
+      "description": "Eintrittswahrscheinlichkeit oder Auswirkung wird durch Massnahmen gesenkt.",
+      "example": "Backup-Tests, Monitoring und Runbooks senken die Ausfallfolgen."
+    },
+    {
+      "id": "risiko_uebertragen",
+      "name": "Risikostrategie Uebertragen",
+      "description": "Risiko wird vertraglich an Dritte weitergegeben.",
+      "example": "Wartungsvertrag mit klaren Haftungsregeln fuer Hardware-Ausfaelle."
+    },
+    {
+      "id": "risiko_akzeptieren",
+      "name": "Risikostrategie Akzeptieren",
+      "description": "Rest-Risiko wird bewusst getragen und beobachtet.",
+      "example": "Geringe Abweichung bei nicht-kritischer Report-Laufzeit wird toleriert."
+    },
+    {
+      "id": "wasserfall",
+      "name": "Wasserfall",
+      "description": "Phasenorientiertes Vorgehen bei stabilen Anforderungen.",
+      "example": "Regulatorisches Vorhaben mit festen Freigabephasen und klaren Dokumentpflichten."
+    },
+    {
+      "id": "agil",
+      "name": "Agiles Vorgehen",
+      "description": "Iterative Lieferung mit schnellen Feedbackzyklen und Priorisierung.",
+      "example": "Produktteam liefert alle zwei Wochen nutzbare Inkremente und passt Backlog an."
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybridmodell",
+      "description": "Kombiniert klassisches Rahmenwerk mit iterativer Umsetzung.",
+      "example": "Fixe Gate-Termine, aber funktionale Pakete werden sprintweise entwickelt."
+    },
+    {
+      "id": "scrum_po",
+      "name": "Product Owner",
+      "description": "Verantwortet Priorisierung und fachlichen Wert des Backlogs.",
+      "example": "PO priorisiert zuerst Incident-Stabilisierung statt optionaler Dashboard-Wuensche."
+    },
+    {
+      "id": "scrum_sm",
+      "name": "Scrum Master",
+      "description": "Unterstuetzt Prozessdisziplin und entfernt Hindernisse.",
+      "example": "SM loest Abhaengigkeitsblockade mit Infrastrukturteam, damit Sprintziel erreichbar bleibt."
+    },
+    {
+      "id": "increment",
+      "name": "Increment",
+      "description": "Nutzbares, potenziell auslieferbares Ergebnis am Sprintende.",
+      "example": "Freigabeworkflow funktioniert inklusive Tests und Doku im Produktivnahen System."
+    },
+    {
+      "id": "kanban_wip",
+      "name": "Kanban WIP-Limit",
+      "description": "Begrenzt parallele Arbeit fuer besseren Fluss und kuerzere Durchlaufzeit.",
+      "example": "Spalte In Arbeit bleibt auf maximal drei Tickets begrenzt."
+    },
+    {
+      "id": "lead_time",
+      "name": "Lead Time",
+      "description": "Zeit vom Eingang einer Anforderung bis zur Auslieferung.",
+      "example": "Change dauert vom Antrag bis zur Bereitstellung 9 Arbeitstage."
+    },
+    {
+      "id": "cycle_time",
+      "name": "Cycle Time",
+      "description": "Zeit von Start der Bearbeitung bis Abschluss.",
+      "example": "Ticket liegt 2 Tage in Queue und 1 Tag aktiv in Bearbeitung."
+    },
+    {
+      "id": "iso9000",
+      "name": "ISO 9000",
+      "description": "Grundlagen und Begriffe des Qualitaetsmanagements.",
+      "example": "Pruefungsfrage unterscheidet Begriffswelt der Normfamilie von Zertifizierungsanforderungen."
+    },
+    {
+      "id": "iso9001",
+      "name": "ISO 9001",
+      "description": "Anforderungen an ein zertifizierbares QM-System.",
+      "example": "Audit prueft dokumentierte Prozesse, Nachweise und kontinuierliche Verbesserung."
+    },
+    {
+      "id": "pdca",
+      "name": "PDCA",
+      "description": "Plan-Do-Check-Act als Regelkreis fuer kontinuierliche Verbesserung.",
+      "example": "Neuer Prozess wird pilotiert, gemessen, nachgeschaerft und standardisiert."
+    },
+    {
+      "id": "tqm",
+      "name": "TQM",
+      "description": "Unternehmensweite Qualitaetskultur mit Kundenfokus und Fehlerpraevention.",
+      "example": "Qualitaet wird als gemeinsame Verantwortung von Fachbereich, IT und Management gelebt."
+    },
+    {
+      "id": "dod",
+      "name": "Definition of Done",
+      "description": "Verbindliche Kriterien, wann ein Arbeitsergebnis als fertig gilt.",
+      "example": "Done erst bei gruenen Tests, dokumentierter Aenderung und abgeschlossenem Review."
+    },
+    {
+      "id": "review",
+      "name": "Review (4-Augen-Prinzip)",
+      "description": "Fruehe Qualitaetspruefung durch zweite Person zur Fehlerpraevention.",
+      "example": "Firewall-Regel wird vor Produktivsetzung durch zweiten Admin freigegeben."
+    },
+    {
+      "id": "teststufen",
+      "name": "Teststufen",
+      "description": "Unit, Integration, System, Abnahme mit unterschiedlichen Zielen.",
+      "example": "Funktion geht im Unit-Test, scheitert aber in Integration wegen Schnittstelle."
+    },
+    {
+      "id": "rueckverfolgbarkeit",
+      "name": "Rueckverfolgbarkeit",
+      "description": "Verknuepft Anforderungen mit Testfaellen und Abnahmeergebnissen.",
+      "example": "Jede Muss-Anforderung hat einen dokumentierten Nachweis im Testreport."
+    },
+    {
+      "id": "lessons_learned",
+      "name": "Lessons Learned",
+      "description": "Strukturierte Auswertung von Fehlern und Erfolgen fuer Folgeprojekte.",
+      "example": "Nach Rollout werden Ursachen fuer Verzug analysiert und Standards angepasst."
+    }
+  ]
+}

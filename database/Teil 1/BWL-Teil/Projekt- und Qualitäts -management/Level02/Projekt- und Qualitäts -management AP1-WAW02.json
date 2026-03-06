@@ -1,0 +1,499 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Projekt- und Qualitaetsmanagement (AP1) Level 2",
+  "description": "Schritt 1: passende Methode/Einordnung waehlen. Schritt 2: tragende Gruende markieren.",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Ein Projektteam bekommt waehrend Sprint 3 drei neue Wunschfeatures vom Management. Sie sind nicht in Scope-Baseline oder Backlog priorisiert.",
+      "tags": ["Scope", "Change", "Steuerung"],
+      "options": [
+        {
+          "id": "change_control",
+          "label": "Formaler Change Request mit Auswirkungsanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Umfangsaenderungen muessen auf Termin, Kosten, Risiko und Qualitaet bewertet werden.", "correct": true },
+            { "id": "w2", "text": "Ohne formale Entscheidung droht Scope Creep.", "correct": true },
+            { "id": "w3", "text": "Management-Wunsch ist automatisch In-Scope und braucht keine Bewertung.", "correct": false },
+            { "id": "w4", "text": "Ein transparenter Entscheidungsweg schuetzt Team und Auftraggeber zugleich.", "correct": true }
+          ]
+        },
+        {
+          "id": "sofort_umsetzen",
+          "label": "Alles sofort umsetzen, Motivation nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ungepruefte Zusatzarbeit destabilisiert Plan und Abnahmeziele.", "correct": true },
+            { "id": "w2", "text": "Kurzfristige Euphorie ersetzt keine Projektdisziplin.", "correct": true },
+            { "id": "w3", "text": "Je mehr Parallelfeatures, desto geringer das Risiko.", "correct": false },
+            { "id": "w4", "text": "Ohne Priorisierung leidet oft die Lieferqualitaet.", "correct": true }
+          ]
+        },
+        {
+          "id": "daily_entscheidet",
+          "label": "Im Daily ad hoc entscheiden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Daily dient Synchronisation, nicht formaler Scope-Freigabe.", "correct": true },
+            { "id": "w2", "text": "Governance-Entscheidungen brauchen nachvollziehbare Kriterien.", "correct": true },
+            { "id": "w3", "text": "Daily ersetzt Produktverantwortung und Auftraggeberentscheidung.", "correct": false },
+            { "id": "w4", "text": "Unklare Entscheidungswege erzeugen spaetere Konflikte.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist ein formaler Change-Prozess mit Wirkung auf Zeit, Kosten, Risiko und Qualitaet."
+    },
+    {
+      "id": "v02",
+      "profile": "Ein Team liefert schnell viele Tickets als erledigt, aber die Reopen-Rate steigt und Nutzer sind unzufrieden.",
+      "tags": ["KPI", "Qualitaet", "Fehlanreiz"],
+      "options": [
+        {
+          "id": "kpi_set",
+          "label": "Einseitige KPI-Steuerung, balanciertes KPI-Set noetig",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Nur Geschwindigkeit ohne Qualitaetsgegenindikator erzeugt Fehlanreize.", "correct": true },
+            { "id": "w2", "text": "Kombination aus Durchlaufzeit, Reopen-Rate und Erstloesungsquote ist robuster.", "correct": true },
+            { "id": "w3", "text": "Mehr geschlossene Tickets bedeuten automatisch bessere Qualitaet.", "correct": false },
+            { "id": "w4", "text": "KPI muessen direkt am Prozessziel ausgerichtet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_mehr_personal",
+          "label": "Problem loest sich nur mit mehr Personal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kapazitaet kann helfen, behebt aber Fehlsteuerung durch falsche Metrik nicht automatisch.", "correct": true },
+            { "id": "w2", "text": "Auch grosses Team kann schlechte Zielmetriken verfolgen.", "correct": true },
+            { "id": "w3", "text": "Kennzahlen sind unwichtig, sobald genug Personen da sind.", "correct": false },
+            { "id": "w4", "text": "Steuerungslogik muss vor reiner Aufstockung geklaert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "scrum_master_schuld",
+          "label": "Allein der Scrum Master ist verantwortlich",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Metrikdesign ist Fuehrungs-/Produktverantwortung und Teamaufgabe, nicht Einzelfehler einer Rolle.", "correct": true },
+            { "id": "w2", "text": "Rollenklaerung ersetzt keine sachgerechte KPI-Auswahl.", "correct": true },
+            { "id": "w3", "text": "Scrum Master priorisiert fachlichen Backlog-Inhalt verbindlich.", "correct": false },
+            { "id": "w4", "text": "Systemische Ursachen brauchen systemische Gegenmassnahmen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Problem ist ein KPI-Fehlanreiz. Ein balanciertes Set stellt Geschwindigkeit und Qualitaet gemeinsam sicher."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein Vorhaben hat feste regulatorische Freigaben pro Phase, gleichzeitig wechseln fachliche Details waehrend der Umsetzung haeufig.",
+      "tags": ["Vorgehen", "Hybrid", "Governance"],
+      "options": [
+        {
+          "id": "hybrid",
+          "label": "Hybridmodell",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Fixe Stage-Gates koennen mit iterativer Umsetzung kombiniert werden.", "correct": true },
+            { "id": "w2", "text": "Regulatorische Stabilitaet und fachliche Anpassbarkeit lassen sich so ausbalancieren.", "correct": true },
+            { "id": "w3", "text": "Hybrid bedeutet, dass es keine Dokumentpflicht mehr gibt.", "correct": false },
+            { "id": "w4", "text": "Reiner Wasserfall oder rein agil waere hier jeweils einseitig.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_wasserfall",
+          "label": "Nur Wasserfall",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann bei stark wechselnden Details anpassungsarm sein.", "correct": true },
+            { "id": "w2", "text": "Feste Gates sind ein Vorteil, aber nicht der gesamte Bedarf des Szenarios.", "correct": true },
+            { "id": "w3", "text": "Wasserfall ist bei dynamischen Anforderungen immer optimal.", "correct": false },
+            { "id": "w4", "text": "Hier braucht es sowohl Steuerdisziplin als auch Feedbackschleifen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_agil",
+          "label": "Nur agil ohne Phase-Gates",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Regulatorische Freigabevorgaben duerfen nicht ignoriert werden.", "correct": true },
+            { "id": "w2", "text": "Agile Iteration allein deckt formale Gate-Anforderungen nicht automatisch ab.", "correct": true },
+            { "id": "w3", "text": "Dokumentierte Freigaben widersprechen jedem agilen Vorgehen grundsaetzlich.", "correct": false },
+            { "id": "w4", "text": "Methodik muss Kontext und Nebenbedingungen abbilden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Hybrid passt am besten: regulatorische Gates plus iterative Fachumsetzung."
+    },
+    {
+      "id": "v04",
+      "profile": "Im Plan sind alle Aufgaben ohne Verknuepfungen eingetragen. Beim ersten Verzug ist unklar, welche Termine wirklich kippen.",
+      "tags": ["Terminplanung", "Abhaengigkeiten", "kritischer Pfad"],
+      "options": [
+        {
+          "id": "kritischer_pfad",
+          "label": "Abhaengigkeiten und kritischer Pfad fehlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne Vorgangslogik kann keine belastbare Endterminprognose erfolgen.", "correct": true },
+            { "id": "w2", "text": "Der kritische Pfad zeigt, welche Verzoegerungen direkt terminwirksam sind.", "correct": true },
+            { "id": "w3", "text": "Abhaengigkeiten sind optional, solange Aufwand geschaetzt wurde.", "correct": false },
+            { "id": "w4", "text": "Meilensteine allein ersetzen keine Netzlogik.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_schaetzung",
+          "label": "Nur Drei-Punkt-Schaetzung fehlt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schaetzung hilft bei Unsicherheit, ersetzt aber keine Reihenfolgelogik.", "correct": true },
+            { "id": "w2", "text": "Ohne Abhaengigkeiten bleibt Terminwirkung einzelner Verzuege unklar.", "correct": true },
+            { "id": "w3", "text": "Wenn die Schätzung exakt ist, braucht man keinen kritischen Pfad.", "correct": false },
+            { "id": "w4", "text": "Planqualitaet entsteht aus Aufwand plus Verknuepfung.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_agil",
+          "label": "Einfach auf agil wechseln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch agile Teams brauchen Abhaengigkeits- und Risiko-Transparenz.", "correct": true },
+            { "id": "w2", "text": "Methodenwechsel ersetzt keine fehlende Planlogik.", "correct": true },
+            { "id": "w3", "text": "Agile Vorgehen machen Terminrisiken automatisch irrelevant.", "correct": false },
+            { "id": "w4", "text": "Fachproblem bleibt: Verzoegerungswirkung ist nicht analysiert.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne Abhaengigkeiten und kritischen Pfad ist der Terminplan nicht steuerbar."
+    },
+    {
+      "id": "v05",
+      "profile": "Ein Team testet nur am Projektende. Fehler werden spaet entdeckt, Fixes verschieben den Go-Live.",
+      "tags": ["Qualitaet", "Teststufen", "Kostenkurve"],
+      "options": [
+        {
+          "id": "teststufen_frueh",
+          "label": "Fruehe Teststufen und Nachweise fehlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Spaet gefundene Fehler sind meist deutlich teurer in der Behebung.", "correct": true },
+            { "id": "w2", "text": "Unit-, Integrations- und Systemtests entlasten den Endtest.", "correct": true },
+            { "id": "w3", "text": "Abnahmetest reicht als einzige Teststufe vollstaendig aus.", "correct": false },
+            { "id": "w4", "text": "Fruehe Qualitaetssicherung stabilisiert Termin und Budget.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_mehr_tester",
+          "label": "Nur mehr Tester am Projektende noetig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Personen spaet im Prozess kompensieren fehlende Fruehtests nur begrenzt.", "correct": true },
+            { "id": "w2", "text": "Defekte Architekturentscheidungen lassen sich am Ende schwer kurzfristig reparieren.", "correct": true },
+            { "id": "w3", "text": "Fehlerkosten bleiben gleich, egal wann man testet.", "correct": false },
+            { "id": "w4", "text": "Prozessqualitaet ist wichtiger als reine Endkapazitaet.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_doku",
+          "label": "Nur Dokumentation verbessern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Doku ist notwendig, ersetzt aber keine technischen Testnachweise.", "correct": true },
+            { "id": "w2", "text": "Qualitaet entsteht aus Ausfuehrung und Pruefung, nicht nur aus Text.", "correct": true },
+            { "id": "w3", "text": "Doku allein verhindert Integrationsfehler vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Bestes Ergebnis entsteht aus Testdisziplin plus Nachweisbarkeit.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fehlende fruehe Teststufen verursachen spaete, teure Fehler und Terminrisiko."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Team hat zwar Anforderungen dokumentiert, aber es ist nicht nachvollziehbar, welcher Test welche Anforderung abdeckt.",
+      "tags": ["Qualitaetsmanagement", "Rueckverfolgbarkeit", "Abnahme"],
+      "options": [
+        {
+          "id": "traceability",
+          "label": "Rueckverfolgbarkeit ist unzureichend",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Anforderungen sollten systematisch mit Testfaellen und Ergebnissen verknuepft sein.", "correct": true },
+            { "id": "w2", "text": "Ohne Traceability wird Abnahme argumentativ schwach.", "correct": true },
+            { "id": "w3", "text": "Rueckverfolgbarkeit ist nur fuer V-Modell relevant, sonst entbehrlich.", "correct": false },
+            { "id": "w4", "text": "Audit- und Compliance-Nachweise profitieren stark von sauberer Verknuepfung.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_pdca",
+          "label": "PDCA reicht ohne Testzuordnung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDCA liefert den Verbesserungsrahmen, ersetzt aber keine konkrete Test-Abdeckung.", "correct": true },
+            { "id": "w2", "text": "Check-Phase braucht belastbare Daten, die aus sauberer Zuordnung kommen.", "correct": true },
+            { "id": "w3", "text": "PDCA macht Traceability ueberfluessig.", "correct": false },
+            { "id": "w4", "text": "Methodik und Nachweisartefakte muessen zusammenpassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_review",
+          "label": "Ein Peer-Review reicht als Nachweis",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Review ist wichtig, deckt aber nicht automatisch alle Anforderungen testbar ab.", "correct": true },
+            { "id": "w2", "text": "Abnahmereife verlangt mehr als eine einzelne Pruefhandlung.", "correct": true },
+            { "id": "w3", "text": "Review ersetzt alle Teststufen und alle Nachweise.", "correct": false },
+            { "id": "w4", "text": "Qualitaetsnachweise sollten mehrschichtig aufgebaut sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Es fehlt Rueckverfolgbarkeit zwischen Anforderungen und Testnachweisen."
+    },
+    {
+      "id": "v07",
+      "profile": "Nach einem Rollout werden keine Erkenntnisse dokumentiert. Im Folgeprojekt treten dieselben Planungsfehler erneut auf.",
+      "tags": ["Lernen", "Lessons Learned", "Kontinuierliche Verbesserung"],
+      "options": [
+        {
+          "id": "lessons_learned",
+          "label": "Lessons Learned fehlt als Transfermechanismus",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne strukturierte Rueckschau bleibt Erfahrungswissen implizit.", "correct": true },
+            { "id": "w2", "text": "Wiederholte Fehler deuten auf fehlende Prozessverbesserung hin.", "correct": true },
+            { "id": "w3", "text": "Lessons Learned ist nur nice-to-have ohne Steuerungswirkung.", "correct": false },
+            { "id": "w4", "text": "Massnahmen sollten in Standards und Checklisten ueberfuehrt werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_teamwechsel",
+          "label": "Ein neues Team loest das Problem automatisch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne dokumentierten Lerntransfer wiederholen auch neue Teams alte Muster.", "correct": true },
+            { "id": "w2", "text": "Systemische Fehler brauchen systemische Korrektur.", "correct": true },
+            { "id": "w3", "text": "Personaltausch ersetzt jede Prozessverbesserung.", "correct": false },
+            { "id": "w4", "text": "Lernschleifen sind Teil professioneller Projektkultur.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_iso",
+          "label": "ISO-Zertifikat allein verhindert Wiederholfehler",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Normrahmen hilft, muss aber mit gelebten Verbesserungsprozessen gefuellt werden.", "correct": true },
+            { "id": "w2", "text": "Formale Zertifizierung ohne Umsetzung bringt wenig Praxiseffekt.", "correct": true },
+            { "id": "w3", "text": "Mit Zertifikat sind retrospektive Analysen ueberfluessig.", "correct": false },
+            { "id": "w4", "text": "PDCA und Lessons Learned muessen operativ angewandt werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fehlende Lessons Learned verhindern Wissenstransfer und fuehren zu Wiederholfehlern."
+    },
+    {
+      "id": "v08",
+      "profile": "Ein Team nutzt Kanban. Trotzdem starten alle parallel moeglichst viele Aufgaben und nichts wird zeitnah fertig.",
+      "tags": ["Kanban", "WIP", "Flow"],
+      "options": [
+        {
+          "id": "wip_ignoriert",
+          "label": "WIP-Limit wird nicht wirksam angewandt",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne WIP-Begrenzung steigt Multitasking und Durchlaufzeit.", "correct": true },
+            { "id": "w2", "text": "Kanban entfaltet Wirkung vor allem durch Flussdisziplin.", "correct": true },
+            { "id": "w3", "text": "Viele parallele Starts beschleunigen immer den Gesamtdurchsatz.", "correct": false },
+            { "id": "w4", "text": "Fokus auf Fertigstellen statt Starten ist Kernprinzip.", "correct": true }
+          ]
+        },
+        {
+          "id": "kanban_falsch",
+          "label": "Kanban ist fuer IT-Projekte ungeeignet",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kanban ist in IT-Betrieb und Projektnahen Flows sehr verbreitet.", "correct": true },
+            { "id": "w2", "text": "Problem liegt hier in Anwendung, nicht in der Methode selbst.", "correct": true },
+            { "id": "w3", "text": "Kanban verbietet jegliche Priorisierung.", "correct": false },
+            { "id": "w4", "text": "Methodentreue ohne Prozessdisziplin liefert keinen Effekt.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_scrum",
+          "label": "Nur Scrum kann Flow-Probleme loesen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Flow-Probleme sind auch in Scrum moeglich, wenn WIP und Fokus fehlen.", "correct": true },
+            { "id": "w2", "text": "Methodenwahl ist weniger entscheidend als konsequente Steuerung.", "correct": true },
+            { "id": "w3", "text": "Kanban und Scrum sind unvereinbar und niemals kombinierbar.", "correct": false },
+            { "id": "w4", "text": "Kontextgerecht eingesetzte Elemente koennen sich ergaenzen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Problem ist nicht Kanban, sondern fehlende wirksame WIP-Steuerung."
+    },
+    {
+      "id": "v09",
+      "profile": "Ein Projekt besitzt viele Dokumente, aber kaum messbare Kriterien. Im Review kann niemand eindeutig sagen, ob ein Arbeitspaket wirklich fertig ist.",
+      "tags": ["Definition of Done", "Nachweis", "Qualitaet"],
+      "options": [
+        {
+          "id": "dod_fehlt",
+          "label": "Definition of Done ist nicht belastbar definiert",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Done-Kriterien muessen objektiv pruefbar sein.", "correct": true },
+            { "id": "w2", "text": "Viele Dokumente ersetzen keine messbaren Abschlussbedingungen.", "correct": true },
+            { "id": "w3", "text": "Fertig ist, wenn das Team ein gutes Gefuehl hat.", "correct": false },
+            { "id": "w4", "text": "DoD verbindet Qualitaetsanspruch, Teststatus und Dokumentation.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_doku",
+          "label": "Dokumentationsmenge ist ausreichend",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Entscheidend ist nicht Menge, sondern Nachweisqualitaet.", "correct": true },
+            { "id": "w2", "text": "Ohne Kriterien bleibt Bewertung subjektiv.", "correct": true },
+            { "id": "w3", "text": "Je mehr Seiten, desto hoeher die Prozessreife automatisch.", "correct": false },
+            { "id": "w4", "text": "Abnahme erfordert klare, pruefbare Ergebnisdefinition.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_review",
+          "label": "Ein Review ohne Kriterien reicht",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Review ist wirksam, wenn gegen definierte Kriterien geprueft wird.", "correct": true },
+            { "id": "w2", "text": "Ohne Maßstab bleibt die Entscheidung uneinheitlich.", "correct": true },
+            { "id": "w3", "text": "Review ersetzt Akzeptanzkriterien vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Qualitaetsmanagement braucht reproduzierbare Entscheidungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Definition of Done ist zu unscharf. Kriterien muessen messbar und verbindlich sein."
+    },
+    {
+      "id": "v10",
+      "profile": "Bei einem Incident-Projekt werden Risiken zwar gesammelt, aber ohne Eintrittswahrscheinlichkeit und Auswirkung. Priorisierung bleibt beliebig.",
+      "tags": ["Risikomanagement", "Priorisierung", "Steuerung"],
+      "options": [
+        {
+          "id": "risikobewertung_fehlend",
+          "label": "Risikobewertung ist unvollstaendig",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne Bewertungslogik lassen sich Risiken nicht sauber priorisieren.", "correct": true },
+            { "id": "w2", "text": "Wahrscheinlichkeit x Auswirkung schafft Entscheidungsgrundlage.", "correct": true },
+            { "id": "w3", "text": "Risikolisten ohne Bewertung sind gleichwertig zu einer Matrix.", "correct": false },
+            { "id": "w4", "text": "Massnahmen sollten auf priorisierte Top-Risiken fokussieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_mehr_risiken",
+          "label": "Mehr Risiko-Eintraege loesen das Problem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Menge ohne Bewertungsstruktur erhoeht nur Komplexitaet.", "correct": true },
+            { "id": "w2", "text": "Entscheidend ist Relevanz, nicht Listenlaenge.", "correct": true },
+            { "id": "w3", "text": "Je mehr Risiken dokumentiert sind, desto besser automatisch priorisiert.", "correct": false },
+            { "id": "w4", "text": "Steuerung braucht Gewichtung und Konsequenz in Massnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_akzeptieren",
+          "label": "Alle Risiken akzeptieren spart Aufwand",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Akzeptieren ist nur eine von mehreren Strategien und nicht immer angemessen.", "correct": true },
+            { "id": "w2", "text": "Hochkritische Risiken brauchen oft Vermeidung, Reduktion oder Uebertragung.", "correct": true },
+            { "id": "w3", "text": "Akzeptieren reduziert Eintrittswahrscheinlichkeit automatisch.", "correct": false },
+            { "id": "w4", "text": "Strategiewahl muss zur Risikoklasse passen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne Bewertung bleibt Risikosteuerung beliebig. Priorisierung braucht klare Matrixlogik."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Unternehmen besitzt ISO-9001-Zertifikat, trotzdem werden Abweichungen aus Audits nicht systematisch nachverfolgt.",
+      "tags": ["ISO 9001", "PDCA", "Wirksamkeit"],
+      "options": [
+        {
+          "id": "pdca_luecke",
+          "label": "PDCA/Wirksamkeitsnachweis wird nicht gelebt",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zertifikat allein garantiert keine gelebte Verbesserung.", "correct": true },
+            { "id": "w2", "text": "Ohne Check und Act bleiben Korrekturmassnahmen wirkungslos.", "correct": true },
+            { "id": "w3", "text": "ISO 9001 ersetzt jede operative Nachverfolgung automatisch.", "correct": false },
+            { "id": "w4", "text": "QM-Reife zeigt sich in geschlossenen Verbesserungszyklen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_doku",
+          "label": "Mehr Dokumente reichen aus",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dokumentation ist Basis, aber Wirksamkeit braucht Umsetzung und Kontrolle.", "correct": true },
+            { "id": "w2", "text": "Massnahmen ohne Rueckmeldung bleiben administrativ statt wirksam.", "correct": true },
+            { "id": "w3", "text": "Papierumfang ist der wichtigste Qualitaetsindikator.", "correct": false },
+            { "id": "w4", "text": "Auditfestigkeit entsteht durch Nachweis geschlossener Korrekturmassnahmen.", "correct": true }
+          ]
+        },
+        {
+          "id": "tqm_ersetzen",
+          "label": "ISO streichen und nur auf TQM verlassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Normrahmen und Qualitaetskultur koennen sich ergaenzen.", "correct": true },
+            { "id": "w2", "text": "Das Problem ist Umsetzungsluecke, nicht Existenz der Norm.", "correct": true },
+            { "id": "w3", "text": "TQM macht jede formale Qualitaetssystematik unnoetig.", "correct": false },
+            { "id": "w4", "text": "Methodenwechsel ohne Ursachebehebung loest die Luecke nicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Luecke liegt in der gelebten PDCA-Umsetzung und Wirksamkeitskontrolle, nicht im Zertifikat an sich."
+    },
+    {
+      "id": "v12",
+      "profile": "In einem Sprint wurden 20 Stories gestartet, aber nur 6 abgeschlossen. Stakeholder sehen wenig nutzbaren Fortschritt.",
+      "tags": ["Agil", "Flow", "Lieferfaehigkeit"],
+      "options": [
+        {
+          "id": "fokus_fertigstellen",
+          "label": "Fokus auf Fertigstellen und WIP-Begrenzung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Nutzbarer Fortschritt entsteht durch fertiggestellte Inkremente, nicht durch gestartete Arbeit.", "correct": true },
+            { "id": "w2", "text": "Zu viel Parallelisierung zerlegt Aufmerksamkeit und verlangsamt Abschlussraten.", "correct": true },
+            { "id": "w3", "text": "Viele Starts sind immer ein Zeichen hoher Teamleistung.", "correct": false },
+            { "id": "w4", "text": "Flow-Metriken sollten Abschluss und Durchlauf fokussieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "mehr_stories",
+          "label": "Noch mehr Stories in den Sprint nehmen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr offene Arbeit erhoeht typischerweise Stau statt Output.", "correct": true },
+            { "id": "w2", "text": "Lieferfaehigkeit verbessert sich durch Priorisierung und WIP-Disziplin.", "correct": true },
+            { "id": "w3", "text": "Ueberladung beschleunigt den kritischen Pfad automatisch.", "correct": false },
+            { "id": "w4", "text": "Stakeholder bewerten nutzbare Ergebnisse, nicht Startmengen.", "correct": true }
+          ]
+        },
+        {
+          "id": "dailys_verlaengern",
+          "label": "Daily auf 90 Minuten verlaengern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Lange Meetings kompensieren kein fehlendes Flow-Management.", "correct": true },
+            { "id": "w2", "text": "Daily soll kurz synchronisieren, nicht operative Abarbeitung ersetzen.", "correct": true },
+            { "id": "w3", "text": "Je laenger das Daily, desto hoeher der Sprint-Output.", "correct": false },
+            { "id": "w4", "text": "Problemursache liegt in Arbeitsfluss und Priorisierung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "WIP begrenzen und auf Fertigstellen fokussieren, sonst bleibt Fortschritt nur scheinbar hoch."
+    }
+  ]
+}

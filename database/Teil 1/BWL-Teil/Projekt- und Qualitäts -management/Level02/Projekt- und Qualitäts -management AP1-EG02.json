@@ -1,0 +1,443 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Projekt- und Qualitaetsmanagement (AP1) Level 2",
+  "topic": "Scope-Baseline, kritischer Pfad, Risikoantworten, agile und klassische Steuerung, Test- und Qualitaetslogik",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "einordnung-sort",
+      "type": "sort",
+      "title": "Raetsel 1: Projekt, Prozess oder Linie?",
+      "subtitle": "Ordne die Aussagen der passenden Arbeitslogik zu.",
+      "hintDefault": "Projekt = einmalig und befristet. Prozess = wiederholbar. Linie/Routine = taegliche Regelaufgaben ohne Projektauftrag.",
+      "sortColumns": [
+        { "zone": "projekt", "label": "Projekt", "hint": "einmalig mit Ziel, Termin, Budget" },
+        { "zone": "prozess", "label": "Prozess", "hint": "standardisiert, wiederholbar" },
+        { "zone": "linie", "label": "Linie/Routine", "hint": "laufender Betrieb, kleine Regelaufgaben" }
+      ],
+      "sortCards": [
+        { "id": "e1", "text": "Einmalige Einfuehrung eines ISMS-Dashboards mit Abnahme.", "correctZone": "projekt" },
+        { "id": "e2", "text": "Taegliche Tickettriage im Service Desk.", "correctZone": "prozess" },
+        { "id": "e3", "text": "Woechentliche Teamplanung und Vertretungsabsprachen.", "correctZone": "linie" },
+        { "id": "e4", "text": "Migration von 300 Clients auf neues Endpoint-Management.", "correctZone": "projekt" },
+        { "id": "e5", "text": "Standardisierte Benutzeranlage mit Freigabekette.", "correctZone": "prozess" },
+        { "id": "e6", "text": "Kurzfristiger Passwort-Reset fuer einzelne Mitarbeitende.", "correctZone": "linie" },
+        { "id": "e7", "text": "Aufbau eines neuen Reporting-Konzepts mit klarem Endtermin.", "correctZone": "projekt" },
+        { "id": "e8", "text": "Monatliche KPI-Erhebung im bestehenden QM-Prozess.", "correctZone": "prozess" },
+        { "id": "e9", "text": "Regelmaessige Teamdoku im Wissenswiki aktualisieren.", "correctZone": "linie" }
+      ]
+    },
+    {
+      "id": "smart-scope-quiz",
+      "type": "quiz",
+      "title": "Raetsel 2: SMART und Scope-Baseline",
+      "subtitle": "Finde die pruefungssichere Steuerungslogik.",
+      "hintDefault": "SMART ohne Scope-Abgrenzung reicht nicht. Scope ohne Change-Prozess kippt trotzdem.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Welche Formulierung ist am ehesten SMART?",
+          "options": [
+            { "value": "a", "text": "Wir verbessern die Qualitaet deutlich." },
+            { "value": "b", "text": "Bis 30.09. sinkt die Reopen-Rate von 12% auf 7%, gemessen im Monatsreport." },
+            { "value": "c", "text": "Wir fuehren eine moderne Loesung ein." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Welche Aussage minimiert Scope Creep am wirksamsten?",
+          "options": [
+            { "value": "a", "text": "Jede gute Idee sofort umsetzen, solange motiviert gearbeitet wird." },
+            { "value": "b", "text": "Scope-Baseline mit In-Scope/Out-of-Scope und formaler Change-Pruefung." },
+            { "value": "c", "text": "Nur die Teamleitung entscheidet spontan im Daily." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s3",
+          "text": "3. Warum ist Out-of-Scope in AP1-Szenarien wichtig?",
+          "options": [
+            { "value": "a", "text": "Weil dadurch das Projekt automatisch agil wird." },
+            { "value": "b", "text": "Weil Abnahme und Aufwand sonst durch implizite Zusatzwuensche entgleiten." },
+            { "value": "c", "text": "Weil dann keine Stakeholder mehr informiert werden muessen." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s4",
+          "text": "4. Welche Kombination ist fuer Abnahmefaehigkeit am staerksten?",
+          "options": [
+            { "value": "a", "text": "Vision-Statement ohne Kennzahlen." },
+            { "value": "b", "text": "SMART-Ziel + Akzeptanzkriterien + nachvollziehbares Testprotokoll." },
+            { "value": "c", "text": "Nur Lessons Learned am Projektende." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "scope-control-sort",
+      "type": "sort",
+      "title": "Raetsel 3: Scope-Steuerung unter Last",
+      "subtitle": "Ordne jede Aussage korrekt: In Scope, Out of Scope, Change Request.",
+      "hintDefault": "In Scope = vereinbart. Out of Scope = explizit ausgeschlossen. Neu/abweichend = Change Request.",
+      "sortColumns": [
+        { "zone": "in", "label": "In Scope", "hint": "vereinbarter Leistungsumfang" },
+        { "zone": "out", "label": "Out of Scope", "hint": "klar ausgeschlossen" },
+        { "zone": "cr", "label": "Change Request", "hint": "neu bewerten und freigeben" }
+      ],
+      "sortCards": [
+        { "id": "sc1", "text": "Schulung von 45 Key-Usern laut Projektauftrag.", "correctZone": "in" },
+        { "id": "sc2", "text": "Umbau der gesamten Netzwerkhardware, obwohl nicht beauftragt.", "correctZone": "out" },
+        { "id": "sc3", "text": "Zusaetzliches Rollenmodell wird nach Kickoff neu gefordert.", "correctZone": "cr" },
+        { "id": "sc4", "text": "Migration der im Lastenheft genannten Altdatenfelder.", "correctZone": "in" },
+        { "id": "sc5", "text": "Mobile App soll spontan mitentwickelt werden.", "correctZone": "cr" },
+        { "id": "sc6", "text": "24/7-Betriebsuebernahme war vertraglich ausgeschlossen.", "correctZone": "out" },
+        { "id": "sc7", "text": "Abnahme-Workshop mit den benannten Stakeholdern.", "correctZone": "in" },
+        { "id": "sc8", "text": "Self-Service-Portal war bewusst nicht Teil der ersten Phase.", "correctZone": "out" },
+        { "id": "sc9", "text": "Neuer Compliance-Report wegen geaenderter Vorgabe waehrend Umsetzung.", "correctZone": "cr" }
+      ]
+    },
+    {
+      "id": "planung-capital",
+      "type": "capital",
+      "title": "Raetsel 4: Planung in der richtigen Reihenfolge",
+      "subtitle": "Bringe den Planungsablauf in eine pruefungsfaehige Reihenfolge.",
+      "hintDefault": "Erst Auftrag und Ziele, dann Umfang, Struktur, Aufwand, Terminlogik, Risiko, Baseline.",
+      "rows": [
+        {
+          "key": "p1",
+          "label": "Projektauftrag und Anlass klaeren",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p2",
+          "label": "SMART-Ziele und Akzeptanzkriterien definieren",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p3",
+          "label": "Scope-Baseline mit In- und Out-of-Scope festhalten",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p4",
+          "label": "PSP und Arbeitspakete mit Outputs erstellen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p5",
+          "label": "Aufwaende schaetzen (z. B. Drei-Punkt)",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p6",
+          "label": "Abhaengigkeiten und kritischen Pfad planen",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p7",
+          "label": "Risiken bewerten und Gegenmassnahmen definieren",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "p8",
+          "label": "Plan-Baseline freigeben und Change-Prozess festlegen",
+          "correct": "8",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vorgehen-sort",
+      "type": "sort",
+      "title": "Raetsel 5: Klassisch, agil oder hybrid?",
+      "subtitle": "Ordne Aussagen dem passendsten Ansatz zu.",
+      "hintDefault": "Stabil + regulatorisch streng -> eher klassisch. Hohe Dynamik + Feedback -> eher agil. Kombinationen -> hybrid.",
+      "sortColumns": [
+        { "zone": "klassisch", "label": "Klassisch", "hint": "fruehe Gesamtplanung, stabile Anforderungen" },
+        { "zone": "agil", "label": "Agil", "hint": "iterativ, inkrementell, schnelles Feedback" },
+        { "zone": "hybrid", "label": "Hybrid", "hint": "Rahmen klassisch, Umsetzung iterativ" }
+      ],
+      "sortCards": [
+        { "id": "v1", "text": "Pflichtenheft und feste Abnahmetermine vor Entwicklungsstart.", "correctZone": "klassisch" },
+        { "id": "v2", "text": "Sprint-Rhythmus mit Review und Retrospektive.", "correctZone": "agil" },
+        { "id": "v3", "text": "Regulatorischer Stage-Gate-Plan plus agile Umsetzung in Teilteams.", "correctZone": "hybrid" },
+        { "id": "v4", "text": "Anforderungen werden laufend priorisiert und nachgeschaerft.", "correctZone": "agil" },
+        { "id": "v5", "text": "Gesamtkosten und Hauptmeilensteine sind zu Projektbeginn fixiert.", "correctZone": "klassisch" },
+        { "id": "v6", "text": "Gesamtarchitektur wird fixiert, Features werden aber in Inkrementen geliefert.", "correctZone": "hybrid" },
+        { "id": "v7", "text": "WIP-Limits steuern den laufenden Durchsatz.", "correctZone": "agil" },
+        { "id": "v8", "text": "Formale Freigaben je Phase dominieren den Ablauf.", "correctZone": "klassisch" },
+        { "id": "v9", "text": "Abnahmevorgaben sind fix, Loesungsweg bleibt iterativ flexibel.", "correctZone": "hybrid" }
+      ]
+    },
+    {
+      "id": "qualitaetsquiz",
+      "type": "quiz",
+      "title": "Raetsel 6: Qualitaet sichern statt hoffen",
+      "subtitle": "Wähle die fachlich belastbarste Antwort.",
+      "hintDefault": "Qualitaet entsteht durch Prozessdisziplin, nicht nur durch Endtest.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage trifft Prozessqualitaet am besten?",
+          "options": [
+            { "value": "a", "text": "Nur das Endprodukt zaehlt, der Weg ist egal." },
+            { "value": "b", "text": "Definierte Standards, Reviews und Testkriterien machen Ergebnisse reproduzierbar." },
+            { "value": "c", "text": "Prozessqualitaet ist nur ein Synonym fuer ISO-Zertifikat." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist bei Teststufen korrekt?",
+          "options": [
+            { "value": "a", "text": "Abnahmetest ersetzt Unit-, Integrations- und Systemtest vollstaendig." },
+            { "value": "b", "text": "Fruehere Teststufen reduzieren Fehlerkosten deutlich." },
+            { "value": "c", "text": "Teststufen sind nur fuer klassische Projekte relevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Kombination staerkt Nachweisbarkeit am meisten?",
+          "options": [
+            { "value": "a", "text": "Mundliche Abstimmung ohne Protokoll, dafuer schnelle Entscheidungen." },
+            { "value": "b", "text": "Review-Protokoll, Testnachweise, Abnahmebericht, versionierte Doku." },
+            { "value": "c", "text": "Nur ein Abschlussmeeting am Ende." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was ist PDCA im Alltag?",
+          "options": [
+            { "value": "a", "text": "Einmalige Abschlussdoku ohne Rueckkopplung." },
+            { "value": "b", "text": "Planen, umsetzen, messen, standardisieren bzw. nachschärfen." },
+            { "value": "c", "text": "Nur ein Begriff fuer retrospektive Meetings." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "risiko-capital",
+      "type": "capital",
+      "title": "Raetsel 7: Risikoantwort korrekt zuordnen",
+      "subtitle": "Waehle fuer jede Lage die passende Strategie.",
+      "hintDefault": "Typische Strategien: Vermeiden, Reduzieren, Uebertragen, Akzeptieren.",
+      "rows": [
+        {
+          "key": "r1",
+          "label": "Kritische Abhaengigkeit auf unsicheren Einzelzulieferer; Alternative verfuegbar",
+          "correct": "vermeiden",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        },
+        {
+          "key": "r2",
+          "label": "Ausfallrisiko bleibt, aber durch Backup-Test und Monitoring klar beherrschbarer",
+          "correct": "reduzieren",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        },
+        {
+          "key": "r3",
+          "label": "Schadensfall wird ueber Servicevertrag mit klarer Haftung abgesichert",
+          "correct": "uebertragen",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        },
+        {
+          "key": "r4",
+          "label": "Kleines Restrisiko mit geringer Auswirkung wird bewusst getragen",
+          "correct": "akzeptieren",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        },
+        {
+          "key": "r5",
+          "label": "Neues Feature mit unklarem Nutzen soll vorerst aus Phase 1 gestrichen werden",
+          "correct": "vermeiden",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        },
+        {
+          "key": "r6",
+          "label": "Schluesselperson-Risiko wird durch Wissensduplikation und Pairing abgesenkt",
+          "correct": "reduzieren",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "vermeiden", "text": "Vermeiden" },
+            { "value": "reduzieren", "text": "Reduzieren" },
+            { "value": "uebertragen", "text": "Uebertragen" },
+            { "value": "akzeptieren", "text": "Akzeptieren" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-quiz",
+      "type": "quiz",
+      "title": "Raetsel 8: Finale AP1-Entscheidungen",
+      "subtitle": "Finde die robusteste Steuerungsentscheidung.",
+      "hintDefault": "Denk in Ziel, Messbarkeit, Nachweisbarkeit und Change-Kontrolle.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welcher Fall spricht am staerksten fuer hybrides Vorgehen?",
+          "options": [
+            { "value": "a", "text": "Unklare Ziele, keine Abnahmekriterien." },
+            { "value": "b", "text": "Feste regulatorische Gates plus laufende Nutzerfeedback-Zyklen." },
+            { "value": "c", "text": "Stabile Anforderungen ohne erwartete Aenderungen." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Welche Kennzahl passt am besten zur Team-Flow-Steuerung in Kanban?",
+          "options": [
+            { "value": "a", "text": "Anzahl gestarteter Aufgaben pro Woche." },
+            { "value": "b", "text": "Durchlaufzeit abgeschlossener Aufgaben bei eingehaltenem WIP-Limit." },
+            { "value": "c", "text": "Anzahl der Meetings pro Monat." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f3",
+          "text": "3. Was verhindert am ehesten Streit bei der Endabnahme?",
+          "options": [
+            { "value": "a", "text": "Nur ein finales Bauchgefuehl der Projektleitung." },
+            { "value": "b", "text": "Vorab definierte Akzeptanzkriterien plus dokumentierte Testnachweise." },
+            { "value": "c", "text": "Nur ein screenshot des Endzustands." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f4",
+          "text": "4. Wann ist ein Change Request fachlich zwingend?",
+          "options": [
+            { "value": "a", "text": "Wenn eine Aenderung Umfang, Termin, Kosten oder Risiko signifikant beeinflusst." },
+            { "value": "b", "text": "Nur wenn das Team keine Lust auf die Aufgabe hat." },
+            { "value": "c", "text": "Nie, weil Agilitaet formale Freigaben ersetzt." }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}
