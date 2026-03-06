@@ -1,0 +1,198 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Hardware (AP1) Level 2 – Architektur, Kompatibilitaet und Betrieb",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Hardware-Begriff, fachlich praezise Bedeutung und AP1-Praxisbeispiel korrekt.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Praezise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den passenden Hardwarebegriff.",
+    "column2": "Achte auf technische Abgrenzung.",
+    "column3": "Ordne die realistische AP1-Situation zu."
+  },
+  "sets": [
+    {
+      "id": "cpu",
+      "name": "CPU",
+      "description": "Zentrales Rechenwerk mit Einfluss durch Kerne/Threads, Takt und Cache.",
+      "example": "Seriale Fachanwendung reagiert besser mit starker Einzelkernleistung."
+    },
+    {
+      "id": "ipc_vs_clock",
+      "name": "IPC vs Takt",
+      "description": "Leistung entsteht aus Architekturleistung pro Takt und Taktfrequenz gemeinsam.",
+      "example": "Neuere CPU mit niedrigerem GHz kann trotzdem schneller sein."
+    },
+    {
+      "id": "smt",
+      "name": "SMT/Hyper-Threading",
+      "description": "Mehr logische Threads pro Kern fuer bessere Auslastung bei passenden Lasten.",
+      "example": "Parallele Build-Jobs profitieren von zusaetzlichen Threads."
+    },
+    {
+      "id": "cpu_cache",
+      "name": "CPU-Cache",
+      "description": "Schneller Puffer fuer haeufig benoetigte Daten, reduziert RAM-Zugriffe.",
+      "example": "Datenstrukturlastige Workloads laufen fluessiger bei hoher Cache-Trefferrate."
+    },
+    {
+      "id": "thermal_throttling",
+      "name": "Thermal Throttling",
+      "description": "Automatische Leistungsreduktion bei Temperatur-/Powergrenzen.",
+      "example": "Render-Job wird nach einigen Minuten deutlich langsamer."
+    },
+    {
+      "id": "ram_capacity",
+      "name": "RAM-Kapazitaet",
+      "description": "Bestimmt, wie viele aktive Daten ohne langsame Auslagerung gehalten werden.",
+      "example": "Viele geoeffnete Apps fuehren bei 8 GB zu starker Swap-Nutzung."
+    },
+    {
+      "id": "dual_channel",
+      "name": "Dual-Channel",
+      "description": "Erhoeht Speicherbandbreite durch parallelen Zugriff auf zwei Speicherkanaele.",
+      "example": "2x16 GB liefert oft bessere Bandbreite als 1x32 GB."
+    },
+    {
+      "id": "ecc",
+      "name": "ECC-RAM",
+      "description": "Erkennt und korrigiert Speicherbitfehler fuer hoehere Datenintegritaet.",
+      "example": "Server fuer kritische Daten nutzt ECC mit passender Plattformunterstuetzung."
+    },
+    {
+      "id": "xmp_expo",
+      "name": "XMP/EXPO",
+      "description": "Profilbasierte RAM-Parameter fuer Takt/Latenz jenseits Standardwerten.",
+      "example": "Nach BIOS-Reset laeuft RAM ohne Profil nur mit Basistakt."
+    },
+    {
+      "id": "storage_ssd",
+      "name": "SSD",
+      "description": "Flashbasierter Massenspeicher mit niedriger Latenz und hoher Reaktionsgeschwindigkeit.",
+      "example": "Systemstart und Programmlaunch beschleunigen sich gegenueber HDD deutlich."
+    },
+    {
+      "id": "storage_hdd",
+      "name": "HDD",
+      "description": "Mechanischer Massenspeicher mit guenstigem Preis pro GB und hoeherer Zugriffszeit.",
+      "example": "Archiv- und Backupdaten werden wirtschaftlich auf HDD gehalten."
+    },
+    {
+      "id": "nvme_vs_sata",
+      "name": "NVMe vs SATA",
+      "description": "NVMe bietet meist deutlich mehr Parallelitaet/IOPS als SATA-Storage.",
+      "example": "Datenbank-VM wechselt von SATA-SSD auf NVMe und senkt I/O-Latenz."
+    },
+    {
+      "id": "mainboard",
+      "name": "Mainboard/Chipsatz",
+      "description": "Plattform fuer Kompatibilitaet, Slots, Ports, Lanes und Erweiterbarkeit.",
+      "example": "CPU passt nicht wegen falschem Sockel trotz aehnlicher Leistungsdaten."
+    },
+    {
+      "id": "pcie_lanes",
+      "name": "PCIe-Lanes",
+      "description": "Bestimmen verfügbare Bandbreite fuer GPU, NVMe und Erweiterungskarten.",
+      "example": "Zusatzkarte reduziert GPU auf weniger Lanes durch Sharing."
+    },
+    {
+      "id": "m2_slot",
+      "name": "M.2-Slot",
+      "description": "Formfaktor-Schnittstelle, deren Protokoll und Lane-Anbindung boardabhaengig ist.",
+      "example": "M.2-Slot unterstuetzt nur SATA, obwohl NVMe-Modul geplant war."
+    },
+    {
+      "id": "bios_uefi",
+      "name": "BIOS/UEFI",
+      "description": "Firmwareebene fuer Hardwareinitialisierung und wichtige Konfigurationsparameter.",
+      "example": "Nach Update wird neue CPU-Generation erst korrekt erkannt."
+    },
+    {
+      "id": "psu",
+      "name": "Netzteil (PSU)",
+      "description": "Versorgt Komponenten stabil mit Leistung und passenden Anschluessen.",
+      "example": "GPU-Upgrade scheitert wegen zu geringer Reserveleistung und falschen Steckern."
+    },
+    {
+      "id": "efficiency",
+      "name": "80-Plus-Effizienz",
+      "description": "Indikator fuer Wirkungsgrad des Netzteils unter Last.",
+      "example": "Hohe Effizienz reduziert Abwaerme und Stromkosten im Dauerbetrieb."
+    },
+    {
+      "id": "vrm",
+      "name": "VRM",
+      "description": "Spannungsversorgung fuer CPU auf dem Mainboard; wichtig fuer Stabilitaet unter Last.",
+      "example": "Schwache VRM fuehrt bei hoher CPU-Last zu Instabilitaet und Taktabfall."
+    },
+    {
+      "id": "cooling",
+      "name": "Kuehlkonzept",
+      "description": "Zusammenspiel aus Kuehler, Airflow und Gehaeusefuehrung fuer thermische Stabilitaet.",
+      "example": "CPU und NVMe halten Leistung erst nach verbessertem Airflow konstant."
+    },
+    {
+      "id": "bottleneck_analysis",
+      "name": "Bottleneck-Analyse",
+      "description": "Systematische Engpassidentifikation auf Basis von Metriken statt Bauchgefuehl.",
+      "example": "Upgrade priorisiert RAM statt CPU, weil Monitoring Swap als Hauptproblem zeigt."
+    },
+    {
+      "id": "profiling",
+      "name": "Profiling/Messung",
+      "description": "Messmethodik fuer Lastprofile und Komponentenverhalten in realen Workloads.",
+      "example": "CPU-Auslastung pro Kern deckt single-thread Engpass auf."
+    },
+    {
+      "id": "nic",
+      "name": "NIC (LAN/WLAN-Adapter)",
+      "description": "Netzwerkschnittstelle des Endgeraets fuer kabelgebundene oder funkbasierte Verbindung.",
+      "example": "Workstation erhaelt 2.5-Gbit-LAN-Karte fuer schnelleren Datenaustausch."
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "description": "Verteilt Datenverkehr innerhalb eines lokalen Netzes auf Layer-2-Ebene.",
+      "example": "Mehrere Clients kommunizieren intern ueber zentralen Managed Switch."
+    },
+    {
+      "id": "router",
+      "name": "Router",
+      "description": "Verbindet unterschiedliche Netze und uebernimmt Routing-/Gateway-Funktion.",
+      "example": "Unternehmens-LAN erreicht Internet ueber Router als Default Gateway."
+    },
+    {
+      "id": "driver_firmware",
+      "name": "Treiber/Firmware-Stand",
+      "description": "Softwarebasis fuer korrekte Hardwarefunktion, Kompatibilitaet und Stabilitaet.",
+      "example": "Netzwerkkarte zeigt erst nach Treiberupdate volle Link-Geschwindigkeit."
+    },
+    {
+      "id": "form_factor",
+      "name": "Formfaktor",
+      "description": "Mechanischer Standard fuer Board/Gehause/Netzteil-Kompatibilitaet.",
+      "example": "ATX-Mainboard passt nicht in ein ITX-Gehause."
+    },
+    {
+      "id": "qvl",
+      "name": "QVL-Kompatibilitaet",
+      "description": "Herstellerliste validierter RAM-Modelle fuer ein Board/CPU-Setup.",
+      "example": "Instabiler RAM-Betrieb wird durch QVL-konformes Kit geloest."
+    },
+    {
+      "id": "stability_test",
+      "name": "Stabilitaetstest",
+      "description": "Belastungstest fuer Temperatur, Taktverhalten und Fehlerfreiheit unter Dauerlast.",
+      "example": "Neues System wird vor Produktivbetrieb mit Burn-in getestet."
+    },
+    {
+      "id": "documentation",
+      "name": "Hardware-Dokumentation",
+      "description": "Nachvollziehbare Erfassung von Komponenten, BIOS-Settings und Wartungsschritten.",
+      "example": "Incident-Analyse gelingt schneller dank sauberer Inventar- und Konfigurationsdaten."
+    }
+  ]
+}

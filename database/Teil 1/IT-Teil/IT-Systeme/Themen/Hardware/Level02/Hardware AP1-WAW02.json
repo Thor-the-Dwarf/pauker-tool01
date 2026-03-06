@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Hardware (AP1) Level 2",
+  "description": "Anspruchsvolle AP1-Szenarien zur Hardwareauswahl, Kompatibilitaetspruefung und Engpassdiagnose.",
+  "cases": [
+    {
+      "id": "hw01",
+      "profile": "Eine Desktop-Anwendung wirkt traege, obwohl Gesamt-CPU-Auslastung nur 25 Prozent zeigt. Ein Kern ist dauerhaft bei 100 Prozent.",
+      "tags": ["CPU", "Single-Thread", "Bottleneck"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Single-Core-Leistung und Codepfad analysieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein Hotspot auf einem Kern deutet auf seriellen Engpass hin.", "correct": true },
+            { "id": "w2", "text": "Mehr Kerne helfen nur begrenzt, wenn Last kaum parallelisierbar ist.", "correct": true },
+            { "id": "w3", "text": "Gesamt-CPU-Prozent reicht allein als Diagnose immer aus.", "correct": false },
+            { "id": "w4", "text": "Profiling pro Thread ist hier fachlich sinnvoll.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur RAM vergroessern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAM kann helfen, wenn Speicher eng ist, loest aber keinen reinen Single-Thread-CPU-Hotspot.", "correct": true },
+            { "id": "w2", "text": "Messbild zeigt primaer Rechenengpass statt Auslagerungsproblem.", "correct": true },
+            { "id": "w3", "text": "RAM-Erweiterung eliminiert jeden CPU-Engpass automatisch.", "correct": false },
+            { "id": "w4", "text": "Massnahmen muessen zur gemessenen Ursache passen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Netzwerkkomponente tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Symptom liegt lokal auf CPU-Thread-Ebene, nicht im Netzwerkpfad.", "correct": true },
+            { "id": "w2", "text": "Ein Switch-/Routertausch adressiert diesen Befund nicht.", "correct": true },
+            { "id": "w3", "text": "Netzwerkhardware ist immer der Hauptgrund fuer CPU-Kernlast.", "correct": false },
+            { "id": "w4", "text": "Diagnose muss komponentennah bleiben.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Hauptthema ist Single-Thread-CPU-Leistung; daher Profiling und gezielte CPU-/Codeanalyse."
+    },
+    {
+      "id": "hw02",
+      "profile": "Bei 20 offenen Browser-Tabs plus IDE steigt Speicherverbrauch stark, System ruckelt und schreibt viel auf die SSD.",
+      "tags": ["RAM", "Swap", "Dual-Channel"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "RAM-Kapazitaet und Kanalbelegung optimieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Swap-Aktivitaet deutet auf Speicherdruck hin.", "correct": true },
+            { "id": "w2", "text": "Mehr RAM reduziert Auslagerung und verbessert Reaktionszeit.", "correct": true },
+            { "id": "w3", "text": "RAM-Ausbau hat keinen Einfluss bei Speicherdruck.", "correct": false },
+            { "id": "w4", "text": "Dual-Channel kann zusaetzlich Speicherbandbreite verbessern.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur CPU mit mehr Takt einsetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CPU-Tausch adressiert Auslagerung nicht direkt.", "correct": true },
+            { "id": "w2", "text": "Hauptsymptom ist Speichermangel, nicht primaer Rechenkapazitaet.", "correct": true },
+            { "id": "w3", "text": "Hoeherer CPU-Takt macht RAM-Mangel bedeutungslos.", "correct": false },
+            { "id": "w4", "text": "Bottleneck-orientierung verhindert Fehlinvestitionen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Gehaeuseluefter erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kuehlung ist wichtig, loest aber keinen klaren RAM-Engpass.", "correct": true },
+            { "id": "w2", "text": "Swap-Aktivitaet bleibt ohne Speicherausbau bestehen.", "correct": true },
+            { "id": "w3", "text": "Mehr Airflow beseitigt Speicherkapazitaetsbedarf vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Hier ist RAM-Massnahme fachlich priorisiert.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist die RAM-orientierte Massnahme mit ausreichender Kapazitaet und sinnvoller Kanalbestueckung."
+    },
+    {
+      "id": "hw03",
+      "profile": "Nach 10 Minuten Volllast sinkt CPU-Leistung reproduzierbar. Temperaturen sind gleichzeitig sehr hoch.",
+      "tags": ["Thermal", "Kuehlung", "Stabilitaet"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Kuehlkonzept und Power-Limits pruefen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Temperaturanstieg mit Leistungsabfall passt zu Thermal Throttling.", "correct": true },
+            { "id": "w2", "text": "Kuehler, Airflow und Power-Parameter beeinflussen Dauerlastverhalten direkt.", "correct": true },
+            { "id": "w3", "text": "Temperatur hat keinen Einfluss auf CPU-Taktverhalten.", "correct": false },
+            { "id": "w4", "text": "Stabilitaetstests sollten die Anpassung verifizieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Netzwerkadapter tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Problem ist thermisch/rechnerisch, nicht netzwerkseitig.", "correct": true },
+            { "id": "w2", "text": "Ein NIC-Wechsel veraendert CPU-Temperaturverhalten nicht.", "correct": true },
+            { "id": "w3", "text": "NIC ist Hauptursache fuer CPU-Drosselung unter Last.", "correct": false },
+            { "id": "w4", "text": "Massnahmen muessen zur Ursachenklasse passen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dateisystem formatieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateisystem beeinflusst nicht die physische CPU-Waermeabfuhr.", "correct": true },
+            { "id": "w2", "text": "Thermische Symptome bleiben ohne Hardware-/Kuehlanpassung bestehen.", "correct": true },
+            { "id": "w3", "text": "Formatierung verhindert Thermal Throttling.", "correct": false },
+            { "id": "w4", "text": "Diagnosefokus liegt auf Thermik und Versorgung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Muster zeigt Thermal Throttling; Kuehl- und Leistungsparameter sind gezielt zu optimieren."
+    },
+    {
+      "id": "hw04",
+      "profile": "Ein Upgrade-Plan sieht neue CPU und DDR5-RAM vor, das vorhandene Board unterstuetzt jedoch nur aelteren Sockel und DDR4.",
+      "tags": ["Kompatibilitaet", "Mainboard", "RAM"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Plattformkompatibilitaet zuerst pruefen und Board ggf. mitwechseln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Sockel und RAM-Standard muessen zur CPU-Plattform passen.", "correct": true },
+            { "id": "w2", "text": "Mainboard bestimmt entscheidend die Upgradefaehigkeit.", "correct": true },
+            { "id": "w3", "text": "CPU und RAM sind immer generationenuebergreifend steckkompatibel.", "correct": false },
+            { "id": "w4", "text": "Kompatibilitaetspruefung vor Kauf vermeidet Fehlinvestitionen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur BIOS-Update, sonst nichts",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "BIOS kann Kompatibilitaet erweitern, aber keine physisch falschen Standards beheben.", "correct": true },
+            { "id": "w2", "text": "DDR4-Board wird durch Firmware nicht zu DDR5-Hardware.", "correct": true },
+            { "id": "w3", "text": "BIOS ersetzt Sockelkompatibilitaet vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Firmware ist Teil der Loesung, aber nicht allein ausreichend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Netzteil vergroessern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PSU-Leistung loest keine Sockel-/RAM-Inkompatibilitaet.", "correct": true },
+            { "id": "w2", "text": "Das Grundproblem liegt auf Plattformebene.", "correct": true },
+            { "id": "w3", "text": "Mehr Watt macht CPU-Generationen automatisch kompatibel.", "correct": false },
+            { "id": "w4", "text": "Richtige Kompatibilitaetskette bleibt Pflicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Korrekt ist die plattformbezogene Kompatibilitaetspruefung inklusive ggf. Mainboardwechsel."
+    },
+    {
+      "id": "hw05",
+      "profile": "Nach GPU-Aufruestung treten Lastabstuerze auf. Messung zeigt hohe Spitzenlast, Netzteilreserve ist gering.",
+      "tags": ["PSU", "Stabilitaet", "Leistungsreserve"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "PSU-Auslegung und Lastspitzenfaehigkeit anpassen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "GPU-Upgrades erhoehen Leistungsbedarf und Lastspitzen deutlich.", "correct": true },
+            { "id": "w2", "text": "Zu geringe Reserve kann Instabilitaet unter Volllast verursachen.", "correct": true },
+            { "id": "w3", "text": "PSU-Qualitaet hat keinen Einfluss auf Systemstabilitaet.", "correct": false },
+            { "id": "w4", "text": "Auch korrekte Stromstecker und Rail-Auslegung sind relevant.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur SSD tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Storage-Tausch adressiert keine Stromversorgungsengpaesse.", "correct": true },
+            { "id": "w2", "text": "Crash unter Spitzenlast passt eher zu Versorgung als zu Laufwerksproblem.", "correct": true },
+            { "id": "w3", "text": "Neue SSD stabilisiert jede PSU-Unterdimensionierung automatisch.", "correct": false },
+            { "id": "w4", "text": "Die Ursache liegt mit hoher Wahrscheinlichkeit im Power-Pfad.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur WLAN auf LAN umstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Netzwerkpfad beeinflusst keine elektrische Laststabilitaet der GPU.", "correct": true },
+            { "id": "w2", "text": "Problem zeigt sich unter Hardwarevolllast, nicht als Verbindungsproblem.", "correct": true },
+            { "id": "w3", "text": "LAN beseitigt Stromlastspitzen im Rechner.", "correct": false },
+            { "id": "w4", "text": "Fokus muss auf PSU/Powerdesign liegen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Instabilitaet spricht fuer unzureichende Stromversorgung; PSU-Auslegung und Reserven sind anzupassen."
+    },
+    {
+      "id": "hw06",
+      "profile": "Nach Einbau einer zweiten NVMe und Capture-Karte sinkt GPU-Bandbreite unerwartet, Performance in Lasttests faellt.",
+      "tags": ["PCIe", "Lane-Sharing", "Mainboard"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Lane-Sharing-Layout des Mainboards analysieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zusatzkarten koennen je nach Board Lanes teilen oder Slots umschalten.", "correct": true },
+            { "id": "w2", "text": "Bandbreitenverlust passt zu reduzierter Lane-Anbindung.", "correct": true },
+            { "id": "w3", "text": "PCIe-Ressourcen sind immer unbegrenzt verfuegbar.", "correct": false },
+            { "id": "w4", "text": "Handbuch/Blockdiagramm des Boards ist hier zentral.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur RAM-Takt erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAM-Tuning behebt keine physische PCIe-Lane-Topologie.", "correct": true },
+            { "id": "w2", "text": "Das beobachtete Symptom betrifft I/O-Bandbreite der Slots.", "correct": true },
+            { "id": "w3", "text": "Hoeherer RAM-Takt erweitert automatisch PCIe-Lanes.", "correct": false },
+            { "id": "w4", "text": "Massnahme geht am Kernproblem vorbei.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Netzwerk-Switch tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Interne PCIe-Lane-Verteilung ist unabhaengig vom LAN-Switch.", "correct": true },
+            { "id": "w2", "text": "Leistungsabfall tritt lokal auf Hardwareebene auf.", "correct": true },
+            { "id": "w3", "text": "Switch-Hardware beeinflusst PCIe-Lane-Anzahl im Rechner.", "correct": false },
+            { "id": "w4", "text": "Diagnosefokus muss auf Plattformlayout liegen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kernursache ist sehr wahrscheinlich Lane-Sharing; Boardlayout und Slotbelegung muessen angepasst werden."
+    },
+    {
+      "id": "hw07",
+      "profile": "Server mit kritischen Daten soll Speicherfehler moeglichst frueh erkennen und korrigieren.",
+      "tags": ["ECC", "Integritaet", "Server"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "ECC-RAM mit kompatibler Plattform einsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "ECC kann bestimmte Bitfehler erkennen und korrigieren.", "correct": true },
+            { "id": "w2", "text": "CPU und Mainboard muessen ECC-Unterstuetzung bieten.", "correct": true },
+            { "id": "w3", "text": "ECC funktioniert auf jeder Consumer-Plattform ohne Voraussetzungen.", "correct": false },
+            { "id": "w4", "text": "Fuer Integritaetsanforderungen ist ECC fachlich passend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur RAM-Kapazitaet erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Kapazitaet reduziert nicht automatisch das Risiko stiller Bitfehler.", "correct": true },
+            { "id": "w2", "text": "Das Ziel ist Fehlerkorrektur, nicht nur Speichermenge.", "correct": true },
+            { "id": "w3", "text": "Groessere Module ersetzen ECC-Funktionalitaet vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Kapazitaet und Integritaet sind getrennte Dimensionen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur SSD auf NVMe wechseln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Storage-Performance adressiert nicht primar RAM-Bitfehler.", "correct": true },
+            { "id": "w2", "text": "Anforderung betrifft Speicherintegritaet im Arbeitsspeicher.", "correct": true },
+            { "id": "w3", "text": "NVMe ersetzt ECC im RAM-Bereich.", "correct": false },
+            { "id": "w4", "text": "Loesung muss an der korrekten Fehlerdomane ansetzen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei Integritaetsanforderungen ist ECC-RAM auf kompatibler Plattform die richtige Massnahme."
+    },
+    {
+      "id": "hw08",
+      "profile": "Ein Unternehmen meldet sporadische Netzwerkprobleme zwischen zwei VLANs. Internes Switching funktioniert, aber Verkehr zwischen Netzen faellt aus.",
+      "tags": ["Router", "Switch", "Netzwerk"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Routing-/Gateway-Konfiguration priorisiert pruefen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verkehr zwischen Netzen benoetigt funktionierendes Routing.", "correct": true },
+            { "id": "w2", "text": "Reines Layer-2-Switching reicht fuer Inter-VLAN-Kommunikation nicht allein.", "correct": true },
+            { "id": "w3", "text": "Switchport-LEDs ersetzen Routingtabellen und Gateways.", "correct": false },
+            { "id": "w4", "text": "Das Fehlerbild passt zu Layer-3-Themen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur CPU upgraden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CPU-Leistung eines Endgeraets loest kein Netzroutingproblem.", "correct": true },
+            { "id": "w2", "text": "Symptom betrifft Segmentuebergang, nicht Rechenleistung.", "correct": true },
+            { "id": "w3", "text": "Jede Routingstoerung ist in erster Linie ein CPU-Taktproblem.", "correct": false },
+            { "id": "w4", "text": "Die Massnahme verfehlt die Fehlerursache.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur RAM-Timings aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAM-Parameter im Endsystem beeinflussen kein VLAN-Routing.", "correct": true },
+            { "id": "w2", "text": "Layer-3-Funktion bleibt davon unberuehrt.", "correct": true },
+            { "id": "w3", "text": "RAM-Tuning behebt automatisch Gateway-Fehlkonfiguration.", "correct": false },
+            { "id": "w4", "text": "Hier ist Netzwerkpfad-Diagnose notwendig.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Problem liegt mit hoher Wahrscheinlichkeit im Routing/Gateway-Bereich zwischen den Netzen."
+    },
+    {
+      "id": "hw09",
+      "profile": "Nach RAM-Aufruestung treten sporadische Bluescreens auf. Fehler verschwinden bei Basistakt, tauchen aber mit Profilmodus erneut auf.",
+      "tags": ["XMP/EXPO", "QVL", "Stabilitaet"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "RAM-Profilstabilitaet und QVL-Kompatibilitaet pruefen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Profilbetrieb kann bei Grenzkonfigurationen instabil sein.", "correct": true },
+            { "id": "w2", "text": "QVL-konforme Kits reduzieren Kompatibilitaetsrisiko.", "correct": true },
+            { "id": "w3", "text": "XMP/EXPO ist immer stabil, unabhaengig von Plattform und Modulen.", "correct": false },
+            { "id": "w4", "text": "Stabilitaetstests nach Profilaktivierung sind erforderlich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Netzwerktreiber installieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Netzwerktreiber kann relevant sein, erklaert aber nicht das profilabhaengige RAM-Muster.", "correct": true },
+            { "id": "w2", "text": "Symptom korreliert klar mit Speicherparametern.", "correct": true },
+            { "id": "w3", "text": "Jeder profilabhaengige RAM-Fehler ist ein NIC-Treiberproblem.", "correct": false },
+            { "id": "w4", "text": "Zielgerichtete Ursachenanalyse ist hier klar moeglich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Gehaeuse tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gehaeusewechsel beseitigt keine falschen RAM-Profileinstellungen.", "correct": true },
+            { "id": "w2", "text": "Mechanische Faktoren sind hier nicht primaer belegt.", "correct": true },
+            { "id": "w3", "text": "Neues Gehaeuse macht jeden RAM-Modus stabil.", "correct": false },
+            { "id": "w4", "text": "Die Option setzt nicht an der beobachteten Ursache an.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Korrekt ist die Pruefung von XMP/EXPO-Stabilitaet und QVL-Passung inklusive Belastungstest."
+    },
+    {
+      "id": "hw10",
+      "profile": "Ein Team soll eine AP1-konforme Hardwareentscheidung fuer neue Entwicklerarbeitsplaetze dokumentieren.",
+      "tags": ["Methodik", "Dokumentation", "AP1"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Messbasiert entscheiden und sauber dokumentieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "AP1-reif ist eine begruendete, kriterienscharfe Entscheidung statt Bauchgefuehl.", "correct": true },
+            { "id": "w2", "text": "Dokumentation erhoeht Nachvollziehbarkeit und Wartbarkeit.", "correct": true },
+            { "id": "w3", "text": "Marketingbezeichnungen reichen als alleiniges Entscheidungsfundament.", "correct": false },
+            { "id": "w4", "text": "Kompatibilitaet, Stabilitaet, Kosten und Lastprofil gehoeren zusammen bewertet.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur teuerste Komponenten kaufen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kostenhohe Teile sind nicht automatisch passend fuer den konkreten Workload.", "correct": true },
+            { "id": "w2", "text": "Ohne Analyse kann Ueber- oder Fehlprovisionierung entstehen.", "correct": true },
+            { "id": "w3", "text": "Maximalpreis garantiert immer optimale AP1-Fachloesung.", "correct": false },
+            { "id": "w4", "text": "Die Methodik bleibt ohne Messung unzureichend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur CPU-Datenblatt vergleichen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ganzheitliche Entscheidung braucht auch RAM, Storage, Board, PSU und Netzwerkaspekte.", "correct": true },
+            { "id": "w2", "text": "Einzelkomponentenbetrachtung kann Bottlenecks uebersehen.", "correct": true },
+            { "id": "w3", "text": "CPU allein bestimmt die Gesamtqualitaet jeder Systemarchitektur.", "correct": false },
+            { "id": "w4", "text": "Diese Option ist fachlich zu kurz gegriffen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die fachlich beste Antwort ist eine messbasierte, dokumentierte und ganzheitlich begruendete Hardwareentscheidung."
+    }
+  ]
+}

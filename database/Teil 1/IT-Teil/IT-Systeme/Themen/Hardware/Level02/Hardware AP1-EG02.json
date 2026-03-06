@@ -1,0 +1,283 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Hardware (AP1) Level 2",
+  "topic": "CPU/RAM/Storage/Mainboard/PSU/Netzwerk, Kompatibilitaet, Bottlenecks und Betriebsstabilitaet",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "component-fit-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 1: Komponente zum Problem",
+      "subtitle": "Ordne jede Beobachtung der primaer betroffenen Hardware zu.",
+      "hintDefault": "Rechnen = CPU, Auslagerung = RAM, Ladezeit = Storage, Ports/Lanes = Mainboard, Instabilitaet unter Last = PSU/Kuehlung.",
+      "sortColumns": [
+        { "zone": "cpu", "label": "CPU", "hint": "Kerne, Takt, Cache" },
+        { "zone": "ram", "label": "RAM", "hint": "Kapazitaet/Bandbreite" },
+        { "zone": "storage", "label": "Storage", "hint": "IOPS/Latenz" },
+        { "zone": "board", "label": "Mainboard/Chipsatz", "hint": "Sockel/Lanes/Slots" },
+        { "zone": "power_thermal", "label": "PSU/Kuehlung", "hint": "Strom/Temperatur" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Single-Thread-Prozess laeuft dauerhaft am Limit", "correctZone": "cpu" },
+        { "id": "c2", "text": "System laggt bei vielen offenen Anwendungen und swappt", "correctZone": "ram" },
+        { "id": "c3", "text": "Programme starten langsam trotz niedriger CPU-Last", "correctZone": "storage" },
+        { "id": "c4", "text": "M.2-NVMe kann nicht betrieben werden, Slot fehlt", "correctZone": "board" },
+        { "id": "c5", "text": "System stuerzt unter Volllast sporadisch ab", "correctZone": "power_thermal" },
+        { "id": "c6", "text": "PCIe-Karte reduziert GPU-Bandbreite wegen Lane-Teilung", "correctZone": "board" },
+        { "id": "c7", "text": "CPU-Takt sinkt nach Minuten Last deutlich", "correctZone": "power_thermal" },
+        { "id": "c8", "text": "Build-Job profitiert stark von mehr Kernen/Threads", "correctZone": "cpu" }
+      ]
+    },
+    {
+      "id": "cpu-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 2: CPU-Leistung differenziert",
+      "subtitle": "Single-Core, Multi-Core und thermische Grenzen korrekt bewerten.",
+      "hintDefault": "Nicht jede Last skaliert linear mit Kernen; Boost und Kuehlung bestimmen Praxisleistung mit.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Mehr Kerne bringen bei rein seriellen Aufgaben immer lineare Beschleunigung." },
+            { "value": "b", "text": "Single-Thread-lastige Aufgaben profitieren oft staerker von hoher Einzelkernleistung." },
+            { "value": "c", "text": "CPU-Cache ist fuer Leistung praktisch irrelevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was beschreibt Thermal Throttling am besten?",
+          "options": [
+            { "value": "a", "text": "CPU reduziert Takt, um Temperatur-/Leistungsgrenzen einzuhalten." },
+            { "value": "b", "text": "CPU verdoppelt Kerne bei hoher Temperatur." },
+            { "value": "c", "text": "Nur SSDs kennen Throttling." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Kennzahlkombination ist fuer CPU-Auswahl fachlich sinnvoll?",
+          "options": [
+            { "value": "a", "text": "Kerne/Threads, Boost-Verhalten, Cache, Power-/Kuehlgrenzen" },
+            { "value": "b", "text": "Nur Gehaeusefarbe" },
+            { "value": "c", "text": "Nur Speicherkapazitaet der SSD" }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "ram-storage-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 3: RAM oder Storage-Bottleneck?",
+      "subtitle": "Ordne Symptome der wahrscheinlichen Engpassklasse zu.",
+      "hintDefault": "Hohe Auslagerung -> RAM. Hohe Disk-Latenz bei Last -> Storage.",
+      "sortColumns": [
+        { "zone": "ram", "label": "RAM-Engpass", "hint": "Kapazitaet/Bandbreite" },
+        { "zone": "storage", "label": "Storage-Engpass", "hint": "IOPS/Latenz" },
+        { "zone": "mixed", "label": "Kombinierter Engpass", "hint": "beides relevant" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "Speicherauslastung dauerhaft nahe 100 Prozent", "correctZone": "ram" },
+        { "id": "r2", "text": "Disk-Queue lang bei vielen kleinen Dateioperationen", "correctZone": "storage" },
+        { "id": "r3", "text": "System nutzt stark Swap und SSD-Latenz steigt parallel", "correctZone": "mixed" },
+        { "id": "r4", "text": "Dual-Channel fehlt bei zwei Modulen", "correctZone": "ram" },
+        { "id": "r5", "text": "HDD als Systemlaufwerk verursacht lange Programmstarts", "correctZone": "storage" },
+        { "id": "r6", "text": "Viele Browser-Tabs plus langsames Laufwerk", "correctZone": "mixed" }
+      ]
+    },
+    {
+      "id": "upgrade-capital-l2",
+      "type": "capital",
+      "title": "Raetsel 4: Upgrade-Reihenfolge",
+      "subtitle": "Setze die Schritte einer sauberen Hardwaremodernisierung in Reihenfolge.",
+      "hintDefault": "Erst messen, dann Kompatibilitaet, dann zielgerichtet aufruesten und testen.",
+      "rows": [
+        {
+          "key": "analyse",
+          "label": "Ist-Messung von CPU, RAM, Storage und Temperaturprofil erstellen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "ziel",
+          "label": "Ziel-Workloads und Leistungsanforderungen priorisieren",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "compat",
+          "label": "Kompatibilitaet von Sockel, RAM-Typ, Lanes, PSU und Gehaeuse pruefen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "upgrade",
+          "label": "Bottleneck-orientierte Aufruestung (z. B. RAM, NVMe, CPU) umsetzen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "stability",
+          "label": "Stabilitaets-, Last- und Temperaturtests inklusive Monitoring fahren",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "docs",
+          "label": "Dokumentation, BIOS-/Treiberstand und Betriebsrichtlinien aktualisieren",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "board-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 5: Mainboard und Plattform",
+      "subtitle": "Schnittstellen- und Kompatibilitaetsfallen erkennen.",
+      "hintDefault": "Nicht jede M.2-Buchse ist gleich, nicht jede CPU passt in jedes Board.",
+      "questions": [
+        {
+          "id": "m1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "M.2 bedeutet automatisch NVMe und immer volle PCIe-Bandbreite." },
+            { "value": "b", "text": "M.2 beschreibt primaer den Formfaktor; Protokoll und Lane-Anbindung sind separat zu pruefen." },
+            { "value": "c", "text": "Sockel und Chipsatz spielen fuer CPU-Kompatibilitaet keine Rolle." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "m2",
+          "text": "2. Was kann bei PCIe-Lane-Sharing passieren?",
+          "options": [
+            { "value": "a", "text": "Bestimmte Slots/Ports deaktivieren sich oder laufen mit reduzierter Bandbreite." },
+            { "value": "b", "text": "Alle Komponenten werden automatisch schneller." },
+            { "value": "c", "text": "Es gibt keinerlei Einfluss." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "m3",
+          "text": "3. Welche Pruefungsantwort ist AP1-sauber?",
+          "options": [
+            { "value": "a", "text": "Kompatibilitaet umfasst Sockel, RAM-Standard, Formfaktor, Stromversorgung und Schnittstellen." },
+            { "value": "b", "text": "Es reicht, nur auf CPU-Takt zu achten." },
+            { "value": "c", "text": "PSU-Leistung ist fuer Aufruestung irrelevant." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "network-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 6: Netzwerkhardware einordnen",
+      "subtitle": "Ordne Funktion und Einsatz zu NIC, Switch und Router.",
+      "hintDefault": "NIC verbindet Endgeraet, Switch verbindet im LAN, Router verbindet Netze.",
+      "sortColumns": [
+        { "zone": "nic", "label": "NIC (LAN/WLAN)", "hint": "Endgeraet-Schnittstelle" },
+        { "zone": "switch", "label": "Switch", "hint": "Layer-2-Verteilung" },
+        { "zone": "router", "label": "Router", "hint": "Netzuebergang" }
+      ],
+      "sortCards": [
+        { "id": "n1", "text": "Stellt Ethernet-Port fuer einen PC bereit", "correctZone": "nic" },
+        { "id": "n2", "text": "Verbindet mehrere Clients im gleichen LAN-Segment", "correctZone": "switch" },
+        { "id": "n3", "text": "Leitet Pakete zwischen internem Netz und Internet", "correctZone": "router" },
+        { "id": "n4", "text": "PCIe-Karte mit 2.5GBASE-T fuer Workstation", "correctZone": "nic" },
+        { "id": "n5", "text": "VLAN-faehige Verteilung im Rack", "correctZone": "switch" },
+        { "id": "n6", "text": "Default-Gateway-Funktion", "correctZone": "router" }
+      ]
+    },
+    {
+      "id": "final-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: Hardware-Gesamtbewertung",
+      "subtitle": "Waehle die fachlich robusteste Schlussfolgerung.",
+      "hintDefault": "AP1-Entscheidungen basieren auf Lastprofil, Kompatibilitaet, Stabilitaet und Betrieb.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Aussage ist insgesamt korrekt?",
+          "options": [
+            { "value": "a", "text": "Einzelne Kennzahl reicht fuer jede Hardwareentscheidung." },
+            { "value": "b", "text": "Bottleneck-orientierte Analyse plus Kompatibilitaetspruefung fuehrt zu belastbaren Upgrades." },
+            { "value": "c", "text": "Nur maximale Leistung zaehlt, Stabilitaet ist nachrangig." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Welche Kombination ist AP1-reif?",
+          "options": [
+            { "value": "a", "text": "Messwerte, passende Komponente, Testlauf, Dokumentation" },
+            { "value": "b", "text": "Spontaner Tausch ohne Messung" },
+            { "value": "c", "text": "Nur Marketingdatenblatt" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Was ist bei Aufruestung zwingend?",
+          "options": [
+            { "value": "a", "text": "Kompatibilitaet von Board, RAM, PSU, Gehaeuse und Firmware" },
+            { "value": "b", "text": "Nur der Preis pro Komponente" },
+            { "value": "c", "text": "Nur RGB-Funktionen" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}
