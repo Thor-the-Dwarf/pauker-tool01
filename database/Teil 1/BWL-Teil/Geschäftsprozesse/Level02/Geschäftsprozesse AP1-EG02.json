@@ -1,0 +1,526 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Geschäftsprozesse (AP1) Level 2",
+  "topic": "Prozesslandkarte, Vertragsgrenzen, KPI-Design, SLA-Steuerung, Wirtschaftlichkeit",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "prozesslandkarte-vertiefung-sort",
+      "type": "sort",
+      "title": "Rätsel 1: Prozesslandkarte unter Druck",
+      "subtitle": "Ordne die Aussagen korrekt: Kernprozess, Unterstützungsprozess oder Führungsprozess.",
+      "hintDefault": "Prüfungsregel: Kern schafft direkten Marktnutzen. Unterstützung befähigt. Führung setzt Ziele, Regeln und Kontrolle.",
+      "sortColumns": [
+        {
+          "zone": "kern",
+          "label": "Kernprozess",
+          "hint": "Direkter Kundennutzen / Leistung am Markt"
+        },
+        {
+          "zone": "support",
+          "label": "Unterstützungsprozess",
+          "hint": "Ressourcen und Rahmen für den Kernprozess"
+        },
+        {
+          "zone": "fuehrung",
+          "label": "Führungsprozess",
+          "hint": "Steuern, entscheiden, kontrollieren"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "pl1",
+          "text": "Incident wird behoben und der Kundendienst ist wieder nutzbar.",
+          "correctZone": "kern"
+        },
+        {
+          "id": "pl2",
+          "text": "Quartalsweise Budgetfreigabe inklusive Zielkorridor für Servicequalität.",
+          "correctZone": "fuehrung"
+        },
+        {
+          "id": "pl3",
+          "text": "Lizenzmanagement stellt rechtzeitig Subscriptions für den Betrieb bereit.",
+          "correctZone": "support"
+        },
+        {
+          "id": "pl4",
+          "text": "Abnahme eines Kundenauftrags inklusive Übergabeprotokoll und Rechnungsfreigabe.",
+          "correctZone": "kern"
+        },
+        {
+          "id": "pl5",
+          "text": "Controlling analysiert SLA-Verletzungen und priorisiert Gegenmaßnahmen.",
+          "correctZone": "fuehrung"
+        },
+        {
+          "id": "pl6",
+          "text": "Onboarding neuer Admins inkl. Schulungsplan und Rollenfreigaben.",
+          "correctZone": "support"
+        },
+        {
+          "id": "pl7",
+          "text": "Service Desk liefert vertraglich zugesicherte Reaktionszeiten an Kunden.",
+          "correctZone": "kern"
+        },
+        {
+          "id": "pl8",
+          "text": "Interne Tool-Administration betreibt das Ticketsystem stabil.",
+          "correctZone": "support"
+        },
+        {
+          "id": "pl9",
+          "text": "Geschäftsleitung definiert Eskalationspolitik bei kritischen Ausfällen.",
+          "correctZone": "fuehrung"
+        }
+      ]
+    },
+    {
+      "id": "vertragsabgrenzung-sort",
+      "type": "sort",
+      "title": "Rätsel 2: Vertragsarten in Grenzfällen",
+      "subtitle": "Sortiere die Szenarien: Kaufvertrag, Werkvertrag oder Dienstvertrag.",
+      "hintDefault": "Kauf: Sache gegen Geld. Werk: Erfolg geschuldet + Abnahme. Dienst: Tätigkeit nach Aufwand.",
+      "sortColumns": [
+        {
+          "zone": "kauf",
+          "label": "Kaufvertrag",
+          "hint": "Produkt/Sache wird übereignet"
+        },
+        {
+          "zone": "werk",
+          "label": "Werkvertrag",
+          "hint": "Konkretes Ergebnis wird geschuldet"
+        },
+        {
+          "zone": "dienst",
+          "label": "Dienstvertrag",
+          "hint": "Leistung/Tätigkeit wird geschuldet"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "va1",
+          "text": "Lieferung von 80 vorkonfigurierten Notebooks laut Stückliste.",
+          "correctZone": "kauf"
+        },
+        {
+          "id": "va2",
+          "text": "Monatliche Bereitschaft mit Abrechnung je Einsatzstunde.",
+          "correctZone": "dienst"
+        },
+        {
+          "id": "va3",
+          "text": "Implementierung eines neuen Freigabeworkflows mit formaler Abnahme.",
+          "correctZone": "werk"
+        },
+        {
+          "id": "va4",
+          "text": "Reine Beratungsleistung zur Zielarchitektur, ohne Erfolgszusage.",
+          "correctZone": "dienst"
+        },
+        {
+          "id": "va5",
+          "text": "Lieferung eines Standard-Storage-Systems inklusive Eigentumsübergang.",
+          "correctZone": "kauf"
+        },
+        {
+          "id": "va6",
+          "text": "Migration ist erst erfüllt, wenn definierte Testfälle bestanden und abgenommen sind.",
+          "correctZone": "werk"
+        },
+        {
+          "id": "va7",
+          "text": "Beschaffung von Switches und Access Points für einen Standort.",
+          "correctZone": "kauf"
+        },
+        {
+          "id": "va8",
+          "text": "Entwicklung einer API laut Lasten-/Pflichtenheft mit Endabnahme.",
+          "correctZone": "werk"
+        },
+        {
+          "id": "va9",
+          "text": "Interims-Administrator unterstützt 3 Monate operativ im Betrieb.",
+          "correctZone": "dienst"
+        }
+      ]
+    },
+    {
+      "id": "kpi-fallen-quiz",
+      "type": "quiz",
+      "title": "Rätsel 3: KPI-Design ohne Fehlanreize",
+      "subtitle": "Wähle die fachlich stärkste Aussage.",
+      "hintDefault": "Prüfungsfalle: Eine isolierte Kennzahl kann Verhalten verschlechtern.",
+      "questions": [
+        {
+          "id": "kq1",
+          "text": "1. Welcher KPI-Satz ist für Incident-Management am robustesten?",
+          "options": [
+            { "value": "a", "text": "Nur Anzahl geschlossener Tickets pro Tag." },
+            { "value": "b", "text": "Durchlaufzeit + Erstlösungsquote + Reopen-Rate." },
+            { "value": "c", "text": "Nur durchschnittliche Gesprächsdauer im Service Desk." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "kq2",
+          "text": "2. Warum reicht „Schnelligkeit“ als alleiniger KPI oft nicht aus?",
+          "options": [
+            { "value": "a", "text": "Weil Kennzahlen generell in Prozessen verboten sind." },
+            { "value": "b", "text": "Weil Teams sonst zu gründlich arbeiten und zu wenig schließen." },
+            { "value": "c", "text": "Weil Qualität/Wirksamkeit ungemessen bleibt und Fehlanreize entstehen." }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "kq3",
+          "text": "3. Welche Aussage zum Prozess-Owner ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Owner ist nur Dokumentationsrolle ohne Entscheidungsbefugnis." },
+            { "value": "b", "text": "Owner verantwortet Zielerreichung, Regelwerk und Verbesserung des Prozesses." },
+            { "value": "c", "text": "Owner muss jeden Einzelfall operativ selbst bearbeiten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "kq4",
+          "text": "4. Welche Maßnahme reduziert KPI-Manipulation am wirksamsten?",
+          "options": [
+            { "value": "a", "text": "Nur die schnellsten Ticket-Schließer belohnen." },
+            { "value": "b", "text": "KPI-Set mit Gegenindikatoren und regelmäßiger Ursachenanalyse." },
+            { "value": "c", "text": "KPI-Berichte abschaffen, um Druck herauszunehmen." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "incident-reihenfolge-capital",
+      "type": "capital",
+      "title": "Rätsel 4: Priorisierte Störungsbehebung korrekt abbilden",
+      "subtitle": "Ordne die Schritte in die fachlich sinnvolle Reihenfolge.",
+      "hintDefault": "Von Trigger und Klassifizierung über Diagnose/Fix bis zur Verifikation und sauberen Schließung.",
+      "rows": [
+        {
+          "key": "in_meldung",
+          "label": "Störungseingang mit Geschäftsauswirkung erfassen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_prio",
+          "label": "Priorität anhand Impact x Urgency festlegen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_esk",
+          "label": "Bei kritischer Priorität sofortige Eskalation auslösen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_diag",
+          "label": "Hypothese und technische Diagnose durchführen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_workaround",
+          "label": "Workaround oder Fix umsetzen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_veri",
+          "label": "Wirksamkeit fachlich und technisch verifizieren",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_comm",
+          "label": "Stakeholder transparent informieren (Status/ETA/Ursache)",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        },
+        {
+          "key": "in_close",
+          "label": "Dokumentation, Lessons Learned, Ticket sauber schließen",
+          "correct": "8",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" },
+            { "value": "8", "text": "8" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wirtschaftlichkeit-capital",
+      "type": "capital",
+      "title": "Rätsel 5: Wirtschaftlichkeitsmethoden sicher zuordnen",
+      "subtitle": "Wähle pro Aussage die treffendste Methode.",
+      "hintDefault": "TCO = Gesamtkosten, ROI = Verhältnis Nutzen/Invest, Amortisation = Zeit bis Rückzahlung, Nutzwert = gewichtete Kriterien.",
+      "rows": [
+        {
+          "key": "wi1",
+          "label": "Welche Methode betrachtet Anschaffung + Betrieb + Schulung + Support über mehrere Jahre?",
+          "correct": "tco",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "tco", "text": "TCO" },
+            { "value": "roi", "text": "ROI" },
+            { "value": "amo", "text": "Amortisation" },
+            { "value": "nwa", "text": "Nutzwertanalyse" }
+          ]
+        },
+        {
+          "key": "wi2",
+          "label": "Welche Kennzahl setzt Ertrag/Nutzen ins Verhältnis zur Investition?",
+          "correct": "roi",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "tco", "text": "TCO" },
+            { "value": "roi", "text": "ROI" },
+            { "value": "amo", "text": "Amortisation" },
+            { "value": "nwa", "text": "Nutzwertanalyse" }
+          ]
+        },
+        {
+          "key": "wi3",
+          "label": "Welche Methode beantwortet: „Nach wie vielen Monaten ist der Invest zurückverdient?“",
+          "correct": "amo",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "tco", "text": "TCO" },
+            { "value": "roi", "text": "ROI" },
+            { "value": "amo", "text": "Amortisation" },
+            { "value": "nwa", "text": "Nutzwertanalyse" }
+          ]
+        },
+        {
+          "key": "wi4",
+          "label": "Welche Methode bewertet Alternativen mit gewichteten Qualitätskriterien?",
+          "correct": "nwa",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "tco", "text": "TCO" },
+            { "value": "roi", "text": "ROI" },
+            { "value": "amo", "text": "Amortisation" },
+            { "value": "nwa", "text": "Nutzwertanalyse" }
+          ]
+        },
+        {
+          "key": "wi5",
+          "label": "Welche Sicht ist bei Make-or-Buy zwingend zusätzlich zu Anschaffungskosten nötig?",
+          "correct": "tco",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "tco", "text": "TCO" },
+            { "value": "roi", "text": "ROI" },
+            { "value": "amo", "text": "Amortisation" },
+            { "value": "nwa", "text": "Nutzwertanalyse" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schnittstellen-risiken-sort",
+      "type": "sort",
+      "title": "Rätsel 6: Schnittstellenqualität erkennen",
+      "subtitle": "Trenne saubere Übergaben von Medienbruch und Steuerungsfehlern.",
+      "hintDefault": "Saubere Schnittstelle: vollständig, ein Tool, eindeutige Zuständigkeit. Medienbruch: Toolwechsel mit Verlust. Steuerungsfehler: Regeln/KPIs/Eskalation unklar.",
+      "sortColumns": [
+        {
+          "zone": "sauber",
+          "label": "Saubere Schnittstelle",
+          "hint": "Klare Übergabe + vollständige Infos"
+        },
+        {
+          "zone": "medienbruch",
+          "label": "Medienbruch",
+          "hint": "Daten springen zwischen Tools/Medien"
+        },
+        {
+          "zone": "steuerung",
+          "label": "Steuerungsfehler",
+          "hint": "Regelwerk/Zuständigkeit/KPI unklar"
+        }
+      ],
+      "sortCards": [
+        {
+          "id": "sr1",
+          "text": "1st Level übergibt Ticket inkl. Logs, Repro-Schritten und klarer Priorität im selben Tool.",
+          "correctZone": "sauber"
+        },
+        {
+          "id": "sr2",
+          "text": "Status wird im Chat gepflegt und später manuell ins Ticket nachgetragen.",
+          "correctZone": "medienbruch"
+        },
+        {
+          "id": "sr3",
+          "text": "Kein Prozess-Owner benannt, Eskalationskette ist unklar.",
+          "correctZone": "steuerung"
+        },
+        {
+          "id": "sr4",
+          "text": "Pflichtfelder verhindern die Übergabe unvollständiger Tickets.",
+          "correctZone": "sauber"
+        },
+        {
+          "id": "sr5",
+          "text": "Kundendaten werden aus PDF händisch in drei Systeme kopiert.",
+          "correctZone": "medienbruch"
+        },
+        {
+          "id": "sr6",
+          "text": "Team wird nur auf „geschlossene Tickets“ gemessen, nicht auf Wirksamkeit.",
+          "correctZone": "steuerung"
+        },
+        {
+          "id": "sr7",
+          "text": "Übergabekriterium „Done“ ist mit Akzeptanzkriterien messbar definiert.",
+          "correctZone": "sauber"
+        },
+        {
+          "id": "sr8",
+          "text": "Fehlerbeschreibung wird per E-Mail verteilt, Historie im Ticket fehlt.",
+          "correctZone": "medienbruch"
+        },
+        {
+          "id": "sr9",
+          "text": "SLA-Verletzungen werden nicht analysiert und führen zu keiner Maßnahme.",
+          "correctZone": "steuerung"
+        }
+      ]
+    },
+    {
+      "id": "prozesssteuerung-quiz",
+      "type": "quiz",
+      "title": "Rätsel 7: Prozesssteuerung auf AP1-Niveau",
+      "subtitle": "Triff die beste Management-Entscheidung.",
+      "hintDefault": "Achte auf Zielbezug, Messbarkeit und vertragliche Konsequenz.",
+      "questions": [
+        {
+          "id": "pq1",
+          "text": "1. Welche Kombination ist bei SLA-Steuerung fachlich am stärksten?",
+          "options": [
+            { "value": "a", "text": "Nur monatliche Verfügbarkeitsquote ohne Ursachenanalyse." },
+            { "value": "b", "text": "Messwerte + Abweichungsanalyse + Eskalation + Maßnahmenverfolgung." },
+            { "value": "c", "text": "Nur subjektives Kundenfeedback am Quartalsende." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pq2",
+          "text": "2. Was ist bei Make-or-Buy die häufigste Prüfungsfalle?",
+          "options": [
+            { "value": "a", "text": "Nur Investkosten vergleichen, laufende Folgekosten ignorieren." },
+            { "value": "b", "text": "Sicherheitsanforderungen früh berücksichtigen." },
+            { "value": "c", "text": "Qualitative Kriterien gewichten (Know-how, Abhängigkeit, Time-to-Market)." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "pq3",
+          "text": "3. Welches Indiz spricht am klarsten für einen Werkvertrag?",
+          "options": [
+            { "value": "a", "text": "Bezahlung je Stunde Support ohne Erfolgsgarantie." },
+            { "value": "b", "text": "Vereinbarte Endfunktion wird über definierte Abnahmefälle geprüft." },
+            { "value": "c", "text": "Standardhardware wird geliefert und übereignet." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "pq4",
+          "text": "4. Welche Kennzahl hilft direkt, Scheinlösungen im Incident-Prozess zu erkennen?",
+          "options": [
+            { "value": "a", "text": "Anzahl neu eröffneter Tickets." },
+            { "value": "b", "text": "Reopen-Rate nach Schließung." },
+            { "value": "c", "text": "Anzahl Teammitglieder im 1st Level." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Geschäftsprozesse (AP1) – Level 2 Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Verbinde anspruchsvollere AP1-Konzepte korrekt mit Definition und Praxisszenario (Prozesssteuerung, Vertragsrecht, Wirtschaftlichkeit).",
+  "columnTitles": {
+    "column1": "Begriff / Konzept",
+    "column2": "Kurzbeschreibung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den präzisen Fachbegriff.",
+    "column2": "Achte auf saubere Abgrenzungen und Prüfungsfallen.",
+    "column3": "Ordne den realistischen Fall aus dem IT-Betrieb zu."
+  },
+  "sets": [
+    {
+      "id": "prozesslandkarte",
+      "name": "Prozesslandkarte",
+      "description": "Gesamtübersicht über Kern-, Unterstützungs- und Führungsprozesse inklusive Beziehungen.",
+      "example": "In einem Diagramm wird sichtbar, wie Service Desk (Kern) von Einkauf/HR (Support) und Controlling (Führung) abhängt."
+    },
+    {
+      "id": "end_to_end",
+      "name": "End-to-End-Prozess",
+      "description": "Ablauf vom auslösenden Kundenbedarf bis zum messbaren Ergebnis inkl. Übergaben.",
+      "example": "Vom Ticket-Eingang über Bearbeitung bis zur bestätigten Wiederherstellung des Services."
+    },
+    {
+      "id": "durchlaufzeit",
+      "name": "Durchlaufzeit",
+      "description": "Gesamtzeit eines Falls inklusive Warte-, Liege- und Bearbeitungszeiten.",
+      "example": "Ticket wurde in 9 Stunden gelöst, davon 2 Stunden aktiv bearbeitet und 7 Stunden gewartet."
+    },
+    {
+      "id": "bearbeitungszeit",
+      "name": "Bearbeitungszeit",
+      "description": "Reine aktive Arbeitszeit ohne Wartephasen.",
+      "example": "Der Techniker arbeitete 35 Minuten aktiv am Incident, obwohl die Gesamtdauer 4 Stunden betrug."
+    },
+    {
+      "id": "first_time_right",
+      "name": "First Time Right",
+      "description": "Anteil der Fälle, die ohne Nacharbeit oder Wiedereröffnung korrekt erledigt werden.",
+      "example": "Nach Einführung klarer Checklisten sinkt die Reopen-Rate deutlich."
+    },
+    {
+      "id": "bottleneck",
+      "name": "Engpass (Bottleneck)",
+      "description": "Ressource/Schritt mit der geringsten Kapazität, die den Gesamtdurchsatz begrenzt.",
+      "example": "Alle Tickets stauen sich vor der Freigabe durch ein einzelnes Architektur-Team."
+    },
+    {
+      "id": "wip_limit",
+      "name": "WIP-Limit",
+      "description": "Begrenzung paralleler Vorgänge, um Kontextwechsel und Stau zu reduzieren.",
+      "example": "Ein Team darf maximal 5 kritische Tickets gleichzeitig in Bearbeitung haben."
+    },
+    {
+      "id": "standardprozess",
+      "name": "Standardprozess",
+      "description": "Wiederholbarer Ablauf mit definierten Schritten, Rollen und Qualitätskriterien.",
+      "example": "Onboarding folgt immer derselben Abfolge mit Pflichtfeldern und Abnahmecheck."
+    },
+    {
+      "id": "ausnahmeprozess",
+      "name": "Ausnahmeprozess",
+      "description": "Sonderpfad für seltene Fälle außerhalb der Standardlogik, meist mit Eskalationsregeln.",
+      "example": "Datenschutzvorfälle laufen über einen separaten Incident-Response-Pfad."
+    },
+    {
+      "id": "schnittstelle",
+      "name": "Schnittstelle",
+      "description": "Definierter Übergabepunkt zwischen Rollen/Teams/Systemen mit klaren Informationsanforderungen.",
+      "example": "1st Level übergibt mit Logfiles, Repro-Schritten und Priorität an 2nd Level."
+    },
+    {
+      "id": "medienbruch",
+      "name": "Medienbruch",
+      "description": "Informationsverlust oder Verzögerung durch Wechsel zwischen unverbundenen Tools/Medien.",
+      "example": "Status wird in E-Mails gepflegt und später unvollständig in das Ticketsystem übertragen."
+    },
+    {
+      "id": "prozess_owner",
+      "name": "Prozess-Owner",
+      "description": "Verantwortet Zielbild, Regelwerk, Kennzahlen und kontinuierliche Verbesserung des Prozesses.",
+      "example": "Owner initiiert Ursachenanalyse bei SLA-Verletzung und setzt verbindliche Maßnahmen auf."
+    },
+    {
+      "id": "kpi_set",
+      "name": "KPI-Set (balanciert)",
+      "description": "Kombinierte Kennzahlen zur Vermeidung von Fehlanreizen (z. B. Speed + Qualität).",
+      "example": "Durchlaufzeit wird zusammen mit Erstlösungsquote und Reopen-Rate gemessen."
+    },
+    {
+      "id": "sla",
+      "name": "SLA",
+      "description": "Vertragliche Serviceziele zwischen Kunde und Provider (Verfügbarkeit, Reaktions- und Wiederherstellungszeit).",
+      "example": "P1-Incident: Reaktion unter 15 Minuten, Recovery unter 4 Stunden."
+    },
+    {
+      "id": "ola",
+      "name": "OLA",
+      "description": "Interne Leistungsvereinbarung zwischen Teams zur Absicherung externer SLA-Ziele.",
+      "example": "Netzwerkteam verpflichtet sich intern auf 20-Minuten-Reaktion für kritische Eskalationen."
+    },
+    {
+      "id": "kaufvertrag",
+      "name": "Kaufvertrag",
+      "description": "Sache/Standardprodukt gegen Geld, inkl. Eigentumsübergang.",
+      "example": "Beschaffung von 40 Notebooks samt Zubehör und Rechnung."
+    },
+    {
+      "id": "werkvertrag",
+      "name": "Werkvertrag",
+      "description": "Konkreter Erfolg wird geschuldet; Abnahme ist zentraler Meilenstein.",
+      "example": "Ein neues Rollenmodell gilt erst als erfüllt, wenn definierte Abnahmetests bestanden sind."
+    },
+    {
+      "id": "dienstvertrag",
+      "name": "Dienstvertrag",
+      "description": "Tätigkeit wird geschuldet, nicht der garantierte Enderfolg.",
+      "example": "Beratungsstunden zur Prozessanalyse werden nach Aufwand abgerechnet."
+    },
+    {
+      "id": "abnahme",
+      "name": "Abnahme",
+      "description": "Formale Bestätigung, dass das Werk vertragsgemäß erbracht wurde.",
+      "example": "Kunde unterschreibt Testprotokoll für das ausgelieferte Workflow-Feature."
+    },
+    {
+      "id": "mangel",
+      "name": "Mangel",
+      "description": "Abweichung der Leistung von der vereinbarten Beschaffenheit/Funktion.",
+      "example": "Implementierte Schnittstelle erfüllt den vereinbarten Pflichtdatensatz nicht."
+    },
+    {
+      "id": "lieferverzug",
+      "name": "Lieferverzug",
+      "description": "Leistung wird nicht fristgerecht erbracht, obwohl ein Termin vereinbart ist.",
+      "example": "Hardware kommt zwei Wochen nach verbindlichem Liefertermin an."
+    },
+    {
+      "id": "zahlungsverzug",
+      "name": "Zahlungsverzug",
+      "description": "Fällige Zahlung wird trotz Frist/ Mahnung nicht geleistet.",
+      "example": "Rechnung ist seit 30 Tagen fällig, trotz Zahlungsaufforderung erfolgt kein Ausgleich."
+    },
+    {
+      "id": "tco",
+      "name": "TCO",
+      "description": "Gesamtkosten über den Lebenszyklus: Anschaffung, Betrieb, Wartung, Schulung, Support.",
+      "example": "On-Prem-Lösung wirkt günstig in der Anschaffung, ist aber über 5 Jahre teurer durch Betriebskosten."
+    },
+    {
+      "id": "roi",
+      "name": "ROI",
+      "description": "Nutzen oder Gewinn im Verhältnis zum eingesetzten Investitionsvolumen.",
+      "example": "Automatisierung spart jährlich 30.000 Euro bei 60.000 Euro Investition."
+    },
+    {
+      "id": "amortisation",
+      "name": "Amortisation",
+      "description": "Zeitpunkt, ab dem kumulierter Nutzen die Investition erreicht.",
+      "example": "Ein Tool für 12.000 Euro spart monatlich 1.000 Euro; Break-even nach 12 Monaten."
+    },
+    {
+      "id": "nutzwertanalyse",
+      "name": "Nutzwertanalyse",
+      "description": "Mehrkriterielle Entscheidungsmethode mit Gewichtung und Punktesystem.",
+      "example": "Drei Helpdesk-Systeme werden nach Sicherheit, Bedienbarkeit, Integrationsfähigkeit und Kosten bewertet."
+    },
+    {
+      "id": "make_or_buy",
+      "name": "Make-or-Buy",
+      "description": "Entscheidung zwischen Eigenentwicklung und Beschaffung unter Betrachtung von Zeit, Risiko und Know-how.",
+      "example": "Unternehmen prüft, ob ein IAM-System selbst entwickelt oder als SaaS bezogen wird."
+    },
+    {
+      "id": "risikokosten",
+      "name": "Risikokosten",
+      "description": "Erwartete Zusatzkosten durch Ausfall, Verzögerung, Vertragsstrafen oder Qualitätsmängel.",
+      "example": "Ungeplante Downtime verursacht SLA-Pönalen und Mehrarbeit im Incident-Team."
+    },
+    {
+      "id": "prozessziel",
+      "name": "Prozessziel (SMART)",
+      "description": "Präzise Zieldefinition als Basis für Steuerung und Messbarkeit.",
+      "example": "P1-Incidents in 95% der Fälle innerhalb von 4 Stunden stabilisieren."
+    },
+    {
+      "id": "akzeptanzkriterium",
+      "name": "Akzeptanzkriterium",
+      "description": "Messbare Bedingung, wann ein Ergebnis als erfüllt gilt.",
+      "example": "Feature gilt als fertig, wenn 12 definierte Testfälle ohne kritischen Fehler durchlaufen."
+    },
+    {
+      "id": "lessons_learned",
+      "name": "Lessons Learned",
+      "description": "Strukturiertes Lernen aus Abweichungen, um Wiederholfehler im Prozess zu vermeiden.",
+      "example": "Nach Major Incident werden Ursache, Gegenmaßnahmen und Präventionsschritte verbindlich dokumentiert."
+    }
+  ]
+}

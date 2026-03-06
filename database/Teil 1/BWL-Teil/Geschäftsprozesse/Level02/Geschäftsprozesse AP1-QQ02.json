@@ -1,0 +1,229 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Geschäftsprozesse (AP1) Level 2",
+  "introText": "Starte das Quiz und ordne die vertieften AP1-Aussagen präzise zu.",
+  "sublineText": "Achte auf Grenzfälle: Prozessarten, Vertragsrecht, KPI-Design und Wirtschaftlichkeit.",
+  "timePerQuestionSeconds": 12,
+  "answerLabels": [
+    "Geschäftsprozess",
+    "Arbeitsprozess",
+    "Projekt",
+    "Kernprozess",
+    "Unterstützungsprozess",
+    "Führungsprozess",
+    "Prozesslandkarte",
+    "End-to-End-Prozess",
+    "Prozess-Owner",
+    "KPI",
+    "KPI-Set",
+    "Durchlaufzeit",
+    "Bearbeitungszeit",
+    "First Time Right",
+    "Engpass (Bottleneck)",
+    "WIP-Limit",
+    "Schnittstelle",
+    "Medienbruch",
+    "Standardprozess",
+    "Ausnahmeprozess",
+    "Kaufvertrag",
+    "Werkvertrag",
+    "Dienstvertrag",
+    "Abnahme",
+    "Mangel",
+    "Lieferverzug",
+    "Zahlungsverzug",
+    "SLA",
+    "OLA",
+    "TCO",
+    "ROI",
+    "Amortisation",
+    "Nutzwertanalyse",
+    "Make-or-Buy",
+    "Risikokosten",
+    "Prozessziel (SMART)",
+    "Akzeptanzkriterium",
+    "Ursachenanalyse",
+    "Lessons Learned",
+    "Eskalation",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Ablauf aus Unternehmenssicht mit Fokus auf Wertschöpfung, Verantwortlichkeit und Ergebnis für Kunde/Organisation.",
+      "correct": "Geschäftsprozess"
+    },
+    {
+      "text": "Konkrete operative Schrittfolge im Team, z. B. Ticket erfassen, priorisieren, lösen, dokumentieren.",
+      "correct": "Arbeitsprozess"
+    },
+    {
+      "text": "Einmalig, zeitlich befristet und mit eigenem Ziel/Budget organisiert.",
+      "correct": "Projekt"
+    },
+    {
+      "text": "Prozessart mit direktem Kundennutzen und typischer Marktwirkung.",
+      "correct": "Kernprozess"
+    },
+    {
+      "text": "Prozessart, die Ressourcen bereitstellt und den Kernprozess absichert.",
+      "correct": "Unterstützungsprozess"
+    },
+    {
+      "text": "Strategie, Zielvorgaben, Steuerung und Kontrolle von Prozessen.",
+      "correct": "Führungsprozess"
+    },
+    {
+      "text": "Übersicht, die Kern-, Support- und Führungsprozesse inklusive Beziehungen zeigt.",
+      "correct": "Prozesslandkarte"
+    },
+    {
+      "text": "Vom Trigger bis zum bestätigten Ergebnis inkl. aller Übergaben gedacht.",
+      "correct": "End-to-End-Prozess"
+    },
+    {
+      "text": "Rolle mit Verantwortung für Zielerreichung, Regelwerk und kontinuierliche Verbesserung.",
+      "correct": "Prozess-Owner"
+    },
+    {
+      "text": "Messgröße zur Steuerung eines Ziels, z. B. Verfügbarkeit oder Durchlaufzeit.",
+      "correct": "KPI"
+    },
+    {
+      "text": "Kombination mehrerer Kennzahlen, um einseitige Fehlanreize zu vermeiden.",
+      "correct": "KPI-Set"
+    },
+    {
+      "text": "Gesamtzeit eines Falls inkl. Wartephasen und aktiver Bearbeitung.",
+      "correct": "Durchlaufzeit"
+    },
+    {
+      "text": "Reine aktive Arbeitszeit ohne Liege- und Wartezeiten.",
+      "correct": "Bearbeitungszeit"
+    },
+    {
+      "text": "Kennzahl: Fälle werden ohne Nacharbeit und ohne Wiedereröffnung korrekt abgeschlossen.",
+      "correct": "First Time Right"
+    },
+    {
+      "text": "Schritt/Ressource mit geringster Kapazität, die den Gesamtdurchsatz begrenzt.",
+      "correct": "Engpass (Bottleneck)"
+    },
+    {
+      "text": "Begrenzung paralleler Arbeit, um Kontextwechsel und Stau zu reduzieren.",
+      "correct": "WIP-Limit"
+    },
+    {
+      "text": "Definierter Übergabepunkt zwischen Rollen oder Systemen mit klaren Informationsanforderungen.",
+      "correct": "Schnittstelle"
+    },
+    {
+      "text": "Toolwechsel (z. B. Ticket → Mail → Excel) erzeugt Verzögerung und Informationsverlust.",
+      "correct": "Medienbruch"
+    },
+    {
+      "text": "Wiederholbarer Regelablauf mit klaren Rollen, Schritten und Qualitätskriterien.",
+      "correct": "Standardprozess"
+    },
+    {
+      "text": "Sonderpfad für seltene Fälle außerhalb des normalen Regelablaufs.",
+      "correct": "Ausnahmeprozess"
+    },
+    {
+      "text": "Sache/Produkt gegen Geld; Eigentumsübergang steht im Vordergrund.",
+      "correct": "Kaufvertrag"
+    },
+    {
+      "text": "Vertragstyp, bei dem ein konkreter Erfolg geschuldet wird; Abnahme ist zentral.",
+      "correct": "Werkvertrag"
+    },
+    {
+      "text": "Vertragstyp, bei dem die Tätigkeit nach Aufwand geschuldet wird.",
+      "correct": "Dienstvertrag"
+    },
+    {
+      "text": "Formale Bestätigung, dass das vereinbarte Werk vertragsgemäß erfüllt ist.",
+      "correct": "Abnahme"
+    },
+    {
+      "text": "Leistung weicht von der vereinbarten Beschaffenheit/Funktion ab.",
+      "correct": "Mangel"
+    },
+    {
+      "text": "Verbindlicher Termin wird nicht eingehalten, Leistung kommt zu spät.",
+      "correct": "Lieferverzug"
+    },
+    {
+      "text": "Fällige Rechnung wird trotz Frist/ Mahnung nicht gezahlt.",
+      "correct": "Zahlungsverzug"
+    },
+    {
+      "text": "Vertraglich vereinbarte Serviceziele gegenüber dem Kunden (z. B. Reaktionszeit, Verfügbarkeit).",
+      "correct": "SLA"
+    },
+    {
+      "text": "Interne Leistungszusage zwischen Teams, um externe Serviceziele sicherzustellen.",
+      "correct": "OLA"
+    },
+    {
+      "text": "Gesamtkosten über Lebensdauer inkl. Betrieb, Wartung, Schulung und Support.",
+      "correct": "TCO"
+    },
+    {
+      "text": "Nutzen/Gewinn im Verhältnis zur Investition, immer mit Zeitraum betrachtet.",
+      "correct": "ROI"
+    },
+    {
+      "text": "Zeitpunkt, ab dem kumulierter Nutzen die Investitionskosten erreicht.",
+      "correct": "Amortisation"
+    },
+    {
+      "text": "Entscheidungsmethode mit Kriterien, Gewichtung und Punktbewertung.",
+      "correct": "Nutzwertanalyse"
+    },
+    {
+      "text": "Strategische Entscheidung: selbst entwickeln oder einkaufen/outsourcen.",
+      "correct": "Make-or-Buy"
+    },
+    {
+      "text": "Erwartete Zusatzkosten aus Risiken wie Ausfall, Pönalen, Verzögerungen.",
+      "correct": "Risikokosten"
+    },
+    {
+      "text": "Ziel muss spezifisch, messbar, akzeptiert, realistisch und terminiert formuliert sein.",
+      "correct": "Prozessziel (SMART)"
+    },
+    {
+      "text": "Messbar formuliert: „Gilt als erfüllt, wenn ...“.",
+      "correct": "Akzeptanzkriterium"
+    },
+    {
+      "text": "Systematische Ermittlung der eigentlichen Ursache statt reiner Symptombehandlung.",
+      "correct": "Ursachenanalyse"
+    },
+    {
+      "text": "Strukturiertes Lernen aus Vorfällen zur dauerhaften Prozessverbesserung.",
+      "correct": "Lessons Learned"
+    },
+    {
+      "text": "Vordefinierter Hochstufungsweg bei Überschreitung von Risiko, Zeit oder Kompetenz.",
+      "correct": "Eskalation"
+    },
+    {
+      "text": "Welche drei Begriffe gehören in ein ausgewogenes Incident-Steuerungsset: Durchlaufzeit, First Time Right, Reopen-Rate?",
+      "correct": "alle"
+    },
+    {
+      "text": "Welche Aussage ist korrekt: „Nur viele geschlossene Tickets bedeuten automatisch hohe Servicequalität.“",
+      "correct": "keine"
+    },
+    {
+      "text": "Prüfungsfalle: Ein KPI ohne Zielbezug kann Verhalten verschlechtern statt verbessern.",
+      "correct": "KPI"
+    },
+    {
+      "text": "Der Wechsel von Prozessschritten über mehrere unintegrierte Tools erhöht Fehlerquote und Laufzeit.",
+      "correct": "Medienbruch"
+    }
+  ]
+}

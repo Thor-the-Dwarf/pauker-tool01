@@ -1,0 +1,499 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Geschäftsprozesse (AP1) Level 2",
+  "description": "Schritt 1: fachlich beste Einordnung wählen. Schritt 2: die tragenden Begründungen markieren.",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Ein Service-Desk-Team wird ausschließlich nach 'geschlossenen Tickets pro Tag' gesteuert. Reopen-Rate und Kundenzufriedenheit verschlechtern sich deutlich.",
+      "tags": ["KPI", "Fehlanreiz", "Qualität"],
+      "options": [
+        {
+          "id": "kpi_fehlanreiz",
+          "label": "KPI-Fehlanreiz durch einseitige Steuerung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eine Einzelkennzahl ohne Qualitätsgegenindikator kann unerwünschtes Verhalten erzeugen.", "correct": true },
+            { "id": "w2", "text": "Ein balanciertes KPI-Set (z. B. Durchlaufzeit + Reopen-Rate + Erstlösungsquote) stabilisiert das Zielbild.", "correct": true },
+            { "id": "w3", "text": "Geschlossene Tickets sind grundsätzlich der einzige relevante Qualitätsindikator.", "correct": false },
+            { "id": "w4", "text": "Wenn Reopen steigt, wurde das Prozessziel vermutlich nicht sauber getroffen.", "correct": true }
+          ]
+        },
+        {
+          "id": "sla_verstoss",
+          "label": "Automatisch reiner SLA-Verstoß",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SLA-Verstoß liegt nur vor, wenn vertraglich vereinbarte Zielwerte nicht erreicht werden.", "correct": true },
+            { "id": "w2", "text": "Schlechte KPI-Wahl ist immer automatisch ein Vertragsbruch.", "correct": false },
+            { "id": "w3", "text": "SLA-Thema und internes KPI-Design hängen zusammen, sind aber nicht identisch.", "correct": true },
+            { "id": "w4", "text": "Auch ohne formalen SLA-Verstoß kann der Prozess fachlich schlecht gesteuert sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "prozess_owner_unwichtig",
+          "label": "Problem, weil kein Owner operativ jedes Ticket selbst löst",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Owner-Verantwortung bedeutet Steuerung/Verbesserung, nicht zwingend operative Abarbeitung jedes Falls.", "correct": true },
+            { "id": "w2", "text": "Owner muss alle Tickets persönlich schließen, sonst ist der Prozess ungültig.", "correct": false },
+            { "id": "w3", "text": "Auch mit Owner kann falsche KPI-Logik Prozessqualität verschlechtern.", "correct": true },
+            { "id": "w4", "text": "Das Kernproblem liegt hier primär im Steuerungsdesign, nicht in Rollenbezeichnungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Kernproblem ist ein KPI-Fehlanreiz: Geschwindigkeit ohne Qualitätsgegenindikator führt zu Scheinlösungen."
+    },
+    {
+      "id": "v02",
+      "profile": "Ein Anbieter soll ein neues Freigabeworkflow-Feature implementieren. Im Vertrag stehen konkrete Abnahmefälle, die erfüllt sein müssen.",
+      "tags": ["Vertragsrecht", "Werkvertrag", "Abnahme"],
+      "options": [
+        {
+          "id": "werkvertrag",
+          "label": "Werkvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Es wird ein konkreter Erfolg (funktionsfähiges Feature) geschuldet.", "correct": true },
+            { "id": "w2", "text": "Abnahmefälle sind typisch für Werkleistungen mit überprüfbarem Ergebnis.", "correct": true },
+            { "id": "w3", "text": "Stundennachweis ohne Erfolgserwartung reicht hier als Kernlogik.", "correct": false },
+            { "id": "w4", "text": "Mängel werden gegen vereinbarte Soll-Eigenschaften geprüft.", "correct": true }
+          ]
+        },
+        {
+          "id": "dienstvertrag",
+          "label": "Dienstvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beim Dienstvertrag ist primär die Tätigkeit geschuldet.", "correct": true },
+            { "id": "w2", "text": "Abnahme eines konkreten Erfolgs ist dort weniger zentral.", "correct": true },
+            { "id": "w3", "text": "Definierte Abnahmefälle sprechen klar für reinen Dienstvertrag.", "correct": false },
+            { "id": "w4", "text": "Vergütung nach Aufwand kann ein Indiz sein, ersetzt aber keinen geschuldeten Erfolg.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kaufvertrag betrifft primär Übereignung einer Sache/Standardproduktes.", "correct": true },
+            { "id": "w2", "text": "Individuelle Funktionsabnahme ist typisch für Kaufvertrag bei Standardware.", "correct": false },
+            { "id": "w3", "text": "Bei Individualentwicklung dominiert regelmäßig die Werklogik.", "correct": true },
+            { "id": "w4", "text": "Die Vertragsart wird allein am Rechnungsbetrag erkannt.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Werkvertrag: definierter Erfolg mit Abnahmefällen als Maßstab."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein externer Supportdienst wird nach Stunden bezahlt. Es gibt keine Zusage, dass jeder Einzelfall zu einem bestimmten Ergebnis geführt wird.",
+      "tags": ["Vertragsrecht", "Dienstvertrag"],
+      "options": [
+        {
+          "id": "dienstvertrag",
+          "label": "Dienstvertrag",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Geschuldet ist die Tätigkeit/Arbeitsleistung, nicht zwingend ein konkreter Erfolg.", "correct": true },
+            { "id": "w2", "text": "Abrechnung nach Aufwand passt häufig zur Dienstlogik.", "correct": true },
+            { "id": "w3", "text": "Jeder einzelne Fall muss zwingend mit Abnahmeprotokoll als Werk abgeschlossen werden.", "correct": false },
+            { "id": "w4", "text": "Ergebnisqualität kann trotzdem über KPIs/SLA gesteuert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "werkvertrag",
+          "label": "Werkvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Werkvertrag verlangt einen konkreten Erfolg als geschuldete Hauptleistung.", "correct": true },
+            { "id": "w2", "text": "Fehlende Erfolgsgarantie ist ein starkes Gegenindiz.", "correct": true },
+            { "id": "w3", "text": "Stundenabrechnung plus keine Erfolgspflicht ist der Normalfall für Werkverträge.", "correct": false },
+            { "id": "w4", "text": "Abnahme ist im Werkkontext regelmäßig zentral.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kaufvertrag betrifft Waren/Produkte mit Eigentumsübergang.", "correct": true },
+            { "id": "w2", "text": "Hier wird keine Sache übereignet, sondern Support geleistet.", "correct": true },
+            { "id": "w3", "text": "Service-Stunden gelten automatisch als Sache im Kaufrecht.", "correct": false },
+            { "id": "w4", "text": "Die Vertragsbezeichnung im Titel allein reicht nicht ohne Leistungsinhalt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Dienstvertrag: Tätigkeit nach Aufwand, kein zwingend geschuldeter Einzelerfolg."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein Incident braucht insgesamt 11 Stunden bis zur Lösung. Das Team hat jedoch nur 90 Minuten aktiv gearbeitet.",
+      "tags": ["Prozesskennzahlen", "Durchlaufzeit", "Bearbeitungszeit"],
+      "options": [
+        {
+          "id": "durchlaufzeit_hoch",
+          "label": "Durchlaufzeitproblem mit Warteanteil",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Durchlaufzeit umfasst aktive Arbeit plus Liege-/Wartezeiten.", "correct": true },
+            { "id": "w2", "text": "Große Differenz weist auf Stau/Übergaben/Freigabewartezeit hin.", "correct": true },
+            { "id": "w3", "text": "Bearbeitungszeit ist immer identisch mit Durchlaufzeit.", "correct": false },
+            { "id": "w4", "text": "Engpassanalyse oder Schnittstellenoptimierung ist hier sinnvoll.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_bearbeitungszeit",
+          "label": "Reines Bearbeitungszeitproblem",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Aktive Bearbeitungszeit ist mit 90 Minuten nicht der dominante Block.", "correct": true },
+            { "id": "w2", "text": "Die Hauptlast liegt offenbar in Warte-/Liegephasen.", "correct": true },
+            { "id": "w3", "text": "Das Verhältnis zeigt, dass ausschließlich Technikarbeit zu langsam war.", "correct": false },
+            { "id": "w4", "text": "Fokus auf Handover/Freigaben kann die Gesamtdauer stärker senken.", "correct": true }
+          ]
+        },
+        {
+          "id": "kein_problem",
+          "label": "Kein Problem, weil der Fall am selben Tag geschlossen wurde",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Bewertung braucht Zielwerte/SLA statt reine Kalenderlogik.", "correct": true },
+            { "id": "w2", "text": "Hohe Wartezeit kann trotz Tagesabschluss kritisch sein.", "correct": true },
+            { "id": "w3", "text": "Wenn am selben Tag geschlossen, sind Kennzahlen automatisch erfüllt.", "correct": false },
+            { "id": "w4", "text": "Prozessqualität bemisst sich an Zielerreichung, nicht nur am Endzeitpunkt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Durchlaufzeit ist zu hoch im Verhältnis zur aktiven Arbeit. Fokus: Wartezeiten und Übergaben."
+    },
+    {
+      "id": "v05",
+      "profile": "Bei kritischen Incidents fehlt ein klarer Eskalationspfad. Teams diskutieren erst lange Zuständigkeiten, bevor sie handeln.",
+      "tags": ["Eskalation", "Governance", "SLA-Risiko"],
+      "options": [
+        {
+          "id": "eskalationsluecke",
+          "label": "Steuerungslücke im Eskalationsprozess",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne klare Eskalationsregeln steigt Reaktionszeit und Entscheidungsverlust.", "correct": true },
+            { "id": "w2", "text": "Kritische Prioritäten brauchen definierte Trigger und Verantwortliche.", "correct": true },
+            { "id": "w3", "text": "Eskalation ist nur optionales Nice-to-have ohne Einfluss auf SLA.", "correct": false },
+            { "id": "w4", "text": "Eindeutige RACI-/Owner-Zuordnung reduziert Abstimmungsverzug.", "correct": true }
+          ]
+        },
+        {
+          "id": "medienbruch",
+          "label": "Primär Medienbruch",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Medienbruch beschreibt vor allem Tool-/Informationswechsel.", "correct": true },
+            { "id": "w2", "text": "Hier ist der Kern eher fehlende Entscheidungsregel, nicht zwingend Toolbruch.", "correct": true },
+            { "id": "w3", "text": "Jede unklare Zuständigkeit ist automatisch ein Medienbruch.", "correct": false },
+            { "id": "w4", "text": "Beides kann zusammen auftreten, aber Hauptursache bleibt Governance.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Vertragsartenproblem (Kaufvertrag)",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hier geht es um operative Steuerung, nicht primär um Eigentumsübergang.", "correct": true },
+            { "id": "w2", "text": "Kaufvertrag klärt keine Incident-Eskalationskette.", "correct": true },
+            { "id": "w3", "text": "Bei jeder Eskalation liegt automatisch ein Kaufvertragskonflikt vor.", "correct": false },
+            { "id": "w4", "text": "Vertrag kann Ziele setzen, ersetzt aber kein klares Prozessdesign.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Hauptthema ist eine Eskalations-/Steuerungslücke: Verantwortungen und Trigger müssen definiert sein."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Team bewertet drei Ticketing-Tools nach Sicherheit, Integrationsfähigkeit, Bedienbarkeit und Kosten mit unterschiedlicher Gewichtung.",
+      "tags": ["Wirtschaftlichkeit", "Entscheidung", "Nutzwertanalyse"],
+      "options": [
+        {
+          "id": "nutzwertanalyse",
+          "label": "Nutzwertanalyse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrere Kriterien werden gewichtet und mit Punkten bewertet.", "correct": true },
+            { "id": "w2", "text": "Qualitative Faktoren werden systematisch vergleichbar gemacht.", "correct": true },
+            { "id": "w3", "text": "Die Methode betrachtet ausschließlich Anschaffungspreise.", "correct": false },
+            { "id": "w4", "text": "Sie ist besonders nützlich, wenn nicht nur ein monetärer Faktor entscheidet.", "correct": true }
+          ]
+        },
+        {
+          "id": "roi",
+          "label": "ROI-Berechnung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ROI betrachtet primär den finanziellen Rückfluss relativ zur Investition.", "correct": true },
+            { "id": "w2", "text": "Gewichtete qualitative Kriterien sind nicht der Kern von ROI.", "correct": true },
+            { "id": "w3", "text": "ROI ersetzt jede qualitative Bewertung vollständig.", "correct": false },
+            { "id": "w4", "text": "ROI kann ergänzen, aber nicht jede fachliche Dimension abdecken.", "correct": true }
+          ]
+        },
+        {
+          "id": "amortisation",
+          "label": "Amortisationsrechnung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Amortisation fragt primär nach dem Rückzahlungszeitpunkt.", "correct": true },
+            { "id": "w2", "text": "Die Methode bildet keine gewichtete Qualitätsmatrix ab.", "correct": true },
+            { "id": "w3", "text": "Je mehr Kriterien gewichtet werden, desto besser ist Amortisation geeignet.", "correct": false },
+            { "id": "w4", "text": "Sie ist sinnvoll für Payback-Fragen, aber nicht allein für komplexe Toolauswahl.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Gewichtete Mehrkriterienentscheidung entspricht der Nutzwertanalyse."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Unternehmen vergleicht Cloud und On-Prem nur anhand der Anschaffungskosten und ignoriert Betriebs-, Lizenz- und Supportaufwand.",
+      "tags": ["TCO", "Make-or-Buy", "Prüfungsfalle"],
+      "options": [
+        {
+          "id": "tco_fehlt",
+          "label": "TCO-Betrachtung fehlt",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Gesamtwirtschaftliche Bewertung braucht Lebenszykluskosten statt nur CapEx.", "correct": true },
+            { "id": "w2", "text": "Betrieb, Wartung, Schulung und Support können die Hauptkosten treiben.", "correct": true },
+            { "id": "w3", "text": "Anschaffungskosten reichen für Make-or-Buy immer aus.", "correct": false },
+            { "id": "w4", "text": "Ohne TCO ist eine belastbare Vergleichsentscheidung kaum möglich.", "correct": true }
+          ]
+        },
+        {
+          "id": "roi_ausreichend",
+          "label": "ROI allein ist ausreichend",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "ROI ist wichtig, aber ohne vollständige Kostenbasis wenig belastbar.", "correct": true },
+            { "id": "w2", "text": "TCO liefert die Kostenbasis für viele ROI-Annahmen.", "correct": true },
+            { "id": "w3", "text": "ROI macht alle Betriebs-/Risikoannahmen überflüssig.", "correct": false },
+            { "id": "w4", "text": "Strategische Faktoren (Abhängigkeit, Compliance) bleiben zusätzlich relevant.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_nutzwert",
+          "label": "Nur Nutzwertanalyse nötig, Kosten egal",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Nutzwertanalyse ergänzt, ersetzt aber keine Kostenrechnung.", "correct": true },
+            { "id": "w2", "text": "Kosten und qualitative Kriterien sollten kombiniert bewertet werden.", "correct": true },
+            { "id": "w3", "text": "Wenn Kriterien gewichtet sind, sind finanzielle Daten überflüssig.", "correct": false },
+            { "id": "w4", "text": "Gerade bei IT-Betrieb sind Folgekosten entscheidend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne TCO bleibt die Entscheidung verzerrt; Anschaffungskosten allein reichen nicht."
+    },
+    {
+      "id": "v08",
+      "profile": "Ein Vorgang wird zwar inhaltlich fertiggestellt, aber ohne definierte Abnahmekriterien und ohne formale Bestätigung des Auftraggebers abgeschlossen.",
+      "tags": ["Abnahme", "Werkvertrag", "Risiko"],
+      "options": [
+        {
+          "id": "abnahme_fehlt",
+          "label": "Abnahmerisiko bei Werkleistung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bei Werkleistungen ist die formale Abnahme ein zentraler Rechts- und Qualitätsanker.", "correct": true },
+            { "id": "w2", "text": "Ohne klare Kriterien steigt Streitpotenzial über Erfüllung/Mangel.", "correct": true },
+            { "id": "w3", "text": "Abnahme ist nur eine optionale Formalität ohne Wirkung.", "correct": false },
+            { "id": "w4", "text": "Messbare Abnahmekriterien reduzieren Interpretationsspielraum.", "correct": true }
+          ]
+        },
+        {
+          "id": "dienstvertrag",
+          "label": "Unkritisch, da immer Dienstvertrag",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Die Vertragsart ergibt sich aus Leistungsinhalt, nicht aus einer Vermutung.", "correct": true },
+            { "id": "w2", "text": "Bei konkretem Erfolg mit Sollzustand spricht viel für Werklogik.", "correct": true },
+            { "id": "w3", "text": "Sobald IT im Spiel ist, gilt automatisch Dienstvertrag.", "correct": false },
+            { "id": "w4", "text": "Fehlende Abnahme kann trotz Leistungserbringung Konflikte auslösen.", "correct": true }
+          ]
+        },
+        {
+          "id": "kaufvertrag",
+          "label": "Kaufvertrag ohne Relevanz von Abnahmekriterien",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kaufvertrag fokussiert Sache/Übereignung, nicht primär Individualerfolg.", "correct": true },
+            { "id": "w2", "text": "Hier geht es um Leistungsabnahme eines Arbeitsergebnisses.", "correct": true },
+            { "id": "w3", "text": "Abnahmekriterien sind nur bei Hardwarelieferung zwingend.", "correct": false },
+            { "id": "w4", "text": "Kontext und Leistungsbeschreibung entscheiden über die richtige Einordnung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei werkähnlicher Leistung sind klare Abnahmekriterien und formale Bestätigung kritisch."
+    },
+    {
+      "id": "v09",
+      "profile": "Ein Prozess ist vollständig dokumentiert, aber in der Praxis werden regelmäßig Daten per E-Mail und Excel zwischen Teams nachgetragen.",
+      "tags": ["Schnittstelle", "Medienbruch", "Prozessqualität"],
+      "options": [
+        {
+          "id": "medienbruch",
+          "label": "Medienbruch in der operativen Übergabe",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Toolwechsel ohne Integration erhöht Fehler- und Verzögerungsrisiko.", "correct": true },
+            { "id": "w2", "text": "Dokumentation allein verhindert keine Informationsverluste in der Ausführung.", "correct": true },
+            { "id": "w3", "text": "Sobald ein Prozess dokumentiert ist, sind Medienbrüche fachlich irrelevant.", "correct": false },
+            { "id": "w4", "text": "Ein zentrales führendes System reduziert Doppeleingaben.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_kernprozess",
+          "label": "Nur Kern-/Support-Abgrenzung betroffen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Prozessart kann relevant sein, löst aber den Toolbruch nicht.", "correct": true },
+            { "id": "w2", "text": "Die Hauptursache liegt hier in Datenfluss/Übergabequalität.", "correct": true },
+            { "id": "w3", "text": "Medienbrüche betreffen ausschließlich Führungsprozesse.", "correct": false },
+            { "id": "w4", "text": "Auch Kernprozesse leiden stark unter fragmentierten Toolketten.", "correct": true }
+          ]
+        },
+        {
+          "id": "keine_abweichung",
+          "label": "Kein Problem, da E-Mail als Standardtool akzeptiert ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "E-Mail kann ergänzen, sollte aber kein führender Datenspeicher für Prozessstatus sein.", "correct": true },
+            { "id": "w2", "text": "Mehrfachpflege erschwert Nachvollziehbarkeit und Auditfähigkeit.", "correct": true },
+            { "id": "w3", "text": "Nachvollziehbarkeit ist im Incident-Prozess nicht erforderlich.", "correct": false },
+            { "id": "w4", "text": "Einheitliche Datenquelle verbessert Steuerung und KPI-Qualität.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Kernproblem ist ein Medienbruch in der Übergabe- und Datenpflegekette."
+    },
+    {
+      "id": "v10",
+      "profile": "Für denselben Prozess existieren keine klaren Kriterien, wann ein Ticket wirklich als 'Done' gilt. Teams schließen nach Bauchgefühl.",
+      "tags": ["Akzeptanzkriterium", "Qualität", "Standardprozess"],
+      "options": [
+        {
+          "id": "akzeptanz_fehlt",
+          "label": "Fehlende Akzeptanzkriterien",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne messbares Done-Kriterium entstehen uneinheitliche Qualitätsniveaus.", "correct": true },
+            { "id": "w2", "text": "Akzeptanzkriterien schaffen objektive Prüfbarkeit statt subjektiver Einschätzung.", "correct": true },
+            { "id": "w3", "text": "Bauchgefühl ist in standardisierten Prozessen gleichwertig mit messbaren Regeln.", "correct": false },
+            { "id": "w4", "text": "Saubere Kriterien verbessern Vergleichbarkeit der Kennzahlen.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_sla",
+          "label": "Ein SLA allein reicht als Done-Definition",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SLA steuert Serviceziele, ersetzt aber nicht jedes fachliche Done-Kriterium.", "correct": true },
+            { "id": "w2", "text": "Ticket-Abschluss braucht oft zusätzliche Qualitäts-/Dokukriterien.", "correct": true },
+            { "id": "w3", "text": "Sobald ein SLA existiert, sind Prozessdefinitionen unnötig.", "correct": false },
+            { "id": "w4", "text": "SLA und interne Akzeptanzregeln wirken am besten kombiniert.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_owner",
+          "label": "Der Owner entscheidet situativ, Kriterien sind überflüssig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Owner braucht Regeln, um konsistente Entscheidungen zu ermöglichen.", "correct": true },
+            { "id": "w2", "text": "Einzelentscheidungen ohne Kriterien erhöhen Varianz und Streitpotenzial.", "correct": true },
+            { "id": "w3", "text": "Regelwerke verhindern Verantwortlichkeit und sollten vermieden werden.", "correct": false },
+            { "id": "w4", "text": "Standardisierte Prozesse leben von klaren Definitionen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Es fehlen klare Akzeptanzkriterien, wodurch Qualität und Messbarkeit leiden."
+    },
+    {
+      "id": "v11",
+      "profile": "Ein Team startet gleichzeitig sehr viele kritische Vorgänge. Nichts wird schnell fertig, weil ständig umpriorisiert und unterbrochen wird.",
+      "tags": ["WIP", "Engpass", "Flow"],
+      "options": [
+        {
+          "id": "wip_limit",
+          "label": "Fehlendes WIP-Limit / zu viele parallele Vorgänge",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zu viel Parallelisierung erhöht Kontextwechsel und verlangsamt Abschlussraten.", "correct": true },
+            { "id": "w2", "text": "WIP-Limits fördern Fluss und verkürzen oft die Durchlaufzeit.", "correct": true },
+            { "id": "w3", "text": "Mehr offene Arbeit führt immer zu schnellerem Durchsatz.", "correct": false },
+            { "id": "w4", "text": "Fokussierung auf Abschluss statt Anfangen ist ein zentrales Flow-Prinzip.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_kpi",
+          "label": "Ausschließlich KPI-Problem, keine operative Ursache",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "KPI kann Verhalten verstärken, aber operatives WIP-Management bleibt Kernhebel.", "correct": true },
+            { "id": "w2", "text": "Auch ohne KPI-Änderung kann WIP-Begrenzung Wirkung zeigen.", "correct": true },
+            { "id": "w3", "text": "Parallelarbeit hat keinen Einfluss auf Prozessfluss.", "correct": false },
+            { "id": "w4", "text": "KPI und operative Steuerung sollten zusammen gedacht werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "ausnahmeprozess",
+          "label": "Das ist immer ein Ausnahmeprozess",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hohe Last ist nicht automatisch ein Ausnahmeprozess, oft ein Steuerungsproblem.", "correct": true },
+            { "id": "w2", "text": "Ausnahmeprozesse sind spezifische Sonderpfade, nicht jede Überlastsituation.", "correct": true },
+            { "id": "w3", "text": "Sobald es hektisch wird, gelten Standardprozesse nicht mehr.", "correct": false },
+            { "id": "w4", "text": "Gerade unter Last helfen klare Standardregeln und Limitierung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Hauptursache ist fehlende Begrenzung paralleler Arbeit (WIP)."
+    },
+    {
+      "id": "v12",
+      "profile": "Nach einem Major Incident wird nur der Dienst wiederhergestellt. Ursachen, Prävention und Prozessanpassungen werden nicht dokumentiert.",
+      "tags": ["Ursachenanalyse", "Lessons Learned", "Kontinuierliche Verbesserung"],
+      "options": [
+        {
+          "id": "lessons_learned_fehlt",
+          "label": "Fehlende Ursachenanalyse und Lessons Learned",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne Root-Cause-Analyse steigt Wiederholungsrisiko derselben Störung.", "correct": true },
+            { "id": "w2", "text": "Lessons Learned überführt Einzelfallwissen in systemische Prävention.", "correct": true },
+            { "id": "w3", "text": "Nach Wiederherstellung ist Prozessverbesserung fachlich überflüssig.", "correct": false },
+            { "id": "w4", "text": "Dokumentierte Maßnahmen erhöhen Reifegrad und Auditfähigkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "nur_sla_ok",
+          "label": "Alles gut, solange SLA einmalig eingehalten wurde",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SLA-Einhaltung in einem Fall ersetzt keine nachhaltige Prävention.", "correct": true },
+            { "id": "w2", "text": "Wiederholte Ursachen ohne Gegenmaßnahme können spätere SLA-Risiken erhöhen.", "correct": true },
+            { "id": "w3", "text": "SLA ist immer wichtiger als Ursachenwissen.", "correct": false },
+            { "id": "w4", "text": "Reife Incident-Prozesse verbinden Wiederherstellung und Lernschleife.", "correct": true }
+          ]
+        },
+        {
+          "id": "abnahme_thema",
+          "label": "Primär Abnahmethema",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Abnahme ist vor allem bei Werkleistungen zentral, nicht Kern dieses Incident-Falls.", "correct": true },
+            { "id": "w2", "text": "Hier liegt der Schwerpunkt auf Betriebsstabilität und Prävention.", "correct": true },
+            { "id": "w3", "text": "Jeder Incident endet zwingend mit rechtsverbindlicher Werkabnahme.", "correct": false },
+            { "id": "w4", "text": "Prozesslernen ist ein eigener Qualitätshebel neben Vertragsaspekten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Ohne Ursachenanalyse und Lessons Learned bleibt die Wiederholungsgefahr hoch."
+    }
+  ]
+}
