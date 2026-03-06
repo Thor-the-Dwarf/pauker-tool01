@@ -1,0 +1,273 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – USV (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "offline_usv",
+      "name": "Offline-USV (Standby)",
+      "attributes": {
+        "is_usv_topology": true,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": true,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "line_interactive_usv",
+      "name": "Line-Interactive-USV",
+      "attributes": {
+        "is_usv_topology": true,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": true,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "online_usv",
+      "name": "Online-USV (Double Conversion)",
+      "attributes": {
+        "is_usv_topology": true,
+        "has_highest_power_quality": true,
+        "has_avr_regulation": true,
+        "uses_continuous_conversion": true,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "n_plus_one_redundancy",
+      "name": "N+1-Redundanzkonzept",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": true,
+        "supports_maintenance_without_downtime": true,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": true
+      }
+    },
+    {
+      "id": "bypass_concept",
+      "name": "Bypass-Konzept (statisch/Wartung)",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": true,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": false,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "battery_lifecycle",
+      "name": "Batterie-Lifecycle-Management",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": true,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": false,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "monitoring_shutdown",
+      "name": "Monitoring & Shutdown-Orchestrierung",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": true,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": true,
+        "is_process_runbook_element": true,
+        "requires_capacity_planning": false,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "generator_coupling",
+      "name": "USV-Generator-Kopplung",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": false,
+        "focuses_generator_bridge": true,
+        "focuses_load_prioritization": false,
+        "is_process_runbook_element": true,
+        "requires_capacity_planning": true,
+        "mitigates_single_point_of_failure": false
+      }
+    },
+    {
+      "id": "load_shedding",
+      "name": "Load-Shedding-Konzept",
+      "attributes": {
+        "is_usv_topology": false,
+        "has_highest_power_quality": false,
+        "has_avr_regulation": false,
+        "uses_continuous_conversion": false,
+        "primarily_for_basic_protection": false,
+        "focuses_redundancy": false,
+        "supports_maintenance_without_downtime": false,
+        "focuses_battery_lifecycle": false,
+        "focuses_monitoring_automation": true,
+        "focuses_generator_bridge": false,
+        "focuses_load_prioritization": true,
+        "is_process_runbook_element": true,
+        "requires_capacity_planning": false,
+        "mitigates_single_point_of_failure": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Ist die gesuchte Antwort eine konkrete USV-Topologie?",
+      "attributeKey": "is_usv_topology"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Bietet sie typischerweise das höchste Niveau an Spannungsqualität?",
+      "attributeKey": "has_highest_power_quality"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Enthält das Konzept eine aktive Spannungsregelung (AVR)?",
+      "attributeKey": "has_avr_regulation"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Wird die Last kontinuierlich über Umwandlung versorgt?",
+      "attributeKey": "uses_continuous_conversion"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist es primär für Basisschutz bei weniger kritischen Lasten gedacht?",
+      "attributeKey": "primarily_for_basic_protection"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Steht Redundanz zur Verfügbarkeitssteigerung im Mittelpunkt?",
+      "attributeKey": "focuses_redundancy"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Ermöglicht das Konzept Wartung ohne Lastunterbrechung?",
+      "attributeKey": "supports_maintenance_without_downtime"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es primär um Batteriezustand, Alterung und Austauschplanung?",
+      "attributeKey": "focuses_battery_lifecycle"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Stehen Alarmierung, Telemetrie und automatisierte Reaktionen im Fokus?",
+      "attributeKey": "focuses_monitoring_automation"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Brückt das Thema den Zeitraum bis zur Übernahme durch Notstromaggregat?",
+      "attributeKey": "focuses_generator_bridge"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Wird die Priorisierung/Abschaltung nichtkritischer Lasten adressiert?",
+      "attributeKey": "focuses_load_prioritization"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist ein Incident-/Shutdown-Runbook zentraler Bestandteil?",
+      "attributeKey": "is_process_runbook_element"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Benötigt das Thema explizite Kapazitäts- und Reservenplanung?",
+      "attributeKey": "requires_capacity_planning"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Verringert das Konzept explizit Einpunkt-Ausfallrisiken?",
+      "attributeKey": "mitigates_single_point_of_failure"
+    }
+  ]
+}

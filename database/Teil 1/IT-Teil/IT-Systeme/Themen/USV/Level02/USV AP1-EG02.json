@@ -1,0 +1,203 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – USV (AP1) Level 2",
+  "topic": "Dimensionierung • Runtime/Batteriealterung • Topologien • Monitoring/Shutdown • Redundanz",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "usv-plan-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Welcher Planungsaspekt ist betroffen?",
+      "subtitle": "Ordne jeden Befund der passenden Planungsdimension zu.",
+      "hintDefault": "USV-Auswahl ist mehr als Typwahl: Leistung, Autonomie, Betriebskonzept und Überwachung müssen zusammenpassen.",
+      "sortColumns": [
+        { "zone": "leistung", "label": "Leistung/Last", "hint": "Watt, VA, Reserve, Einschaltströme" },
+        { "zone": "autonomie", "label": "Autonomie/Batterie", "hint": "Runtime, Alterung, Temperatur" },
+        { "zone": "betrieb", "label": "Betrieb/Verfügbarkeit", "hint": "Topologie, Bypass, Redundanz" },
+        { "zone": "steuerung", "label": "Monitoring/Shutdown", "hint": "SNMP/Agent/Runbook" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Gesamtlast liegt bei 1.8 kW, geplante USV liefert nur 2.0 kVA bei ungünstigem Leistungsfaktor.", "correctZone": "leistung" },
+        { "id": "c2", "text": "Batterien sind 4 Jahre alt und liefern im Test nur noch 60 Prozent der Soll-Runtime.", "correctZone": "autonomie" },
+        { "id": "c3", "text": "Kritischer Dienst darf bei Wartung nicht abgeschaltet werden und benötigt statischen Bypass.", "correctZone": "betrieb" },
+        { "id": "c4", "text": "Bei Netzstörung soll nach 5 Minuten automatisch ein geordneter VM-Shutdown starten.", "correctZone": "steuerung" },
+        { "id": "c5", "text": "Einschaltspitzen der Storage-Controller führen zur Überlastabschaltung der USV.", "correctZone": "leistung" },
+        { "id": "c6", "text": "Hohe Umgebungstemperatur verkürzt die erwartete Batterielebensdauer deutlich.", "correctZone": "autonomie" },
+        { "id": "c7", "text": "Für unterbrechungsarmen Betrieb wird N+1-Redundanz bei der USV gefordert.", "correctZone": "betrieb" },
+        { "id": "c8", "text": "Ein Alarm auf \"Battery Low\" wird nicht ans Monitoring weitergeleitet.", "correctZone": "steuerung" }
+      ]
+    },
+    {
+      "id": "usv-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: AP1-Entscheidungen bei USV",
+      "subtitle": "Wähle die technisch belastbarste Antwort.",
+      "hintDefault": "Prüfungsrelevant sind Lastprofil, Runtime-Ziel, Topologie und Betriebsprozess.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage zur Dimensionierung ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Es reicht, nur die Nennleistung der USV in VA zu vergleichen, Lastprofil ist egal." },
+            { "value": "b", "text": "USV muss zu realer Wirkleistung, Leistungsfaktor, Spitzenlast und Reserve passen." },
+            { "value": "c", "text": "Je größer die Batterie, desto weniger relevant ist die Last." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welche Aussage zur Runtime ist fachlich richtig?",
+          "options": [
+            { "value": "a", "text": "Runtime bleibt über die gesamte Lebensdauer der Batterie konstant." },
+            { "value": "b", "text": "Runtime hängt von Last, Batteriezustand und Umgebung ab und muss regelmäßig getestet werden." },
+            { "value": "c", "text": "Runtime ist nur bei Offline-USV relevant." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Wann ist eine Online-USV typischerweise begründet?",
+          "options": [
+            { "value": "a", "text": "Bei besonders empfindlicher Last und hoher Anforderung an Spannungsqualität/Verfügbarkeit." },
+            { "value": "b", "text": "Wenn nur ein einzelner Büro-PC versorgt wird und Kosten maximal minimiert werden sollen." },
+            { "value": "c", "text": "Wenn gar keine Netzstörungen auftreten." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Maßnahme gehört zu einem professionellen USV-Betrieb?",
+          "options": [
+            { "value": "a", "text": "Alarmierung ignorieren und erst bei Komplettausfall reagieren." },
+            { "value": "b", "text": "Monitoring, Batterie-Tests, dokumentiertes Shutdown-Runbook und Wartungsplan etablieren." },
+            { "value": "c", "text": "Nur jährlich optisch kontrollieren, technische Tests entfallen." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "outage-order-l2",
+      "type": "capital",
+      "title": "Rätsel 3: Geordneter Ablauf bei Netzausfall",
+      "subtitle": "Bringe das Incident-Vorgehen in die richtige Reihenfolge.",
+      "hintDefault": "Erst erkennen, dann priorisieren, dann kontrolliert herunterfahren, dann Nachbereitung.",
+      "rows": [
+        {
+          "key": "detect",
+          "label": "USV-Alarm verifizieren und Restlaufzeit (Runtime) prüfen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "priorize",
+          "label": "Kritische Lasten priorisieren und optionale Verbraucher ggf. abschalten",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "shutdown",
+          "label": "Geordneten Shutdown gemäß Runbook (z. B. Apps -> DB -> Hypervisor) starten",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "verify",
+          "label": "Nach Rückkehr der Versorgung kontrollierten Wiederanlauf durchführen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "analyze",
+          "label": "Ereignis, Lastprofil und Batterieverhalten auswerten",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "improve",
+          "label": "Wartungs-/Kapazitätsplanung und Runbook auf Basis der Erkenntnisse aktualisieren",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topology-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 4: Topologie & Risiko",
+      "subtitle": "Treffe die beste Architekturentscheidung.",
+      "hintDefault": "Nicht jede Last braucht Online-USV, aber kritische Systeme brauchen nachvollziehbar höheren Schutz.",
+      "questions": [
+        {
+          "id": "t1",
+          "text": "1. Welcher Satz ist AP1-fachlich sauber?",
+          "options": [
+            { "value": "a", "text": "USV ersetzt Backup, Monitoring und Wartung vollständig." },
+            { "value": "b", "text": "USV ist Teil eines Gesamtkonzepts aus Schutz, Monitoring, Shutdown-Prozess und Wiederanlaufplanung." },
+            { "value": "c", "text": "USV-Typen unterscheiden sich nur optisch, nicht funktional." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "t2",
+          "text": "2. Welche Aussage zu Redundanz ist korrekt?",
+          "options": [
+            { "value": "a", "text": "N+1 kann Wartung/Ausfall einzelner USV-Module abfangen und Verfügbarkeit erhöhen." },
+            { "value": "b", "text": "Redundanz ist bei kritischen Lasten grundsätzlich unnötig." },
+            { "value": "c", "text": "Redundanz hat keine Auswirkungen auf Wartbarkeit." }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

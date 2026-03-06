@@ -1,0 +1,294 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – USV (AP1) Level 2",
+  "description": "Schritt 1: richtige Ursache-/Entscheidungsklasse wählen (What) · Schritt 2: belastbar begründen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Ein Team plant eine USV nur nach kVA-Datenblattwerten. Unter Last treten trotzdem Überlastalarme auf.",
+      "tags": ["Dimensionierung", "Watt", "VA", "Leistungsfaktor"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Wirkleistung, Leistungsfaktor und Spitzenlast in die Auslegung einbeziehen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "kVA alleine beschreibt die reale Lastaufnahme nicht vollständig.", "correct": true },
+            { "id": "w2", "text": "Leistungsfaktor und Lastspitzen beeinflussen die nutzbare Reserve maßgeblich.", "correct": true },
+            { "id": "w3", "text": "USV-Auslegung ist unabhängig von Lastprofil und Einschaltstrom.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist eine dimensionierungsbasierte Begründung mit Reserven.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur größere Sicherung im Stromkreis einsetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Eine stärkere Sicherung löst keine interne USV-Überlastgrenze.", "correct": true },
+            { "id": "w2", "text": "Problem liegt im USV-Lastprofil, nicht primär in der Gebäudeabsicherung.", "correct": true },
+            { "id": "w3", "text": "Sicherungsgröße erhöht automatisch die Batteriekapazität.", "correct": false },
+            { "id": "w4", "text": "Maßnahme verfehlt die technische Ursache.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dashboard-Farbe ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Visualisierung behebt keine elektrische Fehlplanung.", "correct": true },
+            { "id": "w2", "text": "Überlast entsteht durch reale Lastverhältnisse.", "correct": true },
+            { "id": "w3", "text": "Neue Farbe senkt Wirkleistungsbedarf der Lasten.", "correct": false },
+            { "id": "w4", "text": "Technische Diagnose bleibt erforderlich.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "USV-Dimensionierung muss reale Wirkleistung, Leistungsfaktor und Lastspitzen abdecken; reine kVA-Sicht reicht nicht."
+    },
+    {
+      "id": "v02",
+      "profile": "USV war für 15 Minuten Runtime ausgelegt. Nach drei Jahren hält sie im Test nur noch 7 Minuten.",
+      "tags": ["Batterie", "Runtime", "Wartung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Batteriealterung und Temperaturhistorie analysieren, Wartungsplan anpassen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Batteriekapazität nimmt mit Alter, Zyklen und Umgebungsbedingungen ab.", "correct": true },
+            { "id": "w2", "text": "Nur regelmäßige Last-/Batterietests zeigen reale Runtime im Betrieb.", "correct": true },
+            { "id": "w3", "text": "Runtime bleibt über die Lebensdauer konstant, wenn die USV eingeschaltet bleibt.", "correct": false },
+            { "id": "w4", "text": "AP1 erwartet vorausschauende Wartungs- und Ersatzlogik.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Netzteile der Server tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Servernetzteilwechsel behebt keine gealterte USV-Batterie.", "correct": true },
+            { "id": "w2", "text": "Das Symptom betrifft Energiepuffer, nicht primär Lastgeräte.", "correct": true },
+            { "id": "w3", "text": "Neue Netzteile regenerieren automatisch die USV-Akkuzellen.", "correct": false },
+            { "id": "w4", "text": "Ursachenklasse und Maßnahme sind getrennt.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Startreihenfolge im BIOS ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "BIOS-Settings beeinflussen nicht die chemische Batteriekapazität der USV.", "correct": true },
+            { "id": "w2", "text": "Runtime-Verlust ist ein Energie- und Alterungsthema.", "correct": true },
+            { "id": "w3", "text": "Bootreihenfolge verlängert die Überbrückungszeit physikalisch.", "correct": false },
+            { "id": "w4", "text": "Systematische Wartung ist hier die richtige Antwort.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Runtime-Verlust ist typisch für Batteriealterung und muss über Messungen, Wartung und rechtzeitigen Austausch gesteuert werden."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein kritisches Storage-System darf bei Stromstörungen keine Umschaltlücke sehen und fordert hohe Spannungsqualität.",
+      "tags": ["Topologie", "Online-USV", "Kritische Last"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Online-USV als bevorzugte Topologie prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Online-USV bietet höchste Entkopplung und sehr stabile Ausgangsversorgung.", "correct": true },
+            { "id": "w2", "text": "Für hochkritische Lasten ist dieses Schutzniveau oft fachlich begründet.", "correct": true },
+            { "id": "w3", "text": "Offline-USV liefert identisches Schutzniveau bei gleicher Charakteristik.", "correct": false },
+            { "id": "w4", "text": "AP1 erfordert Schutzbedarf-orientierte Typwahl statt Pauschalentscheidungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Kleinstes Offline-Modell einsetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Basis-Topologie passt oft nicht zu maximaler Verfügbarkeitsanforderung.", "correct": true },
+            { "id": "w2", "text": "Empfindliche Lasten reagieren stärker auf Umschalt-/Qualitätsthemen.", "correct": true },
+            { "id": "w3", "text": "Kritikalität hat keinen Einfluss auf Topologiewahl.", "correct": false },
+            { "id": "w4", "text": "Kosten allein ersetzen keine Risikobewertung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "USV vollständig weglassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne USV fehlt Überbrückung und Schutz bei Netzstörung vollständig.", "correct": true },
+            { "id": "w2", "text": "Kritische Systeme benötigen planbares Stromschutzkonzept.", "correct": true },
+            { "id": "w3", "text": "Hohe Verfügbarkeit entsteht ohne Energiepuffer automatisch.", "correct": false },
+            { "id": "w4", "text": "Die Option widerspricht den Anforderungen des Szenarios.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei maximalem Schutzbedarf ist Online-USV typischerweise die fachlich konsistente Entscheidung."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein Rechenzentrumsrack soll bei Wartung der USV weiterlaufen. Aktuell ist jeder Eingriff mit Downtime verbunden.",
+      "tags": ["Verfügbarkeit", "Bypass", "Wartung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Wartungs-Bypass und ggf. Redundanzkonzept einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wartungs-Bypass ermöglicht Service ohne Lastunterbrechung.", "correct": true },
+            { "id": "w2", "text": "Redundanz reduziert Ausfallrisiken bei Einzelkomponenten.", "correct": true },
+            { "id": "w3", "text": "Wartung ohne Bypass ist bei kritischen Lasten gleichwertig verfügbar.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet Verfügbarkeit und Wartbarkeit gemeinsam.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur längere Runtime einkaufen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Längere Batterielaufzeit löst kein Wartungsunterbrechungsproblem an sich.", "correct": true },
+            { "id": "w2", "text": "Bypass/Redundanz adressieren direkt die Verfügbarkeitsanforderung.", "correct": true },
+            { "id": "w3", "text": "Mehr Runtime ersetzt jeden Wartungspfad.", "correct": false },
+            { "id": "w4", "text": "Falsche Priorisierung erhöht weiterhin Downtime-Risiko.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Monitorhelligkeit verringern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Diese Maßnahme hat keinen relevanten Einfluss auf USV-Wartungsarchitektur.", "correct": true },
+            { "id": "w2", "text": "Verfügbarkeitsthema bleibt unverändert bestehen.", "correct": true },
+            { "id": "w3", "text": "Displayeinstellungen schaffen automatisch einen Bypasspfad.", "correct": false },
+            { "id": "w4", "text": "Es fehlt der technische Bezug zur Problemstellung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wartungsfähigkeit ohne Downtime erfordert passende Bypass-/Redundanzarchitektur, nicht nur größere Batterien."
+    },
+    {
+      "id": "v05",
+      "profile": "Bei Netzausfall bleibt die USV aktiv, aber der Hypervisor wird zu spät heruntergefahren und VMs crashen.",
+      "tags": ["Shutdown", "Runbook", "Automatisierung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Monitoring-Trigger und geordnetes Shutdown-Runbook verbindlich umsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "USV allein reicht nicht; Abschaltreihenfolge muss zeitlich und technisch geplant sein.", "correct": true },
+            { "id": "w2", "text": "Automatisierte Trigger reduzieren Reaktionszeit in kritischen Situationen.", "correct": true },
+            { "id": "w3", "text": "Manuelles Spontanhandeln ist immer stabiler als ein getestetes Runbook.", "correct": false },
+            { "id": "w4", "text": "AP1 verlangt nachvollziehbares Prozessdesign über den gesamten Incident.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur neue Batterien kaufen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Auch mit längerer Runtime bleibt falsche Shutdown-Reihenfolge riskant.", "correct": true },
+            { "id": "w2", "text": "Das Problem liegt in Prozesssteuerung und Automatisierung.", "correct": true },
+            { "id": "w3", "text": "Frische Akkus ersetzen jede Orchestrierung von Diensten.", "correct": false },
+            { "id": "w4", "text": "Technik und Prozess müssen gemeinsam betrachtet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Firewall-Regeln anpassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Firewallthemen sind nicht die Primärursache für ungeordneten Shutdown.", "correct": true },
+            { "id": "w2", "text": "Das Symptom entsteht durch Zeit-/Reihenfolgeproblem bei Stromausfall.", "correct": true },
+            { "id": "w3", "text": "Firewallregeln steuern die Batterielaufzeit und VM-Abschaltung direkt.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme verfehlt den Prozesskern.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Erst Monitoring plus getestetes Shutdown-Runbook macht die USV-Wirkung im Ernstfall betriebssicher."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Standort besitzt nur eine einzige USV ohne Redundanz. Ein interner Defekt legt sofort alle kritischen Verbraucher lahm.",
+      "tags": ["SPOF", "Redundanz", "Verfügbarkeit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Single Point of Failure durch redundantes USV-Konzept reduzieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eine einzelne USV kann selbst Ausfallpunkt der gesamten Infrastruktur sein.", "correct": true },
+            { "id": "w2", "text": "N+1 oder parallele Pfade erhöhen die Ausfallsicherheit.", "correct": true },
+            { "id": "w3", "text": "SPOF ist bei kritischen Lasten unproblematisch, solange die USV neu ist.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet Risikobewusstsein und Verfügbarkeitsdesign.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Gehäuse der USV austauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Optische/gehäuseseitige Änderungen beseitigen keine topologische Einpunktabhängigkeit.", "correct": true },
+            { "id": "w2", "text": "SPOF ist ein Architekturproblem, kein kosmetisches Thema.", "correct": true },
+            { "id": "w3", "text": "Neues Gehäuse erzeugt automatisch Redundanzpfade.", "correct": false },
+            { "id": "w4", "text": "Die Ursache bleibt unverändert.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Passwortpolitik ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Sicherheitsrichtlinien sind wichtig, lösen aber keine elektrische Einpunktabhängigkeit.", "correct": true },
+            { "id": "w2", "text": "Hier geht es um physische Verfügbarkeit der Stromversorgung.", "correct": true },
+            { "id": "w3", "text": "Passwortwechsel verhindert Hardwaredefekte an der USV.", "correct": false },
+            { "id": "w4", "text": "Maßnahme liegt außerhalb der Problemklasse.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Einpunktabhängigkeit in der Stromversorgung erfordert Redundanzdesign, nicht rein organisatorische Einzelmaßnahmen."
+    },
+    {
+      "id": "v07",
+      "profile": "Nach mehreren Netzausfällen fehlen belastbare Daten zu Lastverlauf, Runtime und abgeschalteten Systemen. Optimierung ist kaum möglich.",
+      "tags": ["Monitoring", "Dokumentation", "Verbesserung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "USV-Telemetrie zentralisieren und Incident-Dokumentation standardisieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ohne Mess- und Ereignisdaten bleibt Ursachenanalyse spekulativ.", "correct": true },
+            { "id": "w2", "text": "Dokumentierte Störungen ermöglichen gezielte Kapazitäts- und Prozessverbesserung.", "correct": true },
+            { "id": "w3", "text": "Betriebserfahrung allein ersetzt technische Datenerfassung vollständig.", "correct": false },
+            { "id": "w4", "text": "AP1-konform sind evidenzbasierte Verbesserungszyklen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur neue Arbeitsplatzbeleuchtung installieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Beleuchtung adressiert weder Telemetrie noch Incident-Nachweis.", "correct": true },
+            { "id": "w2", "text": "Das Kernproblem ist fehlende Datenbasis für Auswertung.", "correct": true },
+            { "id": "w3", "text": "Lichtsteuerung erstellt automatisch USV-Lastreports.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme hat keinen Bezug zur Störungsanalyse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "USV-Alarme stummschalten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Alarmunterdrückung verschlechtert Reaktionsfähigkeit und Datengrundlage.", "correct": true },
+            { "id": "w2", "text": "Gerade wiederkehrende Ereignisse brauchen strukturierte Erfassung.", "correct": true },
+            { "id": "w3", "text": "Stumme Alarme erhöhen automatisch die Betriebstransparenz.", "correct": false },
+            { "id": "w4", "text": "Die Option erhöht statt senkt das Risiko.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Zentrale Telemetrie plus standardisierte Incident-Dokumentation sind Grundlage für belastbare USV-Optimierung."
+    }
+  ]
+}

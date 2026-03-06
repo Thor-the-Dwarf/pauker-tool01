@@ -1,0 +1,156 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "USV (AP1) Level 2 – Dimensionierung, Betrieb und Verfügbarkeit",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Fachbegriff, präzise Bedeutung und realistische AP1-Szenarien im Rechenzentrums-/Büroumfeld zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den zutreffenden USV-/Betriebsbegriff.",
+    "column2": "Achte auf technische und organisatorische Abgrenzung.",
+    "column3": "Ordne den passenden Einsatzfall zu."
+  },
+  "sets": [
+    {
+      "id": "usv_basic_purpose",
+      "name": "USV-Grundzweck",
+      "description": "Kurzzeitige Energieversorgung plus Schutz vor Netzqualitätsproblemen.",
+      "example": "Bei Stromausfall bleibt genug Zeit für kontrolliertes Herunterfahren kritischer Systeme."
+    },
+    {
+      "id": "watt_vs_va",
+      "name": "Watt vs VA",
+      "description": "USV-Auslegung erfordert Betrachtung von Wirkleistung und Scheinleistung.",
+      "example": "Ein System mit ungünstigem Leistungsfaktor überlastet eine zu knapp in VA geplante USV."
+    },
+    {
+      "id": "power_factor",
+      "name": "Leistungsfaktor",
+      "description": "Verhältnis von Wirkleistung zu Scheinleistung; relevant für reale USV-Nutzbarkeit.",
+      "example": "Bei pf 0,8 sind 2 kVA nicht gleich 2 kW nutzbare Wirkleistung."
+    },
+    {
+      "id": "runtime_curve",
+      "name": "Runtime-Kennlinie",
+      "description": "Überbrückungszeit sinkt nicht linear mit Last; reale Kurven sind herstellerabhängig.",
+      "example": "Bei 80 Prozent Last halbiert sich die erwartete Überbrückungszeit stärker als vermutet."
+    },
+    {
+      "id": "battery_aging",
+      "name": "Batteriealterung",
+      "description": "Kapazität und Belastbarkeit nehmen mit Alter, Zyklen und Temperatur ab.",
+      "example": "Nach vier Jahren ist die gemessene Runtime deutlich geringer als beim Inbetriebnahme-Test."
+    },
+    {
+      "id": "temperature_impact",
+      "name": "Temperatur-Einfluss",
+      "description": "Erhöhte Umgebungstemperatur verkürzt Batterielebensdauer und kann Runtime reduzieren.",
+      "example": "USV im schlecht belüfteten Technikraum erreicht frühzeitig kritische Batteriewerte."
+    },
+    {
+      "id": "offline_topology",
+      "name": "Offline-USV",
+      "description": "Basislösung mit Umschaltung auf Batterie bei Netzausfall.",
+      "example": "Büroarbeitsplätze erhalten Zeit zum Speichern und sauberen Herunterfahren."
+    },
+    {
+      "id": "line_interactive_topology",
+      "name": "Line-Interactive-USV",
+      "description": "Kompromiss aus Kosten und Schutz mit zusätzlicher Spannungsregelung.",
+      "example": "Filialserver bleibt bei häufigen Unterspannungen stabiler als mit Offline-USV."
+    },
+    {
+      "id": "online_topology",
+      "name": "Online-USV (Double Conversion)",
+      "description": "Höchstes Schutzniveau durch kontinuierliche Entkopplung vom Eingangsstrom.",
+      "example": "Empfindliche Storage-Umgebung benötigt möglichst saubere Ausgangsspannung ohne Umschaltlücke."
+    },
+    {
+      "id": "transfer_time",
+      "name": "Umschaltzeit",
+      "description": "Zeitspanne bis Batterieversorgung übernimmt; abhängig von USV-Topologie.",
+      "example": "Sehr empfindliche Last toleriert keine relevante Umschaltlücke."
+    },
+    {
+      "id": "avr_regulation",
+      "name": "Spannungsregelung (AVR)",
+      "description": "Korrigiert Unter-/Überspannungen ohne sofortige Batterienutzung.",
+      "example": "Häufige Netzschwankungen führen dank AVR nicht zu permanenten Batteriewechseln."
+    },
+    {
+      "id": "static_bypass",
+      "name": "Statischer Bypass",
+      "description": "Bypass-Pfad für Lastversorgung bei internen USV-Fehlern oder Wartungssituationen.",
+      "example": "Bei Modulfehler bleibt die Last über Bypass weiter versorgt."
+    },
+    {
+      "id": "maintenance_bypass",
+      "name": "Wartungs-Bypass",
+      "description": "Erlaubt Servicearbeiten an der USV ohne Unterbrechung der Last.",
+      "example": "Batterietausch im laufenden Betrieb ohne Downzeit der Kernsysteme."
+    },
+    {
+      "id": "n_plus_one",
+      "name": "N+1-Redundanz",
+      "description": "Zusätzliches USV-Modul erhöht Verfügbarkeit bei Ausfall oder Wartung einzelner Komponenten.",
+      "example": "Ein Modul fällt aus, die restlichen Module tragen weiterhin die Last."
+    },
+    {
+      "id": "load_shedding",
+      "name": "Load Shedding",
+      "description": "Gezieltes Abwerfen nichtkritischer Verbraucher zur Verlängerung der Runtime kritischer Lasten.",
+      "example": "Bei Battery-Low werden Testsysteme zuerst abgeschaltet, Kernsysteme bleiben länger online."
+    },
+    {
+      "id": "snmp_monitoring",
+      "name": "USV-Monitoring (SNMP/Agent)",
+      "description": "Status- und Alarmdaten werden zentral erfasst und automatisiert verarbeitet.",
+      "example": "Alarm \"On Battery\" löst Ticket und Bereitschaftsbenachrichtigung aus."
+    },
+    {
+      "id": "graceful_shutdown",
+      "name": "Geordnetes Shutdown-Runbook",
+      "description": "Definierte Reihenfolge zum sicheren Stoppen abhängiger Dienste bei langer Störung.",
+      "example": "Applikation, Datenbank und Hypervisor werden in abgestimmter Reihenfolge heruntergefahren."
+    },
+    {
+      "id": "generator_coupling",
+      "name": "USV-Generator-Kopplung",
+      "description": "USV überbrückt bis zum stabilen Generatorbetrieb und glättet Übergangsphasen.",
+      "example": "Bei Netzausfall bleibt Last stabil, bis der Dieselgenerator Last übernimmt."
+    },
+    {
+      "id": "periodic_test",
+      "name": "Regelmäßiger Last-/Batterietest",
+      "description": "Prüft reale Überbrückungsfähigkeit statt nur Statusanzeigen.",
+      "example": "Quartalsweise Tests decken Kapazitätsverlust auf, bevor ein Ernstfall eintritt."
+    },
+    {
+      "id": "capacity_planning",
+      "name": "USV-Kapazitätsplanung",
+      "description": "Berücksichtigt Lastwachstum, Reserve und zukünftige Erweiterungen.",
+      "example": "Neue Servergeneration wird eingeplant, damit die USV nicht kurzfristig unterdimensioniert ist."
+    },
+    {
+      "id": "single_point_failure",
+      "name": "Single Point of Failure",
+      "description": "Nicht redundante USV kann selbst zum Ausfallpunkt der gesamten Last werden.",
+      "example": "Ein einzelner USV-Controllerdefekt legt den gesamten Rack-Verbund lahm."
+    },
+    {
+      "id": "availability_class",
+      "name": "Verfügbarkeitsanforderung",
+      "description": "Schutzkonzept muss zur Kritikalität des Geschäftsprozesses passen.",
+      "example": "Kassensystem mit hoher Verfügbarkeitsanforderung erhält höheres Schutzlevel als Büroarbeitsplatz."
+    },
+    {
+      "id": "incident_documentation",
+      "name": "Incident-Dokumentation",
+      "description": "Nach Störungen werden Lastverlauf, Runtime und Maßnahmen systematisch ausgewertet.",
+      "example": "Nach Netzausfall wird der Shutdown-Zeitpunkt optimiert und Wartungsintervall angepasst."
+    }
+  ]
+}
