@@ -151,12 +151,18 @@
     }
 
     async function initLocalApp() {
-        // Zuerst im Cache (localStorage) nach einem dynamisch erstellten Index suchen
-        const cachedIndex = localStorage.getItem('pauker_remote_index_v1');
-        if (cachedIndex) {
-            try {
-                rootTree = JSON.parse(cachedIndex);
-            } catch (e) {
+        // Auf localhost immer den gebündelten Index nutzen.
+        // Der Remote-Cache ist nur für GitHub Pages gedacht.
+        const isGithubPages = window.location.hostname.endsWith('github.io');
+        if (isGithubPages) {
+            const cachedIndex = localStorage.getItem('pauker_remote_index_v1');
+            if (cachedIndex) {
+                try {
+                    rootTree = JSON.parse(cachedIndex);
+                } catch (e) {
+                    rootTree = window.DATABASE_INDEX || [];
+                }
+            } else {
                 rootTree = window.DATABASE_INDEX || [];
             }
         } else {
