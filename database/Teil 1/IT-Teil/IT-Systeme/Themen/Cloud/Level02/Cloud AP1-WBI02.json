@@ -1,0 +1,605 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Cloud (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+  "leadershipStyles": [
+    {
+      "id": "iaas_model",
+      "name": "IaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": true,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "paas_model",
+      "name": "PaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": true,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "saas_model",
+      "name": "SaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": true,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "shared_responsibility_model",
+      "name": "Shared Responsibility",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": true,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "provider_responsibility",
+      "name": "Providerverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": true,
+        "customer_scope": false,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "customer_responsibility",
+      "name": "Kundenverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": true,
+        "controls_data_location": true
+      }
+    },
+    {
+      "id": "finops_governance",
+      "name": "FinOps",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": true,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": true,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": true,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "multi_az_architecture",
+      "name": "Multi-AZ-Architektur",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": true,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "multi_region_dr",
+      "name": "Multi-Region-DR",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": true,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": true,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "data_residency_compliance",
+      "name": "Data Residency",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Bin ich ein Cloud-Service-Modell (IaaS/PaaS/SaaS)?",
+      "attributeKey": "is_service_model"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es um Verantwortungsabgrenzung zwischen Anbieter und Kunde?",
+      "attributeKey": "is_responsibility_model"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Steht Kostensteuerung und Wirtschaftlichkeit im Fokus?",
+      "attributeKey": "is_cost_governance"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Stehen Sicherheitsleitplanken und Praevention im Mittelpunkt?",
+      "attributeKey": "is_security_governance"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Bin ich ein Resilienz-/Verfuegbarkeits- oder DR-Architekturthema?",
+      "attributeKey": "is_resilience_architecture"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Steht Compliance als Kernanforderung im Vordergrund?",
+      "attributeKey": "is_compliance_focus"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Liegt mein Schwerpunkt primaer beim Anbieter (Cloud of the cloud)?",
+      "attributeKey": "provider_scope"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Liegt mein Schwerpunkt primaer beim Kunden (Konfiguration, Daten, Zugriffe)?",
+      "attributeKey": "customer_scope"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Nutze ich eine vom Anbieter gemanagte Laufzeit/Plattformabstraktion?",
+      "attributeKey": "uses_managed_runtime"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Brauche ich typischerweise tiefe OS-/Infrastrukturkontrolle?",
+      "attributeKey": "requires_os_control"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Adressiere ich direkt das Risiko proprietaerer Anbieterbindung?",
+      "attributeKey": "addresses_lock_in"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Setze ich auf automatisierte Richtlinien in Pipelines statt nur Handpruefung?",
+      "attributeKey": "uses_policy_automation"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ziele ich primaer auf Hochverfuegbarkeit im laufenden Betrieb?",
+      "attributeKey": "targets_ha"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ziele ich primaer auf Disaster Recovery nach groesseren Ausfaellen?",
+      "attributeKey": "targets_dr"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Steuere ich den Datenstandort gemaess rechtlicher Vorgaben?",
+      "attributeKey": "controls_data_location"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "iaas_model",
+      "name": "IaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": true,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "paas_model",
+      "name": "PaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": true,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "saas_model",
+      "name": "SaaS",
+      "attributes": {
+        "is_service_model": true,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": true,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "shared_responsibility_model",
+      "name": "Shared Responsibility",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": true,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "provider_responsibility",
+      "name": "Providerverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": true,
+        "customer_scope": false,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "customer_responsibility",
+      "name": "Kundenverantwortung",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": true,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": true,
+        "controls_data_location": true
+      }
+    },
+    {
+      "id": "finops_governance",
+      "name": "FinOps",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": true,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": true,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": true,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": true,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "multi_az_architecture",
+      "name": "Multi-AZ-Architektur",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": true,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": false,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "multi_region_dr",
+      "name": "Multi-Region-DR",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": true,
+        "is_compliance_focus": false,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": true,
+        "targets_dr": true,
+        "controls_data_location": false
+      }
+    },
+    {
+      "id": "data_residency_compliance",
+      "name": "Data Residency",
+      "attributes": {
+        "is_service_model": false,
+        "is_responsibility_model": false,
+        "is_cost_governance": false,
+        "is_security_governance": false,
+        "is_resilience_architecture": false,
+        "is_compliance_focus": true,
+        "provider_scope": false,
+        "customer_scope": true,
+        "uses_managed_runtime": false,
+        "requires_os_control": false,
+        "addresses_lock_in": false,
+        "uses_policy_automation": false,
+        "targets_ha": false,
+        "targets_dr": false,
+        "controls_data_location": true
+      }
+    }
+  ]
+}

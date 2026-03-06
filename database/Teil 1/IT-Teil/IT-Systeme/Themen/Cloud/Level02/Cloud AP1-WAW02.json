@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Cloud (AP1) Level 2",
+  "description": "Anspruchsvolle AP1-Szenarien zu Cloud-Modellen, Governance, Security, Kosten und Resilienz. Pro Fall erst die beste Option waehlen, dann die Begruendungen bewerten.",
+  "cases": [
+    {
+      "id": "cw01",
+      "profile": "Ein Unternehmen migriert eine selbst entwickelte Legacy-App. Das Team benoetigt Root-Zugriff auf Betriebssystem, eigene Netzwerkregeln und volle Kontrolle ueber Patchfenster.",
+      "tags": ["Cloud", "Servicemodelle", "IaaS"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "IaaS priorisieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "IaaS bietet die noetige Betriebssystem- und Netzwerkhoheit.", "correct": true },
+            { "id": "w2", "text": "Bei IaaS bleiben Patching und Hardening groesstenteils Kundenthema.", "correct": true },
+            { "id": "w3", "text": "SaaS ist hier fachlich gleichwertig, weil es auch Root-Zugriff ermoeglicht.", "correct": false },
+            { "id": "w4", "text": "Die Wahl sollte mit Betriebsaufwand und Sicherheitskompetenz abgeglichen werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "SaaS waehlen, um Serververwaltung selbst zu behalten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SaaS reduziert gerade die technische Kontrolltiefe auf Infrastrukturebene.", "correct": true },
+            { "id": "w2", "text": "SaaS passt eher bei fertigen Standardanwendungen.", "correct": true },
+            { "id": "w3", "text": "SaaS ist immer die beste Wahl fuer jede Legacy-Migration.", "correct": false },
+            { "id": "w4", "text": "Die Aussage widerspricht der geforderten Root- und Netzwerkkontrolle.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "PaaS nur wegen schneller Bereitstellung erzwingen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PaaS kann Deployment beschleunigen, deckt aber nicht jede Legacy-Anforderung ab.", "correct": true },
+            { "id": "w2", "text": "Wenn tiefer OS-Zugriff Pflicht ist, kann PaaS fachlich unpassend sein.", "correct": true },
+            { "id": "w3", "text": "PaaS garantiert immer volle Systemkontrolle wie On-Prem.", "correct": false },
+            { "id": "w4", "text": "Service-Modell-Auswahl folgt Anforderungen, nicht nur Tempo.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "IaaS ist hier am passendsten, weil geforderte Kontrolltiefe auf OS- und Netzwerkebene bereitgestellt wird."
+    },
+    {
+      "id": "cw02",
+      "profile": "Ein Team nutzt ein SaaS-Ticketsystem und behauptet: Der Anbieter uebernimmt damit automatisch alle Sicherheitsaufgaben, inklusive Rollenpflege und Freigaben.",
+      "tags": ["Shared Responsibility", "SaaS", "IAM"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Aussage ablehnen: Kundenverantwortung bleibt bei Identitaeten und Daten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Auch in SaaS muss der Kunde Benutzer, Rollen und Freigaben korrekt steuern.", "correct": true },
+            { "id": "w2", "text": "Fehlende MFA und zu breite Rechte bleiben Kundenrisiken.", "correct": true },
+            { "id": "w3", "text": "SaaS bedeutet, dass IAM fuer Kunden komplett irrelevant wird.", "correct": false },
+            { "id": "w4", "text": "Shared Responsibility gilt weiter, nur die Grenze verschiebt sich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Aussage akzeptieren: Anbieter traegt immer die volle End-to-End-Verantwortung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Diese Sicht ignoriert kundenseitige Kontrollpflichten bei Zugriffen.", "correct": true },
+            { "id": "w2", "text": "Rechtliche und organisatorische Verantwortung verschwindet nicht durch SaaS.", "correct": true },
+            { "id": "w3", "text": "Bei SaaS sind Datenklassifikation und Freigaben automatisch richtig.", "correct": false },
+            { "id": "w4", "text": "Pruefungsrelevant ist gerade die klare Trennung der Verantwortungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur technische Firewalls betrachten, IAM ignorieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Cloud-Security ist ohne IAM-Betrachtung unvollstaendig.", "correct": true },
+            { "id": "w2", "text": "Viele Vorfaelle entstehen durch Berechtigungs- statt Firewallfehler.", "correct": true },
+            { "id": "w3", "text": "IAM spielt nur in On-Prem-Umgebungen eine Rolle.", "correct": false },
+            { "id": "w4", "text": "Least Privilege und MFA bleiben Kernmassnahmen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Aussage ist falsch: Auch bei SaaS bleiben Zugriffssteuerung, Rollenmodell und Datenverantwortung beim Kunden."
+    },
+    {
+      "id": "cw03",
+      "profile": "Die Monatsrechnung steigt abrupt. Ursache: dauerlaufende Testinstanzen, unklare Ressourcenzuordnung und keine fruehen Alarme.",
+      "tags": ["FinOps", "Kosten", "Governance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "FinOps-Massnahmen einfuehren (Tagging, Budgets, Auto-Shutdown, Rightsizing)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Kosten-Tagging schafft Transparenz je Team/Service.", "correct": true },
+            { "id": "w2", "text": "Budgets und Alarme erkennen Abweichungen frueh.", "correct": true },
+            { "id": "w3", "text": "Ohne Monitoring sinken die Kosten langfristig automatisch.", "correct": false },
+            { "id": "w4", "text": "Rightsizing und Abschaltregeln adressieren typische Kostenfresser direkt.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur auf jaehrliche Gesamtkosten schauen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zu spaete Sichtbarkeit verhindert schnelle Korrektur.", "correct": true },
+            { "id": "w2", "text": "Feingranulare Verantwortung pro Team fehlt dann oft.", "correct": true },
+            { "id": "w3", "text": "Jahreswerte ersetzen operative Steuerung vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Cloud-Kosten brauchen kontinuierliches, nicht nur periodisches Management.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Einfach mehr Budget freigeben",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Budget behebt keine strukturellen Steuerungsprobleme.", "correct": true },
+            { "id": "w2", "text": "Ohne Ursachenanalyse bleibt das Wachstum unkontrolliert.", "correct": true },
+            { "id": "w3", "text": "Budgets ohne Governance verhindern Kostenexplosionen garantiert.", "correct": false },
+            { "id": "w4", "text": "FinOps kombiniert Transparenz, Verantwortlichkeit und Optimierung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist ein FinOps-Set aus Tagging, Alarmschwellen, Abschaltregeln und Rightsizing statt reinem Budgeterhoehen."
+    },
+    {
+      "id": "cw04",
+      "profile": "Ein Gesundheitsdienst will sensible Personendaten in die Cloud verlagern. Die Revision fordert nachweisbare regionale Datenhaltung und klare Datenschutzvertraege.",
+      "tags": ["Compliance", "Data Residency", "Datenschutz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Data Residency plus AVV/TOMs verbindlich umsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regionale Datenhaltung ist fuer regulatorische Vorgaben zentral.", "correct": true },
+            { "id": "w2", "text": "AVV/TOMs und Auditnachweise schaffen vertragliche und organisatorische Absicherung.", "correct": true },
+            { "id": "w3", "text": "Compliance ist in der Cloud automatisch immer erfuellt.", "correct": false },
+            { "id": "w4", "text": "Technische und organisatorische Kontrollen muessen zusammen betrachtet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Verschluesselung nutzen, Rest ignorieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verschluesselung ist wichtig, ersetzt aber keine Standort- und Vertragsanforderungen.", "correct": true },
+            { "id": "w2", "text": "Auditierbarkeit und Rollenprozesse bleiben notwendig.", "correct": true },
+            { "id": "w3", "text": "Mit KMS sind AVV/TOMs rechtlich ueberfluessig.", "correct": false },
+            { "id": "w4", "text": "Compliance ist ein Gesamtpaket aus Technik, Recht und Prozessen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Beliebige Region waehlen, Hauptsache guenstig",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kostenkriterium allein reicht bei regulierten Daten nicht.", "correct": true },
+            { "id": "w2", "text": "Falsche Region kann zu Rechts- und Auditproblemen fuehren.", "correct": true },
+            { "id": "w3", "text": "Data Residency ist nur fuer Hochverfuegbarkeit relevant.", "correct": false },
+            { "id": "w4", "text": "Region, Vertrag und Kontrollnachweise muessen konsistent sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei sensiblen Daten sind Data Residency sowie AVV/TOMs verpflichtend zu planen und nachweisbar umzusetzen."
+    },
+    {
+      "id": "cw05",
+      "profile": "Die Architektur nutzt mehrere proprietaere Spezialdienste eines Providers. Das Management fragt nach Risiken bei spaeterem Anbieterwechsel.",
+      "tags": ["Vendor Lock-in", "Architektur", "Strategie"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Lock-in-Risiko aktiv managen (offene Schnittstellen, Exit-Strategie)",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Proprietaere APIs koennen Migrationskosten stark erhoehen.", "correct": true },
+            { "id": "w2", "text": "Portabilitaetsziele muessen frueh architektonisch verankert werden.", "correct": true },
+            { "id": "w3", "text": "Lock-in ist nur ein theoretisches Thema ohne wirtschaftliche Wirkung.", "correct": false },
+            { "id": "w4", "text": "Exit-Strategie mit Datenexportpfaden reduziert strategische Abhaengigkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Lock-in ignorieren, weil FinOps alle Risiken abdeckt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "FinOps adressiert primar Kostensteuerung, nicht Portabilitaet.", "correct": true },
+            { "id": "w2", "text": "Strategische Abhaengigkeit bleibt ohne Architekturmassnahmen bestehen.", "correct": true },
+            { "id": "w3", "text": "Kostenoptimierung macht Anbieterwechsel immer trivial.", "correct": false },
+            { "id": "w4", "text": "Risiken muessen differenziert bewertet werden: Kosten, Security, Lock-in.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Vertragslaufzeit verlaengern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Laufzeitverlaengerung loest keine technische Bindung.", "correct": true },
+            { "id": "w2", "text": "Technische Migration bleibt ohne Portabilitaetsdesign aufwendig.", "correct": true },
+            { "id": "w3", "text": "Laengere Vertraege beseitigen API-Abhaengigkeiten automatisch.", "correct": false },
+            { "id": "w4", "text": "Vertrag und Architektur muessen gemeinsam betrachtet werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Lock-in ist ein reales strategisches Risiko und muss durch offene Schnittstellen, Datenportabilitaet und Exit-Plan aktiv reduziert werden."
+    },
+    {
+      "id": "cw06",
+      "profile": "Ein kritischer Webservice soll auch bei Ausfall einer Verfuegbarkeitszone weiterlaufen. Das Team diskutiert geeignete Architekturmassnahmen.",
+      "tags": ["Verfuegbarkeit", "Multi-AZ", "Resilienz"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Multi-AZ-Architektur mit Health-Checks umsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verteilung ueber Zonen reduziert Single-Point-of-Failure-Risiken.", "correct": true },
+            { "id": "w2", "text": "Health-Checks und automatisches Umschalten stabilisieren den Betrieb.", "correct": true },
+            { "id": "w3", "text": "Ein einzelner Server in einer Zone ist fuer HA gleichwertig.", "correct": false },
+            { "id": "w4", "text": "Resilienz entsteht aus Redundanz plus automatisiertem Failover.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur taegliches Backup genuegt fuer durchgaengige Verfuegbarkeit",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backups sind wichtig, ersetzen aber keine laufende Hochverfuegbarkeit.", "correct": true },
+            { "id": "w2", "text": "Restore dauert typischerweise laenger als nahtloses Zone-Failover.", "correct": true },
+            { "id": "w3", "text": "Backup und Verfuegbarkeit sind fachlich identisch.", "correct": false },
+            { "id": "w4", "text": "HA und DR muessen getrennt geplant und kombiniert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur groessere Einzelinstanz buchen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Leistung auf einem Knoten beseitigt keinen Standort-Ausfall.", "correct": true },
+            { "id": "w2", "text": "Ohne Redundanz bleibt ein Single Point of Failure bestehen.", "correct": true },
+            { "id": "w3", "text": "Vertikale Skalierung ersetzt zonenuebergreifende Resilienz vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Verfuegbarkeit erfordert Architekturentscheidungen, nicht nur Instanzgroesse.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fuer Zonen-Ausfalltoleranz ist Multi-AZ mit automatischem Health-Check-basiertem Failover die richtige Wahl."
+    },
+    {
+      "id": "cw07",
+      "profile": "Fuer ein Zahlungssystem sind RTO 30 Minuten und RPO 5 Minuten vorgegeben. Das Team muss eine passende DR-Strategie planen.",
+      "tags": ["Disaster Recovery", "RTO", "RPO"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Multi-Region-DR mit replizierten Daten und geuebtem Runbook",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Strenge RTO/RPO-Werte erfordern technische und organisatorische Vorbereitung.", "correct": true },
+            { "id": "w2", "text": "Regelmaessige Failover- und Restore-Uebungen sind notwendig.", "correct": true },
+            { "id": "w3", "text": "RTO/RPO lassen sich allein durch Vertragsklauseln ohne Technik einhalten.", "correct": false },
+            { "id": "w4", "text": "Replikation plus getestetes Runbook verringert Wiederanlauf- und Datenverlustrisiko.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur monatliches Offline-Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monatliche Sicherung verfehlt ein RPO von 5 Minuten deutlich.", "correct": true },
+            { "id": "w2", "text": "Wiederanlauf unter 30 Minuten ist damit in der Regel unrealistisch.", "correct": true },
+            { "id": "w3", "text": "Offline-Backup allein deckt harte Echtzeit-DR-Ziele voll ab.", "correct": false },
+            { "id": "w4", "text": "Backupfrequenz und Runbook muessen an Zielwerte angepasst sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "DR-Ziele streichen, um Kosten zu sparen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Business- und Compliance-Anforderungen duerfen nicht beliebig entfernt werden.", "correct": true },
+            { "id": "w2", "text": "DR-Ziele leiten Architektur und Betriebsprozess unmittelbar.", "correct": true },
+            { "id": "w3", "text": "RTO/RPO sind nur unverbindliche Empfehlungen ohne Relevanz.", "correct": false },
+            { "id": "w4", "text": "Kostenoptimierung muss innerhalb gegebener Schutzziele erfolgen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei RTO 30 min und RPO 5 min ist eine geuebte Multi-Region-DR-Architektur mit schneller Replikation erforderlich."
+    },
+    {
+      "id": "cw08",
+      "profile": "Mehrfach wurden Cloud-Ressourcen mit offenen Security-Gruppen bereitgestellt. Man sucht eine robuste Praeventionsmassnahme statt nur manueller Nachkontrolle.",
+      "tags": ["Security", "Policy as Code", "Fehlkonfiguration"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Policy as Code in CI/CD verbindlich durchsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Regelbasierte Deployment-Checks stoppen riskante Konfigurationen vor Produktion.", "correct": true },
+            { "id": "w2", "text": "Automatisierte Guardrails reduzieren menschliche Fehlerquellen.", "correct": true },
+            { "id": "w3", "text": "Manuelle Endkontrolle ist immer gleich zuverlaessig wie automatische Policy-Checks.", "correct": false },
+            { "id": "w4", "text": "Praevention ist wirksamer als reine Reaktion nach Bereitstellung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur auf Awareness-Schulung setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schulung ist sinnvoll, ersetzt aber technische Leitplanken nicht.", "correct": true },
+            { "id": "w2", "text": "Wiederkehrende Fehler brauchen automatisierte Absicherung.", "correct": true },
+            { "id": "w3", "text": "Schulung eliminiert Fehlkonfigurationen vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Wirksam ist die Kombination aus Know-how und automatisierten Kontrollen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Alle Warnungen ignorieren, solange kein Incident vorliegt",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ignorieren erhoeht Eintrittswahrscheinlichkeit und Schaden deutlich.", "correct": true },
+            { "id": "w2", "text": "Sicherheitsvorfaelle sind oft Folge kumulierter Warnsignale.", "correct": true },
+            { "id": "w3", "text": "Ohne Incident sind Sicherheitsmassnahmen unnoetig.", "correct": false },
+            { "id": "w4", "text": "Risikomanagement ist praeventiv und kontinuierlich.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Policy as Code mit CI/CD-Blockern ist die robusteste Gegenmassnahme gegen wiederkehrende Fehlkonfigurationen."
+    },
+    {
+      "id": "cw09",
+      "profile": "Ein Admin-Account besitzt globale Vollrechte ohne MFA. Nach Phishing besteht Verdacht auf Missbrauch. Welche prioritaere Massnahmenkombination ist fachlich richtig?",
+      "tags": ["IAM", "MFA", "Incident Prevention"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Least Privilege, Rollentrennung, MFA-Pflicht und Audit-Logs",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zu breite Rechte vergroessern den Impact kompromittierter Konten.", "correct": true },
+            { "id": "w2", "text": "MFA senkt das Risiko erfolgreicher Kontouebernahmen deutlich.", "correct": true },
+            { "id": "w3", "text": "Global Admin ohne MFA ist Best Practice fuer schnellere Administration.", "correct": false },
+            { "id": "w4", "text": "Audit-Logs ermoeglichen forensische Nachvollziehbarkeit und schnelle Reaktion.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Passwortlaenge erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einzelmassnahme reicht bei privilegierten Konten nicht aus.", "correct": true },
+            { "id": "w2", "text": "Ohne Rollenmodell bleibt das Blast-Radius-Risiko hoch.", "correct": true },
+            { "id": "w3", "text": "Passwortlaenge ersetzt MFA und Least Privilege vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Privileged Access braucht mehrschichtige Kontrollen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Kostenalarme aktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kostenalarme koennen Missbrauch indirekt zeigen, sind aber kein IAM-Kernschutz.", "correct": true },
+            { "id": "w2", "text": "Sicherheitsrisiko bleibt ohne Zugriffs- und Authentifizierungsmassnahmen bestehen.", "correct": true },
+            { "id": "w3", "text": "FinOps-Warnungen machen Security-Massnahmen ueberfluessig.", "correct": false },
+            { "id": "w4", "text": "Security und Kostenkontrolle muessen getrennt und gemeinsam betrieben werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist die Kombination aus Least Privilege, Rollentrennung, MFA und lueckenlosem Audit-Logging."
+    },
+    {
+      "id": "cw10",
+      "profile": "Ein Produktionsbetrieb benoetigt lokale Verarbeitung fuer niedrige Latenz, darf Kerndaten aber nur in bestimmten Regionen speichern und will trotzdem elastisch skalieren.",
+      "tags": ["Hybrid Cloud", "Compliance", "Architektur"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Hybrid-Architektur mit klarer Datenklassifizierung und Cloud-Bursting",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Hybrid erlaubt lokale Echtzeitverarbeitung bei gleichzeitiger Cloud-Elastizitaet.", "correct": true },
+            { "id": "w2", "text": "Datenklassifizierung steuert, welche Daten wohin duerfen.", "correct": true },
+            { "id": "w3", "text": "Public Cloud ohne Segmentierung erfuellt alle Restriktionen automatisch.", "correct": false },
+            { "id": "w4", "text": "Architektur muss Latenz, Compliance und Skalierung gleichzeitig adressieren.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Vollstaendige Public-Cloud-Migration ohne Regionalregeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ignoriert regulatorische Standortanforderungen.", "correct": true },
+            { "id": "w2", "text": "Kann Latenzziele fuer lokale Prozesse verfehlen.", "correct": true },
+            { "id": "w3", "text": "Regionale Vorgaben sind bei Produktionsdaten irrelevant.", "correct": false },
+            { "id": "w4", "text": "Technische Machbarkeit ersetzt keine Compliance-Pflichten.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Ausschliesslich On-Prem ohne Elastizitaetsoption",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Compliance erfuellen, nutzt aber Skalierungsvorteile nicht.", "correct": true },
+            { "id": "w2", "text": "Bei Lastspitzen fehlt flexible Kapazitaetsausweitung.", "correct": true },
+            { "id": "w3", "text": "On-Prem liefert automatisch unendliche Elastizitaet.", "correct": false },
+            { "id": "w4", "text": "Anforderungen sprechen fuer ein kombiniertes Modell statt Extreme.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Eine sauber segmentierte Hybrid-Architektur trifft die kombinierte Anforderung aus Latenz, Compliance und Elastizitaet am besten."
+    }
+  ]
+}

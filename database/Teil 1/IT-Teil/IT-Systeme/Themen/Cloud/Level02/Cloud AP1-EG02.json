@@ -1,0 +1,284 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Cloud (AP1) Level 2",
+  "topic": "Service-Modelle, Shared Responsibility, FinOps, Resilienz, Compliance, Lock-in",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "service-model-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 1: IaaS, PaaS oder SaaS?",
+      "subtitle": "Ordne Szenarien dem passenden Service-Modell zu.",
+      "hintDefault": "IaaS: viel Kontrolle. PaaS: App-Fokus. SaaS: fertige Anwendung.",
+      "sortColumns": [
+        { "zone": "iaas", "label": "IaaS", "hint": "Infra selbst steuern" },
+        { "zone": "paas", "label": "PaaS", "hint": "Code deployen" },
+        { "zone": "saas", "label": "SaaS", "hint": "fertigen Dienst nutzen" }
+      ],
+      "sortCards": [
+        { "id": "sm1", "text": "Virtuelle Maschinen inkl. Netzwerksegment selbst verwalten", "correctZone": "iaas" },
+        { "id": "sm2", "text": "Web-App deployen ohne OS-Patching", "correctZone": "paas" },
+        { "id": "sm3", "text": "CRM direkt im Browser als Abo nutzen", "correctZone": "saas" },
+        { "id": "sm4", "text": "Eigene Firewall-Regeln auf VM-Ebene definieren", "correctZone": "iaas" },
+        { "id": "sm5", "text": "Runtime und Skalierung werden vom Dienst gemanagt", "correctZone": "paas" },
+        { "id": "sm6", "text": "Fachbereich nutzt Collaboration-Tool ohne Serverbetrieb", "correctZone": "saas" },
+        { "id": "sm7", "text": "Container-Orchestrierung als gemanagter Plattformdienst", "correctZone": "paas" },
+        { "id": "sm8", "text": "Eigene Legacy-App auf selbst administrierten Instanzen", "correctZone": "iaas" }
+      ]
+    },
+    {
+      "id": "shared-responsibility-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 2: Shared Responsibility vertieft",
+      "subtitle": "Trenne Provider- und Kundenaufgaben sauber.",
+      "hintDefault": "Provider sichert die Cloud, Kunde sichert Konfiguration, Daten und Identitaeten.",
+      "questions": [
+        {
+          "id": "sr1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "In SaaS entfaellt jede Kundenverantwortung fuer Zugriffsrechte." },
+            { "value": "b", "text": "Auch in SaaS bleibt der Kunde fuer Nutzer-/Rollenkonzept und Datenfreigaben verantwortlich." },
+            { "value": "c", "text": "In IaaS ist der Provider fuer alle Firewalleinstellungen verantwortlich." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sr2",
+          "text": "2. Was ist typischerweise Kundenthema in PaaS?",
+          "options": [
+            { "value": "a", "text": "Physische RZ-Sicherheit" },
+            { "value": "b", "text": "IAM-Policies und Applikationskonfiguration" },
+            { "value": "c", "text": "Austausch defekter Host-Hardware" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "sr3",
+          "text": "3. Welche Pruefungsfalle ist korrekt benannt?",
+          "options": [
+            { "value": "a", "text": "Managed Service bedeutet automatisch DSGVO-Konformitaet ohne eigene Massnahmen." },
+            { "value": "b", "text": "Managed Service reduziert Betriebsaufwand, aber Compliance- und Berechtigungspflichten bleiben beim Kunden." },
+            { "value": "c", "text": "Shared Responsibility gilt nur fuer Public Cloud, nicht fuer Hybrid-Cloud." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "risk-control-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 3: Risiko und Gegenmassnahme",
+      "subtitle": "Ordne jede Massnahme dem primaeren Risiko zu.",
+      "hintDefault": "Kosten -> FinOps, Lock-in -> Portabilitaet, Fehlkonfig -> Least Privilege/Guardrails, Compliance -> Residency/Kontrollen.",
+      "sortColumns": [
+        { "zone": "cost", "label": "Kostenrisiko", "hint": "FinOps" },
+        { "zone": "lockin", "label": "Lock-in-Risiko", "hint": "Portabilitaet" },
+        { "zone": "misconfig", "label": "Fehlkonfiguration", "hint": "Security Guardrails" },
+        { "zone": "compliance", "label": "Compliance/Residency", "hint": "Regulatorik" }
+      ],
+      "sortCards": [
+        { "id": "rc1", "text": "Budgets und Alarme ab 80 Prozent Auslastung", "correctZone": "cost" },
+        { "id": "rc2", "text": "Container + offene Standards statt proprietaerer Sonderdienste", "correctZone": "lockin" },
+        { "id": "rc3", "text": "Policy-as-Code blockiert oeffentliche Buckets", "correctZone": "misconfig" },
+        { "id": "rc4", "text": "Daten nur in zulaessigen Regionen speichern", "correctZone": "compliance" },
+        { "id": "rc5", "text": "Rightsizing regelmaessig gegen Lastprofil pruefen", "correctZone": "cost" },
+        { "id": "rc6", "text": "Exit-Strategie inkl. Datenexportpfad definieren", "correctZone": "lockin" },
+        { "id": "rc7", "text": "Least-Privilege-IAM und periodische Rechte-Reviews", "correctZone": "misconfig" },
+        { "id": "rc8", "text": "Vertragliche AVV/TOMs und Auditnachweise pflegen", "correctZone": "compliance" }
+      ]
+    },
+    {
+      "id": "migration-capital-l2",
+      "type": "capital",
+      "title": "Raetsel 4: Cloud-Migrationsablauf",
+      "subtitle": "Setze die Schritte in sinnvolle Reihenfolge.",
+      "hintDefault": "Erst Anforderungen, dann Zielbild, dann Security/Kosten, dann Migration und Abnahme.",
+      "rows": [
+        {
+          "key": "analyse",
+          "label": "Ist-Analyse und Anforderungen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "target",
+          "label": "Service-/Deployment-Modell festlegen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "security",
+          "label": "IAM, Netzwerk, Compliance und FinOps-Guardrails",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilotmigration und Tests",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "rollout",
+          "label": "Gestaffelter Rollout mit Monitoring",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "review",
+          "label": "Betriebsabnahme und Optimierung",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finops-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 5: FinOps und Kostensteuerung",
+      "subtitle": "Bewerte Massnahmen gegen cloudtypische Kostenfallen.",
+      "hintDefault": "Ohne Tagging, Budgets und Rightsizing verliert man schnell die Kostenkontrolle.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Massnahme ist am wirksamsten gegen vergessene Testinstanzen?",
+          "options": [
+            { "value": "a", "text": "Auto-Shutdown ausserhalb Arbeitszeit plus Owner-Tagging" },
+            { "value": "b", "text": "Mehr CPU buchen" },
+            { "value": "c", "text": "Alle Alarme deaktivieren" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f2",
+          "text": "2. Was ist der zentrale Nutzen von Kosten-Tagging?",
+          "options": [
+            { "value": "a", "text": "Es verschluesselt Daten automatisch" },
+            { "value": "b", "text": "Kosten lassen sich Teams/Projekten zuordnen und steuern" },
+            { "value": "c", "text": "Es ersetzt jede Sicherheitsmassnahme" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f3",
+          "text": "3. Welche Aussage ist fachlich korrekt?",
+          "options": [
+            { "value": "a", "text": "Cloud ist immer billiger als On-Prem" },
+            { "value": "b", "text": "Cloud kann wirtschaftlich sein, braucht aber aktives Kostenmanagement" },
+            { "value": "c", "text": "FinOps ist nur fuer Grosskonzerne relevant" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "resilience-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 6: Verfuegbarkeit und DR",
+      "subtitle": "Ordne Massnahmen nach Ziel: Verfuegbarkeit, Recovery oder beides.",
+      "hintDefault": "Multi-AZ reduziert Ausfallrisiko. DR-Plan mit RTO/RPO adressiert Wiederanlauf.",
+      "sortColumns": [
+        { "zone": "avail", "label": "Verfuegbarkeit", "hint": "laufender Betrieb" },
+        { "zone": "recovery", "label": "Recovery/DR", "hint": "Wiederanlauf" },
+        { "zone": "both", "label": "Beides", "hint": "kombinierte Wirkung" }
+      ],
+      "sortCards": [
+        { "id": "rs1", "text": "Applikation ueber zwei Availability Zones verteilen", "correctZone": "avail" },
+        { "id": "rs2", "text": "Regelmaessiger Restore-Test fuer kritische Daten", "correctZone": "recovery" },
+        { "id": "rs3", "text": "RTO/RPO pro Dienst definieren und ueberwachen", "correctZone": "recovery" },
+        { "id": "rs4", "text": "Load-Balancer mit Health-Checks", "correctZone": "avail" },
+        { "id": "rs5", "text": "Multi-Region-Failover-Runbook", "correctZone": "both" },
+        { "id": "rs6", "text": "Backup plus geo-redundante Replikation", "correctZone": "both" }
+      ]
+    },
+    {
+      "id": "finale-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: AP1-Cloud-Entscheidung",
+      "subtitle": "Waehle die robusteste Gesamtbewertung.",
+      "hintDefault": "Cloud-Entscheidungen brauchen immer Technik-, Security-, Compliance- und Kostenblick.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Antwort ist AP1-reif?",
+          "options": [
+            { "value": "a", "text": "Cloud uebernimmt alles, Kunde muss nichts mehr absichern" },
+            { "value": "b", "text": "Cloud bietet Vorteile, erfordert aber Kundendisziplin bei IAM, Konfiguration, Compliance und Kosten" },
+            { "value": "c", "text": "Cloud eignet sich nur fuer unkritische Systeme" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was reduziert Lock-in-Risiko am ehesten?",
+          "options": [
+            { "value": "a", "text": "Moeglichst viele proprietaere Spezialdienste koppeln" },
+            { "value": "b", "text": "Portabilitaet planen (Standards, Schnittstellen, Exit-Strategie)" },
+            { "value": "c", "text": "Kostenalarme deaktivieren" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage zu Security ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Fehlkonfiguration ist eine der haeufigsten Cloud-Ursachen fuer Sicherheitsvorfaelle" },
+            { "value": "b", "text": "Open Buckets sind in Public Cloud normal und unkritisch" },
+            { "value": "c", "text": "IAM spielt nur bei On-Prem eine Rolle" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

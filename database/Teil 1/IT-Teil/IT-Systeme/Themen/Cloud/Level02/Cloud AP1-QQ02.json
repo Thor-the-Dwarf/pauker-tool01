@@ -1,0 +1,186 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Cloud (AP1) Level 2",
+  "introText": "Ordne jede Aussage dem fachlich besten Cloud-Begriff zu.",
+  "sublineText": "Level 2: Modelle, Security, FinOps, Resilienz und Compliance sauber trennen.",
+  "timePerQuestionSeconds": 24,
+  "answerLabels": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "Public Cloud",
+    "Private Cloud",
+    "Hybrid Cloud",
+    "Multi-Cloud",
+    "Shared Responsibility",
+    "Providerverantwortung",
+    "Kundenverantwortung",
+    "IAM/Least Privilege",
+    "MFA",
+    "Policy as Code",
+    "Fehlkonfiguration",
+    "Vendor Lock-in",
+    "Portabilitaetsstrategie",
+    "FinOps",
+    "Kosten-Tagging",
+    "Budget-Alarm",
+    "Rightsizing",
+    "Auto-Scaling",
+    "Data Residency",
+    "AVV/TOMs",
+    "Verschluesselung/KMS",
+    "Audit-Logging",
+    "SIEM",
+    "Multi-AZ",
+    "Multi-Region-DR",
+    "RTO",
+    "RPO",
+    "Backup-Restore-Test",
+    "Observability",
+    "Exit-Strategie",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Du betreibst VMs selbst und patchst das Gastbetriebssystem eigenverantwortlich.",
+      "correct": "IaaS"
+    },
+    {
+      "text": "Du deployst nur den Anwendungscode; Laufzeit und Plattformbetrieb liefert der Anbieter.",
+      "correct": "PaaS"
+    },
+    {
+      "text": "Fertige Business-Anwendung im Browser als Abomodell nutzen.",
+      "correct": "SaaS"
+    },
+    {
+      "text": "Geteilte Provider-Infrastruktur, nutzungsbasierte Abrechnung, Ressourcen extern bezogen.",
+      "correct": "Public Cloud"
+    },
+    {
+      "text": "Cloud-Prinzipien auf dedizierter Infrastruktur fuer genau eine Organisation.",
+      "correct": "Private Cloud"
+    },
+    {
+      "text": "Regulierte Kernsysteme bleiben on-prem, Lastspitzen gehen in externe Cloud-Ressourcen.",
+      "correct": "Hybrid Cloud"
+    },
+    {
+      "text": "Zwei Public-Provider gezielt fuer Risiko- und Funktionsdiversifizierung einsetzen.",
+      "correct": "Multi-Cloud"
+    },
+    {
+      "text": "Grundprinzip: Anbieter schuetzt die Cloud, Kunde schuetzt Konfiguration, Zugriffe und Daten.",
+      "correct": "Shared Responsibility"
+    },
+    {
+      "text": "Physische Sicherheit im Rechenzentrum, Host-Hardware und Basisschichten absichern.",
+      "correct": "Providerverantwortung"
+    },
+    {
+      "text": "Rollenmodell, Rechte, Netzsegmentierung, Datenklassifizierung und Backup-Strategie festlegen.",
+      "correct": "Kundenverantwortung"
+    },
+    {
+      "text": "Berechtigungen nur so weit vergeben, wie fuer den Zweck zwingend noetig.",
+      "correct": "IAM/Least Privilege"
+    },
+    {
+      "text": "Admin-Login erfordert zusaetzlichen Besitzfaktor neben Passwort.",
+      "correct": "MFA"
+    },
+    {
+      "text": "CI/CD blockiert Deployments, wenn Regeln wie \"kein oeffentlicher Bucket\" verletzt werden.",
+      "correct": "Policy as Code"
+    },
+    {
+      "text": "Typische Ursache von Cloud-Vorfaellen: offene Ports, zu breite Rollen, falsch gesetzte ACLs.",
+      "correct": "Fehlkonfiguration"
+    },
+    {
+      "text": "Proprietaere APIs erschweren spaeteren Plattformwechsel technisch und wirtschaftlich.",
+      "correct": "Vendor Lock-in"
+    },
+    {
+      "text": "Architektur mit offenen Standards, exportierbaren Datenformaten und klarer Exit-Option.",
+      "correct": "Portabilitaetsstrategie"
+    },
+    {
+      "text": "Kontinuierliche Kostensteuerung mit Verantwortlichkeit von Technik und Fachbereich.",
+      "correct": "FinOps"
+    },
+    {
+      "text": "Ressourcen verpflichtend Teams/Services/Kostenstellen zuordnen.",
+      "correct": "Kosten-Tagging"
+    },
+    {
+      "text": "Warnschwellen bei 80/95 Prozent Budgetverbrauch mit Eskalationspfad.",
+      "correct": "Budget-Alarm"
+    },
+    {
+      "text": "Instanzgroessen auf Basis realer Lastdaten systematisch anpassen.",
+      "correct": "Rightsizing"
+    },
+    {
+      "text": "Kapazitaet dynamisch anhand von Metriken hoch- und herunterfahren.",
+      "correct": "Auto-Scaling"
+    },
+    {
+      "text": "Steuert den geographischen Speicherort personenbezogener Daten gemaess Vorgaben.",
+      "correct": "Data Residency"
+    },
+    {
+      "text": "Vertragliche und organisatorische Datenschutzmassnahmen dokumentieren und pruefbar halten.",
+      "correct": "AVV/TOMs"
+    },
+    {
+      "text": "Schuetzt Daten bei Speicherung und Transport plus kontrolliertes Schluesselmanagement.",
+      "correct": "Verschluesselung/KMS"
+    },
+    {
+      "text": "Protokolliert nachvollziehbar, wer welche sicherheitsrelevante Aenderung wann ausfuehrte.",
+      "correct": "Audit-Logging"
+    },
+    {
+      "text": "Korrelierte Auswertung von Cloud-Events fuer fruehe Angriffserkennung.",
+      "correct": "SIEM"
+    },
+    {
+      "text": "Dienste ueber mehrere Verfuegbarkeitszonen verteilen, um Zonen-Ausfaelle abzufangen.",
+      "correct": "Multi-AZ"
+    },
+    {
+      "text": "Wiederanlauf in zweiter Region nach definierten Schwellwerten und Runbook.",
+      "correct": "Multi-Region-DR"
+    },
+    {
+      "text": "Definiert maximal zulaessige Wiederanlaufzeit eines Services.",
+      "correct": "RTO"
+    },
+    {
+      "text": "Definiert maximal tolerierbaren Datenverlust bis zum letzten konsistenten Stand.",
+      "correct": "RPO"
+    },
+    {
+      "text": "Eine Sicherung gilt erst dann als belastbar, wenn Wiederherstellung regelmaessig geuebt wird.",
+      "correct": "Backup-Restore-Test"
+    },
+    {
+      "text": "Metriken, Logs und Traces gemeinsam nutzen, um Engpaesse und Stoerungen sauber zu analysieren.",
+      "correct": "Observability"
+    },
+    {
+      "text": "Definierter Ausstiegspfad mit Datenexport, Verantwortlichkeiten und Downtime-Plan.",
+      "correct": "Exit-Strategie"
+    },
+    {
+      "text": "Cloud ist automatisch billiger, automatisch sicher und automatisch compliant.",
+      "correct": "keine"
+    },
+    {
+      "text": "Ohne Governance koennen in der Cloud gleichzeitig Sicherheits-, Compliance- und Kostenprobleme entstehen.",
+      "correct": "alle"
+    }
+  ]
+}

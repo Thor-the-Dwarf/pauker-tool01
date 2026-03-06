@@ -1,0 +1,198 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Cloud (AP1) Level 2 – Modelle, Risiken, Governance – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Cloud-Begriff, praezise Definition und typischen Praxisfall korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Praezise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den fachlich passenden Begriff.",
+    "column2": "Ordne die korrekte Kernaussage zu.",
+    "column3": "Waehle ein realistisches AP1-Szenario."
+  },
+  "sets": [
+    {
+      "id": "iaas",
+      "name": "IaaS",
+      "description": "Infrastrukturdienste mit hoher Kundenkontrolle ueber VMs, Netze und Betriebssysteme.",
+      "example": "Legacy-Anwendung auf selbst verwalteten Cloud-Instanzen betreiben."
+    },
+    {
+      "id": "paas",
+      "name": "PaaS",
+      "description": "Plattformdienste abstrahieren Laufzeit/Betrieb; Fokus liegt auf Anwendungscode.",
+      "example": "Web-API deployen, ohne selbst OS-Updates zu managen."
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "description": "Fertige Software als Cloud-Service; Betrieb liegt weitgehend beim Anbieter.",
+      "example": "Ticketing- oder CRM-System direkt per Browser nutzen."
+    },
+    {
+      "id": "public_cloud",
+      "name": "Public Cloud",
+      "description": "Ressourcen beim externen Provider, typischerweise mandantenfaehig.",
+      "example": "Produktionsworkload in Provider-Region mit nutzungsbasierter Abrechnung."
+    },
+    {
+      "id": "private_cloud",
+      "name": "Private Cloud",
+      "description": "Cloud-Prinzipien auf dedizierter Infrastruktur fuer eine Organisation.",
+      "example": "Interne Cloud-Plattform im eigenen Rechenzentrum fuer regulierte Daten."
+    },
+    {
+      "id": "hybrid_cloud",
+      "name": "Hybrid Cloud",
+      "description": "Kombination aus On-Prem/Private und Public Cloud mit gekoppelten Prozessen.",
+      "example": "Sensibler Kern on-prem, elastische Lastspitzen in Public Cloud."
+    },
+    {
+      "id": "multi_cloud",
+      "name": "Multi-Cloud",
+      "description": "Geplanter Einsatz mehrerer Public-Provider zur Risiko- oder Funktionsdiversifizierung.",
+      "example": "Kritischer Dienst mit aktiver Ausweichfaehigkeit auf zweiten Provider."
+    },
+    {
+      "id": "shared_responsibility",
+      "name": "Shared Responsibility",
+      "description": "Provider sichert die Cloud, Kunde sichert Konfiguration, Identitaeten und Daten.",
+      "example": "Provider sichert Rechenzentrum, Kunde pflegt IAM- und Netzwerkregeln."
+    },
+    {
+      "id": "iam_least_privilege",
+      "name": "Least Privilege IAM",
+      "description": "Berechtigungen so eng wie noetig vergeben, nicht breiter als erforderlich.",
+      "example": "Service-Account nur auf ein Bucket und nur mit Read-Recht."
+    },
+    {
+      "id": "mfa",
+      "name": "MFA",
+      "description": "Mehrfaktor-Authentifizierung reduziert Risiko kompromittierter Zugangsdaten.",
+      "example": "Admin-Login nur mit Passwort plus Token-App."
+    },
+    {
+      "id": "policy_as_code",
+      "name": "Policy as Code",
+      "description": "Regeln maschinenpruefbar in Deployments verankern.",
+      "example": "CI blockiert Terraform-Plan mit oeffentlichem Storage."
+    },
+    {
+      "id": "misconfiguration",
+      "name": "Fehlkonfiguration",
+      "description": "Falsche Security-/Netzwerk-/IAM-Einstellungen verursachen haeufig Cloud-Vorfaelle.",
+      "example": "DB-Port offen ins Internet, obwohl intern geplant."
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in",
+      "description": "Abhaengigkeit von proprietaeren Diensten erschwert Anbieterwechsel.",
+      "example": "Stark genutzte Spezial-API macht Migration teuer und langsam."
+    },
+    {
+      "id": "portability_strategy",
+      "name": "Portabilitaetsstrategie",
+      "description": "Architektur- und Datenentscheidungen fuer moeglichen Plattformwechsel vorbereiten.",
+      "example": "Container + offene Schnittstellen + exportierbare Datenformate nutzen."
+    },
+    {
+      "id": "finops",
+      "name": "FinOps",
+      "description": "Kontinuierliche Kostensteuerung durch Transparenz, Verantwortung und Optimierung.",
+      "example": "Monatliches Rightsizing-Review je Team auf Basis echter Lastprofile."
+    },
+    {
+      "id": "tagging",
+      "name": "Kosten-Tagging",
+      "description": "Ordnet Ressourcen Projekten/Teams zu und schafft Kostenverantwortung.",
+      "example": "Kostenstelle und Service-Owner sind Pflichtfelder bei jeder Ressource."
+    },
+    {
+      "id": "budget_alerts",
+      "name": "Budget-Alerts",
+      "description": "Warnen frueh bei Budgetabweichungen und verhindern Ueberraschungsrechnungen.",
+      "example": "Alarm bei 80 Prozent und Eskalation bei 95 Prozent Budgetverbrauch."
+    },
+    {
+      "id": "rightsizing",
+      "name": "Rightsizing",
+      "description": "Ressourcen anhand realer Lastdaten passend dimensionieren.",
+      "example": "Ueberdimensionierte VM-Klasse durch kleinere Instanz ersetzen."
+    },
+    {
+      "id": "autoscaling",
+      "name": "Autoscaling",
+      "description": "Automatische Anpassung von Ressourcen an Lastkriterien.",
+      "example": "Web-Frontends wachsen bei CPU-Spitzen und schrumpfen nachts wieder."
+    },
+    {
+      "id": "reserved_capacity",
+      "name": "Reserved/Savings-Modelle",
+      "description": "Langfristige Lasten guenstiger durch Bindung statt reinem On-Demand-Preis betreiben.",
+      "example": "Stabile Dauerlast mit Savings Plan kostenoptimiert absichern."
+    },
+    {
+      "id": "data_residency",
+      "name": "Data Residency",
+      "description": "Datenstandort entsprechend rechtlicher und vertraglicher Vorgaben steuern.",
+      "example": "Personenbezogene Daten nur in erlaubter Region speichern."
+    },
+    {
+      "id": "encryption_kms",
+      "name": "Encryption & KMS",
+      "description": "Verschluesselung in Ruhe/Transport plus Schluesselmanagement kontrollieren.",
+      "example": "Storage verschluesseln und Schluesselrotation ueber KMS erzwingen."
+    },
+    {
+      "id": "audit_logging",
+      "name": "Audit Logging",
+      "description": "Nachvollziehbare Protokolle fuer Zugriffe, Aenderungen und Admin-Aktionen.",
+      "example": "Jede IAM-Policy-Aenderung mit Nutzer und Zeitstempel dokumentieren."
+    },
+    {
+      "id": "siem_integration",
+      "name": "SIEM-Integration",
+      "description": "Zentrale Korrelation von Cloud-Sicherheitsereignissen fuer schnelle Erkennung.",
+      "example": "Auffaellige Login-Muster aus mehreren Regionen automatisch alarmieren."
+    },
+    {
+      "id": "multi_az",
+      "name": "Multi-AZ-Architektur",
+      "description": "Verteilt Dienste ueber Verfuegbarkeitszonen fuer Ausfallresilienz.",
+      "example": "Datenbank-Cluster mit synchronem Standby in zweiter Zone."
+    },
+    {
+      "id": "multi_region_dr",
+      "name": "Multi-Region-DR",
+      "description": "Wiederanlaufstrategie bei regionalen Stoerungen mit klaren Runbooks.",
+      "example": "Failover in zweite Region nach definierter RTO/RPO-Schwelle."
+    },
+    {
+      "id": "rto_rpo",
+      "name": "RTO/RPO-Definition",
+      "description": "Definiert Wiederanlaufzeit und tolerierbaren Datenverlust je Service.",
+      "example": "Payment-Dienst: RTO 30 min, RPO 5 min."
+    },
+    {
+      "id": "backup_restore_test",
+      "name": "Backup & Restore-Test",
+      "description": "Sicherung ist erst belastbar, wenn Wiederherstellung regelmaessig getestet wird.",
+      "example": "Quartalsweise Recovery-Uebung mit produktionsnahen Daten."
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "description": "Metriken, Logs und Traces fuer Betriebs- und Fehlertransparenz kombinieren.",
+      "example": "Trace zeigt Latenzspitze zwischen API-Gateway und Datenbankservice."
+    },
+    {
+      "id": "exit_strategy",
+      "name": "Exit-Strategie",
+      "description": "Geplanter Ausstiegspfad inklusive Datenexport, Downtime-Plan und Verantwortlichkeiten.",
+      "example": "Vertraglich definierter Datenexport vor Providerwechsel in standardisiertem Format."
+    }
+  ]
+}
