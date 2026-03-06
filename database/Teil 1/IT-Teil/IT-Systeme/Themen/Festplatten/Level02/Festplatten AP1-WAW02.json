@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Festplatten (AP1) Level 2",
+  "description": "AP1-Vertiefung zu Speicherwahl, Kennzahlen, Endurance, RAID und Betriebsrisiken.",
+  "cases": [
+    {
+      "id": "fd01",
+      "profile": "Ein Fileserver speichert 120 TB Archivdaten. Zugriffe sind selten, Budget pro TB ist kritisch.",
+      "tags": ["HDD", "Kosten", "Archiv"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "HDD als primaeres Archivmedium waehlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "HDD bietet in der Regel den besten Preis pro Kapazitaetseinheit.", "correct": true },
+            { "id": "w2", "text": "Bei seltenen Zugriffen ist hohe Random-I/O-Leistung weniger entscheidend.", "correct": true },
+            { "id": "w3", "text": "HDD ist grundsaetzlich schneller als NVMe bei kleinen Zugriffen.", "correct": false },
+            { "id": "w4", "text": "Der Anwendungsfall ist kosten- und kapazitaetsgetrieben.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur NVMe nutzen, weil immer am schnellsten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Technisch schnell, aber bei Archiv-Workloads oft wirtschaftlich unnoetig.", "correct": true },
+            { "id": "w2", "text": "Kosten pro TB steigen deutlich ohne entsprechenden Mehrwert im Use-Case.", "correct": true },
+            { "id": "w3", "text": "NVMe ist stets die wirtschaftlich beste Wahl fuer jeden Speicherbedarf.", "correct": false },
+            { "id": "w4", "text": "Lastprofil und Budget muessen gemeinsam bewertet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "RAID 0 aus zwei SSDs ohne Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID 0 hat keine Redundanz und erhoeht Ausfallrisiko.", "correct": true },
+            { "id": "w2", "text": "Ohne Backup ist der Archivauftrag fachlich nicht abgesichert.", "correct": true },
+            { "id": "w3", "text": "RAID 0 bietet den besten Ausfallschutz fuer Langzeitarchive.", "correct": false },
+            { "id": "w4", "text": "Die Loesung verfehlt sowohl Sicherheits- als auch Kostenziele.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei grosser Kapazitaet und seltenen Zugriffen ist HDD als Archivmedium die passende Primaerentscheidung."
+    },
+    {
+      "id": "fd02",
+      "profile": "Ein Ticketsystem reagiert traege bei vielen gleichzeitigen Nutzern. Monitoring zeigt viele kleine random Reads/Writes.",
+      "tags": ["IOPS", "Latenz", "NVMe"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Auf niedrige Latenz und hohe IOPS optimieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Random-I/O-Workloads profitieren stark von IOPS und niedriger Latenz.", "correct": true },
+            { "id": "w2", "text": "NVMe ist fuer diese Lastklasse meist besser geeignet als HDD/SATA.", "correct": true },
+            { "id": "w3", "text": "Nur sequentieller MB/s-Wert ist hier ausschlaggebend.", "correct": false },
+            { "id": "w4", "text": "Das Monitoringbild passt zu einem I/O-Reaktionszeitproblem.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Kapazitaet vergroessern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr GB beseitigt keinen Random-I/O-Engpass.", "correct": true },
+            { "id": "w2", "text": "Leistungsproblem und Kapazitaetsproblem sind unterschiedliche Ursachen.", "correct": true },
+            { "id": "w3", "text": "Kapazitaetserhoehung verbessert immer die IOPS auf allen Medien.", "correct": false },
+            { "id": "w4", "text": "Die Massnahme adressiert nicht das beobachtete Lastmuster.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dateinamen kuerzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateinamenlaenge ist hier nicht der dominante Performancefaktor.", "correct": true },
+            { "id": "w2", "text": "I/O-Subsystem und Zugriffsmuster bleiben unveraendert.", "correct": true },
+            { "id": "w3", "text": "Kuerzere Dateinamen loesen random I/O-Bottlenecks vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Ursachennah sind Storage- und Architekturmassnahmen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Korrekt ist die Optimierung auf IOPS/Latenz, typischerweise mit NVMe-geeignetem Storage-Design."
+    },
+    {
+      "id": "fd03",
+      "profile": "Ein Log-Analyse-System schreibt taeglich sehr hohe Datenmengen. Nach kurzer Zeit treten SSD-Ausfaelle auf.",
+      "tags": ["TBW", "Endurance", "Monitoring"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Endurance-Klasse (TBW/DWPD) und Schreibprofil passend waehlen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Write-intensive Systeme brauchen SSDs mit ausreichender Endurance-Reserve.", "correct": true },
+            { "id": "w2", "text": "TBW/DWPD sind genau fuer solche Lasten zentrale Auswahlkriterien.", "correct": true },
+            { "id": "w3", "text": "TBW hat nichts mit Lebensdauer zu tun.", "correct": false },
+            { "id": "w4", "text": "SMART- und Verschleisswerte sollten proaktiv ueberwacht werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur SATA auf NVMe wechseln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Leistung loest nicht automatisch Endurance-Probleme.", "correct": true },
+            { "id": "w2", "text": "Auch NVMe kann bei falscher Endurance-Klasse frueh verschleissen.", "correct": true },
+            { "id": "w3", "text": "NVMe garantiert immer unbegrenzte Schreibhaltbarkeit.", "correct": false },
+            { "id": "w4", "text": "Die Ursache liegt primar bei Verschleissklassifikation und Lastprofil.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "SMART deaktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne SMART fehlen Fruehwarnungen fuer kritische Laufwerkszustaende.", "correct": true },
+            { "id": "w2", "text": "Fehlererkennung wird dadurch schlechter, nicht besser.", "correct": true },
+            { "id": "w3", "text": "SMART verursacht die physischen Verschleissprobleme.", "correct": false },
+            { "id": "w4", "text": "Betriebssicherheit verlangt eher mehr statt weniger Monitoring.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist die Endurance-gerechte Auswahl inklusive TBW/DWPD-Pruefung und laufender SMART-Ueberwachung."
+    },
+    {
+      "id": "fd04",
+      "profile": "Ein kleiner Produktionsserver soll bei Ausfall einer einzelnen Platte ohne Unterbrechung weiterlaufen.",
+      "tags": ["RAID 1", "Verfuegbarkeit", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "RAID 1 fuer einfache Spiegelung einsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RAID 1 bietet bei Einzellaufwerksausfall hohe Betriebskontinuitaet.", "correct": true },
+            { "id": "w2", "text": "Konzept und Betrieb sind fuer kleine Umgebungen gut beherrschbar.", "correct": true },
+            { "id": "w3", "text": "RAID 1 verdoppelt die nutzbare Kapazitaet gegenueber Einzelplatte.", "correct": false },
+            { "id": "w4", "text": "Backup bleibt trotz Spiegelung weiterhin noetig.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "RAID 0 verwenden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID 0 hat keinen Ausfallschutz.", "correct": true },
+            { "id": "w2", "text": "Ein Laufwerksdefekt fuehrt typischerweise zum Gesamtausfall des Verbunds.", "correct": true },
+            { "id": "w3", "text": "RAID 0 ist fuer Verfuegbarkeit bei Defekt ideal.", "correct": false },
+            { "id": "w4", "text": "Diese Option widerspricht der Aufgabenanforderung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Snapshot ohne Redundanz",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Snapshot ist kein Ersatz fuer Laufwerksredundanz im Live-Betrieb.", "correct": true },
+            { "id": "w2", "text": "Bei physischen Defekten hilft Snapshot allein nicht gegen Ausfallzeit.", "correct": true },
+            { "id": "w3", "text": "Snapshot verhindert Hardwareausfall automatisch.", "correct": false },
+            { "id": "w4", "text": "Verfuegbarkeit braucht redundante Hardwarestrategie.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei Anforderung 'weiterlaufen trotz Einzelausfall' ist RAID 1 die robuste Standardentscheidung."
+    },
+    {
+      "id": "fd05",
+      "profile": "Ein Team argumentiert: Wir haben RAID 5, daher brauchen wir kein Backup mehr.",
+      "tags": ["RAID", "Backup", "Pruefungsfalle"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Aussage zurueckweisen: RAID ersetzt kein Backup",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RAID adressiert primaer Laufwerksausfaelle, nicht logische Datenverluste.", "correct": true },
+            { "id": "w2", "text": "Ransomware, Fehlbedienung und Korruption erfordern getrennte Sicherungen.", "correct": true },
+            { "id": "w3", "text": "RAID 5 deckt automatisch alle Datenverlustszenarien ab.", "correct": false },
+            { "id": "w4", "text": "Backup- und Restore-Test sind weiterhin Pflichtbestandteile.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "RAID 5 auf RAID 0 umstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID 0 senkt statt erhoeht den Ausfallschutz.", "correct": true },
+            { "id": "w2", "text": "Das Backup-Problem wird dadurch nicht geloest.", "correct": true },
+            { "id": "w3", "text": "RAID 0 ist der beste Backup-Ersatz.", "correct": false },
+            { "id": "w4", "text": "Option ist fachlich kontraproduktiv.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur SMART aktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SMART ist nuetzlich fuer Fruhwarnungen, aber kein Datensicherungskonzept.", "correct": true },
+            { "id": "w2", "text": "Logische Loeschvorgaenge werden durch SMART nicht rueckgaengig.", "correct": true },
+            { "id": "w3", "text": "SMART macht Backups unnoetig.", "correct": false },
+            { "id": "w4", "text": "Monitoring und Backup adressieren unterschiedliche Risiken.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Aussage ist falsch: RAID 5 erhoeht Verfuegbarkeit, ersetzt aber kein Backup."
+    },
+    {
+      "id": "fd06",
+      "profile": "Unter hoher Dauerlast sinkt die NVMe-Leistung nach einigen Minuten deutlich, obwohl keine Fehler gemeldet werden.",
+      "tags": ["Thermal Throttling", "NVMe", "Performance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Thermische Drosselung als Ursache pruefen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "NVMe-Controller reduzieren bei kritischer Temperatur die Leistung zum Selbstschutz.", "correct": true },
+            { "id": "w2", "text": "Symptom passt zu Last-abhaengigem Leistungsverlust nach Aufheizen.", "correct": true },
+            { "id": "w3", "text": "Temperatur hat keinen Einfluss auf SSD-Performance.", "correct": false },
+            { "id": "w4", "text": "Kuehlung und Airflow sind daher wichtige Betriebsfaktoren.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Dateisystem wechseln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateisystem kann Einfluss haben, erklaert aber nicht zwingend thermischen Verlauf.", "correct": true },
+            { "id": "w2", "text": "Temperatursignal muss dennoch gezielt geprueft werden.", "correct": true },
+            { "id": "w3", "text": "Dateisystemwahl beseitigt jede thermische Begrenzung.", "correct": false },
+            { "id": "w4", "text": "Root-Cause muss am Hardwareverhalten ausgerichtet sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Backup-Frequenz erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup ist wichtig, loest aber kein akutes Performanceproblem durch Hitze.", "correct": true },
+            { "id": "w2", "text": "Der Engpass liegt im Laufwerksbetrieb, nicht im Sicherungsintervall.", "correct": true },
+            { "id": "w3", "text": "Mehr Backups verhindern Thermal Throttling direkt.", "correct": false },
+            { "id": "w4", "text": "Massnahmen muessen Ursache und Zielproblem treffen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wahrscheinlichste Ursache ist Thermal Throttling; Kuehlkonzept und Temperaturmonitoring sind zu verbessern."
+    },
+    {
+      "id": "fd07",
+      "profile": "Nach Plattenausfall laeuft ein RAID 5 im Rebuild. Das Team fragt nach dem groessten Zusatzrisiko in dieser Phase.",
+      "tags": ["RAID 5", "Rebuild", "Risiko"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Erhoehtes Risiko bei weiterem Defekt waehrend Rebuild",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Im degradierten Zustand sinkt Redundanzreserve waehrend Rekonstruktion.", "correct": true },
+            { "id": "w2", "text": "Rebuild belastet verbleibende Laufwerke zusaetzlich.", "correct": true },
+            { "id": "w3", "text": "Rebuild reduziert Risiko auf null.", "correct": false },
+            { "id": "w4", "text": "Monitoring und schnelle Ersatzstrategie sind kritisch.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Keine Risiken, da Paritaet alles immer sofort absichert",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Diese Aussage unterschaetzt die verwundbare Rebuild-Phase.", "correct": true },
+            { "id": "w2", "text": "Performance und Belastung veraendern sich in dieser Zeit deutlich.", "correct": true },
+            { "id": "w3", "text": "Rebuild macht weiteren Defekt technisch unmoeglich.", "correct": false },
+            { "id": "w4", "text": "Risikobewusstsein ist fuer Betriebssicherheit entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Partitionsnamen umbenennen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Benennung aendert nichts am technischen Rebuild-Risiko.", "correct": true },
+            { "id": "w2", "text": "Kritisch sind Hardwarezustand, Monitoring und Rebuilddauer.", "correct": true },
+            { "id": "w3", "text": "Umbenennung stabilisiert den Verbund automatisch.", "correct": false },
+            { "id": "w4", "text": "Diese Option hat keinen Bezug zur Ursache.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Hauptrisiko ist ein weiterer Defekt waehrend Rebuild; daher schnelle Reaktion und gutes Monitoring."
+    },
+    {
+      "id": "fd08",
+      "profile": "Bei einem Incident zeigt die Analyse: Restore dauerte 9 Stunden, erlaubt sind maximal 2 Stunden.",
+      "tags": ["RTO", "Disaster Recovery", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "RTO-Verletzung und Recovery-Prozess optimieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "RTO beschreibt die maximal zulaessige Wiederanlaufzeit.", "correct": true },
+            { "id": "w2", "text": "Ist-Zeit 9h gegen Soll 2h zeigt klaren Handlungsbedarf.", "correct": true },
+            { "id": "w3", "text": "RTO hat nur mit Speicherkapazitaet zu tun.", "correct": false },
+            { "id": "w4", "text": "Runbooks, Testhaeufigkeit und Infrastruktur muessen angepasst werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur TBW erhoehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "TBW betrifft Endurance, nicht direkt Wiederanlaufzeit.", "correct": true },
+            { "id": "w2", "text": "Das Incident-Problem liegt im Recovery-Zeitpfad.", "correct": true },
+            { "id": "w3", "text": "Hoehere TBW loest automatisch jedes RTO-Problem.", "correct": false },
+            { "id": "w4", "text": "Massnahmen muessen an der RTO-Ursache ansetzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur RAID-Level aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAID kann Verfuegbarkeit beeinflussen, ersetzt aber keinen gesamten Recovery-Prozess.", "correct": true },
+            { "id": "w2", "text": "Backup/Restore-Architektur und Ablauforganisation bleiben zentral.", "correct": true },
+            { "id": "w3", "text": "Jedes RAID garantiert RTO-Einhaltung ohne weitere Massnahmen.", "correct": false },
+            { "id": "w4", "text": "Der Fokus muss auf End-to-End-Wiederherstellung liegen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Es liegt eine RTO-Verletzung vor; Recovery-Design und Restore-Prozesse muessen gezielt verbessert werden."
+    },
+    {
+      "id": "fd09",
+      "profile": "Ein Unternehmen moechte heisse Produktivdaten schnell halten und selten genutzte Altdaten guenstig speichern.",
+      "tags": ["Tiering", "Kosten", "Performance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Storage Tiering einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Tiering kombiniert schnelle und guenstige Medien je Zugriffsmuster.", "correct": true },
+            { "id": "w2", "text": "Heisse Daten profitieren von NVMe, kalte Daten koennen auf HDD liegen.", "correct": true },
+            { "id": "w3", "text": "Alle Daten auf einem identischen Medium sind immer optimal.", "correct": false },
+            { "id": "w4", "text": "Die Strategie passt zu Performance- und Kostenzielen zugleich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur HDD fuer alles",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kostenguensitg, aber fuer hot data oft zu langsam.", "correct": true },
+            { "id": "w2", "text": "Produktivreaktionszeit kann darunter deutlich leiden.", "correct": true },
+            { "id": "w3", "text": "HDD ist bei allen Lastprofilen das schnellste Medium.", "correct": false },
+            { "id": "w4", "text": "Option adressiert nur Kosten, nicht Performance.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur NVMe fuer alles",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Technisch schnell, aber fuer kalte Daten oft nicht wirtschaftlich.", "correct": true },
+            { "id": "w2", "text": "Budget und Energieverbrauch koennen unnoetig steigen.", "correct": true },
+            { "id": "w3", "text": "NVMe ist immer die wirtschaftlichste Loesung fuer jedes Datenprofil.", "correct": false },
+            { "id": "w4", "text": "Die Aufgabenstellung verlangt explizit differenzierte Mediennutzung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Storage Tiering ist die fachlich passende Strategie fuer gemischte Hot/Cold-Workloads."
+    },
+    {
+      "id": "fd10",
+      "profile": "Ein Team diskutiert 'wir messen nur Durchsatz in MB/s, das reicht fuer jede Speicherentscheidung'.",
+      "tags": ["Kennzahlen", "AP1-Falle", "Leistungsanalyse"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Aussage korrigieren: mehrere Kennzahlen kombinieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Random-I/O-Workloads brauchen IOPS/Latenzbetrachtung zusaetzlich zu MB/s.", "correct": true },
+            { "id": "w2", "text": "Endurance und Verfuegbarkeit sind weitere Entscheidungskriterien.", "correct": true },
+            { "id": "w3", "text": "Durchsatz allein deckt jedes Lastprofil vollstaendig ab.", "correct": false },
+            { "id": "w4", "text": "AP1-reif ist die mehrdimensionale Bewertung statt Einwertdenken.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur MB/s benchmarken",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einseitiges Benchmarking fuehrt zu Fehlentscheidungen bei Random-Lasten.", "correct": true },
+            { "id": "w2", "text": "Viele Produktivsysteme sind lantenz- und IOPS-sensitiv.", "correct": true },
+            { "id": "w3", "text": "IOPS und Latenz sind theoretisch und praktisch irrelevant.", "correct": false },
+            { "id": "w4", "text": "Die Option ignoriert zentrale AP1-Kriterien.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur TBW betrachten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "TBW beschreibt Endurance, nicht komplette Performancecharakteristik.", "correct": true },
+            { "id": "w2", "text": "Ohne I/O-Kennzahlen bleibt Lastpassung unvollstaendig.", "correct": true },
+            { "id": "w3", "text": "TBW macht jede Verfuegbarkeitsstrategie ueberfluessig.", "correct": false },
+            { "id": "w4", "text": "Auch hier fehlt die ganzheitliche Sicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Korrekt ist eine kombinierte Bewertung aus Durchsatz, IOPS, Latenz, Endurance, Verfuegbarkeit und Betrieb."
+    }
+  ]
+}

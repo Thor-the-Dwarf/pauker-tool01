@@ -1,0 +1,285 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Festplatten (AP1) Level 2",
+  "topic": "HDD/SSD/NVMe, IOPS/Latenz, TBW, SMART, RAID, Backup-Abgrenzung",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "media-selection-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 1: Speichermedium passend waehlen",
+      "subtitle": "Ordne das Szenario dem sinnvollsten Medium zu.",
+      "hintDefault": "HDD fuer Kapazitaet, SATA-SSD fuer guenstiges Systemupgrade, NVMe fuer hohe IOPS und geringe Latenz.",
+      "sortColumns": [
+        { "zone": "hdd", "label": "HDD", "hint": "guenstig pro GB" },
+        { "zone": "sata_ssd", "label": "SSD (SATA)", "hint": "alltagsschnell und kompatibel" },
+        { "zone": "nvme_ssd", "label": "SSD (NVMe)", "hint": "maximale IOPS/Latenz" }
+      ],
+      "sortCards": [
+        { "id": "m1", "text": "Archivdaten mit seltenen Zugriffen und grosser Kapazitaet", "correctZone": "hdd" },
+        { "id": "m2", "text": "Alter Office-PC soll mit geringem Budget schneller starten", "correctZone": "sata_ssd" },
+        { "id": "m3", "text": "VM-Host mit vielen kleinen Random-I/O-Zugriffen", "correctZone": "nvme_ssd" },
+        { "id": "m4", "text": "Backupziel mit Fokus auf Euro pro TB", "correctZone": "hdd" },
+        { "id": "m5", "text": "Laptop ohne PCIe-Option, aber mit SATA-Slot", "correctZone": "sata_ssd" },
+        { "id": "m6", "text": "Build-Server mit vielen parallelen Schreib-/Leselasten", "correctZone": "nvme_ssd" },
+        { "id": "m7", "text": "Mechanik und Stoessempfindlichkeit sind in Betrieb kritisch", "correctZone": "sata_ssd" },
+        { "id": "m8", "text": "Datenbank-Latenz soll deutlich sinken", "correctZone": "nvme_ssd" }
+      ]
+    },
+    {
+      "id": "metrics-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 2: Kennzahlen richtig deuten",
+      "subtitle": "IOPS, Latenz, Durchsatz und TBW auseinanderhalten.",
+      "hintDefault": "Viele kleine Zugriffe -> IOPS/Latenz. Grosse lineare Transfers -> Durchsatz. Haltbarkeit -> TBW.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Kennzahl ist am wichtigsten fuer viele kleine Datenbankzugriffe?",
+          "options": [
+            { "value": "a", "text": "IOPS und Latenz" },
+            { "value": "b", "text": "Nur Kapazitaet in TB" },
+            { "value": "c", "text": "Dateiname" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Wofuer steht TBW bei SSDs?",
+          "options": [
+            { "value": "a", "text": "Gesamte erlaubte Schreibmenge ueber die Lebensdauer" },
+            { "value": "b", "text": "Controller-Takt" },
+            { "value": "c", "text": "Anzahl maximaler Partitionen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Hoher sequentieller Durchsatz bedeutet automatisch beste Random-I/O-Performance." },
+            { "value": "b", "text": "Durchsatz und IOPS beschreiben unterschiedliche Lastprofile." },
+            { "value": "c", "text": "TBW ersetzt jede Performance-Messung." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "raid-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 3: RAID-Level einordnen",
+      "subtitle": "Ordne Aussagen zu RAID 0/1/5/10.",
+      "hintDefault": "RAID 0: schnell ohne Redundanz. RAID 1: Spiegelung. RAID 5: Paritaet. RAID 10: Spiegel + Striping.",
+      "sortColumns": [
+        { "zone": "raid0", "label": "RAID 0", "hint": "Performance, kein Schutz" },
+        { "zone": "raid1", "label": "RAID 1", "hint": "Spiegelung" },
+        { "zone": "raid5", "label": "RAID 5", "hint": "Paritaet, 1 Ausfall" },
+        { "zone": "raid10", "label": "RAID 10", "hint": "Performance + Redundanz" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "Ausfall einer Platte fuehrt direkt zu Datenverlust", "correctZone": "raid0" },
+        { "id": "r2", "text": "Nutzbare Kapazitaet bei zwei gleich grossen Platten etwa halbiert", "correctZone": "raid1" },
+        { "id": "r3", "text": "Paritaetsberechnung kann Schreiblast bremsen", "correctZone": "raid5" },
+        { "id": "r4", "text": "Mindestens vier Laufwerke fuer Standard-Setup", "correctZone": "raid10" },
+        { "id": "r5", "text": "Primaer fuer temporaeren Speed ohne Ausfallschutz", "correctZone": "raid0" },
+        { "id": "r6", "text": "Einfaches Hochverfuegbarkeits-Setup fuer kleine Server", "correctZone": "raid1" },
+        { "id": "r7", "text": "Waehlt man oft bei Read-lastigen Dateiservern", "correctZone": "raid5" },
+        { "id": "r8", "text": "Kombiniert Striping und Mirroring", "correctZone": "raid10" }
+      ]
+    },
+    {
+      "id": "selection-capital-l2",
+      "type": "capital",
+      "title": "Raetsel 4: Professionelle Speicherentscheidung",
+      "subtitle": "Bringe den Ablauf in die fachlich richtige Reihenfolge.",
+      "hintDefault": "Anforderungen zuerst, dann Lastprofil, dann Technik-/Kostenabgleich und Testbetrieb.",
+      "rows": [
+        {
+          "key": "anforderung",
+          "label": "Kapazitaet, Verfuegbarkeit, RTO/RPO und Budget erfassen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "profil",
+          "label": "I/O-Profil bestimmen (Random vs sequentiell, Read/Write-Anteil)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "medium",
+          "label": "HDD/SATA-SSD/NVMe und RAID-Level vorwaehlen",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "endurance",
+          "label": "TBW/Endurance, SMART und thermische Randbedingungen pruefen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilot mit Last-/Failover-/Restore-Tests durchfuehren",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "betrieb",
+          "label": "Produktiv mit Monitoring, Rebuild-Runbook und Backup-Strategie starten",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backup-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 5: RAID ist nicht Backup",
+      "subtitle": "Trenne Verfuegbarkeit von Datensicherung.",
+      "hintDefault": "RAID hilft gegen Laufwerksausfall, Backup hilft gegen Loeschen, Malware, Korruption und Standortverlust.",
+      "questions": [
+        {
+          "id": "b1",
+          "text": "1. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "RAID ersetzt ein Backup vollstaendig." },
+            { "value": "b", "text": "RAID erhoeht Verfuegbarkeit, ersetzt aber kein Backup gegen logische Fehler." },
+            { "value": "c", "text": "Backup ist nur bei HDD noetig, nicht bei SSD." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "b2",
+          "text": "2. Welches Risiko deckt RAID typischerweise nicht ab?",
+          "options": [
+            { "value": "a", "text": "Versehentliches Loeschen" },
+            { "value": "b", "text": "Ausfall einer einzelnen Platte bei geeignetem RAID-Level" },
+            { "value": "c", "text": "Kurzfristige Verfuegbarkeit bei Defekt" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "b3",
+          "text": "3. Was ist AP1-fachlich richtig?",
+          "options": [
+            { "value": "a", "text": "Backup- und Restore-Test gehoeren zur Speicherstrategie." },
+            { "value": "b", "text": "SMART-Werte sind fuer Ausfallvorsorge bedeutungslos." },
+            { "value": "c", "text": "TBW ist bei Write-intensiven Systemen irrelevant." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "smart-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 6: Monitoring-Signal einordnen",
+      "subtitle": "Ordne das Signal der wahrscheinlichsten Risikoart zu.",
+      "hintDefault": "Endurance, Performance, Integritaet und Betrieb trennen.",
+      "sortColumns": [
+        { "zone": "endurance", "label": "Endurance-Risiko", "hint": "Verschleiss" },
+        { "zone": "performance", "label": "Performance-Risiko", "hint": "Latenz/Durchsatz" },
+        { "zone": "integrity", "label": "Integritaets-Risiko", "hint": "Datenfehler" },
+        { "zone": "operations", "label": "Betriebs-Risiko", "hint": "Prozess/Verfuegbarkeit" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "SSD-Lebensdauerindikator naehert sich kritischem Grenzwert", "correctZone": "endurance" },
+        { "id": "s2", "text": "NVMe drosselt unter Last wegen hoher Temperatur", "correctZone": "performance" },
+        { "id": "s3", "text": "Wachsende Anzahl reallokierter Sektoren", "correctZone": "integrity" },
+        { "id": "s4", "text": "Kein dokumentiertes Rebuild-Runbook bei RAID-Ausfall", "correctZone": "operations" },
+        { "id": "s5", "text": "Queue-Latenz steigt bei Spitzenlast stark an", "correctZone": "performance" },
+        { "id": "s6", "text": "Backup-Tests fehlen seit Monaten", "correctZone": "operations" }
+      ]
+    },
+    {
+      "id": "final-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: AP1-Speicherentscheidung",
+      "subtitle": "Waehle die robusteste Gesamtbewertung.",
+      "hintDefault": "Gute Entscheidungen verbinden Lastprofil, Ausfallschutz, Kosten und Betrieb.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Welche Gesamtstrategie ist fachlich am besten?",
+          "options": [
+            { "value": "a", "text": "Ein einziges Medium fuer alle Workloads erzwingen" },
+            { "value": "b", "text": "Speicher je Lastprofil waehlen, RAID und Backup kombiniert planen" },
+            { "value": "c", "text": "Nur maximalen Durchsatz betrachten" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Was trifft fuer Write-intensive Systeme zu?",
+          "options": [
+            { "value": "a", "text": "TBW/Endurance und Temperaturverhalten sind wichtige Auswahlkriterien" },
+            { "value": "b", "text": "TBW ist nur Marketing" },
+            { "value": "c", "text": "SMART kann ignoriert werden" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "IOPS ist bei vielen kleinen Random-I/O-Operationen zentral" },
+            { "value": "b", "text": "RAID 0 bietet die beste Datensicherheit" },
+            { "value": "c", "text": "HDD hat typischerweise die geringste Latenz" }
+          ],
+          "correct": "a"
+        }
+      ]
+    }
+  ]
+}

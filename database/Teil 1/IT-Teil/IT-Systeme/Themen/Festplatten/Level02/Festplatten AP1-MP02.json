@@ -1,0 +1,198 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Festplatten (AP1) Level 2 – Medien, Kennzahlen und Betrieb",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Begriff, fachlich praezise Bedeutung und AP1-Praxisfall korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Praezise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den passenden Speicherbegriff.",
+    "column2": "Trenne Performance, Endurance und Verfuegbarkeit.",
+    "column3": "Ordne den typischen Einsatzkontext zu."
+  },
+  "sets": [
+    {
+      "id": "hdd",
+      "name": "HDD",
+      "description": "Mechanisches Laufwerk mit guenstigem Preis pro GB, aber hoher Zugriffszeit.",
+      "example": "Backupziel fuer grosse Datenmengen mit seltenen Restores."
+    },
+    {
+      "id": "ssd_sata",
+      "name": "SSD (SATA)",
+      "description": "Flashbasiertes Laufwerk mit guter Alltagsperformance und SATA-Limit.",
+      "example": "Klassisches Office-PC-Upgrade fuer schnelleren Systemstart."
+    },
+    {
+      "id": "ssd_nvme",
+      "name": "SSD (NVMe)",
+      "description": "PCIe-basiertes Flashlaufwerk mit sehr niedriger Latenz und hoher Parallelitaet.",
+      "example": "VM-Host mit vielen random I/O-Operationen."
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "description": "Anzahl Ein-/Ausgabeoperationen pro Sekunde, relevant fuer viele kleine Zugriffe.",
+      "example": "Datenbank mit vielen kleinen Transaktionen wird durch hohe IOPS schneller."
+    },
+    {
+      "id": "latency",
+      "name": "Latenz",
+      "description": "Zeit bis zur Bearbeitung einzelner I/O-Anfragen.",
+      "example": "Interaktive Anwendungen reagieren traege bei hoher Storage-Latenz."
+    },
+    {
+      "id": "throughput",
+      "name": "Datendurchsatz",
+      "description": "Menge sequenziell uebertragener Daten pro Zeiteinheit.",
+      "example": "Videoarchivierung profitiert von hohem sequentiellem Durchsatz."
+    },
+    {
+      "id": "tbw",
+      "name": "TBW",
+      "description": "Gesamtmenge an Daten, die auf eine SSD geschrieben werden darf.",
+      "example": "Write-intensive Logs benoetigen SSD mit hoher TBW-Klasse."
+    },
+    {
+      "id": "dwpd",
+      "name": "DWPD",
+      "description": "Drive Writes Per Day als Endurance-Kennzahl pro Tag ueber Garantiedauer.",
+      "example": "Enterprise-SSD-Auswahl fuer taeglich hohe Schreiblasten."
+    },
+    {
+      "id": "wear_leveling",
+      "name": "Wear Leveling",
+      "description": "Verteilt Schreibvorgaenge auf Speicherzellen zur gleichmaessigen Abnutzung.",
+      "example": "SSD-Lebensdauer wird bei verteilter Last stabiler gehalten."
+    },
+    {
+      "id": "trim",
+      "name": "TRIM",
+      "description": "Informiert SSD ueber freigegebene Bloecke fuer effizienteres internes Management.",
+      "example": "Performance bleibt nach vielen Loesch-/Schreibzyklen stabiler."
+    },
+    {
+      "id": "smart",
+      "name": "SMART",
+      "description": "Laufwerksdiagnosewerte zur fruehen Erkennung moeglicher Ausfallrisiken.",
+      "example": "Warnung bei steigenden reallokierten Sektoren loest Austausch aus."
+    },
+    {
+      "id": "thermal_throttling",
+      "name": "Thermal Throttling",
+      "description": "Leistungsreduktion eines Laufwerks bei kritischer Temperatur.",
+      "example": "NVMe sinkt unter Dauerlast im Durchsatz ohne ausreichende Kuehlung."
+    },
+    {
+      "id": "raid0",
+      "name": "RAID 0",
+      "description": "Striping fuer Performance ohne Redundanz.",
+      "example": "Schneller Scratch-Speicher fuer nichtkritische temporaere Daten."
+    },
+    {
+      "id": "raid1",
+      "name": "RAID 1",
+      "description": "Spiegelung fuer hohe Verfuegbarkeit bei einzelner Laufwerksstoerung.",
+      "example": "Kleiner Server bleibt nach Plattenausfall lauffaehig."
+    },
+    {
+      "id": "raid5",
+      "name": "RAID 5",
+      "description": "Paritaetsbasiertes RAID mit Ausfallschutz einer Platte und Write-Overhead.",
+      "example": "Dateiserver mit Read-Fokus und guter Kapazitaetsausnutzung."
+    },
+    {
+      "id": "raid10",
+      "name": "RAID 10",
+      "description": "Kombination aus Striping und Mirroring fuer Performance plus Redundanz.",
+      "example": "Produktivsystem mit hohen Lasten und gleichzeitigem Verfuegbarkeitsbedarf."
+    },
+    {
+      "id": "rebuild",
+      "name": "RAID-Rebuild",
+      "description": "Wiederherstellung redundanter Daten nach Laufwerksaustausch.",
+      "example": "Waehren des Rebuilds steigt Risiko und Leistung kann sinken."
+    },
+    {
+      "id": "hot_spare",
+      "name": "Hot Spare",
+      "description": "Reserve-Laufwerk, das bei Ausfall automatisch in den Verbund aufgenommen wird.",
+      "example": "Rebuild startet ohne manuellen Einsatz sofort nach Defekt."
+    },
+    {
+      "id": "write_cache",
+      "name": "Write Cache",
+      "description": "Zwischenspeicher fuer Schreibvorgaenge mit Performancevorteil und ggf. Integritaetsrisiko.",
+      "example": "Ohne Stromschutz kann ungesicherter Cache Datenverlust verursachen."
+    },
+    {
+      "id": "queue_depth",
+      "name": "Queue Depth",
+      "description": "Anzahl gleichzeitig ausstehender I/O-Auftraege am Laufwerk.",
+      "example": "Hohe Queue Depth zeigt Lastspitzen und beeinflusst Latenz."
+    },
+    {
+      "id": "partition_alignment",
+      "name": "Partition Alignment",
+      "description": "Korrekte Ausrichtung von Partitionen auf physische Speichergrenzen.",
+      "example": "Fehlausrichtung fuehrt zu unnoetigen Zusatzschreibvorgaengen."
+    },
+    {
+      "id": "filesystem_overhead",
+      "name": "Dateisystem-Overhead",
+      "description": "Metadaten- und Strukturkosten, die effektive Performance beeinflussen.",
+      "example": "Viele kleine Dateien belasten Dateisystem und Storage unterschiedlich stark."
+    },
+    {
+      "id": "snapshot",
+      "name": "Snapshot",
+      "description": "Zeitpunktabbild eines Datenzustands fuer schnelle Ruecksicherung innerhalb desselben Systems.",
+      "example": "Rollback nach fehlerhaftem Update innerhalb des Storage-Systems."
+    },
+    {
+      "id": "backup",
+      "name": "Backup",
+      "description": "Getrennte Datensicherung fuer Wiederherstellung bei logischen und physischen Schadensfaellen.",
+      "example": "Restore nach Ransomware oder versehentlichem Loeschen."
+    },
+    {
+      "id": "rpo",
+      "name": "RPO",
+      "description": "Maximal tolerierbarer Datenverlust in Zeitform.",
+      "example": "RPO 15 Minuten erfordert entsprechend haeufige Sicherung/Replikation."
+    },
+    {
+      "id": "rto",
+      "name": "RTO",
+      "description": "Maximal tolerierbare Wiederanlaufzeit nach Ausfall.",
+      "example": "Kritischer Service muss innerhalb von 30 Minuten wieder verfuegbar sein."
+    },
+    {
+      "id": "scrubbing",
+      "name": "Data Scrubbing",
+      "description": "Regelmaessige Integritaetspruefung gespeicherter Daten und Paritaet.",
+      "example": "Frueherkennung stiller Datenfehler vor echtem Restore-Fall."
+    },
+    {
+      "id": "nvme_namespaces",
+      "name": "NVMe Namespace",
+      "description": "Logische Unterteilung eines NVMe-Devices in getrennte adressierbare Bereiche.",
+      "example": "Mehrere Workloads teilen ein physisches NVMe-Laufwerk sauber getrennt."
+    },
+    {
+      "id": "qlc_tlc",
+      "name": "TLC vs QLC",
+      "description": "Unterschiedliche NAND-Typen mit Trade-off aus Preis, Endurance und Performanceverhalten.",
+      "example": "QLC fuer guenstige Kapazitaet, TLC fuer robustere Schreiblasten."
+    },
+    {
+      "id": "staging_tier",
+      "name": "Storage Tiering",
+      "description": "Daten werden je Zugriffsmuster auf schnelle oder guenstige Medien verteilt.",
+      "example": "Heisse Daten auf NVMe, kalte Archivdaten auf HDD."
+    }
+  ]
+}

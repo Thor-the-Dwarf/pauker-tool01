@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/6/2026, 11:29:00 PM
+ * AUTOMATISCH GENERIERT am 3/6/2026, 11:40:10 PM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -67243,98 +67243,340 @@ window.DATABASE_INDEX = [
                         "isFolder": false,
                         "kind": "json",
                         "data": {
-                          "game_type": "quick_quiz",
-                          "title": "Quick-Quiz – Mängel und Mängelarten (7.7)",
-                          "introText": "Klick auf „Start“, um das Quick-Quiz zu Mängelarten zu starten.",
-                          "sublineText": "Wähle die passende Mängelart zur Aussage.",
-                          "timePerQuestionSeconds": 12,
-                          "answerLabels": [
-                            "Schlechtleistung",
-                            "Falschlieferung",
-                            "Minderlieferung",
-                            "alle",
-                            "keine"
-                          ],
-                          "questions": [
+                          "game_type": "what_and_why",
+                          "title": "What & Why – Mängel und Mängelarten (7.7)",
+                          "description": "Schritt 1: passende Mängelart wählen (What) · Schritt 2: passende Begründungen markieren (Why).",
+                          "topic": "Mängelart",
+                          "cases": [
                             {
-                              "text": "Die Lieferung ist unvollständig: Es fehlen Teile der vereinbarten Hardware/Leistung.",
-                              "correct": "Minderlieferung"
+                              "id": "c01",
+                              "profile": "Beim Kunden wurde statt der bestellten Windows-Pro-Edition die Home-Edition ausgeliefert.",
+                              "tags": [
+                                "Lieferinhalt",
+                                "Abweichung",
+                                "Software"
+                              ],
+                              "options": [
+                                {
+                                  "id": "falschlieferung",
+                                  "label": "Falschlieferung",
+                                  "isCorrect": true,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Geliefert wurde nicht das vertraglich vereinbarte Produkt.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Die Art/Version der Lieferung ist falsch.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Es fehlt keine Stückzahl, sondern der Inhalt ist falsch.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Das ist nur Minderlieferung, weil weniger Funktionen vorhanden sind.",
+                                      "correct": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "schlechtleistung",
+                                  "label": "Schlechtleistung",
+                                  "isCorrect": false,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Schlechtleistung läge vor, wenn das richtige Produkt mangelhaft funktioniert.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Hier ist primär der Liefergegenstand falsch, nicht nur die Qualität.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Falsche Edition ist automatisch Schlechtleistung und nie Falschlieferung.",
+                                      "correct": false
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Für die Einordnung zählt zuerst, was konkret bestellt war.",
+                                      "correct": true
+                                    }
+                                  ]
+                                }
+                              ],
+                              "solution": "Falschlieferung: Geliefert wurde die falsche Edition. Schlechtleistung wäre das passende Produkt mit mangelhafter Funktion."
                             },
                             {
-                              "text": "Es wurde etwas anderes geliefert als vereinbart (z. B. falsche Version, falsches Produkt, falsches Paket).",
-                              "correct": "Falschlieferung"
+                              "id": "c02",
+                              "profile": "Es wurden 8 Laptops bestellt, aber nur 6 geliefert.",
+                              "tags": [
+                                "Menge",
+                                "Hardware",
+                                "Vollständigkeit"
+                              ],
+                              "options": [
+                                {
+                                  "id": "minderlieferung",
+                                  "label": "Minderlieferung",
+                                  "isCorrect": true,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Die vereinbarte Menge wurde nicht vollständig geliefert.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Das Problem liegt in der Stückzahl (zu wenig).",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Die Lieferung ist mengenmäßig unvollständig.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Minderlieferung bedeutet immer falsches Produkt statt zu geringer Menge.",
+                                      "correct": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "falschlieferung",
+                                  "label": "Falschlieferung",
+                                  "isCorrect": false,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Falschlieferung würde vorliegen, wenn etwas anderes als bestellt geliefert wurde.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Bei gleicher Ware, aber zu geringer Menge, spricht man vorrangig von Minderlieferung.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Nur die Zahl der Geräte ist abweichend, nicht zwingend der Gerätetyp.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Jede Minderlieferung ist automatisch Falschlieferung.",
+                                      "correct": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "solution": "Minderlieferung: Es fehlt ein Teil der bestellten Menge."
                             },
                             {
-                              "text": "Die Leistung ist mangelhaft: vereinbarte Qualität/Funktion wird nicht erreicht (z. B. Feature fehlt, Fehler im System).",
-                              "correct": "Schlechtleistung"
+                              "id": "c03",
+                              "profile": "Die gelieferte Software stürzt regelmäßig ab und erfüllt den vereinbarten Use Case nicht.",
+                              "tags": [
+                                "Qualität",
+                                "Funktion",
+                                "Abnahme"
+                              ],
+                              "options": [
+                                {
+                                  "id": "schlechtleistung",
+                                  "label": "Schlechtleistung",
+                                  "isCorrect": true,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Die Leistung ist qualitativ mangelhaft und nicht vertragsgemäß nutzbar.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Die geschuldete Funktionalität wird nicht erreicht.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Es geht um Qualität/Funktion und nicht primär um Menge.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Bei Schlechtleistung liegt immer automatisch Minderlieferung vor.",
+                                      "correct": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "minderlieferung",
+                                  "label": "Minderlieferung",
+                                  "isCorrect": false,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Minderlieferung betrifft fehlende Mengen oder fehlende Teile.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Hier wurde zwar geliefert, aber die Leistung ist mangelhaft.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Funktionsmängel sind typischerweise Schlechtleistung.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Wenn Software Fehler hat, ist das immer nur ein Mengenproblem.",
+                                      "correct": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "solution": "Schlechtleistung: Das richtige Produkt liefert nicht die vereinbarte Qualität/Funktion."
                             },
                             {
-                              "text": "Beispiel: Statt 'Windows Pro' wurde 'Windows Home' ausgeliefert.",
-                              "correct": "Falschlieferung"
+                              "id": "c04",
+                              "profile": "Im gelieferten Paket fehlt das vereinbarte Netzteil, die restliche Hardware ist korrekt.",
+                              "tags": [
+                                "Zubehör",
+                                "Vollständigkeit",
+                                "Hardware"
+                              ],
+                              "options": [
+                                {
+                                  "id": "minderlieferung",
+                                  "label": "Minderlieferung",
+                                  "isCorrect": true,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Ein vereinbarter Bestandteil wurde nicht mitgeliefert.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Die Lieferung ist nicht vollständig.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Fehlende Komponenten sind ein klassischer Mengen-/Vollständigkeitsmangel.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Wenn nur Zubehör fehlt, ist es niemals Minderlieferung.",
+                                      "correct": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "falschlieferung",
+                                  "label": "Falschlieferung",
+                                  "isCorrect": false,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Falschlieferung ist primaer: etwas anderes als bestellt.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Hier fehlt ein Teil, statt dass ein anderer Artikel geliefert wurde.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Der Hauptfehler ist Unvollständigkeit der Lieferung.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Jedes fehlende Teil ist automatisch Falschlieferung.",
+                                      "correct": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "solution": "Minderlieferung: Ein vereinbarter Bestandteil fehlt (unvollständige Lieferung)."
                             },
                             {
-                              "text": "Beispiel: Es wurden 8 Laptops bestellt, aber nur 6 geliefert.",
-                              "correct": "Minderlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Die Software stürzt ab und erfüllt den vereinbarten Use Case nicht.",
-                              "correct": "Schlechtleistung"
-                            },
-                            {
-                              "text": "Beispiel: Das gelieferte Lizenzpaket passt nicht zur vereinbarten Anzahl Nutzer/Edition.",
-                              "correct": "Falschlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Im Paket fehlt das Netzteil oder das passende Kabel, obwohl es vereinbart war.",
-                              "correct": "Minderlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Schnittstelle X funktioniert nicht, obwohl sie zugesichert/vertraglich vereinbart war.",
-                              "correct": "Schlechtleistung"
-                            },
-                            {
-                              "text": "Wenn ein Kunde sagt 'es ist da, aber es kann nicht, was es soll', ist das primär diese Mängelart.",
-                              "correct": "Schlechtleistung"
-                            },
-                            {
-                              "text": "Wenn ein Kunde sagt 'das ist das falsche Produkt/der falsche Vertrag/die falsche Edition', ist das primär diese Mängelart.",
-                              "correct": "Falschlieferung"
-                            },
-                            {
-                              "text": "Wenn ein Kunde sagt 'es fehlt etwas, die Menge stimmt nicht', ist das primär diese Mängelart.",
-                              "correct": "Minderlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Statt 32 GB RAM wurden 16 GB geliefert, obwohl 32 GB bestellt waren.",
-                              "correct": "Minderlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Es wurde eine Datenbank-Community-Edition geliefert, vereinbart war Enterprise.",
-                              "correct": "Falschlieferung"
-                            },
-                            {
-                              "text": "Beispiel: Die Anwendung ist extrem langsam und dadurch im Betrieb nicht sinnvoll nutzbar.",
-                              "correct": "Schlechtleistung"
-                            },
-                            {
-                              "text": "Alle drei Mängelarten sind typische Abweichungen vom Vertrag: falsch, zu wenig oder qualitativ schlecht.",
-                              "correct": "alle"
-                            },
-                            {
-                              "text": "Wenn die vereinbarte Funktionalität fehlt, ist das genau diese Mängelart.",
-                              "correct": "Schlechtleistung"
-                            },
-                            {
-                              "text": "Wenn statt des bestellten Softwarepakets ein anderes ausgeliefert wird, ist das genau diese Mängelart.",
-                              "correct": "Falschlieferung"
-                            },
-                            {
-                              "text": "Wenn nur Teile der Hardware geliefert werden, ist das genau diese Mängelart.",
-                              "correct": "Minderlieferung"
-                            },
-                            {
-                              "text": "Für die Reklamation ist es hilfreich, die Mängelart sauber zu benennen – das gilt für alle hier genannten.",
-                              "correct": "alle"
+                              "id": "c05",
+                              "profile": "Statt der bestellten Enterprise-Datenbank wurde die Community-Edition ausgeliefert.",
+                              "tags": [
+                                "Lizenz",
+                                "Edition",
+                                "Vertrag"
+                              ],
+                              "options": [
+                                {
+                                  "id": "falschlieferung",
+                                  "label": "Falschlieferung",
+                                  "isCorrect": true,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Geliefert wurde eine andere Edition als bestellt.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Die vertraglich vereinbarte Leistung wurde durch ein anderes Produkt ersetzt.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Die Lieferung weicht im Inhalt vom Auftrag ab.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Eine falsche Edition ist nie Falschlieferung.",
+                                      "correct": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "schlechtleistung",
+                                  "label": "Schlechtleistung",
+                                  "isCorrect": false,
+                                  "whys": [
+                                    {
+                                      "id": "w1",
+                                      "text": "Schlechtleistung bedeutet eher: richtig geliefert, aber mangelhaft umgesetzt.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w2",
+                                      "text": "Hier ist bereits der Liefergegenstand selbst nicht der bestellte.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w3",
+                                      "text": "Zur Einordnung ist entscheidend, was im Vertrag spezifiziert war.",
+                                      "correct": true
+                                    },
+                                    {
+                                      "id": "w4",
+                                      "text": "Schlechtleistung und Falschlieferung sind immer identisch.",
+                                      "correct": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "solution": "Falschlieferung: Statt der bestellten Edition wurde eine andere Edition geliefert."
                             }
                           ]
                         }
@@ -117308,6 +117550,2602 @@ window.DATABASE_INDEX = [
                                   "hotkey": "12",
                                   "text": "Kann es je nach Variante auch die Performance erhöhen?",
                                   "attributeKey": "can_improve_performance"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02",
+                        "name": "Level02",
+                        "isFolder": true,
+                        "children": [
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02/Festplatten AP1-EG02.json",
+                            "name": "Festplatten AP1-EG02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "escape_game",
+                              "schema_version": "1.0",
+                              "title": "Mini-Escape-Room – Festplatten (AP1) Level 2",
+                              "topic": "HDD/SSD/NVMe, IOPS/Latenz, TBW, SMART, RAID, Backup-Abgrenzung",
+                              "estimated_minutes": 55,
+                              "sections": [
+                                {
+                                  "id": "media-selection-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 1: Speichermedium passend waehlen",
+                                  "subtitle": "Ordne das Szenario dem sinnvollsten Medium zu.",
+                                  "hintDefault": "HDD fuer Kapazitaet, SATA-SSD fuer guenstiges Systemupgrade, NVMe fuer hohe IOPS und geringe Latenz.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "hdd",
+                                      "label": "HDD",
+                                      "hint": "guenstig pro GB"
+                                    },
+                                    {
+                                      "zone": "sata_ssd",
+                                      "label": "SSD (SATA)",
+                                      "hint": "alltagsschnell und kompatibel"
+                                    },
+                                    {
+                                      "zone": "nvme_ssd",
+                                      "label": "SSD (NVMe)",
+                                      "hint": "maximale IOPS/Latenz"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "m1",
+                                      "text": "Archivdaten mit seltenen Zugriffen und grosser Kapazitaet",
+                                      "correctZone": "hdd"
+                                    },
+                                    {
+                                      "id": "m2",
+                                      "text": "Alter Office-PC soll mit geringem Budget schneller starten",
+                                      "correctZone": "sata_ssd"
+                                    },
+                                    {
+                                      "id": "m3",
+                                      "text": "VM-Host mit vielen kleinen Random-I/O-Zugriffen",
+                                      "correctZone": "nvme_ssd"
+                                    },
+                                    {
+                                      "id": "m4",
+                                      "text": "Backupziel mit Fokus auf Euro pro TB",
+                                      "correctZone": "hdd"
+                                    },
+                                    {
+                                      "id": "m5",
+                                      "text": "Laptop ohne PCIe-Option, aber mit SATA-Slot",
+                                      "correctZone": "sata_ssd"
+                                    },
+                                    {
+                                      "id": "m6",
+                                      "text": "Build-Server mit vielen parallelen Schreib-/Leselasten",
+                                      "correctZone": "nvme_ssd"
+                                    },
+                                    {
+                                      "id": "m7",
+                                      "text": "Mechanik und Stoessempfindlichkeit sind in Betrieb kritisch",
+                                      "correctZone": "sata_ssd"
+                                    },
+                                    {
+                                      "id": "m8",
+                                      "text": "Datenbank-Latenz soll deutlich sinken",
+                                      "correctZone": "nvme_ssd"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "metrics-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Raetsel 2: Kennzahlen richtig deuten",
+                                  "subtitle": "IOPS, Latenz, Durchsatz und TBW auseinanderhalten.",
+                                  "hintDefault": "Viele kleine Zugriffe -> IOPS/Latenz. Grosse lineare Transfers -> Durchsatz. Haltbarkeit -> TBW.",
+                                  "questions": [
+                                    {
+                                      "id": "q1",
+                                      "text": "1. Welche Kennzahl ist am wichtigsten fuer viele kleine Datenbankzugriffe?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "IOPS und Latenz"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Nur Kapazitaet in TB"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Dateiname"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "q2",
+                                      "text": "2. Wofuer steht TBW bei SSDs?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Gesamte erlaubte Schreibmenge ueber die Lebensdauer"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Controller-Takt"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Anzahl maximaler Partitionen"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "q3",
+                                      "text": "3. Welche Aussage ist korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Hoher sequentieller Durchsatz bedeutet automatisch beste Random-I/O-Performance."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Durchsatz und IOPS beschreiben unterschiedliche Lastprofile."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "TBW ersetzt jede Performance-Messung."
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "raid-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 3: RAID-Level einordnen",
+                                  "subtitle": "Ordne Aussagen zu RAID 0/1/5/10.",
+                                  "hintDefault": "RAID 0: schnell ohne Redundanz. RAID 1: Spiegelung. RAID 5: Paritaet. RAID 10: Spiegel + Striping.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "raid0",
+                                      "label": "RAID 0",
+                                      "hint": "Performance, kein Schutz"
+                                    },
+                                    {
+                                      "zone": "raid1",
+                                      "label": "RAID 1",
+                                      "hint": "Spiegelung"
+                                    },
+                                    {
+                                      "zone": "raid5",
+                                      "label": "RAID 5",
+                                      "hint": "Paritaet, 1 Ausfall"
+                                    },
+                                    {
+                                      "zone": "raid10",
+                                      "label": "RAID 10",
+                                      "hint": "Performance + Redundanz"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "r1",
+                                      "text": "Ausfall einer Platte fuehrt direkt zu Datenverlust",
+                                      "correctZone": "raid0"
+                                    },
+                                    {
+                                      "id": "r2",
+                                      "text": "Nutzbare Kapazitaet bei zwei gleich grossen Platten etwa halbiert",
+                                      "correctZone": "raid1"
+                                    },
+                                    {
+                                      "id": "r3",
+                                      "text": "Paritaetsberechnung kann Schreiblast bremsen",
+                                      "correctZone": "raid5"
+                                    },
+                                    {
+                                      "id": "r4",
+                                      "text": "Mindestens vier Laufwerke fuer Standard-Setup",
+                                      "correctZone": "raid10"
+                                    },
+                                    {
+                                      "id": "r5",
+                                      "text": "Primaer fuer temporaeren Speed ohne Ausfallschutz",
+                                      "correctZone": "raid0"
+                                    },
+                                    {
+                                      "id": "r6",
+                                      "text": "Einfaches Hochverfuegbarkeits-Setup fuer kleine Server",
+                                      "correctZone": "raid1"
+                                    },
+                                    {
+                                      "id": "r7",
+                                      "text": "Waehlt man oft bei Read-lastigen Dateiservern",
+                                      "correctZone": "raid5"
+                                    },
+                                    {
+                                      "id": "r8",
+                                      "text": "Kombiniert Striping und Mirroring",
+                                      "correctZone": "raid10"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "selection-capital-l2",
+                                  "type": "capital",
+                                  "title": "Raetsel 4: Professionelle Speicherentscheidung",
+                                  "subtitle": "Bringe den Ablauf in die fachlich richtige Reihenfolge.",
+                                  "hintDefault": "Anforderungen zuerst, dann Lastprofil, dann Technik-/Kostenabgleich und Testbetrieb.",
+                                  "rows": [
+                                    {
+                                      "key": "anforderung",
+                                      "label": "Kapazitaet, Verfuegbarkeit, RTO/RPO und Budget erfassen",
+                                      "correct": "1",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "profil",
+                                      "label": "I/O-Profil bestimmen (Random vs sequentiell, Read/Write-Anteil)",
+                                      "correct": "2",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "medium",
+                                      "label": "HDD/SATA-SSD/NVMe und RAID-Level vorwaehlen",
+                                      "correct": "3",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "endurance",
+                                      "label": "TBW/Endurance, SMART und thermische Randbedingungen pruefen",
+                                      "correct": "4",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "pilot",
+                                      "label": "Pilot mit Last-/Failover-/Restore-Tests durchfuehren",
+                                      "correct": "5",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "betrieb",
+                                      "label": "Produktiv mit Monitoring, Rebuild-Runbook und Backup-Strategie starten",
+                                      "correct": "6",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "backup-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Raetsel 5: RAID ist nicht Backup",
+                                  "subtitle": "Trenne Verfuegbarkeit von Datensicherung.",
+                                  "hintDefault": "RAID hilft gegen Laufwerksausfall, Backup hilft gegen Loeschen, Malware, Korruption und Standortverlust.",
+                                  "questions": [
+                                    {
+                                      "id": "b1",
+                                      "text": "1. Welche Aussage ist korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "RAID ersetzt ein Backup vollstaendig."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "RAID erhoeht Verfuegbarkeit, ersetzt aber kein Backup gegen logische Fehler."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Backup ist nur bei HDD noetig, nicht bei SSD."
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    },
+                                    {
+                                      "id": "b2",
+                                      "text": "2. Welches Risiko deckt RAID typischerweise nicht ab?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Versehentliches Loeschen"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Ausfall einer einzelnen Platte bei geeignetem RAID-Level"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Kurzfristige Verfuegbarkeit bei Defekt"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "b3",
+                                      "text": "3. Was ist AP1-fachlich richtig?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Backup- und Restore-Test gehoeren zur Speicherstrategie."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "SMART-Werte sind fuer Ausfallvorsorge bedeutungslos."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "TBW ist bei Write-intensiven Systemen irrelevant."
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "smart-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 6: Monitoring-Signal einordnen",
+                                  "subtitle": "Ordne das Signal der wahrscheinlichsten Risikoart zu.",
+                                  "hintDefault": "Endurance, Performance, Integritaet und Betrieb trennen.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "endurance",
+                                      "label": "Endurance-Risiko",
+                                      "hint": "Verschleiss"
+                                    },
+                                    {
+                                      "zone": "performance",
+                                      "label": "Performance-Risiko",
+                                      "hint": "Latenz/Durchsatz"
+                                    },
+                                    {
+                                      "zone": "integrity",
+                                      "label": "Integritaets-Risiko",
+                                      "hint": "Datenfehler"
+                                    },
+                                    {
+                                      "zone": "operations",
+                                      "label": "Betriebs-Risiko",
+                                      "hint": "Prozess/Verfuegbarkeit"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "s1",
+                                      "text": "SSD-Lebensdauerindikator naehert sich kritischem Grenzwert",
+                                      "correctZone": "endurance"
+                                    },
+                                    {
+                                      "id": "s2",
+                                      "text": "NVMe drosselt unter Last wegen hoher Temperatur",
+                                      "correctZone": "performance"
+                                    },
+                                    {
+                                      "id": "s3",
+                                      "text": "Wachsende Anzahl reallokierter Sektoren",
+                                      "correctZone": "integrity"
+                                    },
+                                    {
+                                      "id": "s4",
+                                      "text": "Kein dokumentiertes Rebuild-Runbook bei RAID-Ausfall",
+                                      "correctZone": "operations"
+                                    },
+                                    {
+                                      "id": "s5",
+                                      "text": "Queue-Latenz steigt bei Spitzenlast stark an",
+                                      "correctZone": "performance"
+                                    },
+                                    {
+                                      "id": "s6",
+                                      "text": "Backup-Tests fehlen seit Monaten",
+                                      "correctZone": "operations"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "final-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Finale: AP1-Speicherentscheidung",
+                                  "subtitle": "Waehle die robusteste Gesamtbewertung.",
+                                  "hintDefault": "Gute Entscheidungen verbinden Lastprofil, Ausfallschutz, Kosten und Betrieb.",
+                                  "questions": [
+                                    {
+                                      "id": "f1",
+                                      "text": "1. Welche Gesamtstrategie ist fachlich am besten?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Ein einziges Medium fuer alle Workloads erzwingen"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Speicher je Lastprofil waehlen, RAID und Backup kombiniert planen"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Nur maximalen Durchsatz betrachten"
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    },
+                                    {
+                                      "id": "f2",
+                                      "text": "2. Was trifft fuer Write-intensive Systeme zu?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "TBW/Endurance und Temperaturverhalten sind wichtige Auswahlkriterien"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "TBW ist nur Marketing"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "SMART kann ignoriert werden"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "f3",
+                                      "text": "3. Welche Aussage ist korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "IOPS ist bei vielen kleinen Random-I/O-Operationen zentral"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "RAID 0 bietet die beste Datensicherheit"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "HDD hat typischerweise die geringste Latenz"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02/Festplatten AP1-MP02.json",
+                            "name": "Festplatten AP1-MP02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "matching_puzzle",
+                              "title": "Festplatten (AP1) Level 2 – Medien, Kennzahlen und Betrieb",
+                              "schema_version": "1.0",
+                              "subtitle": "Ordne Begriff, fachlich praezise Bedeutung und AP1-Praxisfall korrekt zu.",
+                              "columnTitles": {
+                                "column1": "Begriff",
+                                "column2": "Praezise Bedeutung",
+                                "column3": "Praxisbeispiel"
+                              },
+                              "columnHints": {
+                                "column1": "Waehle den passenden Speicherbegriff.",
+                                "column2": "Trenne Performance, Endurance und Verfuegbarkeit.",
+                                "column3": "Ordne den typischen Einsatzkontext zu."
+                              },
+                              "sets": [
+                                {
+                                  "id": "hdd",
+                                  "name": "HDD",
+                                  "description": "Mechanisches Laufwerk mit guenstigem Preis pro GB, aber hoher Zugriffszeit.",
+                                  "example": "Backupziel fuer grosse Datenmengen mit seltenen Restores."
+                                },
+                                {
+                                  "id": "ssd_sata",
+                                  "name": "SSD (SATA)",
+                                  "description": "Flashbasiertes Laufwerk mit guter Alltagsperformance und SATA-Limit.",
+                                  "example": "Klassisches Office-PC-Upgrade fuer schnelleren Systemstart."
+                                },
+                                {
+                                  "id": "ssd_nvme",
+                                  "name": "SSD (NVMe)",
+                                  "description": "PCIe-basiertes Flashlaufwerk mit sehr niedriger Latenz und hoher Parallelitaet.",
+                                  "example": "VM-Host mit vielen random I/O-Operationen."
+                                },
+                                {
+                                  "id": "iops",
+                                  "name": "IOPS",
+                                  "description": "Anzahl Ein-/Ausgabeoperationen pro Sekunde, relevant fuer viele kleine Zugriffe.",
+                                  "example": "Datenbank mit vielen kleinen Transaktionen wird durch hohe IOPS schneller."
+                                },
+                                {
+                                  "id": "latency",
+                                  "name": "Latenz",
+                                  "description": "Zeit bis zur Bearbeitung einzelner I/O-Anfragen.",
+                                  "example": "Interaktive Anwendungen reagieren traege bei hoher Storage-Latenz."
+                                },
+                                {
+                                  "id": "throughput",
+                                  "name": "Datendurchsatz",
+                                  "description": "Menge sequenziell uebertragener Daten pro Zeiteinheit.",
+                                  "example": "Videoarchivierung profitiert von hohem sequentiellem Durchsatz."
+                                },
+                                {
+                                  "id": "tbw",
+                                  "name": "TBW",
+                                  "description": "Gesamtmenge an Daten, die auf eine SSD geschrieben werden darf.",
+                                  "example": "Write-intensive Logs benoetigen SSD mit hoher TBW-Klasse."
+                                },
+                                {
+                                  "id": "dwpd",
+                                  "name": "DWPD",
+                                  "description": "Drive Writes Per Day als Endurance-Kennzahl pro Tag ueber Garantiedauer.",
+                                  "example": "Enterprise-SSD-Auswahl fuer taeglich hohe Schreiblasten."
+                                },
+                                {
+                                  "id": "wear_leveling",
+                                  "name": "Wear Leveling",
+                                  "description": "Verteilt Schreibvorgaenge auf Speicherzellen zur gleichmaessigen Abnutzung.",
+                                  "example": "SSD-Lebensdauer wird bei verteilter Last stabiler gehalten."
+                                },
+                                {
+                                  "id": "trim",
+                                  "name": "TRIM",
+                                  "description": "Informiert SSD ueber freigegebene Bloecke fuer effizienteres internes Management.",
+                                  "example": "Performance bleibt nach vielen Loesch-/Schreibzyklen stabiler."
+                                },
+                                {
+                                  "id": "smart",
+                                  "name": "SMART",
+                                  "description": "Laufwerksdiagnosewerte zur fruehen Erkennung moeglicher Ausfallrisiken.",
+                                  "example": "Warnung bei steigenden reallokierten Sektoren loest Austausch aus."
+                                },
+                                {
+                                  "id": "thermal_throttling",
+                                  "name": "Thermal Throttling",
+                                  "description": "Leistungsreduktion eines Laufwerks bei kritischer Temperatur.",
+                                  "example": "NVMe sinkt unter Dauerlast im Durchsatz ohne ausreichende Kuehlung."
+                                },
+                                {
+                                  "id": "raid0",
+                                  "name": "RAID 0",
+                                  "description": "Striping fuer Performance ohne Redundanz.",
+                                  "example": "Schneller Scratch-Speicher fuer nichtkritische temporaere Daten."
+                                },
+                                {
+                                  "id": "raid1",
+                                  "name": "RAID 1",
+                                  "description": "Spiegelung fuer hohe Verfuegbarkeit bei einzelner Laufwerksstoerung.",
+                                  "example": "Kleiner Server bleibt nach Plattenausfall lauffaehig."
+                                },
+                                {
+                                  "id": "raid5",
+                                  "name": "RAID 5",
+                                  "description": "Paritaetsbasiertes RAID mit Ausfallschutz einer Platte und Write-Overhead.",
+                                  "example": "Dateiserver mit Read-Fokus und guter Kapazitaetsausnutzung."
+                                },
+                                {
+                                  "id": "raid10",
+                                  "name": "RAID 10",
+                                  "description": "Kombination aus Striping und Mirroring fuer Performance plus Redundanz.",
+                                  "example": "Produktivsystem mit hohen Lasten und gleichzeitigem Verfuegbarkeitsbedarf."
+                                },
+                                {
+                                  "id": "rebuild",
+                                  "name": "RAID-Rebuild",
+                                  "description": "Wiederherstellung redundanter Daten nach Laufwerksaustausch.",
+                                  "example": "Waehren des Rebuilds steigt Risiko und Leistung kann sinken."
+                                },
+                                {
+                                  "id": "hot_spare",
+                                  "name": "Hot Spare",
+                                  "description": "Reserve-Laufwerk, das bei Ausfall automatisch in den Verbund aufgenommen wird.",
+                                  "example": "Rebuild startet ohne manuellen Einsatz sofort nach Defekt."
+                                },
+                                {
+                                  "id": "write_cache",
+                                  "name": "Write Cache",
+                                  "description": "Zwischenspeicher fuer Schreibvorgaenge mit Performancevorteil und ggf. Integritaetsrisiko.",
+                                  "example": "Ohne Stromschutz kann ungesicherter Cache Datenverlust verursachen."
+                                },
+                                {
+                                  "id": "queue_depth",
+                                  "name": "Queue Depth",
+                                  "description": "Anzahl gleichzeitig ausstehender I/O-Auftraege am Laufwerk.",
+                                  "example": "Hohe Queue Depth zeigt Lastspitzen und beeinflusst Latenz."
+                                },
+                                {
+                                  "id": "partition_alignment",
+                                  "name": "Partition Alignment",
+                                  "description": "Korrekte Ausrichtung von Partitionen auf physische Speichergrenzen.",
+                                  "example": "Fehlausrichtung fuehrt zu unnoetigen Zusatzschreibvorgaengen."
+                                },
+                                {
+                                  "id": "filesystem_overhead",
+                                  "name": "Dateisystem-Overhead",
+                                  "description": "Metadaten- und Strukturkosten, die effektive Performance beeinflussen.",
+                                  "example": "Viele kleine Dateien belasten Dateisystem und Storage unterschiedlich stark."
+                                },
+                                {
+                                  "id": "snapshot",
+                                  "name": "Snapshot",
+                                  "description": "Zeitpunktabbild eines Datenzustands fuer schnelle Ruecksicherung innerhalb desselben Systems.",
+                                  "example": "Rollback nach fehlerhaftem Update innerhalb des Storage-Systems."
+                                },
+                                {
+                                  "id": "backup",
+                                  "name": "Backup",
+                                  "description": "Getrennte Datensicherung fuer Wiederherstellung bei logischen und physischen Schadensfaellen.",
+                                  "example": "Restore nach Ransomware oder versehentlichem Loeschen."
+                                },
+                                {
+                                  "id": "rpo",
+                                  "name": "RPO",
+                                  "description": "Maximal tolerierbarer Datenverlust in Zeitform.",
+                                  "example": "RPO 15 Minuten erfordert entsprechend haeufige Sicherung/Replikation."
+                                },
+                                {
+                                  "id": "rto",
+                                  "name": "RTO",
+                                  "description": "Maximal tolerierbare Wiederanlaufzeit nach Ausfall.",
+                                  "example": "Kritischer Service muss innerhalb von 30 Minuten wieder verfuegbar sein."
+                                },
+                                {
+                                  "id": "scrubbing",
+                                  "name": "Data Scrubbing",
+                                  "description": "Regelmaessige Integritaetspruefung gespeicherter Daten und Paritaet.",
+                                  "example": "Frueherkennung stiller Datenfehler vor echtem Restore-Fall."
+                                },
+                                {
+                                  "id": "nvme_namespaces",
+                                  "name": "NVMe Namespace",
+                                  "description": "Logische Unterteilung eines NVMe-Devices in getrennte adressierbare Bereiche.",
+                                  "example": "Mehrere Workloads teilen ein physisches NVMe-Laufwerk sauber getrennt."
+                                },
+                                {
+                                  "id": "qlc_tlc",
+                                  "name": "TLC vs QLC",
+                                  "description": "Unterschiedliche NAND-Typen mit Trade-off aus Preis, Endurance und Performanceverhalten.",
+                                  "example": "QLC fuer guenstige Kapazitaet, TLC fuer robustere Schreiblasten."
+                                },
+                                {
+                                  "id": "staging_tier",
+                                  "name": "Storage Tiering",
+                                  "description": "Daten werden je Zugriffsmuster auf schnelle oder guenstige Medien verteilt.",
+                                  "example": "Heisse Daten auf NVMe, kalte Archivdaten auf HDD."
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02/Festplatten AP1-QQ02.json",
+                            "name": "Festplatten AP1-QQ02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "quick_quiz",
+                              "title": "Quick-Quiz – Festplatten (AP1) Level 2",
+                              "introText": "Ordne jede Aussage dem fachlich passendsten Speicherbegriff zu.",
+                              "sublineText": "Level 2: Medienwahl, Kennzahlen, RAID, Endurance und Betrieb.",
+                              "timePerQuestionSeconds": 24,
+                              "answerLabels": [
+                                "HDD",
+                                "SSD (SATA)",
+                                "SSD (NVMe)",
+                                "IOPS",
+                                "Latenz",
+                                "Datendurchsatz",
+                                "TBW",
+                                "DWPD",
+                                "Wear Leveling",
+                                "TRIM",
+                                "SMART",
+                                "Thermal Throttling",
+                                "RAID 0",
+                                "RAID 1",
+                                "RAID 5",
+                                "RAID 10",
+                                "RAID-Rebuild",
+                                "Hot Spare",
+                                "Write Cache",
+                                "Queue Depth",
+                                "Partition Alignment",
+                                "Dateisystem-Overhead",
+                                "Snapshot",
+                                "Backup",
+                                "RPO",
+                                "RTO",
+                                "Data Scrubbing",
+                                "NVMe Namespace",
+                                "TLC vs QLC",
+                                "Storage Tiering",
+                                "alle",
+                                "keine"
+                              ],
+                              "questions": [
+                                {
+                                  "text": "Mechanisches Laufwerk mit sehr gutem Preis pro TB.",
+                                  "correct": "HDD"
+                                },
+                                {
+                                  "text": "Sinnvoller Upgrade-Kandidat fuer aeltere Systeme mit SATA-Anschluss.",
+                                  "correct": "SSD (SATA)"
+                                },
+                                {
+                                  "text": "PCIe-basierter Flashspeicher mit sehr hoher Parallelitaet.",
+                                  "correct": "SSD (NVMe)"
+                                },
+                                {
+                                  "text": "Kennzahl fuer viele kleine Ein-/Ausgabeoperationen pro Sekunde.",
+                                  "correct": "IOPS"
+                                },
+                                {
+                                  "text": "Messgroesse fuer Reaktionszeit einzelner Speicherzugriffe.",
+                                  "correct": "Latenz"
+                                },
+                                {
+                                  "text": "Wichtiger Wert bei grossen sequentiellen Dateiuebertragungen.",
+                                  "correct": "Datendurchsatz"
+                                },
+                                {
+                                  "text": "Beschreibt die gesamte zulaessige Schreibmenge einer SSD ueber Lebensdauer.",
+                                  "correct": "TBW"
+                                },
+                                {
+                                  "text": "Endurance-Metrik als Anzahl voller Laufwerksbeschreibungen pro Tag.",
+                                  "correct": "DWPD"
+                                },
+                                {
+                                  "text": "Verteilt Schreiblast auf Flashzellen fuer gleichmaessigere Abnutzung.",
+                                  "correct": "Wear Leveling"
+                                },
+                                {
+                                  "text": "Hilft SSD-Controllern, geloeschte Bloecke effizient wiederzuverwenden.",
+                                  "correct": "TRIM"
+                                },
+                                {
+                                  "text": "Liefert Laufwerksgesundheitswerte fuer praeventive Wartung.",
+                                  "correct": "SMART"
+                                },
+                                {
+                                  "text": "Leistungsdrosselung eines Laufwerks bei zu hoher Temperatur.",
+                                  "correct": "Thermal Throttling"
+                                },
+                                {
+                                  "text": "Striping ohne Redundanz, schnell aber ausfallsensitiv.",
+                                  "correct": "RAID 0"
+                                },
+                                {
+                                  "text": "Spiegelung mit hoher Verfuegbarkeit bei Ausfall eines Laufwerks.",
+                                  "correct": "RAID 1"
+                                },
+                                {
+                                  "text": "Paritaetsbasiertes RAID mit Toleranz fuer einen Laufwerksausfall.",
+                                  "correct": "RAID 5"
+                                },
+                                {
+                                  "text": "Kombiniert Mirroring und Striping fuer Performance plus Redundanz.",
+                                  "correct": "RAID 10"
+                                },
+                                {
+                                  "text": "Wiederherstellung der Redundanz nach Laufwerksersatz.",
+                                  "correct": "RAID-Rebuild"
+                                },
+                                {
+                                  "text": "Reserveplatte, die bei Defekt automatisch den Verbund uebernimmt.",
+                                  "correct": "Hot Spare"
+                                },
+                                {
+                                  "text": "Kann Schreibleistung erhoehen, erfordert aber abgesicherte Stromausfallstrategie.",
+                                  "correct": "Write Cache"
+                                },
+                                {
+                                  "text": "Anzahl gleichzeitig wartender I/O-Kommandos am Speicher.",
+                                  "correct": "Queue Depth"
+                                },
+                                {
+                                  "text": "Falsche Ausrichtung kann unnötige Zusatz-I/O erzeugen.",
+                                  "correct": "Partition Alignment"
+                                },
+                                {
+                                  "text": "Viele kleine Dateien koennen durch Metadaten den Speicherpfad belasten.",
+                                  "correct": "Dateisystem-Overhead"
+                                },
+                                {
+                                  "text": "Zeitpunktabbild innerhalb desselben Storage-Systems fuer schnellen Rollback.",
+                                  "correct": "Snapshot"
+                                },
+                                {
+                                  "text": "Getrennte Datensicherung gegen Loeschen, Malware oder Totalschaden.",
+                                  "correct": "Backup"
+                                },
+                                {
+                                  "text": "Maximal tolerierbarer Datenverlust als Zeitspanne.",
+                                  "correct": "RPO"
+                                },
+                                {
+                                  "text": "Maximal tolerierbare Wiederanlaufzeit eines Dienstes.",
+                                  "correct": "RTO"
+                                },
+                                {
+                                  "text": "Regelmaessige Integritaetspruefung von Daten und Paritaet.",
+                                  "correct": "Data Scrubbing"
+                                },
+                                {
+                                  "text": "Logische Unterteilung eines NVMe-Geraets in getrennte Bereiche.",
+                                  "correct": "NVMe Namespace"
+                                },
+                                {
+                                  "text": "Trade-off zwischen Kosten pro GB und Schreibhaltbarkeit bei NAND-Typen.",
+                                  "correct": "TLC vs QLC"
+                                },
+                                {
+                                  "text": "Verteilt heisse und kalte Daten auf unterschiedliche Medienklassen.",
+                                  "correct": "Storage Tiering"
+                                },
+                                {
+                                  "text": "RAID ersetzt ein Backup vollstaendig in allen Ausfallszenarien.",
+                                  "correct": "keine"
+                                },
+                                {
+                                  "text": "Bei Write-intensiven Lasten sind Endurance, Temperatur und Monitoring relevant.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "Hoher sequenzieller Durchsatz bedeutet immer automatisch niedrige Latenz.",
+                                  "correct": "keine"
+                                },
+                                {
+                                  "text": "SMART, Backup-Tests und Rebuild-Runbook gehoeren zur Betriebsreife.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "Fuer viele kleine DB-Zugriffe sind IOPS und Latenz oft wichtiger als reine MB/s.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "Thermal Throttling kann NVMe-Leistung unter Dauerlast reduzieren.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "RAID 0 bietet die hoechste Datensicherheit.",
+                                  "correct": "keine"
+                                },
+                                {
+                                  "text": "Snapshots koennen sinnvoll sein, ersetzen aber keine externe Datensicherung.",
+                                  "correct": "alle"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02/Festplatten AP1-WAW02.json",
+                            "name": "Festplatten AP1-WAW02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "what_and_why",
+                              "title": "What & Why – Festplatten (AP1) Level 2",
+                              "description": "AP1-Vertiefung zu Speicherwahl, Kennzahlen, Endurance, RAID und Betriebsrisiken.",
+                              "cases": [
+                                {
+                                  "id": "fd01",
+                                  "profile": "Ein Fileserver speichert 120 TB Archivdaten. Zugriffe sind selten, Budget pro TB ist kritisch.",
+                                  "tags": [
+                                    "HDD",
+                                    "Kosten",
+                                    "Archiv"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "HDD als primaeres Archivmedium waehlen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "HDD bietet in der Regel den besten Preis pro Kapazitaetseinheit.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Bei seltenen Zugriffen ist hohe Random-I/O-Leistung weniger entscheidend.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "HDD ist grundsaetzlich schneller als NVMe bei kleinen Zugriffen.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Der Anwendungsfall ist kosten- und kapazitaetsgetrieben.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur NVMe nutzen, weil immer am schnellsten",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Technisch schnell, aber bei Archiv-Workloads oft wirtschaftlich unnoetig.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Kosten pro TB steigen deutlich ohne entsprechenden Mehrwert im Use-Case.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "NVMe ist stets die wirtschaftlich beste Wahl fuer jeden Speicherbedarf.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Lastprofil und Budget muessen gemeinsam bewertet werden.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "RAID 0 aus zwei SSDs ohne Backup",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID 0 hat keine Redundanz und erhoeht Ausfallrisiko.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ohne Backup ist der Archivauftrag fachlich nicht abgesichert.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RAID 0 bietet den besten Ausfallschutz fuer Langzeitarchive.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Loesung verfehlt sowohl Sicherheits- als auch Kostenziele.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Bei grosser Kapazitaet und seltenen Zugriffen ist HDD als Archivmedium die passende Primaerentscheidung."
+                                },
+                                {
+                                  "id": "fd02",
+                                  "profile": "Ein Ticketsystem reagiert traege bei vielen gleichzeitigen Nutzern. Monitoring zeigt viele kleine random Reads/Writes.",
+                                  "tags": [
+                                    "IOPS",
+                                    "Latenz",
+                                    "NVMe"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Auf niedrige Latenz und hohe IOPS optimieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Random-I/O-Workloads profitieren stark von IOPS und niedriger Latenz.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "NVMe ist fuer diese Lastklasse meist besser geeignet als HDD/SATA.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Nur sequentieller MB/s-Wert ist hier ausschlaggebend.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Das Monitoringbild passt zu einem I/O-Reaktionszeitproblem.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Kapazitaet vergroessern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Mehr GB beseitigt keinen Random-I/O-Engpass.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Leistungsproblem und Kapazitaetsproblem sind unterschiedliche Ursachen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Kapazitaetserhoehung verbessert immer die IOPS auf allen Medien.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Massnahme adressiert nicht das beobachtete Lastmuster.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Dateinamen kuerzen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Dateinamenlaenge ist hier nicht der dominante Performancefaktor.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "I/O-Subsystem und Zugriffsmuster bleiben unveraendert.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Kuerzere Dateinamen loesen random I/O-Bottlenecks vollstaendig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Ursachennah sind Storage- und Architekturmassnahmen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Korrekt ist die Optimierung auf IOPS/Latenz, typischerweise mit NVMe-geeignetem Storage-Design."
+                                },
+                                {
+                                  "id": "fd03",
+                                  "profile": "Ein Log-Analyse-System schreibt taeglich sehr hohe Datenmengen. Nach kurzer Zeit treten SSD-Ausfaelle auf.",
+                                  "tags": [
+                                    "TBW",
+                                    "Endurance",
+                                    "Monitoring"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Endurance-Klasse (TBW/DWPD) und Schreibprofil passend waehlen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Write-intensive Systeme brauchen SSDs mit ausreichender Endurance-Reserve.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "TBW/DWPD sind genau fuer solche Lasten zentrale Auswahlkriterien.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "TBW hat nichts mit Lebensdauer zu tun.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "SMART- und Verschleisswerte sollten proaktiv ueberwacht werden.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur SATA auf NVMe wechseln",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Mehr Leistung loest nicht automatisch Endurance-Probleme.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Auch NVMe kann bei falscher Endurance-Klasse frueh verschleissen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "NVMe garantiert immer unbegrenzte Schreibhaltbarkeit.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Ursache liegt primar bei Verschleissklassifikation und Lastprofil.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "SMART deaktivieren",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Ohne SMART fehlen Fruehwarnungen fuer kritische Laufwerkszustaende.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Fehlererkennung wird dadurch schlechter, nicht besser.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "SMART verursacht die physischen Verschleissprobleme.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Betriebssicherheit verlangt eher mehr statt weniger Monitoring.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Richtig ist die Endurance-gerechte Auswahl inklusive TBW/DWPD-Pruefung und laufender SMART-Ueberwachung."
+                                },
+                                {
+                                  "id": "fd04",
+                                  "profile": "Ein kleiner Produktionsserver soll bei Ausfall einer einzelnen Platte ohne Unterbrechung weiterlaufen.",
+                                  "tags": [
+                                    "RAID 1",
+                                    "Verfuegbarkeit",
+                                    "Betrieb"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "RAID 1 fuer einfache Spiegelung einsetzen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID 1 bietet bei Einzellaufwerksausfall hohe Betriebskontinuitaet.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Konzept und Betrieb sind fuer kleine Umgebungen gut beherrschbar.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RAID 1 verdoppelt die nutzbare Kapazitaet gegenueber Einzelplatte.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Backup bleibt trotz Spiegelung weiterhin noetig.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "RAID 0 verwenden",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID 0 hat keinen Ausfallschutz.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ein Laufwerksdefekt fuehrt typischerweise zum Gesamtausfall des Verbunds.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RAID 0 ist fuer Verfuegbarkeit bei Defekt ideal.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Diese Option widerspricht der Aufgabenanforderung.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Snapshot ohne Redundanz",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Snapshot ist kein Ersatz fuer Laufwerksredundanz im Live-Betrieb.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Bei physischen Defekten hilft Snapshot allein nicht gegen Ausfallzeit.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Snapshot verhindert Hardwareausfall automatisch.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Verfuegbarkeit braucht redundante Hardwarestrategie.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Bei Anforderung 'weiterlaufen trotz Einzelausfall' ist RAID 1 die robuste Standardentscheidung."
+                                },
+                                {
+                                  "id": "fd05",
+                                  "profile": "Ein Team argumentiert: Wir haben RAID 5, daher brauchen wir kein Backup mehr.",
+                                  "tags": [
+                                    "RAID",
+                                    "Backup",
+                                    "Pruefungsfalle"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Aussage zurueckweisen: RAID ersetzt kein Backup",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID adressiert primaer Laufwerksausfaelle, nicht logische Datenverluste.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ransomware, Fehlbedienung und Korruption erfordern getrennte Sicherungen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RAID 5 deckt automatisch alle Datenverlustszenarien ab.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Backup- und Restore-Test sind weiterhin Pflichtbestandteile.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "RAID 5 auf RAID 0 umstellen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID 0 senkt statt erhoeht den Ausfallschutz.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das Backup-Problem wird dadurch nicht geloest.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RAID 0 ist der beste Backup-Ersatz.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Option ist fachlich kontraproduktiv.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur SMART aktivieren",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "SMART ist nuetzlich fuer Fruhwarnungen, aber kein Datensicherungskonzept.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Logische Loeschvorgaenge werden durch SMART nicht rueckgaengig.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "SMART macht Backups unnoetig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Monitoring und Backup adressieren unterschiedliche Risiken.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Die Aussage ist falsch: RAID 5 erhoeht Verfuegbarkeit, ersetzt aber kein Backup."
+                                },
+                                {
+                                  "id": "fd06",
+                                  "profile": "Unter hoher Dauerlast sinkt die NVMe-Leistung nach einigen Minuten deutlich, obwohl keine Fehler gemeldet werden.",
+                                  "tags": [
+                                    "Thermal Throttling",
+                                    "NVMe",
+                                    "Performance"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Thermische Drosselung als Ursache pruefen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "NVMe-Controller reduzieren bei kritischer Temperatur die Leistung zum Selbstschutz.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Symptom passt zu Last-abhaengigem Leistungsverlust nach Aufheizen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Temperatur hat keinen Einfluss auf SSD-Performance.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Kuehlung und Airflow sind daher wichtige Betriebsfaktoren.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Dateisystem wechseln",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Dateisystem kann Einfluss haben, erklaert aber nicht zwingend thermischen Verlauf.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Temperatursignal muss dennoch gezielt geprueft werden.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Dateisystemwahl beseitigt jede thermische Begrenzung.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Root-Cause muss am Hardwareverhalten ausgerichtet sein.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Backup-Frequenz erhoehen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Backup ist wichtig, loest aber kein akutes Performanceproblem durch Hitze.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Der Engpass liegt im Laufwerksbetrieb, nicht im Sicherungsintervall.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Mehr Backups verhindern Thermal Throttling direkt.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Massnahmen muessen Ursache und Zielproblem treffen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Wahrscheinlichste Ursache ist Thermal Throttling; Kuehlkonzept und Temperaturmonitoring sind zu verbessern."
+                                },
+                                {
+                                  "id": "fd07",
+                                  "profile": "Nach Plattenausfall laeuft ein RAID 5 im Rebuild. Das Team fragt nach dem groessten Zusatzrisiko in dieser Phase.",
+                                  "tags": [
+                                    "RAID 5",
+                                    "Rebuild",
+                                    "Risiko"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Erhoehtes Risiko bei weiterem Defekt waehrend Rebuild",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Im degradierten Zustand sinkt Redundanzreserve waehrend Rekonstruktion.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Rebuild belastet verbleibende Laufwerke zusaetzlich.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Rebuild reduziert Risiko auf null.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Monitoring und schnelle Ersatzstrategie sind kritisch.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Keine Risiken, da Paritaet alles immer sofort absichert",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Diese Aussage unterschaetzt die verwundbare Rebuild-Phase.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Performance und Belastung veraendern sich in dieser Zeit deutlich.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Rebuild macht weiteren Defekt technisch unmoeglich.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Risikobewusstsein ist fuer Betriebssicherheit entscheidend.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Partitionsnamen umbenennen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Benennung aendert nichts am technischen Rebuild-Risiko.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Kritisch sind Hardwarezustand, Monitoring und Rebuilddauer.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Umbenennung stabilisiert den Verbund automatisch.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Diese Option hat keinen Bezug zur Ursache.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Das Hauptrisiko ist ein weiterer Defekt waehrend Rebuild; daher schnelle Reaktion und gutes Monitoring."
+                                },
+                                {
+                                  "id": "fd08",
+                                  "profile": "Bei einem Incident zeigt die Analyse: Restore dauerte 9 Stunden, erlaubt sind maximal 2 Stunden.",
+                                  "tags": [
+                                    "RTO",
+                                    "Disaster Recovery",
+                                    "Betrieb"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "RTO-Verletzung und Recovery-Prozess optimieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RTO beschreibt die maximal zulaessige Wiederanlaufzeit.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ist-Zeit 9h gegen Soll 2h zeigt klaren Handlungsbedarf.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "RTO hat nur mit Speicherkapazitaet zu tun.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Runbooks, Testhaeufigkeit und Infrastruktur muessen angepasst werden.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur TBW erhoehen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "TBW betrifft Endurance, nicht direkt Wiederanlaufzeit.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das Incident-Problem liegt im Recovery-Zeitpfad.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Hoehere TBW loest automatisch jedes RTO-Problem.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Massnahmen muessen an der RTO-Ursache ansetzen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur RAID-Level aendern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "RAID kann Verfuegbarkeit beeinflussen, ersetzt aber keinen gesamten Recovery-Prozess.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Backup/Restore-Architektur und Ablauforganisation bleiben zentral.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Jedes RAID garantiert RTO-Einhaltung ohne weitere Massnahmen.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Der Fokus muss auf End-to-End-Wiederherstellung liegen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Es liegt eine RTO-Verletzung vor; Recovery-Design und Restore-Prozesse muessen gezielt verbessert werden."
+                                },
+                                {
+                                  "id": "fd09",
+                                  "profile": "Ein Unternehmen moechte heisse Produktivdaten schnell halten und selten genutzte Altdaten guenstig speichern.",
+                                  "tags": [
+                                    "Tiering",
+                                    "Kosten",
+                                    "Performance"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Storage Tiering einführen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Tiering kombiniert schnelle und guenstige Medien je Zugriffsmuster.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Heisse Daten profitieren von NVMe, kalte Daten koennen auf HDD liegen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Alle Daten auf einem identischen Medium sind immer optimal.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Strategie passt zu Performance- und Kostenzielen zugleich.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur HDD fuer alles",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Kostenguensitg, aber fuer hot data oft zu langsam.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Produktivreaktionszeit kann darunter deutlich leiden.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "HDD ist bei allen Lastprofilen das schnellste Medium.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Option adressiert nur Kosten, nicht Performance.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur NVMe fuer alles",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Technisch schnell, aber fuer kalte Daten oft nicht wirtschaftlich.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Budget und Energieverbrauch koennen unnoetig steigen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "NVMe ist immer die wirtschaftlichste Loesung fuer jedes Datenprofil.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Aufgabenstellung verlangt explizit differenzierte Mediennutzung.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Storage Tiering ist die fachlich passende Strategie fuer gemischte Hot/Cold-Workloads."
+                                },
+                                {
+                                  "id": "fd10",
+                                  "profile": "Ein Team diskutiert 'wir messen nur Durchsatz in MB/s, das reicht fuer jede Speicherentscheidung'.",
+                                  "tags": [
+                                    "Kennzahlen",
+                                    "AP1-Falle",
+                                    "Leistungsanalyse"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Aussage korrigieren: mehrere Kennzahlen kombinieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Random-I/O-Workloads brauchen IOPS/Latenzbetrachtung zusaetzlich zu MB/s.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Endurance und Verfuegbarkeit sind weitere Entscheidungskriterien.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Durchsatz allein deckt jedes Lastprofil vollstaendig ab.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "AP1-reif ist die mehrdimensionale Bewertung statt Einwertdenken.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur MB/s benchmarken",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Einseitiges Benchmarking fuehrt zu Fehlentscheidungen bei Random-Lasten.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Viele Produktivsysteme sind lantenz- und IOPS-sensitiv.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "IOPS und Latenz sind theoretisch und praktisch irrelevant.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Option ignoriert zentrale AP1-Kriterien.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur TBW betrachten",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "TBW beschreibt Endurance, nicht komplette Performancecharakteristik.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ohne I/O-Kennzahlen bleibt Lastpassung unvollstaendig.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "TBW macht jede Verfuegbarkeitsstrategie ueberfluessig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Auch hier fehlt die ganzheitliche Sicht.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Korrekt ist eine kombinierte Bewertung aus Durchsatz, IOPS, Latenz, Endurance, Verfuegbarkeit und Betrieb."
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Festplatten/Level02/Festplatten AP1-WBI02.json",
+                            "name": "Festplatten AP1-WBI02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "wer_bin_ich",
+                              "title": "Wer bin ich? – Festplatten (AP1) Level 2",
+                              "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+                              "leadershipStyles": [
+                                {
+                                  "id": "hdd",
+                                  "name": "HDD",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": true,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "ssd_sata",
+                                  "name": "SSD (SATA)",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": true,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "ssd_nvme",
+                                  "name": "SSD (NVMe)",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": true,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": true,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "iops",
+                                  "name": "IOPS",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": true,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "tbw",
+                                  "name": "TBW",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": true,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "smart",
+                                  "name": "SMART-Monitoring",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": true,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid0",
+                                  "name": "RAID 0",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid1",
+                                  "name": "RAID 1",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid5",
+                                  "name": "RAID 5",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid10",
+                                  "name": "RAID 10",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "backup",
+                                  "name": "Backup",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": true,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": true
+                                  }
+                                },
+                                {
+                                  "id": "storage_tiering",
+                                  "name": "Storage Tiering",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                }
+                              ],
+                              "questions": [
+                                {
+                                  "id": "q01",
+                                  "hotkey": "1",
+                                  "text": "Bin ich ein konkretes Speichermedium?",
+                                  "attributeKey": "is_storage_medium"
+                                },
+                                {
+                                  "id": "q02",
+                                  "hotkey": "2",
+                                  "text": "Bin ich primar eine Kennzahl/Metrik?",
+                                  "attributeKey": "is_metric"
+                                },
+                                {
+                                  "id": "q03",
+                                  "hotkey": "3",
+                                  "text": "Bin ich ein RAID-Level?",
+                                  "attributeKey": "is_raid_level"
+                                },
+                                {
+                                  "id": "q04",
+                                  "hotkey": "4",
+                                  "text": "Geht es bei mir um Schreibhaltbarkeit/Endurance?",
+                                  "attributeKey": "is_endurance_topic"
+                                },
+                                {
+                                  "id": "q05",
+                                  "hotkey": "5",
+                                  "text": "Geht es bei mir um Performancecharakteristik?",
+                                  "attributeKey": "is_performance_topic"
+                                },
+                                {
+                                  "id": "q06",
+                                  "hotkey": "6",
+                                  "text": "Trage ich zu Verfuegbarkeit/Ausfallschutz bei?",
+                                  "attributeKey": "is_availability_topic"
+                                },
+                                {
+                                  "id": "q07",
+                                  "hotkey": "7",
+                                  "text": "Bin ich direkt ein Datensicherungskonzept?",
+                                  "attributeKey": "is_backup_topic"
+                                },
+                                {
+                                  "id": "q08",
+                                  "hotkey": "8",
+                                  "text": "Bin ich eng mit Monitoring/Betriebsbeobachtung verbunden?",
+                                  "attributeKey": "is_monitoring_topic"
+                                },
+                                {
+                                  "id": "q09",
+                                  "hotkey": "9",
+                                  "text": "Basiere ich auf Flash statt Mechanik?",
+                                  "attributeKey": "is_flash_based"
+                                },
+                                {
+                                  "id": "q10",
+                                  "hotkey": "10",
+                                  "text": "Habe ich mechanische Bauteile?",
+                                  "attributeKey": "is_mechanical"
+                                },
+                                {
+                                  "id": "q11",
+                                  "hotkey": "11",
+                                  "text": "Passe ich typischerweise gut zu Archiv/Cold-Data-Workloads?",
+                                  "attributeKey": "fits_archive_usecase"
+                                },
+                                {
+                                  "id": "q12",
+                                  "hotkey": "12",
+                                  "text": "Passe ich gut zu hoher Random-I/O-Last?",
+                                  "attributeKey": "fits_random_io_highload"
+                                },
+                                {
+                                  "id": "q13",
+                                  "hotkey": "13",
+                                  "text": "Spielt Temperaturbeobachtung bei mir oft eine wichtige Rolle?",
+                                  "attributeKey": "requires_temperature_attention"
+                                },
+                                {
+                                  "id": "q14",
+                                  "hotkey": "14",
+                                  "text": "Kann ich Bestandteil eines RAID-Verbunds sein?",
+                                  "attributeKey": "can_be_part_of_raid"
+                                },
+                                {
+                                  "id": "q15",
+                                  "hotkey": "15",
+                                  "text": "Loese ich das Backup-Problem alleine?",
+                                  "attributeKey": "solves_backup_alone"
+                                }
+                              ],
+                              "legalForms": [
+                                {
+                                  "id": "hdd",
+                                  "name": "HDD",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": true,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "ssd_sata",
+                                  "name": "SSD (SATA)",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": true,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "ssd_nvme",
+                                  "name": "SSD (NVMe)",
+                                  "attributes": {
+                                    "is_storage_medium": true,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": true,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": true,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "iops",
+                                  "name": "IOPS",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": true,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "tbw",
+                                  "name": "TBW",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": true,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "smart",
+                                  "name": "SMART-Monitoring",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": true,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": true,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid0",
+                                  "name": "RAID 0",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid1",
+                                  "name": "RAID 1",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid5",
+                                  "name": "RAID 5",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "raid10",
+                                  "name": "RAID 10",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": true,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": false,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": false,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": true,
+                                    "solves_backup_alone": false
+                                  }
+                                },
+                                {
+                                  "id": "backup",
+                                  "name": "Backup",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": false,
+                                    "is_availability_topic": true,
+                                    "is_backup_topic": true,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": false,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": true
+                                  }
+                                },
+                                {
+                                  "id": "storage_tiering",
+                                  "name": "Storage Tiering",
+                                  "attributes": {
+                                    "is_storage_medium": false,
+                                    "is_metric": false,
+                                    "is_raid_level": false,
+                                    "is_endurance_topic": false,
+                                    "is_performance_topic": true,
+                                    "is_availability_topic": false,
+                                    "is_backup_topic": false,
+                                    "is_monitoring_topic": true,
+                                    "is_flash_based": false,
+                                    "is_mechanical": false,
+                                    "fits_archive_usecase": true,
+                                    "fits_random_io_highload": true,
+                                    "requires_temperature_attention": false,
+                                    "can_be_part_of_raid": false,
+                                    "solves_backup_alone": false
+                                  }
                                 }
                               ]
                             }

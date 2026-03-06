@@ -1,0 +1,605 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Festplatten (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+  "leadershipStyles": [
+    {
+      "id": "hdd",
+      "name": "HDD",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": true,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "ssd_sata",
+      "name": "SSD (SATA)",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": true,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "ssd_nvme",
+      "name": "SSD (NVMe)",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": true,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": true,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": true,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "tbw",
+      "name": "TBW",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": true,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": false,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "smart",
+      "name": "SMART-Monitoring",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": true,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid0",
+      "name": "RAID 0",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid1",
+      "name": "RAID 1",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid5",
+      "name": "RAID 5",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid10",
+      "name": "RAID 10",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "backup",
+      "name": "Backup",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": true,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": true
+      }
+    },
+    {
+      "id": "storage_tiering",
+      "name": "Storage Tiering",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Bin ich ein konkretes Speichermedium?",
+      "attributeKey": "is_storage_medium"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Bin ich primar eine Kennzahl/Metrik?",
+      "attributeKey": "is_metric"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Bin ich ein RAID-Level?",
+      "attributeKey": "is_raid_level"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es bei mir um Schreibhaltbarkeit/Endurance?",
+      "attributeKey": "is_endurance_topic"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es bei mir um Performancecharakteristik?",
+      "attributeKey": "is_performance_topic"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Trage ich zu Verfuegbarkeit/Ausfallschutz bei?",
+      "attributeKey": "is_availability_topic"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Bin ich direkt ein Datensicherungskonzept?",
+      "attributeKey": "is_backup_topic"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Bin ich eng mit Monitoring/Betriebsbeobachtung verbunden?",
+      "attributeKey": "is_monitoring_topic"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Basiere ich auf Flash statt Mechanik?",
+      "attributeKey": "is_flash_based"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Habe ich mechanische Bauteile?",
+      "attributeKey": "is_mechanical"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Passe ich typischerweise gut zu Archiv/Cold-Data-Workloads?",
+      "attributeKey": "fits_archive_usecase"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Passe ich gut zu hoher Random-I/O-Last?",
+      "attributeKey": "fits_random_io_highload"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Spielt Temperaturbeobachtung bei mir oft eine wichtige Rolle?",
+      "attributeKey": "requires_temperature_attention"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Kann ich Bestandteil eines RAID-Verbunds sein?",
+      "attributeKey": "can_be_part_of_raid"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Loese ich das Backup-Problem alleine?",
+      "attributeKey": "solves_backup_alone"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "hdd",
+      "name": "HDD",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": true,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "ssd_sata",
+      "name": "SSD (SATA)",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": true,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "ssd_nvme",
+      "name": "SSD (NVMe)",
+      "attributes": {
+        "is_storage_medium": true,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": true,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": true,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "iops",
+      "name": "IOPS",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": true,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "tbw",
+      "name": "TBW",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": true,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": false,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "smart",
+      "name": "SMART-Monitoring",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": true,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": true,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid0",
+      "name": "RAID 0",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid1",
+      "name": "RAID 1",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid5",
+      "name": "RAID 5",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "raid10",
+      "name": "RAID 10",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": true,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": true,
+        "is_backup_topic": false,
+        "is_monitoring_topic": false,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": false,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": true,
+        "solves_backup_alone": false
+      }
+    },
+    {
+      "id": "backup",
+      "name": "Backup",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": false,
+        "is_availability_topic": true,
+        "is_backup_topic": true,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": false,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": true
+      }
+    },
+    {
+      "id": "storage_tiering",
+      "name": "Storage Tiering",
+      "attributes": {
+        "is_storage_medium": false,
+        "is_metric": false,
+        "is_raid_level": false,
+        "is_endurance_topic": false,
+        "is_performance_topic": true,
+        "is_availability_topic": false,
+        "is_backup_topic": false,
+        "is_monitoring_topic": true,
+        "is_flash_based": false,
+        "is_mechanical": false,
+        "fits_archive_usecase": true,
+        "fits_random_io_highload": true,
+        "requires_temperature_attention": false,
+        "can_be_part_of_raid": false,
+        "solves_backup_alone": false
+      }
+    }
+  ]
+}
