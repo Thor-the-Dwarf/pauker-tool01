@@ -1,0 +1,162 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "System-Software (AP1) Level 2 – Boot, Kernel, Dienste, Runtime",
+  "schema_version": "1.0",
+  "subtitle": "Ordne präzise Schichtbegriffe, technische Bedeutung und typische Incident-Szenarien zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Technische Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle die korrekte Schicht oder Komponente.",
+    "column2": "Achte auf Rolle im Start- und Laufzeitpfad.",
+    "column3": "Ordne den passenden AP1-Fall zu."
+  },
+  "sets": [
+    {
+      "id": "firmware_uefi",
+      "name": "Firmware (UEFI/BIOS)",
+      "description": "Initialisiert Hardware und startet den Weg zum Betriebssystem über die Bootkette.",
+      "example": "Nach Plattentausch ist die Bootreihenfolge falsch und das System startet nicht."
+    },
+    {
+      "id": "secure_boot",
+      "name": "Secure Boot",
+      "description": "Prüft signierte Bootkomponenten und blockiert nicht vertrauenswürdige Startpfade.",
+      "example": "Ein unsignierter Bootloader wird im Startprozess abgewiesen."
+    },
+    {
+      "id": "boot_manager",
+      "name": "Boot-Manager/Bootloader",
+      "description": "Lädt den Kernel und übergibt die Kontrolle an das Betriebssystem.",
+      "example": "Im Dual-Boot wird beim Start das gewünschte System ausgewählt."
+    },
+    {
+      "id": "kernel_core",
+      "name": "Kernel",
+      "description": "Zentrale OS-Komponente für Prozessplanung, Speicherverwaltung und privilegierten Hardwarezugriff.",
+      "example": "Unter Last bleiben Prozesse stabil priorisiert durch Scheduler-Entscheidungen."
+    },
+    {
+      "id": "user_mode",
+      "name": "User Mode",
+      "description": "Ausführungsbereich für Anwendungen mit eingeschränkten Rechten gegenüber Kernel Mode.",
+      "example": "Eine abgestürzte App reißt nicht automatisch den gesamten Kernel mit."
+    },
+    {
+      "id": "kernel_mode",
+      "name": "Kernel Mode",
+      "description": "Privilegierter Ausführungsbereich für Kernelkomponenten und kritische Treiberpfade.",
+      "example": "Ein fehlerhafter Kernel-Treiber kann Systemabstürze verursachen."
+    },
+    {
+      "id": "device_driver",
+      "name": "Gerätetreiber",
+      "description": "Übersetzt zwischen OS-Schnittstellen und konkreter Hardwareimplementierung.",
+      "example": "Nach Treiber-Rollback verschwindet ein reproduzierbarer Bluescreen."
+    },
+    {
+      "id": "init_system",
+      "name": "Init-/Service-Manager",
+      "description": "Steuert Startreihenfolge, Abhängigkeiten und Lebenszyklus von Diensten.",
+      "example": "Ein Webdienst startet erst, nachdem Netzwerk- und Storage-Abhängigkeiten verfügbar sind."
+    },
+    {
+      "id": "system_service",
+      "name": "Systemdienst",
+      "description": "Hintergrundprozess für Infrastrukturfunktionen wie Logging, Authentifizierung oder Druck.",
+      "example": "Der Auth-Dienst fällt aus und Anmeldungen schlagen systemweit fehl."
+    },
+    {
+      "id": "logging_stack",
+      "name": "Logging-Stack",
+      "description": "Sammelt, strukturiert und persistiert System-/Anwendungsereignisse für Diagnose und Audit.",
+      "example": "Incident-Ursache wird über korrelierte Events aus mehreren Diensten identifiziert."
+    },
+    {
+      "id": "process_scheduler",
+      "name": "Prozess-Scheduler",
+      "description": "Verteilt CPU-Zeit auf Prozesse/Threads nach Prioritäten und Richtlinien.",
+      "example": "Interaktive Prozesse bleiben reaktionsfähig trotz Batch-Last im Hintergrund."
+    },
+    {
+      "id": "virtual_memory",
+      "name": "Virtueller Speicher",
+      "description": "Abstraktion von physischem RAM mit Adressräumen, Paging und Schutzmechanismen.",
+      "example": "Bei RAM-Druck steigt Paging-Aktivität und System reagiert spürbar träger."
+    },
+    {
+      "id": "filesystem_layer",
+      "name": "Dateisystem-Schicht",
+      "description": "Organisiert Datenhaltung, Rechte und Konsistenz auf Speichermedien.",
+      "example": "Nach unsauberem Shutdown läuft ein Dateisystem-Check zur Konsistenzwiederherstellung."
+    },
+    {
+      "id": "runtime_jvm",
+      "name": "Runtime: JVM",
+      "description": "Managed Runtime für Java-Bytecode mit Laufzeitdiensten und Speicherverwaltung.",
+      "example": "Eine Java-Anwendung verlangt exakt eine unterstützte Runtime-Version."
+    },
+    {
+      "id": "runtime_dotnet",
+      "name": "Runtime: .NET",
+      "description": "Laufzeitumgebung für .NET-Anwendungen inklusive CLR und Bibliotheksökosystem.",
+      "example": "Ohne passendes .NET Runtime-Paket startet die Business-App nicht."
+    },
+    {
+      "id": "middleware_broker",
+      "name": "Middleware (Message Broker/App-Server)",
+      "description": "Entkoppelt Dienste und standardisiert Kommunikations- bzw. Integrationspfade.",
+      "example": "Mehrere Systeme tauschen Auftragsereignisse asynchron über einen Broker aus."
+    },
+    {
+      "id": "api_syscall_boundary",
+      "name": "System-API/Syscall-Grenze",
+      "description": "Definierter Übergang, über den Anwendungen Kernel-Funktionen anfordern.",
+      "example": "Datei- und Netzwerkzugriffe laufen über Systemaufrufe statt Direktzugriff auf Hardware."
+    },
+    {
+      "id": "dependency_management",
+      "name": "Abhängigkeitsmanagement",
+      "description": "Steuert Versionen und Kompatibilität von Libraries/Runtime-Komponenten.",
+      "example": "Ein Update scheitert, weil eine native Bibliothek in inkompatibler Version geladen wird."
+    },
+    {
+      "id": "patch_management",
+      "name": "Patch-Management",
+      "description": "Kontrollierter Prozess zur Verteilung sicherheits- und stabilitätsrelevanter Updates.",
+      "example": "Kernel-Sicherheitsfixes werden nach Pilotphase gestaffelt ausgerollt."
+    },
+    {
+      "id": "rollback_strategy",
+      "name": "Rollback-Strategie",
+      "description": "Geplanter Rückfallpfad bei fehlerhaften Updates zur schnellen Stabilisierung.",
+      "example": "Nach fehlerhaftem Treiberupdate wird auf den letzten stabilen Stand zurückgesetzt."
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "description": "Kombiniert Logs, Metriken und Traces für ganzheitliche Fehleranalyse.",
+      "example": "Latenzspitzen werden über Trace-Ketten vom Frontend bis zum Datenbankdienst nachvollzogen."
+    },
+    {
+      "id": "least_privilege",
+      "name": "Least Privilege",
+      "description": "Berechtigungsprinzip: Komponenten erhalten nur die minimal erforderlichen Rechte.",
+      "example": "Ein Dienstkonto darf nur lesend auf seinen Konfigurationspfad zugreifen."
+    },
+    {
+      "id": "service_hardening",
+      "name": "Service-Hardening",
+      "description": "Härtet Systemdienste durch Restriktionen, Isolierung und sichere Defaults ab.",
+      "example": "Ein Dienst läuft ohne Shell, mit restriktiven Dateisystemrechten und eingeschränkten Capabilities."
+    },
+    {
+      "id": "incident_runbook",
+      "name": "Incident-Runbook",
+      "description": "Vordefinierter Ablauf für Diagnose, Eindämmung, Behebung und Nachdokumentation.",
+      "example": "Beim Ausfall des Auth-Dienstes wird das standardisierte Runbook schrittweise abgearbeitet."
+    }
+  ]
+}

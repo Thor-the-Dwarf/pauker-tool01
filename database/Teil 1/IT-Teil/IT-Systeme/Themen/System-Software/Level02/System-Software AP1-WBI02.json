@@ -1,0 +1,273 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – System-Software (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "firmware_boot_chain",
+      "name": "Firmware & Bootkette",
+      "attributes": {
+        "is_pre_os": true,
+        "is_runtime_phase": false,
+        "is_user_visible_app": false,
+        "controls_hardware_init": true,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": true,
+        "affects_boot_trust_chain": true,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "kernel_core",
+      "name": "Kernel-Kernschicht",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": true,
+        "depends_on_driver_integrity": true,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": true,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "driver_stack",
+      "name": "Treiberstapel",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": true,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": true,
+        "operates_with_privileged_context": true,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "service_manager",
+      "name": "Init-/Service-Manager",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": true,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": true,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "runtime_layer",
+      "name": "Runtime-/Middleware-Schicht",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": true,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": false,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "application_layer",
+      "name": "Anwendungsebene",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": true,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": false,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "observability_stack",
+      "name": "Observability-Stack",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": true,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": false,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": true
+      }
+    },
+    {
+      "id": "security_hardening",
+      "name": "Least Privilege & Service-Hardening",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": true,
+        "focuses_change_rollback": false,
+        "operates_with_privileged_context": true,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": false
+      }
+    },
+    {
+      "id": "patch_and_rollback",
+      "name": "Patch- & Rollback-Management",
+      "attributes": {
+        "is_pre_os": false,
+        "is_runtime_phase": true,
+        "is_user_visible_app": false,
+        "controls_hardware_init": false,
+        "controls_process_memory": false,
+        "depends_on_driver_integrity": false,
+        "manages_service_dependencies": false,
+        "requires_managed_runtime": false,
+        "focuses_telemetry_correlation": false,
+        "focuses_security_hardening": false,
+        "focuses_change_rollback": true,
+        "operates_with_privileged_context": false,
+        "affects_boot_trust_chain": false,
+        "primarily_incident_playbook": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Liegt der Schwerpunkt vor dem OS-Start in der frühen Startphase?",
+      "attributeKey": "is_pre_os"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Befindet sich das Thema in der normalen Betriebs-/Laufzeitphase?",
+      "attributeKey": "is_runtime_phase"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Ist die gesuchte Komponente eine direkt genutzte Benutzeranwendung?",
+      "attributeKey": "is_user_visible_app"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es primär um Hardwareinitialisierung beim Einschalten?",
+      "attributeKey": "controls_hardware_init"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Steht Prozess- und Speicherverwaltung im Zentrum?",
+      "attributeKey": "controls_process_memory"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist die Integrität/Version von Treibern ein Kernrisiko?",
+      "attributeKey": "depends_on_driver_integrity"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um Startreihenfolge und Abhängigkeiten von Systemdiensten?",
+      "attributeKey": "manages_service_dependencies"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Wird eine verwaltete Runtime wie JVM/.NET zwingend benötigt?",
+      "attributeKey": "requires_managed_runtime"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Steht Korrelation von Logs, Metriken und Traces im Vordergrund?",
+      "attributeKey": "focuses_telemetry_correlation"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Dreht es sich um Rechtebegrenzung und Härtung von Diensten?",
+      "attributeKey": "focuses_security_hardening"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist kontrollierter Rückbau nach fehlerhaften Änderungen ein zentrales Merkmal?",
+      "attributeKey": "focuses_change_rollback"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Arbeitet die Komponente typischerweise mit erhöhten Privilegien?",
+      "attributeKey": "operates_with_privileged_context"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Kann das Thema direkt die Vertrauenskette im Bootpfad beeinflussen?",
+      "attributeKey": "affects_boot_trust_chain"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist ein Incident-Runbook typischerweise Kernbestandteil des Themas?",
+      "attributeKey": "primarily_incident_playbook"
+    }
+  ]
+}

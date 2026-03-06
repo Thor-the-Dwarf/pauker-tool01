@@ -1,0 +1,294 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – System-Software (AP1) Level 2",
+  "description": "Schritt 1: richtige Schicht identifizieren (What) · Schritt 2: technisch belastbar begründen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Der Rechner startet nach Update nicht mehr. Firmware-Menü ist erreichbar, aber der bisherige Startdatenträger wird nicht geladen.",
+      "tags": ["Boot", "Firmware", "Boot-Manager"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Bootkette (UEFI/Bootmanager/Startdatenträger) priorisiert prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Erreichbares Firmware-Menü zeigt, dass die frühe Initialisierung grundsätzlich funktioniert.", "correct": true },
+            { "id": "w2", "text": "Fehlerbild weist auf Bootpfad/Startziel statt auf laufende Fachanwendung hin.", "correct": true },
+            { "id": "w3", "text": "Anwendungs-Neuinstallation löst Bootmanager-Probleme ohne weitere Prüfung.", "correct": false },
+            { "id": "w4", "text": "AP1-sauber ist die Reihenfolge: Firmware -> Bootmanager -> OS-Start.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Java-Runtime neu installieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Runtime-Probleme zeigen sich typischerweise erst nach erfolgreichem OS-Start.", "correct": true },
+            { "id": "w2", "text": "Hier scheitert die Kette vor der Anwendungsebene.", "correct": true },
+            { "id": "w3", "text": "JVM-Updates reparieren immer UEFI-Bootziele.", "correct": false },
+            { "id": "w4", "text": "Maßnahme passt nicht zur betroffenen Schicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur CRM-Lizenz verlängern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Lizenzstatus beeinflusst nicht den Firmware-/Bootpfad.", "correct": true },
+            { "id": "w2", "text": "Das Problem liegt vor dem Start der Fachsoftware.", "correct": true },
+            { "id": "w3", "text": "Abgelaufene Fachlizenz verhindert UEFI-Menüzugriff.", "correct": false },
+            { "id": "w4", "text": "Fehlerdomäne und Maßnahme sind getrennt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Das Fehlerbild liegt in der Bootkette und muss dort schrittweise eingegrenzt werden."
+    },
+    {
+      "id": "v02",
+      "profile": "Nach Treiberupdate treten unter Last Bluescreens auf. Im Leerlauf bleibt das System stabil.",
+      "tags": ["Kernel", "Treiber", "Stabilität"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Kernel-/Treiberpfad als Primärursache behandeln und kontrolliert zurückrollen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Lastabhängige Abstürze nach Treiberwechsel deuten auf systemnahen Fehlerpfad.", "correct": true },
+            { "id": "w2", "text": "Treiber im privilegierten Kontext können Gesamtsystemstabilität beeinflussen.", "correct": true },
+            { "id": "w3", "text": "Treiber arbeiten nur im User Mode und können keinen Systemabsturz auslösen.", "correct": false },
+            { "id": "w4", "text": "Rollback plus Lasttest ist AP1-methodisch sauber.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Office updaten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Office-Versionen sind für kernelnahe Abstürze nicht die Primärhypothese.", "correct": true },
+            { "id": "w2", "text": "Symptom tritt systemweit und lastabhängig auf.", "correct": true },
+            { "id": "w3", "text": "Jedes Bluescreen-Problem entsteht durch veraltete Textverarbeitung.", "correct": false },
+            { "id": "w4", "text": "Schichtlogik spricht gegen diese Maßnahme.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Bootreihenfolge ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das System bootet bereits; Problem tritt erst im Betrieb unter Last auf.", "correct": true },
+            { "id": "w2", "text": "Bootzieländerung adressiert keine laufzeitnahen Treiberfehler.", "correct": true },
+            { "id": "w3", "text": "Falsche Bootreihenfolge verursacht typischerweise Last-Bluescreens nach Stunden.", "correct": false },
+            { "id": "w4", "text": "Maßnahme und Fehlerzeitpunkt passen nicht zusammen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Nach Treiberänderungen mit Lastabstürzen ist der Kernel-/Treiberpfad der korrekte Diagnosefokus."
+    },
+    {
+      "id": "v03",
+      "profile": "Eine Java-Fachanwendung startet nicht mehr nach Servermigration. OS und Dienste laufen, Log meldet fehlende Runtime.",
+      "tags": ["Runtime", "Middleware", "Abhängigkeit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Runtime-/Abhängigkeitsmanagement prüfen und korrekte Version bereitstellen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Wenn OS und Dienste laufen, liegt das Problem häufig auf Laufzeit-/Applikationsebene.", "correct": true },
+            { "id": "w2", "text": "Versionierte Runtime-Abhängigkeiten sind migrationskritisch.", "correct": true },
+            { "id": "w3", "text": "Fehlende JVM wird durch UEFI-Update behoben.", "correct": false },
+            { "id": "w4", "text": "Logbasierte Diagnose gehört zur AP1-konformen Fehleranalyse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Netzwerkkabel tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Log benennt Runtime-Fehler, nicht Link-/Transportprobleme.", "correct": true },
+            { "id": "w2", "text": "Physische Netzebene ist hier nicht die Primärhypothese.", "correct": true },
+            { "id": "w3", "text": "Netzwerkkabel ersetzt fehlende Java-Bibliotheken.", "correct": false },
+            { "id": "w4", "text": "Evidenzbasierte Priorisierung ist entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Secure Boot deaktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Secure Boot wirkt primär im Startpfad vor OS-Laufzeit.", "correct": true },
+            { "id": "w2", "text": "Hier ist das Betriebssystem bereits aktiv.", "correct": true },
+            { "id": "w3", "text": "Secure Boot steuert JVM-Klassenpfade.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme liegt außerhalb der betroffenen Schicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn OS-Basis steht und Logs Runtimefehler zeigen, ist das Abhängigkeitsmanagement die richtige Ursacheklasse."
+    },
+    {
+      "id": "v04",
+      "profile": "Nach Update startet ein zentraler Dienst nicht, weil ein abhängiger Socket-/Storage-Dienst fehlt.",
+      "tags": ["Service-Manager", "Abhängigkeiten", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Dienstabhängigkeiten im Init-/Service-Manager analysieren und korrigieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Systemdienste benötigen häufig definierte Startreihenfolgen und Voraussetzungen.", "correct": true },
+            { "id": "w2", "text": "Abhängigkeitsfehler sind auf Service-Management-Ebene lösbar.", "correct": true },
+            { "id": "w3", "text": "Service-Probleme werden primär durch CPU-Wechsel behoben.", "correct": false },
+            { "id": "w4", "text": "AP1 erwartet die Kette: Symptom -> abhängige Unit -> Startpfad.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Benutzerpasswort zurücksetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein Unit-Abhängigkeitsfehler ist nicht primär ein Loginproblem.", "correct": true },
+            { "id": "w2", "text": "Service-Startlogik bleibt trotz Passwortänderung unverändert.", "correct": true },
+            { "id": "w3", "text": "Passwortänderungen reparieren automatisch fehlende Dienst-Sockets.", "correct": false },
+            { "id": "w4", "text": "Maßnahme verfehlt die technische Ursache.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Browsercache löschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Der Fehler liegt im Serverdienst-Start, nicht im Clientcache.", "correct": true },
+            { "id": "w2", "text": "Cachemaßnahmen adressieren keine System-Unit-Abhängigkeiten.", "correct": true },
+            { "id": "w3", "text": "Browsercache steuert den Start von Systemdiensten im Betriebssystem.", "correct": false },
+            { "id": "w4", "text": "Hier ist Infrastrukturdiagnose gefragt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Dienstabhängigkeiten müssen im Service-Manager geprüft werden; dort liegt die primäre Fehlerbehebung."
+    },
+    {
+      "id": "v05",
+      "profile": "Nach Sicherheits-Patch steigt die Fehlerrate. Ein Rückbau ist möglich, aber nicht vorbereitet.",
+      "tags": ["Patch", "Rollback", "Change"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Patch- und Rollback-Strategie koppeln und kontrolliert verifizieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Patches können Stabilität beeinflussen und benötigen einen abgesicherten Rückfallpfad.", "correct": true },
+            { "id": "w2", "text": "Messbare Verifikation vor/nach Änderung reduziert Blindflug.", "correct": true },
+            { "id": "w3", "text": "Rollback ist unnötig, sobald ein Patch offiziell ist.", "correct": false },
+            { "id": "w4", "text": "AP1-konform sind risikoorientierte Change-Prozesse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur zusätzliche Features aktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Feature-Aktivierung behebt keine regressiven Stabilitätsfehler.", "correct": true },
+            { "id": "w2", "text": "Ohne Ursachenbezug steigt das Risiko weiterer Nebenwirkungen.", "correct": true },
+            { "id": "w3", "text": "Mehr Features reduzieren automatisch Fehlerquoten.", "correct": false },
+            { "id": "w4", "text": "Kernanforderung ist kontrollierbare Rückführung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Incident ohne Dokumentation schließen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Nachdokumentation fehlt Lern- und Revisionsbasis.", "correct": true },
+            { "id": "w2", "text": "Wiederholungsrisiko steigt ohne klare Erkenntnissicherung.", "correct": true },
+            { "id": "w3", "text": "Dokumentation ist bei produktiven Störungen optional.", "correct": false },
+            { "id": "w4", "text": "Runbook-Qualität hängt von nachvollziehbaren Lessons Learned ab.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Patchprozesse brauchen immer Verifikation und Rollback-Fähigkeit, sonst steigt Betriebsrisiko deutlich."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein Dienstkonto besitzt lokale Administratorrechte, obwohl nur Leserechte auf Konfigurationsdateien nötig sind.",
+      "tags": ["Security", "Least Privilege", "Hardening"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Least Privilege umsetzen und Diensthärtung nachziehen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Überprivilegierte Konten erhöhen Angriffsfläche und Schadpotenzial.", "correct": true },
+            { "id": "w2", "text": "Rechte sollten exakt auf den technischen Bedarf begrenzt werden.", "correct": true },
+            { "id": "w3", "text": "Mehr Rechte verbessern grundsätzlich Stabilität und Sicherheit.", "correct": false },
+            { "id": "w4", "text": "Hardening ergänzt Berechtigungsreduktion durch restriktive Dienstkonfiguration.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Alle Dienste als Administrator laufen lassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Maximalrechte sind selten notwendig und sicherheitlich riskant.", "correct": true },
+            { "id": "w2", "text": "Angriffsauswirkungen steigen bei kompromittierten Dienstkonten massiv.", "correct": true },
+            { "id": "w3", "text": "Vollrechte sind Best Practice für Service-Hardening.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme widerspricht dem Minimalprinzip.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Monitoring deaktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monitoring ist nicht die Ursache der Überberechtigung.", "correct": true },
+            { "id": "w2", "text": "Sichtbarkeit abzuschalten verschlechtert Sicherheitslage zusätzlich.", "correct": true },
+            { "id": "w3", "text": "Monitoring deaktivieren entfernt automatisch unnötige Kontorechte.", "correct": false },
+            { "id": "w4", "text": "Maßnahme verfehlt das Risiko.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Überprivilegierung wird mit Least Privilege und Service-Hardening adressiert, nicht durch pauschale Abschaltungen."
+    },
+    {
+      "id": "v07",
+      "profile": "Bei sporadischen Latenzspitzen widersprechen sich Teamaussagen: Netzwerk, Datenbank oder Anwendung seien schuld. Einzeldaten reichen nicht.",
+      "tags": ["Observability", "Diagnose", "Korrelation"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Observability einsetzen: Logs, Metriken und Traces korrelieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrdimensionale Telemetrie erlaubt Ursacheketten statt Vermutungen.", "correct": true },
+            { "id": "w2", "text": "Sporadische Probleme brauchen Zeitbezug und End-to-End-Korrelation.", "correct": true },
+            { "id": "w3", "text": "Eine einzelne CPU-Kennzahl reicht immer zur eindeutigen Ursachenzuordnung.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist evidenzbasierte statt meinungsbasierte Fehleranalyse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur den letzten Logeintrag betrachten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Einzelsignale ohne Kontext können Ursache und Folge verwechseln.", "correct": true },
+            { "id": "w2", "text": "Latenzpfade verlaufen häufig über mehrere Systeme.", "correct": true },
+            { "id": "w3", "text": "Der letzte Logeintrag ist immer die Root Cause.", "correct": false },
+            { "id": "w4", "text": "Korrelation über mehrere Quellen ist erforderlich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Firmware neu flashen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Schichthinweis ist ein Firmwareeingriff hochriskant und ungezielt.", "correct": true },
+            { "id": "w2", "text": "Das Symptom betrifft produktive Laufzeitpfade, nicht zwingend die Startphase.", "correct": true },
+            { "id": "w3", "text": "Firmware-Flash ist bei jeder Latenzfrage automatisch erste Wahl.", "correct": false },
+            { "id": "w4", "text": "Diagnose sollte minimal-invasiv und evidenzgeführt starten.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei unklaren Laufzeitproblemen ist korrelierte Observability die methodisch richtige Basis für Root-Cause-Analyse."
+    }
+  ]
+}

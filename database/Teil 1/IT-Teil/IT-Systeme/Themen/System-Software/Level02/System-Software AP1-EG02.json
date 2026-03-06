@@ -1,0 +1,248 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – System-Software (AP1) Level 2",
+  "topic": "Bootkette • Kernel/User-Mode • Treiberstapel • Runtime-Abhängigkeiten • Dienste & Incident-Diagnose",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "bootchain-capital-l2",
+      "type": "capital",
+      "title": "Rätsel 1: Präzise Bootkette",
+      "subtitle": "Ordne die Startphasen vom Einschalten bis zur fachlichen Anwendung.",
+      "hintDefault": "Firmware initialisiert, Bootmanager lädt Kernel, OS startet Dienste, dann Runtime/App.",
+      "rows": [
+        {
+          "key": "firmware",
+          "label": "Firmware initialisiert Hardware und übergibt an Boot-Manager",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "bootmanager",
+          "label": "Boot-Manager/Bootloader lädt Kernel + Initramfs/Startumgebung",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "kernel",
+          "label": "Kernel initialisiert Treiberpfade, Speicher- und Prozessverwaltung",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "services",
+          "label": "Systemdienste und Netzwerk-/Storage-Basisdienste starten",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "runtime",
+          "label": "Optionale Runtime-/Middleware-Schicht stellt Laufzeit für Fachanwendung bereit",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "app",
+          "label": "Fachanwendung startet und nutzt OS-/Runtime-Dienste",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incident-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 2: Fehlerbild zur Schicht",
+      "subtitle": "Ordne das primäre Problemfeld zu.",
+      "hintDefault": "Kein Start = Bootkette/Firmware, Gerät fehlt = Treiber/Kernel, Startfehler App = Runtime/App.",
+      "sortColumns": [
+        { "zone": "boot", "label": "Firmware/Bootkette", "hint": "UEFI, Bootmanager, Signaturpfad" },
+        { "zone": "kernel", "label": "Kernel/Treiber", "hint": "Geräte, Scheduling, Speicher, I/O" },
+        { "zone": "services", "label": "Systemdienste", "hint": "Abhängigkeiten, Startreihenfolge, Rechte" },
+        { "zone": "runtime", "label": "Runtime/App-Ebene", "hint": "JVM/.NET/Abhängigkeiten/Fachanwendung" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Secure-Boot-Prüfung verhindert Start eines unsignierten Bootloaders.", "correctZone": "boot" },
+        { "id": "c2", "text": "Netzwerkkarte erscheint mit Fehlercode nach Kernel-/Treiberupdate.", "correctZone": "kernel" },
+        { "id": "c3", "text": "Datenbankdienst startet nicht, weil der abhängige Storage-Dienst fehlt.", "correctZone": "services" },
+        { "id": "c4", "text": "Java-Fachanwendung bricht ab: erforderliche Runtime-Version nicht vorhanden.", "correctZone": "runtime" },
+        { "id": "c5", "text": "Bootreihenfolge verweist auf falsches Laufwerk nach Hardwaretausch.", "correctZone": "boot" },
+        { "id": "c6", "text": "Bluescreen/Kernel Panic unter Last durch fehlerhaften Gerätetreiber.", "correctZone": "kernel" },
+        { "id": "c7", "text": "Login gelingt, aber zentrale Richtliniendienste werden nicht geladen.", "correctZone": "services" },
+        { "id": "c8", "text": "Web-App startet, aber fehlende native Library verhindert Funktionen.", "correctZone": "runtime" }
+      ]
+    },
+    {
+      "id": "deep-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 3: System-Software auf Prüfungsniveau",
+      "subtitle": "Wähle die technisch beste Aussage.",
+      "hintDefault": "Achte auf Schichtgrenzen und Abhängigkeiten statt auf Einzelbegriffe.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage zu Kernel und Treibern ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Treiber sind normale Fachanwendungen und beeinflussen Kernel-Stabilität nicht." },
+            { "value": "b", "text": "Treiber arbeiten systemnah; fehlerhafte Treiber können Stabilität des gesamten Systems beeinträchtigen." },
+            { "value": "c", "text": "Kernel verwaltet nur Fensterdarstellung, nicht Ressourcen." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was beschreibt Runtime/Middleware im AP1-Kontext am besten?",
+          "options": [
+            { "value": "a", "text": "Physische Startlogik im UEFI-Chip." },
+            { "value": "b", "text": "Zwischenschicht, die standardisierte Laufzeitfunktionen für Anwendungen bereitstellt." },
+            { "value": "c", "text": "Ersatz für Betriebssystem und Treiber." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Diagnose ist bei \"App startet nicht\" methodisch zuerst sinnvoll?",
+          "options": [
+            { "value": "a", "text": "Runtime-/Abhängigkeitsprüfung und Loganalyse der Anwendung." },
+            { "value": "b", "text": "Direkt Firmware flashen ohne Befund." },
+            { "value": "c", "text": "Nur Monitorauflösung ändern." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Aussage zur Bootkette ist richtig?",
+          "options": [
+            { "value": "a", "text": "Anwendungen laden den Bootmanager." },
+            { "value": "b", "text": "Firmware initialisiert Hardware und startet den Weg zum OS über den Bootmanager." },
+            { "value": "c", "text": "Runtime ersetzt den Bootloader." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "recovery-order-l2",
+      "type": "capital",
+      "title": "Rätsel 4: Recovery-Reihenfolge bei Systemstörung",
+      "subtitle": "Setze das Incident-Vorgehen in die richtige Reihenfolge.",
+      "hintDefault": "Störung eingrenzen, Schicht identifizieren, minimal-invasiv beheben, Wirkung verifizieren.",
+      "rows": [
+        {
+          "key": "scope",
+          "label": "Fehlerbild und betroffene Schicht präzise eingrenzen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "evidence",
+          "label": "Logs/Events/Metriken sichern und Ursachenhypothese aufstellen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "fix",
+          "label": "Gezielte Maßnahme anwenden (z. B. Treiber-Rollback, Dienstabhängigkeit korrigieren)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "verify",
+          "label": "Funktion und Stabilität unter Last reproduzierbar verifizieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        },
+        {
+          "key": "document",
+          "label": "Änderung dokumentieren und Präventionsmaßnahme für nächste Releases festlegen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" }
+          ]
+        }
+      ]
+    }
+  ]
+}
