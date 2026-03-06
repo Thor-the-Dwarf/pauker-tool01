@@ -1,0 +1,320 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Dateiformate (AP1) Level 2",
+  "topic": "CSV/JSON/XML vertieft, Encoding, BOM, Validierung, Versionierung und Importqualitaet",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "format-family-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 1: Formatfamilien sauber trennen",
+      "subtitle": "Ordne Formate nach Strukturtyp.",
+      "hintDefault": "Tabellarisch: CSV/TSV. Hierarchisch: JSON/XML. Medien/Dokumente: PDF/JPG/MP4.",
+      "sortColumns": [
+        { "zone": "tabular", "label": "Tabellarische Textformate", "hint": "Zeilen/Spalten" },
+        { "zone": "hierarchical", "label": "Hierarchische Textformate", "hint": "Objekte/Tags" },
+        { "zone": "binary", "label": "Binare Medien/Dokumente", "hint": "Viewer/Parser noetig" }
+      ],
+      "sortCards": [
+        { "id": "f1", "text": "CSV", "correctZone": "tabular" },
+        { "id": "f2", "text": "TSV", "correctZone": "tabular" },
+        { "id": "f3", "text": "JSON", "correctZone": "hierarchical" },
+        { "id": "f4", "text": "XML", "correctZone": "hierarchical" },
+        { "id": "f5", "text": "PDF", "correctZone": "binary" },
+        { "id": "f6", "text": "JPG/PNG", "correctZone": "binary" },
+        { "id": "f7", "text": "MP4", "correctZone": "binary" },
+        { "id": "f8", "text": "DOCX/XLSX", "correctZone": "binary" }
+      ]
+    },
+    {
+      "id": "encoding-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 2: Encoding-Fallen",
+      "subtitle": "Umlaute, BOM und Importprobleme richtig deuten.",
+      "hintDefault": "Zeichensalat deutet oft auf falsche Dekodierung hin, nicht auf falsches Trennzeichen.",
+      "questions": [
+        {
+          "id": "e1",
+          "text": "1. \"MÃ¼ller\" statt \"Mueller\" deutet typischerweise auf ...",
+          "options": [
+            { "value": "a", "text": "Encoding-Mismatch zwischen Erzeuger und Leser" },
+            { "value": "b", "text": "falschen Datentyp in JSON" },
+            { "value": "c", "text": "fehlenden Primarschluessel" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "e2",
+          "text": "2. Wofuer steht BOM bei Textdateien?",
+          "options": [
+            { "value": "a", "text": "Eine optionale Bytefolge am Anfang, die manche Parser stoert" },
+            { "value": "b", "text": "Pflichtfeld fuer jede UTF-8-Datei" },
+            { "value": "c", "text": "Verschluesselungsmarker" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "e3",
+          "text": "3. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Delimiter-Probleme erzeugen meist Spaltenchaos, nicht Zeichensalat." },
+            { "value": "b", "text": "Encoding beeinflusst nur Binardateien, nicht CSV/JSON/XML." },
+            { "value": "c", "text": "BOM behebt automatisch jedes Schema-Problem." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "root-cause-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 3: Fehlerbild zu Ursache",
+      "subtitle": "Ordne typische Importfehler der primaeren Ursache zu.",
+      "hintDefault": "Spalten verrutscht -> Delimiter/Quoting. Umlaute kaputt -> Encoding. Feld fehlt -> Schema/Mapping.",
+      "sortColumns": [
+        { "zone": "delimiter", "label": "Delimiter/Quoting", "hint": "CSV-Struktur" },
+        { "zone": "encoding", "label": "Encoding/BOM", "hint": "Zeicheninterpretation" },
+        { "zone": "schema", "label": "Schema/Mapping", "hint": "Strukturregeln" }
+      ],
+      "sortCards": [
+        { "id": "r1", "text": "Alle Werte landen in einer einzigen Spalte", "correctZone": "delimiter" },
+        { "id": "r2", "text": "Umlaute erscheinen als Zeichensalat", "correctZone": "encoding" },
+        { "id": "r3", "text": "Pflichtfeld fehlt laut Validator", "correctZone": "schema" },
+        { "id": "r4", "text": "Adresse mit Komma erzeugt Zusatzspalte", "correctZone": "delimiter" },
+        { "id": "r5", "text": "Erste Spalte enthaelt unsichtbares Sonderzeichen im Header", "correctZone": "encoding" },
+        { "id": "r6", "text": "Datentyp Integer erwartet, aber String geliefert", "correctZone": "schema" }
+      ]
+    },
+    {
+      "id": "pipeline-capital-l2",
+      "type": "capital",
+      "title": "Raetsel 4: Robuster Importprozess",
+      "subtitle": "Ordne die Prozessschritte in fachlich sinnvolle Reihenfolge.",
+      "hintDefault": "Erst Vertrag, dann Testdaten, dann Validierung, danach produktiver Betrieb mit Monitoring.",
+      "rows": [
+        {
+          "key": "contract",
+          "label": "Schnittstellenvertrag (Format, Encoding, Delimiter, Version) festlegen",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "samples",
+          "label": "Referenzdaten inkl. Grenzfaelle (Umlaute, Kommas, leere Werte) bereitstellen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "validator",
+          "label": "Schema-/Parser-Validierung und Fehlermeldungen implementieren",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "mapping",
+          "label": "Feldmapping, Pflichtfelder und Typkonvertierungen testen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilotimport mit produktionsnahen Daten durchfuehren",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "ops",
+          "label": "Betrieb mit Monitoring, Versionskontrolle und Fehler-Runbook",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte waehlen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schema-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 5: Schema und Versionierung",
+      "subtitle": "Warum reichen Dateiendung und Hoffnung nicht aus?",
+      "hintDefault": "Schnittstellen stabilisiert man durch klare Vertrage und versionsfaehige Aenderungen.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Was leistet ein Schema (z. B. JSON Schema/XSD) in erster Linie?",
+          "options": [
+            { "value": "a", "text": "Pruefung von Struktur, Pflichtfeldern und Datentypen" },
+            { "value": "b", "text": "Automatische Datenverschluesselung" },
+            { "value": "c", "text": "Komprimierung der Datei" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s2",
+          "text": "2. Warum braucht man bei Schnittstellen oft Versionierung?",
+          "options": [
+            { "value": "a", "text": "Damit aenderungsbedingte Brueche kontrolliert eingefuehrt werden koennen" },
+            { "value": "b", "text": "Weil Dateiendungen sonst nicht angezeigt werden" },
+            { "value": "c", "text": "Damit Encoding irrelevant wird" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s3",
+          "text": "3. Welche Aussage ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Nur Dateiendung pruefen reicht fuer robusten Import aus." },
+            { "value": "b", "text": "Validierung plus Vertrag reduziert Produktionsfehler deutlich." },
+            { "value": "c", "text": "CSV braucht nie Formatkonventionen." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "usecase-sort-l2",
+      "type": "sort",
+      "title": "Raetsel 6: Formatwahl im Kontext",
+      "subtitle": "Ordne den sinnvollsten primaeren Einsatztyp zu.",
+      "hintDefault": "API payloads oft JSON/XML, tabellarischer Export oft CSV, Layoutnachweis oft PDF.",
+      "sortColumns": [
+        { "zone": "interface", "label": "Datenschnittstelle", "hint": "maschinell verarbeiten" },
+        { "zone": "tabular", "label": "Tabellarischer Export", "hint": "Massenlisten" },
+        { "zone": "presentation", "label": "Darstellung/Archiv", "hint": "Lesen/Anzeigen" }
+      ],
+      "sortCards": [
+        { "id": "u1", "text": "API liefert Produktstammdaten mit verschachtelten Attributen", "correctZone": "interface" },
+        { "id": "u2", "text": "Monatliche Personalliste fuer Massenimport", "correctZone": "tabular" },
+        { "id": "u3", "text": "Rechnung im unveraenderlichen Layout fuer Kundenversand", "correctZone": "presentation" },
+        { "id": "u4", "text": "Event-Message mit Versionsfeld und validierbarer Struktur", "correctZone": "interface" },
+        { "id": "u5", "text": "Schneller Datenabzug fuer Fachbereich in Tabellenkalkulation", "correctZone": "tabular" },
+        { "id": "u6", "text": "Produktfoto fuer Kataloganzeige", "correctZone": "presentation" }
+      ]
+    },
+    {
+      "id": "quality-quiz-l2",
+      "type": "quiz",
+      "title": "Raetsel 7: Datenqualitaet",
+      "subtitle": "Erkenne robuste gegen fragile Loesungen.",
+      "hintDefault": "Robustheit entsteht durch Vertrag, Validierung, Tests und Monitoring.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Massnahme erhoeht Importstabilitaet am meisten?",
+          "options": [
+            { "value": "a", "text": "Schema-Validation, Referenzdaten und automatisierte Tests" },
+            { "value": "b", "text": "Nur Dateiendung pruefen" },
+            { "value": "c", "text": "Fehler erst manuell im Produktivsystem suchen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Was ist bei CSV mit Freitextfeldern kritisch?",
+          "options": [
+            { "value": "a", "text": "Quoting und Escaping fuer Trennzeichen im Feld" },
+            { "value": "b", "text": "CPU-Takt" },
+            { "value": "c", "text": "Dateinamenlaenge" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage ist AP1-reif?",
+          "options": [
+            { "value": "a", "text": "Encoding, Delimiter und Schema sind getrennte, aber zusammen relevante Fehlerklassen." },
+            { "value": "b", "text": "Wenn Delimiter stimmt, ist Encoding egal." },
+            { "value": "c", "text": "Schema ersetzt alle inhaltlichen Plausibilitaetspruefungen." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "final-quiz-l2",
+      "type": "quiz",
+      "title": "Finale: AP1-Schnittstellenentscheidung",
+      "subtitle": "Waehle die fachlich robusteste Gesamtantwort.",
+      "hintDefault": "Dateiformate sind Vertraege: Struktur, Kodierung, Regeln und Betrieb muessen zusammenpassen.",
+      "questions": [
+        {
+          "id": "f1",
+          "text": "1. Was ist fuer stabile Dateischnittstellen am wichtigsten?",
+          "options": [
+            { "value": "a", "text": "Nur ein gemeinsamer Dateiname" },
+            { "value": "b", "text": "Klare Formatregeln, Versionierung, Validation und Testfaelle" },
+            { "value": "c", "text": "Moeglichst viele manuelle Ausnahmen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "f2",
+          "text": "2. Wann ist JSON gegenueber CSV oft im Vorteil?",
+          "options": [
+            { "value": "a", "text": "Bei hierarchischen Datenstrukturen mit verschachtelten Objekten" },
+            { "value": "b", "text": "Wenn gar keine Struktur benoetigt wird" },
+            { "value": "c", "text": "Wenn nur Bilddaten gespeichert werden sollen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "f3",
+          "text": "3. Welche Aussage ist fachlich korrekt?",
+          "options": [
+            { "value": "a", "text": "PDF ist meist besser fuer maschinelle Datenimporte als JSON/XML." },
+            { "value": "b", "text": "Die beste Formatwahl haengt vom Einsatzzweck ab: Schnittstelle, Tabelle oder Darstellung." },
+            { "value": "c", "text": "CSV ist immer unbrauchbar fuer Schnittstellen." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

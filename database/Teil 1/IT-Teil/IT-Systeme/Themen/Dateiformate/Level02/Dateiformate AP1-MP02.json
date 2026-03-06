@@ -1,0 +1,198 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Dateiformate (AP1) Level 2 – Struktur, Encoding und Datenqualitaet",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Begriff, fachlich korrekte Bedeutung und AP1-nahes Praxisbeispiel.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Praezise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Waehle den passenden Terminus.",
+    "column2": "Achte auf die genaue Fehlerklasse.",
+    "column3": "Ordne den realistischen Einsatzfall zu."
+  },
+  "sets": [
+    {
+      "id": "textformat",
+      "name": "Textformat",
+      "description": "Menschenlesbares Datenformat, direkt mit Editor und Standardtools pruefbar.",
+      "example": "JSON-Fehler in API-Antwort schnell per Log-Ausgabe analysieren."
+    },
+    {
+      "id": "binaryformat",
+      "name": "Binaerformat",
+      "description": "Nicht direkt menschenlesbar; Verarbeitung erfolgt ueber spezialisierte Programme/Parser.",
+      "example": "JPG-Datei laesst sich nicht sinnvoll in reinem Texteditor interpretieren."
+    },
+    {
+      "id": "csv",
+      "name": "CSV",
+      "description": "Tabellarisches Textformat mit Zeilen und Delimiter; klarer Vertrag fuer Spaltentrennung noetig.",
+      "example": "Mitarbeiterliste fuer Massenimport aus Fachsystem exportieren."
+    },
+    {
+      "id": "tsv",
+      "name": "TSV",
+      "description": "Variante tabellarischer Textformate mit Tabulator als Trennzeichen.",
+      "example": "Datenaustausch ohne Konflikt mit Komma im Freitextfeld."
+    },
+    {
+      "id": "delimiter",
+      "name": "CSV-Delimiter",
+      "description": "Separator zwischen Spaltenwerten, z. B. Komma oder Semikolon.",
+      "example": "Import erwartet Komma, Datei nutzt Semikolon und landet in einer Spalte."
+    },
+    {
+      "id": "quoting",
+      "name": "CSV-Quoting",
+      "description": "Felder mit Trennzeichen oder Umbruechen werden in Anfuehrungszeichen eingeschlossen.",
+      "example": "Adresse mit Komma bleibt als ein Feld erhalten."
+    },
+    {
+      "id": "escaping",
+      "name": "Escaping",
+      "description": "Sonderzeichen werden nach Regeln maskiert, um Parserfehler zu vermeiden.",
+      "example": "Anfuehrungszeichen im CSV-Feld werden korrekt verdoppelt."
+    },
+    {
+      "id": "json",
+      "name": "JSON",
+      "description": "Hierarchisches Textformat mit Objekten und Arrays, stark in APIs verbreitet.",
+      "example": "Produktdaten inklusive Varianten als verschachtelte Struktur uebertragen."
+    },
+    {
+      "id": "xml",
+      "name": "XML",
+      "description": "Tag-basiertes hierarchisches Textformat mit strikter Strukturmoeglichkeit.",
+      "example": "Bestelldaten zwischen Enterprise-Systemen austauschen."
+    },
+    {
+      "id": "json_schema",
+      "name": "JSON Schema",
+      "description": "Definiert Struktur- und Typregeln fuer JSON-Dokumente.",
+      "example": "Validator lehnt Datensatz ohne Pflichtfeld customerId ab."
+    },
+    {
+      "id": "xsd",
+      "name": "XSD",
+      "description": "XML-Schema zur formalen Pruefung von Struktur und Datentypen.",
+      "example": "XML-Import scheitert, weil ein Element am falschen Ort steht."
+    },
+    {
+      "id": "utf8",
+      "name": "UTF-8",
+      "description": "Zeichencodierung, die Zeichen in Bytefolgen abbildet; Standard in vielen Schnittstellen.",
+      "example": "Umlaute bleiben korrekt, wenn Sender und Empfaenger UTF-8 nutzen."
+    },
+    {
+      "id": "encoding_mismatch",
+      "name": "Encoding-Mismatch",
+      "description": "Datei wird mit anderer Zeichencodierung gelesen als geschrieben.",
+      "example": "Muller erscheint als MÃ¼ller nach Import."
+    },
+    {
+      "id": "bom",
+      "name": "BOM",
+      "description": "Optionale Bytefolge am Dateianfang, die Header oder Parser beeintraechtigen kann.",
+      "example": "Erste Spalte heisst ploetzlich unsichtbar-prefixed id."
+    },
+    {
+      "id": "line_endings",
+      "name": "Zeilenende-Konvention",
+      "description": "Unterschiede wie LF und CRLF koennen bei Parsern und Vergleichen relevant sein.",
+      "example": "Diff zeigt unerwartet viele Aenderungen nach Plattformwechsel."
+    },
+    {
+      "id": "decimal_separator",
+      "name": "Dezimaltrennzeichen",
+      "description": "Locale-Abhaengigkeit bei Zahlenformaten, z. B. 1,23 vs 1.23.",
+      "example": "Preis wird falsch importiert, weil Punkt statt Komma erwartet wird."
+    },
+    {
+      "id": "mapping",
+      "name": "Feldmapping",
+      "description": "Zuordnung externer Felder zu internen Zielstrukturen.",
+      "example": "source.customer_no wird auf target.customerId gemappt."
+    },
+    {
+      "id": "required_fields",
+      "name": "Pflichtfeldpruefung",
+      "description": "Kontrolle, ob alle benoetigten Felder vorhanden und gefuellt sind.",
+      "example": "Datensatz ohne Buchungsdatum wird sauber abgelehnt."
+    },
+    {
+      "id": "type_validation",
+      "name": "Typvalidierung",
+      "description": "Prueft Datentypen gegen erwartete Definitionen.",
+      "example": "Menge als Text statt Integer fuehrt zu Validatorfehler."
+    },
+    {
+      "id": "versioning",
+      "name": "Schnittstellenversionierung",
+      "description": "Aenderungen am Datenvertrag kontrolliert und rueckwaertskompatibel einführen.",
+      "example": "API liefert v1 und v2 parallel waehrend Umstellung."
+    },
+    {
+      "id": "content_type",
+      "name": "Content-Type",
+      "description": "HTTP-Header zur Kennzeichnung des Datenformats.",
+      "example": "Anfrage mit application/json statt text/plain senden."
+    },
+    {
+      "id": "mime_type",
+      "name": "MIME-Type",
+      "description": "Standardisierte Formatkennzeichnung fuer Uebertragung und Verarbeitung.",
+      "example": "Datei als text/csv deklariert, damit Importer richtig parst."
+    },
+    {
+      "id": "compression",
+      "name": "Komprimierung",
+      "description": "Reduziert Dateigroesse, aendert aber nicht den semantischen Datenvertrag.",
+      "example": "CSV wird als gzip uebertragen, bleibt fachlich CSV."
+    },
+    {
+      "id": "base64",
+      "name": "Base64",
+      "description": "Kodierung von Binaerdaten in Textzeichen fuer textbasierte Kanaele.",
+      "example": "Bild als Base64-String in JSON-Nachricht eingebettet."
+    },
+    {
+      "id": "checksum",
+      "name": "Pruefsumme",
+      "description": "Integritaetspruefung, ob Datei auf dem Transportweg unveraendert blieb.",
+      "example": "SHA-256 wird vor Import mit erwarteter Signatur verglichen."
+    },
+    {
+      "id": "canonicalization",
+      "name": "Kanonisierung",
+      "description": "Normiert Darstellungsdetails fuer reproduzierbare Vergleiche/Signaturen.",
+      "example": "JSON wird vor Signatur in stabile Schluesselreihenfolge gebracht."
+    },
+    {
+      "id": "csv_injection",
+      "name": "CSV-Injection-Risiko",
+      "description": "Gefahr durch Formeln in Tabellenimporten bei ungesicherten Nutzerwerten.",
+      "example": "Zelle beginnt mit = und fuehrt beim Oeffnen unerwuenschte Aktion aus."
+    },
+    {
+      "id": "error_runbook",
+      "name": "Fehler-Runbook",
+      "description": "Definierte Schrittfolge fuer Diagnose und Behebung wiederkehrender Importprobleme.",
+      "example": "Bei Importfehler zuerst Encoding, dann Delimiter, dann Schema pruefen."
+    },
+    {
+      "id": "observability",
+      "name": "Import-Monitoring",
+      "description": "Metriken und Logs fuer Fehlerraten, Latenzen und Datenqualitaetsindikatoren.",
+      "example": "Alert bei sprunghaftem Anstieg invalid records."
+    },
+    {
+      "id": "format_contract",
+      "name": "Formatvertrag",
+      "description": "Dokumentierte Einigung auf Struktur, Kodierung, Pflichtfelder und Version.",
+      "example": "Partner erhalten verbindliches Interface-Handbuch mit Testdaten."
+    }
+  ]
+}

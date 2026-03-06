@@ -1,0 +1,605 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Dateiformate (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+  "leadershipStyles": [
+    {
+      "id": "textformat",
+      "name": "Textformat",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": false,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": false
+      }
+    },
+    {
+      "id": "binaryformat",
+      "name": "Binaerformat",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": true,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": false,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": false,
+        "typical_for_layout_output": true,
+        "needs_strict_validation": false
+      }
+    },
+    {
+      "id": "csv",
+      "name": "CSV",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": true,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "json",
+      "name": "JSON",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "xml",
+      "name": "XML",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "utf8",
+      "name": "UTF-8",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": true,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "delimiter_quoting",
+      "name": "Delimiter/Quoting-Regeln",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "schema_validation",
+      "name": "Schema-Validierung",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "versioning",
+      "name": "Schnittstellenversionierung",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "format_contract",
+      "name": "Formatvertrag",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": true,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "csv_injection",
+      "name": "CSV-Injection-Schutz",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": true,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "monitoring_runbook",
+      "name": "Import-Monitoring und Runbook",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": false,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Bin ich primaer ein Textformat?",
+      "attributeKey": "is_textual"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Bin ich primaer ein Binaerformat?",
+      "attributeKey": "is_binary"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Bin ich vor allem tabellarisch orientiert?",
+      "attributeKey": "is_tabular"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Bin ich fuer hierarchische Datenstrukturen typisch?",
+      "attributeKey": "is_hierarchical"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Geht es mir primaer um Zeichencodierung?",
+      "attributeKey": "is_encoding_topic"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Stehe ich eng mit CSV-Regeln wie Delimiter/Quoting in Verbindung?",
+      "attributeKey": "is_csv_rule_topic"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Geht es um formale Strukturpruefung per Schema?",
+      "attributeKey": "is_schema_topic"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Bin ich relevant fuer kontrollierte Schnittstellenaenderungen?",
+      "attributeKey": "is_versioning_topic"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Gehoere ich direkt zu einem verbindlichen Datenvertrag?",
+      "attributeKey": "is_contract_topic"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Trage ich direkt zur Risikoreduktion in Security-Themen bei?",
+      "attributeKey": "is_security_topic"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Spiele ich fuer Betriebsstabilitaet und Incident-Handling eine Rolle?",
+      "attributeKey": "is_operations_topic"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Bin ich gut fuer menschliche Lesbarkeit geeignet?",
+      "attributeKey": "good_for_human_readability"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Bin ich fuer maschinelle Schnittstellen typischerweise gut geeignet?",
+      "attributeKey": "good_for_machine_interface"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Bin ich vor allem fuer layouttreue Darstellung relevant?",
+      "attributeKey": "typical_for_layout_output"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Erfordert mein Einsatz in der Regel strikte Validierungs-/Regelpruefung?",
+      "attributeKey": "needs_strict_validation"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "textformat",
+      "name": "Textformat",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": false,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": false
+      }
+    },
+    {
+      "id": "binaryformat",
+      "name": "Binaerformat",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": true,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": false,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": false,
+        "typical_for_layout_output": true,
+        "needs_strict_validation": false
+      }
+    },
+    {
+      "id": "csv",
+      "name": "CSV",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": true,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "json",
+      "name": "JSON",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "xml",
+      "name": "XML",
+      "attributes": {
+        "is_textual": true,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": true,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "utf8",
+      "name": "UTF-8",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": true,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "delimiter_quoting",
+      "name": "Delimiter/Quoting-Regeln",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "schema_validation",
+      "name": "Schema-Validierung",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": true,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "versioning",
+      "name": "Schnittstellenversionierung",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "format_contract",
+      "name": "Formatvertrag",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": true,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": true,
+        "is_versioning_topic": true,
+        "is_contract_topic": true,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "csv_injection",
+      "name": "CSV-Injection-Schutz",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": true,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": true,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": true,
+        "is_security_topic": true,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": true,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    },
+    {
+      "id": "monitoring_runbook",
+      "name": "Import-Monitoring und Runbook",
+      "attributes": {
+        "is_textual": false,
+        "is_binary": false,
+        "is_tabular": false,
+        "is_hierarchical": false,
+        "is_encoding_topic": false,
+        "is_csv_rule_topic": false,
+        "is_schema_topic": false,
+        "is_versioning_topic": false,
+        "is_contract_topic": false,
+        "is_security_topic": false,
+        "is_operations_topic": true,
+        "good_for_human_readability": false,
+        "good_for_machine_interface": false,
+        "typical_for_layout_output": false,
+        "needs_strict_validation": true
+      }
+    }
+  ]
+}

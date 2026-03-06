@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/6/2026, 11:15:24 PM
+ * AUTOMATISCH GENERIERT am 3/6/2026, 11:29:00 PM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -112769,6 +112769,2648 @@ window.DATABASE_INDEX = [
                                   "hotkey": "9",
                                   "text": "Geht es primär um Zeichencodierung (z. B. UTF-8) und wie Bytes zu Zeichen werden?",
                                   "attributeKey": "is_about_encoding"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02",
+                        "name": "Level02",
+                        "isFolder": true,
+                        "children": [
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02/Dateiformate AP1-EG02.json",
+                            "name": "Dateiformate AP1-EG02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "escape_game",
+                              "schema_version": "1.0",
+                              "title": "Mini-Escape-Room – Dateiformate (AP1) Level 2",
+                              "topic": "CSV/JSON/XML vertieft, Encoding, BOM, Validierung, Versionierung und Importqualitaet",
+                              "estimated_minutes": 50,
+                              "sections": [
+                                {
+                                  "id": "format-family-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 1: Formatfamilien sauber trennen",
+                                  "subtitle": "Ordne Formate nach Strukturtyp.",
+                                  "hintDefault": "Tabellarisch: CSV/TSV. Hierarchisch: JSON/XML. Medien/Dokumente: PDF/JPG/MP4.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "tabular",
+                                      "label": "Tabellarische Textformate",
+                                      "hint": "Zeilen/Spalten"
+                                    },
+                                    {
+                                      "zone": "hierarchical",
+                                      "label": "Hierarchische Textformate",
+                                      "hint": "Objekte/Tags"
+                                    },
+                                    {
+                                      "zone": "binary",
+                                      "label": "Binare Medien/Dokumente",
+                                      "hint": "Viewer/Parser noetig"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "f1",
+                                      "text": "CSV",
+                                      "correctZone": "tabular"
+                                    },
+                                    {
+                                      "id": "f2",
+                                      "text": "TSV",
+                                      "correctZone": "tabular"
+                                    },
+                                    {
+                                      "id": "f3",
+                                      "text": "JSON",
+                                      "correctZone": "hierarchical"
+                                    },
+                                    {
+                                      "id": "f4",
+                                      "text": "XML",
+                                      "correctZone": "hierarchical"
+                                    },
+                                    {
+                                      "id": "f5",
+                                      "text": "PDF",
+                                      "correctZone": "binary"
+                                    },
+                                    {
+                                      "id": "f6",
+                                      "text": "JPG/PNG",
+                                      "correctZone": "binary"
+                                    },
+                                    {
+                                      "id": "f7",
+                                      "text": "MP4",
+                                      "correctZone": "binary"
+                                    },
+                                    {
+                                      "id": "f8",
+                                      "text": "DOCX/XLSX",
+                                      "correctZone": "binary"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "encoding-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Raetsel 2: Encoding-Fallen",
+                                  "subtitle": "Umlaute, BOM und Importprobleme richtig deuten.",
+                                  "hintDefault": "Zeichensalat deutet oft auf falsche Dekodierung hin, nicht auf falsches Trennzeichen.",
+                                  "questions": [
+                                    {
+                                      "id": "e1",
+                                      "text": "1. \"MÃ¼ller\" statt \"Mueller\" deutet typischerweise auf ...",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Encoding-Mismatch zwischen Erzeuger und Leser"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "falschen Datentyp in JSON"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "fehlenden Primarschluessel"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "e2",
+                                      "text": "2. Wofuer steht BOM bei Textdateien?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Eine optionale Bytefolge am Anfang, die manche Parser stoert"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Pflichtfeld fuer jede UTF-8-Datei"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Verschluesselungsmarker"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "e3",
+                                      "text": "3. Welche Aussage ist korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Delimiter-Probleme erzeugen meist Spaltenchaos, nicht Zeichensalat."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Encoding beeinflusst nur Binardateien, nicht CSV/JSON/XML."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "BOM behebt automatisch jedes Schema-Problem."
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "root-cause-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 3: Fehlerbild zu Ursache",
+                                  "subtitle": "Ordne typische Importfehler der primaeren Ursache zu.",
+                                  "hintDefault": "Spalten verrutscht -> Delimiter/Quoting. Umlaute kaputt -> Encoding. Feld fehlt -> Schema/Mapping.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "delimiter",
+                                      "label": "Delimiter/Quoting",
+                                      "hint": "CSV-Struktur"
+                                    },
+                                    {
+                                      "zone": "encoding",
+                                      "label": "Encoding/BOM",
+                                      "hint": "Zeicheninterpretation"
+                                    },
+                                    {
+                                      "zone": "schema",
+                                      "label": "Schema/Mapping",
+                                      "hint": "Strukturregeln"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "r1",
+                                      "text": "Alle Werte landen in einer einzigen Spalte",
+                                      "correctZone": "delimiter"
+                                    },
+                                    {
+                                      "id": "r2",
+                                      "text": "Umlaute erscheinen als Zeichensalat",
+                                      "correctZone": "encoding"
+                                    },
+                                    {
+                                      "id": "r3",
+                                      "text": "Pflichtfeld fehlt laut Validator",
+                                      "correctZone": "schema"
+                                    },
+                                    {
+                                      "id": "r4",
+                                      "text": "Adresse mit Komma erzeugt Zusatzspalte",
+                                      "correctZone": "delimiter"
+                                    },
+                                    {
+                                      "id": "r5",
+                                      "text": "Erste Spalte enthaelt unsichtbares Sonderzeichen im Header",
+                                      "correctZone": "encoding"
+                                    },
+                                    {
+                                      "id": "r6",
+                                      "text": "Datentyp Integer erwartet, aber String geliefert",
+                                      "correctZone": "schema"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "pipeline-capital-l2",
+                                  "type": "capital",
+                                  "title": "Raetsel 4: Robuster Importprozess",
+                                  "subtitle": "Ordne die Prozessschritte in fachlich sinnvolle Reihenfolge.",
+                                  "hintDefault": "Erst Vertrag, dann Testdaten, dann Validierung, danach produktiver Betrieb mit Monitoring.",
+                                  "rows": [
+                                    {
+                                      "key": "contract",
+                                      "label": "Schnittstellenvertrag (Format, Encoding, Delimiter, Version) festlegen",
+                                      "correct": "1",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "samples",
+                                      "label": "Referenzdaten inkl. Grenzfaelle (Umlaute, Kommas, leere Werte) bereitstellen",
+                                      "correct": "2",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "validator",
+                                      "label": "Schema-/Parser-Validierung und Fehlermeldungen implementieren",
+                                      "correct": "3",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "mapping",
+                                      "label": "Feldmapping, Pflichtfelder und Typkonvertierungen testen",
+                                      "correct": "4",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "pilot",
+                                      "label": "Pilotimport mit produktionsnahen Daten durchfuehren",
+                                      "correct": "5",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "key": "ops",
+                                      "label": "Betrieb mit Monitoring, Versionskontrolle und Fehler-Runbook",
+                                      "correct": "6",
+                                      "options": [
+                                        {
+                                          "value": "",
+                                          "text": "- bitte waehlen -"
+                                        },
+                                        {
+                                          "value": "1",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "value": "2",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "value": "3",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "value": "4",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "value": "5",
+                                          "text": "5"
+                                        },
+                                        {
+                                          "value": "6",
+                                          "text": "6"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "schema-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Raetsel 5: Schema und Versionierung",
+                                  "subtitle": "Warum reichen Dateiendung und Hoffnung nicht aus?",
+                                  "hintDefault": "Schnittstellen stabilisiert man durch klare Vertrage und versionsfaehige Aenderungen.",
+                                  "questions": [
+                                    {
+                                      "id": "s1",
+                                      "text": "1. Was leistet ein Schema (z. B. JSON Schema/XSD) in erster Linie?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Pruefung von Struktur, Pflichtfeldern und Datentypen"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Automatische Datenverschluesselung"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Komprimierung der Datei"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "s2",
+                                      "text": "2. Warum braucht man bei Schnittstellen oft Versionierung?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Damit aenderungsbedingte Brueche kontrolliert eingefuehrt werden koennen"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Weil Dateiendungen sonst nicht angezeigt werden"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Damit Encoding irrelevant wird"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "s3",
+                                      "text": "3. Welche Aussage ist korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Nur Dateiendung pruefen reicht fuer robusten Import aus."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Validierung plus Vertrag reduziert Produktionsfehler deutlich."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "CSV braucht nie Formatkonventionen."
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "usecase-sort-l2",
+                                  "type": "sort",
+                                  "title": "Raetsel 6: Formatwahl im Kontext",
+                                  "subtitle": "Ordne den sinnvollsten primaeren Einsatztyp zu.",
+                                  "hintDefault": "API payloads oft JSON/XML, tabellarischer Export oft CSV, Layoutnachweis oft PDF.",
+                                  "sortColumns": [
+                                    {
+                                      "zone": "interface",
+                                      "label": "Datenschnittstelle",
+                                      "hint": "maschinell verarbeiten"
+                                    },
+                                    {
+                                      "zone": "tabular",
+                                      "label": "Tabellarischer Export",
+                                      "hint": "Massenlisten"
+                                    },
+                                    {
+                                      "zone": "presentation",
+                                      "label": "Darstellung/Archiv",
+                                      "hint": "Lesen/Anzeigen"
+                                    }
+                                  ],
+                                  "sortCards": [
+                                    {
+                                      "id": "u1",
+                                      "text": "API liefert Produktstammdaten mit verschachtelten Attributen",
+                                      "correctZone": "interface"
+                                    },
+                                    {
+                                      "id": "u2",
+                                      "text": "Monatliche Personalliste fuer Massenimport",
+                                      "correctZone": "tabular"
+                                    },
+                                    {
+                                      "id": "u3",
+                                      "text": "Rechnung im unveraenderlichen Layout fuer Kundenversand",
+                                      "correctZone": "presentation"
+                                    },
+                                    {
+                                      "id": "u4",
+                                      "text": "Event-Message mit Versionsfeld und validierbarer Struktur",
+                                      "correctZone": "interface"
+                                    },
+                                    {
+                                      "id": "u5",
+                                      "text": "Schneller Datenabzug fuer Fachbereich in Tabellenkalkulation",
+                                      "correctZone": "tabular"
+                                    },
+                                    {
+                                      "id": "u6",
+                                      "text": "Produktfoto fuer Kataloganzeige",
+                                      "correctZone": "presentation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "quality-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Raetsel 7: Datenqualitaet",
+                                  "subtitle": "Erkenne robuste gegen fragile Loesungen.",
+                                  "hintDefault": "Robustheit entsteht durch Vertrag, Validierung, Tests und Monitoring.",
+                                  "questions": [
+                                    {
+                                      "id": "q1",
+                                      "text": "1. Welche Massnahme erhoeht Importstabilitaet am meisten?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Schema-Validation, Referenzdaten und automatisierte Tests"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Nur Dateiendung pruefen"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Fehler erst manuell im Produktivsystem suchen"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "q2",
+                                      "text": "2. Was ist bei CSV mit Freitextfeldern kritisch?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Quoting und Escaping fuer Trennzeichen im Feld"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "CPU-Takt"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Dateinamenlaenge"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "q3",
+                                      "text": "3. Welche Aussage ist AP1-reif?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Encoding, Delimiter und Schema sind getrennte, aber zusammen relevante Fehlerklassen."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Wenn Delimiter stimmt, ist Encoding egal."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Schema ersetzt alle inhaltlichen Plausibilitaetspruefungen."
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "final-quiz-l2",
+                                  "type": "quiz",
+                                  "title": "Finale: AP1-Schnittstellenentscheidung",
+                                  "subtitle": "Waehle die fachlich robusteste Gesamtantwort.",
+                                  "hintDefault": "Dateiformate sind Vertraege: Struktur, Kodierung, Regeln und Betrieb muessen zusammenpassen.",
+                                  "questions": [
+                                    {
+                                      "id": "f1",
+                                      "text": "1. Was ist fuer stabile Dateischnittstellen am wichtigsten?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Nur ein gemeinsamer Dateiname"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Klare Formatregeln, Versionierung, Validation und Testfaelle"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Moeglichst viele manuelle Ausnahmen"
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    },
+                                    {
+                                      "id": "f2",
+                                      "text": "2. Wann ist JSON gegenueber CSV oft im Vorteil?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "Bei hierarchischen Datenstrukturen mit verschachtelten Objekten"
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Wenn gar keine Struktur benoetigt wird"
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "Wenn nur Bilddaten gespeichert werden sollen"
+                                        }
+                                      ],
+                                      "correct": "a"
+                                    },
+                                    {
+                                      "id": "f3",
+                                      "text": "3. Welche Aussage ist fachlich korrekt?",
+                                      "options": [
+                                        {
+                                          "value": "a",
+                                          "text": "PDF ist meist besser fuer maschinelle Datenimporte als JSON/XML."
+                                        },
+                                        {
+                                          "value": "b",
+                                          "text": "Die beste Formatwahl haengt vom Einsatzzweck ab: Schnittstelle, Tabelle oder Darstellung."
+                                        },
+                                        {
+                                          "value": "c",
+                                          "text": "CSV ist immer unbrauchbar fuer Schnittstellen."
+                                        }
+                                      ],
+                                      "correct": "b"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02/Dateiformate AP1-MP02.json",
+                            "name": "Dateiformate AP1-MP02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "matching_puzzle",
+                              "title": "Dateiformate (AP1) Level 2 – Struktur, Encoding und Datenqualitaet",
+                              "schema_version": "1.0",
+                              "subtitle": "Ordne Begriff, fachlich korrekte Bedeutung und AP1-nahes Praxisbeispiel.",
+                              "columnTitles": {
+                                "column1": "Begriff",
+                                "column2": "Praezise Bedeutung",
+                                "column3": "Praxisbeispiel"
+                              },
+                              "columnHints": {
+                                "column1": "Waehle den passenden Terminus.",
+                                "column2": "Achte auf die genaue Fehlerklasse.",
+                                "column3": "Ordne den realistischen Einsatzfall zu."
+                              },
+                              "sets": [
+                                {
+                                  "id": "textformat",
+                                  "name": "Textformat",
+                                  "description": "Menschenlesbares Datenformat, direkt mit Editor und Standardtools pruefbar.",
+                                  "example": "JSON-Fehler in API-Antwort schnell per Log-Ausgabe analysieren."
+                                },
+                                {
+                                  "id": "binaryformat",
+                                  "name": "Binaerformat",
+                                  "description": "Nicht direkt menschenlesbar; Verarbeitung erfolgt ueber spezialisierte Programme/Parser.",
+                                  "example": "JPG-Datei laesst sich nicht sinnvoll in reinem Texteditor interpretieren."
+                                },
+                                {
+                                  "id": "csv",
+                                  "name": "CSV",
+                                  "description": "Tabellarisches Textformat mit Zeilen und Delimiter; klarer Vertrag fuer Spaltentrennung noetig.",
+                                  "example": "Mitarbeiterliste fuer Massenimport aus Fachsystem exportieren."
+                                },
+                                {
+                                  "id": "tsv",
+                                  "name": "TSV",
+                                  "description": "Variante tabellarischer Textformate mit Tabulator als Trennzeichen.",
+                                  "example": "Datenaustausch ohne Konflikt mit Komma im Freitextfeld."
+                                },
+                                {
+                                  "id": "delimiter",
+                                  "name": "CSV-Delimiter",
+                                  "description": "Separator zwischen Spaltenwerten, z. B. Komma oder Semikolon.",
+                                  "example": "Import erwartet Komma, Datei nutzt Semikolon und landet in einer Spalte."
+                                },
+                                {
+                                  "id": "quoting",
+                                  "name": "CSV-Quoting",
+                                  "description": "Felder mit Trennzeichen oder Umbruechen werden in Anfuehrungszeichen eingeschlossen.",
+                                  "example": "Adresse mit Komma bleibt als ein Feld erhalten."
+                                },
+                                {
+                                  "id": "escaping",
+                                  "name": "Escaping",
+                                  "description": "Sonderzeichen werden nach Regeln maskiert, um Parserfehler zu vermeiden.",
+                                  "example": "Anfuehrungszeichen im CSV-Feld werden korrekt verdoppelt."
+                                },
+                                {
+                                  "id": "json",
+                                  "name": "JSON",
+                                  "description": "Hierarchisches Textformat mit Objekten und Arrays, stark in APIs verbreitet.",
+                                  "example": "Produktdaten inklusive Varianten als verschachtelte Struktur uebertragen."
+                                },
+                                {
+                                  "id": "xml",
+                                  "name": "XML",
+                                  "description": "Tag-basiertes hierarchisches Textformat mit strikter Strukturmoeglichkeit.",
+                                  "example": "Bestelldaten zwischen Enterprise-Systemen austauschen."
+                                },
+                                {
+                                  "id": "json_schema",
+                                  "name": "JSON Schema",
+                                  "description": "Definiert Struktur- und Typregeln fuer JSON-Dokumente.",
+                                  "example": "Validator lehnt Datensatz ohne Pflichtfeld customerId ab."
+                                },
+                                {
+                                  "id": "xsd",
+                                  "name": "XSD",
+                                  "description": "XML-Schema zur formalen Pruefung von Struktur und Datentypen.",
+                                  "example": "XML-Import scheitert, weil ein Element am falschen Ort steht."
+                                },
+                                {
+                                  "id": "utf8",
+                                  "name": "UTF-8",
+                                  "description": "Zeichencodierung, die Zeichen in Bytefolgen abbildet; Standard in vielen Schnittstellen.",
+                                  "example": "Umlaute bleiben korrekt, wenn Sender und Empfaenger UTF-8 nutzen."
+                                },
+                                {
+                                  "id": "encoding_mismatch",
+                                  "name": "Encoding-Mismatch",
+                                  "description": "Datei wird mit anderer Zeichencodierung gelesen als geschrieben.",
+                                  "example": "Muller erscheint als MÃ¼ller nach Import."
+                                },
+                                {
+                                  "id": "bom",
+                                  "name": "BOM",
+                                  "description": "Optionale Bytefolge am Dateianfang, die Header oder Parser beeintraechtigen kann.",
+                                  "example": "Erste Spalte heisst ploetzlich unsichtbar-prefixed id."
+                                },
+                                {
+                                  "id": "line_endings",
+                                  "name": "Zeilenende-Konvention",
+                                  "description": "Unterschiede wie LF und CRLF koennen bei Parsern und Vergleichen relevant sein.",
+                                  "example": "Diff zeigt unerwartet viele Aenderungen nach Plattformwechsel."
+                                },
+                                {
+                                  "id": "decimal_separator",
+                                  "name": "Dezimaltrennzeichen",
+                                  "description": "Locale-Abhaengigkeit bei Zahlenformaten, z. B. 1,23 vs 1.23.",
+                                  "example": "Preis wird falsch importiert, weil Punkt statt Komma erwartet wird."
+                                },
+                                {
+                                  "id": "mapping",
+                                  "name": "Feldmapping",
+                                  "description": "Zuordnung externer Felder zu internen Zielstrukturen.",
+                                  "example": "source.customer_no wird auf target.customerId gemappt."
+                                },
+                                {
+                                  "id": "required_fields",
+                                  "name": "Pflichtfeldpruefung",
+                                  "description": "Kontrolle, ob alle benoetigten Felder vorhanden und gefuellt sind.",
+                                  "example": "Datensatz ohne Buchungsdatum wird sauber abgelehnt."
+                                },
+                                {
+                                  "id": "type_validation",
+                                  "name": "Typvalidierung",
+                                  "description": "Prueft Datentypen gegen erwartete Definitionen.",
+                                  "example": "Menge als Text statt Integer fuehrt zu Validatorfehler."
+                                },
+                                {
+                                  "id": "versioning",
+                                  "name": "Schnittstellenversionierung",
+                                  "description": "Aenderungen am Datenvertrag kontrolliert und rueckwaertskompatibel einführen.",
+                                  "example": "API liefert v1 und v2 parallel waehrend Umstellung."
+                                },
+                                {
+                                  "id": "content_type",
+                                  "name": "Content-Type",
+                                  "description": "HTTP-Header zur Kennzeichnung des Datenformats.",
+                                  "example": "Anfrage mit application/json statt text/plain senden."
+                                },
+                                {
+                                  "id": "mime_type",
+                                  "name": "MIME-Type",
+                                  "description": "Standardisierte Formatkennzeichnung fuer Uebertragung und Verarbeitung.",
+                                  "example": "Datei als text/csv deklariert, damit Importer richtig parst."
+                                },
+                                {
+                                  "id": "compression",
+                                  "name": "Komprimierung",
+                                  "description": "Reduziert Dateigroesse, aendert aber nicht den semantischen Datenvertrag.",
+                                  "example": "CSV wird als gzip uebertragen, bleibt fachlich CSV."
+                                },
+                                {
+                                  "id": "base64",
+                                  "name": "Base64",
+                                  "description": "Kodierung von Binaerdaten in Textzeichen fuer textbasierte Kanaele.",
+                                  "example": "Bild als Base64-String in JSON-Nachricht eingebettet."
+                                },
+                                {
+                                  "id": "checksum",
+                                  "name": "Pruefsumme",
+                                  "description": "Integritaetspruefung, ob Datei auf dem Transportweg unveraendert blieb.",
+                                  "example": "SHA-256 wird vor Import mit erwarteter Signatur verglichen."
+                                },
+                                {
+                                  "id": "canonicalization",
+                                  "name": "Kanonisierung",
+                                  "description": "Normiert Darstellungsdetails fuer reproduzierbare Vergleiche/Signaturen.",
+                                  "example": "JSON wird vor Signatur in stabile Schluesselreihenfolge gebracht."
+                                },
+                                {
+                                  "id": "csv_injection",
+                                  "name": "CSV-Injection-Risiko",
+                                  "description": "Gefahr durch Formeln in Tabellenimporten bei ungesicherten Nutzerwerten.",
+                                  "example": "Zelle beginnt mit = und fuehrt beim Oeffnen unerwuenschte Aktion aus."
+                                },
+                                {
+                                  "id": "error_runbook",
+                                  "name": "Fehler-Runbook",
+                                  "description": "Definierte Schrittfolge fuer Diagnose und Behebung wiederkehrender Importprobleme.",
+                                  "example": "Bei Importfehler zuerst Encoding, dann Delimiter, dann Schema pruefen."
+                                },
+                                {
+                                  "id": "observability",
+                                  "name": "Import-Monitoring",
+                                  "description": "Metriken und Logs fuer Fehlerraten, Latenzen und Datenqualitaetsindikatoren.",
+                                  "example": "Alert bei sprunghaftem Anstieg invalid records."
+                                },
+                                {
+                                  "id": "format_contract",
+                                  "name": "Formatvertrag",
+                                  "description": "Dokumentierte Einigung auf Struktur, Kodierung, Pflichtfelder und Version.",
+                                  "example": "Partner erhalten verbindliches Interface-Handbuch mit Testdaten."
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02/Dateiformate AP1-QQ02.json",
+                            "name": "Dateiformate AP1-QQ02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "quick_quiz",
+                              "title": "Quick-Quiz – Dateiformate (AP1) Level 2",
+                              "introText": "Ordne jede Aussage dem fachlich passendsten Dateiformatbegriff zu.",
+                              "sublineText": "Level 2: Struktur, Kodierung, Validierung und Importrobustheit.",
+                              "timePerQuestionSeconds": 24,
+                              "answerLabels": [
+                                "Textformat",
+                                "Binaerformat",
+                                "CSV",
+                                "TSV",
+                                "Delimiter",
+                                "Quoting",
+                                "Escaping",
+                                "JSON",
+                                "XML",
+                                "JSON Schema",
+                                "XSD",
+                                "UTF-8",
+                                "Encoding-Mismatch",
+                                "BOM",
+                                "Zeilenende LF/CRLF",
+                                "Dezimaltrennzeichen",
+                                "Feldmapping",
+                                "Pflichtfeldpruefung",
+                                "Typvalidierung",
+                                "Schnittstellenversionierung",
+                                "Content-Type",
+                                "MIME-Type",
+                                "Komprimierung",
+                                "Base64",
+                                "Pruefsumme",
+                                "Kanonisierung",
+                                "CSV-Injection",
+                                "Fehler-Runbook",
+                                "Import-Monitoring",
+                                "Formatvertrag",
+                                "alle",
+                                "keine"
+                              ],
+                              "questions": [
+                                {
+                                  "text": "Direkt lesbar im Editor und gut fuer schnelle Fehlersuche.",
+                                  "correct": "Textformat"
+                                },
+                                {
+                                  "text": "Typisch nicht direkt lesbar, Verarbeitung ueber spezialisierte Programme.",
+                                  "correct": "Binaerformat"
+                                },
+                                {
+                                  "text": "Tabellarisches Zeilen-Spalten-Format mit sehr hoher Praxisverbreitung beim Export.",
+                                  "correct": "CSV"
+                                },
+                                {
+                                  "text": "Tabellarischer Datenaustausch mit Tabulator statt Komma/Semikolon.",
+                                  "correct": "TSV"
+                                },
+                                {
+                                  "text": "Bestimmt, woran Spalten im CSV getrennt werden.",
+                                  "correct": "Delimiter"
+                                },
+                                {
+                                  "text": "Sichert Felder, die selbst Trennzeichen enthalten.",
+                                  "correct": "Quoting"
+                                },
+                                {
+                                  "text": "Maskiert Sonderzeichen gemaess Parserregeln.",
+                                  "correct": "Escaping"
+                                },
+                                {
+                                  "text": "Hierarchisches Key-Value-Format, besonders in REST-Schnittstellen verbreitet.",
+                                  "correct": "JSON"
+                                },
+                                {
+                                  "text": "Tag-basiertes hierarchisches Austauschformat.",
+                                  "correct": "XML"
+                                },
+                                {
+                                  "text": "Definiert Struktur- und Typregeln fuer JSON-Daten.",
+                                  "correct": "JSON Schema"
+                                },
+                                {
+                                  "text": "Schema-Definition fuer XML-Dokumente.",
+                                  "correct": "XSD"
+                                },
+                                {
+                                  "text": "Gaengige Zeichencodierung fuer moderne Datenschnittstellen.",
+                                  "correct": "UTF-8"
+                                },
+                                {
+                                  "text": "Zeichensalat durch abweichende Kodierungsannahmen von Sender und Empfaenger.",
+                                  "correct": "Encoding-Mismatch"
+                                },
+                                {
+                                  "text": "Optionale Bytefolge am Dateianfang, die Parser stoeren kann.",
+                                  "correct": "BOM"
+                                },
+                                {
+                                  "text": "Plattformabhaengige Umbruchdarstellung mit Einfluss auf Parser und Diffs.",
+                                  "correct": "Zeilenende LF/CRLF"
+                                },
+                                {
+                                  "text": "Locale-Falle bei Zahlenwerten wie 1,23 vs 1.23.",
+                                  "correct": "Dezimaltrennzeichen"
+                                },
+                                {
+                                  "text": "Ordnet Quellfelder den internen Zielfeldern zu.",
+                                  "correct": "Feldmapping"
+                                },
+                                {
+                                  "text": "Prueft, ob benoetigte Felder vorhanden und gefuellt sind.",
+                                  "correct": "Pflichtfeldpruefung"
+                                },
+                                {
+                                  "text": "Stellt sicher, dass z. B. Integer nicht als Freitext importiert werden.",
+                                  "correct": "Typvalidierung"
+                                },
+                                {
+                                  "text": "Fuehrt Datenvertragsaenderungen kontrolliert ein, ohne harte Brueche zu erzwingen.",
+                                  "correct": "Schnittstellenversionierung"
+                                },
+                                {
+                                  "text": "HTTP-Kennzeichnung fuer den eigentlichen Nutzdaten-Typ im Request/Response.",
+                                  "correct": "Content-Type"
+                                },
+                                {
+                                  "text": "Standardisierte Bezeichnung fuer Datenarten bei Uebertragung und Dateien.",
+                                  "correct": "MIME-Type"
+                                },
+                                {
+                                  "text": "Verringert Dateigroesse, ohne den semantischen Datentyp zu aendern.",
+                                  "correct": "Komprimierung"
+                                },
+                                {
+                                  "text": "Kodiert Binaerdaten als Textzeichen fuer textbasierte Transportkanaele.",
+                                  "correct": "Base64"
+                                },
+                                {
+                                  "text": "Integritaetsnachweis, ob Daten auf dem Transportweg unveraendert blieben.",
+                                  "correct": "Pruefsumme"
+                                },
+                                {
+                                  "text": "Normalisiert Darstellungsdetails fuer stabile Vergleiche oder Signaturen.",
+                                  "correct": "Kanonisierung"
+                                },
+                                {
+                                  "text": "Risiko beim Oeffnen manipulierter Tabellendaten mit Formelauswertung.",
+                                  "correct": "CSV-Injection"
+                                },
+                                {
+                                  "text": "Definierte Diagnoseabfolge fuer wiederkehrende Importstoerungen.",
+                                  "correct": "Fehler-Runbook"
+                                },
+                                {
+                                  "text": "Metriken/Logs fuer Fehlerrate, Durchsatz und Datenqualitaet im Betrieb.",
+                                  "correct": "Import-Monitoring"
+                                },
+                                {
+                                  "text": "Dokumentiert verbindlich Struktur, Encoding, Regeln und Version der Schnittstelle.",
+                                  "correct": "Formatvertrag"
+                                },
+                                {
+                                  "text": "Spalten verrutschen, weil Adressfeld mit Komma nicht korrekt geschuetzt ist.",
+                                  "correct": "Quoting"
+                                },
+                                {
+                                  "text": "Erste Header-Spalte enthaelt unerwartetes unsichtbares Zeichen.",
+                                  "correct": "BOM"
+                                },
+                                {
+                                  "text": "Fehlerklasse: Datei in UTF-8 geschrieben, aber als Latin-1 interpretiert.",
+                                  "correct": "Encoding-Mismatch"
+                                },
+                                {
+                                  "text": "Nur Dateiendung pruefen reicht fuer robuste Produktionseinbindung aus.",
+                                  "correct": "keine"
+                                },
+                                {
+                                  "text": "Schema kann Strukturregeln absichern, ersetzt aber nicht alle fachlichen Plausibilitaetsregeln.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "Delimiter, Encoding und Mapping sind unterschiedliche Ursachenklassen bei Importfehlern.",
+                                  "correct": "alle"
+                                },
+                                {
+                                  "text": "CSV ist fuer alle Datentypen immer ungeeignet und sollte nie genutzt werden.",
+                                  "correct": "keine"
+                                },
+                                {
+                                  "text": "Robuste Schnittstellen brauchen Vertrag, Testdaten, Validierung und Monitoring.",
+                                  "correct": "alle"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02/Dateiformate AP1-WAW02.json",
+                            "name": "Dateiformate AP1-WAW02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "what_and_why",
+                              "title": "What & Why – Dateiformate (AP1) Level 2",
+                              "description": "Komplexe AP1-Faelle zu Formatwahl, Encoding, CSV-Fehlern, Schema-Validierung und betriebssicherem Datenaustausch.",
+                              "cases": [
+                                {
+                                  "id": "df01",
+                                  "profile": "Nach einem Lieferantenwechsel erscheinen Umlaute in einer CSV als Zeichensalat. Die Spaltenzahl ist korrekt.",
+                                  "tags": [
+                                    "Encoding",
+                                    "CSV",
+                                    "Diagnose"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Encoding-Mismatch als Primaerursache behandeln",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Zeichensalat bei ansonsten korrekten Spalten deutet auf falsche Dekodierung hin.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Delimiterprobleme erzeugen eher Spaltenchaos als kaputte Zeichen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Encoding betrifft nur Binaerdateien, nicht CSV.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Sender/Empfaenger muessen die gleiche Kodierung verbindlich nutzen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Delimiter pruefen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Delimiter ist wichtig, erklaert aber nicht den Zeichensalat.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Spaltenzahl ist bereits korrekt, daher ist Delimiter hier nicht primaer.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Delimiter regelt gleichzeitig automatisch die Zeichencodierung.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Root-Cause-Diagnose muss zum Fehlerbild passen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Schema-Validierung als einzige Massnahme",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Schema prueft Struktur/Typen, nicht die Byte-zu-Zeichen-Interpretation.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Falsches Encoding kann vor jeder Schema-Pruefung scheitern.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Schema ersetzt jegliche Encoding-Definition.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Beide Themen sind wichtig, aber unterschiedliche Fehlerklassen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Die korrekte Hauptursache ist ein Encoding-Mismatch; Delimiter und Schema sind hier nicht primaer."
+                                },
+                                {
+                                  "id": "df02",
+                                  "profile": "Beim Import landen alle Werte in einer einzigen Spalte. Umlaute sehen korrekt aus.",
+                                  "tags": [
+                                    "CSV",
+                                    "Delimiter",
+                                    "Import"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Delimiter-Konfiguration korrigieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Eine Spalte fuer alles ist ein klassisches Delimiter-Symptom.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Wenn Zeichen korrekt sind, ist Encoding weniger wahrscheinlich die Hauptursache.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "CSV hat weltweit immer Komma, Semikolon ist unzulaessig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Importvertrag muss Delimiter eindeutig festlegen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur UTF-8 setzen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "UTF-8 loest Zeichenprobleme, nicht fehlende Spaltentrennung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das beobachtete Fehlerbild spricht nicht primaer fuer Encoding.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "UTF-8 erzwingt automatisch den richtigen Delimiter.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Delimiter und Encoding sind getrennte Parameter.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Von CSV auf PDF umstellen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "PDF ist fuer Darstellung, nicht fuer robusten tabellarischen Import optimiert.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Formatwechsel umgeht das eigentliche Konfigurationsproblem nur scheinbar.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "PDF ist typischerweise das beste Maschinenimportformat fuer Tabellen.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die korrekte Loesung ist der definierte CSV-Vertrag.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Die Ursache ist sehr wahrscheinlich ein falscher Delimiter im Importprozess."
+                                },
+                                {
+                                  "id": "df03",
+                                  "profile": "Adressfelder enthalten Kommas. Beim CSV-Import entstehen dadurch zusaetzliche Spalten.",
+                                  "tags": [
+                                    "CSV",
+                                    "Quoting",
+                                    "Escaping"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Quoting-/Escaping-Regeln verbindlich nutzen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Felder mit Trennzeichen muessen korrekt gequotet werden.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ohne Escaping kann der Parser Feldgrenzen falsch erkennen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Kommas in Feldern sind im CSV grundsaetzlich unzulaessig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Regeln muessen auf Sender- und Empfaengerseite identisch sein.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Zeilenenden von CRLF auf LF aendern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Zeilenenden koennen relevant sein, loesen hier aber das Komma-im-Feld-Problem nicht.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das Fehlerbild ist feldbezogen, nicht zeilenumbruchbezogen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "LF/CRLF korrigiert automatisch fehlende Quotes.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Root-Cause bleibt fehlendes Quoting/Escaping.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "CSV durch reines TXT ohne Trennzeichen ersetzen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Damit geht strukturierter Tabellenimport verloren.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Fachliche Anforderungen werden damit meist nicht erfuellt.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Unstrukturiertes TXT ist fuer tabellarische Importe immer besser.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Richtig ist, CSV korrekt zu konfigurieren statt Struktur aufzugeben.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Sauberes Quoting und Escaping ist die korrekte Massnahme fuer Kommas innerhalb von CSV-Feldern."
+                                },
+                                {
+                                  "id": "df04",
+                                  "profile": "Eine API uebertraegt verschachtelte Produktdaten mit Varianten, Preisen und Attributlisten.",
+                                  "tags": [
+                                    "JSON",
+                                    "Hierarchie",
+                                    "Schnittstelle"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "JSON plus Schema-Validierung einsetzen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Verschachtelte Strukturen lassen sich in JSON natuerlich modellieren.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Schema prueft Pflichtfelder und Typen bei komplexen Payloads.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "CSV bildet beliebige Hierarchien ohne Zusatzkonventionen gleichwertig ab.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "APIs profitieren von klar dokumentierten Strukturvertraegen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "CSV mit Freitext-Spalten nutzen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "CSV ist fuer flache Tabellen gut, fuer tiefe Hierarchien aber unhandlich.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Verschachtelte Daten benoetigen in CSV oft fragile Sonderregeln.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "CSV ist fuer jede Hierarchie immer die stabilste Variante.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "JSON/XML sind hier fachlich geeigneter.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "PDF als maschinelle API-Antwort",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "PDF priorisiert Darstellung, nicht strukturierte Maschinenverarbeitung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Parseraufwand und Fehleranfaelligkeit steigen unnoetig.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "PDF ist fuer API-Strukturdaten standardmaessig vorzuziehen.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Der Einsatzzweck passt nicht.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "JSON mit Schema-Validierung ist fuer verschachtelte API-Daten die robuste Wahl."
+                                },
+                                {
+                                  "id": "df05",
+                                  "profile": "Ein Partner fordert strikte XML-Verarbeitung mit formaler Validierung, bevor Daten angenommen werden.",
+                                  "tags": [
+                                    "XML",
+                                    "XSD",
+                                    "Validierung"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "XML mit XSD-Validierung implementieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "XSD ermoeglicht formal pruefbare XML-Strukturregeln.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Fehler werden frueh erkannt, bevor Fachprozesse betroffen sind.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "XML kann nicht gegen formale Schemas geprueft werden.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Das geforderte Vorgehen passt exakt zur Aufgabenstellung.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Dateiendung .xml pruefen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Eine Endung sagt nichts ueber gueltige interne Struktur aus.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Ohne Schema bleiben strukturelle Inkonsistenzen unentdeckt.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Endungspruefung ersetzt vollstaendig jede Inhaltsvalidierung.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Diese Option ist fuer Produktionsschnittstellen zu schwach.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "XML in JPG umwandeln",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "JPG ist ein Bildformat und nicht fuer strukturierte Datenschnittstellen geeignet.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Maschinelle Validierung waere damit praktisch unmoeglich.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Bildformate verbessern XML-Validierungsprozesse.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Option ist fachlich unpassend.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Wenn strikte formale Pruefung gefordert ist, ist XML mit XSD-Validierung korrekt."
+                                },
+                                {
+                                  "id": "df06",
+                                  "profile": "Kunden sollen Rechnungen unveraenderlich anzeigen und drucken koennen; maschineller Felderimport ist nachrangig.",
+                                  "tags": [
+                                    "PDF",
+                                    "Darstellung",
+                                    "Use-Case"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "PDF als Primaerformat fuer Darstellung nutzen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "PDF ist fuer layouttreue Anzeige und Druck optimiert.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Fuer diesen Zweck ist strukturierter API-Import nicht der Hauptfokus.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "PDF ist immer das beste Format fuer tabellarischen Maschinenimport.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Formatwahl soll am Ziel \"Darstellung\" ausgerichtet werden.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur CSV bereitstellen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "CSV ist fuer Datenverarbeitung gut, aber nicht fuer layouttreue Dokumentdarstellung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Kundenanforderung nach druckbarer Form wird damit schlecht erfuellt.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "CSV liefert standardmaessig verbindliches Seitenlayout.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Use-Case und Format passen hier nicht ideal zusammen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur JSON bereitstellen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "JSON ist stark fuer API-Daten, nicht fuer feste Dokumentdarstellung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Endanwenderfreundlicher Druck ist kein JSON-Kernziel.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "JSON ersetzt jede Form von Dokumentlayout.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Formatwahl muss fachlichen Outputzweck abdecken.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Fuer layouttreue Darstellung ist PDF hier das passende Primaerformat."
+                                },
+                                {
+                                  "id": "df07",
+                                  "profile": "Eine Schnittstelle fuehrt neue Pflichtfelder ein, alte Verbraucher brechen. Das Team sucht einen robusten Aenderungsweg.",
+                                  "tags": [
+                                    "Versionierung",
+                                    "Kompatibilitaet",
+                                    "Betrieb"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Versionierung und kontrollierte Migration einführen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Versionierung reduziert ungeplante Brueche bei Vertragseraenderungen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Parallelbetrieb alter/neuer Version erleichtert Umstellung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Pflichtfeldaenderungen sind immer rueckwaertskompatibel.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Kommunikation und Tests je Version sind zentral.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Aenderungen ohne Vorankuendigung live schalten",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Unkoordinierte Vertragsaenderungen fuehren oft zu Produktionsstoerungen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Verbraucher brauchen Migrationszeit fuer neue Pflichtfelder.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Ad-hoc-Aenderungen verbessern Stabilitaet nachweislich.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Betriebssicherheit verlangt planbare Einfuehrung.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Dateiendung aendern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Dateiendungen loesen keine inhaltliche Kompatibilitaet.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Die eigentliche Vertragsaenderung bleibt unverarbeitet.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Eine neue Endung garantiert kompatible Parser auf allen Seiten.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Es braucht echtes Versions- und Migrationsmanagement.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Schnittstellenversionierung mit geplanter Migration ist die fachlich saubere Antwort."
+                                },
+                                {
+                                  "id": "df08",
+                                  "profile": "Numerische Werte werden falsch importiert, weil manche Systeme Komma und andere Punkt als Dezimaltrenner verwenden.",
+                                  "tags": [
+                                    "Locale",
+                                    "Dezimaltrennzeichen",
+                                    "Importqualitaet"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Numerische Normalisierung und klare Locale-Regeln definieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Uneinheitliche Zahlendarstellung ist eine klassische Integrationsfalle.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Regeln muessen im Formatvertrag dokumentiert werden.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Dezimaltrennzeichen sind bei Datenaustausch immer irrelevant.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Konvertierung und Validierung sollten automatisiert getestet werden.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur MIME-Type aendern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "MIME-Type kennzeichnet Format, nicht locale-spezifische Zahlenregeln.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das fachliche Interpretationsproblem bleibt bestehen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "MIME-Type steuert automatisch Komma/Punkt-Konvertierung.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Hier sind Datenregeln und Parserlogik entscheidend.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Zeilenenden angleichen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "LF/CRLF betrifft Umbrueche, nicht numerische Semantik.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das beobachtete Problem liegt auf Wertebene.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Zeilenenden bereinigen automatisch Dezimaldarstellung.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Die Loesung muss den richtigen Problemtyp adressieren.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Einheitliche Locale-/Numerikregeln mit parserseitiger Normalisierung loesen das Problem fachgerecht."
+                                },
+                                {
+                                  "id": "df09",
+                                  "profile": "Sicherheitsreview zeigt: Exportierte CSV kann mit Formelzeichen starten und bei Oeffnung in Tabellenprogrammen unerwuenschte Aktionen ausloesen.",
+                                  "tags": [
+                                    "Security",
+                                    "CSV-Injection",
+                                    "Praevention"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "CSV-Injection-Schutz im Export einbauen",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Nutzereingaben mit fuehrenden Formelzeichen koennen riskant sein.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Sanitizing/Prefix-Strategien reduzieren Angriffsflaeche.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "CSV kennt keine sicherheitsrelevanten Inhalte.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Sicherheitsregeln gehoeren in den Exportprozess.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur Delimiter aendern",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Delimiterwechsel adressiert die Formelinterpretation nicht.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Das Risiko liegt im Zellinhalt, nicht im Spaltentrennzeichen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Semikolon verhindert jede Form von CSV-Injection automatisch.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Sicherheitsmassnahmen muessen ursachennah sein.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Dateinamen verstecken",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Dateiname beeinflusst nicht die Zellauswertung durch Tabellenprogramme.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Die eigentliche Gefahr bleibt unvermindert bestehen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Unsichtbare Dateinamen neutralisieren Formelinhalte.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Massnahmen muessen die Daten selbst absichern.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Richtig ist ein gezielter CSV-Injection-Schutz in der Exportlogik."
+                                },
+                                {
+                                  "id": "df10",
+                                  "profile": "Ein Team will Dateischnittstellen produktionsreif machen und wiederkehrende Importstoerungen vermeiden.",
+                                  "tags": [
+                                    "Betrieb",
+                                    "Qualitaet",
+                                    "Governance"
+                                  ],
+                                  "options": [
+                                    {
+                                      "id": "o1",
+                                      "label": "Formatvertrag, Referenztests, Validierung und Monitoring kombinieren",
+                                      "isCorrect": true,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Robustheit entsteht durch klare Regeln plus technische Absicherung.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Monitoring und Runbook verbessern die Stoerungsbehandlung im Betrieb.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Einmaliger Test vor Go-Live reicht dauerhaft aus.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Versionierung und Regressionstests verhindern spaetere Brueche.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o2",
+                                      "label": "Nur auf manuelle Sichtkontrolle setzen",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Manuelle Pruefung skaliert schlecht und erkennt nicht alle Fehlerarten.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Automatisierte Validierung ist bei wiederkehrenden Imports zentral.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Manuelle Sichtpruefung ersetzt Schema- und Typvalidierung vollstaendig.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Betriebsstabilitaet braucht reproduzierbare Kontrollen.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "o3",
+                                      "label": "Nur Dateiendung vereinbaren",
+                                      "isCorrect": false,
+                                      "whys": [
+                                        {
+                                          "id": "w1",
+                                          "text": "Eine Endung allein definiert keinen vollstaendigen Datenvertrag.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w2",
+                                          "text": "Wichtige Parameter wie Encoding und Feldregeln bleiben offen.",
+                                          "correct": true
+                                        },
+                                        {
+                                          "id": "w3",
+                                          "text": "Dateiendung garantiert automatisch kompatible Feldinhalte.",
+                                          "correct": false
+                                        },
+                                        {
+                                          "id": "w4",
+                                          "text": "Diese Option ist fuer produktiven Dauerbetrieb unzureichend.",
+                                          "correct": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "solution": "Produktionsreif wird die Schnittstelle durch den kombinierten Ansatz aus Vertrag, Tests, Validierung und Monitoring."
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "database/Teil 1/IT-Teil/IT-Systeme/Themen/Dateiformate/Level02/Dateiformate AP1-WBI02.json",
+                            "name": "Dateiformate AP1-WBI02.json",
+                            "isFolder": false,
+                            "kind": "json",
+                            "data": {
+                              "game_type": "wer_bin_ich",
+                              "title": "Wer bin ich? – Dateiformate (AP1) Level 2",
+                              "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewaehlt.",
+                              "leadershipStyles": [
+                                {
+                                  "id": "textformat",
+                                  "name": "Textformat",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": false,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": false
+                                  }
+                                },
+                                {
+                                  "id": "binaryformat",
+                                  "name": "Binaerformat",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": true,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": false,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": false,
+                                    "typical_for_layout_output": true,
+                                    "needs_strict_validation": false
+                                  }
+                                },
+                                {
+                                  "id": "csv",
+                                  "name": "CSV",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": true,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "json",
+                                  "name": "JSON",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "xml",
+                                  "name": "XML",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "utf8",
+                                  "name": "UTF-8",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": true,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "delimiter_quoting",
+                                  "name": "Delimiter/Quoting-Regeln",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "schema_validation",
+                                  "name": "Schema-Validierung",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "versioning",
+                                  "name": "Schnittstellenversionierung",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "format_contract",
+                                  "name": "Formatvertrag",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": true,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "csv_injection",
+                                  "name": "CSV-Injection-Schutz",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": true,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "monitoring_runbook",
+                                  "name": "Import-Monitoring und Runbook",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": false,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                }
+                              ],
+                              "questions": [
+                                {
+                                  "id": "q01",
+                                  "hotkey": "1",
+                                  "text": "Bin ich primaer ein Textformat?",
+                                  "attributeKey": "is_textual"
+                                },
+                                {
+                                  "id": "q02",
+                                  "hotkey": "2",
+                                  "text": "Bin ich primaer ein Binaerformat?",
+                                  "attributeKey": "is_binary"
+                                },
+                                {
+                                  "id": "q03",
+                                  "hotkey": "3",
+                                  "text": "Bin ich vor allem tabellarisch orientiert?",
+                                  "attributeKey": "is_tabular"
+                                },
+                                {
+                                  "id": "q04",
+                                  "hotkey": "4",
+                                  "text": "Bin ich fuer hierarchische Datenstrukturen typisch?",
+                                  "attributeKey": "is_hierarchical"
+                                },
+                                {
+                                  "id": "q05",
+                                  "hotkey": "5",
+                                  "text": "Geht es mir primaer um Zeichencodierung?",
+                                  "attributeKey": "is_encoding_topic"
+                                },
+                                {
+                                  "id": "q06",
+                                  "hotkey": "6",
+                                  "text": "Stehe ich eng mit CSV-Regeln wie Delimiter/Quoting in Verbindung?",
+                                  "attributeKey": "is_csv_rule_topic"
+                                },
+                                {
+                                  "id": "q07",
+                                  "hotkey": "7",
+                                  "text": "Geht es um formale Strukturpruefung per Schema?",
+                                  "attributeKey": "is_schema_topic"
+                                },
+                                {
+                                  "id": "q08",
+                                  "hotkey": "8",
+                                  "text": "Bin ich relevant fuer kontrollierte Schnittstellenaenderungen?",
+                                  "attributeKey": "is_versioning_topic"
+                                },
+                                {
+                                  "id": "q09",
+                                  "hotkey": "9",
+                                  "text": "Gehoere ich direkt zu einem verbindlichen Datenvertrag?",
+                                  "attributeKey": "is_contract_topic"
+                                },
+                                {
+                                  "id": "q10",
+                                  "hotkey": "10",
+                                  "text": "Trage ich direkt zur Risikoreduktion in Security-Themen bei?",
+                                  "attributeKey": "is_security_topic"
+                                },
+                                {
+                                  "id": "q11",
+                                  "hotkey": "11",
+                                  "text": "Spiele ich fuer Betriebsstabilitaet und Incident-Handling eine Rolle?",
+                                  "attributeKey": "is_operations_topic"
+                                },
+                                {
+                                  "id": "q12",
+                                  "hotkey": "12",
+                                  "text": "Bin ich gut fuer menschliche Lesbarkeit geeignet?",
+                                  "attributeKey": "good_for_human_readability"
+                                },
+                                {
+                                  "id": "q13",
+                                  "hotkey": "13",
+                                  "text": "Bin ich fuer maschinelle Schnittstellen typischerweise gut geeignet?",
+                                  "attributeKey": "good_for_machine_interface"
+                                },
+                                {
+                                  "id": "q14",
+                                  "hotkey": "14",
+                                  "text": "Bin ich vor allem fuer layouttreue Darstellung relevant?",
+                                  "attributeKey": "typical_for_layout_output"
+                                },
+                                {
+                                  "id": "q15",
+                                  "hotkey": "15",
+                                  "text": "Erfordert mein Einsatz in der Regel strikte Validierungs-/Regelpruefung?",
+                                  "attributeKey": "needs_strict_validation"
+                                }
+                              ],
+                              "legalForms": [
+                                {
+                                  "id": "textformat",
+                                  "name": "Textformat",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": false,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": false
+                                  }
+                                },
+                                {
+                                  "id": "binaryformat",
+                                  "name": "Binaerformat",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": true,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": false,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": false,
+                                    "typical_for_layout_output": true,
+                                    "needs_strict_validation": false
+                                  }
+                                },
+                                {
+                                  "id": "csv",
+                                  "name": "CSV",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": true,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "json",
+                                  "name": "JSON",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "xml",
+                                  "name": "XML",
+                                  "attributes": {
+                                    "is_textual": true,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": true,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "utf8",
+                                  "name": "UTF-8",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": true,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "delimiter_quoting",
+                                  "name": "Delimiter/Quoting-Regeln",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "schema_validation",
+                                  "name": "Schema-Validierung",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": true,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "versioning",
+                                  "name": "Schnittstellenversionierung",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "format_contract",
+                                  "name": "Formatvertrag",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": true,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": true,
+                                    "is_versioning_topic": true,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "csv_injection",
+                                  "name": "CSV-Injection-Schutz",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": true,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": true,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": true,
+                                    "is_security_topic": true,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": true,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
+                                },
+                                {
+                                  "id": "monitoring_runbook",
+                                  "name": "Import-Monitoring und Runbook",
+                                  "attributes": {
+                                    "is_textual": false,
+                                    "is_binary": false,
+                                    "is_tabular": false,
+                                    "is_hierarchical": false,
+                                    "is_encoding_topic": false,
+                                    "is_csv_rule_topic": false,
+                                    "is_schema_topic": false,
+                                    "is_versioning_topic": false,
+                                    "is_contract_topic": false,
+                                    "is_security_topic": false,
+                                    "is_operations_topic": true,
+                                    "good_for_human_readability": false,
+                                    "good_for_machine_interface": false,
+                                    "typical_for_layout_output": false,
+                                    "needs_strict_validation": true
+                                  }
                                 }
                               ]
                             }

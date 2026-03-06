@@ -1,0 +1,417 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Dateiformate (AP1) Level 2",
+  "description": "Komplexe AP1-Faelle zu Formatwahl, Encoding, CSV-Fehlern, Schema-Validierung und betriebssicherem Datenaustausch.",
+  "cases": [
+    {
+      "id": "df01",
+      "profile": "Nach einem Lieferantenwechsel erscheinen Umlaute in einer CSV als Zeichensalat. Die Spaltenzahl ist korrekt.",
+      "tags": ["Encoding", "CSV", "Diagnose"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Encoding-Mismatch als Primaerursache behandeln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zeichensalat bei ansonsten korrekten Spalten deutet auf falsche Dekodierung hin.", "correct": true },
+            { "id": "w2", "text": "Delimiterprobleme erzeugen eher Spaltenchaos als kaputte Zeichen.", "correct": true },
+            { "id": "w3", "text": "Encoding betrifft nur Binaerdateien, nicht CSV.", "correct": false },
+            { "id": "w4", "text": "Sender/Empfaenger muessen die gleiche Kodierung verbindlich nutzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Delimiter pruefen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Delimiter ist wichtig, erklaert aber nicht den Zeichensalat.", "correct": true },
+            { "id": "w2", "text": "Spaltenzahl ist bereits korrekt, daher ist Delimiter hier nicht primaer.", "correct": true },
+            { "id": "w3", "text": "Delimiter regelt gleichzeitig automatisch die Zeichencodierung.", "correct": false },
+            { "id": "w4", "text": "Root-Cause-Diagnose muss zum Fehlerbild passen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Schema-Validierung als einzige Massnahme",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schema prueft Struktur/Typen, nicht die Byte-zu-Zeichen-Interpretation.", "correct": true },
+            { "id": "w2", "text": "Falsches Encoding kann vor jeder Schema-Pruefung scheitern.", "correct": true },
+            { "id": "w3", "text": "Schema ersetzt jegliche Encoding-Definition.", "correct": false },
+            { "id": "w4", "text": "Beide Themen sind wichtig, aber unterschiedliche Fehlerklassen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die korrekte Hauptursache ist ein Encoding-Mismatch; Delimiter und Schema sind hier nicht primaer."
+    },
+    {
+      "id": "df02",
+      "profile": "Beim Import landen alle Werte in einer einzigen Spalte. Umlaute sehen korrekt aus.",
+      "tags": ["CSV", "Delimiter", "Import"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Delimiter-Konfiguration korrigieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eine Spalte fuer alles ist ein klassisches Delimiter-Symptom.", "correct": true },
+            { "id": "w2", "text": "Wenn Zeichen korrekt sind, ist Encoding weniger wahrscheinlich die Hauptursache.", "correct": true },
+            { "id": "w3", "text": "CSV hat weltweit immer Komma, Semikolon ist unzulaessig.", "correct": false },
+            { "id": "w4", "text": "Importvertrag muss Delimiter eindeutig festlegen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur UTF-8 setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "UTF-8 loest Zeichenprobleme, nicht fehlende Spaltentrennung.", "correct": true },
+            { "id": "w2", "text": "Das beobachtete Fehlerbild spricht nicht primaer fuer Encoding.", "correct": true },
+            { "id": "w3", "text": "UTF-8 erzwingt automatisch den richtigen Delimiter.", "correct": false },
+            { "id": "w4", "text": "Delimiter und Encoding sind getrennte Parameter.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Von CSV auf PDF umstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDF ist fuer Darstellung, nicht fuer robusten tabellarischen Import optimiert.", "correct": true },
+            { "id": "w2", "text": "Formatwechsel umgeht das eigentliche Konfigurationsproblem nur scheinbar.", "correct": true },
+            { "id": "w3", "text": "PDF ist typischerweise das beste Maschinenimportformat fuer Tabellen.", "correct": false },
+            { "id": "w4", "text": "Die korrekte Loesung ist der definierte CSV-Vertrag.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die Ursache ist sehr wahrscheinlich ein falscher Delimiter im Importprozess."
+    },
+    {
+      "id": "df03",
+      "profile": "Adressfelder enthalten Kommas. Beim CSV-Import entstehen dadurch zusaetzliche Spalten.",
+      "tags": ["CSV", "Quoting", "Escaping"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Quoting-/Escaping-Regeln verbindlich nutzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Felder mit Trennzeichen muessen korrekt gequotet werden.", "correct": true },
+            { "id": "w2", "text": "Ohne Escaping kann der Parser Feldgrenzen falsch erkennen.", "correct": true },
+            { "id": "w3", "text": "Kommas in Feldern sind im CSV grundsaetzlich unzulaessig.", "correct": false },
+            { "id": "w4", "text": "Die Regeln muessen auf Sender- und Empfaengerseite identisch sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Zeilenenden von CRLF auf LF aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Zeilenenden koennen relevant sein, loesen hier aber das Komma-im-Feld-Problem nicht.", "correct": true },
+            { "id": "w2", "text": "Das Fehlerbild ist feldbezogen, nicht zeilenumbruchbezogen.", "correct": true },
+            { "id": "w3", "text": "LF/CRLF korrigiert automatisch fehlende Quotes.", "correct": false },
+            { "id": "w4", "text": "Root-Cause bleibt fehlendes Quoting/Escaping.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "CSV durch reines TXT ohne Trennzeichen ersetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Damit geht strukturierter Tabellenimport verloren.", "correct": true },
+            { "id": "w2", "text": "Fachliche Anforderungen werden damit meist nicht erfuellt.", "correct": true },
+            { "id": "w3", "text": "Unstrukturiertes TXT ist fuer tabellarische Importe immer besser.", "correct": false },
+            { "id": "w4", "text": "Richtig ist, CSV korrekt zu konfigurieren statt Struktur aufzugeben.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Sauberes Quoting und Escaping ist die korrekte Massnahme fuer Kommas innerhalb von CSV-Feldern."
+    },
+    {
+      "id": "df04",
+      "profile": "Eine API uebertraegt verschachtelte Produktdaten mit Varianten, Preisen und Attributlisten.",
+      "tags": ["JSON", "Hierarchie", "Schnittstelle"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "JSON plus Schema-Validierung einsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Verschachtelte Strukturen lassen sich in JSON natuerlich modellieren.", "correct": true },
+            { "id": "w2", "text": "Schema prueft Pflichtfelder und Typen bei komplexen Payloads.", "correct": true },
+            { "id": "w3", "text": "CSV bildet beliebige Hierarchien ohne Zusatzkonventionen gleichwertig ab.", "correct": false },
+            { "id": "w4", "text": "APIs profitieren von klar dokumentierten Strukturvertraegen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "CSV mit Freitext-Spalten nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CSV ist fuer flache Tabellen gut, fuer tiefe Hierarchien aber unhandlich.", "correct": true },
+            { "id": "w2", "text": "Verschachtelte Daten benoetigen in CSV oft fragile Sonderregeln.", "correct": true },
+            { "id": "w3", "text": "CSV ist fuer jede Hierarchie immer die stabilste Variante.", "correct": false },
+            { "id": "w4", "text": "JSON/XML sind hier fachlich geeigneter.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "PDF als maschinelle API-Antwort",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "PDF priorisiert Darstellung, nicht strukturierte Maschinenverarbeitung.", "correct": true },
+            { "id": "w2", "text": "Parseraufwand und Fehleranfaelligkeit steigen unnoetig.", "correct": true },
+            { "id": "w3", "text": "PDF ist fuer API-Strukturdaten standardmaessig vorzuziehen.", "correct": false },
+            { "id": "w4", "text": "Der Einsatzzweck passt nicht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "JSON mit Schema-Validierung ist fuer verschachtelte API-Daten die robuste Wahl."
+    },
+    {
+      "id": "df05",
+      "profile": "Ein Partner fordert strikte XML-Verarbeitung mit formaler Validierung, bevor Daten angenommen werden.",
+      "tags": ["XML", "XSD", "Validierung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "XML mit XSD-Validierung implementieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "XSD ermoeglicht formal pruefbare XML-Strukturregeln.", "correct": true },
+            { "id": "w2", "text": "Fehler werden frueh erkannt, bevor Fachprozesse betroffen sind.", "correct": true },
+            { "id": "w3", "text": "XML kann nicht gegen formale Schemas geprueft werden.", "correct": false },
+            { "id": "w4", "text": "Das geforderte Vorgehen passt exakt zur Aufgabenstellung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Dateiendung .xml pruefen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Eine Endung sagt nichts ueber gueltige interne Struktur aus.", "correct": true },
+            { "id": "w2", "text": "Ohne Schema bleiben strukturelle Inkonsistenzen unentdeckt.", "correct": true },
+            { "id": "w3", "text": "Endungspruefung ersetzt vollstaendig jede Inhaltsvalidierung.", "correct": false },
+            { "id": "w4", "text": "Diese Option ist fuer Produktionsschnittstellen zu schwach.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "XML in JPG umwandeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "JPG ist ein Bildformat und nicht fuer strukturierte Datenschnittstellen geeignet.", "correct": true },
+            { "id": "w2", "text": "Maschinelle Validierung waere damit praktisch unmoeglich.", "correct": true },
+            { "id": "w3", "text": "Bildformate verbessern XML-Validierungsprozesse.", "correct": false },
+            { "id": "w4", "text": "Die Option ist fachlich unpassend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Wenn strikte formale Pruefung gefordert ist, ist XML mit XSD-Validierung korrekt."
+    },
+    {
+      "id": "df06",
+      "profile": "Kunden sollen Rechnungen unveraenderlich anzeigen und drucken koennen; maschineller Felderimport ist nachrangig.",
+      "tags": ["PDF", "Darstellung", "Use-Case"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "PDF als Primaerformat fuer Darstellung nutzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "PDF ist fuer layouttreue Anzeige und Druck optimiert.", "correct": true },
+            { "id": "w2", "text": "Fuer diesen Zweck ist strukturierter API-Import nicht der Hauptfokus.", "correct": true },
+            { "id": "w3", "text": "PDF ist immer das beste Format fuer tabellarischen Maschinenimport.", "correct": false },
+            { "id": "w4", "text": "Formatwahl soll am Ziel \"Darstellung\" ausgerichtet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur CSV bereitstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CSV ist fuer Datenverarbeitung gut, aber nicht fuer layouttreue Dokumentdarstellung.", "correct": true },
+            { "id": "w2", "text": "Kundenanforderung nach druckbarer Form wird damit schlecht erfuellt.", "correct": true },
+            { "id": "w3", "text": "CSV liefert standardmaessig verbindliches Seitenlayout.", "correct": false },
+            { "id": "w4", "text": "Use-Case und Format passen hier nicht ideal zusammen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur JSON bereitstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "JSON ist stark fuer API-Daten, nicht fuer feste Dokumentdarstellung.", "correct": true },
+            { "id": "w2", "text": "Endanwenderfreundlicher Druck ist kein JSON-Kernziel.", "correct": true },
+            { "id": "w3", "text": "JSON ersetzt jede Form von Dokumentlayout.", "correct": false },
+            { "id": "w4", "text": "Formatwahl muss fachlichen Outputzweck abdecken.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fuer layouttreue Darstellung ist PDF hier das passende Primaerformat."
+    },
+    {
+      "id": "df07",
+      "profile": "Eine Schnittstelle fuehrt neue Pflichtfelder ein, alte Verbraucher brechen. Das Team sucht einen robusten Aenderungsweg.",
+      "tags": ["Versionierung", "Kompatibilitaet", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Versionierung und kontrollierte Migration einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Versionierung reduziert ungeplante Brueche bei Vertragseraenderungen.", "correct": true },
+            { "id": "w2", "text": "Parallelbetrieb alter/neuer Version erleichtert Umstellung.", "correct": true },
+            { "id": "w3", "text": "Pflichtfeldaenderungen sind immer rueckwaertskompatibel.", "correct": false },
+            { "id": "w4", "text": "Kommunikation und Tests je Version sind zentral.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Aenderungen ohne Vorankuendigung live schalten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Unkoordinierte Vertragsaenderungen fuehren oft zu Produktionsstoerungen.", "correct": true },
+            { "id": "w2", "text": "Verbraucher brauchen Migrationszeit fuer neue Pflichtfelder.", "correct": true },
+            { "id": "w3", "text": "Ad-hoc-Aenderungen verbessern Stabilitaet nachweislich.", "correct": false },
+            { "id": "w4", "text": "Betriebssicherheit verlangt planbare Einfuehrung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dateiendung aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateiendungen loesen keine inhaltliche Kompatibilitaet.", "correct": true },
+            { "id": "w2", "text": "Die eigentliche Vertragsaenderung bleibt unverarbeitet.", "correct": true },
+            { "id": "w3", "text": "Eine neue Endung garantiert kompatible Parser auf allen Seiten.", "correct": false },
+            { "id": "w4", "text": "Es braucht echtes Versions- und Migrationsmanagement.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Schnittstellenversionierung mit geplanter Migration ist die fachlich saubere Antwort."
+    },
+    {
+      "id": "df08",
+      "profile": "Numerische Werte werden falsch importiert, weil manche Systeme Komma und andere Punkt als Dezimaltrenner verwenden.",
+      "tags": ["Locale", "Dezimaltrennzeichen", "Importqualitaet"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Numerische Normalisierung und klare Locale-Regeln definieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Uneinheitliche Zahlendarstellung ist eine klassische Integrationsfalle.", "correct": true },
+            { "id": "w2", "text": "Regeln muessen im Formatvertrag dokumentiert werden.", "correct": true },
+            { "id": "w3", "text": "Dezimaltrennzeichen sind bei Datenaustausch immer irrelevant.", "correct": false },
+            { "id": "w4", "text": "Konvertierung und Validierung sollten automatisiert getestet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur MIME-Type aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "MIME-Type kennzeichnet Format, nicht locale-spezifische Zahlenregeln.", "correct": true },
+            { "id": "w2", "text": "Das fachliche Interpretationsproblem bleibt bestehen.", "correct": true },
+            { "id": "w3", "text": "MIME-Type steuert automatisch Komma/Punkt-Konvertierung.", "correct": false },
+            { "id": "w4", "text": "Hier sind Datenregeln und Parserlogik entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Zeilenenden angleichen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "LF/CRLF betrifft Umbrueche, nicht numerische Semantik.", "correct": true },
+            { "id": "w2", "text": "Das beobachtete Problem liegt auf Wertebene.", "correct": true },
+            { "id": "w3", "text": "Zeilenenden bereinigen automatisch Dezimaldarstellung.", "correct": false },
+            { "id": "w4", "text": "Die Loesung muss den richtigen Problemtyp adressieren.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Einheitliche Locale-/Numerikregeln mit parserseitiger Normalisierung loesen das Problem fachgerecht."
+    },
+    {
+      "id": "df09",
+      "profile": "Sicherheitsreview zeigt: Exportierte CSV kann mit Formelzeichen starten und bei Oeffnung in Tabellenprogrammen unerwuenschte Aktionen ausloesen.",
+      "tags": ["Security", "CSV-Injection", "Praevention"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "CSV-Injection-Schutz im Export einbauen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Nutzereingaben mit fuehrenden Formelzeichen koennen riskant sein.", "correct": true },
+            { "id": "w2", "text": "Sanitizing/Prefix-Strategien reduzieren Angriffsflaeche.", "correct": true },
+            { "id": "w3", "text": "CSV kennt keine sicherheitsrelevanten Inhalte.", "correct": false },
+            { "id": "w4", "text": "Sicherheitsregeln gehoeren in den Exportprozess.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Delimiter aendern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Delimiterwechsel adressiert die Formelinterpretation nicht.", "correct": true },
+            { "id": "w2", "text": "Das Risiko liegt im Zellinhalt, nicht im Spaltentrennzeichen.", "correct": true },
+            { "id": "w3", "text": "Semikolon verhindert jede Form von CSV-Injection automatisch.", "correct": false },
+            { "id": "w4", "text": "Sicherheitsmassnahmen muessen ursachennah sein.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dateinamen verstecken",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dateiname beeinflusst nicht die Zellauswertung durch Tabellenprogramme.", "correct": true },
+            { "id": "w2", "text": "Die eigentliche Gefahr bleibt unvermindert bestehen.", "correct": true },
+            { "id": "w3", "text": "Unsichtbare Dateinamen neutralisieren Formelinhalte.", "correct": false },
+            { "id": "w4", "text": "Massnahmen muessen die Daten selbst absichern.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist ein gezielter CSV-Injection-Schutz in der Exportlogik."
+    },
+    {
+      "id": "df10",
+      "profile": "Ein Team will Dateischnittstellen produktionsreif machen und wiederkehrende Importstoerungen vermeiden.",
+      "tags": ["Betrieb", "Qualitaet", "Governance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Formatvertrag, Referenztests, Validierung und Monitoring kombinieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Robustheit entsteht durch klare Regeln plus technische Absicherung.", "correct": true },
+            { "id": "w2", "text": "Monitoring und Runbook verbessern die Stoerungsbehandlung im Betrieb.", "correct": true },
+            { "id": "w3", "text": "Einmaliger Test vor Go-Live reicht dauerhaft aus.", "correct": false },
+            { "id": "w4", "text": "Versionierung und Regressionstests verhindern spaetere Brueche.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur auf manuelle Sichtkontrolle setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Manuelle Pruefung skaliert schlecht und erkennt nicht alle Fehlerarten.", "correct": true },
+            { "id": "w2", "text": "Automatisierte Validierung ist bei wiederkehrenden Imports zentral.", "correct": true },
+            { "id": "w3", "text": "Manuelle Sichtpruefung ersetzt Schema- und Typvalidierung vollstaendig.", "correct": false },
+            { "id": "w4", "text": "Betriebsstabilitaet braucht reproduzierbare Kontrollen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dateiendung vereinbaren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Eine Endung allein definiert keinen vollstaendigen Datenvertrag.", "correct": true },
+            { "id": "w2", "text": "Wichtige Parameter wie Encoding und Feldregeln bleiben offen.", "correct": true },
+            { "id": "w3", "text": "Dateiendung garantiert automatisch kompatible Feldinhalte.", "correct": false },
+            { "id": "w4", "text": "Diese Option ist fuer produktiven Dauerbetrieb unzureichend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Produktionsreif wird die Schnittstelle durch den kombinierten Ansatz aus Vertrag, Tests, Validierung und Monitoring."
+    }
+  ]
+}
