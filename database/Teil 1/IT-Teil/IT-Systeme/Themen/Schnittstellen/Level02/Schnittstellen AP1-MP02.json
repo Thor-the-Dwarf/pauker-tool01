@@ -1,0 +1,168 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Folie 5: Schnittstellen & Kompatibilität (AP1) Level 2 – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ziel: Ordne fortgeschrittene Schnittstellenkonzepte, präzise Erklärungen und typische AP1-Praxisfälle korrekt zu.",
+  "columnTitles": {
+    "column1": "Konzept",
+    "column2": "Präzise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Fachbegriff.",
+    "column2": "Achte auf korrekte Abgrenzung von Formfaktor, Protokoll und Topologie.",
+    "column3": "Ordne den realistischen AP1-Fall zu."
+  },
+  "sets": [
+    {
+      "id": "pcie_lane_budget",
+      "name": "PCIe-Lane-Budget",
+      "description": "Die Plattform hat begrenzte PCIe-Lanes; Karten und NVMe teilen sich Ressourcen.",
+      "example": "Nach Einbau einer Capture-Karte sinkt die GPU-Linkbreite von x16 auf x8."
+    },
+    {
+      "id": "pcie_gen_fallback",
+      "name": "PCIe-Generation-Fallback",
+      "description": "Die Verbindung arbeitet immer mit dem gemeinsamen niedrigeren Gen-Level beider Enden.",
+      "example": "Eine Gen4-SSD läuft in einem Gen3-Slot ohne Fehler, aber mit geringerer Datenrate."
+    },
+    {
+      "id": "slot_mechanical_vs_electrical",
+      "name": "Slot mechanisch vs elektrisch",
+      "description": "Ein x16-Formfaktor bedeutet nicht automatisch x16 elektrische Anbindung.",
+      "example": "Eine 10G-NIC steckt im langen Slot, verhandelt aber nur x4."
+    },
+    {
+      "id": "cpu_vs_chipset_lanes",
+      "name": "CPU- vs Chipsatz-Lanes",
+      "description": "Direkt an der CPU angebundene Lanes sind meist performanter als über den Chipsatz.",
+      "example": "Eine NVMe am Chipsatz zeigt unter Parallel-Last stärkere Einbrüche als die CPU-direkte NVMe."
+    },
+    {
+      "id": "dmi_uplink_limit",
+      "name": "Chipsatz-Uplink-Limit",
+      "description": "Mehrere Chipsatz-Geräte teilen sich den Uplink zur CPU als gemeinsamen Flaschenhals.",
+      "example": "Gleichzeitiger Transfer über mehrere Geräte am Chipsatz bremst sich gegenseitig aus."
+    },
+    {
+      "id": "m2_formfactor",
+      "name": "M.2-Formfaktor",
+      "description": "M.2 beschreibt die Bauform, nicht automatisch das transportierte Protokoll.",
+      "example": "Eine M.2-SSD wird gewählt, passt aber protokollseitig nicht zum Slot."
+    },
+    {
+      "id": "m2_nvme_vs_sata",
+      "name": "M.2 NVMe vs SATA",
+      "description": "Im M.2-Slot können je nach Board NVMe, SATA oder beide Varianten unterstützt sein.",
+      "example": "M.2-SATA-Modul wird im reinen NVMe-Slot nicht erkannt."
+    },
+    {
+      "id": "m2_keying",
+      "name": "M.2-Keying",
+      "description": "Kerben (B/M-Key) begrenzen mechanische und teilweise elektrische Kompatibilität.",
+      "example": "Das Modul passt nicht in den Slot, weil der Key-Typ nicht übereinstimmt."
+    },
+    {
+      "id": "m2_length",
+      "name": "M.2-Längenstandard",
+      "description": "Slots unterstützen bestimmte Modullängen wie 2230, 2242, 2280 oder 22110.",
+      "example": "Ein 22110-Modul kann nicht montiert werden, weil nur 2280-Halter vorhanden sind."
+    },
+    {
+      "id": "shared_sata_ports",
+      "name": "Port-Deaktivierung durch Sharing",
+      "description": "Belegte M.2-Slots können SATA-Ports abschalten, abhängig vom Mainboard-Layout.",
+      "example": "Nach NVMe-Einbau sind SATA-Port 5/6 laut Handbuch deaktiviert."
+    },
+    {
+      "id": "usb_c_connector",
+      "name": "USB-C-Steckerform",
+      "description": "USB-C ist eine physische Steckerform und garantiert keine feste Datenrate oder Features.",
+      "example": "Gleich aussehende USB-C-Ports liefern unterschiedliche Geschwindigkeiten."
+    },
+    {
+      "id": "usb_protocol_capability",
+      "name": "USB-Protokollfähigkeit",
+      "description": "Datenrate und Funktionen hängen vom Controller, Standard und Kabelprofil ab.",
+      "example": "Externe SSD bleibt langsam, weil Port oder Kabel nur niedriges Profil liefern."
+    },
+    {
+      "id": "usb_pd_profiles",
+      "name": "USB Power Delivery",
+      "description": "Ladeleistung wird über Profile ausgehandelt; Netzteil, Kabel und Endgerät müssen passen.",
+      "example": "Notebook lädt am Dock nur mit reduzierter Leistung trotz USB-C."
+    },
+    {
+      "id": "dp_alt_mode",
+      "name": "DisplayPort Alt Mode",
+      "description": "Video über USB-C erfordert explizite Alt-Mode-Unterstützung auf Port und Dock.",
+      "example": "Monitor bleibt schwarz, obwohl USB-C-Verbindung besteht."
+    },
+    {
+      "id": "thunderbolt_tunneling",
+      "name": "Thunderbolt-Tunneling",
+      "description": "Thunderbolt kann PCIe/Display-Signale tunneln, aber nur bei kompatibler Host-/Geräteunterstützung.",
+      "example": "Dock-Funktionen fehlen am USB-C-Port ohne Thunderbolt-Fähigkeit."
+    },
+    {
+      "id": "dp_hdmi_versions",
+      "name": "DP/HDMI-Versionsgrenzen",
+      "description": "Maximale Auflösung, Bildrate und Features hängen von Port-/Kabelversionen ab.",
+      "example": "4K@144Hz scheitert mit älterem HDMI-Kabel, funktioniert aber mit passender DP-Strecke."
+    },
+    {
+      "id": "mst_daisy_chain",
+      "name": "DisplayPort-MST",
+      "description": "Mehrschirmbetrieb per Daisy-Chain benötigt MST-Unterstützung auf allen beteiligten Geräten.",
+      "example": "Der zweite Monitor bleibt dunkel, weil das erste Display kein MST weiterleitet."
+    },
+    {
+      "id": "edid_negotiation",
+      "name": "EDID-Aushandlung",
+      "description": "Grafikquelle liest Monitorfähigkeiten aus; fehlerhafte Aushandlung limitiert Ausgabeparameter.",
+      "example": "Nach Adapterwechsel wird nur noch 60 Hz angeboten statt 120 Hz."
+    },
+    {
+      "id": "ethernet_autonegotiation",
+      "name": "Ethernet-Autonegotiation",
+      "description": "Link-Speed wird zwischen beiden Enden ausgehandelt und fällt auf gemeinsame Fähigkeiten zurück.",
+      "example": "2.5G-NIC linkt mit 1G, weil der Switch-Port nur Gigabit kann."
+    },
+    {
+      "id": "cable_quality",
+      "name": "Kabelqualität als Limit",
+      "description": "Ungeeignete oder beschädigte Kabel begrenzen stabile Linkraten bei Daten und Video.",
+      "example": "10G-LAN fällt mit alter Kupferstrecke auf 1G zurück."
+    },
+    {
+      "id": "driver_layer",
+      "name": "Treiberschicht",
+      "description": "Treiber koppeln Betriebssystem und Hardware; falsche Version kann Features blockieren.",
+      "example": "Nach NIC-Treiberupdate steht plötzlich 2.5G-Option im OS bereit."
+    },
+    {
+      "id": "firmware_layer",
+      "name": "Firmware-Schicht",
+      "description": "Gerätefirmware steuert internes Verhalten und kann Kompatibilitätsfehler beheben.",
+      "example": "SSD-Firmwareupdate beseitigt sporadische Freezes unter Last."
+    },
+    {
+      "id": "uefi_boot_mode",
+      "name": "UEFI-Boot-Modus",
+      "description": "Bootfähigkeit hängt von UEFI/Legacy-Einstellung und Datenträgerlayout ab.",
+      "example": "Klonlaufwerk bootet nicht, bis der Modus auf UEFI mit passender Partitionierung gesetzt ist."
+    },
+    {
+      "id": "secure_boot_chain",
+      "name": "Secure-Boot-Kette",
+      "description": "Sicherer Start setzt signierte Bootkomponenten und kompatible Treiberkette voraus.",
+      "example": "Ein unsignierter Treiber blockiert den Start unter aktivem Secure Boot."
+    },
+    {
+      "id": "diagnostic_method",
+      "name": "Diagnosemethodik",
+      "description": "Saubere Fehleranalyse folgt der Kette: physisch, logisch, softwareseitig, dann Validierung.",
+      "example": "Erst Slot/Port/Protokoll prüfen, dann Firmware/Treiber ändern und mit Messwerten verifizieren."
+    }
+  ]
+}

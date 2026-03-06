@@ -1,0 +1,233 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Schnittstellen & Kompatibilität (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "pcie_topology",
+      "name": "PCIe-Topologie (Lane-Budget & Slot-Layout)",
+      "attributes": {
+        "is_internal_focus": true,
+        "is_external_focus": false,
+        "concerns_pcie_lanes": true,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": false,
+        "concerns_video_output": false,
+        "concerns_network_link": false,
+        "requires_handbook_check": true,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": false,
+        "depends_on_firmware_driver": false,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": true,
+        "involves_boot_settings": false
+      }
+    },
+    {
+      "id": "m2_compatibility",
+      "name": "M.2-Kompatibilität (Formfaktor vs Protokoll)",
+      "attributes": {
+        "is_internal_focus": true,
+        "is_external_focus": false,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": true,
+        "concerns_usb_c": false,
+        "concerns_video_output": false,
+        "concerns_network_link": false,
+        "requires_handbook_check": true,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": false,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": true,
+        "involves_boot_settings": true
+      }
+    },
+    {
+      "id": "usb_c_capability",
+      "name": "USB-C-Fähigkeitsmatrix (Daten/Laden/Video)",
+      "attributes": {
+        "is_internal_focus": false,
+        "is_external_focus": true,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": true,
+        "concerns_video_output": true,
+        "concerns_network_link": false,
+        "requires_handbook_check": true,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": true,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": false,
+        "involves_boot_settings": false
+      }
+    },
+    {
+      "id": "display_signal_path",
+      "name": "Display-Signalpfad (DP/HDMI/EDID)",
+      "attributes": {
+        "is_internal_focus": false,
+        "is_external_focus": true,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": false,
+        "concerns_video_output": true,
+        "concerns_network_link": false,
+        "requires_handbook_check": false,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": true,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": false,
+        "involves_boot_settings": false
+      }
+    },
+    {
+      "id": "ethernet_link_negotiation",
+      "name": "Ethernet-Link-Aushandlung (1G/2.5G/10G)",
+      "attributes": {
+        "is_internal_focus": false,
+        "is_external_focus": true,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": false,
+        "concerns_video_output": false,
+        "concerns_network_link": true,
+        "requires_handbook_check": false,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": true,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": true,
+        "can_disable_other_ports": false,
+        "involves_boot_settings": false
+      }
+    },
+    {
+      "id": "firmware_driver_stack",
+      "name": "Treiber-/Firmware-Stack",
+      "attributes": {
+        "is_internal_focus": false,
+        "is_external_focus": false,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": false,
+        "concerns_video_output": false,
+        "concerns_network_link": false,
+        "requires_handbook_check": false,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": false,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": false,
+        "involves_boot_settings": false
+      }
+    },
+    {
+      "id": "uefi_boot_security",
+      "name": "UEFI-Boot & Secure-Boot-Kette",
+      "attributes": {
+        "is_internal_focus": true,
+        "is_external_focus": false,
+        "concerns_pcie_lanes": false,
+        "concerns_m2_protocol": false,
+        "concerns_usb_c": false,
+        "concerns_video_output": false,
+        "concerns_network_link": false,
+        "requires_handbook_check": false,
+        "is_common_exam_trap": true,
+        "depends_on_cable_quality": false,
+        "depends_on_firmware_driver": true,
+        "involves_autonegotiation": false,
+        "can_disable_other_ports": false,
+        "involves_boot_settings": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Liegt der Schwerpunkt auf interner Mainboard-Topologie statt externen Anschlüssen?",
+      "attributeKey": "is_internal_focus"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es primär um externe Ports und deren Fähigkeiten?",
+      "attributeKey": "is_external_focus"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Spielt die Verteilung von PCIe-Lanes (x16/x8/x4, Sharing) die Hauptrolle?",
+      "attributeKey": "concerns_pcie_lanes"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Geht es um M.2-Protokollfragen wie NVMe vs SATA?",
+      "attributeKey": "concerns_m2_protocol"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist USB-C mit unterschiedlichen Daten-/Lade-/Video-Profilen der Kern?",
+      "attributeKey": "concerns_usb_c"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Stehen Bildausgabe-Themen wie DP/HDMI/EDID im Fokus?",
+      "attributeKey": "concerns_video_output"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Dreht es sich um die ausgehandelte LAN-Linkrate zwischen zwei Enden?",
+      "attributeKey": "concerns_network_link"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Ist ein Blick in Handbuch/Datenblatt typischerweise notwendig?",
+      "attributeKey": "requires_handbook_check"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Handelt es sich um eine klassische AP1-Stolperfalle?",
+      "attributeKey": "is_common_exam_trap"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Kann ungeeignete Kabelqualität das Problem verursachen oder verstärken?",
+      "attributeKey": "depends_on_cable_quality"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Spielen Treiber-, Firmware- oder UEFI-Stände eine zentrale Rolle?",
+      "attributeKey": "depends_on_firmware_driver"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Ist Autonegotiation (Aushandlung zwischen Enden) ein Kernelement?",
+      "attributeKey": "involves_autonegotiation"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Kann durch Belegung eines Anschlusses ein anderer Port deaktiviert werden?",
+      "attributeKey": "can_disable_other_ports"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Sind Bootmodus oder Secure-Boot-Einstellungen für die Lösung entscheidend?",
+      "attributeKey": "involves_boot_settings"
+    }
+  ]
+}

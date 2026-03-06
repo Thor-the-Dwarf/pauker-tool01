@@ -1,0 +1,335 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Schnittstellen & Kompatibilität (AP1) Level 2",
+  "description": "Schritt 1: passende Ursacheklasse bestimmen (What) · Schritt 2: belastbare Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Nach Einbau einer zweiten NVMe und einer Capture-Karte verliert die GPU messbar Leistung. Im Monitoring sinkt die Link-Width unter Last.",
+      "tags": ["PCIe", "Lanes", "Topologie", "Performance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "PCIe-Lane-Budget und Slot-Topologie prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Zusatzgeräte können je nach Board Link-Width anderer Slots reduzieren.", "correct": true },
+            { "id": "w2", "text": "Ein x16-Slot kann elektrisch auf x8 oder x4 fallen.", "correct": true },
+            { "id": "w3", "text": "Treiber erhöhen automatisch die physisch verfügbare Lane-Anzahl.", "correct": false },
+            { "id": "w4", "text": "Das Mainboard-Blockdiagramm ist hier die zentrale Quelle.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Monitorkabel austauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Symptom betrifft interne Busbandbreite, nicht primär die externe Bildstrecke.", "correct": true },
+            { "id": "w2", "text": "Kabelqualität kann Bildprobleme verursachen, erklärt aber keine reduzierte PCIe-Link-Width.", "correct": true },
+            { "id": "w3", "text": "Ein neues HDMI-Kabel setzt PCIe-Lanes im Mainboard frei.", "correct": false },
+            { "id": "w4", "text": "Die Ursache liegt vor dem Ausgabeport im internen I/O-Pfad.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur RAM-Takt erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "RAM-Tuning adressiert keine PCIe-Topologiekonflikte.", "correct": true },
+            { "id": "w2", "text": "Das Problem entsteht durch Verteilung der I/O-Lanes.", "correct": true },
+            { "id": "w3", "text": "Höherer RAM-Takt erzwingt x16 für jede Karte.", "correct": false },
+            { "id": "w4", "text": "Messbild und Ursacheklasse passen nicht zusammen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die richtige Ursacheklasse ist die PCIe-Topologie (Lane-Budget, Slot-Sharing, CPU-/Chipsatz-Pfade)."
+    },
+    {
+      "id": "v02",
+      "profile": "Eine neue M.2-SSD wird nicht erkannt. Das Modul passt mechanisch, der Slot war bisher unbenutzt.",
+      "tags": ["M.2", "NVMe", "SATA", "Kompatibilität"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "M.2-Protokoll-Kompatibilität und Slot-Spezifikation prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "M.2 ist Formfaktor, der Slot unterstützt aber nicht zwingend jedes Protokoll.", "correct": true },
+            { "id": "w2", "text": "NVMe- und SATA-M.2 können je nach Board unterschiedlich unterstützt werden.", "correct": true },
+            { "id": "w3", "text": "Wenn es mechanisch passt, ist Protokollkompatibilität automatisch gegeben.", "correct": false },
+            { "id": "w4", "text": "Board-Handbuch und UEFI-Storage-Einstellungen sind prüfungsrelevant.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "DisplayPort-Version des Monitors prüfen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monitorprotokolle beeinflussen die Laufwerkserkennung nicht direkt.", "correct": true },
+            { "id": "w2", "text": "DP/HDMI sind Video-Schnittstellen, kein Storage-Pfad.", "correct": true },
+            { "id": "w3", "text": "Eine ältere DP-Version verhindert NVMe-Erkennung im UEFI.", "correct": false },
+            { "id": "w4", "text": "Die Domäne passt nicht zum Befund.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Netzwerkkarte austauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Netzwerkhardware ist nicht die primäre Ursache für M.2-Erkennungsprobleme.", "correct": true },
+            { "id": "w2", "text": "Der Fehler liegt im lokalen Storage-/Firmware-Pfad.", "correct": true },
+            { "id": "w3", "text": "Ein NIC-Tausch aktiviert NVMe-Controller automatisch.", "correct": false },
+            { "id": "w4", "text": "Fokus muss auf Slottyp und Protokoll liegen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei M.2-Erkennungsproblemen ist zuerst der Protokollfit (NVMe/SATA), dann UEFI/Sharing zu prüfen."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein USB-C-Dock soll zwei 4K-Monitore betreiben, liefert aber nur eine stabile Anzeige. USB-Daten und Laden funktionieren.",
+      "tags": ["USB-C", "Alt-Mode", "Dock", "Video"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Videofähigkeit des USB-C-Pfads (Alt-Mode/Thunderbolt/Bandbreite) prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "USB-C-Stecker allein garantiert keine Mehrmonitor-Bandbreite.", "correct": true },
+            { "id": "w2", "text": "Für mehrere Displays müssen Host-Port, Dock und Kabelprofil gemeinsam passen.", "correct": true },
+            { "id": "w3", "text": "Wenn Laden funktioniert, ist Video automatisch auf Maximalniveau verfügbar.", "correct": false },
+            { "id": "w4", "text": "Spezifikationsvergleich von Host, Dock und Kabel ist AP1-sauber begründbar.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur BIOS auf Werkseinstellungen setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne passende Port-Fähigkeit bleibt die physische Bandbreite unverändert.", "correct": true },
+            { "id": "w2", "text": "UEFI kann Features beeinflussen, ersetzt aber keine fehlende Alt-Mode-Hardware.", "correct": true },
+            { "id": "w3", "text": "Factory-Reset des BIOS aktiviert immer Thunderbolt-Funktionalität.", "correct": false },
+            { "id": "w4", "text": "Hier muss zuerst der Schnittstellenpfad geprüft werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur SSD-Firmware aktualisieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "SSD-Firmware ist für Dock-Video-Bandbreite keine Primärursache.", "correct": true },
+            { "id": "w2", "text": "Das Fehlerbild liegt bei externer Portfunktion und Signaltunneling.", "correct": true },
+            { "id": "w3", "text": "Storage-Firmware steuert direkt die Anzahl nutzbarer Monitore am Dock.", "correct": false },
+            { "id": "w4", "text": "Diagnose muss symptomnah bleiben.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Der Engpass liegt typischerweise in USB-C-Video-Fähigkeit (Alt-Mode/Thunderbolt) und nicht im Lade- oder Datenteil allein."
+    },
+    {
+      "id": "v04",
+      "profile": "Eine 2.5G-NIC verbindet nur mit 1G, obwohl aktuelle Treiber installiert sind.",
+      "tags": ["LAN", "Link-Speed", "Autonegotiation", "Infrastruktur"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Link-Aushandlung über beide Enden und Kabelstrecke analysieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Autonegotiation bestimmt den gemeinsamen Nenner der Verbindung.", "correct": true },
+            { "id": "w2", "text": "Switch-Port-Fähigkeit und Kabelqualität begrenzen die stabile Linkrate.", "correct": true },
+            { "id": "w3", "text": "Wenn die NIC 2.5G unterstützt, ist die Gegenstelle irrelevant.", "correct": false },
+            { "id": "w4", "text": "Eine End-to-End-Prüfung ist fachlich zwingend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur CPU austauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "CPU-Wechsel beeinflusst die Portfähigkeit der Gegenstelle nicht.", "correct": true },
+            { "id": "w2", "text": "Das Problem liegt auf Linkebene zwischen Netzwerkteilnehmern.", "correct": true },
+            { "id": "w3", "text": "Höhere CPU-Leistung erzwingt grundsätzlich höhere Ethernet-Linkraten.", "correct": false },
+            { "id": "w4", "text": "Ursachenklasse und Maßnahme passen nicht.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Monitor auf Werkseinstellungen setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Monitorparameter haben keinen direkten Einfluss auf Ethernet-Negotiation.", "correct": true },
+            { "id": "w2", "text": "LAN-Linkrate ist ein eigener Protokollpfad.", "correct": true },
+            { "id": "w3", "text": "EDID-Reset löst 2.5G-Linkprobleme zuverlässig.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme verfehlt die Fehlerdomäne.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Richtig ist die Analyse von Gegenstelle, Portprofil und Kabelstrecke inklusive Aushandlung."
+    },
+    {
+      "id": "v05",
+      "profile": "Nach einem Systemumzug startet das Systemlaufwerk nicht mehr, obwohl die Daten vorhanden sind.",
+      "tags": ["Boot", "UEFI", "Secure Boot", "Kompatibilität"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "UEFI-Boot-Modus und Secure-Boot-Kette verifizieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ein Legacy/UEFI-Mismatch kann Bootfehler trotz intakter Daten verursachen.", "correct": true },
+            { "id": "w2", "text": "Secure Boot kann unsignierte Bootkomponenten blockieren.", "correct": true },
+            { "id": "w3", "text": "Bootprobleme bei Migration hängen nie mit Firmwareeinstellungen zusammen.", "correct": false },
+            { "id": "w4", "text": "Bootmodus, Partitionsschema und Signaturkette müssen zusammenpassen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur USB-Kabel der Maus tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Peripheriekabel sind hier keine plausible Primärursache.", "correct": true },
+            { "id": "w2", "text": "Der Fehler liegt im Bootpfad vor dem Anwenderbetrieb.", "correct": true },
+            { "id": "w3", "text": "Mauskabelqualität entscheidet über UEFI-Bootfähigkeit.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme ist nicht ursachenorientiert.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur LAN-Treiber neu installieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ein NIC-Treiber wirkt erst nach erfolgreichem OS-Start.", "correct": true },
+            { "id": "w2", "text": "Bootpfadprobleme sind meist UEFI-/Datenträger- oder Signaturthemen.", "correct": true },
+            { "id": "w3", "text": "LAN-Treiber reparieren grundsätzlich den Bootloader.", "correct": false },
+            { "id": "w4", "text": "Die Domäne ist falsch gewählt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei Bootausfällen nach Migration sind UEFI-Modus, Partitionsschema und Secure-Boot-Kette zuerst zu prüfen."
+    },
+    {
+      "id": "v06",
+      "profile": "Ein 4K-144Hz-Monitor läuft nur mit 60 Hz. Auflösung ist verfügbar, Bildfrequenz aber stark limitiert.",
+      "tags": ["Display", "Versionen", "Kabel", "EDID"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "DP/HDMI-Version, Kabelstrecke und EDID-Aushandlung prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Hohe Bildraten benötigen passende Port- und Kabelbandbreite.", "correct": true },
+            { "id": "w2", "text": "Falsche Aushandlung kann verfügbare Modi einschränken.", "correct": true },
+            { "id": "w3", "text": "Jedes beliebige Kabel unterstützt automatisch maximale Bildraten.", "correct": false },
+            { "id": "w4", "text": "Prüfungslogik: Quelle, Kabel, Zielgerät und ausgehandelte Modi zusammen betrachten.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur M.2-SSD tauschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Storage-Tausch ändert keine Video-Link-Bandbreite.", "correct": true },
+            { "id": "w2", "text": "Das Symptom liegt im Displaypfad, nicht im Speichersubsystem.", "correct": true },
+            { "id": "w3", "text": "Eine schnellere NVMe erhöht direkt die maximale Monitor-Hz-Zahl.", "correct": false },
+            { "id": "w4", "text": "Falsche Ursacheklasse führt zu Fehlinvestition.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Netzteil upgraden",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Hinweise auf Instabilität ist PSU hier nicht die Primärhypothese.", "correct": true },
+            { "id": "w2", "text": "Die Limitierung zeigt sich als ausgehandelte Modusgrenze im Bildsignal.", "correct": true },
+            { "id": "w3", "text": "Mehr PSU-Leistung erhöht automatisch HDMI/DP-Protokollversionen.", "correct": false },
+            { "id": "w4", "text": "Ursachekette bleibt im Signalpfad.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Für begrenzte Bildraten sind Version, Kabel und ausgehandelter Modus entscheidend, nicht primär Storage oder PSU."
+    },
+    {
+      "id": "v07",
+      "profile": "Nach Firmwareupdate einer Netzwerkkarte treten sporadische Abbrüche auf. Rollback ist verfügbar.",
+      "tags": ["Firmware", "Stabilität", "Change", "Risikosteuerung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Änderung kontrolliert verifizieren und ggf. Rollback mit Dokumentation durchführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Firmwareänderungen können neue Fehler einführen, deshalb braucht es reproduzierbare Tests.", "correct": true },
+            { "id": "w2", "text": "Rollback ist ein legitimer Schritt, wenn die neue Version Instabilität verursacht.", "correct": true },
+            { "id": "w3", "text": "Nach Firmwareupdate dürfen keine Vergleichsmessungen mehr gemacht werden.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist eine dokumentierte Entscheidung mit Ursache-Nachweis.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Problem ignorieren, weil Firmware immer stabiler ist",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Neue Versionen verbessern oft viel, sind aber nicht per Definition fehlerfrei.", "correct": true },
+            { "id": "w2", "text": "Betriebsstörungen erfordern nachvollziehbare Incident-Bearbeitung.", "correct": true },
+            { "id": "w3", "text": "Firmware kann prinzipiell keine Netzabbrüche auslösen.", "correct": false },
+            { "id": "w4", "text": "Unbelegte Annahmen ersetzen keine Diagnose.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Bildschirmauflösung ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Anzeigeeinstellungen lösen keine Instabilität im NIC-Firmwarepfad.", "correct": true },
+            { "id": "w2", "text": "Das Symptom liegt im Netzwerk-Subsystem.", "correct": true },
+            { "id": "w3", "text": "Niedrigere Auflösung verhindert Treiber-/Firmware-Fehler der NIC.", "correct": false },
+            { "id": "w4", "text": "Maßnahme und Ursache sind entkoppelt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei Regressionen nach Firmwareupdates: reproduzierbar testen, dokumentiert zurückrollen, anschließend gezielt erneut validieren."
+    },
+    {
+      "id": "v08",
+      "profile": "In einer AP1-Aufgabe sollen mehrere Symptome gleichzeitig erklärt werden: langsame externe SSD, instabile Videoausgabe am Dock und unerwartet niedriger LAN-Linkspeed.",
+      "tags": ["Methodik", "Multi-Ursache", "Schnittstellenmix"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Strukturiert nach Layern analysieren und je Symptom die Ursacheklasse trennen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Mehrere Symptome können unterschiedliche Ursachen im selben Portökosystem haben.", "correct": true },
+            { "id": "w2", "text": "USB-Daten, Video-Alt-Mode und LAN-Aushandlung müssen separat verifiziert werden.", "correct": true },
+            { "id": "w3", "text": "Ein einziger Treiberfix behebt grundsätzlich alle Schnittstellenprobleme gleichzeitig.", "correct": false },
+            { "id": "w4", "text": "AP1 belohnt klar getrennte, belegbare Begründungsketten.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Pauschal die Hardware tauschen ohne Messung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Messdaten bleibt die Ursache unklar und der Effekt zufällig.", "correct": true },
+            { "id": "w2", "text": "Gezielte Diagnose reduziert Folgekosten und Fehlentscheidungen.", "correct": true },
+            { "id": "w3", "text": "Ungezielter Kompletttausch ist AP1-Standardvorgehen.", "correct": false },
+            { "id": "w4", "text": "Methodisches Vorgehen ist prüfungsrelevant.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur auf sichtbare Steckertypen vertrauen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gleiche Steckerform bedeutet nicht gleiche elektrische oder protokollseitige Fähigkeiten.", "correct": true },
+            { "id": "w2", "text": "Gerade USB-C-Fälle erfordern Datenblatt- und Featureprüfung.", "correct": true },
+            { "id": "w3", "text": "Steckerform reicht immer als vollständiger Kompatibilitätsnachweis.", "correct": false },
+            { "id": "w4", "text": "Protokoll und Aushandlung müssen mitgeprüft werden.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Die fachlich richtige Lösung ist eine getrennte Layer-Diagnose je Symptom statt pauschaler Ein-Ursachen-Annahmen."
+    }
+  ]
+}

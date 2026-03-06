@@ -1,0 +1,245 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Folie 5 – Schnittstellen & Kompatibilität (AP1) Level 2",
+  "topic": "PCIe-Lane-Budget • M.2-Protokolle • USB-C/Alt-Mode/Thunderbolt • DP/HDMI-Versionen • Link-Negotiation • UEFI/Treiber/Firmware",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "lane-budget-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Wo liegt der Engpass wirklich?",
+      "subtitle": "Ordne die Befunde der primären Ursache zu.",
+      "hintDefault": "Nicht am Symptom hängen bleiben: Erst Topologie (Lanes/Slots), dann Protokoll, dann Kabel/Infrastruktur, dann Firmware/Treiber.",
+      "sortColumns": [
+        { "zone": "pcie", "label": "PCIe-Lane/Slot-Topologie", "hint": "x16/x8/x4, CPU- vs Chipsatz-Lanes" },
+        { "zone": "m2", "label": "M.2/Storage-Protokoll", "hint": "NVMe vs SATA, Keying, Slot-Support" },
+        { "zone": "ports", "label": "Ports/Kabel/Gegenstelle", "hint": "USB/DP/HDMI/LAN inkl. Version" },
+        { "zone": "stack", "label": "Treiber/Firmware/UEFI", "hint": "Erkennung, Stabilität, Feature-Flags" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "GPU steckt mechanisch im x16-Slot, Link-Status zeigt aber x8 wegen belegter Zusatzkarte.", "correctZone": "pcie" },
+        { "id": "c2", "text": "Bei belegtem zweiten M.2-Slot fällt ein SATA-Port aus, obwohl das Laufwerk intakt ist.", "correctZone": "m2" },
+        { "id": "c3", "text": "USB-C-Dock liefert Bild nur auf einem Monitor, weil der Port keinen DP-Alt-Mode bietet.", "correctZone": "ports" },
+        { "id": "c4", "text": "Neue NIC verhandelt nur 1 Gbit/s, da Switch-Port und Kabelstrecke kein 2.5G stabil können.", "correctZone": "ports" },
+        { "id": "c5", "text": "NVMe wird erst nach UEFI-Update als Boot-Device erkannt.", "correctZone": "stack" },
+        { "id": "c6", "text": "Capture-Karte reduziert GPU-Bandbreite durch Lane-Sharing laut Mainboard-Blockdiagramm.", "correctZone": "pcie" },
+        { "id": "c7", "text": "M.2-Modul passt mechanisch, wird aber nicht erkannt: Slot unterstützt nur SATA, Modul ist NVMe.", "correctZone": "m2" },
+        { "id": "c8", "text": "Externe SSD bleibt bei niedriger Datenrate, da Kabel nur USB-2.0-Signalpfad liefert.", "correctZone": "ports" },
+        { "id": "c9", "text": "Nach Chipsatz-Treiberupdate funktionieren Energieprofile und Link-State-Management stabil.", "correctZone": "stack" },
+        { "id": "c10", "text": "Langer PCIe-Slot ist elektrisch nur x4 angebunden und limitiert die Erweiterungskarte.", "correctZone": "pcie" }
+      ]
+    },
+    {
+      "id": "exam-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: AP1-Fallen auf Expertenniveau",
+      "subtitle": "Wähle die technisch sauberste Aussage.",
+      "hintDefault": "Achte auf das schwächste Glied: Topologie, Protokoll, Gegenstelle, Firmware-Stand.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Welche Aussage zu PCIe ist fachlich korrekt?",
+          "options": [
+            { "value": "a", "text": "Ein mechanischer x16-Slot garantiert immer x16 elektrisch." },
+            { "value": "b", "text": "Die effektive Bandbreite hängt von Link-Width und Gen-Level ab und kann durch Sharing reduziert werden." },
+            { "value": "c", "text": "PCIe-Generation beeinflusst nur die Latenz, nicht die Datenrate." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Warum ist \"M.2 wird nicht erkannt\" häufig kein Defekt?",
+          "options": [
+            { "value": "a", "text": "Weil M.2 immer hotplug-fähig ist und nur neu gestartet werden muss." },
+            { "value": "b", "text": "Weil M.2 als Formfaktor verschiedene Protokolle nutzt und Slot/Modul nicht zwingend zusammenpassen." },
+            { "value": "c", "text": "Weil M.2-Geräte grundsätzlich ohne UEFI-Unterstützung booten." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Was ist bei USB-C die wichtigste Prüfungslogik?",
+          "options": [
+            { "value": "a", "text": "Steckerform genügt zur Ableitung von Datenrate, Power und Video." },
+            { "value": "b", "text": "USB-C beschreibt primär den Stecker; Funktionen hängen von Controller, Kabel und Profilen ab." },
+            { "value": "c", "text": "USB-C ist immer langsamer als USB-A." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Diagnose zu 2.5G/10G-Linkproblemen ist zuerst korrekt?",
+          "options": [
+            { "value": "a", "text": "Treiber aktualisieren und den Rest ignorieren." },
+            { "value": "b", "text": "Nur Port-LED-Farbe auswerten." },
+            { "value": "c", "text": "Beide Enden, Kabelstrecke und Autonegotiation gemeinsam prüfen." }
+          ],
+          "correct": "c"
+        },
+        {
+          "id": "q5",
+          "text": "5. Welche Aussage zu DP/HDMI ist technisch stimmig?",
+          "options": [
+            { "value": "a", "text": "Gleicher Stecker bedeutet gleiche maximal mögliche Auflösung/Hz." },
+            { "value": "b", "text": "Port-Version, Kabelqualität und Monitor-EDID bestimmen gemeinsam die effektive Ausgabe." },
+            { "value": "c", "text": "DP und HDMI sind nur Marketingbegriffe ohne technische Relevanz." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q6",
+          "text": "6. Wann ist ein BIOS/UEFI-Update in AP1-Szenarien plausibel begründet?",
+          "options": [
+            { "value": "a", "text": "Wenn neue CPU/NVMe-Funktionen nicht erkannt werden und Release Notes Kompatibilitätsfixes nennen." },
+            { "value": "b", "text": "Immer vor jeder Treiberinstallation, unabhängig vom Befund." },
+            { "value": "c", "text": "Nie, da Firmware keinen Einfluss auf Schnittstellen hat." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "troubleshoot-order-l2",
+      "type": "capital",
+      "title": "Rätsel 3: Profi-Reihenfolge bei Kompatibilitätsproblemen",
+      "subtitle": "Bringe den Diagnoseablauf in die richtige Reihenfolge.",
+      "hintDefault": "Vom physischen Layer zur Software-Schicht: Topologie -> Protokoll -> Infrastruktur -> Firmware/Treiber -> Verifikation.",
+      "rows": [
+        {
+          "key": "symptom",
+          "label": "Symptom präzisieren und reproduzierbar machen (wann, unter welcher Last, welches Gerät)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "topology",
+          "label": "Topologie prüfen (Slot-Anbindung, Lane-Sharing, CPU- vs Chipsatz-Pfad, deaktivierte Ports)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "protocol",
+          "label": "Protokoll-/Standard-Fit prüfen (NVMe vs SATA, USB-Profil, DP/HDMI-Version, Link-Speed)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "infrastructure",
+          "label": "Gegenstellen und Kabel validieren (Switch-Port, Adapter, Dock, zertifizierte Kabel)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "stack",
+          "label": "Treiber/Firmware/UEFI gezielt aktualisieren und Einstellungen dokumentiert anpassen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "verify",
+          "label": "Endtest mit Messwerten durchführen (Link-Width/Speed, Throughput, Stabilität, Logs)",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 4: Entscheidung unter Prüfungsdruck",
+      "subtitle": "Wähle die beste Priorisierung.",
+      "hintDefault": "AP1 bewertet Begründungstiefe: Ursacheketten statt Einzel-Facts.",
+      "questions": [
+        {
+          "id": "d1",
+          "text": "1. Nach Einbau einer zweiten NVMe sinkt GPU-Leistung. Was ist die beste Erstmaßnahme?",
+          "options": [
+            { "value": "a", "text": "Mainboard-Handbuch/Blockdiagramm auf Lane-Sharing und Slot-Prioritäten prüfen." },
+            { "value": "b", "text": "Nur Grafikkartentreiber neu installieren." },
+            { "value": "c", "text": "Monitorkabel tauschen." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "d2",
+          "text": "2. Notebook-Dock soll 2x 4K liefern, schafft aber nur 1x 4K + 1x Full HD. Was ist am wahrscheinlichsten?",
+          "options": [
+            { "value": "a", "text": "Zu wenig CPU-RAM." },
+            { "value": "b", "text": "USB-C-Port/Kabel/Dock unterstützen nicht die nötige Video-Bandbreite oder keinen passenden Alt-Mode." },
+            { "value": "c", "text": "SSD ist zu langsam." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "d3",
+          "text": "3. Eine 10G-Karte erreicht real nur 1G-Link. Welche Aussage ist methodisch korrekt?",
+          "options": [
+            { "value": "a", "text": "10G auf der Karte reicht als Nachweis, Rest ist irrelevant." },
+            { "value": "b", "text": "Linkspeed ist Aushandlungssache; Gegenstelle und Verkabelung müssen 10G ebenfalls stabil beherrschen." },
+            { "value": "c", "text": "BIOS-Reset erzwingt immer 10G." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "d4",
+          "text": "4. Welcher Satz trennt Begriffe sauber?",
+          "options": [
+            { "value": "a", "text": "M.2 ist ein Protokoll, NVMe nur der Steckplatz." },
+            { "value": "b", "text": "USB-C ist ein Protokoll, USB 3.2 nur der Stecker." },
+            { "value": "c", "text": "M.2 ist Formfaktor, NVMe/SATA sind Protokollpfade." }
+          ],
+          "correct": "c"
+        }
+      ]
+    }
+  ]
+}
