@@ -1,0 +1,575 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Archivierung (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "backup",
+      "name": "Backup",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "archiv",
+      "name": "Archivierung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": true,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "worm",
+      "name": "WORM",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": false,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "retention_policy",
+      "name": "Retention Policy",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "legal_hold",
+      "name": "Legal Hold",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "metadaten_indexing",
+      "name": "Metadaten + Indexierung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": true,
+        "supports_fast_restore": false,
+        "requires_audit_trail": false,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "audit_trail",
+      "name": "Audit Trail",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "disaster_recovery",
+      "name": "Disaster Recovery",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "snapshot_versionierung",
+      "name": "Snapshot/Versionierung",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "hybrid_konzept",
+      "name": "Hybridkonzept Backup+Archiv",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": true,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": true,
+        "supports_fast_restore": true,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rechtskonforme_loeschung",
+      "name": "Rechtskonforme Löschung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Geht es primär um Backup/Restore im Störungsfall?",
+      "attributeKey": "is_backup"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Geht es primär um langfristige Archivierung?",
+      "attributeKey": "is_archive"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Stehen RTO/RPO-Ziele im Zentrum?",
+      "attributeKey": "focus_rto_rpo"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Stehen Compliance- und Aufbewahrungsanforderungen im Zentrum?",
+      "attributeKey": "focus_retention_compliance"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Ist Unveränderbarkeit eine Kernanforderung?",
+      "attributeKey": "needs_immutability"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist Suchbarkeit bzw. Retrieval-Fähigkeit zentral?",
+      "attributeKey": "needs_searchability"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Muss schnelle technische Wiederherstellung möglich sein?",
+      "attributeKey": "supports_fast_restore"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Sind nachvollziehbare Audit-Protokolle erforderlich?",
+      "attributeKey": "requires_audit_trail"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Sind reguläre Änderungen/Überschreiben typischerweise erlaubt?",
+      "attributeKey": "allows_regular_modification"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Muss eine Legal-Hold-Funktion berücksichtigt werden?",
+      "attributeKey": "requires_legal_hold_support"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Spielt eine Retention-Policy zentrale Rolle?",
+      "attributeKey": "focuses_on_retention_policy"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Sind Metadaten/Indexierung essenziell?",
+      "attributeKey": "uses_metadata_indexing"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Ist Versionierung ein zentraler Bestandteil?",
+      "attributeKey": "supports_versioning"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist es stark mit Disaster-Recovery-Szenarien verknüpft?",
+      "attributeKey": "supports_disaster_recovery"
+    }
+  ],
+  "legalForms": [
+    {
+      "id": "backup",
+      "name": "Backup",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "archiv",
+      "name": "Archivierung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": true,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "worm",
+      "name": "WORM",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": false,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "retention_policy",
+      "name": "Retention Policy",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "legal_hold",
+      "name": "Legal Hold",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "metadaten_indexing",
+      "name": "Metadaten + Indexierung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": true,
+        "supports_fast_restore": false,
+        "requires_audit_trail": false,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "audit_trail",
+      "name": "Audit Trail",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "disaster_recovery",
+      "name": "Disaster Recovery",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "snapshot_versionierung",
+      "name": "Snapshot/Versionierung",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": false,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": false,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": true,
+        "requires_audit_trail": false,
+        "allows_regular_modification": true,
+        "requires_legal_hold_support": false,
+        "focuses_on_retention_policy": false,
+        "uses_metadata_indexing": false,
+        "supports_versioning": true,
+        "supports_disaster_recovery": false
+      }
+    },
+    {
+      "id": "hybrid_konzept",
+      "name": "Hybridkonzept Backup+Archiv",
+      "attributes": {
+        "is_backup": true,
+        "is_archive": true,
+        "focus_rto_rpo": true,
+        "focus_retention_compliance": true,
+        "needs_immutability": true,
+        "needs_searchability": true,
+        "supports_fast_restore": true,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": true,
+        "supports_versioning": true,
+        "supports_disaster_recovery": true
+      }
+    },
+    {
+      "id": "rechtskonforme_loeschung",
+      "name": "Rechtskonforme Löschung",
+      "attributes": {
+        "is_backup": false,
+        "is_archive": true,
+        "focus_rto_rpo": false,
+        "focus_retention_compliance": true,
+        "needs_immutability": false,
+        "needs_searchability": false,
+        "supports_fast_restore": false,
+        "requires_audit_trail": true,
+        "allows_regular_modification": false,
+        "requires_legal_hold_support": true,
+        "focuses_on_retention_policy": true,
+        "uses_metadata_indexing": false,
+        "supports_versioning": false,
+        "supports_disaster_recovery": false
+      }
+    }
+  ]
+}

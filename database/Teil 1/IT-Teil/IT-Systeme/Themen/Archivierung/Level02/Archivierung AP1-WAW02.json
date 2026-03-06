@@ -1,0 +1,499 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Archivierung (AP1) Level 2",
+  "description": "Schritt 1: passende Lösung bestimmen (What). Schritt 2: tragfähige Begründungen auswählen (Why).",
+  "cases": [
+    {
+      "id": "ar01",
+      "profile": "Nach einem Verschlüsselungstrojaner sollen operative Systeme schnell auf einen sauberen Stand zurückgesetzt werden.",
+      "tags": ["Recovery", "Incident", "Restore"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Backup-/Restore-Strategie",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Restore-Fähigkeit mit definierten RTO/RPO ist hier zentral.", "correct": true },
+            { "id": "w2", "text": "Archivierung allein priorisiert Nachweis, nicht schnelle Wiederaufnahme.", "correct": true },
+            { "id": "w3", "text": "WORM ersetzt in diesem Szenario jede Wiederherstellung.", "correct": false },
+            { "id": "w4", "text": "Regelmäßige Restore-Tests sichern die praktische Umsetzbarkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur revisionssicheres Archiv",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ist primär für langfristige Nachweisführung geeignet.", "correct": true },
+            { "id": "w2", "text": "Löst schnelle Recovery-Anforderungen vollständig.", "correct": false },
+            { "id": "w3", "text": "Unveränderbarkeit ist hier der einzige relevante Faktor.", "correct": false },
+            { "id": "w4", "text": "Kann Backup sinnvoll ergänzen, aber nicht ersetzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Volltextindex",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verbessert Suche, aber keine technische Wiederherstellung.", "correct": true },
+            { "id": "w2", "text": "Ersetzt Backup-Medien und Restore-Prozesse.", "correct": false },
+            { "id": "w3", "text": "Ist nützlich für Retrieval, nicht für Incident-Recovery.", "correct": true },
+            { "id": "w4", "text": "Genügt als alleinige Maßnahme gegen Ransomware.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Backup-/Restore-Strategie: Bei Incident-Recovery zählt die sichere und schnelle Wiederherstellung."
+    },
+    {
+      "id": "ar02",
+      "profile": "Ein Unternehmen muss steuerrelevante Belege über Jahre manipulationssicher und auffindbar vorhalten.",
+      "tags": ["Compliance", "Aufbewahrung", "Revisionssicherheit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Revisionssicheres Archiv mit Retention-Regeln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Langfristige Aufbewahrung mit Fristensteuerung ist Kernanforderung.", "correct": true },
+            { "id": "w2", "text": "Unveränderbarkeit und Auditierbarkeit erhöhen Nachweisqualität.", "correct": true },
+            { "id": "w3", "text": "Inkrementelles Backup allein genügt als Compliance-Nachweis.", "correct": false },
+            { "id": "w4", "text": "Metadaten/Indexierung sind für Auffindbarkeit wesentlich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur tägliches Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup unterstützt primär Restore-Ziele.", "correct": true },
+            { "id": "w2", "text": "Ersetzt automatisch alle Archiv- und Fristenanforderungen.", "correct": false },
+            { "id": "w3", "text": "Kann Baustein eines Gesamtkonzepts sein.", "correct": true },
+            { "id": "w4", "text": "Löst Nachweisbarkeit revisionssicher ohne weitere Maßnahmen vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Freigabe zur manuellen Ablage ohne Regeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Fehlende Regeln führen oft zu Frist- und Integritätsproblemen.", "correct": true },
+            { "id": "w2", "text": "Ist für Audits in der Regel unzuverlässig.", "correct": true },
+            { "id": "w3", "text": "Manuelle Ablage steigert automatisch Revisionssicherheit.", "correct": false },
+            { "id": "w4", "text": "Skaliert bei großen Datenmengen meist schlecht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Revisionssicheres Archiv mit Retention-Regeln: Nur so werden Aufbewahrung, Integrität und Auffindbarkeit belastbar erfüllt."
+    },
+    {
+      "id": "ar03",
+      "profile": "Beim Prüftermin soll belegt werden, wer ein Dokument wann eingesehen oder exportiert hat.",
+      "tags": ["Audit", "Nachvollziehbarkeit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Audit Trail einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Audit Trails dokumentieren Aktionen und Nutzerbezug nachvollziehbar.", "correct": true },
+            { "id": "w2", "text": "Erleichtern Nachweis gegenüber Revision/Audit.", "correct": true },
+            { "id": "w3", "text": "Ersetzen Fristen- und Löschregeln vollständig.", "correct": false },
+            { "id": "w4", "text": "Sollten vor Manipulation geschützt gespeichert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Dateinamen standardisieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Hilft Orientierung, aber belegt keine Zugriffshistorie.", "correct": true },
+            { "id": "w2", "text": "Erfüllt Audit-Nachweis automatisch.", "correct": false },
+            { "id": "w3", "text": "Kann ergänzend sinnvoll sein.", "correct": true },
+            { "id": "w4", "text": "Ersetzt rollenbasierte Zugriffskontrolle.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Löschfristen abschaffen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Löst das Nachweisproblem nicht.", "correct": true },
+            { "id": "w2", "text": "Kann zusätzliche Compliance-Risiken schaffen.", "correct": true },
+            { "id": "w3", "text": "Ist Standardanforderung für Audit Trails.", "correct": false },
+            { "id": "w4", "text": "Unterläuft oft Datenschutz- und Governance-Regeln.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Audit Trail: Für belastbare Nachweise über Zugriffe und Aktionen ist er zentral."
+    },
+    {
+      "id": "ar04",
+      "profile": "Daten sollen nach Ablauf definierter Fristen automatisiert und dokumentiert entfernt werden.",
+      "tags": ["Retention", "Löschung", "Governance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Retention + regelkonforme Löschprozesse",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Fristen müssen je Dokumentklasse eindeutig hinterlegt sein.", "correct": true },
+            { "id": "w2", "text": "Löschvorgänge sollten nachvollziehbar protokolliert werden.", "correct": true },
+            { "id": "w3", "text": "Einmaliges manuelles Aufräumen pro Jahr ist gleichwertig.", "correct": false },
+            { "id": "w4", "text": "Legal Hold muss Löschung bei Bedarf temporär blockieren können.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Keine Löschung vorsehen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann regulatorisch oder datenschutzseitig problematisch sein.", "correct": true },
+            { "id": "w2", "text": "Vereinheitlicht zwar Speicherstand, ist aber nicht automatisch regelkonform.", "correct": true },
+            { "id": "w3", "text": "Ist zwingend für jedes Archivkonzept vorgeschrieben.", "correct": false },
+            { "id": "w4", "text": "Ersetzt Fristenmanagement vollständig.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Backups rotieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup-Rotation ist nicht identisch mit archivseitigen Fristen.", "correct": true },
+            { "id": "w2", "text": "Kann Aufbewahrungs- und Nachweispflichten unvollständig adressieren.", "correct": true },
+            { "id": "w3", "text": "Löst alle Archiv-Löschanforderungen fachlich sauber.", "correct": false },
+            { "id": "w4", "text": "Ist als Ergänzung möglich, aber nicht allein ausreichend.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Retention + regelkonforme Löschung: So werden Fristen, Nachweise und Ausnahmen (Legal Hold) sauber gesteuert."
+    },
+    {
+      "id": "ar05",
+      "profile": "Ein Team findet archivierte Dokumente zu langsam. Abfragen dauern Minuten statt Sekunden.",
+      "tags": ["Retrieval", "Metadaten", "Suche"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Metadatenmodell und Suchindex optimieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Strukturierte Metadaten verbessern präzise Filterung.", "correct": true },
+            { "id": "w2", "text": "Volltext-/Feldindex reduziert Suchlatenz deutlich.", "correct": true },
+            { "id": "w3", "text": "Nur Speicherplatz erhöhen löst Retrieval-Probleme immer.", "correct": false },
+            { "id": "w4", "text": "Klassifikation wirkt direkt auf Auffindbarkeit.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur tägliche Vollsicherung",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Verbessert Recovery-Basis, nicht zwingend die Suchgeschwindigkeit im Archiv.", "correct": true },
+            { "id": "w2", "text": "Ersetzt Metadatenkonzepte.", "correct": false },
+            { "id": "w3", "text": "Kann ergänzend sinnvoll sein, bleibt aber am Retrieval-Ziel vorbei.", "correct": true },
+            { "id": "w4", "text": "Ist der direkte Hebel für Dokumentfindung.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Dateien unstrukturiert kopieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Klassifikation/Index steigt Suchaufwand stark.", "correct": true },
+            { "id": "w2", "text": "Kann Nachweisbarkeit und Fristensteuerung erschweren.", "correct": true },
+            { "id": "w3", "text": "Ist Standard für performante Archivsuche.", "correct": false },
+            { "id": "w4", "text": "Skaliert bei großen Datenbeständen meist schlecht.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Metadaten + Suchindex: Das ist der direkte technische Hebel für schnelle, belastbare Retrieval-Prozesse."
+    },
+    {
+      "id": "ar06",
+      "profile": "Für ein neues Konzept sollen operative Recovery-Ziele und rechtliche Aufbewahrung zugleich abgedeckt werden.",
+      "tags": ["Architektur", "Ganzheitliches Konzept"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Hybridkonzept aus Backup und Archiv",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Backup adressiert RTO/RPO und schnelle Wiederherstellung.", "correct": true },
+            { "id": "w2", "text": "Archiv adressiert Fristen, Integrität und Nachweisbarkeit.", "correct": true },
+            { "id": "w3", "text": "Beide Ziele lassen sich immer mit nur einem Mechanismus vollständig lösen.", "correct": false },
+            { "id": "w4", "text": "Klare Trennung der Zwecke reduziert Fehlkonfigurationen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Für Recovery stark, für Langzeitnachweis oft unvollständig.", "correct": true },
+            { "id": "w2", "text": "Erfüllt automatisch revisionssichere Archivanforderungen.", "correct": false },
+            { "id": "w3", "text": "Kann Teil des Gesamtmodells sein.", "correct": true },
+            { "id": "w4", "text": "Löst Legal-Hold-Szenarien ohne Zusatzmaßnahmen sicher.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Archiv",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Stark bei Nachweis, aber nicht automatisch schnell beim Recovery.", "correct": true },
+            { "id": "w2", "text": "Deckt RTO/RPO-Ziele ohne Restore-Konzept vollständig ab.", "correct": false },
+            { "id": "w3", "text": "Kann Backup ergänzen, aber nicht ersetzen.", "correct": true },
+            { "id": "w4", "text": "Ist allein stets ausreichend für Incident-Management.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Hybridkonzept: Nur die Kombination deckt Recovery- und Compliance-Anforderungen zugleich robust ab."
+    },
+    {
+      "id": "ar07",
+      "profile": "Bei einer Prüfung wird gefordert, die Echtheit und Unverändertheit einer Datei nachzuweisen.",
+      "tags": ["Integrität", "Nachweis"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Hash-/Integritätsnachweis mit unveränderbarer Ablage",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Integritätsprüfungen zeigen, ob Inhalte verändert wurden.", "correct": true },
+            { "id": "w2", "text": "Unveränderbarkeit reduziert Manipulationsrisiko nach Ablage.", "correct": true },
+            { "id": "w3", "text": "Reiner Dateiname reicht als Integritätsbeweis.", "correct": false },
+            { "id": "w4", "text": "Audit-Trail ergänzt den Nachweis um Prozesshistorie.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Leserechte setzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Rollenrechte sind wichtig, aber allein kein Integritätsbeweis.", "correct": true },
+            { "id": "w2", "text": "Verhindert nicht jede mögliche Manipulation auf Speicherebene.", "correct": true },
+            { "id": "w3", "text": "Ist identisch mit revisionssicherer Unveränderbarkeit.", "correct": false },
+            { "id": "w4", "text": "Sollte mit weiteren Maßnahmen kombiniert werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Backup behalten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup sichert Wiederherstellung, nicht zwingend Beweiswert.", "correct": true },
+            { "id": "w2", "text": "Echtheitsnachweis erfordert zusätzliche Integritätsmechanismen.", "correct": true },
+            { "id": "w3", "text": "Löst Nachweis der Unverändertheit automatisch.", "correct": false },
+            { "id": "w4", "text": "Kann Teil eines Gesamtkonzepts sein.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Integritätsnachweis + unveränderbare Ablage: Diese Kombination ist für belastbaren Beweiswert entscheidend."
+    },
+    {
+      "id": "ar08",
+      "profile": "Das Team möchte Kosten senken, ohne Wiederherstellbarkeit und Compliance zu gefährden.",
+      "tags": ["Wirtschaftlichkeit", "Strategie"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Deduplizierung + tiered Storage + klare Regeln",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Deduplizierung reduziert redundante Speicherblöcke.", "correct": true },
+            { "id": "w2", "text": "Tiering ordnet Daten nach Zugriffshäufigkeit und Kostenklasse.", "correct": true },
+            { "id": "w3", "text": "Regelwerke für Fristen und Integrität bleiben weiterhin nötig.", "correct": true },
+            { "id": "w4", "text": "Kostenoptimierung darf Recovery-/Compliance-Ziele ignorieren.", "correct": false }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Auf Tests verzichten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Restore-/Prozess-Tests bleibt Wirksamkeit unbewiesen.", "correct": true },
+            { "id": "w2", "text": "Kann kurzfristig Aufwand sparen, erhöht aber Betriebsrisiko.", "correct": true },
+            { "id": "w3", "text": "Verbessert Nachweisfähigkeit gegenüber Audits.", "correct": false },
+            { "id": "w4", "text": "Ist als Dauerstrategie fachlich riskant.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Aufbewahrungsfristen verlängern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Datenvolumen kann Kosten erhöhen statt senken.", "correct": true },
+            { "id": "w2", "text": "Löst weder Performance- noch Recovery-Probleme direkt.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Deduplizierung und Tiering vollständig.", "correct": false },
+            { "id": "w4", "text": "Muss regulatorisch begründet sein, nicht rein technisch.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Deduplizierung + Tiering + klare Regeln: wirtschaftlich sinnvoll, ohne Kernziele zu opfern."
+    },
+    {
+      "id": "ar09",
+      "profile": "Eine Datenklasse darf wegen laufender Untersuchung nicht gelöscht werden, obwohl die Frist erreicht ist.",
+      "tags": ["Legal Hold", "Governance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Legal Hold aktivieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Legal Hold setzt geplante Löschung aus rechtlichen Gründen aus.", "correct": true },
+            { "id": "w2", "text": "Bewahrt Nachweisfähigkeit während des Verfahrens.", "correct": true },
+            { "id": "w3", "text": "Fristenlogik muss nie Ausnahmen berücksichtigen.", "correct": false },
+            { "id": "w4", "text": "Nach Aufhebung kann reguläre Löschregel wieder greifen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Fristenregel dauerhaft deaktivieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Dauerhafte Abschaltung führt zu Governance-Risiken.", "correct": true },
+            { "id": "w2", "text": "Ist als befristete Ausnahme unnötig weitreichend.", "correct": true },
+            { "id": "w3", "text": "Entspricht dem Zweck eines Legal Hold.", "correct": false },
+            { "id": "w4", "text": "Kann Datenminimierungsprinzipien verletzen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Dokumente manuell kopieren und Original löschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Gefährdet Nachvollziehbarkeit und Integrität der Historie.", "correct": true },
+            { "id": "w2", "text": "Erhöht das Risiko von Inkonsistenzen.", "correct": true },
+            { "id": "w3", "text": "Ist revisionsseitig die bevorzugte Lösung.", "correct": false },
+            { "id": "w4", "text": "Unterläuft definierte Prozesse.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Legal Hold: Präzise Ausnahme, ohne das gesamte Fristenregime zu zerstören."
+    },
+    {
+      "id": "ar10",
+      "profile": "Es gibt widersprüchliche Angaben darüber, welche Version eines Dokuments gültig ist.",
+      "tags": ["Versionierung", "Nachvollziehbarkeit"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Versionierung und eindeutige Historie erzwingen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Versionierung macht Änderungen chronologisch nachvollziehbar.", "correct": true },
+            { "id": "w2", "text": "Hilft, gültigen Stand und Entstehungskette zu belegen.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Audit Trail vollständig.", "correct": false },
+            { "id": "w4", "text": "Reduziert Konflikte bei Freigabe- und Prüfprozessen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Dateiname mit Datum anhängen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann helfen, aber ist ohne Prozesskontrolle fehleranfällig.", "correct": true },
+            { "id": "w2", "text": "Garantiert eindeutige fachliche Versionierung automatisch.", "correct": false },
+            { "id": "w3", "text": "Skaliert in großen Teams schlecht.", "correct": true },
+            { "id": "w4", "text": "Ersetzt technische Historienmechanismen robust.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Ältere Versionen ohne Dokumentation löschen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kann Nachweis- und Prüfpfade zerstören.", "correct": true },
+            { "id": "w2", "text": "Erschwert Ursachenanalyse bei Konflikten.", "correct": true },
+            { "id": "w3", "text": "Ist Best Practice für Revisionssicherheit.", "correct": false },
+            { "id": "w4", "text": "Steht oft im Widerspruch zu Governance-Regeln.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Versionierung mit klarer Historie: So bleibt fachlich nachvollziehbar, welche Version wann gültig war."
+    },
+    {
+      "id": "ar11",
+      "profile": "Die Fachabteilung fordert: 'Jedes wichtige Dokument in unter 10 Sekunden auffindbar'.",
+      "tags": ["Servicequalität", "Retrieval"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Retrieval-SLA mit Index-/Metadatenstrategie",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Messbare Suchziele erfordern technische und organisatorische Maßnahmen.", "correct": true },
+            { "id": "w2", "text": "Metadatenqualität beeinflusst Trefferquote und Geschwindigkeit.", "correct": true },
+            { "id": "w3", "text": "Backup-Intervall ist der einzige relevante Faktor.", "correct": false },
+            { "id": "w4", "text": "Such-Performance sollte regelmäßig überwacht und getestet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur mehr Speicher bereitstellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr Speicher ohne Index-/Datenqualität löst Suchprobleme selten nachhaltig.", "correct": true },
+            { "id": "w2", "text": "Kann kurzfristig Kapazitätsengpässe entschärfen.", "correct": true },
+            { "id": "w3", "text": "Ersetzt Retrieval-Konzept und SLA vollständig.", "correct": false },
+            { "id": "w4", "text": "Adressiert nicht automatisch Trefferrelevanz.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Suche deaktivieren und nur Ordnerstruktur nutzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Skaliert bei großen Datenmengen schlecht.", "correct": true },
+            { "id": "w2", "text": "Widerspricht typischerweise dem Ziel schneller Auffindbarkeit.", "correct": true },
+            { "id": "w3", "text": "Ist bei SLA-Anforderungen die bevorzugte Methode.", "correct": false },
+            { "id": "w4", "text": "Erhöht manuellen Suchaufwand.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Retrieval-SLA mit Metadaten-/Indexstrategie: Nur so wird Auffindbarkeit messbar und zuverlässig."
+    },
+    {
+      "id": "ar12",
+      "profile": "Die Geschäftsführung will wissen, ob das bestehende System 'nur Backup' oder 'Backup plus Archiv' liefern sollte.",
+      "tags": ["Strategie", "Entscheidung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Backup plus Archiv mit klarer Zwecktrennung",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Restore-Ziele und Nachweisziele sind fachlich unterschiedliche Anforderungen.", "correct": true },
+            { "id": "w2", "text": "Klare Trennung verhindert Fehlannahmen im Betrieb.", "correct": true },
+            { "id": "w3", "text": "Ein einzelnes Backup erfüllt immer automatisch beide Zielwelten.", "correct": false },
+            { "id": "w4", "text": "Ein integriertes Gesamtmodell verbessert Governance und Resilienz.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Backup",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Für operative Wiederherstellung stark, für Nachweis/Fristen oft unvollständig.", "correct": true },
+            { "id": "w2", "text": "Kann Compliance-Anforderungen ohne Zusatzmaßnahmen immer erfüllen.", "correct": false },
+            { "id": "w3", "text": "Ist als Teilstrategie legitim.", "correct": true },
+            { "id": "w4", "text": "Erschlägt automatisch Legal-Hold- und Beweiswertthemen.", "correct": false }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Archiv",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Für Nachweis stark, aber für schnelle Systemwiederherstellung nicht ausreichend.", "correct": true },
+            { "id": "w2", "text": "Ersetzt ein getestetes Restore-Konzept vollständig.", "correct": false },
+            { "id": "w3", "text": "Kann als zweites Standbein sinnvoll sein.", "correct": true },
+            { "id": "w4", "text": "Deckt RPO/RTO automatisch ab.", "correct": false }
+          ]
+        }
+      ],
+      "solution": "Backup plus Archiv: Nur die Kombination deckt operative Resilienz und regulatorische Nachweisbarkeit vollständig ab."
+    }
+  ]
+}

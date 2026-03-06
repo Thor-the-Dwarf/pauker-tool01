@@ -1,0 +1,205 @@
+{
+  "game_type": "quick_quiz",
+  "title": "Quick-Quiz – Archivierung (AP1) Level 2",
+  "introText": "Ordne jede Aussage dem fachlich treffendsten Begriff zu.",
+  "sublineText": "Achte auf die Trennung von Restore-Zielen und Compliance-Zielen.",
+  "timePerQuestionSeconds": 18,
+  "answerLabels": [
+    "Backup",
+    "Archivierung",
+    "RTO",
+    "RPO",
+    "WORM",
+    "Retention Policy",
+    "Legal Hold",
+    "Metadaten",
+    "Volltextindex",
+    "Audit Trail",
+    "Unveränderbarkeit",
+    "Datenintegrität",
+    "Verschlüsselung",
+    "Zugriffskontrolle",
+    "Dokumentklassifikation",
+    "ILM",
+    "Restore-Test",
+    "Disaster Recovery",
+    "Versionierung",
+    "Snapshot",
+    "Inkrementelles Backup",
+    "Vollsicherung",
+    "Deduplizierung",
+    "Aufbewahrungsfrist",
+    "Rechtskonforme Löschung",
+    "Retrieval-Fähigkeit",
+    "Beweiswert",
+    "Hybridkonzept Backup+Archiv",
+    "alle",
+    "keine"
+  ],
+  "questions": [
+    {
+      "text": "Zielt primär auf schnelle Wiederherstellung nach Vorfall.",
+      "correct": "Backup"
+    },
+    {
+      "text": "Zielt primär auf langfristige, nachweisbare Aufbewahrung.",
+      "correct": "Archivierung"
+    },
+    {
+      "text": "Beschreibt die maximal tolerierbare Wiederanlaufzeit eines Services.",
+      "correct": "RTO"
+    },
+    {
+      "text": "Beschreibt den maximal tolerierbaren Datenverlust in Zeit.",
+      "correct": "RPO"
+    },
+    {
+      "text": "Write Once Read Many: Nach Speicherung nicht überschreibbar.",
+      "correct": "WORM"
+    },
+    {
+      "text": "Regelt, wie lange welche Dokumentklasse aufzubewahren ist.",
+      "correct": "Retention Policy"
+    },
+    {
+      "text": "Temporäre Sperre gegen Löschung wegen Rechts-/Prüfungsverfahren.",
+      "correct": "Legal Hold"
+    },
+    {
+      "text": "Strukturinformationen wie Dokumenttyp, Datum, Kunde für Suche und Regeln.",
+      "correct": "Metadaten"
+    },
+    {
+      "text": "Ermöglicht Suche über Textinhalt statt nur Dateiname.",
+      "correct": "Volltextindex"
+    },
+    {
+      "text": "Protokolliert nachvollziehbar, wer wann welche Aktion ausgeführt hat.",
+      "correct": "Audit Trail"
+    },
+    {
+      "text": "Anforderung, dass archivierte Inhalte nicht unkontrolliert veränderbar sind.",
+      "correct": "Unveränderbarkeit"
+    },
+    {
+      "text": "Stellt sicher, dass Daten korrekt und unverfälscht bleiben.",
+      "correct": "Datenintegrität"
+    },
+    {
+      "text": "Schützt Inhalte vor unbefugtem Mitlesen auf Speichermedien.",
+      "correct": "Verschlüsselung"
+    },
+    {
+      "text": "Legt fest, welche Rollen lesen/schreiben/exportieren dürfen.",
+      "correct": "Zugriffskontrolle"
+    },
+    {
+      "text": "Ordnet eingehende Dokumente Kategorien mit passenden Regeln zu.",
+      "correct": "Dokumentklassifikation"
+    },
+    {
+      "text": "Steuert den Datenlebenszyklus von Entstehung bis Löschung.",
+      "correct": "ILM"
+    },
+    {
+      "text": "Praktischer Nachweis, dass Wiederherstellung im Ernstfall funktioniert.",
+      "correct": "Restore-Test"
+    },
+    {
+      "text": "Umfasst Planung und Abläufe für Wiederanlauf nach großem Ausfall.",
+      "correct": "Disaster Recovery"
+    },
+    {
+      "text": "Hält mehrere Stände vor, um auf frühere Zustände zurückzugehen.",
+      "correct": "Versionierung"
+    },
+    {
+      "text": "Punkt-in-Zeit-Abbild eines Systems oder Volumes.",
+      "correct": "Snapshot"
+    },
+    {
+      "text": "Sichert nur Änderungen seit der letzten Sicherung.",
+      "correct": "Inkrementelles Backup"
+    },
+    {
+      "text": "Erzeugt eine vollständige Sicherung des gesamten Datenbestands.",
+      "correct": "Vollsicherung"
+    },
+    {
+      "text": "Eliminiert redundante Datenblöcke zur Speicherreduktion.",
+      "correct": "Deduplizierung"
+    },
+    {
+      "text": "Gibt den Zeitraum vor, in dem ein Dokument verfügbar sein muss.",
+      "correct": "Aufbewahrungsfrist"
+    },
+    {
+      "text": "Dokumentierte Entfernung nach Ablauf der Frist nach definierten Regeln.",
+      "correct": "Rechtskonforme Löschung"
+    },
+    {
+      "text": "Sicherstellung, dass ein bestimmtes Archivdokument schnell gefunden werden kann.",
+      "correct": "Retrieval-Fähigkeit"
+    },
+    {
+      "text": "Nachweischarakter eines archivierten Dokuments in Prüfung/Rechtsfall.",
+      "correct": "Beweiswert"
+    },
+    {
+      "text": "Kombiniert operative Wiederherstellung und langfristige Nachweisführung.",
+      "correct": "Hybridkonzept Backup+Archiv"
+    },
+    {
+      "text": "RTO und RPO gehören in den Kern eines Backup-Konzepts.",
+      "correct": "Backup"
+    },
+    {
+      "text": "WORM und Retention-Regeln sind zentrale Bausteine revisionsnaher Archivierung.",
+      "correct": "Archivierung"
+    },
+    {
+      "text": "Wenn die Löschfrist pausieren muss, weil ein Verfahren läuft, spricht man von ...",
+      "correct": "Legal Hold"
+    },
+    {
+      "text": "Erhöht meist die Auffindbarkeit, aber nicht automatisch die Integrität.",
+      "correct": "Volltextindex"
+    },
+    {
+      "text": "Backups ohne Restore-Test sind ein hohes Risiko.",
+      "correct": "Restore-Test"
+    },
+    {
+      "text": "Ist typischerweise für schnelle Rollbacks im Betrieb sehr nützlich.",
+      "correct": "Snapshot"
+    },
+    {
+      "text": "Kann Aufbewahrungspflichten allein nicht ersetzen: rein operative Datensicherung.",
+      "correct": "Backup"
+    },
+    {
+      "text": "Ist zentral, wenn Prüfer nachvollziehbare Zugriffshistorien erwarten.",
+      "correct": "Audit Trail"
+    },
+    {
+      "text": "Ohne diese Struktur werden Fristen- und Suchregeln oft unzuverlässig.",
+      "correct": "Metadaten"
+    },
+    {
+      "text": "Diese Kennzahl beantwortet: Wie lange darf die Anwendung ausfallen?",
+      "correct": "RTO"
+    },
+    {
+      "text": "Diese Kennzahl beantwortet: Wie weit darf der Datenstand zurückliegen?",
+      "correct": "RPO"
+    },
+    {
+      "text": "Verschlüsselung, Zugriffskontrolle und Integritätsschutz sind für vertrauenswürdige Ablage relevant.",
+      "correct": "alle"
+    },
+    {
+      "text": "'Ein täglicher Snapshot erfüllt automatisch sämtliche Compliance-Anforderungen eines Archivs.'",
+      "correct": "keine"
+    }
+  ]
+}

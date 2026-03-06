@@ -1,0 +1,263 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Archivierung (AP1) Level 2",
+  "topic": "Backup vs Archiv, Aufbewahrungspflichten, Unveränderbarkeit, ILM, Retrieval",
+  "estimated_minutes": 45,
+  "sections": [
+    {
+      "id": "abgrenzung-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Scharfe Abgrenzung",
+      "subtitle": "Ordne Aussagen zu Backup, Archiv oder beiden zu.",
+      "hintDefault": "Backup = Wiederherstellung, Archiv = Nachweis/Aufbewahrung. Manche Eigenschaften gelten für beide.",
+      "sortColumns": [
+        { "zone": "backup", "label": "Backup", "hint": "Restore/Desaster" },
+        { "zone": "archiv", "label": "Archiv", "hint": "Langzeit/Compliance" },
+        { "zone": "beide", "label": "Beide", "hint": "im sinnvollen Konzept" }
+      ],
+      "sortCards": [
+        { "id": "a1", "text": "RPO/RTO spielen eine zentrale Rolle", "correctZone": "backup" },
+        { "id": "a2", "text": "Aufbewahrungsfristen müssen regelbasiert eingehalten werden", "correctZone": "archiv" },
+        { "id": "a3", "text": "Metadaten helfen beim späteren Auffinden", "correctZone": "archiv" },
+        { "id": "a4", "text": "Versionierung erhöht Schutz gegen versehentliches Überschreiben", "correctZone": "backup" },
+        { "id": "a5", "text": "Verschlüsselung ist sinnvoll für Vertraulichkeit", "correctZone": "beide" },
+        { "id": "a6", "text": "Nachweise für Audit/Revision stehen im Vordergrund", "correctZone": "archiv" },
+        { "id": "a7", "text": "Disaster-Recovery-Fall: schnelles Zurückspielen", "correctZone": "backup" },
+        { "id": "a8", "text": "Zugriffskontrolle nach Berechtigungskonzept", "correctZone": "beide" }
+      ]
+    },
+    {
+      "id": "compliance-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: Compliance und Revisionssicherheit",
+      "subtitle": "Typische AP1-Fallen gezielt vermeiden.",
+      "hintDefault": "Archivierung heißt nicht nur Speichern, sondern nachvollziehbare, unveränderbare und auffindbare Ablage.",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "1. Welche Aussage ist fachlich korrekt?",
+          "options": [
+            { "value": "a", "text": "Ein Backup ersetzt immer ein revisionssicheres Archiv." },
+            { "value": "b", "text": "Ein Archiv benötigt oft Aufbewahrungsregeln, Unveränderbarkeit und Suchbarkeit." },
+            { "value": "c", "text": "Ein Archiv ist nur eine alte Festplatte ohne Struktur." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "c2",
+          "text": "2. Welche Maßnahme stärkt Revisionssicherheit am besten?",
+          "options": [
+            { "value": "a", "text": "Dateien jederzeit überschreiben lassen" },
+            { "value": "b", "text": "WORM/Unveränderbarkeit plus Protokollierung" },
+            { "value": "c", "text": "Nur Dateinamen verkürzen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "c3",
+          "text": "3. Warum sind Metadaten im Archiv entscheidend?",
+          "options": [
+            { "value": "a", "text": "Nur Metadaten können Backups schneller machen" },
+            { "value": "b", "text": "Sie ermöglichen zielgerichtete Suche, Fristensteuerung und Nachvollziehbarkeit" },
+            { "value": "c", "text": "Metadaten sind bei Langzeitaufbewahrung verboten" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "c4",
+          "text": "4. Welche Aussage zu Löschkonzepten ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Archivdaten dürfen nie gelöscht werden" },
+            { "value": "b", "text": "Nach Ablauf rechtlicher Fristen muss regelkonforme Löschung möglich sein" },
+            { "value": "c", "text": "Löschung ist nur bei Backups relevant" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "ilm-reihenfolge",
+      "type": "capital",
+      "title": "Rätsel 3: ILM-Lifecycle richtig aufbauen",
+      "subtitle": "Ordne die Phasen von der Klassifikation bis zur Löschung.",
+      "hintDefault": "Erst klassifizieren und Fristen festlegen, dann revisionssicher speichern und später regelkonform löschen.",
+      "rows": [
+        {
+          "key": "klassifikation",
+          "label": "Dokumente klassifizieren",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "fristen",
+          "label": "Aufbewahrungsfristen zuordnen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "ablage",
+          "label": "Revisionssicher speichern",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "index",
+          "label": "Metadaten/Index pflegen",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "review",
+          "label": "Fristablauf prüfen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "delete",
+          "label": "Regelkonform löschen/freigeben",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "- bitte wählen -" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technik-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 4: Technische Maßnahmen richtig einsetzen",
+      "subtitle": "Ordne die Maßnahme dem primären Ziel zu.",
+      "hintDefault": "WORM/Retention Lock = Integrität, Snapshots/Versionen = schnelle Wiederherstellung, Index = Auffindbarkeit.",
+      "sortColumns": [
+        { "zone": "restore", "label": "Restore-Fokus", "hint": "Backups" },
+        { "zone": "integrity", "label": "Integrität/Nachweis", "hint": "Archiv" },
+        { "zone": "retrieval", "label": "Auffindbarkeit", "hint": "Suche/Metadata" }
+      ],
+      "sortCards": [
+        { "id": "t1", "text": "Point-in-Time-Snapshot", "correctZone": "restore" },
+        { "id": "t2", "text": "WORM-Speicherung", "correctZone": "integrity" },
+        { "id": "t3", "text": "Volltextindex auf Belegdaten", "correctZone": "retrieval" },
+        { "id": "t4", "text": "Aufbewahrungsregel mit Sperrfrist", "correctZone": "integrity" },
+        { "id": "t5", "text": "Inkrementelle Sicherung", "correctZone": "restore" },
+        { "id": "t6", "text": "Metadatenklassifikation", "correctZone": "retrieval" },
+        { "id": "t7", "text": "Immutable Storage Policy", "correctZone": "integrity" },
+        { "id": "t8", "text": "Bare-Metal-Restore-Test", "correctZone": "restore" }
+      ]
+    },
+    {
+      "id": "szenarien-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 5: Architekturentscheidungen",
+      "subtitle": "Entscheide, welche Kombination fachlich tragfähig ist.",
+      "hintDefault": "Backup und Archiv ergänzen sich. Ein System allein deckt selten alle Ziele vollständig ab.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Was ist die fachlich sauberste Aussage?",
+          "options": [
+            { "value": "a", "text": "Ein tägliches Backup erfüllt automatisch alle Archiv- und Compliance-Anforderungen" },
+            { "value": "b", "text": "Archivierung benötigt neben Speicherung auch Regeln für Unveränderbarkeit, Auffindbarkeit und Fristen" },
+            { "value": "c", "text": "Archivierung ist nur sinnvoll, wenn nie gelöscht wird" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Welcher Test belegt Backup-Qualität am besten?",
+          "options": [
+            { "value": "a", "text": "Nur prüfen, ob Sicherungsdatei existiert" },
+            { "value": "b", "text": "Regelmäßiger Restore-Test gegen definierte RTO/RPO-Ziele" },
+            { "value": "c", "text": "Dateigröße der Sicherung vergleichen" }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s3",
+          "text": "3. Warum reicht 'Dateien schreibgeschützt speichern' für revisionssichere Archivierung oft nicht aus?",
+          "options": [
+            { "value": "a", "text": "Schreibschutz allein gewährleistet keine manipulationssichere Historie und keine Fristenlogik" },
+            { "value": "b", "text": "Schreibschutz ist technisch unmöglich" },
+            { "value": "c", "text": "Archivierung braucht grundsätzlich keine Integritätsmaßnahmen" }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "s4",
+          "text": "4. Welche Kombination passt für ein mittelständisches Unternehmen am besten?",
+          "options": [
+            { "value": "a", "text": "Nur Cloud-Backup ohne Archivkonzept" },
+            { "value": "b", "text": "Backup-Strategie für Restore + regelbasiertes Archiv mit Metadaten und Retention" },
+            { "value": "c", "text": "Nur Archiv, keine Wiederherstellungsstrategie" }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "finale-sort-l2",
+      "type": "sort",
+      "title": "Finale: Vorfallanalyse",
+      "subtitle": "Ordne die Maßnahme dem primären Ziel im Incident zu.",
+      "hintDefault": "Störung beheben = Backup/Restore, Nachweis führen = Archiv/Audit.",
+      "sortColumns": [
+        { "zone": "incident", "label": "Incident-Recovery", "hint": "schnell wieder online" },
+        { "zone": "audit", "label": "Audit/Nachweis", "hint": "langfristig belegbar" }
+      ],
+      "sortCards": [
+        { "id": "f1", "text": "Nach Ransomware Serverstand von gestern wiederherstellen", "correctZone": "incident" },
+        { "id": "f2", "text": "Rechnung von vor 8 Jahren gerichtsfest vorlegen", "correctZone": "audit" },
+        { "id": "f3", "text": "Fehlerhafte Massenlöschung rückgängig machen", "correctZone": "incident" },
+        { "id": "f4", "text": "Dokumenthistorie unverändert nachweisen", "correctZone": "audit" },
+        { "id": "f5", "text": "RTO-Einhaltung durch Restore-Drill demonstrieren", "correctZone": "incident" },
+        { "id": "f6", "text": "Aufbewahrungsfrist regelkonform belegen", "correctZone": "audit" }
+      ]
+    }
+  ]
+}

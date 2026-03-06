@@ -1,0 +1,186 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Archivierung (AP1) Level 2 – Compliance, Retention, Retrieval – Matching",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Fachbegriff, präzise Bedeutung und praxisnahe Anwendung korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Präzise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Fachbegriff.",
+    "column2": "Ordne die korrekte Definition zu.",
+    "column3": "Wähle ein passendes AP1-Szenario."
+  },
+  "sets": [
+    {
+      "id": "backup",
+      "name": "Backup",
+      "description": "Sicherungsstrategie für Wiederherstellung nach Fehler, Ausfall oder Angriff.",
+      "example": "Nach Ransomware den Stand von gestern zurückspielen."
+    },
+    {
+      "id": "archiv",
+      "name": "Archivierung",
+      "description": "Langfristige, nachvollziehbare Aufbewahrung zu Nachweis- und Compliance-Zwecken.",
+      "example": "Rechnungen über Jahre prüfungssicher bereitstellen."
+    },
+    {
+      "id": "rto",
+      "name": "RTO",
+      "description": "Maximal tolerierbare Wiederanlaufzeit bis Service wieder verfügbar ist.",
+      "example": "ERP muss spätestens 4 Stunden nach Ausfall wieder laufen."
+    },
+    {
+      "id": "rpo",
+      "name": "RPO",
+      "description": "Maximal tolerierbarer Datenverlust gemessen in Zeit.",
+      "example": "Es dürfen höchstens 15 Minuten Transaktionen verloren gehen."
+    },
+    {
+      "id": "worm",
+      "name": "WORM",
+      "description": "Write Once Read Many: Daten nach Ablage nicht mehr überschreibbar.",
+      "example": "Revisionsbelege werden nach Speicherung schreibgesperrt."
+    },
+    {
+      "id": "retention_policy",
+      "name": "Retention Policy",
+      "description": "Regelwerk für Aufbewahrungsdauer und Sperrfristen pro Dokumentklasse.",
+      "example": "Verträge 10 Jahre, interne Memos 2 Jahre aufbewahren."
+    },
+    {
+      "id": "legal_hold",
+      "name": "Legal Hold",
+      "description": "Temporäre Löschsperre wegen laufender Prüfung oder Rechtsstreit.",
+      "example": "Löschung pausieren, da Dokumente als Beweismittel benötigt werden."
+    },
+    {
+      "id": "metadaten",
+      "name": "Metadaten",
+      "description": "Strukturierte Zusatzinformationen zur Klassifikation und Suche.",
+      "example": "Dokumenttyp, Kunde, Datum, Fristende als Indexfelder."
+    },
+    {
+      "id": "volltextindex",
+      "name": "Volltextindex",
+      "description": "Suchtechnische Aufbereitung von Inhalten für schnelle Trefferlisten.",
+      "example": "Beleg anhand beliebiger Textpassage in Sekunden finden."
+    },
+    {
+      "id": "audit_trail",
+      "name": "Audit Trail",
+      "description": "Nachvollziehbares Protokoll, wer wann welche Aktion ausgeführt hat.",
+      "example": "Abruf, Export und Zugriffsversuch werden revisionsfest protokolliert."
+    },
+    {
+      "id": "immutability",
+      "name": "Unveränderbarkeit",
+      "description": "Archivobjekte dürfen nach Abschluss nur kontrolliert bzw. gar nicht verändert werden.",
+      "example": "Kein stilles Editieren einer archivierten Rechnung möglich."
+    },
+    {
+      "id": "integritaet",
+      "name": "Datenintegrität",
+      "description": "Sichert Korrektheit und Unversehrtheit gegen Manipulation/Verlust.",
+      "example": "Hash-Prüfung erkennt veränderte Archivdatei."
+    },
+    {
+      "id": "verschluesselung",
+      "name": "Verschlüsselung",
+      "description": "Schützt Daten vertraulich bei Speicherung und Übertragung.",
+      "example": "Archivdaten werden serverseitig mit Schlüsselmanagement verschlüsselt."
+    },
+    {
+      "id": "zugriffskontrolle",
+      "name": "Zugriffskontrolle",
+      "description": "Beschränkt Lese-/Schreibrechte auf berechtigte Rollen.",
+      "example": "Nur Revision darf auf bestimmte Belegklassen zugreifen."
+    },
+    {
+      "id": "klassifikation",
+      "name": "Dokumentklassifikation",
+      "description": "Ordnet Inhalte Kategorien und Regeln zu (z. B. steuerlich, technisch).",
+      "example": "Eingehende PDF als 'Rechnung' erkennen und korrekt fristen."
+    },
+    {
+      "id": "ilm",
+      "name": "Information Lifecycle Management",
+      "description": "Steuert Informationen von Entstehung über Aufbewahrung bis Löschung.",
+      "example": "Automatischer Übergang von aktiv zu archiviert nach Prozessabschluss."
+    },
+    {
+      "id": "restore_test",
+      "name": "Restore-Test",
+      "description": "Praktische Übung zur Überprüfung realer Wiederherstellbarkeit.",
+      "example": "Quartalsweise Wiederanlauf aus Backup in Testumgebung prüfen."
+    },
+    {
+      "id": "disaster_recovery",
+      "name": "Disaster Recovery",
+      "description": "Technische und organisatorische Wiederanlaufplanung nach schweren Ausfällen.",
+      "example": "Ausfall primäres Rechenzentrum, Umschaltung auf Notfallstandort."
+    },
+    {
+      "id": "versionierung",
+      "name": "Versionierung",
+      "description": "Hält mehrere Stände eines Datensatzes für Wiederherstellung vor.",
+      "example": "Datei auf Stand vor fehlerhafter Massenbearbeitung zurücksetzen."
+    },
+    {
+      "id": "snapshot",
+      "name": "Snapshot",
+      "description": "Punkt-in-Zeit-Abbild eines Speichersystems für schnellen Rücksprung.",
+      "example": "Vor Update einen Snapshot der VM-Datenbank erstellen."
+    },
+    {
+      "id": "inkrementell",
+      "name": "Inkrementelles Backup",
+      "description": "Sichert nur Änderungen seit der letzten Sicherung und spart Volumen.",
+      "example": "Nächtlich nur neue/geänderte Dateien ergänzen."
+    },
+    {
+      "id": "full_backup",
+      "name": "Vollsicherung",
+      "description": "Sichert den gesamten Datenbestand als vollständigen Wiederherstellungsstand.",
+      "example": "Wöchentlich vollständiges Abbild aller Serverdaten."
+    },
+    {
+      "id": "dedup",
+      "name": "Deduplizierung",
+      "description": "Entfernt redundante Datenblöcke zur Platz- und Kostenreduktion.",
+      "example": "100 identische Anhänge werden nur einmal physisch gespeichert."
+    },
+    {
+      "id": "rechtskonforme_loeschung",
+      "name": "Rechtskonforme Löschung",
+      "description": "Entfernt Daten nach Fristende dokumentiert und regelbasiert.",
+      "example": "Dokumentklasse wird nach Ablauf freigegeben und protokolliert gelöscht."
+    },
+    {
+      "id": "aufbewahrungsfrist",
+      "name": "Aufbewahrungsfrist",
+      "description": "Vorgegebener Zeitraum, in dem Daten unverändert aufbewahrt werden müssen.",
+      "example": "Steuerdokumente müssen über den gesetzlichen Mindestzeitraum verfügbar sein."
+    },
+    {
+      "id": "search_retrieval",
+      "name": "Retrieval-Fähigkeit",
+      "description": "Gewährleistet, dass relevante Archivinhalte schnell und korrekt auffindbar sind.",
+      "example": "Prüfer fordert Belegnummer, Treffer in unter 30 Sekunden."
+    },
+    {
+      "id": "beweiswert",
+      "name": "Beweiswert",
+      "description": "Archivierte Information muss nachvollziehbar und vertrauenswürdig vorlegbar sein.",
+      "example": "Dokumenthistorie plus Prüfsumme stützt gerichtliche Nachweisbarkeit."
+    },
+    {
+      "id": "hybrid_konzept",
+      "name": "Hybridkonzept Backup+Archiv",
+      "description": "Kombiniert Wiederherstellungsstrategie mit Compliance-gerechter Langzeitablage.",
+      "example": "Operative Daten via Backup schützen, Belege parallel revisionssicher archivieren."
+    }
+  ]
+}
