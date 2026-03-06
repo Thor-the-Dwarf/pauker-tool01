@@ -1,0 +1,203 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Virtualisierung & Container (AP1) Level 2",
+  "topic": "VM- vs Container-Architektur • Orchestrierung • Persistenz • Security-Boundaries • Betriebsprozesse",
+  "estimated_minutes": 55,
+  "sections": [
+    {
+      "id": "architektur-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Welche Architekturfrage ist betroffen?",
+      "subtitle": "Ordne die Befunde der primären Ursacheklasse zu.",
+      "hintDefault": "Nicht nur VM oder Container wählen, sondern Betriebsziel, Isolation, Datenhaltung und Delivery betrachten.",
+      "sortColumns": [
+        { "zone": "isolation", "label": "Isolation/Sicherheitsgrenze", "hint": "Kernel-Sharing, Mandantentrennung, Risiko" },
+        { "zone": "betrieb", "label": "Betrieb/Orchestrierung", "hint": "Skalierung, Rolling Update, Self-Healing" },
+        { "zone": "daten", "label": "Persistenz/State", "hint": "Volumes, Storage, Backup, Recovery" },
+        { "zone": "ressourcen", "label": "Ressourcen/Performance", "hint": "Overhead, Dichte, Scheduling" }
+      ],
+      "sortCards": [
+        { "id": "c1", "text": "Mehrmandantenbetrieb fordert harte Trennung zwischen Workloads.", "correctZone": "isolation" },
+        { "id": "c2", "text": "Service soll ohne Downtime per Rolling Update aktualisiert werden.", "correctZone": "betrieb" },
+        { "id": "c3", "text": "Datenbankcontainer verliert Daten nach Neustart ohne korrektes Volume.", "correctZone": "daten" },
+        { "id": "c4", "text": "Host ist überbucht, Workloads konkurrieren um CPU/RAM und latenzkritische Services leiden.", "correctZone": "ressourcen" },
+        { "id": "c5", "text": "Container-Image ist stateless gedacht, aber Anwendung schreibt unerwartet lokal in den Container-Layer.", "correctZone": "daten" },
+        { "id": "c6", "text": "Eine kompromittierte Komponente darf nicht auf Kernel-nahe Ressourcen anderer Mandanten zugreifen.", "correctZone": "isolation" },
+        { "id": "c7", "text": "Automatisches Neustarten fehlgeschlagener Instanzen ist gefordert.", "correctZone": "betrieb" },
+        { "id": "c8", "text": "Viele kleine Services sollen mit minimalem Overhead auf wenigen Hosts betrieben werden.", "correctZone": "ressourcen" }
+      ]
+    },
+    {
+      "id": "entscheidungs-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: AP1-Entscheidungsfragen",
+      "subtitle": "Wähle die fachlich sauberste Aussage.",
+      "hintDefault": "Jede Architekturentscheidung ist ein Trade-off zwischen Isolation, Geschwindigkeit und Betriebsaufwand.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Wann ist VM-Einsatz typischerweise besser begründbar als Container-only?",
+          "options": [
+            { "value": "a", "text": "Wenn starke Trennung oder andere Gastbetriebssysteme pro Workload notwendig sind." },
+            { "value": "b", "text": "Wenn man grundsätzlich keine Updates durchführen möchte." },
+            { "value": "c", "text": "Wenn jeder Service zwingend in Millisekunden starten muss." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welche Aussage zu Containern ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Container bringen immer ein vollständiges eigenes Kernel-OS mit." },
+            { "value": "b", "text": "Container teilen den Host-Kernel und sind deshalb meist ressourceneffizienter." },
+            { "value": "c", "text": "Container sind nur für Test, nie für Produktion geeignet." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Welche Aussage zu Stateful Workloads in Containerumgebungen ist AP1-sauber?",
+          "options": [
+            { "value": "a", "text": "Persistenz entsteht automatisch im Container-Image, Volumes sind optional." },
+            { "value": "b", "text": "Stateful Dienste benötigen explizites Storage-/Backup-Konzept außerhalb des flüchtigen Container-Layers." },
+            { "value": "c", "text": "Datenhaltung spielt bei Datenbanken in Containern keine Rolle." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q4",
+          "text": "4. Was beschreibt Orchestrierung am besten?",
+          "options": [
+            { "value": "a", "text": "Nur das einmalige Starten eines einzelnen Containers." },
+            { "value": "b", "text": "Automatisierte Planung, Skalierung, Wiederanlauf und Rollout-Steuerung vieler Workloads." },
+            { "value": "c", "text": "Ausschließlich Dateikompression für Images." }
+          ],
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "id": "migration-order-l2",
+      "type": "capital",
+      "title": "Rätsel 3: Migrationsreihenfolge in die Containerplattform",
+      "subtitle": "Setze das Vorgehen in die richtige Reihenfolge.",
+      "hintDefault": "Erst Analyse, dann Architektur, dann Security/Storage, dann Rollout mit Messung.",
+      "rows": [
+        {
+          "key": "analyse",
+          "label": "Workloads klassifizieren (stateless/stateful, Latenz, Kritikalität, Compliance)",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "design",
+          "label": "Zielarchitektur festlegen (VM, Container oder Hybrid) inkl. Isolationsebenen",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "foundation",
+          "label": "Plattform aufbauen (Registry, Orchestrierung, Netzwerk-, Secrets- und Policy-Konzept)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "state",
+          "label": "Persistenz-/Backup-/Recovery-Pfade für stateful Dienste verifizieren",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilotmigration mit Last-/Fehlertests und SLO-Messung durchführen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        },
+        {
+          "key": "rollout",
+          "label": "Gestaffelten Rollout mit Observability und Rollback-Strategie abschließen",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 4: Security- und Betriebsfallen",
+      "subtitle": "Erkenne die riskante Aussage.",
+      "hintDefault": "Produktionsreife Containerplattformen brauchen Policies, Image-Hygiene und klare Grenzen.",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "1. Welche Aussage ist falsch?",
+          "options": [
+            { "value": "a", "text": "Container-Images sollten versioniert, gescannt und minimal gehalten werden." },
+            { "value": "b", "text": "Root-Container mit weit offenen Privilegien sind Best Practice in Produktion." },
+            { "value": "c", "text": "Netzwerk- und Zugriffspolicies sind zentrale Sicherheitsbausteine im Orchestrierungsbetrieb." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "s2",
+          "text": "2. Welche Aussage trifft am ehesten zu?",
+          "options": [
+            { "value": "a", "text": "Stateful und stateless Workloads können identisch ohne Storage-Design behandelt werden." },
+            { "value": "b", "text": "Für stateful Workloads sind Persistenzpfade, Backup und Recovery-Tests zwingend." },
+            { "value": "c", "text": "Observability ist nur in Development relevant, nicht im Betrieb." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

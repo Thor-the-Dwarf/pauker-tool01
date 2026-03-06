@@ -1,0 +1,294 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Virtualisierung & Container (AP1) Level 2",
+  "description": "Schritt 1: passende Architekturentscheidung treffen (What) · Schritt 2: fachlich sauber begründen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Ein Unternehmen muss zwei Mandanten mit hohem Trennungsbedarf betreiben. Kernel-Sharing gilt als zu riskant für den Primärpfad.",
+      "tags": ["Isolation", "Mandanten", "VM"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "VM-basierte Trennung als Primärstrategie wählen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Eigene Gast-OS schaffen stärkere Isolationsebenen als reines Kernel-Sharing.", "correct": true },
+            { "id": "w2", "text": "Regulatorische Trennvorgaben können harte Grenzen erforderlich machen.", "correct": true },
+            { "id": "w3", "text": "Container bieten immer identische Isolation wie VMs in jedem Kontext.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet die Begründung über Risiko und Anforderung, nicht nur Trendtechnologie.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur einen Container-Host ohne weitere Grenzen einsetzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne zusätzliche Isolationsmaßnahmen kann das Trennungsziel verfehlt werden.", "correct": true },
+            { "id": "w2", "text": "Mandantenanforderungen müssen technisch und organisatorisch abgebildet sein.", "correct": true },
+            { "id": "w3", "text": "Trennungsanforderungen spielen bei Mehrmandantenbetrieb keine Rolle.", "correct": false },
+            { "id": "w4", "text": "Die Lösung ist zu pauschal für das geforderte Schutzniveau.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Office-Lizenzen erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Lizenzzahl adressiert keine technische Isolationsarchitektur.", "correct": true },
+            { "id": "w2", "text": "Das Problemfeld liegt auf Infrastruktur- und Sicherheitsgrenzenebene.", "correct": true },
+            { "id": "w3", "text": "Mehr Office-Lizenzen schaffen automatisch VM-Isolation.", "correct": false },
+            { "id": "w4", "text": "Maßnahme ist fachlich nicht ursachenbezogen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Bei hohem Trennungsbedarf ist VM-basierte Isolation häufig die fachlich robustere Primärentscheidung."
+    },
+    {
+      "id": "v02",
+      "profile": "Ein Webservice soll täglich mehrfach ohne Downtime ausgerollt werden. Bisher führt jedes Update zu kurzen Unterbrechungen.",
+      "tags": ["Rollout", "Verfügbarkeit", "Orchestrierung"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Rolling Update mit Health-Checks und Rollback-Trigger umsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Schrittweiser Austausch reduziert gleichzeitige Ausfallwahrscheinlichkeit.", "correct": true },
+            { "id": "w2", "text": "Health-Signale verhindern, dass fehlerhafte Versionen flächig live gehen.", "correct": true },
+            { "id": "w3", "text": "Big-Bang-Deployment ist bei häufiger Änderung immer stabiler.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die Verknüpfung von Rollout und Rückfallpfad.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Versionsnummer im UI anpassen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "UI-Metadaten lösen keine Betriebsunterbrechungen beim Deployment.", "correct": true },
+            { "id": "w2", "text": "Das Problem liegt im Updateverfahren der Laufzeitinstanzen.", "correct": true },
+            { "id": "w3", "text": "Eine neue Versionsanzeige erzeugt automatisch Zero-Downtime-Rollouts.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme adressiert nicht den technischen Kern.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Datenbank-Backup verkürzen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup ist wichtig, aber nicht primäre Ursache für Downtime im App-Rollout.", "correct": true },
+            { "id": "w2", "text": "Rolloutmechanik und Orchestrierung bestimmen die Unterbrechung direkt.", "correct": true },
+            { "id": "w3", "text": "Backupintervalle steuern automatisch Pod-Austausch ohne Downtime.", "correct": false },
+            { "id": "w4", "text": "Fehlersymptom und Maßnahme passen nicht zusammen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Zero-Downtime-Updates erfordern Rolling-Strategie mit Health-Prüfung und automatischem Rollback."
+    },
+    {
+      "id": "v03",
+      "profile": "Eine containerisierte Datenbank verliert nach Neustart Daten, obwohl das Deployment erfolgreich durchläuft.",
+      "tags": ["Stateful", "Persistenz", "Storage"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Persistenzpfad über Volumes plus Backup/Restore-Konzept etablieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Der beschreibbare Container-Layer ist nicht als dauerhafter Datenablagepfad gedacht.", "correct": true },
+            { "id": "w2", "text": "Stateful Workloads benötigen Storage-Lifecycle außerhalb der Instanzlebensdauer.", "correct": true },
+            { "id": "w3", "text": "Bei Datenbanken sind Volumes optional, wenn das Image aktuell ist.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die Kombination aus Persistenz und Wiederherstellungsstrategie.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur mehr CPU zuweisen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Mehr CPU löst keine fehlende Datenpersistenz über Neustarts hinweg.", "correct": true },
+            { "id": "w2", "text": "Das Problem betrifft Speicherdauer, nicht primär Rechenleistung.", "correct": true },
+            { "id": "w3", "text": "CPU-Erhöhung macht Daten im flüchtigen Layer dauerhaft.", "correct": false },
+            { "id": "w4", "text": "Maßnahme verfehlt die eigentliche Ursacheklasse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur neue Icons deployen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "UI-Anpassungen beeinflussen keine Persistenzpfade der Datenbank.", "correct": true },
+            { "id": "w2", "text": "Datenverlust ist ein Storage-/Architekturthema.", "correct": true },
+            { "id": "w3", "text": "Designänderungen verhindern Datenverlust bei Container-Neustart.", "correct": false },
+            { "id": "w4", "text": "Keine technisch belastbare Verbindung zur Störung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Stateful Container benötigen explizite Persistenz- und Recovery-Architektur außerhalb des flüchtigen Instanzlayers."
+    },
+    {
+      "id": "v04",
+      "profile": "Ein Service wird bei Lastspitzen langsam, während andere denselben Node verdrängen. Requests steigen, Instanzen skalieren aber unkontrolliert.",
+      "tags": ["Ressourcen", "Autoscaling", "Limits"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Requests/Limits sauber setzen und Autoscaling auf belastbare Metriken ausrichten",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Fehlende Ressourcenrahmen führen zu Verdrängung und unvorhersehbarer Node-Auslastung.", "correct": true },
+            { "id": "w2", "text": "Autoscaling braucht passende Trigger und Kapazitätsgrenzen.", "correct": true },
+            { "id": "w3", "text": "Ohne Limits bleibt Planung stabiler, weil Scheduler frei entscheiden kann.", "correct": false },
+            { "id": "w4", "text": "AP1 erwartet Messwertbezug statt Pauschalskalierung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Hostname ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Namensänderungen lösen weder Scheduling- noch Ressourcenkonflikte.", "correct": true },
+            { "id": "w2", "text": "Das Symptom liegt in Last-/Ressourcensteuerung.", "correct": true },
+            { "id": "w3", "text": "Ein neuer Hostname erhöht automatisch verfügbaren RAM.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme ist technisch nicht zielführend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Passwortlänge erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Security-Hygiene ist wichtig, behebt aber keine Ressourcenkonflikte.", "correct": true },
+            { "id": "w2", "text": "Das Problem bleibt Lastverteilung und Skalierungssteuerung.", "correct": true },
+            { "id": "w3", "text": "Passwortregeln steuern Pod-Scheduling direkt.", "correct": false },
+            { "id": "w4", "text": "Maßnahme gehört in eine andere Problemklasse.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Stabile Lastverarbeitung braucht definierte Ressourcenrahmen plus metrisch gesteuertes Autoscaling."
+    },
+    {
+      "id": "v05",
+      "profile": "Eine Pipeline liefert regelmäßig Images mit kritischen CVEs. Deployments erfolgen trotzdem direkt in Produktion.",
+      "tags": ["Security", "Image-Hardening", "Governance"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Image-Scan-Gates, minimale Base-Images und Freigabepolicy einführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Ungeprüfte Images erhöhen Angriffsfläche und Compliance-Risiko.", "correct": true },
+            { "id": "w2", "text": "Gating verhindert die Freigabe kritischer Schwachstellen in Produktion.", "correct": true },
+            { "id": "w3", "text": "Sicherheitslücken sind unproblematisch, wenn Deployment schnell genug ist.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die Verbindung von Technikprozess und Risikosteuerung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur mehr Logs erzeugen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Logs helfen bei Analyse, verhindern aber keine fehlerhafte Freigabe.", "correct": true },
+            { "id": "w2", "text": "Die Kernlücke liegt im fehlenden Freigabegate.", "correct": true },
+            { "id": "w3", "text": "Mehr Logs patchen automatisch bekannte CVEs.", "correct": false },
+            { "id": "w4", "text": "Es fehlt ein präventiver Kontrollmechanismus.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Dashboard-Farben ändern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Visualisierung ändert keine technische Sicherheitsqualität der Images.", "correct": true },
+            { "id": "w2", "text": "CVE-Risiko bleibt unverändert bestehen.", "correct": true },
+            { "id": "w3", "text": "Farbänderungen reduzieren Schwachstellen in Base-Images.", "correct": false },
+            { "id": "w4", "text": "Maßnahme ist nicht ursachenwirksam.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Produktionsreife erfordert Security-Gates im Build-/Release-Prozess, nicht nur nachgelagerte Beobachtung."
+    },
+    {
+      "id": "v06",
+      "profile": "Nach Node-Ausfällen ist unklar, ob die Plattform Recovery-Ziele tatsächlich einhält. Es fehlen belastbare Notfalltests.",
+      "tags": ["Resilienz", "Chaos", "SLO"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Regelmäßige Resilienz-/Chaos-Tests mit SLO-Messung durchführen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Nur getestete Recovery-Pfade liefern belastbare Aussagen zur Fehlertoleranz.", "correct": true },
+            { "id": "w2", "text": "SLO-Bezug macht Wirkung von Störungen messbar und steuerbar.", "correct": true },
+            { "id": "w3", "text": "Theoretische Annahmen reichen aus, um Produktionsresilienz sicher zu bestätigen.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet überprüfbare Betriebssicherheit statt bloßer Vermutungen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur Abteilungsnamen umbenennen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Organisationsbezeichnungen ändern keine technische Recovery-Fähigkeit.", "correct": true },
+            { "id": "w2", "text": "Das Risiko liegt in ungetesteten Failover-Pfaden.", "correct": true },
+            { "id": "w3", "text": "Namenskonventionen ersetzen Resilienztests vollständig.", "correct": false },
+            { "id": "w4", "text": "Keine technische Wirksamkeit zur Problemstellung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Bildschirmhelligkeit senken",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Anzeigeeinstellungen haben keinen Einfluss auf Cluster-Recovery.", "correct": true },
+            { "id": "w2", "text": "Node-Ausfallverhalten bleibt unverändert.", "correct": true },
+            { "id": "w3", "text": "Geringere Helligkeit verbessert automatisch Self-Healing.", "correct": false },
+            { "id": "w4", "text": "Maßnahme verfehlt den Betriebskern.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Resilienz ist nur belastbar, wenn Recovery-Pfade regelmäßig unter realistischen Störungsszenarien getestet werden."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Unternehmen betreibt Legacy-Stateful-Systeme und neue Microservices. Eine einzige Plattformstrategie erzeugt wiederholt Zielkonflikte.",
+      "tags": ["Hybrid", "Workload-Fit", "Strategie"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Hybridmuster einsetzen und Workloads nach Anforderung auf VM/Container verteilen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Unterschiedliche Workloads verlangen oft unterschiedliche Isolation-, Persistenz- und Betriebsmodelle.", "correct": true },
+            { "id": "w2", "text": "Hybridstrategien reduzieren Zwangskompatibilität und technische Kompromisse.", "correct": true },
+            { "id": "w3", "text": "Eine Einheitsplattform ist immer optimal, unabhängig vom Workloadprofil.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die anforderungsbasierte Architekturentscheidung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Alles zwangsweise nur containerisieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Legacy-/Compliance-Anforderungen können reine Containerstrategie unpassend machen.", "correct": true },
+            { "id": "w2", "text": "Einheitlichkeit ohne Eignungsprüfung erhöht Migrationsrisiken.", "correct": true },
+            { "id": "w3", "text": "Container erfüllen automatisch jede Legacy-Anforderung ohne Anpassung.", "correct": false },
+            { "id": "w4", "text": "Workload-Fit bleibt entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Alles zwangsweise nur virtualisieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Microservices profitieren oft von containernativen Betriebsmodellen.", "correct": true },
+            { "id": "w2", "text": "Pauschal-VM-Ansatz kann Effizienz- und Delivery-Vorteile verschenken.", "correct": true },
+            { "id": "w3", "text": "VM-only ist immer ressourceneffizienter als jeder Containeransatz.", "correct": false },
+            { "id": "w4", "text": "Die Entscheidung muss workloadbezogen erfolgen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Eine hybride Zielarchitektur ist oft fachlich richtig, wenn Workloads unterschiedliche technische Anforderungen haben."
+    }
+  ]
+}

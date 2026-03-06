@@ -1,0 +1,162 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Virtualisierung & Container (AP1) Level 2 – Architektur, Betrieb, Sicherheit",
+  "schema_version": "1.0",
+  "subtitle": "Ordne fortgeschrittene Begriffe, präzise Einordnung und praxisnahe AP1-Entscheidungsszenarien zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Präzise Einordnung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den passenden Virtualisierungs-/Containerbegriff.",
+    "column2": "Achte auf klare Trennung von Isolation, Betrieb und Datenhaltung.",
+    "column3": "Ordne den realistischen Incident- oder Architekturfall zu."
+  },
+  "sets": [
+    {
+      "id": "type1_hypervisor",
+      "name": "Hypervisor Typ 1 (Bare Metal)",
+      "description": "Läuft direkt auf Hardware und hostet VMs ohne allgemeines Host-OS als Zwischenschicht.",
+      "example": "Konsolidierungscluster für mehrere Server-VMs mit zentralem Ressourcenmanagement."
+    },
+    {
+      "id": "type2_hypervisor",
+      "name": "Hypervisor Typ 2 (Hosted)",
+      "description": "Läuft als Anwendung auf einem Host-OS und eignet sich oft für Lab/Entwicklung.",
+      "example": "Entwickler startet Test-VM lokal auf dem Arbeitsplatzrechner."
+    },
+    {
+      "id": "vm_strong_boundary",
+      "name": "VM-Isolationsgrenze",
+      "description": "Starke Trennung durch eigenes Gast-OS und virtualisierte Hardwareebene.",
+      "example": "Legacy-Anwendung mit besonderem Sicherheitsbedarf wird in eigener VM gekapselt."
+    },
+    {
+      "id": "container_kernel_sharing",
+      "name": "Container-Kernel-Sharing",
+      "description": "Container teilen den Host-Kernel und unterscheiden sich dadurch grundlegend von VMs.",
+      "example": "Hunderte kurzlebige Services laufen effizient auf wenigen Hosts."
+    },
+    {
+      "id": "container_runtime",
+      "name": "Container-Runtime",
+      "description": "Verantwortlich für Start, Isolation und Lebenszyklus einzelner Containerinstanzen.",
+      "example": "Ein fehlerhaftes Runtime-Update verhindert den Start neuer Pods/Container."
+    },
+    {
+      "id": "orchestrator_control_plane",
+      "name": "Orchestrierungs-Control-Plane",
+      "description": "Steuert Scheduling, Desired State, Skalierung und Rolloutlogik.",
+      "example": "Nach Node-Ausfall werden Instanzen automatisch auf andere Nodes neu geplant."
+    },
+    {
+      "id": "rolling_update",
+      "name": "Rolling Update",
+      "description": "Versionstausch in kleinen Schritten zur Reduktion von Downtime-Risiken.",
+      "example": "Webservice wird auf neue Version angehoben, ohne alle Instanzen gleichzeitig zu stoppen."
+    },
+    {
+      "id": "rollback",
+      "name": "Rollback-Strategie",
+      "description": "Definierter Rückfallpfad auf letzte stabile Version bei Fehlern.",
+      "example": "Nach Fehlverhalten im Rollout wird automatisiert auf Vorversion zurückgestellt."
+    },
+    {
+      "id": "autoscaling",
+      "name": "Autoscaling",
+      "description": "Dynamische Anpassung der Instanzanzahl anhand Last-/Metriksignalen.",
+      "example": "Bei Lastspitze verdoppelt sich die Anzahl API-Instanzen automatisch."
+    },
+    {
+      "id": "resource_limits",
+      "name": "Resource Requests/Limits",
+      "description": "Definiert CPU-/RAM-Bedarfe zur fairen Planung und zur Vermeidung von Überbuchungschaos.",
+      "example": "Ohne Limits verdrängt ein fehlerhafter Service andere Workloads vom Node."
+    },
+    {
+      "id": "stateful_workload",
+      "name": "Stateful Workload",
+      "description": "Anwendung mit dauerhaftem Datenzustand und speziellen Persistenzanforderungen.",
+      "example": "Datenbank benötigt stabile Volumes, geordnete Failover- und Restore-Prozesse."
+    },
+    {
+      "id": "stateless_workload",
+      "name": "Stateless Workload",
+      "description": "Zustandsarme Dienste, die horizontal skaliert und leicht ersetzt werden können.",
+      "example": "API-Frontend wird bei Fehler einfach neu ausgerollt, ohne Datenverlustrisiko."
+    },
+    {
+      "id": "persistent_volume",
+      "name": "Persistentes Volume",
+      "description": "Externer Storagepfad, der Daten unabhängig vom Container-Lebenszyklus hält.",
+      "example": "Nach Container-Neustart sind Anwendungsdaten weiterhin vorhanden."
+    },
+    {
+      "id": "snapshot_backup",
+      "name": "Snapshot/Backup-Konzept",
+      "description": "Sichert Wiederherstellungspunkte für Daten und Systemzustände mit definierter RPO/RTO-Logik.",
+      "example": "Vor Release wird Snapshot erstellt, um im Fehlerfall schnell wiederherzustellen."
+    },
+    {
+      "id": "network_policy",
+      "name": "Netzwerk-Policy",
+      "description": "Begrenzt Kommunikationspfade zwischen Workloads nach Zero-Trust-Prinzip.",
+      "example": "Nur Frontend darf auf API, API darf auf Datenbank – alle anderen Pfade blockiert."
+    },
+    {
+      "id": "secret_management",
+      "name": "Secret-Management",
+      "description": "Verwaltet Zugangsdaten zentral statt hartkodiert in Images oder Configs.",
+      "example": "DB-Passwort wird rotierend aus Secret-Store bereitgestellt."
+    },
+    {
+      "id": "image_hardening",
+      "name": "Image-Hardening",
+      "description": "Reduziert Angriffsfläche durch minimale Base-Images, Patchstand und Scanner-Gates.",
+      "example": "Build-Pipeline blockiert Deployment bei kritischen CVEs im Basisimage."
+    },
+    {
+      "id": "observability_stack",
+      "name": "Observability-Stack",
+      "description": "Kombiniert Logs, Metriken und Traces für End-to-End-Analyse verteilter Systeme.",
+      "example": "Latenzanstieg wird vom Ingress bis zur Datenbanktransaktion nachvollzogen."
+    },
+    {
+      "id": "service_mesh",
+      "name": "Service Mesh",
+      "description": "Steuert Verkehrsrichtlinien, mTLS und Telemetrie zwischen Services granular.",
+      "example": "Canary-Traffic wird prozentual auf neue Version gelenkt und beobachtet."
+    },
+    {
+      "id": "hybrid_pattern",
+      "name": "Hybridmuster (VM + Container)",
+      "description": "Kombiniert Vorteile beider Welten je nach Workload-Anforderung.",
+      "example": "Stateful Legacy-System bleibt in VM, neue Microservices laufen containerisiert."
+    },
+    {
+      "id": "capacity_planning",
+      "name": "Kapazitätsplanung",
+      "description": "Bewertet Ressourcenbedarf, Wachstum und SLOs für stabile Cluster-/Host-Auslegung.",
+      "example": "Vor Kampagnenzeit werden Node-Ressourcen erweitert, um Skalierung sicher abzufangen."
+    },
+    {
+      "id": "compliance_boundary",
+      "name": "Compliance-/Mandantengrenze",
+      "description": "Architekturentscheidung basierend auf regulatorischen Trennungsanforderungen.",
+      "example": "Besonders sensible Mandantendaten laufen bewusst in separaten VM-Zonen."
+    },
+    {
+      "id": "chaos_testing",
+      "name": "Resilienztest/Chaos-Übung",
+      "description": "Gezielte Störungstests zur Überprüfung von Self-Healing und Fehlertoleranz.",
+      "example": "Gezielter Node-Ausfall zeigt, ob Recovery-Ziele im Cluster eingehalten werden."
+    },
+    {
+      "id": "runbook_ops",
+      "name": "Betriebs-Runbook",
+      "description": "Dokumentierter Ablauf für Incident-Reaktion, Rollback und Wiederanlauf.",
+      "example": "Bei fehlerhaftem Deployment folgt das Team einem standardisierten Rollback-Playbook."
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Virtualisierung & Container (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "vm_architecture",
+      "name": "VM-Architektur",
+      "attributes": {
+        "is_vm_based": true,
+        "is_container_based": false,
+        "has_own_guest_os": true,
+        "shares_host_kernel": false,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": false,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": true,
+        "supports_hybrid_decision": true,
+        "requires_strong_isolation": true,
+        "depends_on_orchestrator_control": false
+      }
+    },
+    {
+      "id": "container_architecture",
+      "name": "Container-Architektur",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": false,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": true,
+        "supports_hybrid_decision": true,
+        "requires_strong_isolation": false,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "orchestrator_delivery",
+      "name": "Orchestrierung & Delivery",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": true,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": false,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": false,
+        "supports_hybrid_decision": false,
+        "requires_strong_isolation": false,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "stateful_storage_pattern",
+      "name": "Stateful-Storage-Muster",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": true,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": false,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": true,
+        "supports_hybrid_decision": false,
+        "requires_strong_isolation": false,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "security_policy_layer",
+      "name": "Security-Policy-Layer",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": true,
+        "focuses_secret_handling": true,
+        "focuses_observability": false,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": false,
+        "supports_hybrid_decision": false,
+        "requires_strong_isolation": true,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "observability_resilience",
+      "name": "Observability & Resilienz",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": true,
+        "focuses_resilience_testing": true,
+        "focuses_capacity_planning": false,
+        "supports_hybrid_decision": false,
+        "requires_strong_isolation": false,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "hybrid_strategy",
+      "name": "Hybridstrategie (VM + Container)",
+      "attributes": {
+        "is_vm_based": true,
+        "is_container_based": true,
+        "has_own_guest_os": true,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": false,
+        "focuses_state_persistence": true,
+        "focuses_network_segmentation": true,
+        "focuses_secret_handling": true,
+        "focuses_observability": true,
+        "focuses_resilience_testing": true,
+        "focuses_capacity_planning": true,
+        "supports_hybrid_decision": true,
+        "requires_strong_isolation": true,
+        "depends_on_orchestrator_control": true
+      }
+    },
+    {
+      "id": "rollback_delivery_pattern",
+      "name": "Rollback-/Release-Muster",
+      "attributes": {
+        "is_vm_based": false,
+        "is_container_based": true,
+        "has_own_guest_os": false,
+        "shares_host_kernel": true,
+        "focuses_rollout_automation": true,
+        "focuses_state_persistence": false,
+        "focuses_network_segmentation": false,
+        "focuses_secret_handling": false,
+        "focuses_observability": true,
+        "focuses_resilience_testing": false,
+        "focuses_capacity_planning": false,
+        "supports_hybrid_decision": false,
+        "requires_strong_isolation": false,
+        "depends_on_orchestrator_control": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Basiert die gesuchte Antwort primär auf VM-Technik?",
+      "attributeKey": "is_vm_based"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Basiert die gesuchte Antwort primär auf Containerbetrieb?",
+      "attributeKey": "is_container_based"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Gehört ein eigenes Gastbetriebssystem zum Kernmerkmal?",
+      "attributeKey": "has_own_guest_os"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Teilt sich das Modell den Host-Kernel?",
+      "attributeKey": "shares_host_kernel"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Stehen automatisierte Rollouts/Updates im Mittelpunkt?",
+      "attributeKey": "focuses_rollout_automation"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist Persistenz/State-Handling die zentrale Fragestellung?",
+      "attributeKey": "focuses_state_persistence"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Sind Netzwerksegmentierung und Kommunikationsgrenzen Kernbestandteil?",
+      "attributeKey": "focuses_network_segmentation"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es primär um sichere Verwaltung von Zugangsdaten/Secrets?",
+      "attributeKey": "focuses_secret_handling"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Stehen Logs, Metriken und Traces als Diagnosegrundlage im Fokus?",
+      "attributeKey": "focuses_observability"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Werden gezielte Ausfall-/Chaos-Tests als Qualitätssicherung benötigt?",
+      "attributeKey": "focuses_resilience_testing"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist Kapazitäts- und Reservenplanung zentral für die Lösung?",
+      "attributeKey": "focuses_capacity_planning"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Unterstützt die Antwort explizit eine hybride Zielarchitektur?",
+      "attributeKey": "supports_hybrid_decision"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Wird besonders starke Isolation als Kernanforderung adressiert?",
+      "attributeKey": "requires_strong_isolation"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist die Lösung maßgeblich von Orchestrierungssteuerung abhängig?",
+      "attributeKey": "depends_on_orchestrator_control"
+    }
+  ]
+}
