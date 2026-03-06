@@ -1,0 +1,246 @@
+{
+  "game_type": "escape_game",
+  "schema_version": "1.0",
+  "title": "Mini-Escape-Room – Software-Arten & Lizenzlogik (AP1) Level 2",
+  "topic": "Systemnaher Stack • Betriebs-Tooling • Fachanwendungen • Lizenzmetriken • Compliance-Risiken",
+  "estimated_minutes": 50,
+  "sections": [
+    {
+      "id": "software-layer-sort-l2",
+      "type": "sort",
+      "title": "Rätsel 1: Wo gehört es im Software-Stack hin?",
+      "subtitle": "Ordne jede Komponente der primären Rolle zu.",
+      "hintDefault": "Frage immer: Plattform bereitstellen, Betrieb sichern, Fachaufgabe lösen oder Lizenz/Compliance steuern?",
+      "sortColumns": [
+        { "zone": "plattform", "label": "Systemnahe Plattform", "hint": "OS, Treiber, Laufzeit, Kernservices" },
+        { "zone": "betrieb", "label": "Betriebs-Tooling", "hint": "Backup, Monitoring, Security-Agent" },
+        { "zone": "fach", "label": "Fachanwendung", "hint": "ERP, CRM, Office, Browser, Ticketing" },
+        { "zone": "lizenz", "label": "Lizenz/Compliance", "hint": "Metriken, Rechte, Auditfähigkeit" }
+      ],
+      "sortCards": [
+        { "id": "s1", "text": "Kernel-/Dienstschicht verwaltet Prozesse, Speicher und Gerätezugriff.", "correctZone": "plattform" },
+        { "id": "s2", "text": "Endpoint-Agent prüft Signaturen und blockiert Malware im Hintergrund.", "correctZone": "betrieb" },
+        { "id": "s3", "text": "ERP-Client bildet Aufträge, Lager und Rechnungen ab.", "correctZone": "fach" },
+        { "id": "s4", "text": "Nutzerbasierte Lizenz mit Zuordnung zu Named Usern und Auditprotokoll.", "correctZone": "lizenz" },
+        { "id": "s5", "text": "Treiber stellt dem OS die Netzwerkkarte mit allen Funktionen bereit.", "correctZone": "plattform" },
+        { "id": "s6", "text": "Backup-Agent erstellt versionierte Sicherungen nach Zeitplan.", "correctZone": "betrieb" },
+        { "id": "s7", "text": "IDE wird zum Entwickeln und Debuggen von Software eingesetzt.", "correctZone": "fach" },
+        { "id": "s8", "text": "Open-Source-Einsatz verlangt Prüfung von Weitergabe- und Hinweis-Pflichten.", "correctZone": "lizenz" },
+        { "id": "s9", "text": "Laufzeitumgebung stellt Bibliotheken/Runtime für Anwendungen bereit.", "correctZone": "plattform" },
+        { "id": "s10", "text": "Monitoring-Agent sammelt Metriken, Logs und Alarmzustände.", "correctZone": "betrieb" }
+      ]
+    },
+    {
+      "id": "grenzfall-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 2: Anspruchsvolle Grenzfälle",
+      "subtitle": "Wähle die fachlich belastbare Einordnung.",
+      "hintDefault": "Ein Tool kann technisch eine Anwendung sein, aber betrieblich als Systemkomponente wirken. Begründung ist entscheidend.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "1. Ein Agent startet automatisch, überwacht Dienste und sendet Health-Daten. Was ist die beste AP1-Einordnung?",
+          "options": [
+            { "value": "a", "text": "Reine Fachanwendung, weil er eine Oberfläche besitzt." },
+            { "value": "b", "text": "Betriebsnahe Systemkomponente (Tool/Dienst) zur Sicherstellung des IT-Betriebs." },
+            { "value": "c", "text": "Firmware, weil er beim Start aktiv ist." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q2",
+          "text": "2. Welche Aussage trennt Lizenztyp und Zahlungsmodell korrekt?",
+          "options": [
+            { "value": "a", "text": "Open Source bedeutet automatisch Abo, proprietär automatisch Kauf." },
+            { "value": "b", "text": "Proprietär/Open Source beschreibt Nutzungsrechte; Abo/Kauf beschreibt die Abrechnungsform." },
+            { "value": "c", "text": "Abo/Kauf gilt nur für Hardware, nicht für Software." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q3",
+          "text": "3. Warum ist die Lizenzmetrik (Named User, Device, Core) prüfungsrelevant?",
+          "options": [
+            { "value": "a", "text": "Weil sie direkte Auswirkungen auf Kosten, Skalierung und Compliance-Risiko hat." },
+            { "value": "b", "text": "Weil Metriken nur Marketingbegriffe ohne Vertragswirkung sind." },
+            { "value": "c", "text": "Weil Lizenzmetriken nur bei Open Source gelten." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "q4",
+          "text": "4. Welche Aussage zu Treibern ist korrekt?",
+          "options": [
+            { "value": "a", "text": "Treiber sind reine Endnutzer-Anwendungen und optional für Hardwarezugriff." },
+            { "value": "b", "text": "Treiber gehören zur systemnahen Schicht und beeinflussen Funktion, Stabilität und Performance von Geräten." },
+            { "value": "c", "text": "Treiber ersetzen das Betriebssystem vollständig." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "q5",
+          "text": "5. Wann ist eine IDE in AP1 sauber eingeordnet?",
+          "options": [
+            { "value": "a", "text": "Als Anwendungssoftware für Entwickleraufgaben, die auf Systemsoftware aufsetzt." },
+            { "value": "b", "text": "Als Betriebssystemkern wegen Debug-Funktion." },
+            { "value": "c", "text": "Als BIOS-Komponente wegen Codekompilierung." }
+          ],
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "id": "einfuehrungs-reihenfolge-l2",
+      "type": "capital",
+      "title": "Rätsel 3: Softwareeinführung korrekt aufsetzen",
+      "subtitle": "Bringe die Schritte einer AP1-sauberen Einführung in Reihenfolge.",
+      "hintDefault": "Fachbedarf und Rahmenbedingungen zuerst, dann Plattform, Lizenz, Betrieb, Rollout, Nachweis.",
+      "rows": [
+        {
+          "key": "bedarf",
+          "label": "Fachliche Anforderungen und Nutzergruppen klären",
+          "correct": "1",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "plattform",
+          "label": "Systemvoraussetzungen prüfen (OS, Treiber, Laufzeit, Rechte, Netzwerk)",
+          "correct": "2",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "lizenz",
+          "label": "Lizenztyp und Metrik festlegen (Named User/Device/Core, OSS-Pflichten)",
+          "correct": "3",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "betrieb",
+          "label": "Betriebsprozesse definieren (Backup, Monitoring, Patch, Incident)",
+          "correct": "4",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "pilot",
+          "label": "Pilot mit repräsentativen Anwendern durchführen",
+          "correct": "5",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "rollout",
+          "label": "Gestaffelten Rollout und Schulung umsetzen",
+          "correct": "6",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        },
+        {
+          "key": "nachweis",
+          "label": "Lizenz- und Betriebsdokumentation revisionssicher abschließen",
+          "correct": "7",
+          "options": [
+            { "value": "", "text": "– bitte wählen –" },
+            { "value": "1", "text": "1" },
+            { "value": "2", "text": "2" },
+            { "value": "3", "text": "3" },
+            { "value": "4", "text": "4" },
+            { "value": "5", "text": "5" },
+            { "value": "6", "text": "6" },
+            { "value": "7", "text": "7" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lizenz-quiz-l2",
+      "type": "quiz",
+      "title": "Rätsel 4: Lizenz- und Compliance-Fallen",
+      "subtitle": "Treffe die wirtschaftlich und technisch richtige Entscheidung.",
+      "hintDefault": "Nicht nur Preis betrachten: Metrik, Nutzungsumfang, Auditierbarkeit und Betriebsaufwand sind AP1-Kernpunkte.",
+      "questions": [
+        {
+          "id": "l1",
+          "text": "1. 120 gelegentliche Nutzer, aber nur 30 parallel aktiv: Welche Metrik ist oft wirtschaftlich sinnvoll?",
+          "options": [
+            { "value": "a", "text": "Concurrent User, wenn Vertrag und Technik sauber abbildbar sind." },
+            { "value": "b", "text": "Immer Named User, ohne Lastprofil zu prüfen." },
+            { "value": "c", "text": "Nur Kaufmodell, da Abo grundsätzlich teurer ist." }
+          ],
+          "correct": "a"
+        },
+        {
+          "id": "l2",
+          "text": "2. Welche Aussage ist AP1-konform zu Open Source?",
+          "options": [
+            { "value": "a", "text": "Open Source ist lizenzfrei und ohne Pflichten nutzbar." },
+            { "value": "b", "text": "Open Source kann Nutzungs- und Weitergabepflichten enthalten, die dokumentiert werden müssen." },
+            { "value": "c", "text": "Open Source darf in Unternehmen grundsätzlich nicht eingesetzt werden." }
+          ],
+          "correct": "b"
+        },
+        {
+          "id": "l3",
+          "text": "3. Was ist bei einer proprietären SaaS-Lösung kritisch zu bewerten?",
+          "options": [
+            { "value": "a", "text": "Nur die monatliche Lizenzhöhe, Betrieb und Exit sind irrelevant." },
+            { "value": "b", "text": "Abo-Kosten, Datenportabilität, SLA, Rollen-/Rechtemodell und Vendor-Lock-in." },
+            { "value": "c", "text": "Nur die Farbe des Dashboards." }
+          ],
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

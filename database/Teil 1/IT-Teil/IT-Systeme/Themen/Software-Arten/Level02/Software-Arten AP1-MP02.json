@@ -1,0 +1,168 @@
+{
+  "game_type": "matching_puzzle",
+  "title": "Software-Arten (AP1) Level 2 – Architektur, Betrieb und Lizenz-Compliance",
+  "schema_version": "1.0",
+  "subtitle": "Ordne Begriff, präzise Bedeutung und realistischen AP1-Fall korrekt zu.",
+  "columnTitles": {
+    "column1": "Begriff",
+    "column2": "Präzise Bedeutung",
+    "column3": "Praxisbeispiel"
+  },
+  "columnHints": {
+    "column1": "Wähle den technischen oder lizenzbezogenen Kernbegriff.",
+    "column2": "Achte auf saubere Abgrenzung zwischen Technik, Betrieb und Vertrag.",
+    "column3": "Ordne das passende Entscheidungsszenario zu."
+  },
+  "sets": [
+    {
+      "id": "os_kernel_layer",
+      "name": "Betriebssystem-Kernschicht",
+      "description": "Steuert Prozesse, Speicher, Rechte und Hardwarezugriff als Basis des Gesamtsystems.",
+      "example": "Mehrere Anwendungen teilen Ressourcen stabil, weil das OS Scheduling und Speicherverwaltung übernimmt."
+    },
+    {
+      "id": "device_driver",
+      "name": "Gerätetreiber",
+      "description": "Systemnahe Komponente zur kontrollierten Kommunikation zwischen OS und Hardware.",
+      "example": "Nach Treiberupdate steht die volle Funktion der Netzwerkkarte inklusive VLAN-Offload bereit."
+    },
+    {
+      "id": "system_service",
+      "name": "Systemdienst/Daemon",
+      "description": "Hintergrundprozess mit betrieblicher Dauerfunktion, oft ohne direkte Benutzerinteraktion.",
+      "example": "Der Update-Dienst installiert Patches zeitgesteuert außerhalb der Arbeitszeit."
+    },
+    {
+      "id": "runtime_environment",
+      "name": "Laufzeitumgebung",
+      "description": "Stellt Bibliotheken und Ausführungslogik bereit, die Anwendungen zum Betrieb benötigen.",
+      "example": "Eine Fachanwendung startet erst nach Installation der geforderten Runtime-Version."
+    },
+    {
+      "id": "package_management",
+      "name": "Paket-/Update-Management",
+      "description": "Verteilt und versioniert Softwarebestandteile kontrolliert über definierte Quellen.",
+      "example": "Sicherheitsupdates werden zentral ausgerollt und revisionssicher protokolliert."
+    },
+    {
+      "id": "backup_agent",
+      "name": "Backup-Agent",
+      "description": "Systemnahes Tool zur automatisierten Datensicherung, Wiederherstellung und Aufbewahrungssteuerung.",
+      "example": "Nach Ransomware-Vorfall wird ein konsistenter Wiederherstellungspunkt eingespielt."
+    },
+    {
+      "id": "monitoring_agent",
+      "name": "Monitoring/Observability-Agent",
+      "description": "Erfasst Metriken, Logs und Zustände zur Früherkennung von Störungen.",
+      "example": "Alarm meldet steigende Fehlerrate eines Dienstes, bevor Nutzer betroffen sind."
+    },
+    {
+      "id": "endpoint_security_agent",
+      "name": "Endpoint-Security-Agent",
+      "description": "Systemnahes Schutzmodul für Malware-Erkennung, Richtlinien und Reaktionsmaßnahmen.",
+      "example": "Ein verdächtiger Prozess wird automatisiert isoliert und an SOC gemeldet."
+    },
+    {
+      "id": "office_suite",
+      "name": "Office-Suite",
+      "description": "Anwendungssoftware für produktive Endnutzeraufgaben wie Text, Kalkulation und Präsentation.",
+      "example": "Die Fachabteilung erstellt Angebotskalkulationen und Reports im Tagesgeschäft."
+    },
+    {
+      "id": "browser_client",
+      "name": "Browser-Client",
+      "description": "Anwendungssoftware zur Nutzung webbasierten Dienste auf Basis der Systemplattform.",
+      "example": "CRM wird browserbasiert genutzt, bleibt aber fachliche Anwendungsebene."
+    },
+    {
+      "id": "erp_application",
+      "name": "ERP-Anwendung",
+      "description": "Fachanwendung zur Abbildung integrierter Unternehmensprozesse.",
+      "example": "Einkauf, Lager und Rechnungswesen laufen über ein zentrales ERP-System."
+    },
+    {
+      "id": "crm_application",
+      "name": "CRM-Anwendung",
+      "description": "Fachanwendung für Kundenbeziehungen, Vertriebschancen und Serviceprozesse.",
+      "example": "Lead-Pipeline, Kontakte und Supportvorgänge werden im CRM geführt."
+    },
+    {
+      "id": "ide_tooling",
+      "name": "IDE",
+      "description": "Anwendungssoftware für Entwicklung, Build, Debugging und Integrationswerkzeuge.",
+      "example": "Entwickler analysieren Stacktraces und testen Codepfade direkt in der IDE."
+    },
+    {
+      "id": "named_user_license",
+      "name": "Lizenzmetrik: Named User",
+      "description": "Lizenzierung pro namentlich zugewiesenem Nutzer, unabhängig von gleichzeitiger Nutzung.",
+      "example": "Jeder Mitarbeiter mit möglichem Zugriff benötigt eine eigene Lizenzzuordnung."
+    },
+    {
+      "id": "concurrent_user_license",
+      "name": "Lizenzmetrik: Concurrent User",
+      "description": "Lizenzierung nach maximal gleichzeitig aktiven Sessions.",
+      "example": "120 Berechtigte, aber nur 30 parallel aktive Anwender senken Lizenzbedarf."
+    },
+    {
+      "id": "device_license",
+      "name": "Lizenzmetrik: Device",
+      "description": "Lizenzierung pro Endgerät, unabhängig von wechselnden Benutzern.",
+      "example": "Im Schichtbetrieb teilen mehrere Nutzer einen Terminal-PC mit einer Gerätezulassung."
+    },
+    {
+      "id": "core_based_license",
+      "name": "Lizenzmetrik: Core-basiert",
+      "description": "Lizenzkosten orientieren sich an der Anzahl aktiver CPU-Kerne auf dem Zielsystem.",
+      "example": "Ein Datenbankserver wird teurer, sobald zusätzliche vCPUs zugewiesen werden."
+    },
+    {
+      "id": "subscription_model",
+      "name": "Abo-Modell",
+      "description": "Zeitbasierte Nutzung mit fortlaufenden Zahlungen, oft inklusive Updates und Support.",
+      "example": "Ohne Verlängerung endet die produktive Nutzbarkeit der SaaS-Lösung."
+    },
+    {
+      "id": "perpetual_model",
+      "name": "Kauf-/Perpetual-Modell",
+      "description": "Einmalige Lizenz für dauerhafte Nutzung einer Version, Upgrades oft separat.",
+      "example": "Die Software bleibt nutzbar, aber die nächste Hauptversion kostet erneut."
+    },
+    {
+      "id": "oss_permissive",
+      "name": "Open-Source-Lizenz (permissiv)",
+      "description": "Erlaubt breite Nutzung mit überschaubaren Pflichten, z. B. Copyright-Hinweise.",
+      "example": "Eine Bibliothek wird produktiv eingesetzt, inklusive korrekter Lizenzhinweise in der Doku."
+    },
+    {
+      "id": "oss_copyleft",
+      "name": "Open-Source-Lizenz (Copyleft)",
+      "description": "Kann bei Weitergabe abgeleiteter Werke stärkere Veröffentlichungs- oder Weitergabepflichten auslösen.",
+      "example": "Vor Distribution wird geprüft, ob Quellcodepflichten aus der Lizenz entstehen."
+    },
+    {
+      "id": "dual_licensing",
+      "name": "Dual Licensing",
+      "description": "Ein Produkt wird mit alternativen Lizenzpfaden angeboten, je nach Einsatzszenario.",
+      "example": "Für kommerzielle Nutzung wird eine proprietäre Lizenz gewählt, statt Copyleft-Bedingungen zu erfüllen."
+    },
+    {
+      "id": "audit_readiness",
+      "name": "Lizenz-Audit-Fähigkeit",
+      "description": "Nachweisbare Dokumentation von Nutzern, Geräten, Versionen und Vertragsständen.",
+      "example": "Bei Herstelleraudit sind alle Zuordnungen und Laufzeiten revisionssicher abrufbar."
+    },
+    {
+      "id": "vendor_lock_in",
+      "name": "Vendor Lock-in Risiko",
+      "description": "Abhängigkeit durch proprietäre Formate, Schnittstellen oder Vertragsmechanik.",
+      "example": "Ein Wechsel scheitert an fehlender Datenportabilität und hoher Migrationskomplexität."
+    },
+    {
+      "id": "change_management",
+      "name": "Software-Change-Management",
+      "description": "Geplante Einführung/Änderung mit Risikoanalyse, Pilotierung, Rollback und Dokumentation.",
+      "example": "Neue Version wird zuerst im Pilotbereich validiert, bevor der stufenweise Rollout startet."
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "game_type": "what_and_why",
+  "title": "What & Why – Software-Arten (AP1) Level 2",
+  "description": "Schritt 1: Ursache-/Kategorie sauber wählen (What) · Schritt 2: Entscheidung fachlich begründen (Why).",
+  "cases": [
+    {
+      "id": "v01",
+      "profile": "Eine Fachanwendung läuft instabil nach OS-Update. In der Analyse fehlt der passende Gerätetreiber für die Netzwerkkarte.",
+      "tags": ["Systemsoftware", "Treiber", "Stabilität"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Treiberproblem als systemnahe Ursache priorisieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Treiber liegen in der systemnahen Schicht und beeinflussen Gerätefunktion direkt.", "correct": true },
+            { "id": "w2", "text": "Anwendungsinstabilität kann Folge einer fehlerhaften Plattformbasis sein.", "correct": true },
+            { "id": "w3", "text": "Treiber sind reine Office-Plugins und für Hardware irrelevant.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die Kette: Plattform prüfen, dann Anwendung beurteilen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur die ERP-Lizenz erneuern",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Lizenzstatus erklärt keine fehlende Hardwarekommunikation.", "correct": true },
+            { "id": "w2", "text": "Störung liegt technisch vor dem Lizenzthema.", "correct": true },
+            { "id": "w3", "text": "Lizenzverlängerung behebt Treiberinkompatibilitäten zuverlässig.", "correct": false },
+            { "id": "w4", "text": "Maßnahme und Fehlerdomäne sind entkoppelt.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Office-Version wechseln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Office ist hier nicht die primäre technische Abhängigkeit.", "correct": true },
+            { "id": "w2", "text": "Die Kernursache liegt im systemnahen Hardwarezugriff.", "correct": true },
+            { "id": "w3", "text": "Jeder Treiberfehler wird durch neues Office beseitigt.", "correct": false },
+            { "id": "w4", "text": "Fehlerdiagnose muss schichtenorientiert erfolgen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Treiber und Systemschicht sind die primäre Ursacheklasse; Anwendungen sind erst nach stabiler Basis zu bewerten."
+    },
+    {
+      "id": "v02",
+      "profile": "Ein Backup-Agent läuft als Dienst, erzeugt Restore-Punkte und meldet Jobs an das zentrale Management. Er wird fälschlich als normale Endnutzer-App eingeordnet.",
+      "tags": ["Betriebs-Tooling", "Systemdienst", "Backup"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Betriebsnahes Systemtool korrekt als systemnahe Komponente klassifizieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Dauerbetrieb, Hintergrundausführung und Betriebsziel sprechen für systemnahe Einordnung.", "correct": true },
+            { "id": "w2", "text": "Backup gehört zur Betriebssicherheit, nicht primär zur Fachbearbeitung.", "correct": true },
+            { "id": "w3", "text": "Alles mit GUI ist automatisch Anwendungssoftware.", "correct": false },
+            { "id": "w4", "text": "AP1 trennt Rolle im Betrieb von reiner Oberflächenbetrachtung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Als Office-Modul behandeln",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Backup-Aufgaben sind unabhängig von Office-Fachfunktionen.", "correct": true },
+            { "id": "w2", "text": "Der Agent erfüllt Infrastruktur- statt Fachlogik.", "correct": true },
+            { "id": "w3", "text": "Office ist immer Träger für Backupdienste.", "correct": false },
+            { "id": "w4", "text": "Kategorisierung muss am Betriebszweck erfolgen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Als Firmware deklarieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Firmware sitzt gerätenah und nicht als konfigurierbarer OS-Dienst.", "correct": true },
+            { "id": "w2", "text": "Agenten in Betriebssystemkontext sind keine BIOS-Komponenten.", "correct": true },
+            { "id": "w3", "text": "Backupsoftware wird direkt im UEFI ausgeführt.", "correct": false },
+            { "id": "w4", "text": "Die Architektur-Ebene ist hier klar softwareseitig im OS.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Backup-Agenten sind betriebsnahe Systemkomponenten (Tools/Dienste), nicht klassische Endnutzer- oder Firmware-Software."
+    },
+    {
+      "id": "v03",
+      "profile": "Ein Unternehmen prüft eine SaaS-CRM-Lösung. Fachlich passt sie, aber langfristige Datenportabilität und Abhängigkeiten sind unklar.",
+      "tags": ["SaaS", "Lizenz", "Risiko", "Vendor Lock-in"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Vendor-Lock-in und Exit-Strategie als Pflichtkriterium aufnehmen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Bei SaaS sind Schnittstellen, Exportformate und Vertragsklauseln für Wechselkosten zentral.", "correct": true },
+            { "id": "w2", "text": "Niedriger Einstiegspreis allein bildet das Gesamtrisiko nicht ab.", "correct": true },
+            { "id": "w3", "text": "Datenportabilität ist bei SaaS grundsätzlich irrelevant.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist die Kombination aus Technik-, Kosten- und Risikobewertung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur die GUI-Bedienbarkeit bewerten",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Usability ist wichtig, ersetzt aber keine Vertrags-/Betriebsprüfung.", "correct": true },
+            { "id": "w2", "text": "Lock-in-Risiken bleiben ohne Exit-Betrachtung bestehen.", "correct": true },
+            { "id": "w3", "text": "Eine gute GUI verhindert jede Abhängigkeit vom Anbieter.", "correct": false },
+            { "id": "w4", "text": "Entscheidungen müssen mehrdimensional begründet werden.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Lizenzmetriken ignorieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Metriken beeinflussen direkte Kosten und Skalierbarkeit.", "correct": true },
+            { "id": "w2", "text": "Compliance-Risiko steigt, wenn Lizenzregeln unklar bleiben.", "correct": true },
+            { "id": "w3", "text": "Lizenzmetriken haben keine betriebliche Wirkung.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet nachvollziehbare Wirtschaftlichkeitslogik.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "SaaS-Entscheidungen benötigen neben Fachfit zwingend Lock-in-, Lizenz- und Exit-Bewertung."
+    },
+    {
+      "id": "v04",
+      "profile": "120 Mitarbeitende nutzen eine Fachsoftware, aber maximal 25 gleichzeitig. Das Budget ist knapp.",
+      "tags": ["Lizenzmetrik", "Kosten", "Concurrent User"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Concurrent-User-Metrik auf Basis belastbarer Lastprofile prüfen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Parallelnutzung ist das zentrale Kriterium für dieses Modell.", "correct": true },
+            { "id": "w2", "text": "Bei niedriger Gleichzeitigkeit kann es wirtschaftlicher als Named User sein.", "correct": true },
+            { "id": "w3", "text": "Concurrent User ist immer schlechter als Named User.", "correct": false },
+            { "id": "w4", "text": "Messbare Nutzungsdaten sind für AP1-Entscheidungen entscheidend.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Pauschal Named User wählen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Ohne Profilanalyse kann die Entscheidung unnötig teuer werden.", "correct": true },
+            { "id": "w2", "text": "Metrik muss zum tatsächlichen Nutzungsverhalten passen.", "correct": true },
+            { "id": "w3", "text": "Named User ist unabhängig vom Lastbild immer optimal.", "correct": false },
+            { "id": "w4", "text": "Begründung ohne Daten ist prüferisch schwach.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur OS-Lizenz erhöhen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Die Fragestellung betrifft die Fachanwendungsmetrik, nicht primär das Betriebssystem.", "correct": true },
+            { "id": "w2", "text": "Kostenrisiko liegt in falscher Lizenzierung der Zielsoftware.", "correct": true },
+            { "id": "w3", "text": "OS-Lizenzen steuern automatisch die Concurrent-User-Zahl der Anwendung.", "correct": false },
+            { "id": "w4", "text": "Ursachenbezug zur Aufgabenstellung fehlt.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Concurrent User kann bei niedriger Gleichzeitigkeit sinnvoll sein, wenn das Nutzungsprofil sauber erhoben und vertraglich abgedeckt ist."
+    },
+    {
+      "id": "v05",
+      "profile": "Eine Open-Source-Bibliothek wird in ein kommerzielles Produkt integriert, das ausgeliefert werden soll. Das Team ignoriert Lizenzpflichten.",
+      "tags": ["Open Source", "Compliance", "Weitergabe"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Lizenzpflichten je Lizenztyp (z. B. Hinweise, Copyleft, Quellcodepflichten) prüfen und dokumentieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Open Source erlaubt Nutzung, kann aber klare Bedingungen enthalten.", "correct": true },
+            { "id": "w2", "text": "Bei Weitergabe sind Lizenzauflagen besonders relevant.", "correct": true },
+            { "id": "w3", "text": "Open Source ist grundsätzlich pflichtfrei und ohne Dokumentation einsetzbar.", "correct": false },
+            { "id": "w4", "text": "AP1 erwartet die Trennung zwischen technischer Nutzung und rechtlicher Verpflichtung.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur den Quellcode kompilieren und Lizenz ignorieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Kompilierung ändert keine Lizenzpflichten.", "correct": true },
+            { "id": "w2", "text": "Compliance-Risiko entsteht unabhängig von technischer Funktion.", "correct": true },
+            { "id": "w3", "text": "Kompilierte Artefakte sind lizenzrechtlich immer neutral.", "correct": false },
+            { "id": "w4", "text": "Unbeachtete Pflichten können Audit- und Rechtsfolgen auslösen.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur Hardwareinventar aktualisieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Die Aufgabe betrifft Softwarelizenzierung bei Distribution.", "correct": true },
+            { "id": "w2", "text": "Hardwaredokumentation ersetzt keine OSS-Lizenzprüfung.", "correct": true },
+            { "id": "w3", "text": "Hardwarelisten erfüllen automatisch Copyleft-Anforderungen.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme verfehlt den Kern der Fragestellung.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Open-Source-Einsatz ist technisch möglich, erfordert aber lizenzspezifische Pflichtenprüfung und belastbare Dokumentation."
+    },
+    {
+      "id": "v06",
+      "profile": "Nach Einführung einer neuen Softwareversion treten produktive Fehler auf. Es gibt keinen Pilot, keinen Rollback-Plan und keine Metrikvergleiche.",
+      "tags": ["Change", "Rollout", "Betrieb"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Change-Management mit Pilot, Rollback und Nachweisverfahren aufsetzen",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Gestaffelte Einführung reduziert Ausfallrisiko und erleichtert Ursachenanalyse.", "correct": true },
+            { "id": "w2", "text": "Rollback-Fähigkeit ist zentral für Betriebsstabilität.", "correct": true },
+            { "id": "w3", "text": "Direkt-Rollout ohne Tests ist bei kritischen Anwendungen Best Practice.", "correct": false },
+            { "id": "w4", "text": "AP1-konform ist ein kontrollierter Veränderungsprozess.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur neue Schulungsunterlagen verteilen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Schulung ist wichtig, ersetzt aber keine technische Absicherung des Rollouts.", "correct": true },
+            { "id": "w2", "text": "Ohne Pilot und Monitoring bleibt Fehlerlokalisierung schwach.", "correct": true },
+            { "id": "w3", "text": "Dokumentation allein verhindert technische Regressionen.", "correct": false },
+            { "id": "w4", "text": "Es fehlt der betriebliche Kontrollmechanismus.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Nur zusätzliche Lizenzen kaufen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Lizenzmenge löst keine Qualitätsprobleme in neuer Version.", "correct": true },
+            { "id": "w2", "text": "Störungsursache liegt im Einführungsprozess und technischen Zustand.", "correct": true },
+            { "id": "w3", "text": "Mehr Lizenzen erhöhen automatisch Softwarequalität.", "correct": false },
+            { "id": "w4", "text": "Die Maßnahme adressiert nicht die Fehlerquelle.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Fehlerarme Einführung erfordert Pilotierung, messbare Abnahme und Rollback-Strategie statt Big-Bang ohne Absicherung."
+    },
+    {
+      "id": "v07",
+      "profile": "Ein Herstelleraudit verlangt innerhalb von 24 Stunden Lizenznachweise für Nutzer, Geräte und Laufzeiten. Das Unternehmen hat verstreute Listen ohne Versionierung.",
+      "tags": ["Audit", "Compliance", "Dokumentation"],
+      "options": [
+        {
+          "id": "o1",
+          "label": "Lizenz-Audit-Fähigkeit mit zentraler, revisionssicherer Dokumentation etablieren",
+          "isCorrect": true,
+          "whys": [
+            { "id": "w1", "text": "Auditfähigkeit benötigt konsistente und nachvollziehbare Datenstände.", "correct": true },
+            { "id": "w2", "text": "Verteilte Einzeldateien ohne Governance erhöhen Compliance-Risiken.", "correct": true },
+            { "id": "w3", "text": "Für Audits reichen mündliche Angaben der Teamleiter.", "correct": false },
+            { "id": "w4", "text": "AP1 bewertet strukturierte Nachweisführung als Teil wirtschaftlicher IT-Betriebsprozesse.", "correct": true }
+          ]
+        },
+        {
+          "id": "o2",
+          "label": "Nur neue Hardware bestellen",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Das Problem liegt in Nachweis- und Prozessqualität, nicht primär in Hardwarekapazität.", "correct": true },
+            { "id": "w2", "text": "Auditlücken werden durch Hardwarekauf nicht geschlossen.", "correct": true },
+            { "id": "w3", "text": "Mehr Geräte reduzieren automatisch Lizenzrisiko.", "correct": false },
+            { "id": "w4", "text": "Maßnahme und Risiko sind nicht deckungsgleich.", "correct": true }
+          ]
+        },
+        {
+          "id": "o3",
+          "label": "Alle Tools deinstallieren",
+          "isCorrect": false,
+          "whys": [
+            { "id": "w1", "text": "Radikale Maßnahmen ohne Analyse verschärfen Betriebsrisiken.", "correct": true },
+            { "id": "w2", "text": "Compliance entsteht durch Steuerung und Nachweis, nicht durch Blindabbau.", "correct": true },
+            { "id": "w3", "text": "Deinstallation ersetzt jede vertragliche Nachweispflicht rückwirkend.", "correct": false },
+            { "id": "w4", "text": "AP1 erwartet realistische, prozessfähige Lösungen.", "correct": true }
+          ]
+        }
+      ],
+      "solution": "Auditfähigkeit erfordert ein gepflegtes Lizenzregister mit klaren Verantwortlichkeiten und nachvollziehbaren Änderungsständen."
+    }
+  ]
+}

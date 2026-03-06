@@ -1,0 +1,341 @@
+{
+  "game_type": "wer_bin_ich",
+  "title": "Wer bin ich? – Software-Arten & Lizenzlogik (AP1) Level 2",
+  "secretHintText": "Das System hat heimlich ein {SECRET_NAME} gewählt.",
+  "leadershipStyles": [
+    {
+      "id": "system_base",
+      "name": "Systembasis (OS + Treiberschicht)",
+      "attributes": {
+        "is_system_layer": true,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": false,
+        "runs_background_service": false,
+        "direct_hardware_interface": true,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "operational_service",
+      "name": "Systemdienst (betrieblich im Hintergrund)",
+      "attributes": {
+        "is_system_layer": true,
+        "is_operational_tool": true,
+        "is_enduser_app": false,
+        "is_license_model": false,
+        "runs_background_service": true,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "security_agent",
+      "name": "Security-/Monitoring-Agent",
+      "attributes": {
+        "is_system_layer": true,
+        "is_operational_tool": true,
+        "is_enduser_app": false,
+        "is_license_model": false,
+        "runs_background_service": true,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": true,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "business_app",
+      "name": "Fachanwendung (ERP/CRM)",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": true,
+        "is_license_model": false,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": true,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "dev_app",
+      "name": "Entwicklungswerkzeug (IDE)",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": true,
+        "is_license_model": false,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": true,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "named_user_license",
+      "name": "Lizenzmodell: Named User",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": true,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "concurrent_user_license",
+      "name": "Lizenzmodell: Concurrent User",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": true,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "core_based_license",
+      "name": "Lizenzmodell: Core-basiert",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": true,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "oss_license",
+      "name": "Open-Source-Lizenzmodell",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": true,
+        "is_subscription": false,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "proprietary_subscription",
+      "name": "Proprietäres Abo-Modell",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": true,
+        "is_perpetual": false
+      }
+    },
+    {
+      "id": "proprietary_perpetual",
+      "name": "Proprietäre Kauf-/Perpetual-Lizenz",
+      "attributes": {
+        "is_system_layer": false,
+        "is_operational_tool": false,
+        "is_enduser_app": false,
+        "is_license_model": true,
+        "runs_background_service": false,
+        "direct_hardware_interface": false,
+        "focus_business_process": false,
+        "focus_dev_productivity": false,
+        "focus_security_operations": false,
+        "depends_on_named_assignment": false,
+        "depends_on_concurrent_limit": false,
+        "depends_on_device_count": false,
+        "depends_on_core_count": false,
+        "contains_oss_obligations": false,
+        "is_subscription": false,
+        "is_perpetual": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "hotkey": "1",
+      "text": "Liegt der Fokus auf der technischen Basis des Systems statt auf Fachfunktion?",
+      "attributeKey": "is_system_layer"
+    },
+    {
+      "id": "q02",
+      "hotkey": "2",
+      "text": "Ist es primär ein betriebsnahes Tool für Stabilität/Verfügbarkeit?",
+      "attributeKey": "is_operational_tool"
+    },
+    {
+      "id": "q03",
+      "hotkey": "3",
+      "text": "Handelt es sich um Endnutzer- oder Fachanwendungssoftware?",
+      "attributeKey": "is_enduser_app"
+    },
+    {
+      "id": "q04",
+      "hotkey": "4",
+      "text": "Ist die gesuchte Antwort ein Lizenz- oder Vertragsmodell statt einer Softwarekomponente?",
+      "attributeKey": "is_license_model"
+    },
+    {
+      "id": "q05",
+      "hotkey": "5",
+      "text": "Läuft es typischerweise als Hintergrunddienst dauerhaft mit?",
+      "attributeKey": "runs_background_service"
+    },
+    {
+      "id": "q06",
+      "hotkey": "6",
+      "text": "Ist direkter Hardwarezugriff ein Kernmerkmal?",
+      "attributeKey": "direct_hardware_interface"
+    },
+    {
+      "id": "q07",
+      "hotkey": "7",
+      "text": "Stehen betriebliche Geschäftsprozesse wie Vertrieb, Auftrag, Kundenverwaltung im Zentrum?",
+      "attributeKey": "focus_business_process"
+    },
+    {
+      "id": "q08",
+      "hotkey": "8",
+      "text": "Geht es vorrangig um Entwicklerproduktivität (Coding, Debugging, Build)?",
+      "attributeKey": "focus_dev_productivity"
+    },
+    {
+      "id": "q09",
+      "hotkey": "9",
+      "text": "Hat es Schwerpunkt Security Operations und endpointnahe Schutzwirkung?",
+      "attributeKey": "focus_security_operations"
+    },
+    {
+      "id": "q10",
+      "hotkey": "10",
+      "text": "Basiert die Lizenzierung auf namentlicher Personenzuordnung?",
+      "attributeKey": "depends_on_named_assignment"
+    },
+    {
+      "id": "q11",
+      "hotkey": "11",
+      "text": "Ist die Lizenzierung an die maximale gleichzeitige Nutzung gekoppelt?",
+      "attributeKey": "depends_on_concurrent_limit"
+    },
+    {
+      "id": "q12",
+      "hotkey": "12",
+      "text": "Steigen Kosten mit CPU-Kernzahl oder vCore-Zuweisung?",
+      "attributeKey": "depends_on_core_count"
+    },
+    {
+      "id": "q13",
+      "hotkey": "13",
+      "text": "Gibt es lizenzbedingte Open-Source-Pflichten bei Nutzung/Weitergabe?",
+      "attributeKey": "contains_oss_obligations"
+    },
+    {
+      "id": "q14",
+      "hotkey": "14",
+      "text": "Ist die Nutzung an laufende Zeitverträge gebunden?",
+      "attributeKey": "is_subscription"
+    },
+    {
+      "id": "q15",
+      "hotkey": "15",
+      "text": "Handelt es sich um dauerhafte Versionnutzung durch Kaufmodell?",
+      "attributeKey": "is_perpetual"
+    }
+  ]
+}
