@@ -20,11 +20,7 @@
     "Betroffenenrechte (Art. 15–22)",
     "AV-Vertrag (Art. 28)",
     "TOMs (Art. 32)",
-    "Privacy by Design/Default (Art. 25)",
-    "VVT (Art. 30)",
-    "DSFA (Art. 35)",
-    "Datenpanne 72h (Art. 33/34)",
-    "Drittlandtransfer (Kap. V)"
+    "Privacy by Design/Default (Art. 25)"
   ],
   "questions": [
     {
@@ -202,58 +198,6 @@
     {
       "text": "Standardeinstellungen müssen datenschutzfreundlich sein: standardmäßig nur nötige Daten und restriktive Freigaben.",
       "correct": "Privacy by Design/Default (Art. 25)"
-    },
-    {
-      "text": "Internes Register aller Verarbeitungstätigkeiten als Kernartefakt der Rechenschaftspflicht.",
-      "correct": "VVT (Art. 30)"
-    },
-    {
-      "text": "Enthält u. a. Zwecke, Kategorien Betroffener/Daten, Empfänger, Löschfristen/Kriterien und eine allgemeine Beschreibung der TOMs.",
-      "correct": "VVT (Art. 30)"
-    },
-    {
-      "text": "Prüfungsfalle: „Nur für große Unternehmen“ – in der Praxis wird es fast immer erwartet; Ausnahmen sind sehr eng.",
-      "correct": "VVT (Art. 30)"
-    },
-    {
-      "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking/Profiling, systematische Überwachung, große Mengen sensibler Daten).",
-      "correct": "DSFA (Art. 35)"
-    },
-    {
-      "text": "Muss vor Start der Verarbeitung durchgeführt werden – nicht nachträglich als Formalität.",
-      "correct": "DSFA (Art. 35)"
-    },
-    {
-      "text": "Enthält Beschreibung, Notwendigkeit/Verhältnismäßigkeit, Risikobewertung und Maßnahmen zur Risikominderung.",
-      "correct": "DSFA (Art. 35)"
-    },
-    {
-      "text": "Verletzung des Schutzes personenbezogener Daten (z. B. Verlust, unbefugter Zugriff, Offenlegung).",
-      "correct": "Datenpanne 72h (Art. 33/34)"
-    },
-    {
-      "text": "Meldung an Aufsichtsbehörde grundsätzlich binnen 72 Stunden nach Bekanntwerden, wenn ein Risiko besteht.",
-      "correct": "Datenpanne 72h (Art. 33/34)"
-    },
-    {
-      "text": "Prüfungsfalle: 72 Stunden zählen ab Bekanntwerden, nicht ab dem Zeitpunkt des Vorfalls.",
-      "correct": "Datenpanne 72h (Art. 33/34)"
-    },
-    {
-      "text": "Betroffene müssen informiert werden, wenn voraussichtlich ein hohes Risiko für sie entsteht.",
-      "correct": "Datenpanne 72h (Art. 33/34)"
-    },
-    {
-      "text": "Übermittlung außerhalb EU/EWR braucht zusätzliche Garantien neben den normalen DSGVO-Anforderungen.",
-      "correct": "Drittlandtransfer (Kap. V)"
-    },
-    {
-      "text": "Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) oder Binding Corporate Rules (BCR) sind typische Instrumente.",
-      "correct": "Drittlandtransfer (Kap. V)"
-    },
-    {
-      "text": "Prüfungsfalle: Kapitel V ist nicht die Rechtsgrundlage – es ergänzt sie; Art. 6/9 brauchst du trotzdem.",
-      "correct": "Drittlandtransfer (Kap. V)"
     }
   ]
 }

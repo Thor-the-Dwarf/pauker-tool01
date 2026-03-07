@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:56:12 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:57:01 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -75928,11 +75928,7 @@ window.DATABASE_INDEX = [
                         "Betroffenenrechte (Art. 15–22)",
                         "AV-Vertrag (Art. 28)",
                         "TOMs (Art. 32)",
-                        "Privacy by Design/Default (Art. 25)",
-                        "VVT (Art. 30)",
-                        "DSFA (Art. 35)",
-                        "Datenpanne 72h (Art. 33/34)",
-                        "Drittlandtransfer (Kap. V)"
+                        "Privacy by Design/Default (Art. 25)"
                       ],
                       "questions": [
                         {
@@ -76110,65 +76106,13 @@ window.DATABASE_INDEX = [
                         {
                           "text": "Standardeinstellungen müssen datenschutzfreundlich sein: standardmäßig nur nötige Daten und restriktive Freigaben.",
                           "correct": "Privacy by Design/Default (Art. 25)"
-                        },
-                        {
-                          "text": "Internes Register aller Verarbeitungstätigkeiten als Kernartefakt der Rechenschaftspflicht.",
-                          "correct": "VVT (Art. 30)"
-                        },
-                        {
-                          "text": "Enthält u. a. Zwecke, Kategorien Betroffener/Daten, Empfänger, Löschfristen/Kriterien und eine allgemeine Beschreibung der TOMs.",
-                          "correct": "VVT (Art. 30)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Nur für große Unternehmen“ – in der Praxis wird es fast immer erwartet; Ausnahmen sind sehr eng.",
-                          "correct": "VVT (Art. 30)"
-                        },
-                        {
-                          "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking/Profiling, systematische Überwachung, große Mengen sensibler Daten).",
-                          "correct": "DSFA (Art. 35)"
-                        },
-                        {
-                          "text": "Muss vor Start der Verarbeitung durchgeführt werden – nicht nachträglich als Formalität.",
-                          "correct": "DSFA (Art. 35)"
-                        },
-                        {
-                          "text": "Enthält Beschreibung, Notwendigkeit/Verhältnismäßigkeit, Risikobewertung und Maßnahmen zur Risikominderung.",
-                          "correct": "DSFA (Art. 35)"
-                        },
-                        {
-                          "text": "Verletzung des Schutzes personenbezogener Daten (z. B. Verlust, unbefugter Zugriff, Offenlegung).",
-                          "correct": "Datenpanne 72h (Art. 33/34)"
-                        },
-                        {
-                          "text": "Meldung an Aufsichtsbehörde grundsätzlich binnen 72 Stunden nach Bekanntwerden, wenn ein Risiko besteht.",
-                          "correct": "Datenpanne 72h (Art. 33/34)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: 72 Stunden zählen ab Bekanntwerden, nicht ab dem Zeitpunkt des Vorfalls.",
-                          "correct": "Datenpanne 72h (Art. 33/34)"
-                        },
-                        {
-                          "text": "Betroffene müssen informiert werden, wenn voraussichtlich ein hohes Risiko für sie entsteht.",
-                          "correct": "Datenpanne 72h (Art. 33/34)"
-                        },
-                        {
-                          "text": "Übermittlung außerhalb EU/EWR braucht zusätzliche Garantien neben den normalen DSGVO-Anforderungen.",
-                          "correct": "Drittlandtransfer (Kap. V)"
-                        },
-                        {
-                          "text": "Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) oder Binding Corporate Rules (BCR) sind typische Instrumente.",
-                          "correct": "Drittlandtransfer (Kap. V)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: Kapitel V ist nicht die Rechtsgrundlage – es ergänzt sie; Art. 6/9 brauchst du trotzdem.",
-                          "correct": "Drittlandtransfer (Kap. V)"
                         }
                       ]
                     }
                   },
                   {
-                    "id": "database/Teil 1/IT-Teil/Datenschutz/Level01/Datenschutz AP1-SS01.json",
-                    "name": "Datenschutz AP1-SS01.json",
+                    "id": "database/Teil 1/IT-Teil/Datenschutz/Level01/Datenschutz AP1-SP01.json",
+                    "name": "Datenschutz AP1-SP01.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
@@ -76214,66 +76158,6 @@ window.DATABASE_INDEX = [
                         {
                           "id": "auftragsverarbeiter",
                           "title": "Auftragsverarbeiter",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "rechtsgrundlage_art_6",
-                          "title": "Rechtsgrundlage (Art. 6)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "einwilligung_art_7",
-                          "title": "Einwilligung (Art. 7)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "besondere_daten_art_9_10",
-                          "title": "Besondere Daten (Art. 9/10)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "informationspflichten_art_13_14",
-                          "title": "Informationspflichten (Art. 13/14)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "betroffenenrechte_art_15_22",
-                          "title": "Betroffenenrechte (Art. 15–22)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "av_vertrag_art_28",
-                          "title": "AV-Vertrag (Art. 28)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "toms_art_32",
-                          "title": "TOMs (Art. 32)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "privacy_by_design_default_art_25",
-                          "title": "Privacy by Design/Default (Art. 25)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "vvt_art_30",
-                          "title": "VVT (Art. 30)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "dsfa_art_35",
-                          "title": "DSFA (Art. 35)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "datenpanne_72h_art_33_34",
-                          "title": "Datenpanne 72h (Art. 33/34)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "drittlandtransfer_kap_v",
-                          "title": "Drittlandtransfer (Kap. V)",
                           "subtitle": ""
                         }
                       ],
@@ -76370,76 +76254,6 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_014",
-                          "text": "Grundprinzip: Verarbeitung ist grundsätzlich verboten – außer es gibt eine Erlaubnis/Rechtsgrundlage.",
-                          "correctForms": [
-                            "rechtsgrundlage_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_015",
-                          "text": "Mindestens eine von sechs Rechtsgrundlagen muss vorliegen, sonst ist die Verarbeitung unzulässig.",
-                          "correctForms": [
-                            "rechtsgrundlage_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_016",
-                          "text": "Rechtliche Verpflichtung (z. B. Aufbewahrungspflichten) kann eine Verarbeitung erlauben.",
-                          "correctForms": [
-                            "rechtsgrundlage_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_017",
-                          "text": "Vertrag/vorvertragliche Maßnahmen: Verarbeitung ist erlaubt, wenn sie zur Vertragserfüllung erforderlich ist.",
-                          "correctForms": [
-                            "rechtsgrundlage_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_018",
-                          "text": "Berechtigtes Interesse: erfordert Interessenabwägung und Begründung.",
-                          "correctForms": [
-                            "rechtsgrundlage_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_019",
-                          "text": "Prüfungsfalle: „Einwilligung ist immer am sichersten“ stimmt nicht, weil sie widerrufbar und nachweisbar sein muss.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_020",
-                          "text": "Muss freiwillig, informiert, eindeutig und zweckgebunden sein.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_021",
-                          "text": "Widerruf muss so leicht sein wie die Zustimmung.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_022",
-                          "text": "Opt-out/vorangehakte Kästchen sind problematisch, weil keine aktive eindeutige Zustimmung.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_023",
-                          "text": "Kopplung an eine Leistung kann die Freiwilligkeit zerstören.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
                           "id": "card_024",
                           "text": "Entscheidet über Zwecke und Mittel der Verarbeitung und trägt die DSGVO-Verantwortung.",
                           "correctForms": [
@@ -76465,216 +76279,6 @@ window.DATABASE_INDEX = [
                           "text": "Prüfungsfalle: Dienstleister ist nicht automatisch Auftragsverarbeiter – wenn er Zwecke/Mittel selbst bestimmt, ist er eher selbst Verantwortlicher.",
                           "correctForms": [
                             "auftragsverarbeiter"
-                          ]
-                        },
-                        {
-                          "id": "card_028",
-                          "text": "Pflicht, sobald ein Dienstleister im Auftrag personenbezogene Daten verarbeitet.",
-                          "correctForms": [
-                            "av_vertrag_art_28"
-                          ]
-                        },
-                        {
-                          "id": "card_029",
-                          "text": "Enthält u. a. Gegenstand, Dauer, Zweck, Datenarten, Weisungen, TOMs, Subunternehmer, Löschung/Rückgabe.",
-                          "correctForms": [
-                            "av_vertrag_art_28"
-                          ]
-                        },
-                        {
-                          "id": "card_030",
-                          "text": "Prüfungsfalle: Eine NDA/Geheimhaltungsvereinbarung ersetzt dieses Pflichtdokument nicht.",
-                          "correctForms": [
-                            "av_vertrag_art_28"
-                          ]
-                        },
-                        {
-                          "id": "card_031",
-                          "text": "Gesundheitsdaten, biometrische/genetische Daten, Religion, politische Meinung, Gewerkschaft, Sexualleben: extra strenge Regeln.",
-                          "correctForms": [
-                            "besondere_daten_art_9_10"
-                          ]
-                        },
-                        {
-                          "id": "card_032",
-                          "text": "Prüfungsfalle: Art. 6 allein reicht bei diesen Daten nicht; zusätzlich braucht es eine Ausnahme nach Art. 9 Abs. 2.",
-                          "correctForms": [
-                            "besondere_daten_art_9_10"
-                          ]
-                        },
-                        {
-                          "id": "card_033",
-                          "text": "Zum Zeitpunkt der Erhebung müssen Betroffene u. a. Verantwortlichen, Zweck/Rechtsgrundlage, Empfänger und Speicherdauer kennen.",
-                          "correctForms": [
-                            "informationspflichten_art_13_14"
-                          ]
-                        },
-                        {
-                          "id": "card_034",
-                          "text": "Mini-Check: Wer? Was? Wozu? Wie lange? Wohin? Welche Rechte?",
-                          "correctForms": [
-                            "informationspflichten_art_13_14"
-                          ]
-                        },
-                        {
-                          "id": "card_035",
-                          "text": "Prüfungsfalle: „Datenschutzhinweis irgendwo im Footer reicht“ – er muss im Kontext der Erhebung verfügbar sein.",
-                          "correctForms": [
-                            "informationspflichten_art_13_14"
-                          ]
-                        },
-                        {
-                          "id": "card_036",
-                          "text": "Auskunftsrecht: Welche Daten, Zweck, Empfänger, Speicherdauer.",
-                          "correctForms": [
-                            "betroffenenrechte_art_15_22"
-                          ]
-                        },
-                        {
-                          "id": "card_037",
-                          "text": "Löschung ist nicht immer möglich (z. B. bei gesetzlichen Aufbewahrungspflichten).",
-                          "correctForms": [
-                            "betroffenenrechte_art_15_22"
-                          ]
-                        },
-                        {
-                          "id": "card_038",
-                          "text": "Frist: In der Regel muss innerhalb von 1 Monat reagiert werden.",
-                          "correctForms": [
-                            "betroffenenrechte_art_15_22"
-                          ]
-                        },
-                        {
-                          "id": "card_039",
-                          "text": "Widerspruch ist besonders relevant bei Verarbeitung auf Basis berechtigter Interessen oder bei Direktwerbung.",
-                          "correctForms": [
-                            "betroffenenrechte_art_15_22"
-                          ]
-                        },
-                        {
-                          "id": "card_040",
-                          "text": "Geeignete technische und organisatorische Maßnahmen für ein angemessenes Schutzniveau (risikoangemessen, Stand der Technik).",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_041",
-                          "text": "Beispiele: Verschlüsselung, Rollenrechte/Least Privilege, MFA, Backup & Restore, Logging/Monitoring, Schulungen, Netzwerksicherheit.",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_042",
-                          "text": "Prüfungsfalle: „Ein Passwort für alle“ ist ein No-Go (Nachvollziehbarkeit + Zugriffskontrolle kaputt).",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_043",
-                          "text": "Datenschutz wird von Anfang an in Planung/Entwicklung berücksichtigt, nicht nachträglich „reingepatcht“.",
-                          "correctForms": [
-                            "privacy_by_design_default_art_25"
-                          ]
-                        },
-                        {
-                          "id": "card_044",
-                          "text": "Standardeinstellungen müssen datenschutzfreundlich sein: standardmäßig nur nötige Daten und restriktive Freigaben.",
-                          "correctForms": [
-                            "privacy_by_design_default_art_25"
-                          ]
-                        },
-                        {
-                          "id": "card_045",
-                          "text": "Internes Register aller Verarbeitungstätigkeiten als Kernartefakt der Rechenschaftspflicht.",
-                          "correctForms": [
-                            "vvt_art_30"
-                          ]
-                        },
-                        {
-                          "id": "card_046",
-                          "text": "Enthält u. a. Zwecke, Kategorien Betroffener/Daten, Empfänger, Löschfristen/Kriterien und eine allgemeine Beschreibung der TOMs.",
-                          "correctForms": [
-                            "vvt_art_30"
-                          ]
-                        },
-                        {
-                          "id": "card_047",
-                          "text": "Prüfungsfalle: „Nur für große Unternehmen“ – in der Praxis wird es fast immer erwartet; Ausnahmen sind sehr eng.",
-                          "correctForms": [
-                            "vvt_art_30"
-                          ]
-                        },
-                        {
-                          "id": "card_048",
-                          "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking/Profiling, systematische Überwachung, große Mengen sensibler Daten).",
-                          "correctForms": [
-                            "dsfa_art_35"
-                          ]
-                        },
-                        {
-                          "id": "card_049",
-                          "text": "Muss vor Start der Verarbeitung durchgeführt werden – nicht nachträglich als Formalität.",
-                          "correctForms": [
-                            "dsfa_art_35"
-                          ]
-                        },
-                        {
-                          "id": "card_050",
-                          "text": "Enthält Beschreibung, Notwendigkeit/Verhältnismäßigkeit, Risikobewertung und Maßnahmen zur Risikominderung.",
-                          "correctForms": [
-                            "dsfa_art_35"
-                          ]
-                        },
-                        {
-                          "id": "card_051",
-                          "text": "Verletzung des Schutzes personenbezogener Daten (z. B. Verlust, unbefugter Zugriff, Offenlegung).",
-                          "correctForms": [
-                            "datenpanne_72h_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_052",
-                          "text": "Meldung an Aufsichtsbehörde grundsätzlich binnen 72 Stunden nach Bekanntwerden, wenn ein Risiko besteht.",
-                          "correctForms": [
-                            "datenpanne_72h_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_053",
-                          "text": "Prüfungsfalle: 72 Stunden zählen ab Bekanntwerden, nicht ab dem Zeitpunkt des Vorfalls.",
-                          "correctForms": [
-                            "datenpanne_72h_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_054",
-                          "text": "Betroffene müssen informiert werden, wenn voraussichtlich ein hohes Risiko für sie entsteht.",
-                          "correctForms": [
-                            "datenpanne_72h_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_055",
-                          "text": "Übermittlung außerhalb EU/EWR braucht zusätzliche Garantien neben den normalen DSGVO-Anforderungen.",
-                          "correctForms": [
-                            "drittlandtransfer_kap_v"
-                          ]
-                        },
-                        {
-                          "id": "card_056",
-                          "text": "Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) oder Binding Corporate Rules (BCR) sind typische Instrumente.",
-                          "correctForms": [
-                            "drittlandtransfer_kap_v"
-                          ]
-                        },
-                        {
-                          "id": "card_057",
-                          "text": "Prüfungsfalle: Kapitel V ist nicht die Rechtsgrundlage – es ergänzt sie; Art. 6/9 brauchst du trotzdem.",
-                          "correctForms": [
-                            "drittlandtransfer_kap_v"
                           ]
                         }
                       ]
@@ -80819,19 +80423,7 @@ window.DATABASE_INDEX = [
                         "Besondere Daten Art. 9/10",
                         "Informationspflichten Art. 13/14",
                         "Betroffenenrechte",
-                        "Auftragsverarbeitung / AVV Art. 28",
-                        "TOMs Art. 32",
-                        "Privacy by Design/Default Art. 25",
-                        "VVT Art. 30",
-                        "DSFA Art. 35",
-                        "Datenpanne Art. 33/34",
-                        "Sanktionen/Haftung Art. 83/82",
-                        "SDM",
-                        "Drittlandtransfer Art. 44 ff.",
-                        "Praxisfälle AP1",
-                        "Prüfungsfallen-Check",
-                        "alle",
-                        "keine"
+                        "Auftragsverarbeitung / AVV Art. 28"
                       ],
                       "questions": [
                         {
@@ -80865,10 +80457,6 @@ window.DATABASE_INDEX = [
                         {
                           "text": "Wenn die Identität durch Zusatzwissen wieder hergestellt werden kann (z. B. Zuordnungstabelle), gilt DSGVO weiterhin.",
                           "correct": "Pseudonymisierung"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Pseudonymisiert = anonym“ ist falsch.",
-                          "correct": "Prüfungsfallen-Check"
                         },
                         {
                           "text": "Beispiel: Hash einer E-Mail-Adresse ist meistens weiterhin personenbezogen (wenn Re-Identifikation möglich/realistisch ist).",
@@ -80905,10 +80493,6 @@ window.DATABASE_INDEX = [
                         {
                           "text": "Verarbeitet Daten im Auftrag eines anderen und handelt nach Weisung (typisch: Cloud/Hosting/Payroll – je nach Setup).",
                           "correct": "Auftragsverarbeiter"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Dienstleister = automatisch Auftragsverarbeiter“ stimmt nicht – wenn er Zweck+Wie selbst bestimmt, ist er eher eigener Verantwortlicher.",
-                          "correct": "Prüfungsfallen-Check"
                         },
                         {
                           "text": "Bekommen Daten übermittelt (z. B. Versanddienstleister als Empfänger der Adressdaten).",
@@ -80975,115 +80559,15 @@ window.DATABASE_INDEX = [
                           "correct": "Auftragsverarbeitung / AVV Art. 28"
                         },
                         {
-                          "text": "Sicherheit der Verarbeitung: Maßnahmen nach Risiko (Stand der Technik, Kosten, Art/Umfang/Zweck) – Ziel: Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit.",
-                          "correct": "TOMs Art. 32"
-                        },
-                        {
-                          "text": "Beispiele für TOMs: Verschlüsselung, Zugriffskontrolle, Backup/Restore, Logging, Berechtigungskonzept, Schulungen.",
-                          "correct": "TOMs Art. 32"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Ein Passwort für alle“ ist ein No-Go.",
-                          "correct": "TOMs Art. 32"
-                        },
-                        {
-                          "text": "Datenschutz schon beim Entwurf berücksichtigen (Architektur/Prozesse) und nicht erst später „reinpatchen“.",
-                          "correct": "Privacy by Design/Default Art. 25"
-                        },
-                        {
-                          "text": "Voreinstellungen datenschutzfreundlich: minimal, restriktiv (z. B. kurze Logs, Tracker aus, Freigaben dicht).",
-                          "correct": "Privacy by Design/Default Art. 25"
-                        },
-                        {
-                          "text": "Pflicht-Register der Verarbeitungstätigkeiten: Zweck, Kategorien, Empfänger, Löschfristen, TOMs; muss bei Nachfrage vorzeigbar sein.",
-                          "correct": "VVT Art. 30"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Nur für große Unternehmen“ ist irreführend – Ausnahmen sind eng, in der Praxis wird es fast immer erwartet/sinnvoll.",
-                          "correct": "VVT Art. 30"
-                        },
-                        {
-                          "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking, Videoüberwachung, Profiling) und muss vor Start passieren.",
-                          "correct": "DSFA Art. 35"
-                        },
-                        {
-                          "text": "DSFA-Inhalt grob: Beschreibung Verarbeitung, Zweck, Notwendigkeit/Verhältnismäßigkeit, Risiken, Maßnahmen zur Risikosenkung.",
-                          "correct": "DSFA Art. 35"
-                        },
-                        {
-                          "text": "Meldung an Aufsichtsbehörde „unverzüglich“ und möglichst binnen 72 Stunden nach Bekanntwerden, wenn Risiko besteht.",
-                          "correct": "Datenpanne Art. 33/34"
-                        },
-                        {
-                          "text": "Prüfungsfalle: 72 Stunden laufen ab „Bekanntwerden“, nicht ab „Passiert“.",
-                          "correct": "Datenpanne Art. 33/34"
-                        },
-                        {
-                          "text": "Bei hohem Risiko müssen Betroffene informiert werden; intern braucht es Incident-Plan, Logs, Beweissicherung, Lessons Learned.",
-                          "correct": "Datenpanne Art. 33/34"
-                        },
-                        {
-                          "text": "Bußgelder je nach Verstoß bis 20 Mio € oder 4% weltweiter Jahresumsatz; zusätzlich Schadenersatzansprüche Betroffener möglich.",
-                          "correct": "Sanktionen/Haftung Art. 83/82"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Nur Behörden zahlen Strafe“ ist falsch – Unternehmen sind regelmäßig betroffen.",
-                          "correct": "Sanktionen/Haftung Art. 83/82"
-                        },
-                        {
-                          "text": "Vorgehensmodell/Denkmatrix, um DSGVO-Anforderungen systematisch in technische und organisatorische Maßnahmen zu übersetzen.",
-                          "correct": "SDM"
-                        },
-                        {
-                          "text": "Prüfungsfalle: SDM ist kein konkretes Software-Tool, sondern eine Methode.",
-                          "correct": "SDM"
-                        },
-                        {
-                          "text": "Übermittlung in Drittländer nur unter zusätzlichen Bedingungen (z. B. Angemessenheitsbeschluss, SCC, BCR) – und Art. 6 etc. braucht man trotzdem.",
-                          "correct": "Drittlandtransfer Art. 44 ff."
-                        },
-                        {
-                          "text": "Prüfungsfalle: Kapitel V ist nicht „die“ Rechtsgrundlage, sondern ergänzt die übrigen Anforderungen.",
-                          "correct": "Drittlandtransfer Art. 44 ff."
-                        },
-                        {
-                          "text": "Bewerberdaten: Zweck Bewerbung, danach löschen – Talentpool nur mit extra Einwilligung.",
-                          "correct": "Praxisfälle AP1"
-                        },
-                        {
-                          "text": "Logfiles: oft berechtigtes Interesse/Sicherheit; Datenminimierung und kurze Speicherfristen sind Pflichtthemen.",
-                          "correct": "Praxisfälle AP1"
-                        },
-                        {
-                          "text": "Newsletter: Einwilligung + Nachweis + Abmeldelink.",
-                          "correct": "Praxisfälle AP1"
-                        },
-                        {
-                          "text": "Mini-Formel für Einordnung: Zweck + Rechtsgrundlage + Frist + Empfänger + TOMs.",
-                          "correct": "Praxisfälle AP1"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Einmal Einwilligung, immer okay“ ist falsch – Zweckänderung bedeutet neu bewerten/neu informieren.",
-                          "correct": "Prüfungsfallen-Check"
-                        },
-                        {
                           "text": "„Rechenschaftspflicht“ heißt: Prozesse/Artefakte wie VVT, AVV, DSFA und Nachweise müssen greifbar sein.",
                           "correct": "Rechenschaftspflicht"
-                        },
-                        {
-                          "text": "„Ein Use-Case-Diagramm ist ein DSGVO-Dokumentationsartefakt und ersetzt das VVT.“",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "Ziel: Anforderungen verständlich machen und Kommunikation verbessern – das gilt für Datenschutzhinweis, Prozesse und Doku insgesamt.",
-                          "correct": "alle"
                         }
                       ]
                     }
                   },
                   {
-                    "id": "database/Teil 1/IT-Teil/Datenschutz/Level02/Datenschutz AP1-SS02.json",
-                    "name": "Datenschutz AP1-SS02.json",
+                    "id": "database/Teil 1/IT-Teil/Datenschutz/Level02/Datenschutz AP1-SP02.json",
+                    "name": "Datenschutz AP1-SP02.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
@@ -81129,106 +80613,6 @@ window.DATABASE_INDEX = [
                         {
                           "id": "verantwortlicher",
                           "title": "Verantwortlicher",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "auftragsverarbeiter",
-                          "title": "Auftragsverarbeiter",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "empfanger",
-                          "title": "Empfänger",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "rechtsgrundlagen_art_6",
-                          "title": "Rechtsgrundlagen Art. 6",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "einwilligung_art_7",
-                          "title": "Einwilligung Art. 7",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "besondere_daten_art_9_10",
-                          "title": "Besondere Daten Art. 9/10",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "informationspflichten_art_13_14",
-                          "title": "Informationspflichten Art. 13/14",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "betroffenenrechte",
-                          "title": "Betroffenenrechte",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "auftragsverarbeitung_avv_art_28",
-                          "title": "Auftragsverarbeitung / AVV Art. 28",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "toms_art_32",
-                          "title": "TOMs Art. 32",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "privacy_by_design_default_art_25",
-                          "title": "Privacy by Design/Default Art. 25",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "vvt_art_30",
-                          "title": "VVT Art. 30",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "dsfa_art_35",
-                          "title": "DSFA Art. 35",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "datenpanne_art_33_34",
-                          "title": "Datenpanne Art. 33/34",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "sanktionen_haftung_art_83_82",
-                          "title": "Sanktionen/Haftung Art. 83/82",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "sdm",
-                          "title": "SDM",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "drittlandtransfer_art_44_ff",
-                          "title": "Drittlandtransfer Art. 44 ff.",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "praxisfalle_ap1",
-                          "title": "Praxisfälle AP1",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "prufungsfallen_check",
-                          "title": "Prüfungsfallen-Check",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "alle",
-                          "title": "alle",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "keine",
-                          "title": "keine",
                           "subtitle": ""
                         }
                       ],
@@ -81290,13 +80674,6 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_009",
-                          "text": "Prüfungsfalle: „Pseudonymisiert = anonym“ ist falsch.",
-                          "correctForms": [
-                            "prufungsfallen_check"
-                          ]
-                        },
-                        {
                           "id": "card_010",
                           "text": "Beispiel: Hash einer E-Mail-Adresse ist meistens weiterhin personenbezogen (wenn Re-Identifikation möglich/realistisch ist).",
                           "correctForms": [
@@ -81353,311 +80730,10 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_018",
-                          "text": "Verarbeitet Daten im Auftrag eines anderen und handelt nach Weisung (typisch: Cloud/Hosting/Payroll – je nach Setup).",
-                          "correctForms": [
-                            "auftragsverarbeiter"
-                          ]
-                        },
-                        {
-                          "id": "card_019",
-                          "text": "Prüfungsfalle: „Dienstleister = automatisch Auftragsverarbeiter“ stimmt nicht – wenn er Zweck+Wie selbst bestimmt, ist er eher eigener Verantwortlicher.",
-                          "correctForms": [
-                            "prufungsfallen_check"
-                          ]
-                        },
-                        {
-                          "id": "card_020",
-                          "text": "Bekommen Daten übermittelt (z. B. Versanddienstleister als Empfänger der Adressdaten).",
-                          "correctForms": [
-                            "empfanger"
-                          ]
-                        },
-                        {
-                          "id": "card_021",
-                          "text": "Die 6 Klassiker: Einwilligung, Vertrag, rechtliche Pflicht, lebenswichtige Interessen, öffentliche Aufgabe, berechtigtes Interesse (mit Abwägung).",
-                          "correctForms": [
-                            "rechtsgrundlagen_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_022",
-                          "text": "Prüfungsfalle: „Einwilligung ist immer am sichersten“ ist falsch – sie muss freiwillig, widerrufbar und nachweisbar sein.",
-                          "correctForms": [
-                            "rechtsgrundlagen_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_023",
-                          "text": "Beispiel: Rechnung versenden basiert meist auf Vertrag/gesetzlicher Pflicht, nicht auf Einwilligung.",
-                          "correctForms": [
-                            "rechtsgrundlagen_art_6"
-                          ]
-                        },
-                        {
-                          "id": "card_024",
-                          "text": "Wirksam nur wenn freiwillig, informiert, eindeutig und zweckgebunden; Widerruf jederzeit.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_025",
-                          "text": "Widerruf muss so leicht sein wie Zustimmung (kein „Abmelden nur per Brief“).",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_026",
-                          "text": "Prüfungsfalle: Vorangekreuztes Opt-out ist problematisch/oft unwirksam.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_027",
-                          "text": "Prüfungsfalle: Zustimmung an eine Leistung koppeln ist häufig nicht freiwillig.",
-                          "correctForms": [
-                            "einwilligung_art_7"
-                          ]
-                        },
-                        {
-                          "id": "card_028",
-                          "text": "Extra scharf: Gesundheit, biometrische/genetische Daten, Religion, politische Meinung, Gewerkschaft, Sexualleben/Orientierung; grundsätzlich verboten, außer spezielle Ausnahmen.",
-                          "correctForms": [
-                            "besondere_daten_art_9_10"
-                          ]
-                        },
-                        {
-                          "id": "card_029",
-                          "text": "Prüfungsfalle: Art.-6-Rechtsgrundlage allein reicht bei besonderen Daten nicht; zusätzlich braucht es eine passende Ausnahme.",
-                          "correctForms": [
-                            "besondere_daten_art_9_10"
-                          ]
-                        },
-                        {
-                          "id": "card_030",
-                          "text": "Was Betroffene wissen müssen: Wer? Zwecke+Rechtsgrundlage? Empfänger? Speicherdauer? Rechte? ggf. Drittland/Profiling/Pflichtangaben.",
-                          "correctForms": [
-                            "informationspflichten_art_13_14"
-                          ]
-                        },
-                        {
-                          "id": "card_031",
-                          "text": "Prüfungsfalle: Datenschutzhinweis muss zum Zeitpunkt und Kontext passen, nicht irgendwo versteckt.",
-                          "correctForms": [
-                            "informationspflichten_art_13_14"
-                          ]
-                        },
-                        {
-                          "id": "card_032",
-                          "text": "Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, kein reines Profiling/Automatismus; Frist i. d. R. 1 Monat.",
-                          "correctForms": [
-                            "betroffenenrechte"
-                          ]
-                        },
-                        {
-                          "id": "card_033",
-                          "text": "Prüfungsfalle: Löschung ist nicht immer sofort möglich (z. B. gesetzliche Aufbewahrungspflichten).",
-                          "correctForms": [
-                            "betroffenenrechte"
-                          ]
-                        },
-                        {
-                          "id": "card_034",
-                          "text": "Wenn ein Dienstleister „im Auftrag“ verarbeitet, braucht es einen Vertrag mit Pflichtinhalten (z. B. Zweck, Dauer, Datenarten, TOMs, Weisungen, Subunternehmer).",
-                          "correctForms": [
-                            "auftragsverarbeitung_avv_art_28"
-                          ]
-                        },
-                        {
-                          "id": "card_035",
-                          "text": "Prüfungsfalle: NDA reicht nicht als Ersatz für einen AV-Vertrag.",
-                          "correctForms": [
-                            "auftragsverarbeitung_avv_art_28"
-                          ]
-                        },
-                        {
-                          "id": "card_036",
-                          "text": "Sicherheit der Verarbeitung: Maßnahmen nach Risiko (Stand der Technik, Kosten, Art/Umfang/Zweck) – Ziel: Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit.",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_037",
-                          "text": "Beispiele für TOMs: Verschlüsselung, Zugriffskontrolle, Backup/Restore, Logging, Berechtigungskonzept, Schulungen.",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_038",
-                          "text": "Prüfungsfalle: „Ein Passwort für alle“ ist ein No-Go.",
-                          "correctForms": [
-                            "toms_art_32"
-                          ]
-                        },
-                        {
-                          "id": "card_039",
-                          "text": "Datenschutz schon beim Entwurf berücksichtigen (Architektur/Prozesse) und nicht erst später „reinpatchen“.",
-                          "correctForms": [
-                            "privacy_by_design_default_art_25"
-                          ]
-                        },
-                        {
-                          "id": "card_040",
-                          "text": "Voreinstellungen datenschutzfreundlich: minimal, restriktiv (z. B. kurze Logs, Tracker aus, Freigaben dicht).",
-                          "correctForms": [
-                            "privacy_by_design_default_art_25"
-                          ]
-                        },
-                        {
-                          "id": "card_041",
-                          "text": "Pflicht-Register der Verarbeitungstätigkeiten: Zweck, Kategorien, Empfänger, Löschfristen, TOMs; muss bei Nachfrage vorzeigbar sein.",
-                          "correctForms": [
-                            "vvt_art_30"
-                          ]
-                        },
-                        {
-                          "id": "card_042",
-                          "text": "Prüfungsfalle: „Nur für große Unternehmen“ ist irreführend – Ausnahmen sind eng, in der Praxis wird es fast immer erwartet/sinnvoll.",
-                          "correctForms": [
-                            "vvt_art_30"
-                          ]
-                        },
-                        {
-                          "id": "card_043",
-                          "text": "Pflicht bei voraussichtlich hohem Risiko (z. B. umfangreiches Tracking, Videoüberwachung, Profiling) und muss vor Start passieren.",
-                          "correctForms": [
-                            "dsfa_art_35"
-                          ]
-                        },
-                        {
-                          "id": "card_044",
-                          "text": "DSFA-Inhalt grob: Beschreibung Verarbeitung, Zweck, Notwendigkeit/Verhältnismäßigkeit, Risiken, Maßnahmen zur Risikosenkung.",
-                          "correctForms": [
-                            "dsfa_art_35"
-                          ]
-                        },
-                        {
-                          "id": "card_045",
-                          "text": "Meldung an Aufsichtsbehörde „unverzüglich“ und möglichst binnen 72 Stunden nach Bekanntwerden, wenn Risiko besteht.",
-                          "correctForms": [
-                            "datenpanne_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_046",
-                          "text": "Prüfungsfalle: 72 Stunden laufen ab „Bekanntwerden“, nicht ab „Passiert“.",
-                          "correctForms": [
-                            "datenpanne_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_047",
-                          "text": "Bei hohem Risiko müssen Betroffene informiert werden; intern braucht es Incident-Plan, Logs, Beweissicherung, Lessons Learned.",
-                          "correctForms": [
-                            "datenpanne_art_33_34"
-                          ]
-                        },
-                        {
-                          "id": "card_048",
-                          "text": "Bußgelder je nach Verstoß bis 20 Mio € oder 4% weltweiter Jahresumsatz; zusätzlich Schadenersatzansprüche Betroffener möglich.",
-                          "correctForms": [
-                            "sanktionen_haftung_art_83_82"
-                          ]
-                        },
-                        {
-                          "id": "card_049",
-                          "text": "Prüfungsfalle: „Nur Behörden zahlen Strafe“ ist falsch – Unternehmen sind regelmäßig betroffen.",
-                          "correctForms": [
-                            "sanktionen_haftung_art_83_82"
-                          ]
-                        },
-                        {
-                          "id": "card_050",
-                          "text": "Vorgehensmodell/Denkmatrix, um DSGVO-Anforderungen systematisch in technische und organisatorische Maßnahmen zu übersetzen.",
-                          "correctForms": [
-                            "sdm"
-                          ]
-                        },
-                        {
-                          "id": "card_051",
-                          "text": "Prüfungsfalle: SDM ist kein konkretes Software-Tool, sondern eine Methode.",
-                          "correctForms": [
-                            "sdm"
-                          ]
-                        },
-                        {
-                          "id": "card_052",
-                          "text": "Übermittlung in Drittländer nur unter zusätzlichen Bedingungen (z. B. Angemessenheitsbeschluss, SCC, BCR) – und Art. 6 etc. braucht man trotzdem.",
-                          "correctForms": [
-                            "drittlandtransfer_art_44_ff"
-                          ]
-                        },
-                        {
-                          "id": "card_053",
-                          "text": "Prüfungsfalle: Kapitel V ist nicht „die“ Rechtsgrundlage, sondern ergänzt die übrigen Anforderungen.",
-                          "correctForms": [
-                            "drittlandtransfer_art_44_ff"
-                          ]
-                        },
-                        {
-                          "id": "card_054",
-                          "text": "Bewerberdaten: Zweck Bewerbung, danach löschen – Talentpool nur mit extra Einwilligung.",
-                          "correctForms": [
-                            "praxisfalle_ap1"
-                          ]
-                        },
-                        {
-                          "id": "card_055",
-                          "text": "Logfiles: oft berechtigtes Interesse/Sicherheit; Datenminimierung und kurze Speicherfristen sind Pflichtthemen.",
-                          "correctForms": [
-                            "praxisfalle_ap1"
-                          ]
-                        },
-                        {
-                          "id": "card_056",
-                          "text": "Newsletter: Einwilligung + Nachweis + Abmeldelink.",
-                          "correctForms": [
-                            "praxisfalle_ap1"
-                          ]
-                        },
-                        {
-                          "id": "card_057",
-                          "text": "Mini-Formel für Einordnung: Zweck + Rechtsgrundlage + Frist + Empfänger + TOMs.",
-                          "correctForms": [
-                            "praxisfalle_ap1"
-                          ]
-                        },
-                        {
-                          "id": "card_058",
-                          "text": "Prüfungsfalle: „Einmal Einwilligung, immer okay“ ist falsch – Zweckänderung bedeutet neu bewerten/neu informieren.",
-                          "correctForms": [
-                            "prufungsfallen_check"
-                          ]
-                        },
-                        {
                           "id": "card_059",
                           "text": "„Rechenschaftspflicht“ heißt: Prozesse/Artefakte wie VVT, AVV, DSFA und Nachweise müssen greifbar sein.",
                           "correctForms": [
                             "rechenschaftspflicht"
-                          ]
-                        },
-                        {
-                          "id": "card_060",
-                          "text": "„Ein Use-Case-Diagramm ist ein DSGVO-Dokumentationsartefakt und ersetzt das VVT.“",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_061",
-                          "text": "Ziel: Anforderungen verständlich machen und Kommunikation verbessern – das gilt für Datenschutzhinweis, Prozesse und Doku insgesamt.",
-                          "correctForms": [
-                            "alle"
                           ]
                         }
                       ]

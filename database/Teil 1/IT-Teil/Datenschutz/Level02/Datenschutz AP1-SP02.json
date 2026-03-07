@@ -1,0 +1,168 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – DSGVO Grundlagen & Prüfungsfallen (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "dsgvo_grundprinzip_verbot_mit_erlaubnisvorbehalt",
+      "title": "DSGVO Grundprinzip (Verbot mit Erlaubnisvorbehalt)",
+      "subtitle": ""
+    },
+    {
+      "id": "rechenschaftspflicht",
+      "title": "Rechenschaftspflicht",
+      "subtitle": ""
+    },
+    {
+      "id": "personenbezogene_daten",
+      "title": "Personenbezogene Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "anonymisierung",
+      "title": "Anonymisierung",
+      "subtitle": ""
+    },
+    {
+      "id": "pseudonymisierung",
+      "title": "Pseudonymisierung",
+      "subtitle": ""
+    },
+    {
+      "id": "verarbeitung",
+      "title": "Verarbeitung",
+      "subtitle": ""
+    },
+    {
+      "id": "grundsatze_art_5",
+      "title": "Grundsätze Art. 5",
+      "subtitle": ""
+    },
+    {
+      "id": "verantwortlicher",
+      "title": "Verantwortlicher",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Grundlogik: Personenbezogene Daten zu verarbeiten ist grundsätzlich verboten – außer es gibt eine klare Erlaubnis (z. B. Gesetz, Vertrag, Einwilligung).",
+      "correctForms": [
+        "dsgvo_grundprinzip_verbot_mit_erlaubnisvorbehalt"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Kerngedanke: Rechtmäßig handeln, transparent sein und das Ganze nachweisen können.",
+      "correctForms": [
+        "rechenschaftspflicht"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Prüfungsfalle: „Wenn niemand meckert, passt’s“ ist falsch – der Verantwortliche muss die Einhaltung belegen können.",
+      "correctForms": [
+        "rechenschaftspflicht"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Merksatz: Nicht nur „machen“, sondern „begründen + dokumentieren“.",
+      "correctForms": [
+        "rechenschaftspflicht"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Info über eine identifizierte oder identifizierbare natürliche Person (direkt oder indirekt).",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Typische Beispiele: Name, E-Mail, Kundennummer, Standortdaten, Online-Kennung; IP-Adresse oft ebenfalls.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Wenn der Personenbezug wirklich nicht mehr herstellbar ist, fällt das in der Regel nicht mehr unter DSGVO.",
+      "correctForms": [
+        "anonymisierung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wenn die Identität durch Zusatzwissen wieder hergestellt werden kann (z. B. Zuordnungstabelle), gilt DSGVO weiterhin.",
+      "correctForms": [
+        "pseudonymisierung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Beispiel: Hash einer E-Mail-Adresse ist meistens weiterhin personenbezogen (wenn Re-Identifikation möglich/realistisch ist).",
+      "correctForms": [
+        "pseudonymisierung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Jeder Umgang mit Daten zählt: erheben, speichern, verändern, übermitteln, löschen – sogar ansehen.",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Prüfungsfalle: „Nur Speichern zählt“ ist falsch – schon Erheben/Ansehen ist Verarbeitung.",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Daten-Lebenszyklus: Erheben → Nutzen → Teilen → Speichern → Löschen/Archiv.",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Mini-Check: „Wer sieht was, wann, wozu, wie lange?“",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Die „6 Gebote“: Rechtmäßigkeit/Fairness/Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität & Vertraulichkeit (+ Nachweis).",
+      "correctForms": [
+        "grundsatze_art_5"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Prüfungsfalle: „Wir sammeln mal, könnte später nützlich sein“ ist bei DSGVO meistens ein No-Go.",
+      "correctForms": [
+        "grundsatze_art_5"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Wer Zwecke und Mittel („wozu“ und „wie“) festlegt, trägt den Hut.",
+      "correctForms": [
+        "verantwortlicher"
+      ]
+    },
+    {
+      "id": "card_059",
+      "text": "„Rechenschaftspflicht“ heißt: Prozesse/Artefakte wie VVT, AVV, DSFA und Nachweise müssen greifbar sein.",
+      "correctForms": [
+        "rechenschaftspflicht"
+      ]
+    }
+  ]
+}

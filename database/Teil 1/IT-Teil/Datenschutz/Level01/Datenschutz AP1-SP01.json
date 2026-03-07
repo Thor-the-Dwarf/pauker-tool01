@@ -1,0 +1,168 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Datenschutz (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Datenschutz-Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "datenschutz",
+      "title": "Datenschutz",
+      "subtitle": ""
+    },
+    {
+      "id": "it_sicherheit",
+      "title": "IT-Sicherheit",
+      "subtitle": ""
+    },
+    {
+      "id": "personenbezogene_daten",
+      "title": "Personenbezogene Daten",
+      "subtitle": ""
+    },
+    {
+      "id": "anonymisierung",
+      "title": "Anonymisierung",
+      "subtitle": ""
+    },
+    {
+      "id": "pseudonymisierung",
+      "title": "Pseudonymisierung",
+      "subtitle": ""
+    },
+    {
+      "id": "verarbeitung",
+      "title": "Verarbeitung",
+      "subtitle": ""
+    },
+    {
+      "id": "verantwortlicher",
+      "title": "Verantwortlicher",
+      "subtitle": ""
+    },
+    {
+      "id": "auftragsverarbeiter",
+      "title": "Auftragsverarbeiter",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Schützt personenbezogene Daten und die Rechte betroffener Personen; Leitfrage: „Darf ich das?“",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Schützt Systeme und Daten allgemein, auch ohne Personenbezug; Leitfrage: „Ist es geschützt?“",
+      "correctForms": [
+        "it_sicherheit"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Technische Maßnahmen wie Zugriffsschutz helfen oft beiden Zielen, ersetzen aber keine rechtliche Prüfung.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Prüfungsfalle: „Verschlüsselung = Datenschutz erledigt“ ist falsch, weil trotzdem Zweck und Rechtsgrundlage nötig sind.",
+      "correctForms": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Information über eine identifizierte oder identifizierbare natürliche Person.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "IP-Adresse kann je nach Kontext personenbeziehbar sein.",
+      "correctForms": [
+        "personenbezogene_daten"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Kein Personenbezug mehr, auch nicht mit vertretbarem Aufwand herstellbar → DSGVO nicht anwendbar.",
+      "correctForms": [
+        "anonymisierung"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Personenbezug bleibt grundsätzlich möglich (z. B. über Zusatzwissen/Zuordnung) → DSGVO gilt weiter.",
+      "correctForms": [
+        "pseudonymisierung"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Prüfungsfalle: „Pseudonymisiert = anonym“ ist falsch.",
+      "correctForms": [
+        "pseudonymisierung"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Ein Hash einer E-Mail-Adresse ist oft nicht anonym, solange Re-Identifikation möglich bleibt.",
+      "correctForms": [
+        "pseudonymisierung"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Umfasst jeden Vorgang mit personenbezogenen Daten – nicht nur das Speichern.",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Schon Erheben oder Ansehen von personenbezogenen Daten zählt dazu.",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Mini-Check: „Wer sieht was, wann, wozu, wie lange?“",
+      "correctForms": [
+        "verarbeitung"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Entscheidet über Zwecke und Mittel der Verarbeitung und trägt die DSGVO-Verantwortung.",
+      "correctForms": [
+        "verantwortlicher"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Merksatz: Wer „Zweck + Wie“ festlegt, trägt den Hut.",
+      "correctForms": [
+        "verantwortlicher"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Verarbeitet personenbezogene Daten im Auftrag und nach Weisung des Verantwortlichen.",
+      "correctForms": [
+        "auftragsverarbeiter"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Prüfungsfalle: Dienstleister ist nicht automatisch Auftragsverarbeiter – wenn er Zwecke/Mittel selbst bestimmt, ist er eher selbst Verantwortlicher.",
+      "correctForms": [
+        "auftragsverarbeiter"
+      ]
+    }
+  ]
+}
