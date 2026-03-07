@@ -20,21 +20,7 @@
     "Verschlüsselung",
     "Zugriffskontrolle",
     "Dokumentklassifikation",
-    "ILM",
-    "Restore-Test",
-    "Disaster Recovery",
-    "Versionierung",
-    "Snapshot",
-    "Inkrementelles Backup",
-    "Vollsicherung",
-    "Deduplizierung",
-    "Aufbewahrungsfrist",
-    "Rechtskonforme Löschung",
-    "Retrieval-Fähigkeit",
-    "Beweiswert",
-    "Hybridkonzept Backup+Archiv",
-    "alle",
-    "keine"
+    "ILM"
   ],
   "questions": [
     {
@@ -102,54 +88,6 @@
       "correct": "ILM"
     },
     {
-      "text": "Praktischer Nachweis, dass Wiederherstellung im Ernstfall funktioniert.",
-      "correct": "Restore-Test"
-    },
-    {
-      "text": "Umfasst Planung und Abläufe für Wiederanlauf nach großem Ausfall.",
-      "correct": "Disaster Recovery"
-    },
-    {
-      "text": "Hält mehrere Stände vor, um auf frühere Zustände zurückzugehen.",
-      "correct": "Versionierung"
-    },
-    {
-      "text": "Punkt-in-Zeit-Abbild eines Systems oder Volumes.",
-      "correct": "Snapshot"
-    },
-    {
-      "text": "Sichert nur Änderungen seit der letzten Sicherung.",
-      "correct": "Inkrementelles Backup"
-    },
-    {
-      "text": "Erzeugt eine vollständige Sicherung des gesamten Datenbestands.",
-      "correct": "Vollsicherung"
-    },
-    {
-      "text": "Eliminiert redundante Datenblöcke zur Speicherreduktion.",
-      "correct": "Deduplizierung"
-    },
-    {
-      "text": "Gibt den Zeitraum vor, in dem ein Dokument verfügbar sein muss.",
-      "correct": "Aufbewahrungsfrist"
-    },
-    {
-      "text": "Dokumentierte Entfernung nach Ablauf der Frist nach definierten Regeln.",
-      "correct": "Rechtskonforme Löschung"
-    },
-    {
-      "text": "Sicherstellung, dass ein bestimmtes Archivdokument schnell gefunden werden kann.",
-      "correct": "Retrieval-Fähigkeit"
-    },
-    {
-      "text": "Nachweischarakter eines archivierten Dokuments in Prüfung/Rechtsfall.",
-      "correct": "Beweiswert"
-    },
-    {
-      "text": "Kombiniert operative Wiederherstellung und langfristige Nachweisführung.",
-      "correct": "Hybridkonzept Backup+Archiv"
-    },
-    {
       "text": "RTO und RPO gehören in den Kern eines Backup-Konzepts.",
       "correct": "Backup"
     },
@@ -164,14 +102,6 @@
     {
       "text": "Erhöht meist die Auffindbarkeit, aber nicht automatisch die Integrität.",
       "correct": "Volltextindex"
-    },
-    {
-      "text": "Backups ohne Restore-Test sind ein hohes Risiko.",
-      "correct": "Restore-Test"
-    },
-    {
-      "text": "Ist typischerweise für schnelle Rollbacks im Betrieb sehr nützlich.",
-      "correct": "Snapshot"
     },
     {
       "text": "Kann Aufbewahrungspflichten allein nicht ersetzen: rein operative Datensicherung.",
@@ -192,14 +122,6 @@
     {
       "text": "Diese Kennzahl beantwortet: Wie weit darf der Datenstand zurückliegen?",
       "correct": "RPO"
-    },
-    {
-      "text": "Verschlüsselung, Zugriffskontrolle und Integritätsschutz sind für vertrauenswürdige Ablage relevant.",
-      "correct": "alle"
-    },
-    {
-      "text": "'Ein täglicher Snapshot erfüllt automatisch sämtliche Compliance-Anforderungen eines Archivs.'",
-      "correct": "keine"
     }
   ]
 }

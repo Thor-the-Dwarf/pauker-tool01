@@ -1,0 +1,112 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Dateiformate (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Struktur, Kodierung, Validierung und Importrobustheit.",
+  "columns": [
+    {
+      "id": "textformat",
+      "title": "Textformat",
+      "subtitle": ""
+    },
+    {
+      "id": "binaerformat",
+      "title": "Binaerformat",
+      "subtitle": ""
+    },
+    {
+      "id": "csv",
+      "title": "CSV",
+      "subtitle": ""
+    },
+    {
+      "id": "tsv",
+      "title": "TSV",
+      "subtitle": ""
+    },
+    {
+      "id": "delimiter",
+      "title": "Delimiter",
+      "subtitle": ""
+    },
+    {
+      "id": "quoting",
+      "title": "Quoting",
+      "subtitle": ""
+    },
+    {
+      "id": "escaping",
+      "title": "Escaping",
+      "subtitle": ""
+    },
+    {
+      "id": "json",
+      "title": "JSON",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Direkt lesbar im Editor und gut fuer schnelle Fehlersuche.",
+      "correctForms": [
+        "textformat"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Typisch nicht direkt lesbar, Verarbeitung ueber spezialisierte Programme.",
+      "correctForms": [
+        "binaerformat"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Tabellarisches Zeilen-Spalten-Format mit sehr hoher Praxisverbreitung beim Export.",
+      "correctForms": [
+        "csv"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Tabellarischer Datenaustausch mit Tabulator statt Komma/Semikolon.",
+      "correctForms": [
+        "tsv"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Bestimmt, woran Spalten im CSV getrennt werden.",
+      "correctForms": [
+        "delimiter"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Sichert Felder, die selbst Trennzeichen enthalten.",
+      "correctForms": [
+        "quoting"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Maskiert Sonderzeichen gemaess Parserregeln.",
+      "correctForms": [
+        "escaping"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Hierarchisches Key-Value-Format, besonders in REST-Schnittstellen verbreitet.",
+      "correctForms": [
+        "json"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Spalten verrutschen, weil Adressfeld mit Komma nicht korrekt geschuetzt ist.",
+      "correctForms": [
+        "quoting"
+      ]
+    }
+  ]
+}

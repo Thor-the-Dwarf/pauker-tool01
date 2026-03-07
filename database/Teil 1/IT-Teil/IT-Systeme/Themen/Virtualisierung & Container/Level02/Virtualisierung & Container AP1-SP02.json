@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Virtualisierung & Container (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Isolation, Orchestrierung, Persistenz, Security und Resilienz.",
+  "columns": [
+    {
+      "id": "hypervisor_typ_1_bare_metal",
+      "title": "Hypervisor Typ 1 (Bare Metal)",
+      "subtitle": ""
+    },
+    {
+      "id": "hypervisor_typ_2_hosted",
+      "title": "Hypervisor Typ 2 (Hosted)",
+      "subtitle": ""
+    },
+    {
+      "id": "vm_isolationsgrenze",
+      "title": "VM-Isolationsgrenze",
+      "subtitle": ""
+    },
+    {
+      "id": "container_kernel_sharing",
+      "title": "Container-Kernel-Sharing",
+      "subtitle": ""
+    },
+    {
+      "id": "container_runtime",
+      "title": "Container-Runtime",
+      "subtitle": ""
+    },
+    {
+      "id": "orchestrierungs_control_plane",
+      "title": "Orchestrierungs-Control-Plane",
+      "subtitle": ""
+    },
+    {
+      "id": "rolling_update",
+      "title": "Rolling Update",
+      "subtitle": ""
+    },
+    {
+      "id": "rollback_strategie",
+      "title": "Rollback-Strategie",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Virtualisierungsschicht läuft direkt auf Hardware ohne allgemeines Host-OS.",
+      "correctForms": [
+        "hypervisor_typ_1_bare_metal"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Virtualisierung wird als Anwendung auf einem bestehenden Betriebssystem betrieben.",
+      "correctForms": [
+        "hypervisor_typ_2_hosted"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Eigene Gast-OS pro Instanz bilden eine starke Trennungsgrenze.",
+      "correctForms": [
+        "vm_isolationsgrenze"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Mehrere Instanzen teilen denselben Host-Kernel.",
+      "correctForms": [
+        "container_kernel_sharing"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Steuert Lebenszyklus einzelner Containerinstanzen auf Node-Ebene.",
+      "correctForms": [
+        "container_runtime"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Planung, Desired State und flächige Rolloutsteuerung liegen hier zentral.",
+      "correctForms": [
+        "orchestrierungs_control_plane"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Versionstausch in kleinen Schritten reduziert Ausfallrisiko während Updates.",
+      "correctForms": [
+        "rolling_update"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Definierter Rückweg auf letzte stabile Version.",
+      "correctForms": [
+        "rollback_strategie"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Cloud (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Modelle, Security, FinOps, Resilienz und Compliance sauber trennen.",
+  "columns": [
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "public_cloud",
+      "title": "Public Cloud",
+      "subtitle": ""
+    },
+    {
+      "id": "private_cloud",
+      "title": "Private Cloud",
+      "subtitle": ""
+    },
+    {
+      "id": "hybrid_cloud",
+      "title": "Hybrid Cloud",
+      "subtitle": ""
+    },
+    {
+      "id": "multi_cloud",
+      "title": "Multi-Cloud",
+      "subtitle": ""
+    },
+    {
+      "id": "shared_responsibility",
+      "title": "Shared Responsibility",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Du betreibst VMs selbst und patchst das Gastbetriebssystem eigenverantwortlich.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Du deployst nur den Anwendungscode; Laufzeit und Plattformbetrieb liefert der Anbieter.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Fertige Business-Anwendung im Browser als Abomodell nutzen.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Geteilte Provider-Infrastruktur, nutzungsbasierte Abrechnung, Ressourcen extern bezogen.",
+      "correctForms": [
+        "public_cloud"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Cloud-Prinzipien auf dedizierter Infrastruktur fuer genau eine Organisation.",
+      "correctForms": [
+        "private_cloud"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Regulierte Kernsysteme bleiben on-prem, Lastspitzen gehen in externe Cloud-Ressourcen.",
+      "correctForms": [
+        "hybrid_cloud"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Zwei Public-Provider gezielt fuer Risiko- und Funktionsdiversifizierung einsetzen.",
+      "correctForms": [
+        "multi_cloud"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Grundprinzip: Anbieter schuetzt die Cloud, Kunde schuetzt Konfiguration, Zugriffe und Daten.",
+      "correctForms": [
+        "shared_responsibility"
+      ]
+    }
+  ]
+}

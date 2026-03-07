@@ -1,0 +1,161 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "IT-Systeme (AP1) — Hardware • Software • Dateiformate • Cloud • USV • Backup",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "it_system",
+      "title": "IT-System",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "paging_swap",
+      "title": "Paging/Swap",
+      "subtitle": ""
+    },
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_sata",
+      "title": "SSD (SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD (NVMe)",
+      "subtitle": ""
+    },
+    {
+      "id": "iops",
+      "title": "IOPS",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Besteht aus Hardware + Software + Daten + Betrieb/Prozessen (z. B. Backup, Sicherheit).",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prüfungsziel: Komponenten kennen, Auswahl begründen und typische Risiken nennen (nicht nur Specs aufsagen).",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Prüfungsfalle: Nur „Specs aufzählen“ reicht nicht – Use-Case, Kompatibilität und Betrieb (Backup/USV) gehören dazu.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Merksatz: „Funktioniert“ ist erst wahr, wenn Betrieb und Wiederherstellung geklärt sind.",
+      "correctForms": [
+        "it_system"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Leistung grob über Kerne/Threads, Takt und Cache; Workload entscheidet, was zählt.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Prüfungsfalle: „GHz = schnell“ ist zu kurz gedacht; Architektur/Cache/Workload sind oft wichtiger.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Single-Core ist häufig wichtig für UI/Office; Multi-Core eher für VMs/Render/Parallel-Workloads.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Wenn zu knapp, wird ausgelagert und das System wird zäh – obwohl die CPU noch Luft hat.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Auslagerung auf Massenspeicher, wenn RAM fehlt; massiv langsamer als echter RAM.",
+      "correctForms": [
+        "paging_swap"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Prüfungsfalle: „RAM ist wie Festplatte“ ist falsch – RAM ist flüchtig und viel schneller.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Server-Option: Speicher mit Fehlerkorrektur für höhere Zuverlässigkeit (wenn Plattform unterstützt).",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Günstig pro GB, gut für Archiv/Backup-Targets, aber langsam wegen Mechanik.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "SSD über SATA: deutlich schneller als HDD, aber durch SATA begrenzt.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "SSD über NVMe: sehr hohe IOPS und sehr hoher Datendurchsatz.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Kennzahl für viele kleine Zugriffe (Random I/O) pro Sekunde.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Wichtig für Datenbank/VM-Host: viele kleine Zugriffe → diese Kennzahl ist oft entscheidender als nur MB/s.",
+      "correctForms": [
+        "iops"
+      ]
+    }
+  ]
+}

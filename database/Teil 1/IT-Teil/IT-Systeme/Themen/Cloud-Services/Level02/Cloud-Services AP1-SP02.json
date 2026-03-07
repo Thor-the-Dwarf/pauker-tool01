@@ -1,0 +1,112 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Cloud-Services (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Modellwahl, Verantwortungen, Security, FinOps und Resilienz sauber trennen.",
+  "columns": [
+    {
+      "id": "iaas",
+      "title": "IaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "paas",
+      "title": "PaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "saas",
+      "title": "SaaS",
+      "subtitle": ""
+    },
+    {
+      "id": "shared_responsibility",
+      "title": "Shared Responsibility",
+      "subtitle": ""
+    },
+    {
+      "id": "providerverantwortung",
+      "title": "Providerverantwortung",
+      "subtitle": ""
+    },
+    {
+      "id": "kundenverantwortung",
+      "title": "Kundenverantwortung",
+      "subtitle": ""
+    },
+    {
+      "id": "managed_database",
+      "title": "Managed Database",
+      "subtitle": ""
+    },
+    {
+      "id": "serverless_function",
+      "title": "Serverless Function",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Virtuelle Infrastruktur mieten und Betriebssystem selbst patchen.",
+      "correctForms": [
+        "iaas"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Anwendungscode deployen, waehrend die Plattformlaufzeit gemanagt wird.",
+      "correctForms": [
+        "paas"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Fertige Fachanwendung direkt im Browser nutzen.",
+      "correctForms": [
+        "saas"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Grundprinzip: Anbieter schuetzt die Cloud-Basis, Kunde schuetzt Nutzung und Konfiguration.",
+      "correctForms": [
+        "shared_responsibility"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Physische Datacenter-Sicherheit und Host-Infrastruktur absichern.",
+      "correctForms": [
+        "providerverantwortung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Rollenmodell, Freigaben und Datenklassifizierung korrekt pflegen.",
+      "correctForms": [
+        "kundenverantwortung"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Datenbankdienst als Plattformkomponente mit weniger Eigenbetrieb.",
+      "correctForms": [
+        "managed_database"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Code nur ereignisbasiert ausfuehren, ohne Server dauerhaft zu verwalten.",
+      "correctForms": [
+        "serverless_function"
+      ]
+    },
+    {
+      "id": "card_036",
+      "text": "Bei SaaS sind IAM und Rollenmodell weiterhin relevant.",
+      "correctForms": [
+        "kundenverantwortung"
+      ]
+    }
+  ]
+}

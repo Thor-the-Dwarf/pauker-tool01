@@ -20,62 +20,84 @@
     "Encoding-Mismatch",
     "BOM",
     "Zeilenende LF/CRLF",
-    "Dezimaltrennzeichen",
-    "Feldmapping",
-    "Pflichtfeldpruefung",
-    "Typvalidierung",
-    "Schnittstellenversionierung",
-    "Content-Type",
-    "MIME-Type",
-    "Komprimierung",
-    "Base64",
-    "Pruefsumme",
-    "Kanonisierung",
-    "CSV-Injection",
-    "Fehler-Runbook",
-    "Import-Monitoring",
-    "Formatvertrag",
-    "alle",
-    "keine"
+    "Dezimaltrennzeichen"
   ],
   "questions": [
-    { "text": "Direkt lesbar im Editor und gut fuer schnelle Fehlersuche.", "correct": "Textformat" },
-    { "text": "Typisch nicht direkt lesbar, Verarbeitung ueber spezialisierte Programme.", "correct": "Binaerformat" },
-    { "text": "Tabellarisches Zeilen-Spalten-Format mit sehr hoher Praxisverbreitung beim Export.", "correct": "CSV" },
-    { "text": "Tabellarischer Datenaustausch mit Tabulator statt Komma/Semikolon.", "correct": "TSV" },
-    { "text": "Bestimmt, woran Spalten im CSV getrennt werden.", "correct": "Delimiter" },
-    { "text": "Sichert Felder, die selbst Trennzeichen enthalten.", "correct": "Quoting" },
-    { "text": "Maskiert Sonderzeichen gemaess Parserregeln.", "correct": "Escaping" },
-    { "text": "Hierarchisches Key-Value-Format, besonders in REST-Schnittstellen verbreitet.", "correct": "JSON" },
-    { "text": "Tag-basiertes hierarchisches Austauschformat.", "correct": "XML" },
-    { "text": "Definiert Struktur- und Typregeln fuer JSON-Daten.", "correct": "JSON Schema" },
-    { "text": "Schema-Definition fuer XML-Dokumente.", "correct": "XSD" },
-    { "text": "Gaengige Zeichencodierung fuer moderne Datenschnittstellen.", "correct": "UTF-8" },
-    { "text": "Zeichensalat durch abweichende Kodierungsannahmen von Sender und Empfaenger.", "correct": "Encoding-Mismatch" },
-    { "text": "Optionale Bytefolge am Dateianfang, die Parser stoeren kann.", "correct": "BOM" },
-    { "text": "Plattformabhaengige Umbruchdarstellung mit Einfluss auf Parser und Diffs.", "correct": "Zeilenende LF/CRLF" },
-    { "text": "Locale-Falle bei Zahlenwerten wie 1,23 vs 1.23.", "correct": "Dezimaltrennzeichen" },
-    { "text": "Ordnet Quellfelder den internen Zielfeldern zu.", "correct": "Feldmapping" },
-    { "text": "Prueft, ob benoetigte Felder vorhanden und gefuellt sind.", "correct": "Pflichtfeldpruefung" },
-    { "text": "Stellt sicher, dass z. B. Integer nicht als Freitext importiert werden.", "correct": "Typvalidierung" },
-    { "text": "Fuehrt Datenvertragsaenderungen kontrolliert ein, ohne harte Brueche zu erzwingen.", "correct": "Schnittstellenversionierung" },
-    { "text": "HTTP-Kennzeichnung fuer den eigentlichen Nutzdaten-Typ im Request/Response.", "correct": "Content-Type" },
-    { "text": "Standardisierte Bezeichnung fuer Datenarten bei Uebertragung und Dateien.", "correct": "MIME-Type" },
-    { "text": "Verringert Dateigroesse, ohne den semantischen Datentyp zu aendern.", "correct": "Komprimierung" },
-    { "text": "Kodiert Binaerdaten als Textzeichen fuer textbasierte Transportkanaele.", "correct": "Base64" },
-    { "text": "Integritaetsnachweis, ob Daten auf dem Transportweg unveraendert blieben.", "correct": "Pruefsumme" },
-    { "text": "Normalisiert Darstellungsdetails fuer stabile Vergleiche oder Signaturen.", "correct": "Kanonisierung" },
-    { "text": "Risiko beim Oeffnen manipulierter Tabellendaten mit Formelauswertung.", "correct": "CSV-Injection" },
-    { "text": "Definierte Diagnoseabfolge fuer wiederkehrende Importstoerungen.", "correct": "Fehler-Runbook" },
-    { "text": "Metriken/Logs fuer Fehlerrate, Durchsatz und Datenqualitaet im Betrieb.", "correct": "Import-Monitoring" },
-    { "text": "Dokumentiert verbindlich Struktur, Encoding, Regeln und Version der Schnittstelle.", "correct": "Formatvertrag" },
-    { "text": "Spalten verrutschen, weil Adressfeld mit Komma nicht korrekt geschuetzt ist.", "correct": "Quoting" },
-    { "text": "Erste Header-Spalte enthaelt unerwartetes unsichtbares Zeichen.", "correct": "BOM" },
-    { "text": "Fehlerklasse: Datei in UTF-8 geschrieben, aber als Latin-1 interpretiert.", "correct": "Encoding-Mismatch" },
-    { "text": "Nur Dateiendung pruefen reicht fuer robuste Produktionseinbindung aus.", "correct": "keine" },
-    { "text": "Schema kann Strukturregeln absichern, ersetzt aber nicht alle fachlichen Plausibilitaetsregeln.", "correct": "alle" },
-    { "text": "Delimiter, Encoding und Mapping sind unterschiedliche Ursachenklassen bei Importfehlern.", "correct": "alle" },
-    { "text": "CSV ist fuer alle Datentypen immer ungeeignet und sollte nie genutzt werden.", "correct": "keine" },
-    { "text": "Robuste Schnittstellen brauchen Vertrag, Testdaten, Validierung und Monitoring.", "correct": "alle" }
+    {
+      "text": "Direkt lesbar im Editor und gut fuer schnelle Fehlersuche.",
+      "correct": "Textformat"
+    },
+    {
+      "text": "Typisch nicht direkt lesbar, Verarbeitung ueber spezialisierte Programme.",
+      "correct": "Binaerformat"
+    },
+    {
+      "text": "Tabellarisches Zeilen-Spalten-Format mit sehr hoher Praxisverbreitung beim Export.",
+      "correct": "CSV"
+    },
+    {
+      "text": "Tabellarischer Datenaustausch mit Tabulator statt Komma/Semikolon.",
+      "correct": "TSV"
+    },
+    {
+      "text": "Bestimmt, woran Spalten im CSV getrennt werden.",
+      "correct": "Delimiter"
+    },
+    {
+      "text": "Sichert Felder, die selbst Trennzeichen enthalten.",
+      "correct": "Quoting"
+    },
+    {
+      "text": "Maskiert Sonderzeichen gemaess Parserregeln.",
+      "correct": "Escaping"
+    },
+    {
+      "text": "Hierarchisches Key-Value-Format, besonders in REST-Schnittstellen verbreitet.",
+      "correct": "JSON"
+    },
+    {
+      "text": "Tag-basiertes hierarchisches Austauschformat.",
+      "correct": "XML"
+    },
+    {
+      "text": "Definiert Struktur- und Typregeln fuer JSON-Daten.",
+      "correct": "JSON Schema"
+    },
+    {
+      "text": "Schema-Definition fuer XML-Dokumente.",
+      "correct": "XSD"
+    },
+    {
+      "text": "Gaengige Zeichencodierung fuer moderne Datenschnittstellen.",
+      "correct": "UTF-8"
+    },
+    {
+      "text": "Zeichensalat durch abweichende Kodierungsannahmen von Sender und Empfaenger.",
+      "correct": "Encoding-Mismatch"
+    },
+    {
+      "text": "Optionale Bytefolge am Dateianfang, die Parser stoeren kann.",
+      "correct": "BOM"
+    },
+    {
+      "text": "Plattformabhaengige Umbruchdarstellung mit Einfluss auf Parser und Diffs.",
+      "correct": "Zeilenende LF/CRLF"
+    },
+    {
+      "text": "Locale-Falle bei Zahlenwerten wie 1,23 vs 1.23.",
+      "correct": "Dezimaltrennzeichen"
+    },
+    {
+      "text": "Spalten verrutschen, weil Adressfeld mit Komma nicht korrekt geschuetzt ist.",
+      "correct": "Quoting"
+    },
+    {
+      "text": "Erste Header-Spalte enthaelt unerwartetes unsichtbares Zeichen.",
+      "correct": "BOM"
+    },
+    {
+      "text": "Fehlerklasse: Datei in UTF-8 geschrieben, aber als Latin-1 interpretiert.",
+      "correct": "Encoding-Mismatch"
+    }
   ]
 }

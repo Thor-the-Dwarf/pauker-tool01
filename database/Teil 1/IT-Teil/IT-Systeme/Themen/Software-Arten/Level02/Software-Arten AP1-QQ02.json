@@ -20,53 +20,72 @@
     "IDE",
     "Lizenzmetrik: Named User",
     "Lizenzmetrik: Concurrent User",
-    "Lizenzmetrik: Device",
-    "Lizenzmetrik: Core-basiert",
-    "Abo-Modell",
-    "Kauf-/Perpetual-Modell",
-    "Open-Source-Lizenz (permissiv)",
-    "Open-Source-Lizenz (Copyleft)",
-    "Dual Licensing",
-    "Lizenz-Audit-Fähigkeit",
-    "Vendor Lock-in Risiko",
-    "Software-Change-Management",
-    "alle",
-    "keine"
+    "Lizenzmetrik: Device"
   ],
   "questions": [
-    { "text": "Verwaltet Scheduling, Speicher, Rechte und Hardwarezugriff als Basis für alle Programme.", "correct": "Betriebssystem-Kernschicht" },
-    { "text": "Vermittelt konkret zwischen Betriebssystem und einzelner Hardwarekomponente.", "correct": "Gerätetreiber" },
-    { "text": "Läuft dauerhaft im Hintergrund und erfüllt eine betriebliche Daueraufgabe.", "correct": "Systemdienst/Daemon" },
-    { "text": "Stellt benötigte Framework-/Runtime-Komponenten für Programmausführung bereit.", "correct": "Laufzeitumgebung" },
-    { "text": "Sorgt für kontrollierte Verteilung und Versionierung installierter Softwarestände.", "correct": "Paket-/Update-Management" },
-    { "text": "Automatisiert Sicherung und Wiederherstellung und ist Teil der Betriebsstabilität.", "correct": "Backup-Agent" },
-    { "text": "Sammelt Metriken, Logs und Zustände zur Früherkennung von Incidents.", "correct": "Monitoring/Observability-Agent" },
-    { "text": "Setzt Sicherheitsrichtlinien endpointnah durch und reagiert auf Bedrohungen.", "correct": "Endpoint-Security-Agent" },
-    { "text": "Klassische Anwendungssoftware für Texte, Tabellen und Präsentationen.", "correct": "Office-Suite" },
-    { "text": "Nutzt Webanwendungen auf Basis der darunterliegenden Systemplattform.", "correct": "Browser-Client" },
-    { "text": "Abbildung integrierter Geschäftsprozesse wie Einkauf, Lager und Rechnungswesen.", "correct": "ERP-Anwendung" },
-    { "text": "Fokussiert Kundenbeziehungen, Leads, Tickets und Serviceprozesse.", "correct": "CRM-Anwendung" },
-    { "text": "Entwicklungswerkzeug mit Editor, Debugger und Build-Unterstützung.", "correct": "IDE" },
-    { "text": "Lizenzierung anhand namentlich zugewiesener Personen.", "correct": "Lizenzmetrik: Named User" },
-    { "text": "Lizenzierung anhand maximal gleichzeitig aktiver Nutzer.", "correct": "Lizenzmetrik: Concurrent User" },
-    { "text": "Lizenzierung pro physischem oder virtuellem Endgerät.", "correct": "Lizenzmetrik: Device" },
-    { "text": "Kosten steigen mit zugewiesenen CPU-Kernen bzw. vCores.", "correct": "Lizenzmetrik: Core-basiert" },
-    { "text": "Nutzung ist an laufende Zahlungen und Vertragslaufzeit gebunden.", "correct": "Abo-Modell" },
-    { "text": "Einmalige Lizenz erlaubt dauerhafte Nutzung einer definierten Version.", "correct": "Kauf-/Perpetual-Modell" },
-    { "text": "Breite Nutzbarkeit mit meist moderaten Pflichten wie Lizenzhinweis.", "correct": "Open-Source-Lizenz (permissiv)" },
-    { "text": "Kann bei Weitergabe abgeleiteter Werke stärkere Offenlegungspflichten auslösen.", "correct": "Open-Source-Lizenz (Copyleft)" },
-    { "text": "Gleiche Software wird alternativ unter zwei Lizenzpfaden angeboten.", "correct": "Dual Licensing" },
-    { "text": "Nachweisbare Zuordnung von Nutzern, Geräten und Vertragsständen für Prüfungen.", "correct": "Lizenz-Audit-Fähigkeit" },
-    { "text": "Abhängigkeit durch proprietäre Formate, Schnittstellen oder Exit-Hürden.", "correct": "Vendor Lock-in Risiko" },
-    { "text": "Einführung neuer Versionen mit Pilot, Risikoanalyse, Rollback und Dokumentation.", "correct": "Software-Change-Management" },
-    { "text": "\"Abo\" und \"proprietär\" meinen denselben Sachverhalt.", "correct": "keine" },
-    { "text": "Lizenzmetriken beeinflussen sowohl Kosten als auch Compliance-Risiko.", "correct": "alle" },
-    { "text": "Systemnahe Tools wie Backup und Monitoring können als Services im Hintergrund laufen.", "correct": "alle" },
-    { "text": "Eine IDE ist automatisch Systemsoftware, weil sie technisch wirkt.", "correct": "keine" },
-    { "text": "Open Source bedeutet immer kostenfrei und ohne Pflichten.", "correct": "keine" },
-    { "text": "Technische Einordnung und Lizenzbetrachtung gehören in AP1 zusammen.", "correct": "alle" },
-    { "text": "Named User ist immer billiger als Concurrent User, unabhängig vom Nutzungsprofil.", "correct": "keine" },
-    { "text": "Fehlende Dokumentation kann bei Herstelleraudit zu Risiko führen.", "correct": "alle" },
-    { "text": "Vendor Lock-in betrifft nur Hardware und niemals Softwareverträge.", "correct": "keine" }
+    {
+      "text": "Verwaltet Scheduling, Speicher, Rechte und Hardwarezugriff als Basis für alle Programme.",
+      "correct": "Betriebssystem-Kernschicht"
+    },
+    {
+      "text": "Vermittelt konkret zwischen Betriebssystem und einzelner Hardwarekomponente.",
+      "correct": "Gerätetreiber"
+    },
+    {
+      "text": "Läuft dauerhaft im Hintergrund und erfüllt eine betriebliche Daueraufgabe.",
+      "correct": "Systemdienst/Daemon"
+    },
+    {
+      "text": "Stellt benötigte Framework-/Runtime-Komponenten für Programmausführung bereit.",
+      "correct": "Laufzeitumgebung"
+    },
+    {
+      "text": "Sorgt für kontrollierte Verteilung und Versionierung installierter Softwarestände.",
+      "correct": "Paket-/Update-Management"
+    },
+    {
+      "text": "Automatisiert Sicherung und Wiederherstellung und ist Teil der Betriebsstabilität.",
+      "correct": "Backup-Agent"
+    },
+    {
+      "text": "Sammelt Metriken, Logs und Zustände zur Früherkennung von Incidents.",
+      "correct": "Monitoring/Observability-Agent"
+    },
+    {
+      "text": "Setzt Sicherheitsrichtlinien endpointnah durch und reagiert auf Bedrohungen.",
+      "correct": "Endpoint-Security-Agent"
+    },
+    {
+      "text": "Klassische Anwendungssoftware für Texte, Tabellen und Präsentationen.",
+      "correct": "Office-Suite"
+    },
+    {
+      "text": "Nutzt Webanwendungen auf Basis der darunterliegenden Systemplattform.",
+      "correct": "Browser-Client"
+    },
+    {
+      "text": "Abbildung integrierter Geschäftsprozesse wie Einkauf, Lager und Rechnungswesen.",
+      "correct": "ERP-Anwendung"
+    },
+    {
+      "text": "Fokussiert Kundenbeziehungen, Leads, Tickets und Serviceprozesse.",
+      "correct": "CRM-Anwendung"
+    },
+    {
+      "text": "Entwicklungswerkzeug mit Editor, Debugger und Build-Unterstützung.",
+      "correct": "IDE"
+    },
+    {
+      "text": "Lizenzierung anhand namentlich zugewiesener Personen.",
+      "correct": "Lizenzmetrik: Named User"
+    },
+    {
+      "text": "Lizenzierung anhand maximal gleichzeitig aktiver Nutzer.",
+      "correct": "Lizenzmetrik: Concurrent User"
+    },
+    {
+      "text": "Lizenzierung pro physischem oder virtuellem Endgerät.",
+      "correct": "Lizenzmetrik: Device"
+    }
   ]
 }

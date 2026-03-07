@@ -20,15 +20,7 @@
     "Container",
     "Textformat",
     "Binärformat",
-    "IaaS",
-    "PaaS",
-    "SaaS",
-    "Shared Responsibility Model",
-    "USV",
-    "3-2-1-Regel",
-    "RPO",
-    "RTO",
-    "Archiv"
+    "IaaS"
   ],
   "questions": [
     {
@@ -154,66 +146,6 @@
     {
       "text": "VMs, Storage und Netzwerk mieten; Kunde verwaltet OS und Anwendungen.",
       "correct": "IaaS"
-    },
-    {
-      "text": "Runtime/DB vorkonfiguriert: weniger Betriebsaufwand, aber auch weniger Kontrolle.",
-      "correct": "PaaS"
-    },
-    {
-      "text": "Fertige Anwendung nutzen: geringster Betriebsaufwand, geringste Kontrolle.",
-      "correct": "SaaS"
-    },
-    {
-      "text": "Faustregel: Je mehr „as a Service“, desto weniger Betriebsaufwand – aber auch weniger Einfluss.",
-      "correct": "SaaS"
-    },
-    {
-      "text": "Provider sichert Infrastruktur, Kunde sichert Konfiguration, Daten, Zugriffe und Backup.",
-      "correct": "Shared Responsibility Model"
-    },
-    {
-      "text": "Offener Storage-Bucket ist typischerweise kein Provider-Fehler, sondern Kundenseite.",
-      "correct": "Shared Responsibility Model"
-    },
-    {
-      "text": "Überbrückt kurze Stromausfälle und schützt vor Spannungsschwankungen – kauft Zeit fürs Shutdown.",
-      "correct": "USV"
-    },
-    {
-      "text": "Prüfungsfalle: Server an USV, aber Switch nicht – Server lebt, Netzwerk ist tot.",
-      "correct": "USV"
-    },
-    {
-      "text": "3 Kopien, 2 Medien, 1 Kopie extern/außer Haus – Standard für solide Datensicherung.",
-      "correct": "3-2-1-Regel"
-    },
-    {
-      "text": "Backup ohne Restore-Test ist Wunschdenken – der Restore ist der Beweis.",
-      "correct": "3-2-1-Regel"
-    },
-    {
-      "text": "Maximal akzeptabler Datenverlust als Zeitspanne seit letztem gültigen Backup.",
-      "correct": "RPO"
-    },
-    {
-      "text": "„Wir sichern täglich“ passt nicht, wenn maximal 1 Stunde Datenverlust erlaubt ist.",
-      "correct": "RPO"
-    },
-    {
-      "text": "Maximal akzeptable Wiederanlaufzeit: wie schnell muss das System wieder laufen?",
-      "correct": "RTO"
-    },
-    {
-      "text": "Sichert kurzfristige Wiederherstellung nach Fehler/Malware/Löschen – rotierend/überschreibbar.",
-      "correct": "RTO"
-    },
-    {
-      "text": "Langfristige, unveränderliche Aufbewahrung für Compliance/Nachweise (WORM/Unveränderbarkeit).",
-      "correct": "Archiv"
-    },
-    {
-      "text": "Prüfungsfalle: „Backup = Archiv“ – unterschiedliche Ziele und Anforderungen.",
-      "correct": "Archiv"
     }
   ]
 }

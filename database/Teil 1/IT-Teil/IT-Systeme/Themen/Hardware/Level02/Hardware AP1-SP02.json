@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Hardware (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Bottlenecks, Kompatibilitaet, Stabilitaet und Betriebsreife.",
+  "columns": [
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ipc_vs_takt",
+      "title": "IPC vs Takt",
+      "subtitle": ""
+    },
+    {
+      "id": "smt_hyper_threading",
+      "title": "SMT/Hyper-Threading",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu_cache",
+      "title": "CPU-Cache",
+      "subtitle": ""
+    },
+    {
+      "id": "thermal_throttling",
+      "title": "Thermal Throttling",
+      "subtitle": ""
+    },
+    {
+      "id": "ram_kapazitaet",
+      "title": "RAM-Kapazitaet",
+      "subtitle": ""
+    },
+    {
+      "id": "dual_channel",
+      "title": "Dual-Channel",
+      "subtitle": ""
+    },
+    {
+      "id": "ecc_ram",
+      "title": "ECC-RAM",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Fuehrt Programmbefehle aus und ist zentrales Rechenwerk des Systems.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Erklaert, warum ein moderner Chip mit weniger GHz trotzdem schneller sein kann.",
+      "correctForms": [
+        "ipc_vs_takt"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Erhoeht logische Parallelitaet pro Kern bei geeigneten Workloads.",
+      "correctForms": [
+        "smt_hyper_threading"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Schneller Zwischenspeicher nahe der CPU fuer haeufig benoetigte Daten.",
+      "correctForms": [
+        "cpu_cache"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "CPU senkt Takt bei Ueberhitzung oder Powergrenze.",
+      "correctForms": [
+        "thermal_throttling"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Zu geringe Auslegung fuehrt oft zu Auslagerung und Systemzaehigkeit.",
+      "correctForms": [
+        "ram_kapazitaet"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Erhoeht Speicherbandbreite durch parallele Kanalnutzung.",
+      "correctForms": [
+        "dual_channel"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Erkennt und korrigiert bestimmte Speicherbitfehler.",
+      "correctForms": [
+        "ecc_ram"
+      ]
+    }
+  ]
+}

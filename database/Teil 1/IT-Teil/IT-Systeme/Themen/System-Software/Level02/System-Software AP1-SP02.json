@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – System-Software (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Bootpfad, Betriebsmodus, Incident-Diagnose und Härtung.",
+  "columns": [
+    {
+      "id": "firmware_uefi_bios",
+      "title": "Firmware (UEFI/BIOS)",
+      "subtitle": ""
+    },
+    {
+      "id": "secure_boot",
+      "title": "Secure Boot",
+      "subtitle": ""
+    },
+    {
+      "id": "boot_manager_bootloader",
+      "title": "Boot-Manager/Bootloader",
+      "subtitle": ""
+    },
+    {
+      "id": "kernel",
+      "title": "Kernel",
+      "subtitle": ""
+    },
+    {
+      "id": "user_mode",
+      "title": "User Mode",
+      "subtitle": ""
+    },
+    {
+      "id": "kernel_mode",
+      "title": "Kernel Mode",
+      "subtitle": ""
+    },
+    {
+      "id": "geratetreiber",
+      "title": "Gerätetreiber",
+      "subtitle": ""
+    },
+    {
+      "id": "init_service_manager",
+      "title": "Init-/Service-Manager",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Initialisiert Hardware vor dem Laden des Betriebssystems.",
+      "correctForms": [
+        "firmware_uefi_bios"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prüft Vertrauenskette von Startkomponenten und blockiert unsignierte Pfade.",
+      "correctForms": [
+        "secure_boot"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Lädt den Kernel und übergibt anschließend die Kontrolle.",
+      "correctForms": [
+        "boot_manager_bootloader"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Verantwortlich für Scheduling, Speicherverwaltung und privilegierte Kernfunktionen.",
+      "correctForms": [
+        "kernel"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Ausführungsbereich mit eingeschränkten Rechten für Anwendungen.",
+      "correctForms": [
+        "user_mode"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Privilegierter Modus für Kernel-nahe Komponenten.",
+      "correctForms": [
+        "kernel_mode"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Übersetzt OS-Schnittstellen in konkrete Geräteoperationen.",
+      "correctForms": [
+        "geratetreiber"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Steuert Startreihenfolge und Abhängigkeiten von Diensten.",
+      "correctForms": [
+        "init_service_manager"
+      ]
+    }
+  ]
+}

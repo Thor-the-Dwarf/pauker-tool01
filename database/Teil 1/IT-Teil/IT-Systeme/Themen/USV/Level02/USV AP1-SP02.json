@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – USV (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Auslegung, Betrieb, Verfügbarkeit und Störungsmanagement.",
+  "columns": [
+    {
+      "id": "usv_grundzweck",
+      "title": "USV-Grundzweck",
+      "subtitle": ""
+    },
+    {
+      "id": "watt_vs_va",
+      "title": "Watt vs VA",
+      "subtitle": ""
+    },
+    {
+      "id": "leistungsfaktor",
+      "title": "Leistungsfaktor",
+      "subtitle": ""
+    },
+    {
+      "id": "runtime_kennlinie",
+      "title": "Runtime-Kennlinie",
+      "subtitle": ""
+    },
+    {
+      "id": "batteriealterung",
+      "title": "Batteriealterung",
+      "subtitle": ""
+    },
+    {
+      "id": "temperatur_einfluss",
+      "title": "Temperatur-Einfluss",
+      "subtitle": ""
+    },
+    {
+      "id": "offline_usv",
+      "title": "Offline-USV",
+      "subtitle": ""
+    },
+    {
+      "id": "line_interactive_usv",
+      "title": "Line-Interactive-USV",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Kurzzeitige Überbrückung plus Schutz vor Netzproblemen.",
+      "correctForms": [
+        "usv_grundzweck"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Auslegung muss Wirkleistung und Scheinleistung gemeinsam berücksichtigen.",
+      "correctForms": [
+        "watt_vs_va"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Verhältnis zwischen real nutzbarer Leistung und Scheinleistung.",
+      "correctForms": [
+        "leistungsfaktor"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Überbrückungszeit verhält sich nicht linear zur Last und folgt Herstellerkurven.",
+      "correctForms": [
+        "runtime_kennlinie"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Kapazitätsabnahme durch Alter und Zyklen reduziert reale Überbrückungszeit.",
+      "correctForms": [
+        "batteriealterung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Hohe Umgebungswärme verkürzt Akkulebensdauer deutlich.",
+      "correctForms": [
+        "temperatur_einfluss"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Basis-Topologie mit Umschaltung auf Akku im Störfall.",
+      "correctForms": [
+        "offline_usv"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Topologie mit Spannungsstabilisierung als Mittelweg.",
+      "correctForms": [
+        "line_interactive_usv"
+      ]
+    }
+  ]
+}

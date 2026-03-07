@@ -1,0 +1,161 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – IT-Systeme (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "it_system_gesamtbild",
+      "title": "IT-System (Gesamtbild)",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD NVMe",
+      "subtitle": ""
+    },
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    },
+    {
+      "id": "pcie_lanes",
+      "title": "PCIe-Lanes",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_nvme_sata",
+      "title": "M.2 (NVMe/SATA)",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Besteht aus Zusammenspiel von Prozessen, Daten, Software und Hardware – nicht nur aus Komponentenliste.",
+      "correctForms": [
+        "it_system_gesamtbild"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "„Funktioniert“ ist erst wahr, wenn Betrieb UND Wiederherstellung geklärt sind.",
+      "correctForms": [
+        "it_system_gesamtbild"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Kerne/Threads, Takt und Cache bestimmen die Rechenleistung je nach Workload.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Single-Core ist oft wichtiger für Office/UI; Multi-Core eher für VMs/Rendering/DB-Workloads.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prüfungsfalle: „GHz = schnell“ – Architektur/Single-Core-Leistung/Cache sind oft wichtiger.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Flüchtiger Arbeitsbereich für aktive Prozesse; zu wenig davon führt zu Paging/Swap und Trägheit.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Dual-Channel, Typ, Takt und Latenz beeinflussen Leistung – nicht nur die Größe.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Server-Option für Fehlerkorrektur im Arbeitsspeicher.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Sehr hohe IOPS und Datendurchsatz – besonders gut für Datenbanken und VM-Hosts.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Mechanisch, günstig pro GB, aber langsamer – gut für Archiv/Backup-Targets.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Schützt vor Hardware-Defekt, aber nicht vor Löschen, Malware oder Fehlkonfiguration.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Prüfungsfalle: „Wir haben das, also brauchen wir kein Backup“ – stimmt hier besonders nicht.",
+      "correctForms": [
+        "raid"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Bestimmen Bandbreite für GPU, Netzwerkkarten oder Storage-Controller.",
+      "correctForms": [
+        "pcie_lanes"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Prüfungsfalle: „Passt mechanisch = passt technisch“ – Keying/Protokoll/Lanes prüfen.",
+      "correctForms": [
+        "pcie_lanes"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Nicht jeder Steckplatz unterstützt automatisch beide Protokolle – vor Kauf prüfen.",
+      "correctForms": [
+        "m_2_nvme_sata"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Slot vorhanden, aber SSD wird nicht erkannt: häufiges Thema ist Protokoll-Unterstützung.",
+      "correctForms": [
+        "m_2_nvme_sata"
+      ]
+    }
+  ]
+}

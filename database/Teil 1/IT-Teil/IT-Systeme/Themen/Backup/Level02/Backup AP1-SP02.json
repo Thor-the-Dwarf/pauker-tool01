@@ -1,0 +1,133 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Backup (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Achte besonders auf RTO/RPO, Restore-Ketten und 3-2-1-1-0.",
+  "columns": [
+    {
+      "id": "backup_ziel",
+      "title": "Backup-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_regel",
+      "title": "3-2-1-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "3_2_1_1_0_regel",
+      "title": "3-2-1-1-0-Regel",
+      "subtitle": ""
+    },
+    {
+      "id": "vollbackup",
+      "title": "Vollbackup",
+      "subtitle": ""
+    },
+    {
+      "id": "inkrementelles_backup",
+      "title": "Inkrementelles Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "differenzielles_backup",
+      "title": "Differenzielles Backup",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Wiederherstellung nach Fehler, Ausfall oder Angriff ist der Kern.",
+      "correctForms": [
+        "backup_ziel"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Maximale tolerierbare Zeit bis Service wieder läuft.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Maximal tolerierbarer Datenverlust in Zeit.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "3 Kopien, 2 Medientypen, 1 extern.",
+      "correctForms": [
+        "3_2_1_regel"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Erweitert die klassische Regel um immutable/offline Kopie und validierte fehlerfreie Restores.",
+      "correctForms": [
+        "3_2_1_1_0_regel"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Sichert den kompletten Datenbestand in einem Lauf.",
+      "correctForms": [
+        "vollbackup"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Sichert nur Änderungen seit dem letzten Backup-Lauf.",
+      "correctForms": [
+        "inkrementelles_backup"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Sichert Änderungen seit dem letzten Vollbackup.",
+      "correctForms": [
+        "differenzielles_backup"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Diese Größe bestimmt, wie oft gesichert werden sollte, um Datenverlust zu begrenzen.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Diese Größe bestimmt, wie schnell Infrastruktur und Anwendungen zurück sein müssen.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Bei dieser Backup-Art wächst das Sicherungsvolumen typischerweise bis zum nächsten Vollbackup.",
+      "correctForms": [
+        "differenzielles_backup"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Bei dieser Backup-Art ist die Wiederherstellungskette häufig am längsten.",
+      "correctForms": [
+        "inkrementelles_backup"
+      ]
+    }
+  ]
+}

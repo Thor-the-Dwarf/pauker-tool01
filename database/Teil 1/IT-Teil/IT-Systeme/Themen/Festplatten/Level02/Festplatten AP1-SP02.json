@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Festplatten (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Medienwahl, Kennzahlen, RAID, Endurance und Betrieb.",
+  "columns": [
+    {
+      "id": "hdd",
+      "title": "HDD",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_sata",
+      "title": "SSD (SATA)",
+      "subtitle": ""
+    },
+    {
+      "id": "ssd_nvme",
+      "title": "SSD (NVMe)",
+      "subtitle": ""
+    },
+    {
+      "id": "iops",
+      "title": "IOPS",
+      "subtitle": ""
+    },
+    {
+      "id": "latenz",
+      "title": "Latenz",
+      "subtitle": ""
+    },
+    {
+      "id": "datendurchsatz",
+      "title": "Datendurchsatz",
+      "subtitle": ""
+    },
+    {
+      "id": "tbw",
+      "title": "TBW",
+      "subtitle": ""
+    },
+    {
+      "id": "dwpd",
+      "title": "DWPD",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Mechanisches Laufwerk mit sehr gutem Preis pro TB.",
+      "correctForms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Sinnvoller Upgrade-Kandidat fuer aeltere Systeme mit SATA-Anschluss.",
+      "correctForms": [
+        "ssd_sata"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "PCIe-basierter Flashspeicher mit sehr hoher Parallelitaet.",
+      "correctForms": [
+        "ssd_nvme"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Kennzahl fuer viele kleine Ein-/Ausgabeoperationen pro Sekunde.",
+      "correctForms": [
+        "iops"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Messgroesse fuer Reaktionszeit einzelner Speicherzugriffe.",
+      "correctForms": [
+        "latenz"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Wichtiger Wert bei grossen sequentiellen Dateiuebertragungen.",
+      "correctForms": [
+        "datendurchsatz"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Beschreibt die gesamte zulaessige Schreibmenge einer SSD ueber Lebensdauer.",
+      "correctForms": [
+        "tbw"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Endurance-Metrik als Anzahl voller Laufwerksbeschreibungen pro Tag.",
+      "correctForms": [
+        "dwpd"
+      ]
+    }
+  ]
+}

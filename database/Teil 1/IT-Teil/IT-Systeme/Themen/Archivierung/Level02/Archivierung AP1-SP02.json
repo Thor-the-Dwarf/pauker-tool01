@@ -1,0 +1,154 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Archivierung (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Achte auf die Trennung von Restore-Zielen und Compliance-Zielen.",
+  "columns": [
+    {
+      "id": "backup",
+      "title": "Backup",
+      "subtitle": ""
+    },
+    {
+      "id": "archivierung",
+      "title": "Archivierung",
+      "subtitle": ""
+    },
+    {
+      "id": "rto",
+      "title": "RTO",
+      "subtitle": ""
+    },
+    {
+      "id": "rpo",
+      "title": "RPO",
+      "subtitle": ""
+    },
+    {
+      "id": "worm",
+      "title": "WORM",
+      "subtitle": ""
+    },
+    {
+      "id": "retention_policy",
+      "title": "Retention Policy",
+      "subtitle": ""
+    },
+    {
+      "id": "legal_hold",
+      "title": "Legal Hold",
+      "subtitle": ""
+    },
+    {
+      "id": "metadaten",
+      "title": "Metadaten",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Zielt primär auf schnelle Wiederherstellung nach Vorfall.",
+      "correctForms": [
+        "backup"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Zielt primär auf langfristige, nachweisbare Aufbewahrung.",
+      "correctForms": [
+        "archivierung"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Beschreibt die maximal tolerierbare Wiederanlaufzeit eines Services.",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Beschreibt den maximal tolerierbaren Datenverlust in Zeit.",
+      "correctForms": [
+        "rpo"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Write Once Read Many: Nach Speicherung nicht überschreibbar.",
+      "correctForms": [
+        "worm"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Regelt, wie lange welche Dokumentklasse aufzubewahren ist.",
+      "correctForms": [
+        "retention_policy"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Temporäre Sperre gegen Löschung wegen Rechts-/Prüfungsverfahren.",
+      "correctForms": [
+        "legal_hold"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Strukturinformationen wie Dokumenttyp, Datum, Kunde für Suche und Regeln.",
+      "correctForms": [
+        "metadaten"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "RTO und RPO gehören in den Kern eines Backup-Konzepts.",
+      "correctForms": [
+        "backup"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "WORM und Retention-Regeln sind zentrale Bausteine revisionsnaher Archivierung.",
+      "correctForms": [
+        "archivierung"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Wenn die Löschfrist pausieren muss, weil ein Verfahren läuft, spricht man von ...",
+      "correctForms": [
+        "legal_hold"
+      ]
+    },
+    {
+      "id": "card_035",
+      "text": "Kann Aufbewahrungspflichten allein nicht ersetzen: rein operative Datensicherung.",
+      "correctForms": [
+        "backup"
+      ]
+    },
+    {
+      "id": "card_037",
+      "text": "Ohne diese Struktur werden Fristen- und Suchregeln oft unzuverlässig.",
+      "correctForms": [
+        "metadaten"
+      ]
+    },
+    {
+      "id": "card_038",
+      "text": "Diese Kennzahl beantwortet: Wie lange darf die Anwendung ausfallen?",
+      "correctForms": [
+        "rto"
+      ]
+    },
+    {
+      "id": "card_039",
+      "text": "Diese Kennzahl beantwortet: Wie weit darf der Datenstand zurückliegen?",
+      "correctForms": [
+        "rpo"
+      ]
+    }
+  ]
+}

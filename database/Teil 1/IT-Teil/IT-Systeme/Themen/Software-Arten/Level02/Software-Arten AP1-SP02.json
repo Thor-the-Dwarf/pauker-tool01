@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Software-Arten (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Architekturverständnis, Betriebskontext und Lizenz-Compliance.",
+  "columns": [
+    {
+      "id": "betriebssystem_kernschicht",
+      "title": "Betriebssystem-Kernschicht",
+      "subtitle": ""
+    },
+    {
+      "id": "geratetreiber",
+      "title": "Gerätetreiber",
+      "subtitle": ""
+    },
+    {
+      "id": "systemdienst_daemon",
+      "title": "Systemdienst/Daemon",
+      "subtitle": ""
+    },
+    {
+      "id": "laufzeitumgebung",
+      "title": "Laufzeitumgebung",
+      "subtitle": ""
+    },
+    {
+      "id": "paket_update_management",
+      "title": "Paket-/Update-Management",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_agent",
+      "title": "Backup-Agent",
+      "subtitle": ""
+    },
+    {
+      "id": "monitoring_observability_agent",
+      "title": "Monitoring/Observability-Agent",
+      "subtitle": ""
+    },
+    {
+      "id": "endpoint_security_agent",
+      "title": "Endpoint-Security-Agent",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Verwaltet Scheduling, Speicher, Rechte und Hardwarezugriff als Basis für alle Programme.",
+      "correctForms": [
+        "betriebssystem_kernschicht"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Vermittelt konkret zwischen Betriebssystem und einzelner Hardwarekomponente.",
+      "correctForms": [
+        "geratetreiber"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Läuft dauerhaft im Hintergrund und erfüllt eine betriebliche Daueraufgabe.",
+      "correctForms": [
+        "systemdienst_daemon"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Stellt benötigte Framework-/Runtime-Komponenten für Programmausführung bereit.",
+      "correctForms": [
+        "laufzeitumgebung"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Sorgt für kontrollierte Verteilung und Versionierung installierter Softwarestände.",
+      "correctForms": [
+        "paket_update_management"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Automatisiert Sicherung und Wiederherstellung und ist Teil der Betriebsstabilität.",
+      "correctForms": [
+        "backup_agent"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Sammelt Metriken, Logs und Zustände zur Früherkennung von Incidents.",
+      "correctForms": [
+        "monitoring_observability_agent"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Setzt Sicherheitsrichtlinien endpointnah durch und reagiert auf Bedrohungen.",
+      "correctForms": [
+        "endpoint_security_agent"
+      ]
+    }
+  ]
+}

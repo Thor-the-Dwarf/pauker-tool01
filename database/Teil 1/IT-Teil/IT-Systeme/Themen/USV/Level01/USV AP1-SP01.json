@@ -42,11 +42,6 @@
       "id": "alle",
       "title": "alle",
       "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -128,24 +123,10 @@
       ]
     },
     {
-      "id": "card_012",
-      "text": "„USV sorgt nur für Überspannungsschutz, aber nicht für Überbrückung bei Stromausfall.“",
-      "correctForms": [
-        "keine"
-      ]
-    },
-    {
       "id": "card_013",
       "text": "„Offline/Line-Interactive/Online sind grobe USV-Typen, die sich im Schutzlevel unterscheiden.“",
       "correctForms": [
         "alle"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "„Online-USV ist immer der einfachste und billigste Typ.“",
-      "correctForms": [
-        "keine"
       ]
     },
     {

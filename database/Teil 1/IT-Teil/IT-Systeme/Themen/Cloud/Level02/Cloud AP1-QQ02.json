@@ -20,26 +20,7 @@
     "Policy as Code",
     "Fehlkonfiguration",
     "Vendor Lock-in",
-    "Portabilitaetsstrategie",
-    "FinOps",
-    "Kosten-Tagging",
-    "Budget-Alarm",
-    "Rightsizing",
-    "Auto-Scaling",
-    "Data Residency",
-    "AVV/TOMs",
-    "Verschluesselung/KMS",
-    "Audit-Logging",
-    "SIEM",
-    "Multi-AZ",
-    "Multi-Region-DR",
-    "RTO",
-    "RPO",
-    "Backup-Restore-Test",
-    "Observability",
-    "Exit-Strategie",
-    "alle",
-    "keine"
+    "Portabilitaetsstrategie"
   ],
   "questions": [
     {
@@ -105,82 +86,6 @@
     {
       "text": "Architektur mit offenen Standards, exportierbaren Datenformaten und klarer Exit-Option.",
       "correct": "Portabilitaetsstrategie"
-    },
-    {
-      "text": "Kontinuierliche Kostensteuerung mit Verantwortlichkeit von Technik und Fachbereich.",
-      "correct": "FinOps"
-    },
-    {
-      "text": "Ressourcen verpflichtend Teams/Services/Kostenstellen zuordnen.",
-      "correct": "Kosten-Tagging"
-    },
-    {
-      "text": "Warnschwellen bei 80/95 Prozent Budgetverbrauch mit Eskalationspfad.",
-      "correct": "Budget-Alarm"
-    },
-    {
-      "text": "Instanzgroessen auf Basis realer Lastdaten systematisch anpassen.",
-      "correct": "Rightsizing"
-    },
-    {
-      "text": "Kapazitaet dynamisch anhand von Metriken hoch- und herunterfahren.",
-      "correct": "Auto-Scaling"
-    },
-    {
-      "text": "Steuert den geographischen Speicherort personenbezogener Daten gemaess Vorgaben.",
-      "correct": "Data Residency"
-    },
-    {
-      "text": "Vertragliche und organisatorische Datenschutzmassnahmen dokumentieren und pruefbar halten.",
-      "correct": "AVV/TOMs"
-    },
-    {
-      "text": "Schuetzt Daten bei Speicherung und Transport plus kontrolliertes Schluesselmanagement.",
-      "correct": "Verschluesselung/KMS"
-    },
-    {
-      "text": "Protokolliert nachvollziehbar, wer welche sicherheitsrelevante Aenderung wann ausfuehrte.",
-      "correct": "Audit-Logging"
-    },
-    {
-      "text": "Korrelierte Auswertung von Cloud-Events fuer fruehe Angriffserkennung.",
-      "correct": "SIEM"
-    },
-    {
-      "text": "Dienste ueber mehrere Verfuegbarkeitszonen verteilen, um Zonen-Ausfaelle abzufangen.",
-      "correct": "Multi-AZ"
-    },
-    {
-      "text": "Wiederanlauf in zweiter Region nach definierten Schwellwerten und Runbook.",
-      "correct": "Multi-Region-DR"
-    },
-    {
-      "text": "Definiert maximal zulaessige Wiederanlaufzeit eines Services.",
-      "correct": "RTO"
-    },
-    {
-      "text": "Definiert maximal tolerierbaren Datenverlust bis zum letzten konsistenten Stand.",
-      "correct": "RPO"
-    },
-    {
-      "text": "Eine Sicherung gilt erst dann als belastbar, wenn Wiederherstellung regelmaessig geuebt wird.",
-      "correct": "Backup-Restore-Test"
-    },
-    {
-      "text": "Metriken, Logs und Traces gemeinsam nutzen, um Engpaesse und Stoerungen sauber zu analysieren.",
-      "correct": "Observability"
-    },
-    {
-      "text": "Definierter Ausstiegspfad mit Datenexport, Verantwortlichkeiten und Downtime-Plan.",
-      "correct": "Exit-Strategie"
-    },
-    {
-      "text": "Cloud ist automatisch billiger, automatisch sicher und automatisch compliant.",
-      "correct": "keine"
-    },
-    {
-      "text": "Ohne Governance koennen in der Cloud gleichzeitig Sicherheits-, Compliance- und Kostenprobleme entstehen.",
-      "correct": "alle"
     }
   ]
 }

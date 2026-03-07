@@ -20,46 +20,72 @@
     "Wartungs-Bypass",
     "N+1-Redundanz",
     "Load Shedding",
-    "USV-Monitoring (SNMP/Agent)",
-    "Geordnetes Shutdown-Runbook",
-    "USV-Generator-Kopplung",
-    "Regelmäßiger Last-/Batterietest",
-    "USV-Kapazitätsplanung",
-    "Single Point of Failure",
-    "Verfügbarkeitsanforderung",
-    "Incident-Dokumentation",
-    "alle",
-    "keine"
+    "USV-Monitoring (SNMP/Agent)"
   ],
   "questions": [
-    { "text": "Kurzzeitige Überbrückung plus Schutz vor Netzproblemen.", "correct": "USV-Grundzweck" },
-    { "text": "Auslegung muss Wirkleistung und Scheinleistung gemeinsam berücksichtigen.", "correct": "Watt vs VA" },
-    { "text": "Verhältnis zwischen real nutzbarer Leistung und Scheinleistung.", "correct": "Leistungsfaktor" },
-    { "text": "Überbrückungszeit verhält sich nicht linear zur Last und folgt Herstellerkurven.", "correct": "Runtime-Kennlinie" },
-    { "text": "Kapazitätsabnahme durch Alter und Zyklen reduziert reale Überbrückungszeit.", "correct": "Batteriealterung" },
-    { "text": "Hohe Umgebungswärme verkürzt Akkulebensdauer deutlich.", "correct": "Temperatur-Einfluss" },
-    { "text": "Basis-Topologie mit Umschaltung auf Akku im Störfall.", "correct": "Offline-USV" },
-    { "text": "Topologie mit Spannungsstabilisierung als Mittelweg.", "correct": "Line-Interactive-USV" },
-    { "text": "Topologie mit kontinuierlicher Entkopplung und höchstem Schutzlevel.", "correct": "Online-USV (Double Conversion)" },
-    { "text": "Zeitspanne bis Batterieversorgung übernimmt.", "correct": "Umschaltzeit" },
-    { "text": "Korrigiert Netzschwankungen ohne dauerhaften Batteriebetrieb.", "correct": "Spannungsregelung (AVR)" },
-    { "text": "Sichert Lastversorgung bei internem USV-Fehlerpfad.", "correct": "Statischer Bypass" },
-    { "text": "Ermöglicht Servicearbeiten an der USV ohne Lastunterbrechung.", "correct": "Wartungs-Bypass" },
-    { "text": "Zusatzmodul erhöht Verfügbarkeit bei Ausfall einzelner Komponenten.", "correct": "N+1-Redundanz" },
-    { "text": "Nichtkritische Verbraucher werden gezielt abgeschaltet, um Kernlast länger zu halten.", "correct": "Load Shedding" },
-    { "text": "Status- und Alarmdaten fließen automatisiert in zentrale Überwachung.", "correct": "USV-Monitoring (SNMP/Agent)" },
-    { "text": "Definiert Reihenfolge für sicheres Stoppen abhängiger Dienste.", "correct": "Geordnetes Shutdown-Runbook" },
-    { "text": "Überbrückt die Zeit bis ein Notstromaggregat stabil übernimmt.", "correct": "USV-Generator-Kopplung" },
-    { "text": "Validiert reale Runtime regelmäßig statt nur LED-Status zu vertrauen.", "correct": "Regelmäßiger Last-/Batterietest" },
-    { "text": "Berücksichtigt Lastwachstum und Reserve für zukünftige Erweiterungen.", "correct": "USV-Kapazitätsplanung" },
-    { "text": "Ein einzelnes nicht-redundantes Element kann Gesamtausfall verursachen.", "correct": "Single Point of Failure" },
-    { "text": "Schutzkonzept wird an Kritikalität des Geschäftsprozesses ausgerichtet.", "correct": "Verfügbarkeitsanforderung" },
-    { "text": "Nach Störung werden Verlauf, Maßnahmen und Verbesserungen nachvollziehbar festgehalten.", "correct": "Incident-Dokumentation" },
-    { "text": "\"USV ersetzt jedes Backup und macht Recovery-Konzepte überflüssig.\"", "correct": "keine" },
-    { "text": "Dimensionierung, Monitoring und Runbook gehören gemeinsam zu einem belastbaren USV-Betrieb.", "correct": "alle" },
-    { "text": "Batteriezustand ist für Runtime-Prognosen irrelevant.", "correct": "keine" },
-    { "text": "Redundanz und Bypass können Verfügbarkeit in kritischen Umgebungen deutlich verbessern.", "correct": "alle" },
-    { "text": "Nur die Anschaffungskosten entscheiden über die passende USV-Topologie.", "correct": "keine" },
-    { "text": "Regelmäßige Tests reduzieren das Risiko von Überraschungen im Ernstfall.", "correct": "alle" }
+    {
+      "text": "Kurzzeitige Überbrückung plus Schutz vor Netzproblemen.",
+      "correct": "USV-Grundzweck"
+    },
+    {
+      "text": "Auslegung muss Wirkleistung und Scheinleistung gemeinsam berücksichtigen.",
+      "correct": "Watt vs VA"
+    },
+    {
+      "text": "Verhältnis zwischen real nutzbarer Leistung und Scheinleistung.",
+      "correct": "Leistungsfaktor"
+    },
+    {
+      "text": "Überbrückungszeit verhält sich nicht linear zur Last und folgt Herstellerkurven.",
+      "correct": "Runtime-Kennlinie"
+    },
+    {
+      "text": "Kapazitätsabnahme durch Alter und Zyklen reduziert reale Überbrückungszeit.",
+      "correct": "Batteriealterung"
+    },
+    {
+      "text": "Hohe Umgebungswärme verkürzt Akkulebensdauer deutlich.",
+      "correct": "Temperatur-Einfluss"
+    },
+    {
+      "text": "Basis-Topologie mit Umschaltung auf Akku im Störfall.",
+      "correct": "Offline-USV"
+    },
+    {
+      "text": "Topologie mit Spannungsstabilisierung als Mittelweg.",
+      "correct": "Line-Interactive-USV"
+    },
+    {
+      "text": "Topologie mit kontinuierlicher Entkopplung und höchstem Schutzlevel.",
+      "correct": "Online-USV (Double Conversion)"
+    },
+    {
+      "text": "Zeitspanne bis Batterieversorgung übernimmt.",
+      "correct": "Umschaltzeit"
+    },
+    {
+      "text": "Korrigiert Netzschwankungen ohne dauerhaften Batteriebetrieb.",
+      "correct": "Spannungsregelung (AVR)"
+    },
+    {
+      "text": "Sichert Lastversorgung bei internem USV-Fehlerpfad.",
+      "correct": "Statischer Bypass"
+    },
+    {
+      "text": "Ermöglicht Servicearbeiten an der USV ohne Lastunterbrechung.",
+      "correct": "Wartungs-Bypass"
+    },
+    {
+      "text": "Zusatzmodul erhöht Verfügbarkeit bei Ausfall einzelner Komponenten.",
+      "correct": "N+1-Redundanz"
+    },
+    {
+      "text": "Nichtkritische Verbraucher werden gezielt abgeschaltet, um Kernlast länger zu halten.",
+      "correct": "Load Shedding"
+    },
+    {
+      "text": "Status- und Alarmdaten fließen automatisiert in zentrale Überwachung.",
+      "correct": "USV-Monitoring (SNMP/Agent)"
+    }
   ]
 }

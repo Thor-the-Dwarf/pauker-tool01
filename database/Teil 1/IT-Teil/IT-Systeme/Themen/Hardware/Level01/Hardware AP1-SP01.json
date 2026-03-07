@@ -1,0 +1,48 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Hardware-Grundbaukasten (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "use_case_diagramm",
+      "title": "Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "use_case_text",
+      "title": "Use-Case-Text",
+      "subtitle": ""
+    },
+    {
+      "id": "klassendiagramm",
+      "title": "Klassendiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "aktivitatsdiagramm",
+      "title": "Aktivitätsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "sequenzdiagramm",
+      "title": "Sequenzdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "zustandsdiagramm",
+      "title": "Zustandsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "erd_erm",
+      "title": "ERD/ERM",
+      "subtitle": ""
+    },
+    {
+      "id": "kardinalitat",
+      "title": "Kardinalität",
+      "subtitle": ""
+    }
+  ],
+  "cards": []
+}

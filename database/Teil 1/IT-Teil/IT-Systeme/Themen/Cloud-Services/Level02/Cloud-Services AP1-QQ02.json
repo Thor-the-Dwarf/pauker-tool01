@@ -20,25 +20,7 @@
     "FinOps",
     "Kosten-Tagging",
     "Budget-Alarm",
-    "Rightsizing",
-    "Auto-Scaling",
-    "Data Residency",
-    "AVV/TOMs",
-    "Verschluesselung/KMS",
-    "Audit-Logging",
-    "SIEM",
-    "Vendor Lock-in",
-    "Portabilitaetsstrategie",
-    "Exit-Strategie",
-    "Multi-AZ",
-    "RTO",
-    "RPO",
-    "Backup-Restore-Test",
-    "Observability",
-    "hohe Kontrolltiefe",
-    "geringe Kontrolltiefe",
-    "alle",
-    "keine"
+    "Rightsizing"
   ],
   "questions": [
     {
@@ -106,96 +88,8 @@
       "correct": "Rightsizing"
     },
     {
-      "text": "Ressourcen bei Lastspitzen automatisch erweitern und spaeter wieder reduzieren.",
-      "correct": "Auto-Scaling"
-    },
-    {
-      "text": "Daten nur in explizit erlaubten Regionen speichern.",
-      "correct": "Data Residency"
-    },
-    {
-      "text": "Vertragliche und organisatorische Datenschutzmassnahmen dokumentieren.",
-      "correct": "AVV/TOMs"
-    },
-    {
-      "text": "Daten im Ruhezustand und bei Transport verschluesseln, Schluessel sauber verwalten.",
-      "correct": "Verschluesselung/KMS"
-    },
-    {
-      "text": "Protokolliert nachvollziehbar, wer Sicherheitskonfigurationen geaendert hat.",
-      "correct": "Audit-Logging"
-    },
-    {
-      "text": "Korrelierte Sicherheitsereignisse zentral auswerten und alarmieren.",
-      "correct": "SIEM"
-    },
-    {
-      "text": "Starke Abhaengigkeit von proprietaeren APIs erschwert spaetere Migration.",
-      "correct": "Vendor Lock-in"
-    },
-    {
-      "text": "Architektur mit offenen Standards fuer moeglichen Anbieterwechsel planen.",
-      "correct": "Portabilitaetsstrategie"
-    },
-    {
-      "text": "Definierter Ausstiegspfad mit Datenexport, Rollen und Testmigration.",
-      "correct": "Exit-Strategie"
-    },
-    {
-      "text": "Dienste ueber mehrere Verfuegbarkeitszonen verteilen.",
-      "correct": "Multi-AZ"
-    },
-    {
-      "text": "Maximal zulaessige Wiederanlaufzeit im Notfall.",
-      "correct": "RTO"
-    },
-    {
-      "text": "Maximal tolerierbarer Datenverlust bis zur letzten gueltigen Sicherung.",
-      "correct": "RPO"
-    },
-    {
-      "text": "Backup ist erst belastbar, wenn Restore regelmaessig geuebt wird.",
-      "correct": "Backup-Restore-Test"
-    },
-    {
-      "text": "Metriken, Logs und Traces kombiniert zur Betriebsanalyse nutzen.",
-      "correct": "Observability"
-    },
-    {
-      "text": "Typisch fuer IaaS: viel Einfluss auf OS, Netzwerk und Middleware.",
-      "correct": "hohe Kontrolltiefe"
-    },
-    {
-      "text": "Typisch fuer SaaS: schneller Start, aber wenig Einfluss auf technische Tiefe.",
-      "correct": "geringe Kontrolltiefe"
-    },
-    {
-      "text": "Managed Service bedeutet automatisch compliance-konforme Nutzung ohne Kundenpflichten.",
-      "correct": "keine"
-    },
-    {
-      "text": "Fehlende Governance kann gleichzeitig Sicherheits-, Kosten- und Compliance-Probleme erzeugen.",
-      "correct": "alle"
-    },
-    {
-      "text": "PaaS ist immer ungeeignet, sobald auch nur eine Custom-App existiert.",
-      "correct": "keine"
-    },
-    {
       "text": "Bei SaaS sind IAM und Rollenmodell weiterhin relevant.",
       "correct": "Kundenverantwortung"
-    },
-    {
-      "text": "Risikoreduktion durch standardisierte APIs und formatierte Exportpfade.",
-      "correct": "Portabilitaetsstrategie"
-    },
-    {
-      "text": "Sicherheitsmassnahmen wie Least Privilege, MFA und Logging sind kombinierbar und sinnvoll.",
-      "correct": "alle"
-    },
-    {
-      "text": "Cloud-Kosten sinken ohne Monitoring und ohne Verantwortlichkeiten automatisch dauerhaft.",
-      "correct": "keine"
     }
   ]
 }

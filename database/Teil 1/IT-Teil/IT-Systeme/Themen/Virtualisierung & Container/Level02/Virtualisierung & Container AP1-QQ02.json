@@ -20,47 +20,72 @@
     "Persistentes Volume",
     "Snapshot/Backup-Konzept",
     "Netzwerk-Policy",
-    "Secret-Management",
-    "Image-Hardening",
-    "Observability-Stack",
-    "Service Mesh",
-    "Hybridmuster (VM + Container)",
-    "Kapazitätsplanung",
-    "Compliance-/Mandantengrenze",
-    "Resilienztest/Chaos-Übung",
-    "Betriebs-Runbook",
-    "alle",
-    "keine"
+    "Secret-Management"
   ],
   "questions": [
-    { "text": "Virtualisierungsschicht läuft direkt auf Hardware ohne allgemeines Host-OS.", "correct": "Hypervisor Typ 1 (Bare Metal)" },
-    { "text": "Virtualisierung wird als Anwendung auf einem bestehenden Betriebssystem betrieben.", "correct": "Hypervisor Typ 2 (Hosted)" },
-    { "text": "Eigene Gast-OS pro Instanz bilden eine starke Trennungsgrenze.", "correct": "VM-Isolationsgrenze" },
-    { "text": "Mehrere Instanzen teilen denselben Host-Kernel.", "correct": "Container-Kernel-Sharing" },
-    { "text": "Steuert Lebenszyklus einzelner Containerinstanzen auf Node-Ebene.", "correct": "Container-Runtime" },
-    { "text": "Planung, Desired State und flächige Rolloutsteuerung liegen hier zentral.", "correct": "Orchestrierungs-Control-Plane" },
-    { "text": "Versionstausch in kleinen Schritten reduziert Ausfallrisiko während Updates.", "correct": "Rolling Update" },
-    { "text": "Definierter Rückweg auf letzte stabile Version.", "correct": "Rollback-Strategie" },
-    { "text": "Instanzzahl passt sich automatisch Lastmetriken an.", "correct": "Autoscaling" },
-    { "text": "CPU-/RAM-Vorgaben verhindern ungeplante Verdrängung anderer Workloads.", "correct": "Resource Requests/Limits" },
-    { "text": "Dienstart benötigt dauerhaftes Datenkonzept und Wiederherstellungsstrategie.", "correct": "Stateful Workload" },
-    { "text": "Dienstart lässt sich leicht replizieren und ohne Datenpersistenz neu starten.", "correct": "Stateless Workload" },
-    { "text": "Daten überleben den Neustart einer Containerinstanz.", "correct": "Persistentes Volume" },
-    { "text": "Stellt Wiederherstellungspunkte für Daten und Zustände bereit.", "correct": "Snapshot/Backup-Konzept" },
-    { "text": "Begrenzt explizit erlaubte Kommunikationspfade zwischen Services.", "correct": "Netzwerk-Policy" },
-    { "text": "Verhindert hartkodierte Zugangsdaten in Images und Config-Dateien.", "correct": "Secret-Management" },
-    { "text": "Minimiert Angriffsfläche und blockiert Deployments bei kritischen Schwachstellen.", "correct": "Image-Hardening" },
-    { "text": "Korrelation aus Logs, Metriken und Traces für End-to-End-Fehleranalyse.", "correct": "Observability-Stack" },
-    { "text": "Steuert Service-zu-Service-Verkehr und Policies auf Netzwerkebene fein granular.", "correct": "Service Mesh" },
-    { "text": "Kombiniert VM- und Containerbetrieb entsprechend Workload-Anforderungen.", "correct": "Hybridmuster (VM + Container)" },
-    { "text": "Plant Ressourcenreserven anhand Wachstum, Lastprofilen und SLO-Zielen.", "correct": "Kapazitätsplanung" },
-    { "text": "Architekturentscheidung wird durch regulatorische Trennpflichten bestimmt.", "correct": "Compliance-/Mandantengrenze" },
-    { "text": "Gezielte Störungstests prüfen Recovery und Fehlertoleranz im Echtbetrieb.", "correct": "Resilienztest/Chaos-Übung" },
-    { "text": "Standardisierte Incident-Schritte sichern reproduzierbare Reaktion und Wiederanlauf.", "correct": "Betriebs-Runbook" },
-    { "text": "\"Container ersetzen grundsätzlich jedes Backup- und Recovery-Konzept.\"", "correct": "keine" },
-    { "text": "Sichere Plattformen brauchen Policies, Secret-Handhabung und Image-Hygiene gemeinsam.", "correct": "alle" },
-    { "text": "Stateful und stateless Workloads können ohne Unterschied gleich behandelt werden.", "correct": "keine" },
-    { "text": "Rolling Update, Observability und Runbook ergänzen sich im stabilen Betrieb.", "correct": "alle" },
-    { "text": "Hypervisor-Typ und Workload-Anforderungen sind für Architekturentscheidungen irrelevant.", "correct": "keine" }
+    {
+      "text": "Virtualisierungsschicht läuft direkt auf Hardware ohne allgemeines Host-OS.",
+      "correct": "Hypervisor Typ 1 (Bare Metal)"
+    },
+    {
+      "text": "Virtualisierung wird als Anwendung auf einem bestehenden Betriebssystem betrieben.",
+      "correct": "Hypervisor Typ 2 (Hosted)"
+    },
+    {
+      "text": "Eigene Gast-OS pro Instanz bilden eine starke Trennungsgrenze.",
+      "correct": "VM-Isolationsgrenze"
+    },
+    {
+      "text": "Mehrere Instanzen teilen denselben Host-Kernel.",
+      "correct": "Container-Kernel-Sharing"
+    },
+    {
+      "text": "Steuert Lebenszyklus einzelner Containerinstanzen auf Node-Ebene.",
+      "correct": "Container-Runtime"
+    },
+    {
+      "text": "Planung, Desired State und flächige Rolloutsteuerung liegen hier zentral.",
+      "correct": "Orchestrierungs-Control-Plane"
+    },
+    {
+      "text": "Versionstausch in kleinen Schritten reduziert Ausfallrisiko während Updates.",
+      "correct": "Rolling Update"
+    },
+    {
+      "text": "Definierter Rückweg auf letzte stabile Version.",
+      "correct": "Rollback-Strategie"
+    },
+    {
+      "text": "Instanzzahl passt sich automatisch Lastmetriken an.",
+      "correct": "Autoscaling"
+    },
+    {
+      "text": "CPU-/RAM-Vorgaben verhindern ungeplante Verdrängung anderer Workloads.",
+      "correct": "Resource Requests/Limits"
+    },
+    {
+      "text": "Dienstart benötigt dauerhaftes Datenkonzept und Wiederherstellungsstrategie.",
+      "correct": "Stateful Workload"
+    },
+    {
+      "text": "Dienstart lässt sich leicht replizieren und ohne Datenpersistenz neu starten.",
+      "correct": "Stateless Workload"
+    },
+    {
+      "text": "Daten überleben den Neustart einer Containerinstanz.",
+      "correct": "Persistentes Volume"
+    },
+    {
+      "text": "Stellt Wiederherstellungspunkte für Daten und Zustände bereit.",
+      "correct": "Snapshot/Backup-Konzept"
+    },
+    {
+      "text": "Begrenzt explizit erlaubte Kommunikationspfade zwischen Services.",
+      "correct": "Netzwerk-Policy"
+    },
+    {
+      "text": "Verhindert hartkodierte Zugangsdaten in Images und Config-Dateien.",
+      "correct": "Secret-Management"
+    }
   ]
 }
