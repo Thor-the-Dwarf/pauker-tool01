@@ -42,26 +42,6 @@
       "id": "englische_texte_auswerten",
       "title": "Englische Texte auswerten",
       "subtitle": ""
-    },
-    {
-      "id": "qualitatsmerkmale_prasentation",
-      "title": "Qualitätsmerkmale Präsentation",
-      "subtitle": ""
-    },
-    {
-      "id": "medienkompetenz",
-      "title": "Medienkompetenz",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -175,34 +155,6 @@
       "text": "Ergebnis ist eine kurze, korrekte Zusammenfassung des Inhalts (Kernaussage + wichtigste Details).",
       "correctForms": [
         "englische_texte_auswerten"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "Gute Präsentation: klare Struktur, rote Linie, pro Folie eine Kernaussage, saubere Visual-Hierarchie.",
-      "correctForms": [
-        "qualitatsmerkmale_prasentation"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Gute Präsentation: gut lesbare Schriftgrößen, ausreichender Kontrast, wenig Text, passende Grafiken.",
-      "correctForms": [
-        "qualitatsmerkmale_prasentation"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Bewertung von Quellen: Autor, Datum, Interessenlage, Belege, Qualität der Domain, Cross-Check.",
-      "correctForms": [
-        "medienkompetenz"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Umfasst auch: Urheberrecht beachten (Bilder/Diagramme), korrekt zitieren, keine Daten leichtfertig teilen.",
-      "correctForms": [
-        "medienkompetenz"
       ]
     }
   ]

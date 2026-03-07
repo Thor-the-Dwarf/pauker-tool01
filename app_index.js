@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:52:24 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:53:16 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -30614,8 +30614,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_1 Marktsituationen bewerten/Missionen_2_1_PvAP1/Missionen_2_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_2_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_1 Marktsituationen bewerten/Missionen_2_1_PvAP1/Missionen_2_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_2_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -30661,16 +30661,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "benchmarking",
                               "title": "Benchmarking",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -32157,8 +32147,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_2 Zielgruppengerechte Bedarfsanalyse/Missionen_2_2_PvAP1/Missionen_2_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_2_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_2 Zielgruppengerechte Bedarfsanalyse/Missionen_2_2_PvAP1/Missionen_2_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_2_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -32204,16 +32194,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "zielgruppe",
                               "title": "Zielgruppe",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -33515,8 +33495,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_3 Zielgerichtete Methoden zur Kundenberatung/Missionen_2_3_PvAP1/Missionen_2_3_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_2_3_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_3 Zielgerichtete Methoden zur Kundenberatung/Missionen_2_3_PvAP1/Missionen_2_3_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_2_3_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -33562,16 +33542,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "upselling",
                               "title": "Upselling",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -34816,8 +34786,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_4 Informationen aufbereiten und präsentieren/Missionen_2_4_PvAP1/Missionen_2_4_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_2_4_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/2_4 Informationen aufbereiten und präsentieren/Missionen_2_4_PvAP1/Missionen_2_4_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_2_4_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -34863,26 +34833,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "englische_texte_auswerten",
                               "title": "Englische Texte auswerten",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "qualitatsmerkmale_prasentation",
-                              "title": "Qualitätsmerkmale Präsentation",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "medienkompetenz",
-                              "title": "Medienkompetenz",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -34997,34 +34947,6 @@ window.DATABASE_INDEX = [
                               "text": "Ergebnis ist eine kurze, korrekte Zusammenfassung des Inhalts (Kernaussage + wichtigste Details).",
                               "correctForms": [
                                 "englische_texte_auswerten"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Gute Präsentation: klare Struktur, rote Linie, pro Folie eine Kernaussage, saubere Visual-Hierarchie.",
-                              "correctForms": [
-                                "qualitatsmerkmale_prasentation"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Gute Präsentation: gut lesbare Schriftgrößen, ausreichender Kontrast, wenig Text, passende Grafiken.",
-                              "correctForms": [
-                                "qualitatsmerkmale_prasentation"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Bewertung von Quellen: Autor, Datum, Interessenlage, Belege, Qualität der Domain, Cross-Check.",
-                              "correctForms": [
-                                "medienkompetenz"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Umfasst auch: Urheberrecht beachten (Bilder/Diagramme), korrekt zitieren, keine Daten leichtfertig teilen.",
-                              "correctForms": [
-                                "medienkompetenz"
                               ]
                             }
                           ]
@@ -36037,8 +35959,8 @@ window.DATABASE_INDEX = [
                     }
                   },
                   {
-                    "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/Missionen_2_PvAP1/Missionen_2_PvAP1 AP1-SS01.json",
-                    "name": "Missionen_2_PvAP1 AP1-SS01.json",
+                    "id": "database/Teil 1/Gesamt/2 Informieren und Beraten von Kunden/Missionen_2_PvAP1/Missionen_2_PvAP1 AP1-SP01.json",
+                    "name": "Missionen_2_PvAP1 AP1-SP01.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
