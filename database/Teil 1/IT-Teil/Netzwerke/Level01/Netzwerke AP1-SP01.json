@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Netzwerke (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Netzwerk-Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "osi_layer_1_bitubertragung",
+      "title": "OSI Layer 1 (Bitübertragung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_2_sicherung",
+      "title": "OSI Layer 2 (Sicherung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_3_vermittlung",
+      "title": "OSI Layer 3 (Vermittlung)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_4_transport",
+      "title": "OSI Layer 4 (Transport)",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_7_anwendung",
+      "title": "OSI Layer 7 (Anwendung)",
+      "subtitle": ""
+    },
+    {
+      "id": "switch",
+      "title": "Switch",
+      "subtitle": ""
+    },
+    {
+      "id": "router_default_gateway",
+      "title": "Router / Default Gateway",
+      "subtitle": ""
+    },
+    {
+      "id": "vlan",
+      "title": "VLAN",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Hier geht es um Kabel, Funk, Signal und Übertragung – ohne Adressen oder Protokoll-Logik.",
+      "correctForms": [
+        "osi_layer_1_bitubertragung"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Frames werden im lokalen Netz anhand von MAC-Adressen weitergeleitet.",
+      "correctForms": [
+        "osi_layer_2_sicherung"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "IP-Adressierung und Routing zwischen Netzen gehören hierhin.",
+      "correctForms": [
+        "osi_layer_3_vermittlung"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "TCP/UDP, Ports und Zuverlässigkeit/Verbindungen werden hier behandelt.",
+      "correctForms": [
+        "osi_layer_4_transport"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Anwendungsprotokolle wie HTTP, DNS oder SMTP werden hier verortet.",
+      "correctForms": [
+        "osi_layer_7_anwendung"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Baut eine MAC-Tabelle auf und leitet Frames innerhalb eines Netzwerksegments weiter.",
+      "correctForms": [
+        "switch"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Verbindet verschiedene Netze miteinander und fungiert als Standardweg ins Internet.",
+      "correctForms": [
+        "router_default_gateway"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Logische Trennung auf einem Switch, um Broadcast-Domänen zu separieren.",
+      "correctForms": [
+        "vlan"
+      ]
+    }
+  ]
+}

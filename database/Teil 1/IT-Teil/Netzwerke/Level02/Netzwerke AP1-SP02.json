@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Netzwerke (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "netzwerk_ziel",
+      "title": "Netzwerk-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "frame",
+      "title": "Frame",
+      "subtitle": ""
+    },
+    {
+      "id": "paket",
+      "title": "Paket",
+      "subtitle": ""
+    },
+    {
+      "id": "mac_adresse",
+      "title": "MAC-Adresse",
+      "subtitle": ""
+    },
+    {
+      "id": "ip_adresse",
+      "title": "IP-Adresse",
+      "subtitle": ""
+    },
+    {
+      "id": "port",
+      "title": "Port",
+      "subtitle": ""
+    },
+    {
+      "id": "protokoll",
+      "title": "Protokoll",
+      "subtitle": ""
+    },
+    {
+      "id": "osi_layer_1_bitubertragung",
+      "title": "OSI Layer 1 (Bitübertragung)",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Ziel eines Netzwerks: Geräte verbinden, Daten austauschen, Dienste bereitstellen (Internet, Files, Druck, VoIP).",
+      "correctForms": [
+        "netzwerk_ziel"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Layer-2-Dateneinheit im LAN, wird vom Switch anhand MAC weitergeleitet.",
+      "correctForms": [
+        "frame"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Layer-3-Dateneinheit, wird zwischen Netzen geroutet und trägt IP-Infos.",
+      "correctForms": [
+        "paket"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Hardwareadresse im lokalen Netz (LAN), gehört zur Sicherungsschicht.",
+      "correctForms": [
+        "mac_adresse"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Logische, routingfähige Adresse, gehört zur Vermittlungsschicht.",
+      "correctForms": [
+        "ip_adresse"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nummer, die einen Dienst/Prozess auf einem Host adressiert (z. B. 443).",
+      "correctForms": [
+        "port"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Regelwerk für Kommunikation (z. B. TCP, UDP, HTTP, DNS).",
+      "correctForms": [
+        "protokoll"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "OSI Layer 1: Signal/Bitübertragung über Kabel oder Funk.",
+      "correctForms": [
+        "osi_layer_1_bitubertragung"
+      ]
+    }
+  ]
+}
