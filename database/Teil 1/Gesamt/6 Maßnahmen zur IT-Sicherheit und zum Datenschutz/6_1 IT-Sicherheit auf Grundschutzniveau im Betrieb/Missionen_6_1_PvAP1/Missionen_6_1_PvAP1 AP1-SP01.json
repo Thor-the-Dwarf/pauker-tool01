@@ -42,31 +42,6 @@
       "id": "anti_spam",
       "title": "Anti-Spam",
       "subtitle": ""
-    },
-    {
-      "id": "norm_branchenstandard",
-      "title": "Norm/Branchenstandard",
-      "subtitle": ""
-    },
-    {
-      "id": "iso_2700x",
-      "title": "ISO 2700x",
-      "subtitle": ""
-    },
-    {
-      "id": "bsi_it_grundschutz",
-      "title": "BSI IT-Grundschutz",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -127,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Sammlung von anerkannten Anforderungen/Best Practices, an denen sich Unternehmen orientieren können.",
-      "correctForms": [
-        "norm_branchenstandard"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Normenreihe für Informationssicherheits-Management (ISMS) und zugehörige Controls/Leitlinien.",
-      "correctForms": [
-        "iso_2700x"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Deutscher Standard mit Bausteinen, Maßnahmenkatalogen und Vorgehen für Informationssicherheit auf Grundschutzniveau.",
-      "correctForms": [
-        "bsi_it_grundschutz"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "„Wir definieren einen Meldeweg für Sicherheitsvorfälle und schulen Mitarbeitende jährlich“ ist vor allem eine …",
       "correctForms": [
@@ -180,20 +134,6 @@
       "text": "Wenn Regeln zu Passwort-Änderung, MFA und Mindestlänge fehlen, fehlt vor allem diese Grundlage.",
       "correctForms": [
         "passwort_policy"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "Wenn ein Unternehmen nach anerkannten Vorgaben ein ISMS ausrichten will, sind diese Referenzen besonders typisch.",
-      "correctForms": [
-        "iso_2700x"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Wenn ein Unternehmen Maßnahmen über Bausteine (z. B. Clients, Server, Netze, Räume) strukturiert ableiten will, passt das besonders zu.",
-      "correctForms": [
-        "bsi_it_grundschutz"
       ]
     },
     {

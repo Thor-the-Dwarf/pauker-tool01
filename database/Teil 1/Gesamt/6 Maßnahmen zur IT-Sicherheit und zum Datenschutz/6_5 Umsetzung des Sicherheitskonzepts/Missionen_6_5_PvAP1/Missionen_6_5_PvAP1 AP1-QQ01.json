@@ -20,11 +20,7 @@
     "CA/Zertifikat",
     "digitale Signatur",
     "HTTPS/TLS",
-    "Authentifizierung",
-    "SSH",
-    "Telnet",
-    "alle",
-    "keine"
+    "Authentifizierung"
   ],
   "questions": [
     {
@@ -90,14 +86,6 @@
     {
       "text": "Nachweis, dass jemand wirklich der ist, der er vorgibt zu sein (Passwort, Token, Zertifikat, MFA).",
       "correct": "Authentifizierung"
-    },
-    {
-      "text": "Sicheres Remote-Login/Remote-Shell-Protokoll mit Verschlüsselung; ersetzt unsichere Klartext-Protokolle.",
-      "correct": "SSH"
-    },
-    {
-      "text": "Altes Remote-Login-Protokoll, das Daten im Klartext überträgt und daher im Betrieb praktisch tabu ist.",
-      "correct": "Telnet"
     },
     {
       "text": "Beispiel: Standardmäßig ist MFA aktiv und Admin-Interfaces sind nicht aus dem Internet erreichbar.",

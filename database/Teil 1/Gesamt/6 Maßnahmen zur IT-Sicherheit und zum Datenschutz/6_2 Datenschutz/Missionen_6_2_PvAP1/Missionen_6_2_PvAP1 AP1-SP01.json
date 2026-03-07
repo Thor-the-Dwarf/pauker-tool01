@@ -42,36 +42,6 @@
       "id": "recht_auf_einschrankung",
       "title": "Recht auf Einschränkung",
       "subtitle": ""
-    },
-    {
-      "id": "recht_auf_datenubertragbarkeit",
-      "title": "Recht auf Datenübertragbarkeit",
-      "subtitle": ""
-    },
-    {
-      "id": "widerspruchsrecht",
-      "title": "Widerspruchsrecht",
-      "subtitle": ""
-    },
-    {
-      "id": "widerruf_einwilligung",
-      "title": "Widerruf Einwilligung",
-      "subtitle": ""
-    },
-    {
-      "id": "beschwerderecht",
-      "title": "Beschwerderecht",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -146,41 +116,6 @@
       ]
     },
     {
-      "id": "card_011",
-      "text": "Recht, bereitgestellte Daten in einem strukturierten, gängigen, maschinenlesbaren Format zu erhalten.",
-      "correctForms": [
-        "recht_auf_datenubertragbarkeit"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Recht, einer Verarbeitung aus bestimmten Gründen zu widersprechen (z. B. bei Direktwerbung).",
-      "correctForms": [
-        "widerspruchsrecht"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Wenn du eine Einwilligung gegeben hast, kannst du sie jederzeit für die Zukunft zurücknehmen.",
-      "correctForms": [
-        "widerruf_einwilligung"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du einen Verstoß vermutest.",
-      "correctForms": [
-        "beschwerderecht"
-      ]
-    },
-    {
-      "id": "card_015",
-      "text": "Wenn eine Firma dir Werbemails schickt, kannst du dich darauf besonders direkt berufen.",
-      "correctForms": [
-        "widerspruchsrecht"
-      ]
-    },
-    {
       "id": "card_016",
       "text": "Wenn deine Adresse falsch gespeichert ist und Lieferungen scheitern, ist das das passende Recht.",
       "correctForms": [
@@ -195,24 +130,10 @@
       ]
     },
     {
-      "id": "card_018",
-      "text": "Wenn du zu einem anderen Anbieter wechseln willst und deine Daten „mitnehmen“ möchtest, ist das das passende Recht.",
-      "correctForms": [
-        "recht_auf_datenubertragbarkeit"
-      ]
-    },
-    {
       "id": "card_019",
       "text": "Die Betroffenenrechte sind ein zentraler Teil der DSGVO und müssen organisatorisch im Unternehmen erfüllbar sein.",
       "correctForms": [
         "dsgvo"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Diese Begriffe hängen zusammen: Gesetze (EU/DE), Definitionen (personenbezogen) und Rechte (Auskunft, Löschung, etc.).",
-      "correctForms": [
-        "alle"
       ]
     }
   ]

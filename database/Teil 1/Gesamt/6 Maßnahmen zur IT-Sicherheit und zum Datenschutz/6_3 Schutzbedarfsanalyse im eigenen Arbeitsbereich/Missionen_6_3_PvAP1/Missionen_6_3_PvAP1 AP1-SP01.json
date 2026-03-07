@@ -42,31 +42,6 @@
       "id": "anwendung",
       "title": "Anwendung",
       "subtitle": ""
-    },
-    {
-      "id": "it_system",
-      "title": "IT-System",
-      "subtitle": ""
-    },
-    {
-      "id": "raum",
-      "title": "Raum",
-      "subtitle": ""
-    },
-    {
-      "id": "kommunikationsverbindung",
-      "title": "Kommunikationsverbindung",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -127,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Objekt der Schutzbedarfsanalyse: konkreter Server/Client/VM oder Storage, auf dem Dienste laufen und Daten liegen.",
-      "correctForms": [
-        "it_system"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Objekt der Schutzbedarfsanalyse: physischer Bereich, in dem Systeme/Daten geschützt werden müssen (z. B. Serverraum, Büro).",
-      "correctForms": [
-        "raum"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Objekt der Schutzbedarfsanalyse: Datenübertragung zwischen Systemen (z. B. VPN, Standortverbindung, WLAN, WAN-Link).",
-      "correctForms": [
-        "kommunikationsverbindung"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "Wenn ein Systemausfall den Betrieb nur kurz stört und Workarounds existieren, ist der Bedarf oft eher diese Kategorie.",
       "correctForms": [
@@ -180,27 +134,6 @@
       "text": "Ein Fachverfahren (z. B. Lohnabrechnung) wird in dieser Objektkategorie bewertet.",
       "correctForms": [
         "anwendung"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "Ein Domain-Controller oder Fileserver wird in dieser Objektkategorie bewertet.",
-      "correctForms": [
-        "it_system"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Ein abschließbarer Serverraum mit Zutrittskontrolle wird in dieser Objektkategorie bewertet.",
-      "correctForms": [
-        "raum"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Eine VPN-Strecke zwischen Homeoffice und Firma wird in dieser Objektkategorie bewertet.",
-      "correctForms": [
-        "kommunikationsverbindung"
       ]
     },
     {

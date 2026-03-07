@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:55:11 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:55:44 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -59437,8 +59437,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_1 IT-Sicherheit auf Grundschutzniveau im Betrieb/Missionen_6_1_PvAP1/Missionen_6_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_6_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_1 IT-Sicherheit auf Grundschutzniveau im Betrieb/Missionen_6_1_PvAP1/Missionen_6_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_6_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -59484,31 +59484,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "anti_spam",
                               "title": "Anti-Spam",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "norm_branchenstandard",
-                              "title": "Norm/Branchenstandard",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "iso_2700x",
-                              "title": "ISO 2700x",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "bsi_it_grundschutz",
-                              "title": "BSI IT-Grundschutz",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -59570,27 +59545,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Sammlung von anerkannten Anforderungen/Best Practices, an denen sich Unternehmen orientieren können.",
-                              "correctForms": [
-                                "norm_branchenstandard"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Normenreihe für Informationssicherheits-Management (ISMS) und zugehörige Controls/Leitlinien.",
-                              "correctForms": [
-                                "iso_2700x"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Deutscher Standard mit Bausteinen, Maßnahmenkatalogen und Vorgehen für Informationssicherheit auf Grundschutzniveau.",
-                              "correctForms": [
-                                "bsi_it_grundschutz"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "„Wir definieren einen Meldeweg für Sicherheitsvorfälle und schulen Mitarbeitende jährlich“ ist vor allem eine …",
                               "correctForms": [
@@ -59623,20 +59577,6 @@ window.DATABASE_INDEX = [
                               "text": "Wenn Regeln zu Passwort-Änderung, MFA und Mindestlänge fehlen, fehlt vor allem diese Grundlage.",
                               "correctForms": [
                                 "passwort_policy"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Wenn ein Unternehmen nach anerkannten Vorgaben ein ISMS ausrichten will, sind diese Referenzen besonders typisch.",
-                              "correctForms": [
-                                "iso_2700x"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Wenn ein Unternehmen Maßnahmen über Bausteine (z. B. Clients, Server, Netze, Räume) strukturiert ableiten will, passt das besonders zu.",
-                              "correctForms": [
-                                "bsi_it_grundschutz"
                               ]
                             },
                             {
@@ -60710,8 +60650,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_2 Datenschutz/Missionen_6_2_PvAP1/Missionen_6_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_6_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_2 Datenschutz/Missionen_6_2_PvAP1/Missionen_6_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_6_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -60757,36 +60697,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "recht_auf_einschrankung",
                               "title": "Recht auf Einschränkung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "recht_auf_datenubertragbarkeit",
-                              "title": "Recht auf Datenübertragbarkeit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "widerspruchsrecht",
-                              "title": "Widerspruchsrecht",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "widerruf_einwilligung",
-                              "title": "Widerruf Einwilligung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "beschwerderecht",
-                              "title": "Beschwerderecht",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -60862,41 +60772,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_011",
-                              "text": "Recht, bereitgestellte Daten in einem strukturierten, gängigen, maschinenlesbaren Format zu erhalten.",
-                              "correctForms": [
-                                "recht_auf_datenubertragbarkeit"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Recht, einer Verarbeitung aus bestimmten Gründen zu widersprechen (z. B. bei Direktwerbung).",
-                              "correctForms": [
-                                "widerspruchsrecht"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Wenn du eine Einwilligung gegeben hast, kannst du sie jederzeit für die Zukunft zurücknehmen.",
-                              "correctForms": [
-                                "widerruf_einwilligung"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du einen Verstoß vermutest.",
-                              "correctForms": [
-                                "beschwerderecht"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Wenn eine Firma dir Werbemails schickt, kannst du dich darauf besonders direkt berufen.",
-                              "correctForms": [
-                                "widerspruchsrecht"
-                              ]
-                            },
-                            {
                               "id": "card_016",
                               "text": "Wenn deine Adresse falsch gespeichert ist und Lieferungen scheitern, ist das das passende Recht.",
                               "correctForms": [
@@ -60911,24 +60786,10 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_018",
-                              "text": "Wenn du zu einem anderen Anbieter wechseln willst und deine Daten „mitnehmen“ möchtest, ist das das passende Recht.",
-                              "correctForms": [
-                                "recht_auf_datenubertragbarkeit"
-                              ]
-                            },
-                            {
                               "id": "card_019",
                               "text": "Die Betroffenenrechte sind ein zentraler Teil der DSGVO und müssen organisatorisch im Unternehmen erfüllbar sein.",
                               "correctForms": [
                                 "dsgvo"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Diese Begriffe hängen zusammen: Gesetze (EU/DE), Definitionen (personenbezogen) und Rechte (Auskunft, Löschung, etc.).",
-                              "correctForms": [
-                                "alle"
                               ]
                             }
                           ]
@@ -62136,8 +61997,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_3 Schutzbedarfsanalyse im eigenen Arbeitsbereich/Missionen_6_3_PvAP1/Missionen_6_3_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_6_3_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_3 Schutzbedarfsanalyse im eigenen Arbeitsbereich/Missionen_6_3_PvAP1/Missionen_6_3_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_6_3_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -62183,31 +62044,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "anwendung",
                               "title": "Anwendung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "it_system",
-                              "title": "IT-System",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "raum",
-                              "title": "Raum",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "kommunikationsverbindung",
-                              "title": "Kommunikationsverbindung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -62269,27 +62105,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Objekt der Schutzbedarfsanalyse: konkreter Server/Client/VM oder Storage, auf dem Dienste laufen und Daten liegen.",
-                              "correctForms": [
-                                "it_system"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Objekt der Schutzbedarfsanalyse: physischer Bereich, in dem Systeme/Daten geschützt werden müssen (z. B. Serverraum, Büro).",
-                              "correctForms": [
-                                "raum"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Objekt der Schutzbedarfsanalyse: Datenübertragung zwischen Systemen (z. B. VPN, Standortverbindung, WLAN, WAN-Link).",
-                              "correctForms": [
-                                "kommunikationsverbindung"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "Wenn ein Systemausfall den Betrieb nur kurz stört und Workarounds existieren, ist der Bedarf oft eher diese Kategorie.",
                               "correctForms": [
@@ -62322,27 +62137,6 @@ window.DATABASE_INDEX = [
                               "text": "Ein Fachverfahren (z. B. Lohnabrechnung) wird in dieser Objektkategorie bewertet.",
                               "correctForms": [
                                 "anwendung"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Ein Domain-Controller oder Fileserver wird in dieser Objektkategorie bewertet.",
-                              "correctForms": [
-                                "it_system"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Ein abschließbarer Serverraum mit Zutrittskontrolle wird in dieser Objektkategorie bewertet.",
-                              "correctForms": [
-                                "raum"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Eine VPN-Strecke zwischen Homeoffice und Firma wird in dieser Objektkategorie bewertet.",
-                              "correctForms": [
-                                "kommunikationsverbindung"
                               ]
                             },
                             {
@@ -63385,8 +63179,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_4 Modellierung Sicherheitskonzept nach BSI IT-Grundschutz/Missionen_6_4_PvAP1/Missionen_6_4_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_6_4_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_4 Modellierung Sicherheitskonzept nach BSI IT-Grundschutz/Missionen_6_4_PvAP1/Missionen_6_4_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_6_4_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -63432,11 +63226,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "alle",
                               "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -64818,11 +64607,7 @@ window.DATABASE_INDEX = [
                             "CA/Zertifikat",
                             "digitale Signatur",
                             "HTTPS/TLS",
-                            "Authentifizierung",
-                            "SSH",
-                            "Telnet",
-                            "alle",
-                            "keine"
+                            "Authentifizierung"
                           ],
                           "questions": [
                             {
@@ -64890,14 +64675,6 @@ window.DATABASE_INDEX = [
                               "correct": "Authentifizierung"
                             },
                             {
-                              "text": "Sicheres Remote-Login/Remote-Shell-Protokoll mit Verschlüsselung; ersetzt unsichere Klartext-Protokolle.",
-                              "correct": "SSH"
-                            },
-                            {
-                              "text": "Altes Remote-Login-Protokoll, das Daten im Klartext überträgt und daher im Betrieb praktisch tabu ist.",
-                              "correct": "Telnet"
-                            },
-                            {
                               "text": "Beispiel: Standardmäßig ist MFA aktiv und Admin-Interfaces sind nicht aus dem Internet erreichbar.",
                               "correct": "Security by Default"
                             },
@@ -64909,8 +64686,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_5 Umsetzung des Sicherheitskonzepts/Missionen_6_5_PvAP1/Missionen_6_5_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_6_5_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/6 Maßnahmen zur IT-Sicherheit und zum Datenschutz/6_5 Umsetzung des Sicherheitskonzepts/Missionen_6_5_PvAP1/Missionen_6_5_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_6_5_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -64956,66 +64733,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "verfugbarkeitssicherung",
                               "title": "Verfügbarkeitssicherung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "raid",
-                              "title": "RAID",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "san",
-                              "title": "SAN",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "symmetrische_verschlusselung",
-                              "title": "symmetrische Verschlüsselung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "asymmetrische_verschlusselung",
-                              "title": "asymmetrische Verschlüsselung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ca_zertifikat",
-                              "title": "CA/Zertifikat",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "digitale_signatur",
-                              "title": "digitale Signatur",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "https_tls",
-                              "title": "HTTPS/TLS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "authentifizierung",
-                              "title": "Authentifizierung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ssh",
-                              "title": "SSH",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "telnet",
-                              "title": "Telnet",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -65074,76 +64791,6 @@ window.DATABASE_INDEX = [
                               "text": "Maßnahmen, damit Services trotz Fehlern/Ausfällen weiterlaufen oder schnell wieder laufen (Redundanz, Failover).",
                               "correctForms": [
                                 "verfugbarkeitssicherung"
-                              ]
-                            },
-                            {
-                              "id": "card_009",
-                              "text": "Datenträger-Verbund für Ausfallsicherheit und/oder Performance; ersetzt kein Backup.",
-                              "correctForms": [
-                                "raid"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Zentrales Storage im Netzwerk für Server (Block-Storage), oft hochverfügbar und performant.",
-                              "correctForms": [
-                                "san"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Verschlüsselung: gleicher Schlüssel zum Ver- und Entschlüsseln; schnell, geeignet für große Datenmengen.",
-                              "correctForms": [
-                                "symmetrische_verschlusselung"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Verschlüsselung: Schlüsselpaar (öffentlich/privat), geeignet für Schlüsselaustausch und Signaturen.",
-                              "correctForms": [
-                                "asymmetrische_verschlusselung"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Instanz/Artefakt, das Identitäten bestätigt und Vertrauen für TLS ermöglicht (z. B. Zertifikatskette).",
-                              "correctForms": [
-                                "ca_zertifikat"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Beweist Integrität und Herkunft einer Nachricht/Datei; Empfänger kann prüfen, ob sie verändert wurde.",
-                              "correctForms": [
-                                "digitale_signatur"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Verschlüsselte Verbindung im Web; schützt Datenübertragung und nutzt Zertifikate zur Server-Identität.",
-                              "correctForms": [
-                                "https_tls"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "Nachweis, dass jemand wirklich der ist, der er vorgibt zu sein (Passwort, Token, Zertifikat, MFA).",
-                              "correctForms": [
-                                "authentifizierung"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Sicheres Remote-Login/Remote-Shell-Protokoll mit Verschlüsselung; ersetzt unsichere Klartext-Protokolle.",
-                              "correctForms": [
-                                "ssh"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Altes Remote-Login-Protokoll, das Daten im Klartext überträgt und daher im Betrieb praktisch tabu ist.",
-                              "correctForms": [
-                                "telnet"
                               ]
                             },
                             {
