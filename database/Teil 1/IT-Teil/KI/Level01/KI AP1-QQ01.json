@@ -20,8 +20,7 @@
     "Kontextfenster",
     "Verbotene KI (Unacceptable Risk)",
     "Hochrisiko-KI (High Risk)",
-    "Begrenztes Risiko (Limited Risk)",
-    "Minimales Risiko (Minimal Risk)"
+    "Begrenztes Risiko (Limited Risk)"
   ],
   "questions": [
     {
@@ -139,10 +138,6 @@
     {
       "text": "Transparenzpflicht: Nutzer müssen wissen, dass sie mit KI interagieren oder KI-Inhalte vorliegen.",
       "correct": "Begrenztes Risiko (Limited Risk)"
-    },
-    {
-      "text": "Wenige bis keine speziellen Zusatzpflichten, z. B. einfache Spam-Filter oder Textvorschläge.",
-      "correct": "Minimales Risiko (Minimal Risk)"
     },
     {
       "text": "Erfordert zusätzlich Risiko- und Qualitätsmanagement, saubere Daten, umfassendes Logging und menschliche Aufsicht.",

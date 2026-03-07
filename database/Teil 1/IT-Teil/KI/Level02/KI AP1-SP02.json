@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – KI Überblick (EU-KI-VO, Prompting, Prüfungswissen) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "klassische_software_deterministisch",
+      "title": "Klassische Software (deterministisch)",
+      "subtitle": ""
+    },
+    {
+      "id": "ki_machine_learning_probabilistisch",
+      "title": "KI / Machine Learning (probabilistisch)",
+      "subtitle": ""
+    },
+    {
+      "id": "generative_ki",
+      "title": "Generative KI",
+      "subtitle": ""
+    },
+    {
+      "id": "klassifikation",
+      "title": "Klassifikation",
+      "subtitle": ""
+    },
+    {
+      "id": "regression",
+      "title": "Regression",
+      "subtitle": ""
+    },
+    {
+      "id": "deep_learning",
+      "title": "Deep Learning",
+      "subtitle": ""
+    },
+    {
+      "id": "llm_large_language_model",
+      "title": "LLM (Large Language Model)",
+      "subtitle": ""
+    },
+    {
+      "id": "diffusion_bildgenerierung",
+      "title": "Diffusion (Bildgenerierung)",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Arbeitet nach festen Regeln (if/else); gleiche Eingabe führt typischerweise zur gleichen Ausgabe.",
+      "correctForms": [
+        "klassische_software_deterministisch"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Lernt Muster aus Daten und liefert Ergebnisse als Wahrscheinlichkeiten statt Gewissheiten.",
+      "correctForms": [
+        "ki_machine_learning_probabilistisch"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Erzeugt neue Inhalte (Text, Bilder, Code) basierend auf Trainingsmustern und einem Prompt.",
+      "correctForms": [
+        "generative_ki"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Spam/kein Spam ist ein typisches Beispiel: Zuordnung zu Klassen anhand gelernter Beispiele.",
+      "correctForms": [
+        "klassifikation"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Preisprognosen sind ein typisches Beispiel: Vorhersage eines Zahlenwerts.",
+      "correctForms": [
+        "regression"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Viele neuronale Schichten; stark bei Bild- und Sprachverarbeitung.",
+      "correctForms": [
+        "deep_learning"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Erzeugt Text/Code/Antworten; Quellen werden nicht automatisch korrekt zitiert.",
+      "correctForms": [
+        "llm_large_language_model"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Typischer Ansatz für Bildgenerierung: aus Rauschen schrittweise ein Bild erzeugen.",
+      "correctForms": [
+        "diffusion_bildgenerierung"
+      ]
+    }
+  ]
+}
