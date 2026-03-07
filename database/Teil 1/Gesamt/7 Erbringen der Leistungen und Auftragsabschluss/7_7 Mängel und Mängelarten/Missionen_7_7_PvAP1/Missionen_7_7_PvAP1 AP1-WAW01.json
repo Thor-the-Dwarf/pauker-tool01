@@ -1,96 +1,338 @@
 {
-  "game_type": "quick_quiz",
-  "title": "Quick-Quiz – Mängel und Mängelarten (7.7)",
-  "introText": "Klick auf „Start“, um das Quick-Quiz zu Mängelarten zu starten.",
-  "sublineText": "Wähle die passende Mängelart zur Aussage.",
-  "timePerQuestionSeconds": 12,
-  "answerLabels": [
-    "Schlechtleistung",
-    "Falschlieferung",
-    "Minderlieferung",
-    "alle",
-    "keine"
-  ],
-  "questions": [
+  "game_type": "what_and_why",
+  "title": "What & Why – Mängel und Mängelarten (7.7)",
+  "description": "Schritt 1: passende Mängelart wählen (What) · Schritt 2: passende Begründungen markieren (Why).",
+  "topic": "Mängelart",
+  "cases": [
     {
-      "text": "Die Lieferung ist unvollständig: Es fehlen Teile der vereinbarten Hardware/Leistung.",
-      "correct": "Minderlieferung"
+      "id": "c01",
+      "profile": "Beim Kunden wurde statt der bestellten Windows-Pro-Edition die Home-Edition ausgeliefert.",
+      "tags": [
+        "Lieferinhalt",
+        "Abweichung",
+        "Software"
+      ],
+      "options": [
+        {
+          "id": "falschlieferung",
+          "label": "Falschlieferung",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Geliefert wurde nicht das vertraglich vereinbarte Produkt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Die Art/Version der Lieferung ist falsch.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Es fehlt keine Stückzahl, sondern der Inhalt ist falsch.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Das ist nur Minderlieferung, weil weniger Funktionen vorhanden sind.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "schlechtleistung",
+          "label": "Schlechtleistung",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Schlechtleistung läge vor, wenn das richtige Produkt mangelhaft funktioniert.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hier ist primär der Liefergegenstand falsch, nicht nur die Qualität.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Falsche Edition ist automatisch Schlechtleistung und nie Falschlieferung.",
+              "correct": false
+            },
+            {
+              "id": "w4",
+              "text": "Für die Einordnung zählt zuerst, was konkret bestellt war.",
+              "correct": true
+            }
+          ]
+        }
+      ],
+      "solution": "Falschlieferung: Geliefert wurde die falsche Edition. Schlechtleistung wäre das passende Produkt mit mangelhafter Funktion." 
     },
     {
-      "text": "Es wurde etwas anderes geliefert als vereinbart (z. B. falsche Version, falsches Produkt, falsches Paket).",
-      "correct": "Falschlieferung"
+      "id": "c02",
+      "profile": "Es wurden 8 Laptops bestellt, aber nur 6 geliefert.",
+      "tags": [
+        "Menge",
+        "Hardware",
+        "Vollständigkeit"
+      ],
+      "options": [
+        {
+          "id": "minderlieferung",
+          "label": "Minderlieferung",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Die vereinbarte Menge wurde nicht vollständig geliefert.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Das Problem liegt in der Stückzahl (zu wenig).",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Die Lieferung ist mengenmäßig unvollständig.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Minderlieferung bedeutet immer falsches Produkt statt zu geringer Menge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "falschlieferung",
+          "label": "Falschlieferung",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Falschlieferung würde vorliegen, wenn etwas anderes als bestellt geliefert wurde.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Bei gleicher Ware, aber zu geringer Menge, spricht man vorrangig von Minderlieferung.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Nur die Zahl der Geräte ist abweichend, nicht zwingend der Gerätetyp.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Jede Minderlieferung ist automatisch Falschlieferung.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Minderlieferung: Es fehlt ein Teil der bestellten Menge." 
     },
     {
-      "text": "Die Leistung ist mangelhaft: vereinbarte Qualität/Funktion wird nicht erreicht (z. B. Feature fehlt, Fehler im System).",
-      "correct": "Schlechtleistung"
+      "id": "c03",
+      "profile": "Die gelieferte Software stürzt regelmäßig ab und erfüllt den vereinbarten Use Case nicht.",
+      "tags": [
+        "Qualität",
+        "Funktion",
+        "Abnahme"
+      ],
+      "options": [
+        {
+          "id": "schlechtleistung",
+          "label": "Schlechtleistung",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Die Leistung ist qualitativ mangelhaft und nicht vertragsgemäß nutzbar.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Die geschuldete Funktionalität wird nicht erreicht.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Es geht um Qualität/Funktion und nicht primär um Menge.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Bei Schlechtleistung liegt immer automatisch Minderlieferung vor.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "minderlieferung",
+          "label": "Minderlieferung",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Minderlieferung betrifft fehlende Mengen oder fehlende Teile.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hier wurde zwar geliefert, aber die Leistung ist mangelhaft.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Funktionsmängel sind typischerweise Schlechtleistung.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn Software Fehler hat, ist das immer nur ein Mengenproblem.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Schlechtleistung: Das richtige Produkt liefert nicht die vereinbarte Qualität/Funktion." 
     },
     {
-      "text": "Beispiel: Statt 'Windows Pro' wurde 'Windows Home' ausgeliefert.",
-      "correct": "Falschlieferung"
+      "id": "c04",
+      "profile": "Im gelieferten Paket fehlt das vereinbarte Netzteil, die restliche Hardware ist korrekt.",
+      "tags": [
+        "Zubehör",
+        "Vollständigkeit",
+        "Hardware"
+      ],
+      "options": [
+        {
+          "id": "minderlieferung",
+          "label": "Minderlieferung",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Ein vereinbarter Bestandteil wurde nicht mitgeliefert.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Die Lieferung ist nicht vollständig.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Fehlende Komponenten sind ein klassischer Mengen-/Vollständigkeitsmangel.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Wenn nur Zubehör fehlt, ist es niemals Minderlieferung.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "falschlieferung",
+          "label": "Falschlieferung",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Falschlieferung ist primaer: etwas anderes als bestellt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hier fehlt ein Teil, statt dass ein anderer Artikel geliefert wurde.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Der Hauptfehler ist Unvollständigkeit der Lieferung.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Jedes fehlende Teil ist automatisch Falschlieferung.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Minderlieferung: Ein vereinbarter Bestandteil fehlt (unvollständige Lieferung)." 
     },
     {
-      "text": "Beispiel: Es wurden 8 Laptops bestellt, aber nur 6 geliefert.",
-      "correct": "Minderlieferung"
-    },
-    {
-      "text": "Beispiel: Die Software stürzt ab und erfüllt den vereinbarten Use Case nicht.",
-      "correct": "Schlechtleistung"
-    },
-    {
-      "text": "Beispiel: Das gelieferte Lizenzpaket passt nicht zur vereinbarten Anzahl Nutzer/Edition.",
-      "correct": "Falschlieferung"
-    },
-    {
-      "text": "Beispiel: Im Paket fehlt das Netzteil oder das passende Kabel, obwohl es vereinbart war.",
-      "correct": "Minderlieferung"
-    },
-    {
-      "text": "Beispiel: Schnittstelle X funktioniert nicht, obwohl sie zugesichert/vertraglich vereinbart war.",
-      "correct": "Schlechtleistung"
-    },
-    {
-      "text": "Wenn ein Kunde sagt 'es ist da, aber es kann nicht, was es soll', ist das primär diese Mängelart.",
-      "correct": "Schlechtleistung"
-    },
-    {
-      "text": "Wenn ein Kunde sagt 'das ist das falsche Produkt/der falsche Vertrag/die falsche Edition', ist das primär diese Mängelart.",
-      "correct": "Falschlieferung"
-    },
-    {
-      "text": "Wenn ein Kunde sagt 'es fehlt etwas, die Menge stimmt nicht', ist das primär diese Mängelart.",
-      "correct": "Minderlieferung"
-    },
-    {
-      "text": "Beispiel: Statt 32 GB RAM wurden 16 GB geliefert, obwohl 32 GB bestellt waren.",
-      "correct": "Minderlieferung"
-    },
-    {
-      "text": "Beispiel: Es wurde eine Datenbank-Community-Edition geliefert, vereinbart war Enterprise.",
-      "correct": "Falschlieferung"
-    },
-    {
-      "text": "Beispiel: Die Anwendung ist extrem langsam und dadurch im Betrieb nicht sinnvoll nutzbar.",
-      "correct": "Schlechtleistung"
-    },
-    {
-      "text": "Alle drei Mängelarten sind typische Abweichungen vom Vertrag: falsch, zu wenig oder qualitativ schlecht.",
-      "correct": "alle"
-    },
-    {
-      "text": "Wenn die vereinbarte Funktionalität fehlt, ist das genau diese Mängelart.",
-      "correct": "Schlechtleistung"
-    },
-    {
-      "text": "Wenn statt des bestellten Softwarepakets ein anderes ausgeliefert wird, ist das genau diese Mängelart.",
-      "correct": "Falschlieferung"
-    },
-    {
-      "text": "Wenn nur Teile der Hardware geliefert werden, ist das genau diese Mängelart.",
-      "correct": "Minderlieferung"
-    },
-    {
-      "text": "Für die Reklamation ist es hilfreich, die Mängelart sauber zu benennen – das gilt für alle hier genannten.",
-      "correct": "alle"
+      "id": "c05",
+      "profile": "Statt der bestellten Enterprise-Datenbank wurde die Community-Edition ausgeliefert.",
+      "tags": [
+        "Lizenz",
+        "Edition",
+        "Vertrag"
+      ],
+      "options": [
+        {
+          "id": "falschlieferung",
+          "label": "Falschlieferung",
+          "isCorrect": true,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Geliefert wurde eine andere Edition als bestellt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Die vertraglich vereinbarte Leistung wurde durch ein anderes Produkt ersetzt.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Die Lieferung weicht im Inhalt vom Auftrag ab.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Eine falsche Edition ist nie Falschlieferung.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "schlechtleistung",
+          "label": "Schlechtleistung",
+          "isCorrect": false,
+          "whys": [
+            {
+              "id": "w1",
+              "text": "Schlechtleistung bedeutet eher: richtig geliefert, aber mangelhaft umgesetzt.",
+              "correct": true
+            },
+            {
+              "id": "w2",
+              "text": "Hier ist bereits der Liefergegenstand selbst nicht der bestellte.",
+              "correct": true
+            },
+            {
+              "id": "w3",
+              "text": "Zur Einordnung ist entscheidend, was im Vertrag spezifiziert war.",
+              "correct": true
+            },
+            {
+              "id": "w4",
+              "text": "Schlechtleistung und Falschlieferung sind immer identisch.",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "solution": "Falschlieferung: Statt der bestellten Edition wurde eine andere Edition geliefert." 
     }
   ]
 }

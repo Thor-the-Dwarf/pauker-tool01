@@ -223,7 +223,9 @@
             const icon = document.createElement('span');
             icon.className = 'tree-icon';
             const isOpen = appState.openedIds.includes(node.id);
-            icon.textContent = node.isFolder ? (isOpen ? "📂" : "📁") : (node.kind !== "json" ? "👁" : "🏋");
+            icon.textContent = node.isFolder
+                ? (isOpen ? "📂" : "📁")
+                : getNodeIcon(node);
             row.appendChild(icon);
 
             const label = document.createElement('button');
@@ -241,6 +243,24 @@
             div.appendChild(childCont);
             container.appendChild(div);
         });
+    }
+
+    function isSortierGameNode(node) {
+        if (!node || node.isFolder || node.kind !== 'json') return false;
+
+        const type = node.data && (node.data.game_type || node.data.gameType);
+        if (type === 'sortier_spiel') return true;
+
+        // Fallback für dynamische/remote Indizes ohne eingebettete JSON-Daten
+        return /(?:^|[\s_-])SS\d+/i.test(node.name || '') || /sortier/i.test(node.name || '');
+    }
+
+    function getNodeIcon(node) {
+        if (node.kind === 'json') {
+            return isSortierGameNode(node) ? '🧠' : '🏋';
+        }
+
+        return '👁';
     }
 
     function toggleNode(div, id, btn) {

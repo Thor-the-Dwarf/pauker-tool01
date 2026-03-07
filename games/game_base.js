@@ -99,6 +99,7 @@
     const DRIVE_FILES_ENDPOINT = 'https://www.googleapis.com/drive/v3/files';
     const THEME_KEY = 'globalTheme_v1';
     const JSON_SESSION_PREFIX = 'game_payload_';
+    const PLAYER_DURATION_MULTIPLIER = 2;
 
     class GameBase {
         /**
@@ -119,6 +120,19 @@
 
             this.rootEl = null;
             this.themeToggleBtn = null;
+
+            // Globale Verlangsamung für spielerrelevante Durations.
+            this.durationMultiplier = PLAYER_DURATION_MULTIPLIER;
+        }
+
+        /**
+         * Skaliert spielrelevante Zeitwerte (Sekunden oder Millisekunden).
+         * @param {number} value
+         * @returns {number}
+         */
+        scaleDuration(value) {
+            if (typeof value !== 'number' || !Number.isFinite(value)) return value;
+            return value * this.durationMultiplier;
         }
 
         // ================================================================

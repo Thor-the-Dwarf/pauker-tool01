@@ -9,7 +9,7 @@
             });
 
             // Game State
-            this.START_SECONDS = 900;
+            this.START_SECONDS = this.scaleDuration(900);
             this.remainingSeconds = this.START_SECONDS;
             this.timerId = null;
             this.gameLocked = false;
@@ -254,7 +254,7 @@
         updateTimerDisplay() {
             if (!this.statTimerEl) return;
             this.statTimerEl.textContent = this.formatTime(this.remainingSeconds);
-            this.statTimerEl.style.color = this.remainingSeconds <= 10 ? 'hsl(var(--error))' : 'var(--text)';
+            this.statTimerEl.style.color = this.remainingSeconds <= this.scaleDuration(10) ? 'hsl(var(--error))' : 'var(--text)';
         }
 
         formatTime(seconds) {

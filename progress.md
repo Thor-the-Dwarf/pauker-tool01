@@ -1,0 +1,26 @@
+Original prompt: Ich will das du jede Duration verdoppelst die die Spieler beim Spielen der Spiele erleben. Die Spieler können die Antworten nicht schnell genug lesen um sie zu bearbeiten.
+
+- 2026-03-06: Start. Ziel: Alle spielrelevanten Durations/Timer verdoppeln, danach Tests laufen lassen.
+- 2026-03-06: `PLAYER_DURATION_MULTIPLIER = 2` in `games/game_base.js` ergänzt (`scaleDuration`).
+- 2026-03-06: Dauerwerte umgestellt:
+  - `games/quick_quiz.js`: Basiszeit/JSON-Zeit pro Frage + beide Übergangs-Timeouts skaliert.
+  - `games/Escape-Game.js`: Start-Countdown und Warnschwelle skaliert.
+  - `games/matching_puzzle.js`: Fehlversuch-Reset-Delay skaliert.
+- 2026-03-06: Syntax-Checks erfolgreich (`node --check` für alle geänderten Dateien).
+- 2026-03-06: Playwright-Laufchecks (`web_game_playwright_client.js`) ohne Console-Errors:
+  - `quick_quiz` Screenshot zeigt Timer bei ~15.4s kurz nach Start (aus 12s Basis => 24s skaliert).
+  - `Escape-Game` Screenshot zeigt Zeit ~29:55 (aus 15:00 => 30:00 skaliert).
+  - `matching_puzzle` lädt fehlerfrei; Delay-Codepfad auf skalierten Wert umgestellt.
+- 2026-03-07: AP2/Strukturarbeiten gestartet und Datenlage bereinigt.
+  - `Missionen_7_7_PvAP1 AP1-WAW01.json` auf valides `what_and_why`-Schema umgestellt.
+  - `Hardware AP1-WBI02.json` ergänzt (fehlender `wer_bin_ich`-Datensatz in `Hardware/Level02`).
+  - `games/sortier_spiel_payload.js` ergänzt (fehlende Laufzeit-Abhängigkeit von `sortier_spiel.html`).
+- 2026-03-07: `sortier_spiel`-Datensätze automatisiert aus `quick_quiz` erzeugt.
+  - `database/Teil 1/...`: `80` neue `*AP1-SS*.json`.
+  - `database/ZZ_NichtVonCodex_Testpool/...`: `75` neue `*AP1-SS*.json`.
+- 2026-03-07: Vollprüfung `database/Teil 1`:
+  - `json_total=480`, `themes_total=80`, `parse_errors=0`, `coverage_issues=0` (6 Spieltypen pro Themenordner vorhanden).
+- 2026-03-07: Browser-Smoke-Test via `web_game_playwright_client.js` (lokaler Server auf Port `4176`) für 6 Spieltypen:
+  - `sortier_spiel`, `quick_quiz`, `matching_puzzle`, `escape_game`, `what_and_why`, `wer_bin_ich`.
+  - Ergebnis: keine `errors-0.json` in den Läufen, Screenshots visuell geprüft.
+  - Artefakte: `/tmp/pauker-smoke-main/<spieltyp>/shot-0.png`.

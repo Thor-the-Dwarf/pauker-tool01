@@ -1,0 +1,370 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – System-Software (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Bootpfad, Betriebsmodus, Incident-Diagnose und Härtung.",
+  "columns": [
+    {
+      "id": "firmware_uefi_bios",
+      "title": "Firmware (UEFI/BIOS)",
+      "subtitle": ""
+    },
+    {
+      "id": "secure_boot",
+      "title": "Secure Boot",
+      "subtitle": ""
+    },
+    {
+      "id": "boot_manager_bootloader",
+      "title": "Boot-Manager/Bootloader",
+      "subtitle": ""
+    },
+    {
+      "id": "kernel",
+      "title": "Kernel",
+      "subtitle": ""
+    },
+    {
+      "id": "user_mode",
+      "title": "User Mode",
+      "subtitle": ""
+    },
+    {
+      "id": "kernel_mode",
+      "title": "Kernel Mode",
+      "subtitle": ""
+    },
+    {
+      "id": "geratetreiber",
+      "title": "Gerätetreiber",
+      "subtitle": ""
+    },
+    {
+      "id": "init_service_manager",
+      "title": "Init-/Service-Manager",
+      "subtitle": ""
+    },
+    {
+      "id": "systemdienst",
+      "title": "Systemdienst",
+      "subtitle": ""
+    },
+    {
+      "id": "logging_stack",
+      "title": "Logging-Stack",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess_scheduler",
+      "title": "Prozess-Scheduler",
+      "subtitle": ""
+    },
+    {
+      "id": "virtueller_speicher",
+      "title": "Virtueller Speicher",
+      "subtitle": ""
+    },
+    {
+      "id": "dateisystem_schicht",
+      "title": "Dateisystem-Schicht",
+      "subtitle": ""
+    },
+    {
+      "id": "runtime_jvm",
+      "title": "Runtime: JVM",
+      "subtitle": ""
+    },
+    {
+      "id": "runtime_net",
+      "title": "Runtime: .NET",
+      "subtitle": ""
+    },
+    {
+      "id": "middleware_message_broker_app_server",
+      "title": "Middleware (Message Broker/App-Server)",
+      "subtitle": ""
+    },
+    {
+      "id": "system_api_syscall_grenze",
+      "title": "System-API/Syscall-Grenze",
+      "subtitle": ""
+    },
+    {
+      "id": "abhangigkeitsmanagement",
+      "title": "Abhängigkeitsmanagement",
+      "subtitle": ""
+    },
+    {
+      "id": "patch_management",
+      "title": "Patch-Management",
+      "subtitle": ""
+    },
+    {
+      "id": "rollback_strategie",
+      "title": "Rollback-Strategie",
+      "subtitle": ""
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "subtitle": ""
+    },
+    {
+      "id": "least_privilege",
+      "title": "Least Privilege",
+      "subtitle": ""
+    },
+    {
+      "id": "service_hardening",
+      "title": "Service-Hardening",
+      "subtitle": ""
+    },
+    {
+      "id": "incident_runbook",
+      "title": "Incident-Runbook",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Initialisiert Hardware vor dem Laden des Betriebssystems.",
+      "correctForms": [
+        "firmware_uefi_bios"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Prüft Vertrauenskette von Startkomponenten und blockiert unsignierte Pfade.",
+      "correctForms": [
+        "secure_boot"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Lädt den Kernel und übergibt anschließend die Kontrolle.",
+      "correctForms": [
+        "boot_manager_bootloader"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Verantwortlich für Scheduling, Speicherverwaltung und privilegierte Kernfunktionen.",
+      "correctForms": [
+        "kernel"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Ausführungsbereich mit eingeschränkten Rechten für Anwendungen.",
+      "correctForms": [
+        "user_mode"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Privilegierter Modus für Kernel-nahe Komponenten.",
+      "correctForms": [
+        "kernel_mode"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Übersetzt OS-Schnittstellen in konkrete Geräteoperationen.",
+      "correctForms": [
+        "geratetreiber"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Steuert Startreihenfolge und Abhängigkeiten von Diensten.",
+      "correctForms": [
+        "init_service_manager"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Läuft dauerhaft im Hintergrund und erfüllt Infrastrukturaufgaben.",
+      "correctForms": [
+        "systemdienst"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Sammelt und persistiert Ereignisse für Fehleranalyse und Audit.",
+      "correctForms": [
+        "logging_stack"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Verteilt CPU-Zeit auf konkurrierende Prozesse und Threads.",
+      "correctForms": [
+        "prozess_scheduler"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Abstrahiert RAM und nutzt Paging bei Speicherdruck.",
+      "correctForms": [
+        "virtueller_speicher"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Sichert Konsistenz und Struktur der Datenspeicherung.",
+      "correctForms": [
+        "dateisystem_schicht"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Managed Runtime zur Ausführung von Java-Bytecode.",
+      "correctForms": [
+        "runtime_jvm"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Laufzeitumgebung für Anwendungen im .NET-Ökosystem.",
+      "correctForms": [
+        "runtime_net"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Entkoppelt Dienste und standardisiert Integrationskommunikation.",
+      "correctForms": [
+        "middleware_message_broker_app_server"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Definierter Übergang, über den Anwendungen Kernelfunktionen anfordern.",
+      "correctForms": [
+        "system_api_syscall_grenze"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Steuert kompatible Versionen von Bibliotheken und Laufzeitpaketen.",
+      "correctForms": [
+        "abhangigkeitsmanagement"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Organisiert kontrollierte Verteilung von Sicherheits- und Stabilitätsupdates.",
+      "correctForms": [
+        "patch_management"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Ermöglicht Rückkehr auf stabilen Stand nach fehlerhaftem Update.",
+      "correctForms": [
+        "rollback_strategie"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Verknüpft Logs, Metriken und Traces zu einer gemeinsamen Diagnosesicht.",
+      "correctForms": [
+        "observability"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Komponenten erhalten nur die minimal notwendigen Rechte.",
+      "correctForms": [
+        "least_privilege"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Reduziert Angriffsfläche durch restriktive Dienstkonfiguration.",
+      "correctForms": [
+        "service_hardening"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Standardisiert Incident-Ablauf von Erkennung bis Nachdokumentation.",
+      "correctForms": [
+        "incident_runbook"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "\"Wenn die App nicht startet, ist immer sofort ein BIOS-Update die beste Erstmaßnahme.\"",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "Treiberfehler können systemweite Stabilität beeinträchtigen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Bootkette und Runtime-Ebene sind unterschiedliche Diagnosefelder.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "User Mode hat dieselben Privilegien wie Kernel Mode.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Ein sauberes Runbook verbessert Reaktionszeit und Nachvollziehbarkeit bei Incidents.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Secure Boot dient primär der CPU-Taktrateoptimierung.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Patch und Rollback sollten zusammen geplant werden, nicht isoliert.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Observability ersetzt grundsätzlich jede Logdatei.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Least Privilege und Service-Hardening ergänzen sich im Betrieb.",
+      "correctForms": [
+        "alle"
+      ]
+    }
+  ]
+}

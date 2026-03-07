@@ -1,0 +1,375 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Schnittstellen & Kompatibilität (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Prüflogik, Topologie, Protokolle, Aushandlung und Firmware-Kette.",
+  "columns": [
+    {
+      "id": "pcie_lane_budget",
+      "title": "PCIe-Lane-Budget",
+      "subtitle": ""
+    },
+    {
+      "id": "pcie_generation_fallback",
+      "title": "PCIe-Generation-Fallback",
+      "subtitle": ""
+    },
+    {
+      "id": "slot_mechanisch_vs_elektrisch",
+      "title": "Slot mechanisch vs elektrisch",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu_vs_chipsatz_lanes",
+      "title": "CPU- vs Chipsatz-Lanes",
+      "subtitle": ""
+    },
+    {
+      "id": "chipsatz_uplink_limit",
+      "title": "Chipsatz-Uplink-Limit",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_formfaktor",
+      "title": "M.2-Formfaktor",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_nvme_vs_sata",
+      "title": "M.2 NVMe vs SATA",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_keying",
+      "title": "M.2-Keying",
+      "subtitle": ""
+    },
+    {
+      "id": "m_2_langenstandard",
+      "title": "M.2-Längenstandard",
+      "subtitle": ""
+    },
+    {
+      "id": "port_deaktivierung_durch_sharing",
+      "title": "Port-Deaktivierung durch Sharing",
+      "subtitle": ""
+    },
+    {
+      "id": "usb_c_steckerform",
+      "title": "USB-C-Steckerform",
+      "subtitle": ""
+    },
+    {
+      "id": "usb_protokollfahigkeit",
+      "title": "USB-Protokollfähigkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "usb_power_delivery",
+      "title": "USB Power Delivery",
+      "subtitle": ""
+    },
+    {
+      "id": "displayport_alt_mode",
+      "title": "DisplayPort Alt Mode",
+      "subtitle": ""
+    },
+    {
+      "id": "thunderbolt_tunneling",
+      "title": "Thunderbolt-Tunneling",
+      "subtitle": ""
+    },
+    {
+      "id": "dp_hdmi_versionsgrenzen",
+      "title": "DP/HDMI-Versionsgrenzen",
+      "subtitle": ""
+    },
+    {
+      "id": "displayport_mst",
+      "title": "DisplayPort-MST",
+      "subtitle": ""
+    },
+    {
+      "id": "edid_aushandlung",
+      "title": "EDID-Aushandlung",
+      "subtitle": ""
+    },
+    {
+      "id": "ethernet_autonegotiation",
+      "title": "Ethernet-Autonegotiation",
+      "subtitle": ""
+    },
+    {
+      "id": "kabelqualitat_als_limit",
+      "title": "Kabelqualität als Limit",
+      "subtitle": ""
+    },
+    {
+      "id": "treiberschicht",
+      "title": "Treiberschicht",
+      "subtitle": ""
+    },
+    {
+      "id": "firmware_schicht",
+      "title": "Firmware-Schicht",
+      "subtitle": ""
+    },
+    {
+      "id": "uefi_boot_modus",
+      "title": "UEFI-Boot-Modus",
+      "subtitle": ""
+    },
+    {
+      "id": "secure_boot_kette",
+      "title": "Secure-Boot-Kette",
+      "subtitle": ""
+    },
+    {
+      "id": "diagnosemethodik",
+      "title": "Diagnosemethodik",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Beschreibt die begrenzte Gesamtzahl nutzbarer PCIe-Ressourcen auf der Plattform.",
+      "correctForms": [
+        "pcie_lane_budget"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Erklärt, warum eine schnelle Karte in älterer Umgebung korrekt, aber langsamer arbeitet.",
+      "correctForms": [
+        "pcie_generation_fallback"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Ein langer Slot liefert nur x4, obwohl die Karte x16 unterstützt.",
+      "correctForms": [
+        "slot_mechanisch_vs_elektrisch"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Trennt die Direktanbindung an die CPU von Geräten hinter dem Chipsatz.",
+      "correctForms": [
+        "cpu_vs_chipsatz_lanes"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Mehrere Geräte teilen sich den Weg vom Chipsatz zur CPU als gemeinsamen Engpass.",
+      "correctForms": [
+        "chipsatz_uplink_limit"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Beschreibt eine Bauform, nicht automatisch das Kommunikationsprotokoll.",
+      "correctForms": [
+        "m_2_formfaktor"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Klassische AP1-Falle: Modul und Slot sehen passend aus, sprechen aber unterschiedliche Storage-Protokolle.",
+      "correctForms": [
+        "m_2_nvme_vs_sata"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Kerben am M.2-Modul bestimmen mechanische Kompatibilität.",
+      "correctForms": [
+        "m_2_keying"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "2230, 2242, 2280 und 22110 sind hier relevante Unterscheidungen.",
+      "correctForms": [
+        "m_2_langenstandard"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Belegter M.2-Slot kann je nach Board bestimmte SATA-Ports abschalten.",
+      "correctForms": [
+        "port_deaktivierung_durch_sharing"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Beschreibt nur den Stecker und nicht automatisch Datenrate oder Videofähigkeit.",
+      "correctForms": [
+        "usb_c_steckerform"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Erfasst, dass Controller, Port und Kabelprofil die echte USB-Leistung bestimmen.",
+      "correctForms": [
+        "usb_protokollfahigkeit"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Ladeleistung hängt von ausgehandelten Spannungs-/Stromprofilen zwischen allen Beteiligten ab.",
+      "correctForms": [
+        "usb_power_delivery"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Video über USB-C funktioniert nur bei expliziter Unterstützung dieses Modus.",
+      "correctForms": [
+        "displayport_alt_mode"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Kann PCIe- und Display-Signale über einen kompatiblen Port transportieren.",
+      "correctForms": [
+        "thunderbolt_tunneling"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Hier entscheiden Version und Kabel über erreichbare Auflösung und Bildfrequenz.",
+      "correctForms": [
+        "dp_hdmi_versionsgrenzen"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Ermöglicht mehrere Monitore über einen DisplayPort-Pfad, sofern alle Geräte es unterstützen.",
+      "correctForms": [
+        "displayport_mst"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Monitorfähigkeiten werden ausgelesen; fehlerhafte Interpretation kann Ausgabeoptionen reduzieren.",
+      "correctForms": [
+        "edid_aushandlung"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Linkrate wird zwischen beiden Netzwerkenden ausgehandelt und auf gemeinsame Fähigkeiten begrenzt.",
+      "correctForms": [
+        "ethernet_autonegotiation"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Schlechtes oder ungeeignetes Kabel kann Daten- oder Videoleistung trotz guter Ports ausbremsen.",
+      "correctForms": [
+        "kabelqualitat_als_limit"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Betriebssystemnahe Übersetzungsschicht zwischen Hardware und OS-Funktion.",
+      "correctForms": [
+        "treiberschicht"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Gerätenahe Steuerungsschicht, deren Updates Stabilitätsbugs beheben können.",
+      "correctForms": [
+        "firmware_schicht"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Bootprobleme nach Migration entstehen häufig durch Legacy/UEFI-Mismatch.",
+      "correctForms": [
+        "uefi_boot_modus"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Signatur- und Vertrauenskette beim Start, die unsignierte Komponenten blockieren kann.",
+      "correctForms": [
+        "secure_boot_kette"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Empfiehlt die Reihenfolge: Physik/Topologie, Protokoll, Gegenstelle, Software, Verifikation.",
+      "correctForms": [
+        "diagnosemethodik"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "\"Wenn der Stecker passt, sind Datenrate, Video und Laden immer automatisch maximal.\"",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "USB-C kann je nach Implementierung stark unterschiedliche Fähigkeiten haben.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Ein BIOS/UEFI-Update kann bei neuer CPU oder NVMe-Boot-Erkennung relevant sein.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "M.2 bezeichnet immer NVMe und niemals SATA.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Bei Linkproblemen müssen Gegenstelle und Kabelstrecke mitgeprüft werden.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Treiber, Firmware und UEFI sind für Schnittstellenverhalten grundsätzlich irrelevant.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Mechanische Slotlänge allein reicht nicht als Bandbreitennachweis.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Schnittstellenanalyse ist in AP1 nur auswendig lernen ohne Ursachekette.",
+      "correctForms": [
+        "keine"
+      ]
+    }
+  ]
+}

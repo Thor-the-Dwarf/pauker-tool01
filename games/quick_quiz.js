@@ -24,7 +24,7 @@
             // Spiel-Daten (aus JSON)
             this.answerLabels = [];         // Array von String (Button-Labels)
             this.questions = [];            // Array von {text, correct}
-            this.timePerQuestion = 12;      // Sekunden pro Frage
+            this.timePerQuestion = this.scaleDuration(12); // Sekunden pro Frage
             this.configData = {};           // Full JSON data
 
             // Spiel-State
@@ -86,7 +86,7 @@
                 this.questions = data.questions;
             }
             if (typeof data.timePerQuestionSeconds === 'number') {
-                this.timePerQuestion = data.timePerQuestionSeconds;
+                this.timePerQuestion = this.scaleDuration(data.timePerQuestionSeconds);
                 this.remainingTime = this.timePerQuestion;
             }
 
@@ -259,7 +259,7 @@
 
             setTimeout(() => {
                 this.nextQuestion();
-            }, 900);
+            }, this.scaleDuration(900));
         }
 
         handleAnswer(selected) {
@@ -304,7 +304,7 @@
 
             setTimeout(() => {
                 this.nextQuestion();
-            }, 800);
+            }, this.scaleDuration(800));
         }
 
         restartGame() {

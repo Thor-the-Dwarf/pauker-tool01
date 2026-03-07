@@ -1,0 +1,382 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Software-Arten (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Level 2: Architekturverständnis, Betriebskontext und Lizenz-Compliance.",
+  "columns": [
+    {
+      "id": "betriebssystem_kernschicht",
+      "title": "Betriebssystem-Kernschicht",
+      "subtitle": ""
+    },
+    {
+      "id": "geratetreiber",
+      "title": "Gerätetreiber",
+      "subtitle": ""
+    },
+    {
+      "id": "systemdienst_daemon",
+      "title": "Systemdienst/Daemon",
+      "subtitle": ""
+    },
+    {
+      "id": "laufzeitumgebung",
+      "title": "Laufzeitumgebung",
+      "subtitle": ""
+    },
+    {
+      "id": "paket_update_management",
+      "title": "Paket-/Update-Management",
+      "subtitle": ""
+    },
+    {
+      "id": "backup_agent",
+      "title": "Backup-Agent",
+      "subtitle": ""
+    },
+    {
+      "id": "monitoring_observability_agent",
+      "title": "Monitoring/Observability-Agent",
+      "subtitle": ""
+    },
+    {
+      "id": "endpoint_security_agent",
+      "title": "Endpoint-Security-Agent",
+      "subtitle": ""
+    },
+    {
+      "id": "office_suite",
+      "title": "Office-Suite",
+      "subtitle": ""
+    },
+    {
+      "id": "browser_client",
+      "title": "Browser-Client",
+      "subtitle": ""
+    },
+    {
+      "id": "erp_anwendung",
+      "title": "ERP-Anwendung",
+      "subtitle": ""
+    },
+    {
+      "id": "crm_anwendung",
+      "title": "CRM-Anwendung",
+      "subtitle": ""
+    },
+    {
+      "id": "ide",
+      "title": "IDE",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenzmetrik_named_user",
+      "title": "Lizenzmetrik: Named User",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenzmetrik_concurrent_user",
+      "title": "Lizenzmetrik: Concurrent User",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenzmetrik_device",
+      "title": "Lizenzmetrik: Device",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenzmetrik_core_basiert",
+      "title": "Lizenzmetrik: Core-basiert",
+      "subtitle": ""
+    },
+    {
+      "id": "abo_modell",
+      "title": "Abo-Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "kauf_perpetual_modell",
+      "title": "Kauf-/Perpetual-Modell",
+      "subtitle": ""
+    },
+    {
+      "id": "open_source_lizenz_permissiv",
+      "title": "Open-Source-Lizenz (permissiv)",
+      "subtitle": ""
+    },
+    {
+      "id": "open_source_lizenz_copyleft",
+      "title": "Open-Source-Lizenz (Copyleft)",
+      "subtitle": ""
+    },
+    {
+      "id": "dual_licensing",
+      "title": "Dual Licensing",
+      "subtitle": ""
+    },
+    {
+      "id": "lizenz_audit_fahigkeit",
+      "title": "Lizenz-Audit-Fähigkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "vendor_lock_in_risiko",
+      "title": "Vendor Lock-in Risiko",
+      "subtitle": ""
+    },
+    {
+      "id": "software_change_management",
+      "title": "Software-Change-Management",
+      "subtitle": ""
+    },
+    {
+      "id": "alle",
+      "title": "alle",
+      "subtitle": ""
+    },
+    {
+      "id": "keine",
+      "title": "keine",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Verwaltet Scheduling, Speicher, Rechte und Hardwarezugriff als Basis für alle Programme.",
+      "correctForms": [
+        "betriebssystem_kernschicht"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Vermittelt konkret zwischen Betriebssystem und einzelner Hardwarekomponente.",
+      "correctForms": [
+        "geratetreiber"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Läuft dauerhaft im Hintergrund und erfüllt eine betriebliche Daueraufgabe.",
+      "correctForms": [
+        "systemdienst_daemon"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Stellt benötigte Framework-/Runtime-Komponenten für Programmausführung bereit.",
+      "correctForms": [
+        "laufzeitumgebung"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Sorgt für kontrollierte Verteilung und Versionierung installierter Softwarestände.",
+      "correctForms": [
+        "paket_update_management"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Automatisiert Sicherung und Wiederherstellung und ist Teil der Betriebsstabilität.",
+      "correctForms": [
+        "backup_agent"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Sammelt Metriken, Logs und Zustände zur Früherkennung von Incidents.",
+      "correctForms": [
+        "monitoring_observability_agent"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Setzt Sicherheitsrichtlinien endpointnah durch und reagiert auf Bedrohungen.",
+      "correctForms": [
+        "endpoint_security_agent"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Klassische Anwendungssoftware für Texte, Tabellen und Präsentationen.",
+      "correctForms": [
+        "office_suite"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Nutzt Webanwendungen auf Basis der darunterliegenden Systemplattform.",
+      "correctForms": [
+        "browser_client"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Abbildung integrierter Geschäftsprozesse wie Einkauf, Lager und Rechnungswesen.",
+      "correctForms": [
+        "erp_anwendung"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Fokussiert Kundenbeziehungen, Leads, Tickets und Serviceprozesse.",
+      "correctForms": [
+        "crm_anwendung"
+      ]
+    },
+    {
+      "id": "card_013",
+      "text": "Entwicklungswerkzeug mit Editor, Debugger und Build-Unterstützung.",
+      "correctForms": [
+        "ide"
+      ]
+    },
+    {
+      "id": "card_014",
+      "text": "Lizenzierung anhand namentlich zugewiesener Personen.",
+      "correctForms": [
+        "lizenzmetrik_named_user"
+      ]
+    },
+    {
+      "id": "card_015",
+      "text": "Lizenzierung anhand maximal gleichzeitig aktiver Nutzer.",
+      "correctForms": [
+        "lizenzmetrik_concurrent_user"
+      ]
+    },
+    {
+      "id": "card_016",
+      "text": "Lizenzierung pro physischem oder virtuellem Endgerät.",
+      "correctForms": [
+        "lizenzmetrik_device"
+      ]
+    },
+    {
+      "id": "card_017",
+      "text": "Kosten steigen mit zugewiesenen CPU-Kernen bzw. vCores.",
+      "correctForms": [
+        "lizenzmetrik_core_basiert"
+      ]
+    },
+    {
+      "id": "card_018",
+      "text": "Nutzung ist an laufende Zahlungen und Vertragslaufzeit gebunden.",
+      "correctForms": [
+        "abo_modell"
+      ]
+    },
+    {
+      "id": "card_019",
+      "text": "Einmalige Lizenz erlaubt dauerhafte Nutzung einer definierten Version.",
+      "correctForms": [
+        "kauf_perpetual_modell"
+      ]
+    },
+    {
+      "id": "card_020",
+      "text": "Breite Nutzbarkeit mit meist moderaten Pflichten wie Lizenzhinweis.",
+      "correctForms": [
+        "open_source_lizenz_permissiv"
+      ]
+    },
+    {
+      "id": "card_021",
+      "text": "Kann bei Weitergabe abgeleiteter Werke stärkere Offenlegungspflichten auslösen.",
+      "correctForms": [
+        "open_source_lizenz_copyleft"
+      ]
+    },
+    {
+      "id": "card_022",
+      "text": "Gleiche Software wird alternativ unter zwei Lizenzpfaden angeboten.",
+      "correctForms": [
+        "dual_licensing"
+      ]
+    },
+    {
+      "id": "card_023",
+      "text": "Nachweisbare Zuordnung von Nutzern, Geräten und Vertragsständen für Prüfungen.",
+      "correctForms": [
+        "lizenz_audit_fahigkeit"
+      ]
+    },
+    {
+      "id": "card_024",
+      "text": "Abhängigkeit durch proprietäre Formate, Schnittstellen oder Exit-Hürden.",
+      "correctForms": [
+        "vendor_lock_in_risiko"
+      ]
+    },
+    {
+      "id": "card_025",
+      "text": "Einführung neuer Versionen mit Pilot, Risikoanalyse, Rollback und Dokumentation.",
+      "correctForms": [
+        "software_change_management"
+      ]
+    },
+    {
+      "id": "card_026",
+      "text": "\"Abo\" und \"proprietär\" meinen denselben Sachverhalt.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_027",
+      "text": "Lizenzmetriken beeinflussen sowohl Kosten als auch Compliance-Risiko.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_028",
+      "text": "Systemnahe Tools wie Backup und Monitoring können als Services im Hintergrund laufen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_029",
+      "text": "Eine IDE ist automatisch Systemsoftware, weil sie technisch wirkt.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_030",
+      "text": "Open Source bedeutet immer kostenfrei und ohne Pflichten.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_031",
+      "text": "Technische Einordnung und Lizenzbetrachtung gehören in AP1 zusammen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_032",
+      "text": "Named User ist immer billiger als Concurrent User, unabhängig vom Nutzungsprofil.",
+      "correctForms": [
+        "keine"
+      ]
+    },
+    {
+      "id": "card_033",
+      "text": "Fehlende Dokumentation kann bei Herstelleraudit zu Risiko führen.",
+      "correctForms": [
+        "alle"
+      ]
+    },
+    {
+      "id": "card_034",
+      "text": "Vendor Lock-in betrifft nur Hardware und niemals Softwareverträge.",
+      "correctForms": [
+        "keine"
+      ]
+    }
+  ]
+}

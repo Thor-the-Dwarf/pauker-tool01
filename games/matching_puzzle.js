@@ -311,7 +311,7 @@
                     this.setCardsDisabled(false);
                     this.evaluationLock = false;
                     this.updateStats();
-                }, 900);
+                }, this.scaleDuration(900));
             }
         }
 
