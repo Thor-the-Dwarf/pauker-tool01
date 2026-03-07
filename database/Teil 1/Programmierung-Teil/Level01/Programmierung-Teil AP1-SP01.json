@@ -1,0 +1,133 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Programmierung (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "use_case_diagramm",
+      "title": "Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "use_case_text",
+      "title": "Use-Case-Text",
+      "subtitle": ""
+    },
+    {
+      "id": "klassendiagramm",
+      "title": "Klassendiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "aktivitatsdiagramm",
+      "title": "Aktivitätsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "sequenzdiagramm",
+      "title": "Sequenzdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "zustandsdiagramm",
+      "title": "Zustandsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "erd_erm",
+      "title": "ERD/ERM",
+      "subtitle": ""
+    },
+    {
+      "id": "kardinalitat",
+      "title": "Kardinalität",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Zeigt, was ein System aus Sicht der Nutzer können soll – nicht, wie es intern umgesetzt wird.",
+      "correctForms": [
+        "use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Actor ist eine Rolle (z. B. Admin), nicht eine konkrete Person.",
+      "correctForms": [
+        "use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Mini-Template: Vorbedingung → Hauptablauf (Happy Path) → Alternativen/Fehlerfälle → Nachbedingung.",
+      "correctForms": [
+        "use_case_text"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Besteht aus Klassenname, Attributen und Methoden; Beziehungen wie Vererbung gehören dazu.",
+      "correctForms": [
+        "klassendiagramm"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "1..1, 0..1, 1..*, 0..* beschreiben, wie viele Objekte in einer Beziehung erlaubt oder nötig sind.",
+      "correctForms": [
+        "kardinalitat"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Visualisiert Ablauf/Logik mit Start/Ende, Aktionen, Entscheidungen und Schleifen.",
+      "correctForms": [
+        "aktivitatsdiagramm"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Prüfungsfalle: Eine Verzweigung ohne klar beschriftete Bedingung ist praktisch nicht bewertbar.",
+      "correctForms": [
+        "aktivitatsdiagramm"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Zeigt zeitliche Nachrichtenabfolge zwischen Komponenten, z. B. UI → Service → DB.",
+      "correctForms": [
+        "sequenzdiagramm"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Zeit läuft von oben nach unten; Lifelines repräsentieren Objekte oder Komponenten.",
+      "correctForms": [
+        "sequenzdiagramm"
+      ]
+    },
+    {
+      "id": "card_010",
+      "text": "Modelliert Objekte mit Lebensphasen (z. B. Ticket: Neu → Zugewiesen → In Bearbeitung → Gelöst → Geschlossen).",
+      "correctForms": [
+        "zustandsdiagramm"
+      ]
+    },
+    {
+      "id": "card_011",
+      "text": "Warnung: „Prüfen“ ist eine Aktion, kein Zustand.",
+      "correctForms": [
+        "zustandsdiagramm"
+      ]
+    },
+    {
+      "id": "card_012",
+      "text": "Datenmodell mit Entitäten, Beziehungen und Schlüsseln (PK/FK) als Basis für Tabellen.",
+      "correctForms": [
+        "erd_erm"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Programmierung (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Achte auf feine Unterschiede (z. B. WHERE vs HAVING, Aktivität vs Zustand).",
+  "columns": [
+    {
+      "id": "use_case_diagramm",
+      "title": "Use-Case-Diagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "include",
+      "title": "<<include>>",
+      "subtitle": ""
+    },
+    {
+      "id": "extend",
+      "title": "<<extend>>",
+      "subtitle": ""
+    },
+    {
+      "id": "actor_rolle",
+      "title": "Actor (Rolle)",
+      "subtitle": ""
+    },
+    {
+      "id": "systemgrenze",
+      "title": "Systemgrenze",
+      "subtitle": ""
+    },
+    {
+      "id": "aktivitatsdiagramm",
+      "title": "Aktivitätsdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "sequenzdiagramm",
+      "title": "Sequenzdiagramm",
+      "subtitle": ""
+    },
+    {
+      "id": "zustandsdiagramm",
+      "title": "Zustandsdiagramm",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Beschreibt aus Nutzersicht, was das System leisten soll, ohne Implementierungsdetails.",
+      "correctForms": [
+        "use_case_diagramm"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Bindet verpflichtendes, wiederverwendbares Verhalten in einen Use Case ein.",
+      "correctForms": [
+        "include"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Ergänzt einen Basis-Use-Case nur bei zusätzlicher Bedingung optional.",
+      "correctForms": [
+        "extend"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Repräsentiert im Use Case eine Funktion/Rolle und keine konkrete Person.",
+      "correctForms": [
+        "actor_rolle"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Grenzt im Diagramm ab, was intern ist und was als externes System gilt.",
+      "correctForms": [
+        "systemgrenze"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Zeigt Entscheidungs- und Ablaufpfade mit klaren Bedingungen.",
+      "correctForms": [
+        "aktivitatsdiagramm"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Visualisiert Nachrichten in zeitlicher Reihenfolge zwischen Lifelines.",
+      "correctForms": [
+        "sequenzdiagramm"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Modelliert Objektlebensphasen wie 'neu', 'in Bearbeitung', 'geschlossen'.",
+      "correctForms": [
+        "zustandsdiagramm"
+      ]
+    }
+  ]
+}
