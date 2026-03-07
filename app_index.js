@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:55:44 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:56:12 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -66187,8 +66187,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_1 Vertragsarten, -bestandteile und -störungen/Missionen_7_1_PvAP1/Missionen_7_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_1 Vertragsarten, -bestandteile und -störungen/Missionen_7_1_PvAP1/Missionen_7_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -67649,8 +67649,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_2 Zielsetzungen des Unternehmens/Missionen_7_2_PvAP1/Missionen_7_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_2 Zielsetzungen des Unternehmens/Missionen_7_2_PvAP1/Missionen_7_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -68901,8 +68901,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_4 Aufbauorganisation/Missionen_7_4_PvAP1/Missionen_7_4_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_4_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_4 Aufbauorganisation/Missionen_7_4_PvAP1/Missionen_7_4_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_4_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -70094,8 +70094,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_5 Veränderungsprozesse/Missionen_7_5_PvAP1/Missionen_7_5_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_5_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_5 Veränderungsprozesse/Missionen_7_5_PvAP1/Missionen_7_5_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_5_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -70141,26 +70141,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "skeptiker",
                               "title": "Skeptiker",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "widerstandler",
-                              "title": "Widerständler",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ursachen_von_widerstanden",
-                              "title": "Ursachen von Widerständen",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -71388,8 +71368,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_6 Leistungsübergabe und Einweisungen/Missionen_7_6_PvAP1/Missionen_7_6_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_6_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_6 Leistungsübergabe und Einweisungen/Missionen_7_6_PvAP1/Missionen_7_6_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_6_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -71435,31 +71415,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "programmdokumentation",
                               "title": "Programmdokumentation",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "netzwerkdokumentation",
-                              "title": "Netzwerkdokumentation",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "testprotokoll",
-                              "title": "Testprotokoll",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "einweisung",
-                              "title": "Einweisung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -71521,27 +71476,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Beschreibt Netzwerkaufbau: IP-Plan, VLANs, Ports, Firewall-Regeln, Routing, DNS, VPN, Topologie.",
-                              "correctForms": [
-                                "netzwerkdokumentation"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Nachweis über durchgeführte Tests: Testfälle, Ergebnisse, Abweichungen, Reproduktionsschritte, Freigabe.",
-                              "correctForms": [
-                                "testprotokoll"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Praktische Einführung/Schulung, damit Anwender/Administratoren das System bedienen und betreiben können.",
-                              "correctForms": [
-                                "einweisung"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "Wenn später Streit entsteht, WAS genau geliefert wurde, hilft vor allem dieses Dokument.",
                               "correctForms": [
@@ -71588,20 +71522,6 @@ window.DATABASE_INDEX = [
                               "text": "„Module, Klassen, Build-Pipeline, Konfig-Dateien“ gehört typischerweise in diese Dokumentationsart.",
                               "correctForms": [
                                 "programmdokumentation"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "„VLAN 20, Subnetz 192.168.20.0/24, Gateway .1, Firewall-Regeln“ gehört typischerweise in diese Dokumentationsart.",
-                              "correctForms": [
-                                "netzwerkdokumentation"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "„Testfall: VPN-Verbindung; Ergebnis: erfolgreich; Screenshot/Log“ gehört typischerweise in diese Dokumentationsart.",
-                              "correctForms": [
-                                "testprotokoll"
                               ]
                             }
                           ]
@@ -72591,8 +72511,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_7 Mängel und Mängelarten/Missionen_7_7_PvAP1/Missionen_7_7_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_7_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_7 Mängel und Mängelarten/Missionen_7_7_PvAP1/Missionen_7_7_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_7_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -73769,8 +73689,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_8 Leistungserbringung bewerten/Missionen_7_8_PvAP1/Missionen_7_8_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_7_8_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/7 Erbringen der Leistungen und Auftragsabschluss/7_8 Leistungserbringung bewerten/Missionen_7_8_PvAP1/Missionen_7_8_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_7_8_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {

@@ -42,31 +42,6 @@
       "id": "programmdokumentation",
       "title": "Programmdokumentation",
       "subtitle": ""
-    },
-    {
-      "id": "netzwerkdokumentation",
-      "title": "Netzwerkdokumentation",
-      "subtitle": ""
-    },
-    {
-      "id": "testprotokoll",
-      "title": "Testprotokoll",
-      "subtitle": ""
-    },
-    {
-      "id": "einweisung",
-      "title": "Einweisung",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -127,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Beschreibt Netzwerkaufbau: IP-Plan, VLANs, Ports, Firewall-Regeln, Routing, DNS, VPN, Topologie.",
-      "correctForms": [
-        "netzwerkdokumentation"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Nachweis über durchgeführte Tests: Testfälle, Ergebnisse, Abweichungen, Reproduktionsschritte, Freigabe.",
-      "correctForms": [
-        "testprotokoll"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Praktische Einführung/Schulung, damit Anwender/Administratoren das System bedienen und betreiben können.",
-      "correctForms": [
-        "einweisung"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "Wenn später Streit entsteht, WAS genau geliefert wurde, hilft vor allem dieses Dokument.",
       "correctForms": [
@@ -194,20 +148,6 @@
       "text": "„Module, Klassen, Build-Pipeline, Konfig-Dateien“ gehört typischerweise in diese Dokumentationsart.",
       "correctForms": [
         "programmdokumentation"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "„VLAN 20, Subnetz 192.168.20.0/24, Gateway .1, Firewall-Regeln“ gehört typischerweise in diese Dokumentationsart.",
-      "correctForms": [
-        "netzwerkdokumentation"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "„Testfall: VPN-Verbindung; Ergebnis: erfolgreich; Screenshot/Log“ gehört typischerweise in diese Dokumentationsart.",
-      "correctForms": [
-        "testprotokoll"
       ]
     }
   ]
