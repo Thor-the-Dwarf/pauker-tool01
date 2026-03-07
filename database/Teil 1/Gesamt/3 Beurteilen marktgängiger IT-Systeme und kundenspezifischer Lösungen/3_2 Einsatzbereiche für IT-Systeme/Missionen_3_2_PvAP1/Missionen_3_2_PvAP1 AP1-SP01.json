@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Einsatzbereiche für IT-Systeme (3.2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "klassifikation_von_anwendungssystemen",
+      "title": "Klassifikation von Anwendungssystemen",
+      "subtitle": ""
+    },
+    {
+      "id": "erp",
+      "title": "ERP",
+      "subtitle": ""
+    },
+    {
+      "id": "crm",
+      "title": "CRM",
+      "subtitle": ""
+    },
+    {
+      "id": "dms",
+      "title": "DMS",
+      "subtitle": ""
+    },
+    {
+      "id": "bi_reporting",
+      "title": "BI/Reporting",
+      "subtitle": ""
+    },
+    {
+      "id": "benutzeroberflache_ui",
+      "title": "Benutzeroberfläche (UI)",
+      "subtitle": ""
+    },
+    {
+      "id": "datenbanksystem_dbms",
+      "title": "Datenbanksystem (DBMS)",
+      "subtitle": ""
+    },
+    {
+      "id": "kommunikationssystem",
+      "title": "Kommunikationssystem",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Einteilung von Anwendungssystemen nach Zweck/Prozessen (z. B. Büro, Analyse, Transaktion) oder nach Architektur (z. B. Client-Server) ist genau das.",
+      "correctForms": [
+        "klassifikation_von_anwendungssystemen"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Integriert typische Unternehmensprozesse wie Einkauf, Lager, Produktion, Finanzen in einem System.",
+      "correctForms": [
+        "erp"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Verwaltet Kundenkontakte, Leads, Angebote und Vertriebsaktivitäten.",
+      "correctForms": [
+        "crm"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Verwaltet Dokumente inkl. Versionen, Freigaben, Metadaten und Archivierung.",
+      "correctForms": [
+        "dms"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Erstellt Auswertungen, Dashboards und Kennzahlen aus Daten (z. B. KPI-Reports).",
+      "correctForms": [
+        "bi_reporting"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Teil des Systems, über den Nutzer klicken, tippen, lesen und bedienen (Formulare, Menüs, Views).",
+      "correctForms": [
+        "benutzeroberflache_ui"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Speichert und verwaltet Daten strukturiert, bietet Abfragen (z. B. SQL) und Transaktionen.",
+      "correctForms": [
+        "datenbanksystem_dbms"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Dient dem Austausch von Informationen zwischen Personen/Systemen (z. B. Mail, Chat, VoIP, Ticket).",
+      "correctForms": [
+        "kommunikationssystem"
+      ]
+    }
+  ]
+}

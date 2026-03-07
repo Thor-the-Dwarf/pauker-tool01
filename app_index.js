@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:53:16 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:53:55 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -37282,8 +37282,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_1 Marktgängige Systeme/Missionen_3_1_PvAP1/Missionen_3_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_3_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_1 Marktgängige Systeme/Missionen_3_1_PvAP1/Missionen_3_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_3_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -37329,46 +37329,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "wlan",
                               "title": "WLAN",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "anwendung",
-                              "title": "Anwendung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "betriebssystem",
-                              "title": "Betriebssystem",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "virtualisierung",
-                              "title": "Virtualisierung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "saas",
-                              "title": "SaaS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "iaas",
-                              "title": "IaaS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "paas",
-                              "title": "PaaS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -37427,76 +37387,6 @@ window.DATABASE_INDEX = [
                               "text": "Drahtloses Netzwerk nach IEEE-802.11-Standards, mit SSID und Verschlüsselung.",
                               "correctForms": [
                                 "wlan"
-                              ]
-                            },
-                            {
-                              "id": "card_009",
-                              "text": "Software, die eine konkrete Aufgabe für Nutzer erfüllt, z. B. Browser, Office, ERP, Mail-Client.",
-                              "correctForms": [
-                                "anwendung"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Grundsoftware, die Hardware verwaltet und Programme ausführt, z. B. Windows, Linux, macOS.",
-                              "correctForms": [
-                                "betriebssystem"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Mehrere virtuelle Maschinen/Umgebungen auf einem physischen Host betreiben, isoliert und flexibel.",
-                              "correctForms": [
-                                "virtualisierung"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Cloudmodell: Fertige Software wird genutzt, der Anbieter betreibt alles (z. B. Webmail/CRM).",
-                              "correctForms": [
-                                "saas"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Cloudmodell: Virtuelle Server, Storage und Netz werden bereitgestellt; du installierst/verwaltst OS und Anwendungen selbst.",
-                              "correctForms": [
-                                "iaas"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Cloudmodell: Laufzeitumgebung/Plattform (z. B. Datenbank, App-Runtime) – du deployest Code, weniger Betriebslast als IaaS.",
-                              "correctForms": [
-                                "paas"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Beispiel: „Ich brauche mehr Rechenleistung und RAM, also buche ich einen größeren virtuellen Server.“",
-                              "correctForms": [
-                                "iaas"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "Beispiel: „Ich nutze ein Online-Office im Browser, ohne Installation und ohne Serverbetrieb.“",
-                              "correctForms": [
-                                "saas"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Beispiel: „Ich deploye meine Web-App auf eine Plattform, die Skalierung und Datenbank anbietet.“",
-                              "correctForms": [
-                                "paas"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Wenn mehrere Betriebssysteme parallel auf einem Rechner laufen sollen, ist das die typische Basistechnik.",
-                              "correctForms": [
-                                "virtualisierung"
                               ]
                             },
                             {
@@ -38671,19 +38561,7 @@ window.DATABASE_INDEX = [
                             "DNS",
                             "SMB",
                             "NFS",
-                            "SMTP/S",
-                            "IMAP/S",
-                            "HTTP/S",
-                            "IPSEC",
-                            "IP",
-                            "TCP",
-                            "UDP",
-                            "SSH",
-                            "DHCP",
-                            "ARP",
-                            "TLS",
-                            "alle",
-                            "keine"
+                            "SMTP/S"
                           ],
                           "questions": [
                             {
@@ -38739,34 +38617,6 @@ window.DATABASE_INDEX = [
                               "correct": "DNS"
                             },
                             {
-                              "text": "Vergibt IP-Adresse, Gateway und DNS automatisch an Clients im Netzwerk.",
-                              "correct": "DHCP"
-                            },
-                            {
-                              "text": "Ordnet im lokalen Netz einer IP-Adresse die passende MAC-Adresse zu.",
-                              "correct": "ARP"
-                            },
-                            {
-                              "text": "Netzwerkprotokoll für logische Adressierung und Routing; liefert keine Zustellgarantie.",
-                              "correct": "IP"
-                            },
-                            {
-                              "text": "Transportprotokoll: verbindungsorientiert, zuverlässig, Reihenfolge garantiert (z. B. Web, Mail).",
-                              "correct": "TCP"
-                            },
-                            {
-                              "text": "Transportprotokoll: verbindungslos, geringe Latenz/Overhead, keine Zustellgarantie (z. B. Echtzeit).",
-                              "correct": "UDP"
-                            },
-                            {
-                              "text": "Protokoll für Webzugriffe; die sichere Variante nutzt zusätzlich Verschlüsselung.",
-                              "correct": "HTTP/S"
-                            },
-                            {
-                              "text": "Verschlüsselungs- und Authentifizierungsprotokoll, das u. a. HTTPS absichert.",
-                              "correct": "TLS"
-                            },
-                            {
                               "text": "Dateifreigabe-Protokoll, typisch in Windows-Umgebungen (Shares, Netzlaufwerke).",
                               "correct": "SMB"
                             },
@@ -38777,25 +38627,13 @@ window.DATABASE_INDEX = [
                             {
                               "text": "Protokoll zum Versenden von E-Mails zwischen Mailservern bzw. vom Client zum Server.",
                               "correct": "SMTP/S"
-                            },
-                            {
-                              "text": "Protokoll zum Abrufen/Synchronisieren von E-Mails auf mehreren Geräten.",
-                              "correct": "IMAP/S"
-                            },
-                            {
-                              "text": "Verschlüsselter Remote-Zugang (Shell) und sicherer Dateitransfer (z. B. scp/sftp).",
-                              "correct": "SSH"
-                            },
-                            {
-                              "text": "Sichert IP-Verkehr auf Netzwerkebene ab (Verschlüsselung/Authentisierung), oft für VPNs genutzt.",
-                              "correct": "IPSEC"
                             }
                           ]
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_2 Einsatzbereiche für IT-Systeme/Missionen_3_2_PvAP1/Missionen_3_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_3_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_2 Einsatzbereiche für IT-Systeme/Missionen_3_2_PvAP1/Missionen_3_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_3_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -38841,106 +38679,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "kommunikationssystem",
                               "title": "Kommunikationssystem",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "router",
-                              "title": "Router",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "switch",
-                              "title": "Switch",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "access_point",
-                              "title": "Access Point",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "osi_modell",
-                              "title": "OSI-Modell",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "dns",
-                              "title": "DNS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "smb",
-                              "title": "SMB",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "nfs",
-                              "title": "NFS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "smtp_s",
-                              "title": "SMTP/S",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "imap_s",
-                              "title": "IMAP/S",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "http_s",
-                              "title": "HTTP/S",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ipsec",
-                              "title": "IPSEC",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ip",
-                              "title": "IP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "tcp",
-                              "title": "TCP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "udp",
-                              "title": "UDP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ssh",
-                              "title": "SSH",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "dhcp",
-                              "title": "DHCP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "arp",
-                              "title": "ARP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "tls",
-                              "title": "TLS",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -38999,132 +38737,6 @@ window.DATABASE_INDEX = [
                               "text": "Dient dem Austausch von Informationen zwischen Personen/Systemen (z. B. Mail, Chat, VoIP, Ticket).",
                               "correctForms": [
                                 "kommunikationssystem"
-                              ]
-                            },
-                            {
-                              "id": "card_009",
-                              "text": "Verbindet unterschiedliche Netzwerke und leitet Pakete anhand von IP-Adressen weiter.",
-                              "correctForms": [
-                                "router"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Verbindet Geräte in einem LAN und leitet Frames anhand von MAC-Adressen weiter.",
-                              "correctForms": [
-                                "switch"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Bindet WLAN-Clients ans LAN an und stellt Funkzugang bereit.",
-                              "correctForms": [
-                                "access_point"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Referenzmodell mit Schichten zur Einordnung von Netzwerkfunktionen und Protokollen.",
-                              "correctForms": [
-                                "osi_modell"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Übersetzt Domainnamen in IP-Adressen (z. B. 'intranet.local' → 192.168.1.10).",
-                              "correctForms": [
-                                "dns"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Vergibt IP-Adresse, Gateway und DNS automatisch an Clients im Netzwerk.",
-                              "correctForms": [
-                                "dhcp"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Ordnet im lokalen Netz einer IP-Adresse die passende MAC-Adresse zu.",
-                              "correctForms": [
-                                "arp"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "Netzwerkprotokoll für logische Adressierung und Routing; liefert keine Zustellgarantie.",
-                              "correctForms": [
-                                "ip"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Transportprotokoll: verbindungsorientiert, zuverlässig, Reihenfolge garantiert (z. B. Web, Mail).",
-                              "correctForms": [
-                                "tcp"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Transportprotokoll: verbindungslos, geringe Latenz/Overhead, keine Zustellgarantie (z. B. Echtzeit).",
-                              "correctForms": [
-                                "udp"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Protokoll für Webzugriffe; die sichere Variante nutzt zusätzlich Verschlüsselung.",
-                              "correctForms": [
-                                "http_s"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Verschlüsselungs- und Authentifizierungsprotokoll, das u. a. HTTPS absichert.",
-                              "correctForms": [
-                                "tls"
-                              ]
-                            },
-                            {
-                              "id": "card_021",
-                              "text": "Dateifreigabe-Protokoll, typisch in Windows-Umgebungen (Shares, Netzlaufwerke).",
-                              "correctForms": [
-                                "smb"
-                              ]
-                            },
-                            {
-                              "id": "card_022",
-                              "text": "Netzwerk-Dateisystem, typisch in Unix/Linux-Umgebungen (Mounts über das Netz).",
-                              "correctForms": [
-                                "nfs"
-                              ]
-                            },
-                            {
-                              "id": "card_023",
-                              "text": "Protokoll zum Versenden von E-Mails zwischen Mailservern bzw. vom Client zum Server.",
-                              "correctForms": [
-                                "smtp_s"
-                              ]
-                            },
-                            {
-                              "id": "card_024",
-                              "text": "Protokoll zum Abrufen/Synchronisieren von E-Mails auf mehreren Geräten.",
-                              "correctForms": [
-                                "imap_s"
-                              ]
-                            },
-                            {
-                              "id": "card_025",
-                              "text": "Verschlüsselter Remote-Zugang (Shell) und sicherer Dateitransfer (z. B. scp/sftp).",
-                              "correctForms": [
-                                "ssh"
-                              ]
-                            },
-                            {
-                              "id": "card_026",
-                              "text": "Sichert IP-Verkehr auf Netzwerkebene ab (Verschlüsselung/Authentisierung), oft für VPNs genutzt.",
-                              "correctForms": [
-                                "ipsec"
                               ]
                             }
                           ]
@@ -40536,12 +40148,7 @@ window.DATABASE_INDEX = [
                             "Norm/Vorschrift/Zertifikat",
                             "Kennzeichnung/Label",
                             "Spannung (U)",
-                            "Strom (I)",
-                            "Leistung (P)",
-                            "Energie (Wh/kWh)",
-                            "Wirkungsgrad (η)",
-                            "alle",
-                            "keine"
+                            "Strom (I)"
                           ],
                           "questions": [
                             {
@@ -40607,29 +40214,13 @@ window.DATABASE_INDEX = [
                             {
                               "text": "Elektrische Größe in Ampere: beschreibt den Fluss elektrischer Ladung pro Zeit.",
                               "correct": "Strom (I)"
-                            },
-                            {
-                              "text": "Elektrische Größe in Watt: Berechnung über P = U * I.",
-                              "correct": "Leistung (P)"
-                            },
-                            {
-                              "text": "Energieverbrauch über Zeit: E = P * t, typisch in Wh oder kWh.",
-                              "correct": "Energie (Wh/kWh)"
-                            },
-                            {
-                              "text": "Verhältnis von Nutzleistung zu aufgenommenen Ressourcen: je höher, desto weniger Verluste (z. B. weniger Abwärme beim Netzteil).",
-                              "correct": "Wirkungsgrad (η)"
-                            },
-                            {
-                              "text": "Wenn du den Stromverbrauch eines Geräts über eine Woche berechnen willst, brauchst du Leistung und diese Größe (Zeit eingerechnet).",
-                              "correct": "Energie (Wh/kWh)"
                             }
                           ]
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_3 Leistungsfähigkeit und Energieffizienz von IT-Systemen/Missionen_3_3_PvAP1/Missionen_3_3_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_3_3_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_3 Leistungsfähigkeit und Energieffizienz von IT-Systemen/Missionen_3_3_PvAP1/Missionen_3_3_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_3_3_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -40675,71 +40266,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "raid",
                               "title": "RAID",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "dateisystem",
-                              "title": "Dateisystem",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "lwl_glasfaser",
-                              "title": "LWL (Glasfaser)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ethernet_standard",
-                              "title": "Ethernet-Standard",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "wlan_standard",
-                              "title": "WLAN-Standard",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "norm_vorschrift_zertifikat",
-                              "title": "Norm/Vorschrift/Zertifikat",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "kennzeichnung_label",
-                              "title": "Kennzeichnung/Label",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "spannung_u",
-                              "title": "Spannung (U)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "strom_i",
-                              "title": "Strom (I)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "leistung_p",
-                              "title": "Leistung (P)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "energie_wh_kwh",
-                              "title": "Energie (Wh/kWh)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "wirkungsgrad",
-                              "title": "Wirkungsgrad (η)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -40798,90 +40324,6 @@ window.DATABASE_INDEX = [
                               "text": "Verbund mehrerer Datenträger für Ausfallsicherheit und/oder Performance; ersetzt kein Backup.",
                               "correctForms": [
                                 "raid"
-                              ]
-                            },
-                            {
-                              "id": "card_009",
-                              "text": "Regelt, wie Dateien/Ordner auf einem Datenträger organisiert werden (z. B. NTFS, ext4) inklusive Rechte und Metadaten.",
-                              "correctForms": [
-                                "dateisystem"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Übertragung per Licht, sehr hohe Bandbreite und lange Strecken; unempfindlich gegen elektromagnetische Störungen.",
-                              "correctForms": [
-                                "lwl_glasfaser"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Netzwerkstandard für kabelgebundene Verbindungen (IEEE 802.3), z. B. 1 Gbit/s oder 10 Gbit/s.",
-                              "correctForms": [
-                                "ethernet_standard"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Funkstandard (IEEE 802.11), z. B. Wi-Fi 5/6/6E/7; beeinflusst Reichweite und Durchsatz.",
-                              "correctForms": [
-                                "wlan_standard"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Gibt verbindliche Anforderungen/Regeln oder geprüfte Standards vor, an denen Produkte/Prozesse ausgerichtet werden.",
-                              "correctForms": [
-                                "norm_vorschrift_zertifikat"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Symbol/Label auf Produkten, das Konformität, Entsorgung oder Effizienz-Klasse sichtbar macht (z. B. CE, Energie-Label).",
-                              "correctForms": [
-                                "kennzeichnung_label"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Elektrische Größe in Volt: beschreibt die Potentialdifferenz, die „Druck“ im Stromkreis erzeugt.",
-                              "correctForms": [
-                                "spannung_u"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "Elektrische Größe in Ampere: beschreibt den Fluss elektrischer Ladung pro Zeit.",
-                              "correctForms": [
-                                "strom_i"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Elektrische Größe in Watt: Berechnung über P = U * I.",
-                              "correctForms": [
-                                "leistung_p"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Energieverbrauch über Zeit: E = P * t, typisch in Wh oder kWh.",
-                              "correctForms": [
-                                "energie_wh_kwh"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Verhältnis von Nutzleistung zu aufgenommenen Ressourcen: je höher, desto weniger Verluste (z. B. weniger Abwärme beim Netzteil).",
-                              "correctForms": [
-                                "wirkungsgrad"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du den Stromverbrauch eines Geräts über eine Woche berechnen willst, brauchst du Leistung und diese Größe (Zeit eingerechnet).",
-                              "correctForms": [
-                                "energie_wh_kwh"
                               ]
                             }
                           ]
@@ -42157,8 +41599,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_4 Wirtschaftlichkeit von IT-Systemen/Missionen_3_4_PvAP1/Missionen_3_4_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_3_4_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/3 Beurteilen marktgängiger IT-Systeme und kundenspezifischer Lösungen/3_4 Wirtschaftlichkeit von IT-Systemen/Missionen_3_4_PvAP1/Missionen_3_4_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_3_4_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -42204,46 +41646,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "kauf",
                               "title": "Kauf",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "miete",
-                              "title": "Miete",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "pay_per_use",
-                              "title": "Pay-per-use",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "auslastungsfahigkeit",
-                              "title": "Auslastungsfähigkeit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "anpassungsfahigkeit",
-                              "title": "Anpassungsfähigkeit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "quantitativer_angebotsvergleich",
-                              "title": "Quantitativer Angebotsvergleich",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "qualitativer_angebotsvergleich",
-                              "title": "Qualitativer Angebotsvergleich",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -42305,48 +41707,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Zeitlich begrenzte Nutzung gegen regelmäßige Zahlung; keine Eigentumsübertragung.",
-                              "correctForms": [
-                                "miete"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Abrechnung nach tatsächlicher Nutzung (z. B. pro Stunde, pro GB, pro Request).",
-                              "correctForms": [
-                                "pay_per_use"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Bewertet, wie gut ein System Lastspitzen abfangen und Ressourcen effizient nutzen kann.",
-                              "correctForms": [
-                                "auslastungsfahigkeit"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Bewertet, wie gut ein System an neue Anforderungen angepasst werden kann (z. B. Skalierung, Module, Schnittstellen).",
-                              "correctForms": [
-                                "anpassungsfahigkeit"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Vergleich anhand messbarer Zahlen: Gesamtkosten, TCO, Kosten pro User/Monat, Vertragslaufzeit, Zinsen.",
-                              "correctForms": [
-                                "quantitativer_angebotsvergleich"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Vergleich anhand nicht nur Zahlen: Supportqualität, Usability, Risiken, Flexibilität, Anbieterstabilität.",
-                              "correctForms": [
-                                "qualitativer_angebotsvergleich"
-                              ]
-                            },
-                            {
                               "id": "card_015",
                               "text": "Beispiel: '15 € pro Benutzer und Monat' ist typischerweise dieser Kostenblock.",
                               "correctForms": [
@@ -42372,20 +41732,6 @@ window.DATABASE_INDEX = [
                               "text": "Beispiel: '0,02 € pro API-Call' ist das.",
                               "correctForms": [
                                 "variable_kosten"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Wenn du Kauf vs. Leasing vs. Miete vs. nutzungsbasierte Abrechnung gegenüberstellst, ist das ein.",
-                              "correctForms": [
-                                "quantitativer_angebotsvergleich"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du Anbieter A trotz höherem Preis nimmst, weil er bessere SLA, schnelleren Support und geringeres Risiko bietet, ist das primär ein.",
-                              "correctForms": [
-                                "qualitativer_angebotsvergleich"
                               ]
                             }
                           ]

@@ -42,46 +42,6 @@
       "id": "wlan",
       "title": "WLAN",
       "subtitle": ""
-    },
-    {
-      "id": "anwendung",
-      "title": "Anwendung",
-      "subtitle": ""
-    },
-    {
-      "id": "betriebssystem",
-      "title": "Betriebssystem",
-      "subtitle": ""
-    },
-    {
-      "id": "virtualisierung",
-      "title": "Virtualisierung",
-      "subtitle": ""
-    },
-    {
-      "id": "saas",
-      "title": "SaaS",
-      "subtitle": ""
-    },
-    {
-      "id": "iaas",
-      "title": "IaaS",
-      "subtitle": ""
-    },
-    {
-      "id": "paas",
-      "title": "PaaS",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -139,76 +99,6 @@
       "text": "Drahtloses Netzwerk nach IEEE-802.11-Standards, mit SSID und Verschlüsselung.",
       "correctForms": [
         "wlan"
-      ]
-    },
-    {
-      "id": "card_009",
-      "text": "Software, die eine konkrete Aufgabe für Nutzer erfüllt, z. B. Browser, Office, ERP, Mail-Client.",
-      "correctForms": [
-        "anwendung"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Grundsoftware, die Hardware verwaltet und Programme ausführt, z. B. Windows, Linux, macOS.",
-      "correctForms": [
-        "betriebssystem"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Mehrere virtuelle Maschinen/Umgebungen auf einem physischen Host betreiben, isoliert und flexibel.",
-      "correctForms": [
-        "virtualisierung"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Cloudmodell: Fertige Software wird genutzt, der Anbieter betreibt alles (z. B. Webmail/CRM).",
-      "correctForms": [
-        "saas"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Cloudmodell: Virtuelle Server, Storage und Netz werden bereitgestellt; du installierst/verwaltst OS und Anwendungen selbst.",
-      "correctForms": [
-        "iaas"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "Cloudmodell: Laufzeitumgebung/Plattform (z. B. Datenbank, App-Runtime) – du deployest Code, weniger Betriebslast als IaaS.",
-      "correctForms": [
-        "paas"
-      ]
-    },
-    {
-      "id": "card_015",
-      "text": "Beispiel: „Ich brauche mehr Rechenleistung und RAM, also buche ich einen größeren virtuellen Server.“",
-      "correctForms": [
-        "iaas"
-      ]
-    },
-    {
-      "id": "card_016",
-      "text": "Beispiel: „Ich nutze ein Online-Office im Browser, ohne Installation und ohne Serverbetrieb.“",
-      "correctForms": [
-        "saas"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "Beispiel: „Ich deploye meine Web-App auf eine Plattform, die Skalierung und Datenbank anbietet.“",
-      "correctForms": [
-        "paas"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Wenn mehrere Betriebssysteme parallel auf einem Rechner laufen sollen, ist das die typische Basistechnik.",
-      "correctForms": [
-        "virtualisierung"
       ]
     },
     {

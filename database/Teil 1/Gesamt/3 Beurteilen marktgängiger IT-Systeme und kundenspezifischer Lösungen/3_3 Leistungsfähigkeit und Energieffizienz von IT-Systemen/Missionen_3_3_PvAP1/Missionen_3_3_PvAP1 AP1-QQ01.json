@@ -20,12 +20,7 @@
     "Norm/Vorschrift/Zertifikat",
     "Kennzeichnung/Label",
     "Spannung (U)",
-    "Strom (I)",
-    "Leistung (P)",
-    "Energie (Wh/kWh)",
-    "Wirkungsgrad (η)",
-    "alle",
-    "keine"
+    "Strom (I)"
   ],
   "questions": [
     {
@@ -91,22 +86,6 @@
     {
       "text": "Elektrische Größe in Ampere: beschreibt den Fluss elektrischer Ladung pro Zeit.",
       "correct": "Strom (I)"
-    },
-    {
-      "text": "Elektrische Größe in Watt: Berechnung über P = U * I.",
-      "correct": "Leistung (P)"
-    },
-    {
-      "text": "Energieverbrauch über Zeit: E = P * t, typisch in Wh oder kWh.",
-      "correct": "Energie (Wh/kWh)"
-    },
-    {
-      "text": "Verhältnis von Nutzleistung zu aufgenommenen Ressourcen: je höher, desto weniger Verluste (z. B. weniger Abwärme beim Netzteil).",
-      "correct": "Wirkungsgrad (η)"
-    },
-    {
-      "text": "Wenn du den Stromverbrauch eines Geräts über eine Woche berechnen willst, brauchst du Leistung und diese Größe (Zeit eingerechnet).",
-      "correct": "Energie (Wh/kWh)"
     }
   ]
 }

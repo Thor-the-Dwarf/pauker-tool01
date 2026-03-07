@@ -42,46 +42,6 @@
       "id": "kauf",
       "title": "Kauf",
       "subtitle": ""
-    },
-    {
-      "id": "miete",
-      "title": "Miete",
-      "subtitle": ""
-    },
-    {
-      "id": "pay_per_use",
-      "title": "Pay-per-use",
-      "subtitle": ""
-    },
-    {
-      "id": "auslastungsfahigkeit",
-      "title": "Auslastungsfähigkeit",
-      "subtitle": ""
-    },
-    {
-      "id": "anpassungsfahigkeit",
-      "title": "Anpassungsfähigkeit",
-      "subtitle": ""
-    },
-    {
-      "id": "quantitativer_angebotsvergleich",
-      "title": "Quantitativer Angebotsvergleich",
-      "subtitle": ""
-    },
-    {
-      "id": "qualitativer_angebotsvergleich",
-      "title": "Qualitativer Angebotsvergleich",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -142,48 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Zeitlich begrenzte Nutzung gegen regelmäßige Zahlung; keine Eigentumsübertragung.",
-      "correctForms": [
-        "miete"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Abrechnung nach tatsächlicher Nutzung (z. B. pro Stunde, pro GB, pro Request).",
-      "correctForms": [
-        "pay_per_use"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Bewertet, wie gut ein System Lastspitzen abfangen und Ressourcen effizient nutzen kann.",
-      "correctForms": [
-        "auslastungsfahigkeit"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Bewertet, wie gut ein System an neue Anforderungen angepasst werden kann (z. B. Skalierung, Module, Schnittstellen).",
-      "correctForms": [
-        "anpassungsfahigkeit"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Vergleich anhand messbarer Zahlen: Gesamtkosten, TCO, Kosten pro User/Monat, Vertragslaufzeit, Zinsen.",
-      "correctForms": [
-        "quantitativer_angebotsvergleich"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "Vergleich anhand nicht nur Zahlen: Supportqualität, Usability, Risiken, Flexibilität, Anbieterstabilität.",
-      "correctForms": [
-        "qualitativer_angebotsvergleich"
-      ]
-    },
-    {
       "id": "card_015",
       "text": "Beispiel: '15 € pro Benutzer und Monat' ist typischerweise dieser Kostenblock.",
       "correctForms": [
@@ -209,20 +127,6 @@
       "text": "Beispiel: '0,02 € pro API-Call' ist das.",
       "correctForms": [
         "variable_kosten"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Wenn du Kauf vs. Leasing vs. Miete vs. nutzungsbasierte Abrechnung gegenüberstellst, ist das ein.",
-      "correctForms": [
-        "quantitativer_angebotsvergleich"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Wenn du Anbieter A trotz höherem Preis nimmst, weil er bessere SLA, schnelleren Support und geringeres Risiko bietet, ist das primär ein.",
-      "correctForms": [
-        "qualitativer_angebotsvergleich"
       ]
     }
   ]

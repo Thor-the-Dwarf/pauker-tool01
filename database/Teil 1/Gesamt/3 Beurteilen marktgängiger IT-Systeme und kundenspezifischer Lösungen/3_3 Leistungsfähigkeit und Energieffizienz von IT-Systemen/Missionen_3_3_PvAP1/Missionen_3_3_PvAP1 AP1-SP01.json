@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Leistungsfähigkeit & Energieeffizienz von IT-Systemen",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den passenden Begriff zur Aussage.",
+  "columns": [
+    {
+      "id": "kenngrosse_leistungsdaten",
+      "title": "Kenngröße/Leistungsdaten",
+      "subtitle": ""
+    },
+    {
+      "id": "funktionsumfang",
+      "title": "Funktionsumfang",
+      "subtitle": ""
+    },
+    {
+      "id": "bios",
+      "title": "BIOS",
+      "subtitle": ""
+    },
+    {
+      "id": "uefi",
+      "title": "UEFI",
+      "subtitle": ""
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "subtitle": ""
+    },
+    {
+      "id": "ram",
+      "title": "RAM",
+      "subtitle": ""
+    },
+    {
+      "id": "datenspeicher_ssd_hdd",
+      "title": "Datenspeicher (SSD/HDD)",
+      "subtitle": ""
+    },
+    {
+      "id": "raid",
+      "title": "RAID",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Beispiele: Taktfrequenz, Anzahl Kerne/Threads, IOPS, Durchsatz, Latenz – damit vergleichst du Systeme objektiv.",
+      "correctForms": [
+        "kenngrosse_leistungsdaten"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Beispiele: Secure Boot, Boot-Reihenfolge, Virtualisierungs-Support, RAID-Optionen – das beschreibt, was ein System kann.",
+      "correctForms": [
+        "funktionsumfang"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Klassische Firmware („Legacy“), oft mit CSM/Legacy-Boot und eher einfachen Konfigurationsmöglichkeiten.",
+      "correctForms": [
+        "bios"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Moderne Firmware mit Features wie Secure Boot und typischerweise GPT-Boot-Unterstützung.",
+      "correctForms": [
+        "uefi"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Komponente, die Befehle ausführt und Rechenoperationen erledigt; Performance hängt u. a. von Architektur, Kernen und Cache ab.",
+      "correctForms": [
+        "cpu"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Flüchtiger Arbeitsspeicher für laufende Prozesse; Inhalt geht ohne Strom verloren.",
+      "correctForms": [
+        "ram"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nicht-flüchtiger Speicher für Daten/Programme (z. B. SSD/HDD); beeinflusst Boot- und Ladezeiten stark.",
+      "correctForms": [
+        "datenspeicher_ssd_hdd"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Verbund mehrerer Datenträger für Ausfallsicherheit und/oder Performance; ersetzt kein Backup.",
+      "correctForms": [
+        "raid"
+      ]
+    }
+  ]
+}
