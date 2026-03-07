@@ -20,19 +20,7 @@
     "RAID 5",
     "RAID 6",
     "Hosts pro Subnetz",
-    "Broadcast-Adresse",
-    "Netzadresse",
-    "Pixelanzahl",
-    "Farbtiefe",
-    "Base64-Overhead",
-    "Verfügbarkeit",
-    "Ausfallzeit",
-    "Energie (Wh)",
-    "Laufzeit (USV)",
-    "Überschlag/Plausibilitätscheck",
-    "Rundungsregel",
-    "alle",
-    "keine"
+    "Broadcast-Adresse"
   ],
   "questions": [
     {
@@ -108,56 +96,8 @@
       "correct": "Hosts pro Subnetz"
     },
     {
-      "text": "Identifiziert das Subnetz (die „erste“ Adresse des Netzes).",
-      "correct": "Netzadresse"
-    },
-    {
       "text": "Letzte Adresse im Subnetz (klassisch nicht als Host nutzbar).",
       "correct": "Broadcast-Adresse"
-    },
-    {
-      "text": "Formel: Pixel = Breite · Höhe (z. B. 1920×1080).",
-      "correct": "Pixelanzahl"
-    },
-    {
-      "text": "24 bit bedeutet typischerweise 8 bit pro Kanal (RGB).",
-      "correct": "Farbtiefe"
-    },
-    {
-      "text": "„Doppelte Auflösung“ in Breite und Höhe führt zu vierfacher Pixelanzahl.",
-      "correct": "Pixelanzahl"
-    },
-    {
-      "text": "Codierung für Texttransport; macht Daten typischerweise um etwa ein Drittel größer.",
-      "correct": "Base64-Overhead"
-    },
-    {
-      "text": "Base64 ist Verschlüsselung und schützt Inhalte.",
-      "correct": "keine"
-    },
-    {
-      "text": "Ausfallzeit = Zeitraum · (1 − Verfügbarkeit).",
-      "correct": "Ausfallzeit"
-    },
-    {
-      "text": "„Drei Neun“ (99,9%) pro Monat bedeuten ungefähr unter einer Stunde Ausfallzeit bei 30 Tagen.",
-      "correct": "Verfügbarkeit"
-    },
-    {
-      "text": "Formel: Energie (Wh) = Leistung (W) · Zeit (h).",
-      "correct": "Energie (Wh)"
-    },
-    {
-      "text": "Formel: Laufzeit (h) = Wh / W (real meist kürzer durch Verluste/Alterung).",
-      "correct": "Laufzeit (USV)"
-    },
-    {
-      "text": "Strategie: Erst Größenordnung abschätzen und Einheiten prüfen, dann exakte Rechnung – Realismuscheck inklusive.",
-      "correct": "Überschlag/Plausibilitätscheck"
-    },
-    {
-      "text": "Goldene Regel: Nicht zu früh runden – erst am Ende runden, sonst summieren sich Fehler.",
-      "correct": "Rundungsregel"
     }
   ]
 }

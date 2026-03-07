@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Mathematik für die AP1 (Level 2)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Fokus: Einheiten, Prozentlogik, Subnetting, RAID, Medienmathe, Verfügbarkeit und USV.",
+  "columns": [
+    {
+      "id": "si_system_dezimal",
+      "title": "SI-System (dezimal)",
+      "subtitle": ""
+    },
+    {
+      "id": "iec_system_binar",
+      "title": "IEC-System (binär)",
+      "subtitle": ""
+    },
+    {
+      "id": "bit",
+      "title": "bit",
+      "subtitle": ""
+    },
+    {
+      "id": "byte",
+      "title": "Byte",
+      "subtitle": ""
+    },
+    {
+      "id": "datenrate_bit_s",
+      "title": "Datenrate (bit/s)",
+      "subtitle": ""
+    },
+    {
+      "id": "datenrate_byte_s",
+      "title": "Datenrate (Byte/s)",
+      "subtitle": ""
+    },
+    {
+      "id": "brutto_rate",
+      "title": "Brutto-Rate",
+      "subtitle": ""
+    },
+    {
+      "id": "netto_rate",
+      "title": "Netto-Rate",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "1 GB entspricht 10^9 Byte.",
+      "correctForms": [
+        "si_system_dezimal"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "1 GiB entspricht 1024^3 Byte.",
+      "correctForms": [
+        "iec_system_binar"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Netzwerkangaben wie 100 Mbit/s beziehen sich typischerweise auf diese Einheit.",
+      "correctForms": [
+        "datenrate_bit_s"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Dateitransferraten im OS werden häufig in MB/s dargestellt.",
+      "correctForms": [
+        "datenrate_byte_s"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Nach Protokollverlusten bleibt diese Rate als wirklich nutzbarer Durchsatz übrig.",
+      "correctForms": [
+        "netto_rate"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Nominalwert des Links ohne Abzug durch Overhead.",
+      "correctForms": [
+        "brutto_rate"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "1 Byte = 8 dieser Einheit.",
+      "correctForms": [
+        "bit"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Diese Einheit entspricht 8 bit und wird für Dateigrößen genutzt.",
+      "correctForms": [
+        "byte"
+      ]
+    }
+  ]
+}

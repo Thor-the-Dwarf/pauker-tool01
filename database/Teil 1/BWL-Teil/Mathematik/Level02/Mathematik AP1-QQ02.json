@@ -20,76 +20,72 @@
     "Prozentpunkte",
     "Kettenprozent",
     "Plausibilitätscheck",
-    "Rundungsregel",
-    "Hosts pro Subnetz",
-    "Blockgröße",
-    "Netzadresse",
-    "Broadcast-Adresse",
-    "RAID 0",
-    "RAID 1",
-    "RAID 5",
-    "RAID 6",
-    "Gemischte RAID-Größen",
-    "Pixelanzahl",
-    "Skalierung (2D)",
-    "Farbtiefe",
-    "Bildgröße (unkomprimiert)",
-    "Audiogröße (unkomprimiert)",
-    "Base64-Overhead",
-    "Verfügbarkeit",
-    "Ausfallzeit",
-    "Reaktionszeit",
-    "RTO",
-    "Energie (Wh)",
-    "Laufzeit (USV)",
-    "Wirkungsgrad",
-    "alle",
-    "keine"
+    "Rundungsregel"
   ],
   "questions": [
-    { "text": "1 GB entspricht 10^9 Byte.", "correct": "SI-System (dezimal)" },
-    { "text": "1 GiB entspricht 1024^3 Byte.", "correct": "IEC-System (binär)" },
-    { "text": "Netzwerkangaben wie 100 Mbit/s beziehen sich typischerweise auf diese Einheit.", "correct": "Datenrate (bit/s)" },
-    { "text": "Dateitransferraten im OS werden häufig in MB/s dargestellt.", "correct": "Datenrate (Byte/s)" },
-    { "text": "500 MB über 100 Mbit/s korrekt rechnen: zuerst Einheiten angleichen, dann Zeit = Datenmenge / Rate.", "correct": "Transferzeit" },
-    { "text": "Nach Protokollverlusten bleibt diese Rate als wirklich nutzbarer Durchsatz übrig.", "correct": "Netto-Rate" },
-    { "text": "Nominalwert des Links ohne Abzug durch Overhead.", "correct": "Brutto-Rate" },
-    { "text": "1 Byte = 8 dieser Einheit.", "correct": "bit" },
-    { "text": "Diese Einheit entspricht 8 bit und wird für Dateigrößen genutzt.", "correct": "Byte" },
-    { "text": "Formel: W = (p/100) · G", "correct": "Prozentwert W" },
-    { "text": "Formel: G = W · (100/p)", "correct": "Grundwert G" },
-    { "text": "Formel: p = (W/G) · 100", "correct": "Prozentsatz p" },
-    { "text": "Von 10% auf 12% entspricht +2 dieser Größe.", "correct": "Prozentpunkte" },
-    { "text": "+20% und danach -20% ergeben insgesamt -4%.", "correct": "Kettenprozent" },
-    { "text": "Regel: erst am Ende runden, um Fehlerfortpflanzung zu vermeiden.", "correct": "Rundungsregel" },
-    { "text": "Regel: Ergebnis auf Größenordnung und Einheit prüfen, bevor man es übernimmt.", "correct": "Plausibilitätscheck" },
-    { "text": "Formel klassisch: 2^(32-Prefix) - 2", "correct": "Hosts pro Subnetz" },
-    { "text": "Bei /27 ist die Schrittweite im letzten Oktett 32.", "correct": "Blockgröße" },
-    { "text": "Identifiziert das Subnetz und wird typischerweise nicht als Host vergeben.", "correct": "Netzadresse" },
-    { "text": "Letzte Adresse im Subnetz, Rundruf an alle Hosts.", "correct": "Broadcast-Adresse" },
-    { "text": "Kapazität n·Plattengröße, aber ohne Redundanz.", "correct": "RAID 0" },
-    { "text": "Spiegelung mit typischer Halbierung der Nutzkapazität.", "correct": "RAID 1" },
-    { "text": "Kapazität (n-1)·Größe bei verteilter Parität.", "correct": "RAID 5" },
-    { "text": "Kapazität (n-2)·Größe bei doppelter Parität.", "correct": "RAID 6" },
-    { "text": "In einem Verbund mit 2TB,2TB,2TB,1TB bestimmt 1TB die nutzbare Basis.", "correct": "Gemischte RAID-Größen" },
-    { "text": "Formel: Breite · Höhe", "correct": "Pixelanzahl" },
-    { "text": "Doppelte Breite und doppelte Höhe führen zu vierfacher Pixelzahl.", "correct": "Skalierung (2D)" },
-    { "text": "24 bit bei RGB bedeutet meist 8 bit pro Kanal.", "correct": "Farbtiefe" },
-    { "text": "Pixel · Farbtiefe / 8 liefert diese Größe.", "correct": "Bildgröße (unkomprimiert)" },
-    { "text": "SampleRate · BitTiefe · Kanäle · Dauer / 8 liefert diese Größe.", "correct": "Audiogröße (unkomprimiert)" },
-    { "text": "Textkodierung, die Daten typischerweise um ~33% vergrößert.", "correct": "Base64-Overhead" },
-    { "text": "Ausfallzeit = Zeitraum · (1 - ...)", "correct": "Verfügbarkeit" },
-    { "text": "Zeitraum · (1 - Verfügbarkeit) berechnet diese Größe.", "correct": "Ausfallzeit" },
-    { "text": "Start der Bearbeitung laut SLA.", "correct": "Reaktionszeit" },
-    { "text": "Zeit bis zur Wiederherstellung des Dienstes.", "correct": "RTO" },
-    { "text": "Wh = W · h", "correct": "Energie (Wh)" },
-    { "text": "h = Wh / W", "correct": "Laufzeit (USV)" },
-    { "text": "Erklärt, warum reale USV-Laufzeit oft unter dem Theoriewert liegt.", "correct": "Wirkungsgrad" },
-    { "text": "Welche zwei Größen gehören zur Formel für unkomprimierte Audiogröße neben Dauer und Kanälen: SampleRate und BitTiefe?", "correct": "alle" },
-    { "text": "Welche Aussage ist korrekt: Base64 komprimiert Daten und verschlüsselt sie gleichzeitig.", "correct": "keine" },
-    { "text": "/23 entspricht klassisch 510 Hosts.", "correct": "Hosts pro Subnetz" },
-    { "text": "100 Mbit/s sind theoretisch 100 MB/s.", "correct": "keine" },
-    { "text": "Bei Transferrechnungen sollten SI/IEC und bit/Byte sauber auseinandergehalten werden.", "correct": "alle" },
-    { "text": "Bei 30 Tagen und 99,9% Verfügbarkeit ist Ausfallzeit unter einer Stunde.", "correct": "Verfügbarkeit" }
+    {
+      "text": "1 GB entspricht 10^9 Byte.",
+      "correct": "SI-System (dezimal)"
+    },
+    {
+      "text": "1 GiB entspricht 1024^3 Byte.",
+      "correct": "IEC-System (binär)"
+    },
+    {
+      "text": "Netzwerkangaben wie 100 Mbit/s beziehen sich typischerweise auf diese Einheit.",
+      "correct": "Datenrate (bit/s)"
+    },
+    {
+      "text": "Dateitransferraten im OS werden häufig in MB/s dargestellt.",
+      "correct": "Datenrate (Byte/s)"
+    },
+    {
+      "text": "500 MB über 100 Mbit/s korrekt rechnen: zuerst Einheiten angleichen, dann Zeit = Datenmenge / Rate.",
+      "correct": "Transferzeit"
+    },
+    {
+      "text": "Nach Protokollverlusten bleibt diese Rate als wirklich nutzbarer Durchsatz übrig.",
+      "correct": "Netto-Rate"
+    },
+    {
+      "text": "Nominalwert des Links ohne Abzug durch Overhead.",
+      "correct": "Brutto-Rate"
+    },
+    {
+      "text": "1 Byte = 8 dieser Einheit.",
+      "correct": "bit"
+    },
+    {
+      "text": "Diese Einheit entspricht 8 bit und wird für Dateigrößen genutzt.",
+      "correct": "Byte"
+    },
+    {
+      "text": "Formel: W = (p/100) · G",
+      "correct": "Prozentwert W"
+    },
+    {
+      "text": "Formel: G = W · (100/p)",
+      "correct": "Grundwert G"
+    },
+    {
+      "text": "Formel: p = (W/G) · 100",
+      "correct": "Prozentsatz p"
+    },
+    {
+      "text": "Von 10% auf 12% entspricht +2 dieser Größe.",
+      "correct": "Prozentpunkte"
+    },
+    {
+      "text": "+20% und danach -20% ergeben insgesamt -4%.",
+      "correct": "Kettenprozent"
+    },
+    {
+      "text": "Regel: erst am Ende runden, um Fehlerfortpflanzung zu vermeiden.",
+      "correct": "Rundungsregel"
+    },
+    {
+      "text": "Regel: Ergebnis auf Größenordnung und Einheit prüfen, bevor man es übernimmt.",
+      "correct": "Plausibilitätscheck"
+    }
   ]
 }
