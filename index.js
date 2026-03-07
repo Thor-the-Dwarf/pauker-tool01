@@ -36,6 +36,23 @@
     };
     let rootTree = [];
     let rootName = 'Database';
+    const GAME_TYPE_ICONS = {
+        escape_game: '🗝',
+        matching_puzzle: '🧩',
+        quick_quiz: '⚡',
+        sortier_spiel: '🧠',
+        what_and_why: '💡',
+        wer_bin_ich: '👤'
+    };
+    const CODE_TO_GAME_TYPE = {
+        EG: 'escape_game',
+        MP: 'matching_puzzle',
+        QQ: 'quick_quiz',
+        SP: 'sortier_spiel',
+        SS: 'sortier_spiel',
+        WAW: 'what_and_why',
+        WBI: 'wer_bin_ich'
+    };
 
     // --- 2. Theme Logic ---
     function applyTheme(theme) {
@@ -249,19 +266,25 @@
         });
     }
 
-    function isSortierGameNode(node) {
-        if (!node || node.isFolder || node.kind !== 'json') return false;
+    function inferGameTypeFromNode(node) {
+        if (!node || node.isFolder || node.kind !== 'json') return null;
 
-        const type = node.data && (node.data.game_type || node.data.gameType);
-        if (type === 'sortier_spiel') return true;
+        const dataType = node.data && (node.data.game_type || node.data.gameType);
+        if (dataType && GAME_TYPE_ICONS[dataType]) return dataType;
 
         // Fallback für dynamische/remote Indizes ohne eingebettete JSON-Daten
-        return /(?:^|[\s_-])SS\d+/i.test(node.name || '') || /sortier/i.test(node.name || '');
+        const source = `${node.name || ''} ${node.id || ''}`.toUpperCase();
+        const match = source.match(/AP\d+-(EG|MP|QQ|SP|SS|WAW|WBI)\d+/);
+        if (match) return CODE_TO_GAME_TYPE[match[1]] || null;
+
+        return null;
     }
 
     function getNodeIcon(node) {
         if (node.kind === 'json') {
-            return isSortierGameNode(node) ? '🧠' : '🏋';
+            const gameType = inferGameTypeFromNode(node);
+            if (gameType && GAME_TYPE_ICONS[gameType]) return GAME_TYPE_ICONS[gameType];
+            return '🏋';
         }
 
         return '👁';
