@@ -1,0 +1,119 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – IT-Sicherheit Basics (CIA, Grundschutz, Schutzbedarf) (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "cia_schutzziele",
+      "title": "CIA (Schutzziele)",
+      "subtitle": ""
+    },
+    {
+      "id": "vertraulichkeit",
+      "title": "Vertraulichkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "integritat",
+      "title": "Integrität",
+      "subtitle": ""
+    },
+    {
+      "id": "verfugbarkeit",
+      "title": "Verfügbarkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "authentizitat",
+      "title": "Authentizität",
+      "subtitle": ""
+    },
+    {
+      "id": "nachvollziehbarkeit_verbindlichkeit",
+      "title": "Nachvollziehbarkeit/Verbindlichkeit",
+      "subtitle": ""
+    },
+    {
+      "id": "bsi",
+      "title": "BSI",
+      "subtitle": ""
+    },
+    {
+      "id": "it_grundschutz",
+      "title": "IT-Grundschutz",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Nur Berechtigte dürfen Daten lesen oder kennen (z. B. Lohnliste nur für HR).",
+      "correctForms": [
+        "vertraulichkeit"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Daten sind korrekt und nicht manipuliert; Systeme liefern richtige Ergebnisse.",
+      "correctForms": [
+        "integritat"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Zugriff ist rechtzeitig möglich: Der Service läuft, wenn er gebraucht wird.",
+      "correctForms": [
+        "verfugbarkeit"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Echtheit: Ist die Person/System/Nachricht wirklich die, die sie vorgibt zu sein?",
+      "correctForms": [
+        "authentizitat"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Verbindlichkeit/Nachweis: Aktionen müssen später zuordenbar und belegbar sein (z. B. wer hat Rechte geändert?).",
+      "correctForms": [
+        "nachvollziehbarkeit_verbindlichkeit"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Das klassische Sicherheitsdreieck besteht aus Vertraulichkeit, Integrität und Verfügbarkeit.",
+      "correctForms": [
+        "cia_schutzziele"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Liefert Standards und Methodik zur IT-Sicherheit in Deutschland (Behörde).",
+      "correctForms": [
+        "bsi"
+      ]
+    },
+    {
+      "id": "card_009",
+      "text": "Methodisches Vorgehen mit Bausteinen/Maßnahmen gegen typische Bedrohungen: solide Basisabsicherung statt bei Null starten.",
+      "correctForms": [
+        "it_grundschutz"
+      ]
+    },
+    {
+      "id": "card_041",
+      "text": "Geteilte Accounts verhindern saubere Nachvollziehbarkeit und Offboarding.",
+      "correctForms": [
+        "nachvollziehbarkeit_verbindlichkeit"
+      ]
+    },
+    {
+      "id": "card_050",
+      "text": "BSI-Grundschutz liefert Standardmaßnahmen für typische Gefährdungen als solide Basis.",
+      "correctForms": [
+        "it_grundschutz"
+      ]
+    }
+  ]
+}

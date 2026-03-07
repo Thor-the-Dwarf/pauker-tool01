@@ -20,11 +20,7 @@
     "Umgebung & Physik (Gefährdung)",
     "Defense in Depth",
     "TOMs (Art. 32 DSGVO)",
-    "Authentisierung & MFA",
-    "Autorisierung (Least Privilege)",
-    "Backup & Restore (3-2-1)",
-    "RPO / RTO",
-    "Incident Response"
+    "Authentisierung & MFA"
   ],
   "questions": [
     {
@@ -156,40 +152,8 @@
       "correct": "Authentisierung & MFA"
     },
     {
-      "text": "„Was darfst du?“ – Berechtigungen prüfen und nach Rollen vergeben.",
-      "correct": "Autorisierung (Least Privilege)"
-    },
-    {
-      "text": "Least Privilege und Need-to-know: so wenig Rechte wie möglich, so viel wie nötig.",
-      "correct": "Autorisierung (Least Privilege)"
-    },
-    {
-      "text": "3 Kopien der Daten, 2 verschiedene Medien, 1 Kopie extern/offsite.",
-      "correct": "Backup & Restore (3-2-1)"
-    },
-    {
-      "text": "Prüfungsfalle: „Backup läuft durch“ bedeutet nicht „Restore klappt“ – Restore-Tests sind Pflicht.",
-      "correct": "Backup & Restore (3-2-1)"
-    },
-    {
-      "text": "Maximal akzeptabler Datenverlust als Zeitspanne: Wie alt dürfen wiederhergestellte Daten sein?",
-      "correct": "RPO / RTO"
-    },
-    {
-      "text": "Maximal akzeptable Ausfallzeit: Wie schnell muss das System wieder laufen?",
-      "correct": "RPO / RTO"
-    },
-    {
       "text": "Ohne Auswertung sind Logs nutzlos: Alerts definieren, korrelieren, reagieren.",
       "correct": "Nachvollziehbarkeit (Logging)"
-    },
-    {
-      "text": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
-      "correct": "Incident Response"
-    },
-    {
-      "text": "Im Notfall denkst du nicht besser – du folgst dem Plan (Runbook, Rollen, Eskalation).",
-      "correct": "Incident Response"
     },
     {
       "text": "Prüfungsfalle: Geteilte Accounts zerstören Nachvollziehbarkeit und sauberes Offboarding.",

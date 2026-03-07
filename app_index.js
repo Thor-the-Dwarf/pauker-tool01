@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:57:01 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:57:29 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -84796,11 +84796,7 @@ window.DATABASE_INDEX = [
                         "Umgebung & Physik (Gefährdung)",
                         "Defense in Depth",
                         "TOMs (Art. 32 DSGVO)",
-                        "Authentisierung & MFA",
-                        "Autorisierung (Least Privilege)",
-                        "Backup & Restore (3-2-1)",
-                        "RPO / RTO",
-                        "Incident Response"
+                        "Authentisierung & MFA"
                       ],
                       "questions": [
                         {
@@ -84932,40 +84928,8 @@ window.DATABASE_INDEX = [
                           "correct": "Authentisierung & MFA"
                         },
                         {
-                          "text": "„Was darfst du?“ – Berechtigungen prüfen und nach Rollen vergeben.",
-                          "correct": "Autorisierung (Least Privilege)"
-                        },
-                        {
-                          "text": "Least Privilege und Need-to-know: so wenig Rechte wie möglich, so viel wie nötig.",
-                          "correct": "Autorisierung (Least Privilege)"
-                        },
-                        {
-                          "text": "3 Kopien der Daten, 2 verschiedene Medien, 1 Kopie extern/offsite.",
-                          "correct": "Backup & Restore (3-2-1)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Backup läuft durch“ bedeutet nicht „Restore klappt“ – Restore-Tests sind Pflicht.",
-                          "correct": "Backup & Restore (3-2-1)"
-                        },
-                        {
-                          "text": "Maximal akzeptabler Datenverlust als Zeitspanne: Wie alt dürfen wiederhergestellte Daten sein?",
-                          "correct": "RPO / RTO"
-                        },
-                        {
-                          "text": "Maximal akzeptable Ausfallzeit: Wie schnell muss das System wieder laufen?",
-                          "correct": "RPO / RTO"
-                        },
-                        {
                           "text": "Ohne Auswertung sind Logs nutzlos: Alerts definieren, korrelieren, reagieren.",
                           "correct": "Nachvollziehbarkeit (Logging)"
-                        },
-                        {
-                          "text": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
-                          "correct": "Incident Response"
-                        },
-                        {
-                          "text": "Im Notfall denkst du nicht besser – du folgst dem Plan (Runbook, Rollen, Eskalation).",
-                          "correct": "Incident Response"
                         },
                         {
                           "text": "Prüfungsfalle: Geteilte Accounts zerstören Nachvollziehbarkeit und sauberes Offboarding.",
@@ -84975,8 +84939,8 @@ window.DATABASE_INDEX = [
                     }
                   },
                   {
-                    "id": "database/Teil 1/IT-Teil/Datensicherheit/Level01/Datensicherheit AP1-SS01.json",
-                    "name": "Datensicherheit AP1-SS01.json",
+                    "id": "database/Teil 1/IT-Teil/Datensicherheit/Level01/Datensicherheit AP1-SP01.json",
+                    "name": "Datensicherheit AP1-SP01.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
@@ -85022,66 +84986,6 @@ window.DATABASE_INDEX = [
                         {
                           "id": "bsi_it_grundschutz",
                           "title": "BSI / IT-Grundschutz",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "schutzbedarfsanalyse_c_i_a_getrennt",
-                          "title": "Schutzbedarfsanalyse (C/I/A getrennt)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "mensch_gefahrdung",
-                          "title": "Mensch (Gefährdung)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "technik_gefahrdung",
-                          "title": "Technik (Gefährdung)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "organisation_gefahrdung",
-                          "title": "Organisation (Gefährdung)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "umgebung_physik_gefahrdung",
-                          "title": "Umgebung & Physik (Gefährdung)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "defense_in_depth",
-                          "title": "Defense in Depth",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "toms_art_32_dsgvo",
-                          "title": "TOMs (Art. 32 DSGVO)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "authentisierung_mfa",
-                          "title": "Authentisierung & MFA",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "autorisierung_least_privilege",
-                          "title": "Autorisierung (Least Privilege)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "backup_restore_3_2_1",
-                          "title": "Backup & Restore (3-2-1)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "rpo_rto",
-                          "title": "RPO / RTO",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "incident_response",
-                          "title": "Incident Response",
                           "subtitle": ""
                         }
                       ],
@@ -85192,185 +85096,10 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_016",
-                          "text": "Prüfungsfalle: Nicht „ein Schutzbedarf für alles“ – pro Asset getrennt bewerten.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_c_i_a_getrennt"
-                          ]
-                        },
-                        {
-                          "id": "card_017",
-                          "text": "Schutzbedarf wird getrennt für Vertraulichkeit, Integrität und Verfügbarkeit bestimmt.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_c_i_a_getrennt"
-                          ]
-                        },
-                        {
-                          "id": "card_018",
-                          "text": "Gesamtschutzbedarf ergibt sich typischerweise aus dem höchsten Einzelwert der Grundwerte.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_c_i_a_getrennt"
-                          ]
-                        },
-                        {
-                          "id": "card_019",
-                          "text": "Social Engineering, Phishing, Fake-Calls, Tailgating und Bedienfehler gehören hierhin.",
-                          "correctForms": [
-                            "mensch_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_020",
-                          "text": "Stop – Check – Confirm: Ungewöhnliche Anfrage erst prüfen und per zweitem Kanal bestätigen.",
-                          "correctForms": [
-                            "mensch_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_021",
-                          "text": "Schwachstellen, Malware, Ransomware, Fehlkonfigurationen und veraltete Software.",
-                          "correctForms": [
-                            "technik_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_022",
-                          "text": "Zeitnah Updates einspielen (Patch-Management) ist eine der wichtigsten Gegenmaßnahmen gegen Exploits.",
-                          "correctForms": [
-                            "technik_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_023",
-                          "text": "Fehlende Prozesse, unklare Verantwortlichkeiten, Schatten-IT und mangelndes Rechtemanagement.",
-                          "correctForms": [
-                            "organisation_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_024",
-                          "text": "Onboarding/Offboarding und regelmäßige Rechte-Reviews fehlen oder sind chaotisch.",
-                          "correctForms": [
-                            "organisation_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_025",
-                          "text": "Stromausfall, Brand, Wasser, Klimaprobleme, Diebstahl und unbefugter physischer Zugang.",
-                          "correctForms": [
-                            "umgebung_physik_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_026",
-                          "text": "Zutrittskontrolle, USV und Serverraum-Konzept sind typische Maßnahmen in diesem Bereich.",
-                          "correctForms": [
-                            "umgebung_physik_gefahrdung"
-                          ]
-                        },
-                        {
-                          "id": "card_027",
-                          "text": "Mehrschichtiger Schutz: Wenn eine Barriere fällt, greift die nächste.",
-                          "correctForms": [
-                            "defense_in_depth"
-                          ]
-                        },
-                        {
-                          "id": "card_028",
-                          "text": "Prüfungswissen: Einzelmaßnahmen sind kein Konzept – erst die Kombination schafft Sicherheit.",
-                          "correctForms": [
-                            "defense_in_depth"
-                          ]
-                        },
-                        {
-                          "id": "card_029",
-                          "text": "Geeignete technische und organisatorische Maßnahmen zur Sicherheit der Verarbeitung (risikoangemessen).",
-                          "correctForms": [
-                            "toms_art_32_dsgvo"
-                          ]
-                        },
-                        {
-                          "id": "card_030",
-                          "text": "Verschlüsselung, Zugriffskontrollen, Backup/Restore und regelmäßige Wirksamkeitsprüfung gehören dazu.",
-                          "correctForms": [
-                            "toms_art_32_dsgvo"
-                          ]
-                        },
-                        {
-                          "id": "card_031",
-                          "text": "„Wer bist du?“ – Identität nachweisen (z. B. Login mit zweitem Faktor).",
-                          "correctForms": [
-                            "authentisierung_mfa"
-                          ]
-                        },
-                        {
-                          "id": "card_032",
-                          "text": "MFA überall, wo’s kritisch ist: Admin-Zugänge, Cloud-Services, E-Mail und VPN.",
-                          "correctForms": [
-                            "authentisierung_mfa"
-                          ]
-                        },
-                        {
-                          "id": "card_033",
-                          "text": "„Was darfst du?“ – Berechtigungen prüfen und nach Rollen vergeben.",
-                          "correctForms": [
-                            "autorisierung_least_privilege"
-                          ]
-                        },
-                        {
-                          "id": "card_034",
-                          "text": "Least Privilege und Need-to-know: so wenig Rechte wie möglich, so viel wie nötig.",
-                          "correctForms": [
-                            "autorisierung_least_privilege"
-                          ]
-                        },
-                        {
-                          "id": "card_035",
-                          "text": "3 Kopien der Daten, 2 verschiedene Medien, 1 Kopie extern/offsite.",
-                          "correctForms": [
-                            "backup_restore_3_2_1"
-                          ]
-                        },
-                        {
-                          "id": "card_036",
-                          "text": "Prüfungsfalle: „Backup läuft durch“ bedeutet nicht „Restore klappt“ – Restore-Tests sind Pflicht.",
-                          "correctForms": [
-                            "backup_restore_3_2_1"
-                          ]
-                        },
-                        {
-                          "id": "card_037",
-                          "text": "Maximal akzeptabler Datenverlust als Zeitspanne: Wie alt dürfen wiederhergestellte Daten sein?",
-                          "correctForms": [
-                            "rpo_rto"
-                          ]
-                        },
-                        {
-                          "id": "card_038",
-                          "text": "Maximal akzeptable Ausfallzeit: Wie schnell muss das System wieder laufen?",
-                          "correctForms": [
-                            "rpo_rto"
-                          ]
-                        },
-                        {
                           "id": "card_039",
                           "text": "Ohne Auswertung sind Logs nutzlos: Alerts definieren, korrelieren, reagieren.",
                           "correctForms": [
                             "nachvollziehbarkeit_logging"
-                          ]
-                        },
-                        {
-                          "id": "card_040",
-                          "text": "Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
-                          "correctForms": [
-                            "incident_response"
-                          ]
-                        },
-                        {
-                          "id": "card_041",
-                          "text": "Im Notfall denkst du nicht besser – du folgst dem Plan (Runbook, Rollen, Eskalation).",
-                          "correctForms": [
-                            "incident_response"
                           ]
                         },
                         {
@@ -88692,29 +88421,7 @@ window.DATABASE_INDEX = [
                         "Gefährdungsquelle: Mensch",
                         "Gefährdungsquelle: Technik",
                         "Gefährdungsquelle: Organisation",
-                        "Gefährdungsquelle: Umwelt/Physik",
-                        "Social Engineering",
-                        "Bedienfehler",
-                        "Schwachstelle/Exploit",
-                        "Malware",
-                        "Patch-Management",
-                        "Hardening / sichere Konfiguration",
-                        "Berechtigungskonzept / Rollen & Rechte",
-                        "Least Privilege / Need-to-know",
-                        "MFA",
-                        "Defense in Depth",
-                        "TOMs (DSGVO)",
-                        "Authentisierung",
-                        "Autorisierung",
-                        "Backup & Restore",
-                        "RTO/RPO",
-                        "Logging",
-                        "Monitoring/Alarmierung",
-                        "Incident Response / Notfallmanagement",
-                        "Runbook/Eskalation",
-                        "Offene Frage (Bonus)",
-                        "alle",
-                        "keine"
+                        "Gefährdungsquelle: Umwelt/Physik"
                       ],
                       "questions": [
                         {
@@ -88738,10 +88445,6 @@ window.DATABASE_INDEX = [
                           "correct": "Nachvollziehbarkeit/Verbindlichkeit"
                         },
                         {
-                          "text": "Prüfungsfalle: „Integrität = Verschlüsselung“.",
-                          "correct": "keine"
-                        },
-                        {
                           "text": "Das klassische Sicherheitsdreieck besteht aus Vertraulichkeit, Integrität und Verfügbarkeit.",
                           "correct": "CIA (Schutzziele)"
                         },
@@ -88754,10 +88457,6 @@ window.DATABASE_INDEX = [
                           "correct": "IT-Grundschutz"
                         },
                         {
-                          "text": "Prüfungsfalle: „BSI ist nur für Behörden relevant“.",
-                          "correct": "keine"
-                        },
-                        {
                           "text": "Schutzbedarf wird getrennt bestimmt für Vertraulichkeit, Integrität und Verfügbarkeit.",
                           "correct": "Schutzbedarfsanalyse (Workflow)"
                         },
@@ -88766,20 +88465,12 @@ window.DATABASE_INDEX = [
                           "correct": "Schutzbedarfsanalyse (Workflow)"
                         },
                         {
-                          "text": "„Ein Schutzbedarf gilt pauschal für alles im Unternehmen.“",
-                          "correct": "keine"
-                        },
-                        {
                           "text": "Workflow: Asset benennen → Schaden je C/I/A abschätzen → je C/I/A einstufen → Gesamtschutzbedarf ableiten.",
                           "correct": "Schutzbedarfsanalyse (Workflow)"
                         },
                         {
                           "text": "Gesamtschutzbedarf ableiten: typischer Ansatz ist „höchster Wert zählt“.",
                           "correct": "Schutzbedarfsanalyse (Workflow)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Wir nehmen überall sehr hoch, dann sind wir safe“ (Kosten/Umsetzbarkeit/Angemessenheit).",
-                          "correct": "keine"
                         },
                         {
                           "text": "Gefährdungsquelle: Phishing, Spear-Phishing, Fake-Calls („IT-Support“) zielen auf Menschen.",
@@ -88798,116 +88489,8 @@ window.DATABASE_INDEX = [
                           "correct": "Gefährdungsquelle: Umwelt/Physik"
                         },
                         {
-                          "text": "Prüfungsfalle: „Hacker von außen“ ist nur ein Teil – interne Fehler/Prozesse sind extrem häufig.",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "Angriff über Manipulation von Personen: z. B. Phishing, Fake-Anruf, Tailgating.",
-                          "correct": "Social Engineering"
-                        },
-                        {
-                          "text": "Typischer Fehler: falscher Empfänger, falsche Freigabe, versehentliches Löschen.",
-                          "correct": "Bedienfehler"
-                        },
-                        {
-                          "text": "MFA reduziert das Risiko bei gestohlenen Passwörtern deutlich, besonders bei Admin/Cloud/Mail.",
-                          "correct": "MFA"
-                        },
-                        {
-                          "text": "Regel für ungewöhnliche Anfragen: „Stop – Check – Confirm“ (kurz anhalten, prüfen, Rückbestätigung).",
-                          "correct": "Social Engineering"
-                        },
-                        {
-                          "text": "Kette: Schwachstelle + Exploit → Zugriff/Schaden.",
-                          "correct": "Schwachstelle/Exploit"
-                        },
-                        {
-                          "text": "Trojaner, Ransomware, Worm, Spyware sind typische Schadsoftware-Arten.",
-                          "correct": "Malware"
-                        },
-                        {
-                          "text": "Gegenmaßnahme: Updates/Patches für OS, Apps und Firmware regelmäßig einspielen.",
-                          "correct": "Patch-Management"
-                        },
-                        {
-                          "text": "Gegenmaßnahme: Sichere Konfiguration, unnötige Dienste aus, Default-Passwörter weg, Angriffsfläche reduzieren.",
-                          "correct": "Hardening / sichere Konfiguration"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Firewall reicht“ (ohne Patchen, Rechte, Monitoring, Backups).",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "Wenn Verantwortlichkeiten und Regeln fehlen und jeder alles darf, entsteht ein massives Sicherheitsloch.",
-                          "correct": "Berechtigungskonzept / Rollen & Rechte"
-                        },
-                        {
-                          "text": "Prinzip: Jeder bekommt nur die Rechte, die er wirklich braucht (Need-to-know).",
-                          "correct": "Least Privilege / Need-to-know"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Alle sind Admin, sonst geht’s schneller“.",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "Backup im selben Raum wie die Server hilft bei Brand/Wasser/Diebstahl nur begrenzt.",
-                          "correct": "Backup & Restore"
-                        },
-                        {
-                          "text": "Schichtenprinzip: Wenn eine Barriere fällt, greift die nächste (organisatorisch, technisch, physisch, personell).",
-                          "correct": "Defense in Depth"
-                        },
-                        {
-                          "text": "Prüfungsfalle: Einzelmaßnahme ≠ Konzept (z. B. MFA ohne Rechtekonzept ist halbgar).",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "TOMs sind technische und organisatorische Maßnahmen für ein angemessenes Schutzniveau („Sicherheit der Verarbeitung“).",
-                          "correct": "TOMs (DSGVO)"
-                        },
-                        {
-                          "text": "Prüfungsfalle: TOMs sind nicht nur Technik – auch Prozesse, Schulung und Nachweise gehören dazu.",
-                          "correct": "TOMs (DSGVO)"
-                        },
-                        {
-                          "text": "„Wer bist du?“ (Login/Identität prüfen).",
-                          "correct": "Authentisierung"
-                        },
-                        {
-                          "text": "„Was darfst du?“ (Berechtigungen prüfen).",
-                          "correct": "Autorisierung"
-                        },
-                        {
                           "text": "Geteilte Accounts verhindern saubere Nachvollziehbarkeit und Offboarding.",
                           "correct": "Nachvollziehbarkeit/Verbindlichkeit"
-                        },
-                        {
-                          "text": "Backup-Grundsatz: 3-2-1 (3 Kopien, 2 Medien, 1 extern/offsite) + Restore-Tests.",
-                          "correct": "Backup & Restore"
-                        },
-                        {
-                          "text": "RTO/RPO: Wiederanlaufzeit / maximaler Datenverlust (wenn genannt).",
-                          "correct": "RTO/RPO"
-                        },
-                        {
-                          "text": "Wichtige Events protokollieren: Logins, Rechteänderungen, Admin-Aktionen, Fehler.",
-                          "correct": "Logging"
-                        },
-                        {
-                          "text": "Früh erkennen statt spät bereuen: Metriken/Checks + Alarmierung auf kritische Zustände.",
-                          "correct": "Monitoring/Alarmierung"
-                        },
-                        {
-                          "text": "Prüfungsfalle: Logs ohne Auswertung sind ein Datenfriedhof.",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "Ablauf bei Sicherheitsvorfall: Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
-                          "correct": "Incident Response / Notfallmanagement"
-                        },
-                        {
-                          "text": "Damit es nicht chaotisch wird: Wer macht was, wann, wie eskalieren? (Plan/Ansprechpartner/Runbook).",
-                          "correct": "Runbook/Eskalation"
                         },
                         {
                           "text": "Schnell-Check: Asset → C/I/A-Schaden → Schutzbedarf → Maßnahmenpaket.",
@@ -88916,37 +88499,13 @@ window.DATABASE_INDEX = [
                         {
                           "text": "BSI-Grundschutz liefert Standardmaßnahmen für typische Gefährdungen als solide Basis.",
                           "correct": "IT-Grundschutz"
-                        },
-                        {
-                          "text": "Prüfungsfalle: „Wir sind klein, wir brauchen das nicht“ – kleine Ziele werden oft genauso getroffen.",
-                          "correct": "keine"
-                        },
-                        {
-                          "text": "BONUS 1: Erkläre Vertraulichkeit, Integrität, Verfügbarkeit jeweils an einem Beispiel aus einem Betrieb.",
-                          "correct": "Offene Frage (Bonus)"
-                        },
-                        {
-                          "text": "BONUS 2: Wie würdest du den Schutzbedarf einer Lohnabrechnungstabelle für C/I/A einstufen – und warum?",
-                          "correct": "Offene Frage (Bonus)"
-                        },
-                        {
-                          "text": "BONUS 3: Nenne 5 typische Gefährdungen und je eine passende Gegenmaßnahme.",
-                          "correct": "Offene Frage (Bonus)"
-                        },
-                        {
-                          "text": "BONUS 4: Was sind TOMs und warum reicht „eine Firewall“ als Antwort fast nie?",
-                          "correct": "Offene Frage (Bonus)"
-                        },
-                        {
-                          "text": "Ziel der meisten Sicherheitsmaßnahmen im Überblick: Schutz von Vertraulichkeit, Integrität, Verfügbarkeit und Ergänzungen wie Authentizität/Nachvollziehbarkeit.",
-                          "correct": "alle"
                         }
                       ]
                     }
                   },
                   {
-                    "id": "database/Teil 1/IT-Teil/Datensicherheit/Level02/Datensicherheit AP1-SS02.json",
-                    "name": "Datensicherheit AP1-SS02.json",
+                    "id": "database/Teil 1/IT-Teil/Datensicherheit/Level02/Datensicherheit AP1-SP02.json",
+                    "name": "Datensicherheit AP1-SP02.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
@@ -88993,156 +88552,6 @@ window.DATABASE_INDEX = [
                           "id": "it_grundschutz",
                           "title": "IT-Grundschutz",
                           "subtitle": ""
-                        },
-                        {
-                          "id": "schutzbedarfsanalyse_workflow",
-                          "title": "Schutzbedarfsanalyse (Workflow)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "schutzbedarf_normal",
-                          "title": "Schutzbedarf: normal",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "schutzbedarf_hoch",
-                          "title": "Schutzbedarf: hoch",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "schutzbedarf_sehr_hoch",
-                          "title": "Schutzbedarf: sehr hoch",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "gefahrdungsquelle_mensch",
-                          "title": "Gefährdungsquelle: Mensch",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "gefahrdungsquelle_technik",
-                          "title": "Gefährdungsquelle: Technik",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "gefahrdungsquelle_organisation",
-                          "title": "Gefährdungsquelle: Organisation",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "gefahrdungsquelle_umwelt_physik",
-                          "title": "Gefährdungsquelle: Umwelt/Physik",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "social_engineering",
-                          "title": "Social Engineering",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "bedienfehler",
-                          "title": "Bedienfehler",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "schwachstelle_exploit",
-                          "title": "Schwachstelle/Exploit",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "malware",
-                          "title": "Malware",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "patch_management",
-                          "title": "Patch-Management",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "hardening_sichere_konfiguration",
-                          "title": "Hardening / sichere Konfiguration",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "berechtigungskonzept_rollen_rechte",
-                          "title": "Berechtigungskonzept / Rollen & Rechte",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "least_privilege_need_to_know",
-                          "title": "Least Privilege / Need-to-know",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "mfa",
-                          "title": "MFA",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "defense_in_depth",
-                          "title": "Defense in Depth",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "toms_dsgvo",
-                          "title": "TOMs (DSGVO)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "authentisierung",
-                          "title": "Authentisierung",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "autorisierung",
-                          "title": "Autorisierung",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "backup_restore",
-                          "title": "Backup & Restore",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "rto_rpo",
-                          "title": "RTO/RPO",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "logging",
-                          "title": "Logging",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "monitoring_alarmierung",
-                          "title": "Monitoring/Alarmierung",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "incident_response_notfallmanagement",
-                          "title": "Incident Response / Notfallmanagement",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "runbook_eskalation",
-                          "title": "Runbook/Eskalation",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "offene_frage_bonus",
-                          "title": "Offene Frage (Bonus)",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "alle",
-                          "title": "alle",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "keine",
-                          "title": "keine",
-                          "subtitle": ""
                         }
                       ],
                       "cards": [
@@ -89182,13 +88591,6 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_006",
-                          "text": "Prüfungsfalle: „Integrität = Verschlüsselung“.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
                           "id": "card_007",
                           "text": "Das klassische Sicherheitsdreieck besteht aus Vertraulichkeit, Integrität und Verfügbarkeit.",
                           "correctForms": [
@@ -89210,223 +88612,6 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_010",
-                          "text": "Prüfungsfalle: „BSI ist nur für Behörden relevant“.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_011",
-                          "text": "Schutzbedarf wird getrennt bestimmt für Vertraulichkeit, Integrität und Verfügbarkeit.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_workflow"
-                          ]
-                        },
-                        {
-                          "id": "card_012",
-                          "text": "Kategorien für Schutzbedarf sind typischerweise: normal, hoch, sehr hoch.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_workflow"
-                          ]
-                        },
-                        {
-                          "id": "card_013",
-                          "text": "„Ein Schutzbedarf gilt pauschal für alles im Unternehmen.“",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_014",
-                          "text": "Workflow: Asset benennen → Schaden je C/I/A abschätzen → je C/I/A einstufen → Gesamtschutzbedarf ableiten.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_workflow"
-                          ]
-                        },
-                        {
-                          "id": "card_015",
-                          "text": "Gesamtschutzbedarf ableiten: typischer Ansatz ist „höchster Wert zählt“.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_workflow"
-                          ]
-                        },
-                        {
-                          "id": "card_016",
-                          "text": "Prüfungsfalle: „Wir nehmen überall sehr hoch, dann sind wir safe“ (Kosten/Umsetzbarkeit/Angemessenheit).",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_017",
-                          "text": "Gefährdungsquelle: Phishing, Spear-Phishing, Fake-Calls („IT-Support“) zielen auf Menschen.",
-                          "correctForms": [
-                            "gefahrdungsquelle_mensch"
-                          ]
-                        },
-                        {
-                          "id": "card_018",
-                          "text": "Gefährdungsquelle: Schwachstellen in Software/OS oder fehlerhafte Technik können zu Ausfällen/Angriffen führen.",
-                          "correctForms": [
-                            "gefahrdungsquelle_technik"
-                          ]
-                        },
-                        {
-                          "id": "card_019",
-                          "text": "Gefährdungsquelle: Fehlende Verantwortlichkeiten, Rechtechaos, keine Regeln/Prozesse.",
-                          "correctForms": [
-                            "gefahrdungsquelle_organisation"
-                          ]
-                        },
-                        {
-                          "id": "card_020",
-                          "text": "Gefährdungsquelle: Stromausfall, Brand/Wasser, Klima, Diebstahl.",
-                          "correctForms": [
-                            "gefahrdungsquelle_umwelt_physik"
-                          ]
-                        },
-                        {
-                          "id": "card_021",
-                          "text": "Prüfungsfalle: „Hacker von außen“ ist nur ein Teil – interne Fehler/Prozesse sind extrem häufig.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_022",
-                          "text": "Angriff über Manipulation von Personen: z. B. Phishing, Fake-Anruf, Tailgating.",
-                          "correctForms": [
-                            "social_engineering"
-                          ]
-                        },
-                        {
-                          "id": "card_023",
-                          "text": "Typischer Fehler: falscher Empfänger, falsche Freigabe, versehentliches Löschen.",
-                          "correctForms": [
-                            "bedienfehler"
-                          ]
-                        },
-                        {
-                          "id": "card_024",
-                          "text": "MFA reduziert das Risiko bei gestohlenen Passwörtern deutlich, besonders bei Admin/Cloud/Mail.",
-                          "correctForms": [
-                            "mfa"
-                          ]
-                        },
-                        {
-                          "id": "card_025",
-                          "text": "Regel für ungewöhnliche Anfragen: „Stop – Check – Confirm“ (kurz anhalten, prüfen, Rückbestätigung).",
-                          "correctForms": [
-                            "social_engineering"
-                          ]
-                        },
-                        {
-                          "id": "card_026",
-                          "text": "Kette: Schwachstelle + Exploit → Zugriff/Schaden.",
-                          "correctForms": [
-                            "schwachstelle_exploit"
-                          ]
-                        },
-                        {
-                          "id": "card_027",
-                          "text": "Trojaner, Ransomware, Worm, Spyware sind typische Schadsoftware-Arten.",
-                          "correctForms": [
-                            "malware"
-                          ]
-                        },
-                        {
-                          "id": "card_028",
-                          "text": "Gegenmaßnahme: Updates/Patches für OS, Apps und Firmware regelmäßig einspielen.",
-                          "correctForms": [
-                            "patch_management"
-                          ]
-                        },
-                        {
-                          "id": "card_029",
-                          "text": "Gegenmaßnahme: Sichere Konfiguration, unnötige Dienste aus, Default-Passwörter weg, Angriffsfläche reduzieren.",
-                          "correctForms": [
-                            "hardening_sichere_konfiguration"
-                          ]
-                        },
-                        {
-                          "id": "card_030",
-                          "text": "Prüfungsfalle: „Firewall reicht“ (ohne Patchen, Rechte, Monitoring, Backups).",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_031",
-                          "text": "Wenn Verantwortlichkeiten und Regeln fehlen und jeder alles darf, entsteht ein massives Sicherheitsloch.",
-                          "correctForms": [
-                            "berechtigungskonzept_rollen_rechte"
-                          ]
-                        },
-                        {
-                          "id": "card_032",
-                          "text": "Prinzip: Jeder bekommt nur die Rechte, die er wirklich braucht (Need-to-know).",
-                          "correctForms": [
-                            "least_privilege_need_to_know"
-                          ]
-                        },
-                        {
-                          "id": "card_033",
-                          "text": "Prüfungsfalle: „Alle sind Admin, sonst geht’s schneller“.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_034",
-                          "text": "Backup im selben Raum wie die Server hilft bei Brand/Wasser/Diebstahl nur begrenzt.",
-                          "correctForms": [
-                            "backup_restore"
-                          ]
-                        },
-                        {
-                          "id": "card_035",
-                          "text": "Schichtenprinzip: Wenn eine Barriere fällt, greift die nächste (organisatorisch, technisch, physisch, personell).",
-                          "correctForms": [
-                            "defense_in_depth"
-                          ]
-                        },
-                        {
-                          "id": "card_036",
-                          "text": "Prüfungsfalle: Einzelmaßnahme ≠ Konzept (z. B. MFA ohne Rechtekonzept ist halbgar).",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_037",
-                          "text": "TOMs sind technische und organisatorische Maßnahmen für ein angemessenes Schutzniveau („Sicherheit der Verarbeitung“).",
-                          "correctForms": [
-                            "toms_dsgvo"
-                          ]
-                        },
-                        {
-                          "id": "card_038",
-                          "text": "Prüfungsfalle: TOMs sind nicht nur Technik – auch Prozesse, Schulung und Nachweise gehören dazu.",
-                          "correctForms": [
-                            "toms_dsgvo"
-                          ]
-                        },
-                        {
-                          "id": "card_039",
-                          "text": "„Wer bist du?“ (Login/Identität prüfen).",
-                          "correctForms": [
-                            "authentisierung"
-                          ]
-                        },
-                        {
-                          "id": "card_040",
-                          "text": "„Was darfst du?“ (Berechtigungen prüfen).",
-                          "correctForms": [
-                            "autorisierung"
-                          ]
-                        },
-                        {
                           "id": "card_041",
                           "text": "Geteilte Accounts verhindern saubere Nachvollziehbarkeit und Offboarding.",
                           "correctForms": [
@@ -89434,108 +88619,10 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_042",
-                          "text": "Backup-Grundsatz: 3-2-1 (3 Kopien, 2 Medien, 1 extern/offsite) + Restore-Tests.",
-                          "correctForms": [
-                            "backup_restore"
-                          ]
-                        },
-                        {
-                          "id": "card_043",
-                          "text": "RTO/RPO: Wiederanlaufzeit / maximaler Datenverlust (wenn genannt).",
-                          "correctForms": [
-                            "rto_rpo"
-                          ]
-                        },
-                        {
-                          "id": "card_044",
-                          "text": "Wichtige Events protokollieren: Logins, Rechteänderungen, Admin-Aktionen, Fehler.",
-                          "correctForms": [
-                            "logging"
-                          ]
-                        },
-                        {
-                          "id": "card_045",
-                          "text": "Früh erkennen statt spät bereuen: Metriken/Checks + Alarmierung auf kritische Zustände.",
-                          "correctForms": [
-                            "monitoring_alarmierung"
-                          ]
-                        },
-                        {
-                          "id": "card_046",
-                          "text": "Prüfungsfalle: Logs ohne Auswertung sind ein Datenfriedhof.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_047",
-                          "text": "Ablauf bei Sicherheitsvorfall: Erkennen → Eindämmen → Beseitigen → Wiederherstellen → Lessons Learned.",
-                          "correctForms": [
-                            "incident_response_notfallmanagement"
-                          ]
-                        },
-                        {
-                          "id": "card_048",
-                          "text": "Damit es nicht chaotisch wird: Wer macht was, wann, wie eskalieren? (Plan/Ansprechpartner/Runbook).",
-                          "correctForms": [
-                            "runbook_eskalation"
-                          ]
-                        },
-                        {
-                          "id": "card_049",
-                          "text": "Schnell-Check: Asset → C/I/A-Schaden → Schutzbedarf → Maßnahmenpaket.",
-                          "correctForms": [
-                            "schutzbedarfsanalyse_workflow"
-                          ]
-                        },
-                        {
                           "id": "card_050",
                           "text": "BSI-Grundschutz liefert Standardmaßnahmen für typische Gefährdungen als solide Basis.",
                           "correctForms": [
                             "it_grundschutz"
-                          ]
-                        },
-                        {
-                          "id": "card_051",
-                          "text": "Prüfungsfalle: „Wir sind klein, wir brauchen das nicht“ – kleine Ziele werden oft genauso getroffen.",
-                          "correctForms": [
-                            "keine"
-                          ]
-                        },
-                        {
-                          "id": "card_052",
-                          "text": "BONUS 1: Erkläre Vertraulichkeit, Integrität, Verfügbarkeit jeweils an einem Beispiel aus einem Betrieb.",
-                          "correctForms": [
-                            "offene_frage_bonus"
-                          ]
-                        },
-                        {
-                          "id": "card_053",
-                          "text": "BONUS 2: Wie würdest du den Schutzbedarf einer Lohnabrechnungstabelle für C/I/A einstufen – und warum?",
-                          "correctForms": [
-                            "offene_frage_bonus"
-                          ]
-                        },
-                        {
-                          "id": "card_054",
-                          "text": "BONUS 3: Nenne 5 typische Gefährdungen und je eine passende Gegenmaßnahme.",
-                          "correctForms": [
-                            "offene_frage_bonus"
-                          ]
-                        },
-                        {
-                          "id": "card_055",
-                          "text": "BONUS 4: Was sind TOMs und warum reicht „eine Firewall“ als Antwort fast nie?",
-                          "correctForms": [
-                            "offene_frage_bonus"
-                          ]
-                        },
-                        {
-                          "id": "card_056",
-                          "text": "Ziel der meisten Sicherheitsmaßnahmen im Überblick: Schutz von Vertraulichkeit, Integrität, Verfügbarkeit und Ergänzungen wie Authentizität/Nachvollziehbarkeit.",
-                          "correctForms": [
-                            "alle"
                           ]
                         }
                       ]
