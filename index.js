@@ -10,6 +10,8 @@
     // --- 1. Global Setup & State ---
     const THEME_KEY = 'globalTheme_v1';
     const STATE_KEY = 'paukerAppState_v1';
+    const REMOTE_INDEX_KEY = 'pauker_remote_index_v2';
+    const LEGACY_REMOTE_INDEX_KEY = 'pauker_remote_index_v1';
 
     // UI References
     const themeToggleApp = document.getElementById('theme-toggle-app');
@@ -155,7 +157,9 @@
         // Der Remote-Cache ist nur für GitHub Pages gedacht.
         const isGithubPages = window.location.hostname.endsWith('github.io');
         if (isGithubPages) {
-            const cachedIndex = localStorage.getItem('pauker_remote_index_v1');
+            // Alte Cache-Version ignorieren, damit gelöschte Ordner nicht wieder auftauchen.
+            localStorage.removeItem(LEGACY_REMOTE_INDEX_KEY);
+            const cachedIndex = localStorage.getItem(REMOTE_INDEX_KEY);
             if (cachedIndex) {
                 try {
                     rootTree = JSON.parse(cachedIndex);
@@ -441,11 +445,12 @@
 
         localStorage.removeItem(STATE_KEY);
         sessionStorage.clear();
+        localStorage.removeItem(REMOTE_INDEX_KEY);
+        localStorage.removeItem(LEGACY_REMOTE_INDEX_KEY);
 
         if (isGithub) {
             await rebuildIndexFromGithub();
         } else {
-            localStorage.removeItem('pauker_remote_index_v1');
             window.location.reload();
         }
     };
@@ -469,8 +474,15 @@
 
         try {
             console.log(`Starte Remote-Indexierung für ${owner}/${repo}...`);
-            const api = `https://api.github.com/repos/${owner}/${repo}/git/trees/main?recursive=1`;
-            const resp = await fetch(api);
+            const repoApi = `https://api.github.com/repos/${owner}/${repo}`;
+            const repoResp = await fetch(repoApi, { cache: 'no-store' });
+            if (!repoResp.ok) throw new Error(`GitHub Repo API Fehler: ${repoResp.status}`);
+
+            const repoData = await repoResp.json();
+            const branch = repoData.default_branch || 'main';
+
+            const api = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`;
+            const resp = await fetch(api, { cache: 'no-store' });
             if (!resp.ok) throw new Error(`GitHub API Fehler: ${resp.status}`);
 
             const data = await resp.json();
@@ -480,10 +492,12 @@
             const rawNodes = data.tree.filter(n => n.path.startsWith('database/') && n.path !== 'database');
             const tree = buildTreeFromFlatList(rawNodes);
 
-            localStorage.setItem('pauker_remote_index_v1', JSON.stringify(tree));
+            localStorage.setItem(REMOTE_INDEX_KEY, JSON.stringify(tree));
             alert("Index erfolgreich von GitHub aktualisiert!");
             window.location.reload();
         } catch (err) {
+            localStorage.removeItem(REMOTE_INDEX_KEY);
+            localStorage.removeItem(LEGACY_REMOTE_INDEX_KEY);
             alert("Remote-Update fehlgeschlagen (evtl. API-Limit überschritten?): " + err.message);
             window.location.reload();
         }
