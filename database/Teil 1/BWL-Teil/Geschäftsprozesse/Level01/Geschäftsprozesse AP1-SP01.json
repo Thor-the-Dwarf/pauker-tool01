@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Geschäftsprozesse (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "geschaftsprozess",
+      "title": "Geschäftsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "arbeitsprozess",
+      "title": "Arbeitsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess",
+      "title": "Prozess",
+      "subtitle": ""
+    },
+    {
+      "id": "projekt",
+      "title": "Projekt",
+      "subtitle": ""
+    },
+    {
+      "id": "kernprozess",
+      "title": "Kernprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "unterstutzungsprozess",
+      "title": "Unterstützungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "fuhrungsprozess",
+      "title": "Führungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "input",
+      "title": "Input",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Gesamtprozess aus Kundensicht: Anforderung stellen, Genehmigung einholen, Gerät erhalten, produktiv arbeiten – Fokus auf Wert, Kunde, Geld und Verantwortung.",
+      "correctForms": [
+        "geschaftsprozess"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Konkrete Arbeitsschritte im IT-Team: Image erstellen, Software installieren, Übergabeprotokoll erstellen, Einweisung durchführen.",
+      "correctForms": [
+        "arbeitsprozess"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Wiederholt sich regelmäßig und lässt sich als Input → Aktivität → Output beschreiben.",
+      "correctForms": [
+        "prozess"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Einmalig, zeitlich begrenzt und nicht als Routine gedacht (z. B. eine einmalige Einführung eines neuen Systems).",
+      "correctForms": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Erzeugt direkt Kundennutzen; hier entsteht Umsatz bzw. direkter Leistungswert (z. B. Servicebereitstellung, Support-Leistung).",
+      "correctForms": [
+        "kernprozess"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Ermöglicht den Kernprozess, erzeugt aber nicht direkt Umsatz (z. B. Einkauf, IT-Betrieb, Personalverwaltung).",
+      "correctForms": [
+        "unterstutzungsprozess"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Steuert, entscheidet und gibt die Richtung vor (z. B. Strategie, Controlling, Qualitätsmanagement).",
+      "correctForms": [
+        "fuhrungsprozess"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Startauslöser/Trigger eines Ablaufs, z. B. „Störung gemeldet“ oder „Auftrag eingegangen“. ",
+      "correctForms": [
+        "input"
+      ]
+    }
+  ]
+}

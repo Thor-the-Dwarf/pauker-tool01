@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Geschäftsprozesse (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Achte auf Grenzfälle: Prozessarten, Vertragsrecht, KPI-Design und Wirtschaftlichkeit.",
+  "columns": [
+    {
+      "id": "geschaftsprozess",
+      "title": "Geschäftsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "arbeitsprozess",
+      "title": "Arbeitsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "projekt",
+      "title": "Projekt",
+      "subtitle": ""
+    },
+    {
+      "id": "kernprozess",
+      "title": "Kernprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "unterstutzungsprozess",
+      "title": "Unterstützungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "fuhrungsprozess",
+      "title": "Führungsprozess",
+      "subtitle": ""
+    },
+    {
+      "id": "prozesslandkarte",
+      "title": "Prozesslandkarte",
+      "subtitle": ""
+    },
+    {
+      "id": "end_to_end_prozess",
+      "title": "End-to-End-Prozess",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Ablauf aus Unternehmenssicht mit Fokus auf Wertschöpfung, Verantwortlichkeit und Ergebnis für Kunde/Organisation.",
+      "correctForms": [
+        "geschaftsprozess"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Konkrete operative Schrittfolge im Team, z. B. Ticket erfassen, priorisieren, lösen, dokumentieren.",
+      "correctForms": [
+        "arbeitsprozess"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Einmalig, zeitlich befristet und mit eigenem Ziel/Budget organisiert.",
+      "correctForms": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Prozessart mit direktem Kundennutzen und typischer Marktwirkung.",
+      "correctForms": [
+        "kernprozess"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Prozessart, die Ressourcen bereitstellt und den Kernprozess absichert.",
+      "correctForms": [
+        "unterstutzungsprozess"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Strategie, Zielvorgaben, Steuerung und Kontrolle von Prozessen.",
+      "correctForms": [
+        "fuhrungsprozess"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Übersicht, die Kern-, Support- und Führungsprozesse inklusive Beziehungen zeigt.",
+      "correctForms": [
+        "prozesslandkarte"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Vom Trigger bis zum bestätigten Ergebnis inkl. aller Übergaben gedacht.",
+      "correctForms": [
+        "end_to_end_prozess"
+      ]
+    }
+  ]
+}

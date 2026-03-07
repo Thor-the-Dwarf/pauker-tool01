@@ -20,33 +20,7 @@
     "Bearbeitungszeit",
     "First Time Right",
     "Engpass (Bottleneck)",
-    "WIP-Limit",
-    "Schnittstelle",
-    "Medienbruch",
-    "Standardprozess",
-    "Ausnahmeprozess",
-    "Kaufvertrag",
-    "Werkvertrag",
-    "Dienstvertrag",
-    "Abnahme",
-    "Mangel",
-    "Lieferverzug",
-    "Zahlungsverzug",
-    "SLA",
-    "OLA",
-    "TCO",
-    "ROI",
-    "Amortisation",
-    "Nutzwertanalyse",
-    "Make-or-Buy",
-    "Risikokosten",
-    "Prozessziel (SMART)",
-    "Akzeptanzkriterium",
-    "Ursachenanalyse",
-    "Lessons Learned",
-    "Eskalation",
-    "alle",
-    "keine"
+    "WIP-Limit"
   ],
   "questions": [
     {
@@ -114,116 +88,8 @@
       "correct": "WIP-Limit"
     },
     {
-      "text": "Definierter Übergabepunkt zwischen Rollen oder Systemen mit klaren Informationsanforderungen.",
-      "correct": "Schnittstelle"
-    },
-    {
-      "text": "Toolwechsel (z. B. Ticket → Mail → Excel) erzeugt Verzögerung und Informationsverlust.",
-      "correct": "Medienbruch"
-    },
-    {
-      "text": "Wiederholbarer Regelablauf mit klaren Rollen, Schritten und Qualitätskriterien.",
-      "correct": "Standardprozess"
-    },
-    {
-      "text": "Sonderpfad für seltene Fälle außerhalb des normalen Regelablaufs.",
-      "correct": "Ausnahmeprozess"
-    },
-    {
-      "text": "Sache/Produkt gegen Geld; Eigentumsübergang steht im Vordergrund.",
-      "correct": "Kaufvertrag"
-    },
-    {
-      "text": "Vertragstyp, bei dem ein konkreter Erfolg geschuldet wird; Abnahme ist zentral.",
-      "correct": "Werkvertrag"
-    },
-    {
-      "text": "Vertragstyp, bei dem die Tätigkeit nach Aufwand geschuldet wird.",
-      "correct": "Dienstvertrag"
-    },
-    {
-      "text": "Formale Bestätigung, dass das vereinbarte Werk vertragsgemäß erfüllt ist.",
-      "correct": "Abnahme"
-    },
-    {
-      "text": "Leistung weicht von der vereinbarten Beschaffenheit/Funktion ab.",
-      "correct": "Mangel"
-    },
-    {
-      "text": "Verbindlicher Termin wird nicht eingehalten, Leistung kommt zu spät.",
-      "correct": "Lieferverzug"
-    },
-    {
-      "text": "Fällige Rechnung wird trotz Frist/ Mahnung nicht gezahlt.",
-      "correct": "Zahlungsverzug"
-    },
-    {
-      "text": "Vertraglich vereinbarte Serviceziele gegenüber dem Kunden (z. B. Reaktionszeit, Verfügbarkeit).",
-      "correct": "SLA"
-    },
-    {
-      "text": "Interne Leistungszusage zwischen Teams, um externe Serviceziele sicherzustellen.",
-      "correct": "OLA"
-    },
-    {
-      "text": "Gesamtkosten über Lebensdauer inkl. Betrieb, Wartung, Schulung und Support.",
-      "correct": "TCO"
-    },
-    {
-      "text": "Nutzen/Gewinn im Verhältnis zur Investition, immer mit Zeitraum betrachtet.",
-      "correct": "ROI"
-    },
-    {
-      "text": "Zeitpunkt, ab dem kumulierter Nutzen die Investitionskosten erreicht.",
-      "correct": "Amortisation"
-    },
-    {
-      "text": "Entscheidungsmethode mit Kriterien, Gewichtung und Punktbewertung.",
-      "correct": "Nutzwertanalyse"
-    },
-    {
-      "text": "Strategische Entscheidung: selbst entwickeln oder einkaufen/outsourcen.",
-      "correct": "Make-or-Buy"
-    },
-    {
-      "text": "Erwartete Zusatzkosten aus Risiken wie Ausfall, Pönalen, Verzögerungen.",
-      "correct": "Risikokosten"
-    },
-    {
-      "text": "Ziel muss spezifisch, messbar, akzeptiert, realistisch und terminiert formuliert sein.",
-      "correct": "Prozessziel (SMART)"
-    },
-    {
-      "text": "Messbar formuliert: „Gilt als erfüllt, wenn ...“.",
-      "correct": "Akzeptanzkriterium"
-    },
-    {
-      "text": "Systematische Ermittlung der eigentlichen Ursache statt reiner Symptombehandlung.",
-      "correct": "Ursachenanalyse"
-    },
-    {
-      "text": "Strukturiertes Lernen aus Vorfällen zur dauerhaften Prozessverbesserung.",
-      "correct": "Lessons Learned"
-    },
-    {
-      "text": "Vordefinierter Hochstufungsweg bei Überschreitung von Risiko, Zeit oder Kompetenz.",
-      "correct": "Eskalation"
-    },
-    {
-      "text": "Welche drei Begriffe gehören in ein ausgewogenes Incident-Steuerungsset: Durchlaufzeit, First Time Right, Reopen-Rate?",
-      "correct": "alle"
-    },
-    {
-      "text": "Welche Aussage ist korrekt: „Nur viele geschlossene Tickets bedeuten automatisch hohe Servicequalität.“",
-      "correct": "keine"
-    },
-    {
       "text": "Prüfungsfalle: Ein KPI ohne Zielbezug kann Verhalten verschlechtern statt verbessern.",
       "correct": "KPI"
-    },
-    {
-      "text": "Der Wechsel von Prozessschritten über mehrere unintegrierte Tools erhöht Fehlerquote und Laufzeit.",
-      "correct": "Medienbruch"
     }
   ]
 }
