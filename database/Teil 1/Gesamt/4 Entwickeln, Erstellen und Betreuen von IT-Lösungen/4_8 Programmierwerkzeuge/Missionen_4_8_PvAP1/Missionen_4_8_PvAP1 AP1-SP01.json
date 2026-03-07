@@ -42,16 +42,6 @@
       "id": "barrierefreiheit",
       "title": "Barrierefreiheit",
       "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -179,20 +169,6 @@
       "text": "Dient dazu, Struktur des Codes/Objektmodells zu planen, bevor implementiert wird.",
       "correctForms": [
         "uml_klassendiagramm"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Hilft, Missverständnisse zu vermeiden, weil du Abläufe/Struktur sichtbar machst, ohne schon Code zu schreiben.",
-      "correctForms": [
-        "alle"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Wenn du eine GUI planst, musst du Nutzbarkeit und Zugang für alle mitdenken – das sind diese beiden Themen.",
-      "correctForms": [
-        "alle"
       ]
     }
   ]

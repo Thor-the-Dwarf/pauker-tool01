@@ -42,31 +42,6 @@
       "id": "tabelle",
       "title": "Tabelle",
       "subtitle": ""
-    },
-    {
-      "id": "select",
-      "title": "SELECT",
-      "subtitle": ""
-    },
-    {
-      "id": "where",
-      "title": "WHERE",
-      "subtitle": ""
-    },
-    {
-      "id": "order_by",
-      "title": "ORDER BY",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -127,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "SQL-Befehl zum Auslesen von Daten aus einer Tabelle.",
-      "correctForms": [
-        "select"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "SQL-Teil, der Datensätze anhand einer Bedingung filtert, z. B. alter > 18.",
-      "correctForms": [
-        "where"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "SQL-Teil, der die Ausgabe sortiert, z. B. nach name aufsteigend oder datum absteigend.",
-      "correctForms": [
-        "order_by"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "Wenn du in einem Modell „Kunde“ mit den Eigenschaften Name und E-Mail beschreibst, ist „Kunde“ eine …",
       "correctForms": [
@@ -166,27 +120,6 @@
       "text": "„Ein Kunde kann viele Bestellungen haben“ ist ein Beispiel für diese Eigenschaft einer Beziehung.",
       "correctForms": [
         "kardinalitat"
-      ]
-    },
-    {
-      "id": "card_015",
-      "text": "„Gib alle Spalten aller Datensätze aus einer Tabelle aus“ ist die Standardform von …",
-      "correctForms": [
-        "select"
-      ]
-    },
-    {
-      "id": "card_016",
-      "text": "„Zeige nur Datensätze, bei denen abteilung = 'IT'“ ist eine typische Aufgabe für …",
-      "correctForms": [
-        "where"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "„Sortiere die Ausgabe nach einstellungsdatum absteigend“ ist eine typische Aufgabe für …",
-      "correctForms": [
-        "order_by"
       ]
     },
     {

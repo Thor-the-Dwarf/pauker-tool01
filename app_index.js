@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:53:55 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:54:35 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -43142,8 +43142,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_1 IT-Systeme konzeptionieren/Missionen_4_1_PvAP1/Missionen_4_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_1 IT-Systeme konzeptionieren/Missionen_4_1_PvAP1/Missionen_4_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -43189,41 +43189,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "uefi",
                               "title": "UEFI",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "partitionierung",
-                              "title": "Partitionierung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "formatierung",
-                              "title": "Formatierung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "netzwerkanbindung",
-                              "title": "Netzwerkanbindung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ip_konfiguration",
-                              "title": "IP-Konfiguration",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "remotedesktop",
-                              "title": "Remotedesktop",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -43285,41 +43250,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Aufteilen eines Datenträgers in logische Bereiche (z. B. EFI-Partition, Systempartition, Datenpartition).",
-                              "correctForms": [
-                                "partitionierung"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Einrichten eines Dateisystems auf einer Partition (z. B. NTFS, ext4), damit Dateien gespeichert werden können.",
-                              "correctForms": [
-                                "formatierung"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Herstellen der Verbindung ins Netzwerk (Kabel/WLAN, Switch/Router/AP, Authentifizierung).",
-                              "correctForms": [
-                                "netzwerkanbindung"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Festlegen von IP-Adresse, Subnetzmaske, Gateway und DNS (statisch oder per DHCP).",
-                              "correctForms": [
-                                "ip_konfiguration"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Fernzugriff auf einen Rechner, um ihn zu bedienen (z. B. RDP), oft mit Authentifizierung und Berechtigungen.",
-                              "correctForms": [
-                                "remotedesktop"
-                              ]
-                            },
-                            {
                               "id": "card_014",
                               "text": "Beispiel: „Der Kunde braucht 30 Notebooks, VPN, Drucker, zentrale Benutzerverwaltung und 99,5% Verfügbarkeit“ gehört hier rein.",
                               "correctForms": [
@@ -43345,27 +43275,6 @@ window.DATABASE_INDEX = [
                               "text": "Vor dem OS-Setup wird oft entschieden: Boot-Reihenfolge, UEFI/Legacy, Secure Boot, TPM – das passiert hier.",
                               "correctForms": [
                                 "uefi"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "„C: für System, D: für Daten“ ist eine typische Entscheidung in diesem Schritt.",
-                              "correctForms": [
-                                "partitionierung"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "„NTFS auf der Systempartition“ ist eine typische Entscheidung in diesem Schritt.",
-                              "correctForms": [
-                                "formatierung"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "„IP 192.168.10.20, Maske /24, Gateway .1, DNS .53“ ist ein typisches Ergebnis davon.",
-                              "correctForms": [
-                                "ip_konfiguration"
                               ]
                             }
                           ]
@@ -44499,8 +44408,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_2 Bedarfsgerechte Auswahl von Hardware/Missionen_4_2_PvAP1/Missionen_4_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_2 Bedarfsgerechte Auswahl von Hardware/Missionen_4_2_PvAP1/Missionen_4_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -44546,46 +44455,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "lan",
                               "title": "LAN",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "wan",
-                              "title": "WAN",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "lte",
-                              "title": "LTE",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "5g",
-                              "title": "5G",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "barrierefreiheit",
-                              "title": "Barrierefreiheit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "zweiter_monitor",
-                              "title": "Zweiter Monitor",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "lautsprecher_mikrofon",
-                              "title": "Lautsprecher/Mikrofon",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -44647,55 +44516,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Netztyp: verbindet Standorte über große Entfernungen (z. B. MPLS, Internet-VPN), meist höhere Latenz.",
-                              "correctForms": [
-                                "wan"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Mobilfunkstandard: weit verbreitet, gute Abdeckung; typisch für mobiles Arbeiten mit moderaten Datenraten.",
-                              "correctForms": [
-                                "lte"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Mobilfunkstandard: neuere Generation mit höherer Bandbreite und geringerer Latenz, je nach Ausbau.",
-                              "correctForms": [
-                                "5g"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Ziel: Arbeitsplatz so gestalten, dass Menschen mit Einschränkungen effektiv arbeiten können.",
-                              "correctForms": [
-                                "barrierefreiheit"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Maßnahme: Mehr Bildschirmfläche für bessere Lesbarkeit/Übersicht; hilft z. B. bei Sehschwäche und Multitasking.",
-                              "correctForms": [
-                                "zweiter_monitor"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Maßnahme: Audio-Ein-/Ausgabe bereitstellen, z. B. für Screenreader, Videokonferenzen oder Sprachsteuerung.",
-                              "correctForms": [
-                                "lautsprecher_mikrofon"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Wenn unterwegs stabile Verbindung nötig ist und WLAN unsicher/fehlend, sind diese Standards relevant.",
-                              "correctForms": [
-                                "alle"
-                              ]
-                            },
-                            {
                               "id": "card_016",
                               "text": "Wenn Leistung/Erweiterbarkeit priorisiert wird und Mobilität egal ist, passt diese Geräteklasse am ehesten.",
                               "correctForms": [
@@ -44721,13 +44541,6 @@ window.DATABASE_INDEX = [
                               "text": "Wenn du innerhalb eines Gebäudes Geräte verbindest (Drucker, PCs, Switches), geht es primär um dieses Netz.",
                               "correctForms": [
                                 "lan"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du Filiale und Zentrale über Distanz koppelst, geht es primär um dieses Netz.",
-                              "correctForms": [
-                                "wan"
                               ]
                             }
                           ]
@@ -45940,8 +45753,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_3 Bedarfsgerechte Auswahl von Software/Missionen_4_3_PvAP1/Missionen_4_3_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_3_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_3 Bedarfsgerechte Auswahl von Software/Missionen_4_3_PvAP1/Missionen_4_3_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_3_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -45987,31 +45800,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "proprietare_software",
                               "title": "proprietäre Software",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "anpassbarkeit",
-                              "title": "Anpassbarkeit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "schnittstelle",
-                              "title": "Schnittstelle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "kompatibilitat",
-                              "title": "Kompatibilität",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -46073,27 +45861,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Wie gut sich eine Software an Prozesse anpassen lässt (Konfiguration, Plugins, Customizing).",
-                              "correctForms": [
-                                "anpassbarkeit"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Definierter Anschluss zur Daten- oder Funktionskopplung (z. B. REST-API, CSV-Export, LDAP).",
-                              "correctForms": [
-                                "schnittstelle"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Ob Software mit vorhandener Umgebung zusammenarbeitet (OS-Version, Datenformate, Hardware, Browser).",
-                              "correctForms": [
-                                "kompatibilitat"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "Beispiel: „Wir brauchen Textverarbeitung, Tabellen und Präsentationen“ zielt primär auf diese Kategorie.",
                               "correctForms": [
@@ -46133,27 +45900,6 @@ window.DATABASE_INDEX = [
                               "text": "Typisch: perfekt passend für Spezialprozesse – aber teurer und mit mehr Pflege-/Wartungsaufwand.",
                               "correctForms": [
                                 "individualsoftware"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Wenn du prüfen musst, ob das System Daten exportieren kann, um es an andere Tools anzubinden, schaust du auf das.",
-                              "correctForms": [
-                                "schnittstelle"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Wenn du prüfen musst, ob ein Programm mit vorhandenen Dateiformaten, Browsern oder OS-Versionen funktioniert, ist das.",
-                              "correctForms": [
-                                "kompatibilitat"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du prüfen musst, ob ein Tool per Einstellungen/Plugins an eure Abläufe angepasst werden kann, ist das.",
-                              "correctForms": [
-                                "anpassbarkeit"
                               ]
                             }
                           ]
@@ -47220,8 +46966,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_4 Urheberrechtsgesetz und Lizenzmodelle/Missionen_4_4_PvAP1/Missionen_4_4_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_4_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_4 Urheberrechtsgesetz und Lizenzmodelle/Missionen_4_4_PvAP1/Missionen_4_4_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_4_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -48481,8 +48227,7 @@ window.DATABASE_INDEX = [
                             "Netzwerk-Test",
                             "Troubleshooting",
                             "Dokumentation",
-                            "alle",
-                            "keine"
+                            "alle"
                           ],
                           "questions": [
                             {
@@ -48569,8 +48314,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_5 Aktivitäten bei Installationen und Konfigurationen/Missionen_4_5_PvAP1/Missionen_4_5_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_5_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_5 Aktivitäten bei Installationen und Konfigurationen/Missionen_4_5_PvAP1/Missionen_4_5_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_5_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -48616,51 +48361,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "dhcp",
                               "title": "DHCP",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "wlan_zugang",
-                              "title": "WLAN-Zugang",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "pre_shared_key_psk",
-                              "title": "Pre-Shared Key (PSK)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "enterprise_wlan_802_1x",
-                              "title": "Enterprise-WLAN (802.1X)",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "vpn",
-                              "title": "VPN",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "netzwerk_test",
-                              "title": "Netzwerk-Test",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "troubleshooting",
-                              "title": "Troubleshooting",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "dokumentation",
-                              "title": "Dokumentation",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -48722,55 +48422,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "SSID auswählen, verbinden, Verbindung speichern und prüfen, ob Internet/Netzressourcen erreichbar sind.",
-                              "correctForms": [
-                                "wlan_zugang"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "WLAN-Authentifizierung über ein gemeinsames Passwort, das alle Geräte kennen (WPA2/WPA3-PSK).",
-                              "correctForms": [
-                                "pre_shared_key_psk"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "WLAN-Authentifizierung pro Benutzer/Gerät über RADIUS/Anmeldedaten oder Zertifikate (WPA2-Enterprise).",
-                              "correctForms": [
-                                "enterprise_wlan_802_1x"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Verschlüsselter Tunnel ins Firmennetz, damit Remoteressourcen sicher erreichbar sind (z. B. für RDP).",
-                              "correctForms": [
-                                "vpn"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Prüfen, ob die Verbindung wirklich funktioniert: ping, DNS-Check, Gateway-Test, ggf. Durchsatz messen.",
-                              "correctForms": [
-                                "netzwerk_test"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Fehler systematisch eingrenzen: Kabel/WLAN, IP/DNS, Route, Firewall, Logs prüfen, dann Ursache beheben.",
-                              "correctForms": [
-                                "troubleshooting"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Einstellungen, IPs, Zugangsdaten-Handling, Änderungen und Testergebnisse nachvollziehbar festhalten.",
-                              "correctForms": [
-                                "dokumentation"
-                              ]
-                            },
-                            {
                               "id": "card_016",
                               "text": "Wenn ein Client eine 169.254.x.x-Adresse bekommt, deutet das typischerweise auf ein Problem hier hin.",
                               "correctForms": [
@@ -48789,20 +48440,6 @@ window.DATABASE_INDEX = [
                               "text": "„Ich setze die Netzmaske falsch, dadurch erreiche ich das Gateway nicht“ ist ein Klassiker in diesem Bereich.",
                               "correctForms": [
                                 "ip_konfiguration"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "„Im WLAN klappt’s mit Benutzername/Passwort, aber nicht mit dem allgemeinen WLAN-Passwort“ passt am ehesten dazu.",
-                              "correctForms": [
-                                "enterprise_wlan_802_1x"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "„Nach der Änderung funktioniert es wieder“ ohne Nachweis ist schlecht – sauber ist es, das mit Tests zu belegen.",
-                              "correctForms": [
-                                "netzwerk_test"
                               ]
                             }
                           ]
@@ -49951,8 +49588,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_6 Konsolenbefehle/Missionen_4_6_PvAP1/Missionen_4_6_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_6_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_6 Konsolenbefehle/Missionen_4_6_PvAP1/Missionen_4_6_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_6_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -49998,46 +49635,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "ifconfig",
                               "title": "ifconfig",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "iproute2",
-                              "title": "iproute2",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alias",
-                              "title": "alias",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "arp",
-                              "title": "arp",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "chmod",
-                              "title": "chmod",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ping",
-                              "title": "ping",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "traceroute",
-                              "title": "traceroute",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -50099,48 +49696,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Linux (modern): Befehls-Suite wie 'ip addr', 'ip route', 'ip link' zur Netzwerkkonfiguration.",
-                              "correctForms": [
-                                "iproute2"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Legt eine Abkürzung für einen Befehl fest (z. B. 'alias ll=\"ls -la\"').",
-                              "correctForms": [
-                                "alias"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Zeigt/verwaltet ARP-Tabellen (Zuordnung IP ↔ MAC) im lokalen Netz.",
-                              "correctForms": [
-                                "arp"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Ändert Dateirechte unter Linux/macOS (z. B. 'chmod 644 file.txt').",
-                              "correctForms": [
-                                "chmod"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Testet Erreichbarkeit über ICMP und misst grob die Laufzeit (Round Trip Time).",
-                              "correctForms": [
-                                "ping"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Zeigt den Weg (Hops) zu einem Ziel im Netzwerk an (Routing-Pfad).",
-                              "correctForms": [
-                                "traceroute"
-                              ]
-                            },
-                            {
                               "id": "card_015",
                               "text": "Windows: Befehl zum Löschen von Dateien ist dieser.",
                               "correctForms": [
@@ -50159,27 +49714,6 @@ window.DATABASE_INDEX = [
                               "text": "Windows: Standardbefehl zum Anzeigen der Netzwerkkonfiguration ist dieser.",
                               "correctForms": [
                                 "ipconfig"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Linux: Wenn 'ifconfig' fehlt, ist das moderne Werkzeug dafür meist dieses Paket/Toolset.",
-                              "correctForms": [
-                                "iproute2"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Wenn du prüfen willst, ob DNS/HTTP nicht das Problem sind, sondern überhaupt Netzwerk da ist, nutzt du oft zuerst diesen Befehl.",
-                              "correctForms": [
-                                "ping"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du herausfinden willst, an welchem Hop/Router die Verbindung hängen bleibt, nutzt du diesen Befehl.",
-                              "correctForms": [
-                                "traceroute"
                               ]
                             }
                           ]
@@ -51910,9 +51444,7 @@ window.DATABASE_INDEX = [
                             "Bibliothek",
                             "Framework",
                             "Skriptsprache",
-                            "Debugging",
-                            "alle",
-                            "keine"
+                            "Debugging"
                           ],
                           "questions": [
                             {
@@ -51995,8 +51527,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_7 Programmiersprachen/Missionen_4_7_PvAP1/Missionen_4_7_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_7_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_7 Programmiersprachen/Missionen_4_7_PvAP1/Missionen_4_7_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_7_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -52042,56 +51574,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "datenstruktur",
                               "title": "Datenstruktur",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "kontrollstruktur",
-                              "title": "Kontrollstruktur",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "klasse",
-                              "title": "Klasse",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "vererbung",
-                              "title": "Vererbung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "methode",
-                              "title": "Methode",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "bibliothek",
-                              "title": "Bibliothek",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "framework",
-                              "title": "Framework",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "skriptsprache",
-                              "title": "Skriptsprache",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "debugging",
-                              "title": "Debugging",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -52153,80 +51635,10 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Steuert den Ablauf, z. B. if/else, switch oder for/while-Schleife.",
-                              "correctForms": [
-                                "kontrollstruktur"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Bauplan für Objekte mit Attributen und Methoden; aus ihr werden Instanzen erzeugt.",
-                              "correctForms": [
-                                "klasse"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Mechanismus, bei dem eine Klasse Eigenschaften/Methoden einer anderen übernimmt und erweitern/überschreiben kann.",
-                              "correctForms": [
-                                "vererbung"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Funktion, die zu einer Klasse/einem Objekt gehört und dessen Verhalten beschreibt.",
-                              "correctForms": [
-                                "methode"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Sammlung wiederverwendbarer Funktionen/Module, die du in eigenen Code einbindest (du bestimmst den Ablauf).",
-                              "correctForms": [
-                                "bibliothek"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Gibt Struktur und Ablauf vor; du füllst „Hooks/Controller/Komponenten“ aus (Inversion of Control).",
-                              "correctForms": [
-                                "framework"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Sprache, die oft interpretierend genutzt wird und sich gut für Automatisierung/Glue-Code eignet (z. B. Bash, Python, JavaScript).",
-                              "correctForms": [
-                                "skriptsprache"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "Systematisches Finden und Beheben von Fehlern, z. B. Breakpoints setzen, Variablen inspizieren, Step-by-Step ausführen.",
-                              "correctForms": [
-                                "debugging"
-                              ]
-                            },
-                            {
                               "id": "card_017",
                               "text": "Wenn das Programm kompiliert ist, aber externe Funktionen „nicht gefunden“ werden, fehlt häufig dieser Schritt/Teil.",
                               "correctForms": [
                                 "linker"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "„for-Schleife“ und „if-Verzweigung“ sind Beispiele für diese Kategorie.",
-                              "correctForms": [
-                                "kontrollstruktur"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Wenn du eine Instanz erzeugst und dann obj.doSomething() aufrufst, ist doSomething() eine …",
-                              "correctForms": [
-                                "methode"
                               ]
                             }
                           ]
@@ -53486,8 +52898,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_8 Programmierwerkzeuge/Missionen_4_8_PvAP1/Missionen_4_8_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_4_8_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/4_8 Programmierwerkzeuge/Missionen_4_8_PvAP1/Missionen_4_8_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_4_8_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -53533,16 +52945,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "barrierefreiheit",
                               "title": "Barrierefreiheit",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -53671,20 +53073,6 @@ window.DATABASE_INDEX = [
                               "text": "Dient dazu, Struktur des Codes/Objektmodells zu planen, bevor implementiert wird.",
                               "correctForms": [
                                 "uml_klassendiagramm"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Hilft, Missverständnisse zu vermeiden, weil du Abläufe/Struktur sichtbar machst, ohne schon Code zu schreiben.",
-                              "correctForms": [
-                                "alle"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wenn du eine GUI planst, musst du Nutzbarkeit und Zugang für alle mitdenken – das sind diese beiden Themen.",
-                              "correctForms": [
-                                "alle"
                               ]
                             }
                           ]
@@ -54842,8 +54230,8 @@ window.DATABASE_INDEX = [
                     }
                   },
                   {
-                    "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/Missionen_4_PvAP1/Missionen_4_PvAP1 AP1-SS01.json",
-                    "name": "Missionen_4_PvAP1 AP1-SS01.json",
+                    "id": "database/Teil 1/Gesamt/4 Entwickeln, Erstellen und Betreuen von IT-Lösungen/Missionen_4_PvAP1/Missionen_4_PvAP1 AP1-SP01.json",
+                    "name": "Missionen_4_PvAP1 AP1-SP01.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
@@ -54889,31 +54277,6 @@ window.DATABASE_INDEX = [
                         {
                           "id": "tabelle",
                           "title": "Tabelle",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "select",
-                          "title": "SELECT",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "where",
-                          "title": "WHERE",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "order_by",
-                          "title": "ORDER BY",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "alle",
-                          "title": "alle",
-                          "subtitle": ""
-                        },
-                        {
-                          "id": "keine",
-                          "title": "keine",
                           "subtitle": ""
                         }
                       ],
@@ -54975,27 +54338,6 @@ window.DATABASE_INDEX = [
                           ]
                         },
                         {
-                          "id": "card_009",
-                          "text": "SQL-Befehl zum Auslesen von Daten aus einer Tabelle.",
-                          "correctForms": [
-                            "select"
-                          ]
-                        },
-                        {
-                          "id": "card_010",
-                          "text": "SQL-Teil, der Datensätze anhand einer Bedingung filtert, z. B. alter > 18.",
-                          "correctForms": [
-                            "where"
-                          ]
-                        },
-                        {
-                          "id": "card_011",
-                          "text": "SQL-Teil, der die Ausgabe sortiert, z. B. nach name aufsteigend oder datum absteigend.",
-                          "correctForms": [
-                            "order_by"
-                          ]
-                        },
-                        {
                           "id": "card_012",
                           "text": "Wenn du in einem Modell „Kunde“ mit den Eigenschaften Name und E-Mail beschreibst, ist „Kunde“ eine …",
                           "correctForms": [
@@ -55014,27 +54356,6 @@ window.DATABASE_INDEX = [
                           "text": "„Ein Kunde kann viele Bestellungen haben“ ist ein Beispiel für diese Eigenschaft einer Beziehung.",
                           "correctForms": [
                             "kardinalitat"
-                          ]
-                        },
-                        {
-                          "id": "card_015",
-                          "text": "„Gib alle Spalten aller Datensätze aus einer Tabelle aus“ ist die Standardform von …",
-                          "correctForms": [
-                            "select"
-                          ]
-                        },
-                        {
-                          "id": "card_016",
-                          "text": "„Zeige nur Datensätze, bei denen abteilung = 'IT'“ ist eine typische Aufgabe für …",
-                          "correctForms": [
-                            "where"
-                          ]
-                        },
-                        {
-                          "id": "card_017",
-                          "text": "„Sortiere die Ausgabe nach einstellungsdatum absteigend“ ist eine typische Aufgabe für …",
-                          "correctForms": [
-                            "order_by"
                           ]
                         },
                         {

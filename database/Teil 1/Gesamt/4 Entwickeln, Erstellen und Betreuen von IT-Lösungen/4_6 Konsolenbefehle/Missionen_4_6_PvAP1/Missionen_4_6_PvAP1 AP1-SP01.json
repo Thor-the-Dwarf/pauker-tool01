@@ -42,46 +42,6 @@
       "id": "ifconfig",
       "title": "ifconfig",
       "subtitle": ""
-    },
-    {
-      "id": "iproute2",
-      "title": "iproute2",
-      "subtitle": ""
-    },
-    {
-      "id": "alias",
-      "title": "alias",
-      "subtitle": ""
-    },
-    {
-      "id": "arp",
-      "title": "arp",
-      "subtitle": ""
-    },
-    {
-      "id": "chmod",
-      "title": "chmod",
-      "subtitle": ""
-    },
-    {
-      "id": "ping",
-      "title": "ping",
-      "subtitle": ""
-    },
-    {
-      "id": "traceroute",
-      "title": "traceroute",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -142,48 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Linux (modern): Befehls-Suite wie 'ip addr', 'ip route', 'ip link' zur Netzwerkkonfiguration.",
-      "correctForms": [
-        "iproute2"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Legt eine Abkürzung für einen Befehl fest (z. B. 'alias ll=\"ls -la\"').",
-      "correctForms": [
-        "alias"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Zeigt/verwaltet ARP-Tabellen (Zuordnung IP ↔ MAC) im lokalen Netz.",
-      "correctForms": [
-        "arp"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Ändert Dateirechte unter Linux/macOS (z. B. 'chmod 644 file.txt').",
-      "correctForms": [
-        "chmod"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Testet Erreichbarkeit über ICMP und misst grob die Laufzeit (Round Trip Time).",
-      "correctForms": [
-        "ping"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "Zeigt den Weg (Hops) zu einem Ziel im Netzwerk an (Routing-Pfad).",
-      "correctForms": [
-        "traceroute"
-      ]
-    },
-    {
       "id": "card_015",
       "text": "Windows: Befehl zum Löschen von Dateien ist dieser.",
       "correctForms": [
@@ -202,27 +120,6 @@
       "text": "Windows: Standardbefehl zum Anzeigen der Netzwerkkonfiguration ist dieser.",
       "correctForms": [
         "ipconfig"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Linux: Wenn 'ifconfig' fehlt, ist das moderne Werkzeug dafür meist dieses Paket/Toolset.",
-      "correctForms": [
-        "iproute2"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Wenn du prüfen willst, ob DNS/HTTP nicht das Problem sind, sondern überhaupt Netzwerk da ist, nutzt du oft zuerst diesen Befehl.",
-      "correctForms": [
-        "ping"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Wenn du herausfinden willst, an welchem Hop/Router die Verbindung hängen bleibt, nutzt du diesen Befehl.",
-      "correctForms": [
-        "traceroute"
       ]
     }
   ]

@@ -42,31 +42,6 @@
       "id": "proprietare_software",
       "title": "proprietäre Software",
       "subtitle": ""
-    },
-    {
-      "id": "anpassbarkeit",
-      "title": "Anpassbarkeit",
-      "subtitle": ""
-    },
-    {
-      "id": "schnittstelle",
-      "title": "Schnittstelle",
-      "subtitle": ""
-    },
-    {
-      "id": "kompatibilitat",
-      "title": "Kompatibilität",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -127,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Wie gut sich eine Software an Prozesse anpassen lässt (Konfiguration, Plugins, Customizing).",
-      "correctForms": [
-        "anpassbarkeit"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Definierter Anschluss zur Daten- oder Funktionskopplung (z. B. REST-API, CSV-Export, LDAP).",
-      "correctForms": [
-        "schnittstelle"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Ob Software mit vorhandener Umgebung zusammenarbeitet (OS-Version, Datenformate, Hardware, Browser).",
-      "correctForms": [
-        "kompatibilitat"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "Beispiel: „Wir brauchen Textverarbeitung, Tabellen und Präsentationen“ zielt primär auf diese Kategorie.",
       "correctForms": [
@@ -187,27 +141,6 @@
       "text": "Typisch: perfekt passend für Spezialprozesse – aber teurer und mit mehr Pflege-/Wartungsaufwand.",
       "correctForms": [
         "individualsoftware"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "Wenn du prüfen musst, ob das System Daten exportieren kann, um es an andere Tools anzubinden, schaust du auf das.",
-      "correctForms": [
-        "schnittstelle"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "Wenn du prüfen musst, ob ein Programm mit vorhandenen Dateiformaten, Browsern oder OS-Versionen funktioniert, ist das.",
-      "correctForms": [
-        "kompatibilitat"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "Wenn du prüfen musst, ob ein Tool per Einstellungen/Plugins an eure Abläufe angepasst werden kann, ist das.",
-      "correctForms": [
-        "anpassbarkeit"
       ]
     }
   ]

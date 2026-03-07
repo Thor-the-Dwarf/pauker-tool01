@@ -42,51 +42,6 @@
       "id": "dhcp",
       "title": "DHCP",
       "subtitle": ""
-    },
-    {
-      "id": "wlan_zugang",
-      "title": "WLAN-Zugang",
-      "subtitle": ""
-    },
-    {
-      "id": "pre_shared_key_psk",
-      "title": "Pre-Shared Key (PSK)",
-      "subtitle": ""
-    },
-    {
-      "id": "enterprise_wlan_802_1x",
-      "title": "Enterprise-WLAN (802.1X)",
-      "subtitle": ""
-    },
-    {
-      "id": "vpn",
-      "title": "VPN",
-      "subtitle": ""
-    },
-    {
-      "id": "netzwerk_test",
-      "title": "Netzwerk-Test",
-      "subtitle": ""
-    },
-    {
-      "id": "troubleshooting",
-      "title": "Troubleshooting",
-      "subtitle": ""
-    },
-    {
-      "id": "dokumentation",
-      "title": "Dokumentation",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -147,55 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "SSID auswählen, verbinden, Verbindung speichern und prüfen, ob Internet/Netzressourcen erreichbar sind.",
-      "correctForms": [
-        "wlan_zugang"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "WLAN-Authentifizierung über ein gemeinsames Passwort, das alle Geräte kennen (WPA2/WPA3-PSK).",
-      "correctForms": [
-        "pre_shared_key_psk"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "WLAN-Authentifizierung pro Benutzer/Gerät über RADIUS/Anmeldedaten oder Zertifikate (WPA2-Enterprise).",
-      "correctForms": [
-        "enterprise_wlan_802_1x"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Verschlüsselter Tunnel ins Firmennetz, damit Remoteressourcen sicher erreichbar sind (z. B. für RDP).",
-      "correctForms": [
-        "vpn"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Prüfen, ob die Verbindung wirklich funktioniert: ping, DNS-Check, Gateway-Test, ggf. Durchsatz messen.",
-      "correctForms": [
-        "netzwerk_test"
-      ]
-    },
-    {
-      "id": "card_014",
-      "text": "Fehler systematisch eingrenzen: Kabel/WLAN, IP/DNS, Route, Firewall, Logs prüfen, dann Ursache beheben.",
-      "correctForms": [
-        "troubleshooting"
-      ]
-    },
-    {
-      "id": "card_015",
-      "text": "Einstellungen, IPs, Zugangsdaten-Handling, Änderungen und Testergebnisse nachvollziehbar festhalten.",
-      "correctForms": [
-        "dokumentation"
-      ]
-    },
-    {
       "id": "card_016",
       "text": "Wenn ein Client eine 169.254.x.x-Adresse bekommt, deutet das typischerweise auf ein Problem hier hin.",
       "correctForms": [
@@ -214,20 +120,6 @@
       "text": "„Ich setze die Netzmaske falsch, dadurch erreiche ich das Gateway nicht“ ist ein Klassiker in diesem Bereich.",
       "correctForms": [
         "ip_konfiguration"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "„Im WLAN klappt’s mit Benutzername/Passwort, aber nicht mit dem allgemeinen WLAN-Passwort“ passt am ehesten dazu.",
-      "correctForms": [
-        "enterprise_wlan_802_1x"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "„Nach der Änderung funktioniert es wieder“ ohne Nachweis ist schlecht – sauber ist es, das mit Tests zu belegen.",
-      "correctForms": [
-        "netzwerk_test"
       ]
     }
   ]

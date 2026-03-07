@@ -42,41 +42,6 @@
       "id": "uefi",
       "title": "UEFI",
       "subtitle": ""
-    },
-    {
-      "id": "partitionierung",
-      "title": "Partitionierung",
-      "subtitle": ""
-    },
-    {
-      "id": "formatierung",
-      "title": "Formatierung",
-      "subtitle": ""
-    },
-    {
-      "id": "netzwerkanbindung",
-      "title": "Netzwerkanbindung",
-      "subtitle": ""
-    },
-    {
-      "id": "ip_konfiguration",
-      "title": "IP-Konfiguration",
-      "subtitle": ""
-    },
-    {
-      "id": "remotedesktop",
-      "title": "Remotedesktop",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -137,41 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Aufteilen eines Datenträgers in logische Bereiche (z. B. EFI-Partition, Systempartition, Datenpartition).",
-      "correctForms": [
-        "partitionierung"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Einrichten eines Dateisystems auf einer Partition (z. B. NTFS, ext4), damit Dateien gespeichert werden können.",
-      "correctForms": [
-        "formatierung"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Herstellen der Verbindung ins Netzwerk (Kabel/WLAN, Switch/Router/AP, Authentifizierung).",
-      "correctForms": [
-        "netzwerkanbindung"
-      ]
-    },
-    {
-      "id": "card_012",
-      "text": "Festlegen von IP-Adresse, Subnetzmaske, Gateway und DNS (statisch oder per DHCP).",
-      "correctForms": [
-        "ip_konfiguration"
-      ]
-    },
-    {
-      "id": "card_013",
-      "text": "Fernzugriff auf einen Rechner, um ihn zu bedienen (z. B. RDP), oft mit Authentifizierung und Berechtigungen.",
-      "correctForms": [
-        "remotedesktop"
-      ]
-    },
-    {
       "id": "card_014",
       "text": "Beispiel: „Der Kunde braucht 30 Notebooks, VPN, Drucker, zentrale Benutzerverwaltung und 99,5% Verfügbarkeit“ gehört hier rein.",
       "correctForms": [
@@ -197,27 +127,6 @@
       "text": "Vor dem OS-Setup wird oft entschieden: Boot-Reihenfolge, UEFI/Legacy, Secure Boot, TPM – das passiert hier.",
       "correctForms": [
         "uefi"
-      ]
-    },
-    {
-      "id": "card_018",
-      "text": "„C: für System, D: für Daten“ ist eine typische Entscheidung in diesem Schritt.",
-      "correctForms": [
-        "partitionierung"
-      ]
-    },
-    {
-      "id": "card_019",
-      "text": "„NTFS auf der Systempartition“ ist eine typische Entscheidung in diesem Schritt.",
-      "correctForms": [
-        "formatierung"
-      ]
-    },
-    {
-      "id": "card_020",
-      "text": "„IP 192.168.10.20, Maske /24, Gateway .1, DNS .53“ ist ein typisches Ergebnis davon.",
-      "correctForms": [
-        "ip_konfiguration"
       ]
     }
   ]
