@@ -1,0 +1,112 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Projekt- und Qualitaetsmanagement (AP1) Level 2",
+  "description": "Ziehe die Aussagen in die passende Spalte. Fokus auf Scope-Baseline, Risikosteuerung, Vorgehensmodelle, Test- und Qualitaetslogik.",
+  "columns": [
+    {
+      "id": "projekt",
+      "title": "Projekt",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess",
+      "title": "Prozess",
+      "subtitle": ""
+    },
+    {
+      "id": "linie_routine",
+      "title": "Linie/Routine",
+      "subtitle": ""
+    },
+    {
+      "id": "business_case",
+      "title": "Business Case",
+      "subtitle": ""
+    },
+    {
+      "id": "projektauftrag",
+      "title": "Projektauftrag",
+      "subtitle": ""
+    },
+    {
+      "id": "smart_ziel",
+      "title": "SMART-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "scope_baseline",
+      "title": "Scope-Baseline",
+      "subtitle": ""
+    },
+    {
+      "id": "out_of_scope",
+      "title": "Out-of-Scope",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Einmalig, zeitlich befristet, klares Ziel und Abschluss.",
+      "correctForms": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Wiederholbarer Standardablauf im Betrieb.",
+      "correctForms": [
+        "prozess"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Kleine taegliche Regelaufgabe ohne eigenen Projektcharakter.",
+      "correctForms": [
+        "linie_routine"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Begruendet Nutzen, Kosten und Risiken eines Vorhabens vor Start.",
+      "correctForms": [
+        "business_case"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Formale Startfreigabe mit Rahmen, Rollen und Verantwortungen.",
+      "correctForms": [
+        "projektauftrag"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Spezifisch, messbar, akzeptiert, realistisch, terminiert.",
+      "correctForms": [
+        "smart_ziel"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Definiert verbindlich, was geliefert wird und was nicht.",
+      "correctForms": [
+        "scope_baseline"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Explizit ausgeschlossener Leistungsumfang.",
+      "correctForms": [
+        "out_of_scope"
+      ]
+    },
+    {
+      "id": "card_050",
+      "text": "Out-of-Scope reduziert spaetere Konflikte ueber Zusatzanforderungen.",
+      "correctForms": [
+        "out_of_scope"
+      ]
+    }
+  ]
+}

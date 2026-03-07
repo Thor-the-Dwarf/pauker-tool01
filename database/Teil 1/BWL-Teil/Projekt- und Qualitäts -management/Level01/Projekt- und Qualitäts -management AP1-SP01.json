@@ -1,0 +1,105 @@
+{
+  "game_type": "sortier_spiel",
+  "title": "Sortier-Spiel – Projekt- & Qualitätsmanagement (AP1)",
+  "description": "Ziehe die Aussagen in die passende Spalte. Wähle den treffendsten Begriff. Nutze auch „alle“ oder „keine“, falls zutreffend.",
+  "columns": [
+    {
+      "id": "projekt",
+      "title": "Projekt",
+      "subtitle": ""
+    },
+    {
+      "id": "prozess",
+      "title": "Prozess",
+      "subtitle": ""
+    },
+    {
+      "id": "smart_ziel",
+      "title": "SMART-Ziel",
+      "subtitle": ""
+    },
+    {
+      "id": "scope",
+      "title": "Scope",
+      "subtitle": ""
+    },
+    {
+      "id": "stakeholder",
+      "title": "Stakeholder",
+      "subtitle": ""
+    },
+    {
+      "id": "kommunikationsplan",
+      "title": "Kommunikationsplan",
+      "subtitle": ""
+    },
+    {
+      "id": "projektphasen",
+      "title": "Projektphasen",
+      "subtitle": ""
+    },
+    {
+      "id": "wasserfall",
+      "title": "Wasserfall",
+      "subtitle": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_001",
+      "text": "Einmalig, zeitlich begrenzt, klares Ziel und Ergebnis (z. B. Rollout eines neuen Ticketsystems).",
+      "correctForms": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "card_002",
+      "text": "Wiederholbar, standardisiert, läuft regelmäßig nach gleichem Muster (z. B. Ticketbearbeitung).",
+      "correctForms": [
+        "prozess"
+      ]
+    },
+    {
+      "id": "card_003",
+      "text": "Ohne klare Ziel-Formulierung ist am Ende unklar, ob das Vorhaben „fertig“ ist.",
+      "correctForms": [
+        "smart_ziel"
+      ]
+    },
+    {
+      "id": "card_004",
+      "text": "Definiert ausdrücklich auch, was NICHT Teil des Vorhabens ist – sonst wird die Abnahme schwierig.",
+      "correctForms": [
+        "scope"
+      ]
+    },
+    {
+      "id": "card_005",
+      "text": "Betroffene, Entscheider, Unterstützer, Kritiker: wer Einfluss hat oder vom Ergebnis betroffen ist.",
+      "correctForms": [
+        "stakeholder"
+      ]
+    },
+    {
+      "id": "card_006",
+      "text": "Regelt: Wer bekommt wann welche Informationen über welchen Kanal.",
+      "correctForms": [
+        "kommunikationsplan"
+      ]
+    },
+    {
+      "id": "card_007",
+      "text": "Typischer Ablauf von Start bis Ende: Auftrag/Start, Planung, Umsetzung, Übergabe/Abschluss.",
+      "correctForms": [
+        "projektphasen"
+      ]
+    },
+    {
+      "id": "card_008",
+      "text": "Geeignet, wenn Anforderungen von Anfang an klar und stabil sind (z. B. Hardware-Rollout nach Plan).",
+      "correctForms": [
+        "wasserfall"
+      ]
+    }
+  ]
+}

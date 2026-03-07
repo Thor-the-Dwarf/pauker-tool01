@@ -20,28 +20,7 @@
     "WIP-Limit",
     "Projektstrukturplan (PSP)",
     "Arbeitspaket",
-    "Drei-Punkt-Schätzung",
-    "Meilenstein",
-    "Abhängigkeit",
-    "Kritischer Pfad",
-    "Risiko",
-    "Risikobewertung",
-    "Gegenmaßnahme",
-    "Change Request",
-    "Scope Creep",
-    "ISO 9000",
-    "ISO 9001",
-    "PDCA",
-    "TQM",
-    "Produktqualität",
-    "Prozessqualität",
-    "Review",
-    "Teststufe",
-    "Dokumentation",
-    "Abnahme",
-    "Lessons Learned",
-    "alle",
-    "keine"
+    "Drei-Punkt-Schätzung"
   ],
   "questions": [
     {
@@ -111,82 +90,6 @@
     {
       "text": "Schätzung mit drei Werten: optimistisch, realistisch, pessimistisch – ergibt eine Bandbreite.",
       "correct": "Drei-Punkt-Schätzung"
-    },
-    {
-      "text": "Wichtiger Zeitpunkt ohne eigene Dauer, z. B. „Abnahme abgeschlossen“.",
-      "correct": "Meilenstein"
-    },
-    {
-      "text": "Zeigt Reihenfolge/Logik zwischen Tasks, z. B. Ende-Start oder Start-Start.",
-      "correct": "Abhängigkeit"
-    },
-    {
-      "text": "Längste Kette von Abhängigkeiten bestimmt die Mindestdauer; Verzögerung dort verschiebt den Endtermin direkt.",
-      "correct": "Kritischer Pfad"
-    },
-    {
-      "text": "Unsicheres Ereignis mit potenziell negativem Effekt auf Zeit, Kosten, Qualität oder Umfang.",
-      "correct": "Risiko"
-    },
-    {
-      "text": "Bewertung nach Eintrittswahrscheinlichkeit × Auswirkung.",
-      "correct": "Risikobewertung"
-    },
-    {
-      "text": "In Prüfungen zählt nicht nur das Risiko nennen, sondern auch: Was tust du konkret dagegen?",
-      "correct": "Gegenmaßnahme"
-    },
-    {
-      "text": "Formale Änderung an Umfang/Zeit/Kosten mit Bewertung und Freigabe.",
-      "correct": "Change Request"
-    },
-    {
-      "text": "Schleichende Erweiterung ohne Planung oder Mehrbudget; kippt Projekte „still und heimlich“.",
-      "correct": "Scope Creep"
-    },
-    {
-      "text": "Normteil für Begriffe und Grundlagen des Qualitätsmanagements.",
-      "correct": "ISO 9000"
-    },
-    {
-      "text": "Normteil mit Anforderungen an ein QM-System; Basis für Zertifizierung und Nachweisbarkeit im Betrieb.",
-      "correct": "ISO 9001"
-    },
-    {
-      "text": "Verbesserungs-Loop mit den vier Schritten Plan, Do, Check, Act.",
-      "correct": "PDCA"
-    },
-    {
-      "text": "Qualität als Kultur: Aufgabe aller, Fehlerprävention statt Fehlerbehebung.",
-      "correct": "TQM"
-    },
-    {
-      "text": "Beschreibt, wie gut das Endergebnis ist (z. B. funktioniert es, ist es sicher, nutzbar, wartbar).",
-      "correct": "Produktqualität"
-    },
-    {
-      "text": "Beschreibt, wie man zum Ergebnis kommt (z. B. Reviews, Tests, Standards, Definition of Done).",
-      "correct": "Prozessqualität"
-    },
-    {
-      "text": "4-Augen-Prinzip/Peer-Review/Code-Review: Fehler früh finden, bevor sie teuer werden.",
-      "correct": "Review"
-    },
-    {
-      "text": "Kette von Prüfungen: Unit → Integration → System → Abnahme (je später entdeckt, desto teurer).",
-      "correct": "Teststufe"
-    },
-    {
-      "text": "Nachweisbarkeit: Entscheidungen, Tests, Abnahmen und Risiken müssen nachvollziehbar festgehalten sein.",
-      "correct": "Dokumentation"
-    },
-    {
-      "text": "Kunde bestätigt, dass die Leistung dem Vereinbarten entspricht; zentraler Schritt vor Übergabe.",
-      "correct": "Abnahme"
-    },
-    {
-      "text": "Projektabschluss ist nicht nur „fertig“, sondern inklusive Übergabe und systematischer Rückschau auf Verbesserungen.",
-      "correct": "Lessons Learned"
     }
   ]
 }
