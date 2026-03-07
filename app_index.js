@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:54:35 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:55:11 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -55408,8 +55408,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/5_1 Verständnis der Fachbegriffe/Missionen_5_1_PvAP1/Missionen_5_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_5_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/5_1 Verständnis der Fachbegriffe/Missionen_5_1_PvAP1/Missionen_5_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_5_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -56610,8 +56610,7 @@ window.DATABASE_INDEX = [
                             "Do",
                             "Check",
                             "Act",
-                            "alle",
-                            "keine"
+                            "alle"
                           ],
                           "questions": [
                             {
@@ -56698,8 +56697,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/5_2 Maßnahmen des Qualitätsmanagements/Missionen_5_2_PvAP1/Missionen_5_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_5_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/5_2 Maßnahmen des Qualitätsmanagements/Missionen_5_2_PvAP1/Missionen_5_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_5_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -56745,51 +56744,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "ist_zustand",
                               "title": "Ist-Zustand",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "ziel_zustand",
-                              "title": "Ziel-Zustand",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "qualitatslenkung",
-                              "title": "Qualitätslenkung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "pdca",
-                              "title": "PDCA",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "plan",
-                              "title": "Plan",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "do",
-                              "title": "Do",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "check",
-                              "title": "Check",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "act",
-                              "title": "Act",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -56851,55 +56805,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Definierter Sollzustand, der als Ziel erreicht werden soll (mit messbaren Kriterien).",
-                              "correctForms": [
-                                "ziel_zustand"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Steuern/Überwachen der Qualität im laufenden Betrieb: prüfen, regeln, korrigieren, Freigaben und Abweichungen behandeln.",
-                              "correctForms": [
-                                "qualitatslenkung"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Kontinuierlicher Verbesserungszyklus: planen, umsetzen, prüfen, anpassen.",
-                              "correctForms": [
-                                "pdca"
-                              ]
-                            },
-                            {
-                              "id": "card_012",
-                              "text": "Schritt im PDCA: Ziele festlegen, Maßnahmen definieren, Plan erstellen, Verantwortlichkeiten klären.",
-                              "correctForms": [
-                                "plan"
-                              ]
-                            },
-                            {
-                              "id": "card_013",
-                              "text": "Schritt im PDCA: Maßnahmen durchführen und Prozesse/Änderungen tatsächlich umsetzen.",
-                              "correctForms": [
-                                "do"
-                              ]
-                            },
-                            {
-                              "id": "card_014",
-                              "text": "Schritt im PDCA: Ergebnisse messen, Kennzahlen prüfen, Soll-Ist vergleichen, Wirksamkeit bewerten.",
-                              "correctForms": [
-                                "check"
-                              ]
-                            },
-                            {
-                              "id": "card_015",
-                              "text": "Schritt im PDCA: Verbesserungen standardisieren, nachjustieren, Ursachen beheben und nächste Runde starten.",
-                              "correctForms": [
-                                "act"
-                              ]
-                            },
-                            {
                               "id": "card_016",
                               "text": "„Wir definieren eine Review-Checkliste für Pull Requests, um Fehler früh zu finden“ ist vor allem ein Beispiel für eine …",
                               "correctForms": [
@@ -56918,20 +56823,6 @@ window.DATABASE_INDEX = [
                               "text": "„Wir messen aktuell 12% Rückläufer und wollen auf 5% runter“: 12% ist das …",
                               "correctForms": [
                                 "ist_zustand"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "„Wir messen aktuell 12% Rückläufer und wollen auf 5% runter“: 5% ist der …",
-                              "correctForms": [
-                                "ziel_zustand"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "„Wir prüfen jede Woche die Fehlerquote und stoppen Releases, wenn Grenzwerte überschritten werden“ gehört am ehesten zu …",
-                              "correctForms": [
-                                "qualitatslenkung"
                               ]
                             }
                           ]
@@ -58097,8 +57988,8 @@ window.DATABASE_INDEX = [
                     }
                   },
                   {
-                    "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/Missionen_5_PvAP1/Missionen_5_PvAP1 AP1-SS01.json",
-                    "name": "Missionen_5_PvAP1 AP1-SS01.json",
+                    "id": "database/Teil 1/Gesamt/5 Durchführen und Dokumentieren von qualitätssichernden Maßnahmen/Missionen_5_PvAP1/Missionen_5_PvAP1 AP1-SP01.json",
+                    "name": "Missionen_5_PvAP1 AP1-SP01.json",
                     "isFolder": false,
                     "kind": "json",
                     "data": {
