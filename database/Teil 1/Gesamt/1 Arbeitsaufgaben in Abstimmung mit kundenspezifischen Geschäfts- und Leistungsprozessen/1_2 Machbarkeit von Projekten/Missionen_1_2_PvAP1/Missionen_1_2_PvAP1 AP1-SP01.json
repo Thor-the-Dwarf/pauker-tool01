@@ -42,26 +42,6 @@
       "id": "umsatz",
       "title": "Umsatz",
       "subtitle": ""
-    },
-    {
-      "id": "gewinn",
-      "title": "Gewinn",
-      "subtitle": ""
-    },
-    {
-      "id": "deckungsbeitrag",
-      "title": "Deckungsbeitrag",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -122,27 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Ergebnis nach Abzug aller Kosten vom Umsatz (vereinfacht: Umsatz minus Gesamtkosten).",
-      "correctForms": [
-        "gewinn"
-      ]
-    },
-    {
-      "id": "card_010",
-      "text": "Differenz aus Umsatz und variablen Kosten; Beitrag zur Deckung fixer Kosten und danach zum Gewinn.",
-      "correctForms": [
-        "deckungsbeitrag"
-      ]
-    },
-    {
-      "id": "card_011",
-      "text": "Muss bei Projekten mit personenbezogenen Daten immer geprüft und dokumentiert werden (z. B. TOMs, Rollen/Rechte).",
-      "correctForms": [
-        "alle"
-      ]
-    },
-    {
       "id": "card_012",
       "text": "Dient dazu, die wichtigsten Betroffenen zu priorisieren und Kommunikations-/Einbindungsmaßnahmen zu planen.",
       "correctForms": [
@@ -175,13 +134,6 @@
       "text": "Wenn ein Projekt wirtschaftlich nicht tragfähig ist, fällt es typischerweise spätestens hier durch.",
       "correctForms": [
         "machbarkeitsanalyse"
-      ]
-    },
-    {
-      "id": "card_017",
-      "text": "Kennzahl, die besonders für Produkt-/Projektentscheidungen im Controlling genutzt wird, weil sie fixe Kosten ausklammert.",
-      "correctForms": [
-        "deckungsbeitrag"
       ]
     },
     {

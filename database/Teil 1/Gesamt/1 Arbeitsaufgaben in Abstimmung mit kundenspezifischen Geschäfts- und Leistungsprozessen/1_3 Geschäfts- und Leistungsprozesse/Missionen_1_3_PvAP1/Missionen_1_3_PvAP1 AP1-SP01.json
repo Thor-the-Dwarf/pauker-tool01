@@ -42,21 +42,6 @@
       "id": "eskalation",
       "title": "Eskalation",
       "subtitle": ""
-    },
-    {
-      "id": "prioritat",
-      "title": "Priorität",
-      "subtitle": ""
-    },
-    {
-      "id": "alle",
-      "title": "alle",
-      "subtitle": ""
-    },
-    {
-      "id": "keine",
-      "title": "keine",
-      "subtitle": ""
     }
   ],
   "cards": [
@@ -117,13 +102,6 @@
       ]
     },
     {
-      "id": "card_009",
-      "text": "Einstufung der Dringlichkeit/Auswirkung, z. B. „kritisch“ bei Systemausfall oder „niedrig“ bei Komfortproblem.",
-      "correctForms": [
-        "prioritat"
-      ]
-    },
-    {
       "id": "card_010",
       "text": "Typisches Beispiel: Der Kunde meldet „E-Mail geht nicht“, es wird ein Ticket angelegt und die Wiederherstellung hat Vorrang.",
       "correctForms": [
@@ -163,13 +141,6 @@
       "text": "Wenn die vereinbarte Reaktionszeit überschritten wird, ist das ein Problem in Bezug auf diese Vorgabe.",
       "correctForms": [
         "sla"
-      ]
-    },
-    {
-      "id": "card_016",
-      "text": "„Server down, mehrere Abteilungen betroffen, Produktion steht“ sollte in der Regel sehr hoch eingestuft werden.",
-      "correctForms": [
-        "prioritat"
       ]
     },
     {

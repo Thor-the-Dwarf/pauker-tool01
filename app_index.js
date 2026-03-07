@@ -1,5 +1,5 @@
 /** 
- * AUTOMATISCH GENERIERT am 3/7/2026, 1:51:10 AM
+ * AUTOMATISCH GENERIERT am 3/7/2026, 1:52:24 AM
  * Nicht manuell ändern! Nutze node tools/update_index.js
  */
 window.DATABASE_INDEX = [
@@ -26592,8 +26592,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_1 Merkmale und Methoden des Projektmanagements/Missionen_1_1_PvAP1/Missionen_1_1_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_1_1_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_1 Merkmale und Methoden des Projektmanagements/Missionen_1_1_PvAP1/Missionen_1_1_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_1_1_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -26639,31 +26639,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "projektphasen",
                               "title": "Projektphasen",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "vorgehensmodell",
-                              "title": "Vorgehensmodell",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "teambildung_entwicklung",
-                              "title": "Teambildung/-entwicklung",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "reflexionsmethode",
-                              "title": "Reflexionsmethode",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -26725,27 +26700,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Beschreibt, wie ein Projekt grundsätzlich abgearbeitet wird (z. B. sequenziell oder iterativ).",
-                              "correctForms": [
-                                "vorgehensmodell"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Maßnahmen, um aus Einzelpersonen ein leistungsfähiges Team zu machen (Rollen, Regeln, Zusammenarbeit).",
-                              "correctForms": [
-                                "teambildung_entwicklung"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Methode, um Vorgehen und Ergebnis nach einer Phase/Iteration auszuwerten und Verbesserungen abzuleiten.",
-                              "correctForms": [
-                                "reflexionsmethode"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "Kann genutzt werden, um Abhängigkeiten so darzustellen, dass der kritische Weg erkennbar wird.",
                               "correctForms": [
@@ -26785,27 +26739,6 @@ window.DATABASE_INDEX = [
                               "text": "Beinhaltet oft feste Prüf- oder Abnahmepunkte, an denen entschieden wird, ob es weitergeht.",
                               "correctForms": [
                                 "projektphasen"
-                              ]
-                            },
-                            {
-                              "id": "card_018",
-                              "text": "Kann durch regelmäßige Retrospektiven oder Lessons Learned umgesetzt werden.",
-                              "correctForms": [
-                                "reflexionsmethode"
-                              ]
-                            },
-                            {
-                              "id": "card_019",
-                              "text": "Wird häufig durch gemeinsame Kick-offs, Regeln der Zusammenarbeit und Rollenklärung unterstützt.",
-                              "correctForms": [
-                                "teambildung_entwicklung"
-                              ]
-                            },
-                            {
-                              "id": "card_020",
-                              "text": "Wasserfall, Scrum oder V-Modell sind Beispiele dafür.",
-                              "correctForms": [
-                                "vorgehensmodell"
                               ]
                             }
                           ]
@@ -27995,8 +27928,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_2 Machbarkeit von Projekten/Missionen_1_2_PvAP1/Missionen_1_2_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_1_2_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_2 Machbarkeit von Projekten/Missionen_1_2_PvAP1/Missionen_1_2_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_1_2_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -28042,26 +27975,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "umsatz",
                               "title": "Umsatz",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "gewinn",
-                              "title": "Gewinn",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "deckungsbeitrag",
-                              "title": "Deckungsbeitrag",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -28123,27 +28036,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Ergebnis nach Abzug aller Kosten vom Umsatz (vereinfacht: Umsatz minus Gesamtkosten).",
-                              "correctForms": [
-                                "gewinn"
-                              ]
-                            },
-                            {
-                              "id": "card_010",
-                              "text": "Differenz aus Umsatz und variablen Kosten; Beitrag zur Deckung fixer Kosten und danach zum Gewinn.",
-                              "correctForms": [
-                                "deckungsbeitrag"
-                              ]
-                            },
-                            {
-                              "id": "card_011",
-                              "text": "Muss bei Projekten mit personenbezogenen Daten immer geprüft und dokumentiert werden (z. B. TOMs, Rollen/Rechte).",
-                              "correctForms": [
-                                "alle"
-                              ]
-                            },
-                            {
                               "id": "card_012",
                               "text": "Dient dazu, die wichtigsten Betroffenen zu priorisieren und Kommunikations-/Einbindungsmaßnahmen zu planen.",
                               "correctForms": [
@@ -28176,13 +28068,6 @@ window.DATABASE_INDEX = [
                               "text": "Wenn ein Projekt wirtschaftlich nicht tragfähig ist, fällt es typischerweise spätestens hier durch.",
                               "correctForms": [
                                 "machbarkeitsanalyse"
-                              ]
-                            },
-                            {
-                              "id": "card_017",
-                              "text": "Kennzahl, die besonders für Produkt-/Projektentscheidungen im Controlling genutzt wird, weil sie fixe Kosten ausklammert.",
-                              "correctForms": [
-                                "deckungsbeitrag"
                               ]
                             },
                             {
@@ -29425,8 +29310,8 @@ window.DATABASE_INDEX = [
                         }
                       },
                       {
-                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_3 Geschäfts- und Leistungsprozesse/Missionen_1_3_PvAP1/Missionen_1_3_PvAP1 AP1-SS01.json",
-                        "name": "Missionen_1_3_PvAP1 AP1-SS01.json",
+                        "id": "database/Teil 1/Gesamt/1 Arbeitsaufgaben in Abstimmung mit kundenspezifischen Geschäfts- und Leistungsprozessen/1_3 Geschäfts- und Leistungsprozesse/Missionen_1_3_PvAP1/Missionen_1_3_PvAP1 AP1-SP01.json",
+                        "name": "Missionen_1_3_PvAP1 AP1-SP01.json",
                         "isFolder": false,
                         "kind": "json",
                         "data": {
@@ -29472,21 +29357,6 @@ window.DATABASE_INDEX = [
                             {
                               "id": "eskalation",
                               "title": "Eskalation",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "prioritat",
-                              "title": "Priorität",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "alle",
-                              "title": "alle",
-                              "subtitle": ""
-                            },
-                            {
-                              "id": "keine",
-                              "title": "keine",
                               "subtitle": ""
                             }
                           ],
@@ -29548,13 +29418,6 @@ window.DATABASE_INDEX = [
                               ]
                             },
                             {
-                              "id": "card_009",
-                              "text": "Einstufung der Dringlichkeit/Auswirkung, z. B. „kritisch“ bei Systemausfall oder „niedrig“ bei Komfortproblem.",
-                              "correctForms": [
-                                "prioritat"
-                              ]
-                            },
-                            {
                               "id": "card_010",
                               "text": "Typisches Beispiel: Der Kunde meldet „E-Mail geht nicht“, es wird ein Ticket angelegt und die Wiederherstellung hat Vorrang.",
                               "correctForms": [
@@ -29594,13 +29457,6 @@ window.DATABASE_INDEX = [
                               "text": "Wenn die vereinbarte Reaktionszeit überschritten wird, ist das ein Problem in Bezug auf diese Vorgabe.",
                               "correctForms": [
                                 "sla"
-                              ]
-                            },
-                            {
-                              "id": "card_016",
-                              "text": "„Server down, mehrere Abteilungen betroffen, Produktion steht“ sollte in der Regel sehr hoch eingestuft werden.",
-                              "correctForms": [
-                                "prioritat"
                               ]
                             },
                             {
